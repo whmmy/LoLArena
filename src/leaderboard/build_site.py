@@ -6,6 +6,7 @@ Aggregates all predictions/results under data/ into one payload:
     "leaderboard":  [{model_id, composite, n_matches, layers}],
     "game_leaderboard": [{model_id, composite, n_games}],
     "incoming":    [{slug, league, blue, red, begin_at, kickoff_utc, status}],
+    "predicted_upcoming": [{... incoming match with local predictions ...}],
     "history":     [{slug, league, blue, red, truth, model_results: {model: composite}}],
     "game_history":[{match_slug, position, blue, red, truth, model_results}]
   }
@@ -25,13 +26,16 @@ from .. import config as cfg
 
 def build() -> dict[str, Any]:
     models = _models_meta()
+    history = _history()
+    game_history = _game_history()
     payload = {
         "models": models,
         "leaderboard": _series_leaderboard(),
         "game_leaderboard": _game_leaderboard(),
-        "incoming": _incoming(),
-        "history": _history(),
-        "game_history": _game_history(),
+        "incoming": _incoming(history),
+        "predicted_upcoming": _predicted_upcoming(history),
+        "history": history,
+        "game_history": game_history,
     }
     out = cfg.SITE_DIR / "data.json"
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -86,12 +90,18 @@ def _history() -> list[dict]:
             continue
         pack = _read(mdir / "context_pack.json") or {}
         header = pack.get("fixture_header", {})
+        header_blue = header.get("blue") or {}
+        header_red = header.get("red") or {}
         opps = fixture.get("opponents") or []
-        blue = (opps[0]["opponent"] if opps else {}).get("name", "?")
-        red = (opps[1]["opponent"] if len(opps) > 1 else {}).get("name", "?")
+        blue_opp = opps[0]["opponent"] if opps else {}
+        red_opp = opps[1]["opponent"] if len(opps) > 1 else {}
+        blue = blue_opp.get("name") or header_blue.get("name") or "?"
+        red = red_opp.get("name") or header_red.get("name") or "?"
+        blue_image_url = header_blue.get("image_url") or blue_opp.get("image_url")
+        red_image_url = header_red.get("image_url") or red_opp.get("image_url")
         results = {r.get("team_id"): r.get("score", 0) for r in (fixture.get("results") or [])}
-        blue_id = (opps[0]["opponent"] if opps else {}).get("id")
-        red_id = (opps[1]["opponent"] if len(opps) > 1 else {}).get("id")
+        blue_id = blue_opp.get("id")
+        red_id = red_opp.get("id")
         truth = {
             "status": fixture.get("status"),
             "series_score": f"{results.get(blue_id,0)}-{results.get(red_id,0)}",
@@ -101,17 +111,14 @@ def _history() -> list[dict]:
             model_results[rf.stem] = _read(rf).get("composite", 0.0)
         preds: dict[str, Any] = {}
         for pf in (mdir / "predictions").glob("*.json"):
-            rec = _read(pf)
-            p = rec.get("prediction", {})
-            preds[pf.stem] = {
-                "series_score": p.get("series_score"),
-                "win_probs": p.get("win_probs"),
-                "predicted_winner": p.get("predicted_winner"),
-            }
+            rec = _prediction_record(pf)
+            if rec:
+                preds[pf.stem] = rec
         out.append({
             "slug": mdir.name,
             "league": header.get("league") or (fixture.get("league") or {}).get("name"),
             "blue": blue, "red": red,
+            "blue_image_url": blue_image_url, "red_image_url": red_image_url,
             "begin_at": fixture.get("begin_at"),
             "status": fixture.get("status"),
             "truth": truth,
@@ -122,10 +129,19 @@ def _history() -> list[dict]:
     return out
 
 
-def _incoming() -> list[dict]:
+def _incoming(history: list[dict] | None = None) -> list[dict]:
     rows = []
-    for h in _history():
-        if h.get("status") in ("not_started", None, ""):
+    for h in history if history is not None else _history():
+        if h.get("status") in ("not_started", None, "") and not h.get("predictions"):
+            rows.append(h)
+    rows.sort(key=lambda h: h.get("begin_at") or "")
+    return rows[:30]
+
+
+def _predicted_upcoming(history: list[dict] | None = None) -> list[dict]:
+    rows = []
+    for h in history if history is not None else _history():
+        if h.get("status") in ("not_started", None, "") and h.get("predictions"):
             rows.append(h)
     rows.sort(key=lambda h: h.get("begin_at") or "")
     return rows[:30]
@@ -161,15 +177,9 @@ def _game_history() -> list[dict]:
             bp = _read(gdir / "bp.json") or {}
             preds: dict[str, Any] = {}
             for pf in (gdir / "predictions").glob("*.json"):
-                rec = _read(pf)
-                p = rec.get("prediction", {})
-                preds[pf.stem] = {
-                    "winner": p.get("predicted_winner"),
-                    "win_prob": p.get("win_prob"),
-                    "duration": p.get("expected_duration_min"),
-                    "kills": p.get("kills"),
-                    "total_kills": p.get("total_kills"),
-                }
+                rec = _prediction_record(pf)
+                if rec:
+                    preds[pf.stem] = rec
             truth = {
                 "winner_side": _winner_side(bp),
                 "length_min": round((bp.get("length_sec") or 0) / 60.0, 1),
@@ -209,6 +219,49 @@ def _read(path: Path) -> dict | None:
         return json.loads(path.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
         return None
+
+
+def _prediction_record(path: Path) -> dict[str, Any] | None:
+    rec = _read(path)
+    if not rec:
+        return None
+    prediction = rec.get("prediction") or {}
+    summary = _prediction_summary(prediction)
+    detail = {
+        "model_id": rec.get("model_id") or path.stem,
+        "scope": rec.get("scope"),
+        "target_id": rec.get("target_id"),
+        "submitted_at": rec.get("submitted_at"),
+        "prediction": prediction,
+        "sources": rec.get("sources") or prediction.get("sources") or [],
+        "searches": _prediction_searches(path),
+        "input_tokens": rec.get("input_tokens"),
+        "output_tokens": rec.get("output_tokens"),
+        "cost_usd": rec.get("cost_usd"),
+        "wall_seconds": rec.get("wall_seconds"),
+        "error": rec.get("error"),
+    }
+    return {"summary": summary, "detail": detail, **summary}
+
+
+def _prediction_summary(prediction: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "series_score": prediction.get("series_score"),
+        "series_length": prediction.get("series_length"),
+        "win_probs": prediction.get("win_probs"),
+        "predicted_winner": prediction.get("predicted_winner"),
+        "favored_side": prediction.get("favored_side"),
+        "winner": prediction.get("predicted_winner"),
+        "win_prob": prediction.get("win_prob"),
+        "duration": prediction.get("expected_duration_min"),
+        "kills": prediction.get("kills"),
+        "total_kills": prediction.get("total_kills"),
+    }
+
+
+def _prediction_searches(path: Path) -> dict[str, Any] | None:
+    search_path = path.parent / "searches" / path.name
+    return _read(search_path)
 
 
 if __name__ == "__main__":

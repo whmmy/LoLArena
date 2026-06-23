@@ -99,10 +99,15 @@ def refresh_bp(req: RefreshBPRequest):
         from ..pipeline import orchestrator as orch
         recs = orch.cmd_predict_game(req.match_id, req.game_pos)
         triggered = sum(1 for r in recs if r.get("prediction") and not r.get("error"))
+        failed = [r.get("model_id") for r in recs if r.get("error")]
+    else:
+        failed = []
     return {
         "ok": True, "bp_complete": True,
         "blue_picks": bp["picks"]["blue"], "red_picks": bp["picks"]["red"],
         "predictions_triggered": triggered,
+        "site_rebuilt": bool(req.predict),
+        "failed_models": failed,
     }
 
 
@@ -117,7 +122,9 @@ def api_predict(req: PredictRequest):
     from ..pipeline import orchestrator as orch
     recs = orch.cmd_predict(req.match_id, model_ids=req.model_ids)
     ok = sum(1 for r in recs if r.get("prediction") and not r.get("error"))
-    return {"ok": True, "predicted": ok, "total": len(recs), "results": recs}
+    failed = [r.get("model_id") for r in recs if r.get("error")]
+    return {"ok": True, "predicted": ok, "total": len(recs),
+            "site_rebuilt": True, "failed_models": failed, "results": recs}
 
 
 @app.post("/api/rebuild")

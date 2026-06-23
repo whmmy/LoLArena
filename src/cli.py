@@ -12,10 +12,9 @@ Commands:
   build-site                 regenerate data.json for the leaderboard
 
 Typical manual run for a future match:
-  python -m src scan                  # see the match_id list
-  python -m src predict 1397580       # run all models on match 1397580
-  python -m src build-site            # refresh the leaderboard
-  # open the site:  python -m src serve   ->  http://127.0.0.1:8000
+python -m src scan                  # see the match_id list
+python -m src predict 1397580       # run all models and refresh the leaderboard data
+# open the site:  python -m src serve   ->  http://127.0.0.1:8000
 """
 
 from __future__ import annotations

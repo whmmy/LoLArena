@@ -111,4 +111,6 @@ models:
     base_url_env: MINIMAX_BASE_URL
     base_url: https://api.minimaxi.com/v1
     json_mode: true
-    timeout_seconds: 180
+    # M3 is a reasoning model (Interleaved Thinking); a single chat completion
+    # inside the multi-round agent loop can exceed the 300s default. Give it headroom.
+    timeout_seconds: 600

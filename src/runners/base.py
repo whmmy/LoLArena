@@ -57,7 +57,7 @@ class BaseRunner(abc.ABC):
     # ---- to implement per provider ----
 
     @abc.abstractmethod
-    def _chat(self, messages: list[dict[str, Any]]) -> dict[str, Any]:
+    def _chat(self, messages: list[dict[str, Any]], *, allow_tools: bool = True) -> dict[str, Any]:
         """One provider call. messages already include system + history.
 
         Return:
@@ -108,7 +108,7 @@ class BaseRunner(abc.ABC):
                     self._emit(progress, "repair", attempt=attempt + 1, errors=errs)
                     fix_msg = self._repair_message(errs)
                     messages.append(fix_msg)
-                    out = self._chat(messages)
+                    out = self._chat(messages, allow_tools=False)
                     totals["in"] += out.get("input_tokens", 0)
                     totals["out"] += out.get("output_tokens", 0)
                     self._append_assistant(messages, out)
@@ -119,7 +119,7 @@ class BaseRunner(abc.ABC):
                     messages.append(self._repair_message(
                         ["Output was not valid JSON. Return ONLY the JSON object."]
                     ))
-                    out = self._chat(messages)
+                    out = self._chat(messages, allow_tools=False)
                     totals["in"] += out.get("input_tokens", 0)
                     totals["out"] += out.get("output_tokens", 0)
                     self._append_assistant(messages, out)
@@ -163,6 +163,7 @@ class BaseRunner(abc.ABC):
             totals["out"] += out.get("output_tokens", 0)
             if out.get("thinking"):
                 thinking_parts.append(out["thinking"])
+            self._ensure_tool_call_ids(out, round_no)
             self._append_assistant(messages, out)
 
             calls = out.get("tool_calls") or []
@@ -175,34 +176,28 @@ class BaseRunner(abc.ABC):
             if not calls:
                 return  # model emitted plain text (hopefully JSON) -> done
 
-            if totals["calls"] >= self.max_tool_calls:
-                # budget hit: nudge model to stop searching and answer
-                self._emit(progress, "budget_hit", max_tool_calls=self.max_tool_calls)
-                messages.append(self._user_message(
-                    "You've reached the search budget. Now output the final JSON only."
-                ))
-                # one more plain call to let it answer
-                self._emit(progress, "chat_start", round=round_no + 1, final_after_budget=True)
-                out2 = self._chat(messages)
-                totals["in"] += out2.get("input_tokens", 0)
-                totals["out"] += out2.get("output_tokens", 0)
-                if out2.get("thinking"):
-                    thinking_parts.append(out2["thinking"])
-                self._append_assistant(messages, out2)
-                self._emit(progress, "chat_end", round=round_no + 1,
-                           input_tokens=out2.get("input_tokens", 0),
-                           output_tokens=out2.get("output_tokens", 0),
-                           text_chars=len(out2.get("text") or ""),
-                           tool_calls=len(out2.get("tool_calls") or []),
-                           provider_thinking_chars=len(out2.get("thinking") or ""))
-                return
-
             # execute each web_search call and feed results back as a tool response
             tool_results = []
+            budget_exhausted = False
             for c in calls:
+                call_id = c.get("id") or f"call_{round_no}_{len(tool_results)}"
                 if c.get("name") != "web_search":
+                    tool_results.append({
+                        "id": call_id,
+                        "text": "Tool call rejected: only web_search is available.",
+                    })
                     continue
                 query = _q(c.get("args"))
+                if totals["calls"] >= self.max_tool_calls:
+                    budget_exhausted = True
+                    tool_results.append({
+                        "id": call_id,
+                        "text": (
+                            "Search budget exhausted; no search was executed for "
+                            f"query: {query}. Use earlier search results and output the final JSON."
+                        ),
+                    })
+                    continue
                 self._emit(progress, "tool_start", round=round_no,
                            call_no=totals["calls"] + 1, query=query)
                 results = self.search.invoke_raw(c.get("args"))
@@ -212,12 +207,46 @@ class BaseRunner(abc.ABC):
                            call_no=totals["calls"], query=query,
                            result_count=len(results))
                 tool_results.append({
-                    "id": c.get("id") or f"call_{totals['calls']}",
+                    "id": call_id,
                     "text": format_results_for_model(results, query),
                 })
             if tool_results:
-                messages.append(self._tool_results_message(tool_results))
+                # Providers may return either a single message dict (Anthropic/Gemini
+                # bundle results into one user turn) or a list of OpenAI-style
+                # {role:"tool", tool_call_id} messages (one per call_id).
+                tool_msgs = self._tool_results_message(tool_results)
+                if isinstance(tool_msgs, list):
+                    messages.extend(tool_msgs)
+                else:
+                    messages.append(tool_msgs)
+            if budget_exhausted or totals["calls"] >= self.max_tool_calls:
+                # The just-appended tool messages close every tool_call_id before
+                # we ask for a final answer, which strict OpenAI-compatible APIs require.
+                self._emit(progress, "budget_hit", max_tool_calls=self.max_tool_calls)
+                messages.append(self._user_message(
+                    "You've reached the search budget. Now output the final JSON only."
+                ))
+                self._emit(progress, "chat_start", round=round_no + 1, final_after_budget=True)
+                out2 = self._chat(messages, allow_tools=False)
+                totals["in"] += out2.get("input_tokens", 0)
+                totals["out"] += out2.get("output_tokens", 0)
+                if out2.get("thinking"):
+                    thinking_parts.append(out2["thinking"])
+                self._ensure_tool_call_ids(out2, round_no + 1)
+                self._append_assistant(messages, out2)
+                self._emit(progress, "chat_end", round=round_no + 1,
+                           input_tokens=out2.get("input_tokens", 0),
+                           output_tokens=out2.get("output_tokens", 0),
+                           text_chars=len(out2.get("text") or ""),
+                           tool_calls=len(out2.get("tool_calls") or []),
+                           provider_thinking_chars=len(out2.get("thinking") or ""))
+                return
             # loop continues -> model reasons again
+
+    def _ensure_tool_call_ids(self, out: dict, round_no: int) -> None:
+        for i, c in enumerate(out.get("tool_calls") or []):
+            if not c.get("id"):
+                c["id"] = f"call_{round_no}_{i}"
 
     def _emit(self, progress: ProgressCallback | None, event: str, **data: Any) -> None:
         if progress is None:

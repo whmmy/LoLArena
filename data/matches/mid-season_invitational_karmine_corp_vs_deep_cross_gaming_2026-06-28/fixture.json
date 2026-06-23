@@ -1,76 +1,4 @@
 {
-  "videogame_version": null,
-  "tournament_id": 21175,
-  "serie_id": 10676,
-  "slug": "2026-06-28-c20da582-359c-4dd2-ab96-77a9e550e7df",
-  "game_advantage": null,
-  "scheduled_at": "2026-06-28T08:00:00Z",
-  "winner_id": null,
-  "forfeit": false,
-  "streams_list": [
-    {
-      "main": true,
-      "language": "en",
-      "embed_url": "https://player.twitch.tv/?channel=riotgames",
-      "official": true,
-      "raw_url": "https://www.twitch.tv/riotgames"
-    }
-  ],
-  "tournament": {
-    "id": 21175,
-    "name": "Play-In",
-    "type": "offline",
-    "country": "KR",
-    "slug": "league-of-legends-mid-invitational-2026-play-in",
-    "begin_at": "2026-06-28T03:00:00Z",
-    "detailed_stats": true,
-    "end_at": "2026-07-01T13:00:00Z",
-    "winner_id": null,
-    "winner_type": "Team",
-    "serie_id": 10676,
-    "modified_at": "2026-06-15T06:09:16Z",
-    "league_id": 300,
-    "prizepool": null,
-    "tier": "s",
-    "has_bracket": true,
-    "region": "ASIA",
-    "live_supported": true
-  },
-  "serie": {
-    "id": 10676,
-    "name": "",
-    "year": 2026,
-    "slug": "league-of-legends-mid-invitational-2026",
-    "begin_at": "2026-06-28T03:00:00Z",
-    "end_at": "2026-07-12T14:00:00Z",
-    "winner_id": null,
-    "winner_type": "Team",
-    "modified_at": "2026-06-04T14:10:49Z",
-    "league_id": 300,
-    "season": null,
-    "full_name": "2026"
-  },
-  "results": [
-    {
-      "team_id": 134078,
-      "score": 0
-    },
-    {
-      "team_id": 130356,
-      "score": 0
-    }
-  ],
-  "winner_type": "Team",
-  "live": {
-    "supported": true,
-    "url": "wss://live.pandascore.co/matches/1524754",
-    "opens_at": "2026-06-28T07:45:00.000000Z"
-  },
-  "modified_at": "2026-06-16T03:21:15Z",
-  "status": "not_started",
-  "end_at": null,
-  "draw": false,
-  "detailed_stats": true,
   "games": [
     {
       "complete": false,
@@ -163,19 +91,69 @@
       }
     }
   ],
+  "match_type": "best_of",
+  "serie_id": 10676,
+  "videogame_version": null,
+  "live": {
+    "supported": true,
+    "url": "wss://live.pandascore.co/matches/1524754",
+    "opens_at": "2026-06-28T07:45:00.000000Z"
+  },
+  "scheduled_at": "2026-06-28T08:00:00Z",
+  "serie": {
+    "id": 10676,
+    "name": "",
+    "year": 2026,
+    "begin_at": "2026-06-28T03:00:00Z",
+    "end_at": "2026-07-12T14:00:00Z",
+    "winner_id": null,
+    "winner_type": "Team",
+    "slug": "league-of-legends-mid-invitational-2026",
+    "modified_at": "2026-06-04T14:10:49Z",
+    "league_id": 300,
+    "season": null,
+    "full_name": "2026"
+  },
+  "detailed_stats": true,
+  "tournament": {
+    "id": 21175,
+    "name": "Play-In",
+    "type": "offline",
+    "country": "KR",
+    "begin_at": "2026-06-28T03:00:00Z",
+    "detailed_stats": true,
+    "end_at": "2026-07-01T13:00:00Z",
+    "winner_id": null,
+    "winner_type": "Team",
+    "slug": "league-of-legends-mid-invitational-2026-play-in",
+    "serie_id": 10676,
+    "modified_at": "2026-06-15T06:09:16Z",
+    "league_id": 300,
+    "has_bracket": true,
+    "prizepool": null,
+    "region": "ASIA",
+    "tier": "s",
+    "live_supported": true
+  },
+  "winner_type": "Team",
+  "videogame_title": null,
+  "streams_list": [
+    {
+      "main": true,
+      "language": "en",
+      "embed_url": "https://player.twitch.tv/?channel=riotgames",
+      "official": true,
+      "raw_url": "https://www.twitch.tv/riotgames"
+    }
+  ],
   "videogame": {
     "id": 1,
     "name": "LoL",
     "slug": "league-of-legends"
   },
-  "rescheduled": true,
-  "number_of_games": 5,
-  "match_type": "best_of",
-  "original_scheduled_at": "2026-06-28T03:00:00Z",
-  "id": 1524754,
-  "winner": null,
-  "name": "Upper bracket semifinal 1: KC vs DCG",
-  "videogame_title": null,
+  "status": "not_started",
+  "forfeit": false,
+  "winner_id": null,
   "league": {
     "id": 300,
     "name": "Mid-Season Invitational",
@@ -184,7 +162,11 @@
     "modified_at": "2019-06-13T11:53:14Z",
     "image_url": "https://cdn-api.pandascore.co/images/league/image/300/900px-msi_2021_lightmode-png"
   },
-  "begin_at": "2026-06-28T08:00:00Z",
+  "draw": false,
+  "game_advantage": null,
+  "winner": null,
+  "rescheduled": true,
+  "league_id": 300,
   "opponents": [
     {
       "type": "Team",
@@ -213,5 +195,23 @@
       }
     }
   ],
-  "league_id": 300
+  "modified_at": "2026-06-16T03:21:15Z",
+  "slug": "2026-06-28-c20da582-359c-4dd2-ab96-77a9e550e7df",
+  "id": 1524754,
+  "name": "Upper bracket semifinal 1: KC vs DCG",
+  "results": [
+    {
+      "team_id": 134078,
+      "score": 0
+    },
+    {
+      "team_id": 130356,
+      "score": 0
+    }
+  ],
+  "end_at": null,
+  "tournament_id": 21175,
+  "original_scheduled_at": "2026-06-28T03:00:00Z",
+  "begin_at": "2026-06-28T08:00:00Z",
+  "number_of_games": 5
 }

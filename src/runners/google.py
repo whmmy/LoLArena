@@ -49,20 +49,24 @@ class GeminiRunner(BaseRunner):
         return types.HttpOptions(base_url=base_url, api_version=api_version)
 
     # ---- config (no automatic_function_calling — we drive the loop) ----
-    def _config(self) -> types.GenerateContentConfig:
+    def _config(self, *, allow_tools: bool = True) -> types.GenerateContentConfig:
+        kwargs: dict[str, Any] = {
+            "system_instruction": self._system_prompt or None,
+            "temperature": 0.3,
+            "max_output_tokens": self.cfg.get("max_tokens", 8192),
+            "automatic_function_calling": types.AutomaticFunctionCallingConfig(disable=True),
+        }
+        if allow_tools:
+            kwargs["tools"] = [types.Tool(function_declarations=[ws.TOOL_GEMINI])]
         return types.GenerateContentConfig(
-            system_instruction=self._system_prompt or None,
-            temperature=0.3,
-            max_output_tokens=self.cfg.get("max_tokens", 8192),
-            tools=[types.Tool(function_declarations=[ws.TOOL_GEMINI])],
-            automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
+            **kwargs,
         )
 
     # ---- one generate_content call ----
-    def _chat(self, messages: list[dict[str, Any]]) -> dict[str, Any]:
+    def _chat(self, messages: list[dict[str, Any]], *, allow_tools: bool = True) -> dict[str, Any]:
         contents = self._to_contents(messages)
         resp = self.client.models.generate_content(
-            model=self.cfg["model"], contents=contents, config=self._config(),
+            model=self.cfg["model"], contents=contents, config=self._config(allow_tools=allow_tools),
         )
 
         text_parts: list[str] = []

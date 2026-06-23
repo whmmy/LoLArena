@@ -30,16 +30,17 @@ class AnthropicRunner(BaseRunner):
         )
 
     # ---- one messages.create call ----
-    def _chat(self, messages: list[dict[str, Any]]) -> dict[str, Any]:
+    def _chat(self, messages: list[dict[str, Any]], *, allow_tools: bool = True) -> dict[str, Any]:
         system = self._pop_system(messages)
         kwargs: dict[str, Any] = {
             "model": self.cfg["model"],
             "system": system,
             "messages": messages,
             "max_tokens": self.cfg.get("max_tokens", 16000),
-            "tools": [ws.TOOL_ANTHROPIC],
             "temperature": 0.3,
         }
+        if allow_tools:
+            kwargs["tools"] = [ws.TOOL_ANTHROPIC]
         resp = self.client.messages.create(**kwargs)
 
         text = ""

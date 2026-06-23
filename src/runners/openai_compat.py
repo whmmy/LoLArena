@@ -14,6 +14,7 @@ from typing import Any
 from openai import OpenAI
 
 from .base import BaseRunner
+from .retry import chat_retry
 from ..adapters import websearch as ws
 
 
@@ -23,18 +24,23 @@ class OpenAICompatRunner(BaseRunner):
         self.client = OpenAI(
             api_key=self._resolve_key(),
             base_url=self._resolve_base_url(),
-            timeout=float(model_cfg.get("timeout_seconds", 180)),
+            # Default raised from 180 -> 300: reasoning models (MiniMax M3 etc.)
+            # plus the multi-round agent loop can exceed 180s on a single call.
+            # Per-model overrides in models.yaml still win.
+            timeout=float(model_cfg.get("timeout_seconds", 300)),
         )
 
     # ---- one chat-completions call ----
-    def _chat(self, messages: list[dict[str, Any]]) -> dict[str, Any]:
+    @chat_retry
+    def _chat(self, messages: list[dict[str, Any]], *, allow_tools: bool = True) -> dict[str, Any]:
         kwargs: dict[str, Any] = {
             "model": self.cfg["model"],
             "messages": messages,
-            "tools": [ws.TOOL_OPENAI],
-            "tool_choice": "auto",
             "temperature": 0.3,
         }
+        if allow_tools:
+            kwargs["tools"] = [ws.TOOL_OPENAI]
+            kwargs["tool_choice"] = "auto"
         if self.cfg.get("max_tokens"):
             kwargs["max_tokens"] = self.cfg["max_tokens"]
 
@@ -58,3 +64,16 @@ class OpenAICompatRunner(BaseRunner):
             "input_tokens": getattr(usage, "prompt_tokens", 0) if usage else 0,
             "output_tokens": getattr(usage, "completion_tokens", 0) if usage else 0,
         }
+
+    # ---- tool results: OpenAI requires one {role:"tool"} message per call_id ----
+    def _tool_results_message(self, results: list[dict]) -> list[dict]:
+        """Return OpenAI-spec tool messages — one per tool_call_id.
+
+        DeepSeek (and strict OpenAI servers) reject a `tool_calls` assistant turn
+        that is followed by anything other than matching `role:"tool"` messages.
+        Returning a list here triggers the extend() path in BaseRunner._agent_loop.
+        """
+        return [
+            {"role": "tool", "tool_call_id": r["id"], "content": r["text"]}
+            for r in results
+        ]

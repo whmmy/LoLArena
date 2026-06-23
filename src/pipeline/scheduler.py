@@ -77,12 +77,6 @@ def predict_tick() -> None:
             print(f"[scheduler] predicting match {m['id']} "
                   f"({m.get('name')}) starting at {m.get('begin_at')}")
             orch.cmd_predict(m["id"])
-            # rebuild the site so the web view reflects new predictions
-            try:
-                from ..leaderboard import build_site
-                build_site.build()
-            except Exception as e:  # noqa: BLE001
-                print(f"[scheduler] site rebuild skipped: {e}")
     except Exception as e:  # noqa: BLE001
         print(f"[scheduler] predict_tick error: {e}")
 

@@ -100,7 +100,8 @@ def _load_or_fetch_fixture(match_id: int, client, *, refresh: bool = False) -> d
 # ============================== predict (series) ==============================
 
 def cmd_predict(match_id: int, *, model_ids: list[str] | None = None,
-                max_workers: int = 4, refresh: bool = False) -> list[dict]:
+                max_workers: int = 4, refresh: bool = False,
+                auto_rebuild_site: bool = True) -> list[dict]:
     """Run series-level prediction for every model on a match."""
     client = PandaScoreClient()
     match = _load_or_fetch_fixture(match_id, client, refresh=refresh)
@@ -115,15 +116,19 @@ def cmd_predict(match_id: int, *, model_ids: list[str] | None = None,
 
     models = _select_models(model_ids)
     print(f"[predict] match {match_id} ({slug}) -> {len(models)} models")
-    return _run_all(models, system, user, scope="match", target_id=target_id,
-                    out_dir=Path(match["_match_dir"]) / "predictions",
-                    validate_fn=validate.validate_match, max_workers=max_workers)
+    records = _run_all(models, system, user, scope="match", target_id=target_id,
+                       out_dir=Path(match["_match_dir"]) / "predictions",
+                       validate_fn=validate.validate_match, max_workers=max_workers)
+    if auto_rebuild_site:
+        _maybe_rebuild_site()
+    return records
 
 
 # ============================== predict (single game) ==============================
 
 def cmd_predict_game(match_id: int, position: int, *, model_ids: list[str] | None = None,
-                     max_workers: int = 4, refresh_bp: bool = False) -> list[dict]:
+                     max_workers: int = 4, refresh_bp: bool = False,
+                     auto_rebuild_site: bool = True) -> list[dict]:
     """Run single-game prediction for every model (after BP is fetched)."""
     client = PandaScoreClient()
     match = collect_mod.fetch_fixture(match_id, client, refresh=refresh_bp)
@@ -155,9 +160,12 @@ def cmd_predict_game(match_id: int, position: int, *, model_ids: list[str] | Non
 
     models = _select_models(model_ids)
     print(f"[predict-game] match {match_id} game {position} -> {len(models)} models")
-    return _run_all(models, system, user, scope="game", target_id=target_id,
-                    out_dir=gdir / "predictions",
-                    validate_fn=validate.validate_game, max_workers=max_workers)
+    records = _run_all(models, system, user, scope="game", target_id=target_id,
+                       out_dir=gdir / "predictions",
+                       validate_fn=validate.validate_game, max_workers=max_workers)
+    if auto_rebuild_site:
+        _maybe_rebuild_site()
+    return records
 
 
 def _last_game_summary(match: dict, position: int) -> dict | None:
@@ -219,8 +227,17 @@ def _run_all(models: list[dict], system: str, user: str, *, scope: str,
             res = runner.run(system, user, scope=scope, target_id=target_id,
                              validate_fn=validate_fn, progress=_progress)
         except Exception as e:  # noqa: BLE001
-            return {"model_id": m["id"], "scope": scope, "target_id": target_id,
-                    "error": f"{type(e).__name__}: {e}", "prediction": {}}
+            record = {
+                "model_id": m["id"], "scope": scope, "target_id": target_id,
+                "submitted_at": datetime.now(timezone.utc).isoformat(),
+                "prediction": {}, "sources": [], "input_tokens": 0,
+                "output_tokens": 0, "tool_calls": 0, "cost_usd": 0.0,
+                "wall_seconds": 0.0, "error": f"{type(e).__name__}: {e}",
+            }
+            (out_dir / f"{m['id']}.json").write_text(
+                json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+            return record
         record = {
             "model_id": res.model_id, "scope": res.scope, "target_id": res.target_id,
             "submitted_at": res.submitted_at, "prediction": res.prediction,
@@ -260,6 +277,14 @@ def _run_all(models: list[dict], system: str, user: str, *, scope: str,
     _print_run_summary(results, started_at)
 
     return results
+
+
+def _maybe_rebuild_site() -> None:
+    try:
+        from ..leaderboard import build_site
+        build_site.build()
+    except Exception as e:  # noqa: BLE001
+        print(f"[predict] site rebuild skipped: {e}")
 
 
 def _format_progress_event(event: dict[str, Any]) -> str:

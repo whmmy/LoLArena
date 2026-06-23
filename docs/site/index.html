@@ -21,6 +21,8 @@
   .pill{font-size:.7rem;padding:.1rem .5rem;border-radius:9999px;background:rgba(167,139,250,.15);color:#c4b5fd}
   html[data-theme="light"] .pill{background:#ede9fe;color:#6d28d9}
   .tabbtn.active{background:rgba(167,139,250,.2);color:#c4b5fd}
+  .team-logo{width:34px;height:34px;object-fit:contain;border-radius:8px;background:rgba(255,255,255,.06);padding:4px;flex:0 0 auto}
+  html[data-theme="light"] .team-logo{background:#f1f5f9}
   table{border-collapse:collapse;width:100%}
   th,td{padding:.45rem .6rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
   html[data-theme="light"] th,html[data-theme="light"] td{border-color:#eef2f7}
@@ -51,8 +53,14 @@
 
   <!-- INCOMING -->
   <section class="mb-10">
-    <h2 class="text-lg font-semibold mb-3">⏳ 即将开始 <span class="text-xs opacity-50 font-normal">/ Incoming</span></h2>
+    <h2 class="text-lg font-semibold mb-3">⏳ 待预测比赛 <span class="text-xs opacity-50 font-normal">/ Incoming</span></h2>
     <div id="incoming" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+  </section>
+
+  <!-- PREDICTED UPCOMING -->
+  <section class="mb-10">
+    <h2 class="text-lg font-semibold mb-3">✅ 已预测待开赛 <span class="text-xs opacity-50 font-normal">/ Predicted Upcoming</span></h2>
+    <div id="predictedUpcoming" class="space-y-3"></div>
   </section>
 
   <!-- LEADERBOARD -->
@@ -101,6 +109,7 @@ async function load(){
   }
   document.getElementById('modelCountPill').textContent = (DATA.models||[]).length+' models';
   renderIncoming();
+  renderPredictedUpcoming();
   renderLeaderboard();
   renderHistory();
 }
@@ -114,17 +123,35 @@ function fmtCountdown(begin){
   return h>0?`${h}h ${m}m 后`: `${m}m 后`;
 }
 
+function fmtChinaTime(begin){
+  if(!begin) return '';
+  const d = new Date(begin);
+  if(Number.isNaN(d.getTime())) return '';
+  return new Intl.DateTimeFormat('zh-CN', {
+    timeZone: 'Asia/Shanghai',
+    month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit',
+    hour12: false,
+  }).format(d).replace(/\//g, '-') + ' 北京时间';
+}
+
 function renderIncoming(){
   const el = document.getElementById('incoming');
   const items = DATA.incoming||[];
   if(!items.length){ el.innerHTML='<div class="card p-4 text-sm opacity-60 col-span-full">近期暂无待预测比赛。</div>'; return; }
   el.innerHTML = items.slice(0,9).map(m=>`
     <div class="card p-3">
-      <div class="text-xs opacity-60">${m.league||'LoL'} · ${m.begin_at? m.begin_at.slice(0,16).replace('T',' '):''}</div>
-      <div class="font-semibold mt-1">${esc(m.blue)} <span class="opacity-40">vs</span> ${esc(m.red)}</div>
+      <div class="text-xs opacity-60">${m.league||'LoL'} · ${fmtChinaTime(m.begin_at)}</div>
+      ${renderTeamLine(m)}
       <div class="text-xs accent mt-2">${fmtCountdown(m.begin_at)}</div>
-      <div class="text-xs opacity-50 mt-1">${(m.predictions&&Object.keys(m.predictions).length)||0} 个模型已预测</div>
+      <div class="text-xs opacity-50 mt-1">等待预测</div>
     </div>`).join('');
+}
+
+function renderPredictedUpcoming(){
+  const el = document.getElementById('predictedUpcoming');
+  const items = DATA.predicted_upcoming||[];
+  if(!items.length){ el.innerHTML='<div class="card p-4 text-sm opacity-60">暂无已预测但未开赛的比赛。</div>'; return; }
+  el.innerHTML = items.slice(0,20).map(h=>renderSeriesMatchCard(h,{showTruth:false})).join('');
 }
 
 function renderLeaderboard(){
@@ -156,41 +183,133 @@ function renderLeaderboard(){
 
 function renderHistory(){
   const el = document.getElementById('history');
-  const items = curHTab==='series' ? (DATA.history||[]) : (DATA.game_history||[]);
+  const items = curHTab==='series'
+    ? (DATA.history||[]).filter(h=>!isUpcomingStatus(h.status))
+    : (DATA.game_history||[]);
   if(!items.length){ el.innerHTML='<div class="card p-4 text-sm opacity-60">暂无历史记录。</div>'; return; }
   el.innerHTML = items.slice(0,30).map(h=>{
     if(curHTab==='series'){
-      const truth = h.truth||{};
-      const preds = h.predictions||{};
-      const results = h.results||{};
-      const predRows = Object.entries(preds).map(([m,p])=>{
-        const sc = results[m];
-        return `<tr><td>${esc(m)}</td><td>${p.series_score||'-'}</td><td>${sc!=null?sc.toFixed(1):'—'}</td></tr>`;
-      }).join('') || '<tr><td colspan="3" class="opacity-50">无预测</td></tr>';
-      return `<div class="card p-3">
-        <div class="flex justify-between text-xs opacity-60"><span>${h.league||''} · ${h.begin_at?h.begin_at.slice(0,10):''}</span><span class="pill">${h.status||''}</span></div>
-        <div class="font-semibold mt-1">${esc(h.blue)} vs ${esc(h.red)}</div>
-        <div class="text-xs mt-1">真实比分: <b class="accent">${truth.series_score||'—'}</b></div>
-        <table class="text-xs mt-2"><thead><tr><th>模型</th><th>预测比分</th><th>得分</th></tr></thead><tbody>${predRows}</tbody></table>
-      </div>`;
+      return renderSeriesMatchCard(h,{showTruth:true});
     }else{
       const truth = h.truth||{};
       const preds = h.predictions||{};
-      const pr = Object.entries(preds).map(([m,p])=>`<tr><td>${esc(m)}</td><td>${p.winner||'-'}</td><td>${p.duration!=null?p.duration:'-'}</td><td>${p.total_kills!=null?p.total_kills:'-'}</td></tr>`).join('')||'<tr><td colspan="4" class="opacity-50">无预测</td></tr>';
+      const pr = renderPredictionList(preds, h.results||{}, 'game');
       const blueChamps = (h.blue||[]).map(p=>p.champion).join(', ');
       const redChamps = (h.red||[]).map(p=>p.champion).join(', ');
       return `<div class="card p-3">
         <div class="text-xs opacity-60">${h.match_slug} · 第 ${h.position} 局 · ${h.bp_complete?'BP 完成':'BP 未完成'}</div>
         <div class="text-xs mt-1">蓝: ${esc(blueChamps)} | 红: ${esc(redChamps)}</div>
         <div class="text-xs mt-1">真实: <b class="accent">${truth.winner_side||'—'}</b> · ${truth.length_min||'—'}min</div>
-        <table class="text-xs mt-2"><thead><tr><th>模型</th><th>预测胜方</th><th>时长</th><th>总击杀</th></tr></thead><tbody>${pr}</tbody></table>
+        ${pr}
       </div>`;
     }
   }).join('');
 }
 
+function renderSeriesMatchCard(h, opts={}){
+  const truth = h.truth||{};
+  const preds = h.predictions||{};
+  return `<div class="card p-3">
+    <div class="flex justify-between text-xs opacity-60"><span>${h.league||''} · ${fmtChinaTime(h.begin_at)}</span><span class="pill">${h.status||''}</span></div>
+    ${renderTeamLine(h)}
+    ${opts.showTruth?`<div class="text-xs mt-1">真实比分: <b class="accent">${truth.series_score||'—'}</b></div>`:''}
+    <div class="text-xs opacity-60 mt-1">${Object.keys(preds).length} 个模型已预测</div>
+    ${renderPredictionList(preds, h.results||{}, 'series')}
+  </div>`;
+}
+
+function isUpcomingStatus(status){
+  return status==null || status==='' || status==='not_started';
+}
+
+function renderTeamLine(match){
+  return `<div class="flex items-center justify-between gap-3 mt-2">
+    <div class="flex items-center gap-2 min-w-0">${teamLogo(match.blue_image_url, match.blue)}<span class="font-semibold truncate">${esc(match.blue)}</span></div>
+    <span class="text-xs opacity-40 flex-none">vs</span>
+    <div class="flex items-center gap-2 min-w-0 justify-end">${teamLogo(match.red_image_url, match.red)}<span class="font-semibold truncate">${esc(match.red)}</span></div>
+  </div>`;
+}
+
+function teamLogo(url, name){
+  if(!url) return '';
+  return `<img class="team-logo" src="${escAttr(url)}" alt="${escAttr(name||'team')}" loading="lazy" referrerpolicy="no-referrer" />`;
+}
+
+function renderPredictionList(preds, results={}, scope='series'){
+  const entries = Object.entries(preds||{});
+  if(!entries.length) return '<div class="text-xs opacity-50 mt-2">无预测</div>';
+  return `<div class="mt-2 space-y-2">${entries.map(([modelId,rec])=>renderPrediction(modelId,rec,results[modelId],scope)).join('')}</div>`;
+}
+
+function renderPrediction(modelId, rec, score, scope){
+  const summary = rec.summary||rec||{};
+  const detail = rec.detail||{};
+  const pred = detail.prediction||rec.prediction||rec||{};
+  const probs = summary.win_probs||pred.win_probs||{};
+  const winner = summary.predicted_winner||summary.winner||pred.predicted_winner||pred.winner||'-';
+  const scoreText = scope==='series' ? (summary.series_score||pred.series_score||'-') : (summary.duration!=null?`${summary.duration}min`:'-');
+  const probText = probs.blue!=null || probs.red!=null ? `蓝 ${pct(probs.blue)} / 红 ${pct(probs.red)}` : (summary.win_prob!=null?pct(summary.win_prob):'—');
+  const cost = detail.cost_usd!=null ? `$${Number(detail.cost_usd).toFixed(6)}` : '—';
+  const tokens = `${detail.input_tokens??'—'} / ${detail.output_tokens??'—'}`;
+  const status = detail.error ? `<span class="text-red-300">失败</span>` : '<span class="text-emerald-300">成功</span>';
+  const sc = score!=null ? Number(score).toFixed(1) : '—';
+  return `<details class="card p-2">
+    <summary class="cursor-pointer list-none">
+      <div class="grid md:grid-cols-7 gap-2 text-xs items-center">
+        <div class="font-medium text-sm">${esc(modelName(modelId))}</div>
+        <div>胜方 <b class="accent">${esc(winner)}</b></div>
+        <div>${scope==='series'?'比分':'时长'} <b>${esc(scoreText)}</b></div>
+        <div>${probText}</div>
+        <div>Tokens ${esc(tokens)}</div>
+        <div>Cost <b>${esc(cost)}</b></div>
+        <div>${status} · 得分 ${sc}</div>
+      </div>
+    </summary>
+    <div class="mt-3 text-xs space-y-3">
+      ${detail.error?`<div class="text-red-300">${esc(detail.error)}</div>`:''}
+      ${renderReasoning(pred.reasoning)}
+      ${renderObjectList('关键选手', pred.key_players, item=>`${item.player||''} ${item.role?`(${item.role})`:''}: ${item.reason||''}`)}
+      ${renderStringList('胜负手', pred.swing_factors)}
+      ${renderStringList('版本/风格信号', pred.meta_style_signals)}
+      ${renderSources('预测来源', pred.sources||detail.sources)}
+      ${renderSearches(detail.searches)}
+      <div class="opacity-60">提交: ${esc(detail.submitted_at||'—')} · 耗时: ${detail.wall_seconds!=null?detail.wall_seconds+'s':'—'} · 输入/输出 tokens: ${esc(tokens)} · 成本: ${esc(cost)}</div>
+    </div>
+  </details>`;
+}
+
+function renderReasoning(reasoning){
+  if(!reasoning || typeof reasoning!=='object') return '';
+  const labels = {overall:'总览',fundamentals:'基本面',matchups:'对位',meta_style:'版本风格',h2h_psych:'交手/心理'};
+  return `<div class="space-y-2">${Object.entries(reasoning).map(([k,v])=>`<div><div class="font-semibold accent">${esc(labels[k]||k)}</div><p class="opacity-80 leading-relaxed whitespace-pre-wrap">${esc(v)}</p></div>`).join('')}</div>`;
+}
+
+function renderStringList(title, items){
+  if(!Array.isArray(items)||!items.length) return '';
+  return `<div><div class="font-semibold accent mb-1">${title}</div><ul class="list-disc pl-5 space-y-1 opacity-80">${items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+}
+
+function renderObjectList(title, items, format){
+  if(!Array.isArray(items)||!items.length) return '';
+  return `<div><div class="font-semibold accent mb-1">${title}</div><ul class="list-disc pl-5 space-y-1 opacity-80">${items.map(x=>`<li>${esc(format(x||{}))}</li>`).join('')}</ul></div>`;
+}
+
+function renderSources(title, sources){
+  if(!Array.isArray(sources)||!sources.length) return '';
+  return `<div><div class="font-semibold accent mb-1">${title}</div><ul class="list-disc pl-5 space-y-1 opacity-80">${sources.map(s=>`<li>${esc(s.query||s.url||JSON.stringify(s))}${s.accessed_at?` · ${esc(s.accessed_at)}`:''}</li>`).join('')}</ul></div>`;
+}
+
+function renderSearches(searchLog){
+  const searches = searchLog && Array.isArray(searchLog.searches) ? searchLog.searches : [];
+  if(!searches.length) return '';
+  return `<details class="card p-2"><summary class="cursor-pointer text-xs accent">搜索记录 ${searches.length} 条</summary><ul class="list-disc pl-5 mt-2 space-y-1 opacity-80">${searches.map(s=>`<li>${esc(s.query||JSON.stringify(s))}</li>`).join('')}</ul></details>`;
+}
+
 function fmt(v){ return v==null?'—':Number(v).toFixed(1); }
+function pct(v){ return v==null?'—':(Number(v)*100).toFixed(1)+'%'; }
 function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function escAttr(s){ return esc(s).replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function modelName(id){ const m=(DATA.models||[]).find(x=>x.id===id); return m?(m.display_name||m.id):id; }
 
 // tab switching
 document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{
