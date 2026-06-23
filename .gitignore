@@ -1,0 +1,52 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.local
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs and runtime artifacts
+*.log
+logs/
+*.tmp
+*.temp
+
+# LoLArena generated caches and reports
+data/_pandascore_cache/
+data/**/predictions/run_logs/
+docs/site/data.json
+
+# Editor and OS noise
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Notebook checkpoints
+.ipynb_checkpoints/
