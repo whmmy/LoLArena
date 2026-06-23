@@ -1,0 +1,49 @@
+# LoLArena — leagues / series we track.
+#
+# IMPORTANT: `slug` must be the EXACT PandaScore league slug (from /lol/leagues).
+# PandaScore prefixes ALL LoL slugs with "league-of-legends-" — short names
+# like "lck" or "world-championship" will NOT match.
+# `id` is optional but recommended: if present we filter by id directly and
+# skip the league-list lookup (faster + survives slug renames).
+#
+# Verify/refresh these anytime with:
+#   python -c "from src.adapters.pandascore import PandaScoreClient as C; \
+#     [print(l['id'], l['slug'], l['name']) for l in C().get('/lol/leagues',{'page[size]':100})]"
+#
+# Major-region reorganization (2025+):
+#   LCS (NA)  -> LTA North      LEC (EU) -> LTA South / LTA
+
+leagues:
+  - name: LCK
+    slug: league-of-legends-lck-champions-korea
+    id: 293
+    region: KR
+    series_keywords: [LCK, Spring, Summer, Playoffs, Regional Finals]
+  - name: LPL
+    slug: league-of-legends-lpl-china
+    id: 294
+    region: CN
+    series_keywords: [LPL, Spring, Summer, Playoffs, Regional Finals]
+  - name: MSI
+    slug: league-of-legends-mid-invitational
+    id: 300
+    region: INT
+    series_keywords: [Mid-Season Invitational, MSI, Mid Invitational]
+  - name: Worlds
+    slug: league-of-legends-world-championship
+    id: 297
+    region: INT
+    series_keywords: [World Championship, Worlds]
+  - name: LTA-North
+    slug: league-of-legends-lta-north
+    id: 5345
+    region: NA
+    series_keywords: [LTA, North, Spring, Summer, Playoffs]
+  - name: LTA-South
+    slug: league-of-legends-lta-south
+    id: 5346
+    region: EU
+    series_keywords: [LTA, South, Spring, Summer, Playoffs]
+
+# How many days ahead to scan /lol/matches/upcoming for tracked leagues.
+scan_horizon_days: 21

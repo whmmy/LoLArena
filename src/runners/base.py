@@ -1,0 +1,348 @@
+"""Base runner with a unified agent loop + web_search tool.
+
+Every model mounts the SAME web_search tool (Zhipu backend). The agent loop:
+  model -> emits JSON OR a web_search tool_call
+       -> if tool_call: runner executes web_search, feeds results back
+       -> repeat until model emits final JSON (no more tool calls)
+
+Fairness: identical tool, identical backend. Only the model's *choice* of queries differs.
+"""
+
+from __future__ import annotations
+
+import abc
+import dataclasses
+import datetime as dt
+import json
+import os
+import time
+from typing import Any, Callable
+
+from .. import config as cfg
+
+
+@dataclasses.dataclass
+class RunnerResult:
+    model_id: str
+    scope: str                      # "match" | "game"
+    target_id: str                  # match slug or "<match_slug>/g<pos>"
+    submitted_at: str
+    prediction: dict[str, Any]
+    raw_text: str                   # final assistant text (JSON)
+    thinking_text: str | None
+    sources: list[dict[str, Any]]   # web_search query log
+    input_tokens: int
+    output_tokens: int
+    tool_calls: int
+    cost_usd: float
+    wall_seconds: float
+    error: str | None = None
+    search_log: list[dict[str, Any]] = dataclasses.field(default_factory=list)  # full provenance
+
+
+ProgressCallback = Callable[[dict[str, Any]], None]
+
+
+class BaseRunner(abc.ABC):
+    """One subclass per provider protocol. All share the agent loop in run()."""
+
+    def __init__(self, model_cfg: dict[str, Any], search_tool):
+        self.cfg = model_cfg
+        self.model_id = model_cfg["id"]
+        self.search = search_tool
+        self.max_tool_calls = int(
+            cfg.policy().get("web_search", {}).get("max_calls_per_prediction", 12)
+        )
+
+    # ---- to implement per provider ----
+
+    @abc.abstractmethod
+    def _chat(self, messages: list[dict[str, Any]]) -> dict[str, Any]:
+        """One provider call. messages already include system + history.
+
+        Return:
+            text        : str        final assistant text (or '' if tool_calls)
+            thinking    : str|None
+            tool_calls  : list[dict] normalized tool-call requests (see below)
+            input_tokens: int
+            output_tokens: int
+
+        Each tool_call dict MUST be normalized to:
+            { "id": str, "name": "web_search", "args": <dict|json-str> }
+        """
+
+    # ---- the unified agent loop ----
+
+    def run(self, system_prompt: str, user_prompt: str, *, scope: str,
+            target_id: str, validate_fn: Callable[[dict], list[str]] | None = None,
+            max_format_retries: int = 2,
+            progress: ProgressCallback | None = None) -> RunnerResult:
+        t0 = time.time()
+        totals = {"in": 0, "out": 0, "calls": 0, "cost": 0.0}
+        sources: list[dict[str, Any]] = []
+        thinking_parts: list[str] = []
+        raw = ""
+        err: str | None = None
+        pred: dict[str, Any] = {}
+
+        # Seed messages. Sub-classes that need a different message shape
+        # (Anthropic system block, Gemini contents) override _seed_messages.
+        messages = self._seed_messages(system_prompt, user_prompt)
+
+        try:
+            self._emit(progress, "start", scope=scope, target_id=target_id)
+            # 1) the search-and-reason loop until JSON or budget exhausted
+            self._agent_loop(messages, totals, sources, thinking_parts, progress)
+
+            # 2) extract + validate JSON, with up to N repair retries
+            for attempt in range(max_format_retries + 1):
+                raw = self._last_assistant_text(messages)
+                self._emit(progress, "parse", attempt=attempt + 1, raw_chars=len(raw))
+                pred = parse_json(raw)
+                if isinstance(pred, dict):
+                    errs = validate_fn(pred) if validate_fn else []
+                    if not errs:
+                        self._emit(progress, "validated", attempt=attempt + 1)
+                        break
+                    # ask the model to fix it (one more round, no tools)
+                    self._emit(progress, "repair", attempt=attempt + 1, errors=errs)
+                    fix_msg = self._repair_message(errs)
+                    messages.append(fix_msg)
+                    out = self._chat(messages)
+                    totals["in"] += out.get("input_tokens", 0)
+                    totals["out"] += out.get("output_tokens", 0)
+                    self._append_assistant(messages, out)
+                else:
+                    pred = {}
+                    self._emit(progress, "repair", attempt=attempt + 1,
+                               errors=["Output was not valid JSON."])
+                    messages.append(self._repair_message(
+                        ["Output was not valid JSON. Return ONLY the JSON object."]
+                    ))
+                    out = self._chat(messages)
+                    totals["in"] += out.get("input_tokens", 0)
+                    totals["out"] += out.get("output_tokens", 0)
+                    self._append_assistant(messages, out)
+        except Exception as e:  # noqa: BLE001
+            err = f"{type(e).__name__}: {e}"
+            self._emit(progress, "error", error=err)
+
+        if isinstance(pred, dict) and not pred.get("sources"):
+            pred["sources"] = sources
+
+        result = RunnerResult(
+            model_id=self.model_id, scope=scope, target_id=target_id,
+            submitted_at=now_iso(), prediction=pred, raw_text=raw,
+            thinking_text="\n".join(thinking_parts) or None,
+            sources=sources,
+            input_tokens=totals["in"], output_tokens=totals["out"],
+            tool_calls=totals["calls"],
+            cost_usd=totals["cost"] + self._price(totals["in"], totals["out"]),
+            wall_seconds=time.time() - t0, error=err,
+            search_log=getattr(self.search, "log", []),
+        )
+        self._emit(progress, "finish", ok=bool(result.prediction and not result.error),
+                   tool_calls=result.tool_calls, input_tokens=result.input_tokens,
+                   output_tokens=result.output_tokens,
+                   cost_usd=round(result.cost_usd, 6),
+                   wall_seconds=round(result.wall_seconds, 2))
+        return result
+
+    # ---- agent loop shared by all providers ----
+
+    def _agent_loop(self, messages, totals, sources, thinking_parts,
+                    progress: ProgressCallback | None = None) -> None:
+        from ..adapters.websearch import format_results_for_model, sources_from_tool
+
+        round_no = 0
+        while True:
+            round_no += 1
+            self._emit(progress, "chat_start", round=round_no)
+            out = self._chat(messages)
+            totals["in"] += out.get("input_tokens", 0)
+            totals["out"] += out.get("output_tokens", 0)
+            if out.get("thinking"):
+                thinking_parts.append(out["thinking"])
+            self._append_assistant(messages, out)
+
+            calls = out.get("tool_calls") or []
+            self._emit(progress, "chat_end", round=round_no,
+                       input_tokens=out.get("input_tokens", 0),
+                       output_tokens=out.get("output_tokens", 0),
+                       text_chars=len(out.get("text") or ""),
+                       tool_calls=len(calls),
+                       provider_thinking_chars=len(out.get("thinking") or ""))
+            if not calls:
+                return  # model emitted plain text (hopefully JSON) -> done
+
+            if totals["calls"] >= self.max_tool_calls:
+                # budget hit: nudge model to stop searching and answer
+                self._emit(progress, "budget_hit", max_tool_calls=self.max_tool_calls)
+                messages.append(self._user_message(
+                    "You've reached the search budget. Now output the final JSON only."
+                ))
+                # one more plain call to let it answer
+                self._emit(progress, "chat_start", round=round_no + 1, final_after_budget=True)
+                out2 = self._chat(messages)
+                totals["in"] += out2.get("input_tokens", 0)
+                totals["out"] += out2.get("output_tokens", 0)
+                if out2.get("thinking"):
+                    thinking_parts.append(out2["thinking"])
+                self._append_assistant(messages, out2)
+                self._emit(progress, "chat_end", round=round_no + 1,
+                           input_tokens=out2.get("input_tokens", 0),
+                           output_tokens=out2.get("output_tokens", 0),
+                           text_chars=len(out2.get("text") or ""),
+                           tool_calls=len(out2.get("tool_calls") or []),
+                           provider_thinking_chars=len(out2.get("thinking") or ""))
+                return
+
+            # execute each web_search call and feed results back as a tool response
+            tool_results = []
+            for c in calls:
+                if c.get("name") != "web_search":
+                    continue
+                query = _q(c.get("args"))
+                self._emit(progress, "tool_start", round=round_no,
+                           call_no=totals["calls"] + 1, query=query)
+                results = self.search.invoke_raw(c.get("args"))
+                totals["calls"] += 1
+                sources.extend(sources_from_tool(self.search))
+                self._emit(progress, "tool_end", round=round_no,
+                           call_no=totals["calls"], query=query,
+                           result_count=len(results))
+                tool_results.append({
+                    "id": c.get("id") or f"call_{totals['calls']}",
+                    "text": format_results_for_model(results, query),
+                })
+            if tool_results:
+                messages.append(self._tool_results_message(tool_results))
+            # loop continues -> model reasons again
+
+    def _emit(self, progress: ProgressCallback | None, event: str, **data: Any) -> None:
+        if progress is None:
+            return
+        progress({"model_id": self.model_id, "event": event, **data})
+
+    # ---- provider-overridable message normalization ----
+    # Default shape = OpenAI chat-completions style. Anthropic/Gemini override.
+
+    def _seed_messages(self, system_prompt: str, user_prompt: str) -> list[dict]:
+        return [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
+
+    def _append_assistant(self, messages: list[dict], out: dict) -> None:
+        """Append the assistant turn returned by _chat into the message list."""
+        msg: dict[str, Any] = {"role": "assistant"}
+        if out.get("text"):
+            msg["content"] = out["text"]
+        if out.get("tool_calls"):
+            msg["tool_calls"] = [
+                {"id": c.get("id") or f"call_{i}", "type": "function",
+                 "function": {"name": c["name"], "arguments": _argstr(c.get("args"))}}
+                for i, c in enumerate(out["tool_calls"])
+            ]
+        messages.append(msg)
+
+    def _user_message(self, text: str) -> dict:
+        return {"role": "user", "content": text}
+
+    def _repair_message(self, errors: list[str]) -> dict:
+        return self._user_message(
+            "Your previous output had these problems:\n- "
+            + "\n- ".join(errors)
+            + "\n\nRe-output the COMPLETE JSON object only, no extra text."
+        )
+
+    def _tool_results_message(self, results: list[dict]) -> dict:
+        """results: [{id, text}] -> OpenAI-style tool role messages are one per id,
+        but for simplicity we return a single user-role digest that all providers
+        can consume. Providers needing strict tool-role messages override this."""
+        digest = "\n\n".join(r["text"] for r in results)
+        return {"role": "user", "content": f"Web search results:\n\n{digest}"}
+
+    def _last_assistant_text(self, messages: list[dict]) -> str:
+        for m in reversed(messages):
+            if m.get("role") == "assistant" and isinstance(m.get("content"), str) and m["content"]:
+                return m["content"]
+        return ""
+
+    # ---- key / base_url resolution (shared, proxy-aware) ----
+    def _resolve_key(self) -> str:
+        import os
+        from .. import config as cfg
+        proxy = cfg.env("LOLA_MODEL_PROXY")
+        key_env = self.cfg.get("api_key_env", "")
+        key = os.environ.get(key_env, "") if key_env else ""
+        if not key and proxy:
+            key = os.environ.get("OPENAI_API_KEY", "")
+        if not key:
+            raise RuntimeError(
+                f"{self.model_id}: env var {key_env or 'OPENAI_API_KEY'} is not set."
+            )
+        return key
+
+    def _resolve_base_url(self) -> str | None:
+        import os
+        from .. import config as cfg
+        proxy = cfg.env("LOLA_MODEL_PROXY")
+        if proxy:
+            return proxy.rstrip("/")
+        env_name = self.cfg.get("base_url_env", "")
+        if env_name:
+            override = os.environ.get(env_name, "")
+            if override:
+                return override.rstrip("/")
+        return (self.cfg.get("base_url") or None)
+
+    # ---- pricing ----
+    def _price(self, in_tok: int, out_tok: int) -> float:
+        p = self.cfg.get("price_per_mtok") or {}
+        return (in_tok * p.get("input", 0) + out_tok * p.get("output", 0)) / 1_000_000
+
+
+# ---------------- helpers ----------------
+
+def now_iso() -> str:
+    return dt.datetime.now(dt.timezone.utc).isoformat()
+
+
+def parse_json(text: str) -> dict | None:
+    """Best-effort JSON extraction from model text (handles fences, prose)."""
+    text = (text or "").strip()
+    if text.startswith("```"):
+        text = text.strip("`")
+        if text[:4].lower() == "json":
+            text = text[4:]
+        text = text.strip()
+        if "```" in text:
+            text = text.split("```", 1)[0]
+    try:
+        obj = json.loads(text)
+        return obj if isinstance(obj, dict) else None
+    except json.JSONDecodeError:
+        start, end = text.find("{"), text.rfind("}")
+        if start != -1 and end > start:
+            try:
+                obj = json.loads(text[start: end + 1])
+                return obj if isinstance(obj, dict) else None
+            except json.JSONDecodeError:
+                return None
+        return None
+
+
+def _q(args: Any) -> str:
+    if isinstance(args, dict):
+        return str(args.get("query", ""))
+    try:
+        return str(json.loads(args).get("query", ""))
+    except Exception:
+        return str(args)
+
+
+def _argstr(args: Any) -> str:
+    if isinstance(args, str):
+        return args
+    return json.dumps(args, ensure_ascii=False)

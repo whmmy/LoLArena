@@ -1,0 +1,798 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "match",
+  "target_id": "mid-season_invitational_t1_vs_team_liquid_2026-06-28",
+  "submitted_at": "2026-06-23T08:26:14.937421+00:00",
+  "prediction": {
+    "sources": [
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:56Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:57Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:57Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:59Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:59Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:59Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:00Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:00Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:00Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:00Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:22Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:22Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:22Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:22Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:22Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:23Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:23Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:23Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:23Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:23Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:23Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "T1 vs Team Liquid historical head to head LoL",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:26Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "T1 vs Team Liquid historical head to head LoL",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "T1 LCK 2026 Peyz Doran performance summer split",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:27Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "T1 vs Team Liquid historical head to head LoL",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "T1 LCK 2026 Peyz Doran performance summer split",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:40Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "T1 vs Team Liquid historical head to head LoL",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "T1 LCK 2026 Peyz Doran performance summer split",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "LoL 16.12 patch meta strong champions top jungle mid 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:42Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "T1 vs Team Liquid historical head to head LoL",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "T1 LCK 2026 Peyz Doran performance summer split",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "LoL 16.12 patch meta strong champions top jungle mid 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "MSI 2026 play-in T1 TL format schedule bracket",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:43Z"
+      },
+      {
+        "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "T1 LCK 2026 Summer recent results Faker",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "T1 vs Team Liquid historical head to head LoL",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "T1 LCK 2026 Peyz Doran performance summer split",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "LoL 16.12 patch meta strong champions top jungle mid 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "MSI 2026 play-in T1 TL format schedule bracket",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      },
+      {
+        "query": "Team Liquid TL players 2026 Impact Santorin APA Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:16:45Z"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:56Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:57Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:57Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:59Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:59Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:59Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:00Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:00Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:00Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:00Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:22Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:22Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:22Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:22Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:22Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:23Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:23Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:23Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:23Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:23Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:23Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "T1 vs Team Liquid historical head to head LoL",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:26Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "T1 vs Team Liquid historical head to head LoL",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "T1 LCK 2026 Peyz Doran performance summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:27Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "T1 vs Team Liquid historical head to head LoL",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "T1 LCK 2026 Peyz Doran performance summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:40Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "T1 vs Team Liquid historical head to head LoL",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "T1 LCK 2026 Peyz Doran performance summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "LoL 16.12 patch meta strong champions top jungle mid 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:42Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "T1 vs Team Liquid historical head to head LoL",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "T1 LCK 2026 Peyz Doran performance summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "LoL 16.12 patch meta strong champions top jungle mid 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "MSI 2026 play-in T1 TL format schedule bracket",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:43Z"
+    },
+    {
+      "query": "T1 vs Team Liquid Mid-Season Invitational 2026 MSI",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "T1 LCK 2026 Summer recent results Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "Team Liquid LCS 2026 Summer roster CoreJJ APA",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "T1 Doran Oner Faker Peyz Keria MSI 2026 roster players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "Team Liquid TL Impact APA Yeon CoreJJ 2026 roster LCS",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "T1 vs Team Liquid historical head to head LoL",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "T1 LCK 2026 Peyz Doran performance summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 Spring finals LYON playoff result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "LoL 16.12 patch meta strong champions top jungle mid 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "MSI 2026 play-in T1 TL format schedule bracket",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    },
+    {
+      "query": "Team Liquid TL players 2026 Impact Santorin APA Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:16:45Z"
+    }
+  ],
+  "input_tokens": 60862,
+  "output_tokens": 898,
+  "tool_calls": 12,
+  "cost_usd": 0.0,
+  "wall_seconds": 634.53,
+  "error": "APITimeoutError: Request timed out."
+}

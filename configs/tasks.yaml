@@ -1,0 +1,106 @@
+# LoLArena — task definitions & scoring weights
+#
+# Two scopes:
+#   match = a whole series (Bo3/Bo5). Truth comes from PandaScore match.results[].
+#   game  = a single game (after BP). Truth comes from /lol/games/{id}.
+#
+# Each sub-task names:
+#   metric          : which function in graders/metrics computes the score
+#   output_field    : key in the prediction JSON
+#   weight_in_layer : relative weight within its layer
+#   layer_weight    : weight of the parent layer in the composite
+
+# ================= SERIES (match) =================
+match:
+  layer_weights:
+    T1_result:    0.45
+    T2_matchup:   0.25
+    T3_reasoning: 0.15
+    T4_meta:      0.15
+
+  tasks:
+    # ------- T1: core result -------
+    - id: series_winner_prob
+      layer: T1_result
+      weight_in_layer: 0.50
+      metric: brier_binary
+      output_field: win_probs
+      notes: Model-owned blue/red probability. The higher side must match predicted series winner.
+    - id: series_score
+      layer: T1_result
+      weight_in_layer: 0.35
+      metric: scoreline_similarity
+      output_field: series_score
+      notes: e.g. predicted "3-1" vs true "3-1".
+    - id: series_length_mae
+      layer: T1_result
+      weight_in_layer: 0.15
+      metric: mae
+      output_field: series_length
+      notes: predicted total games vs true total games.
+
+    # ------- T2: matchup analysis (soft truth — graded structurally) -------
+    - id: key_players
+      layer: T2_matchup
+      weight_in_layer: 0.60
+      metric: key_players_recall
+      output_field: key_players
+      notes: Fraction of the 10 starting players the model flagged as decisive that actually stood out.
+    - id: swing_factors
+      layer: T2_matchup
+      weight_in_layer: 0.40
+      metric: structural_completeness
+      output_field: swing_factors
+      notes: At least N concrete swing factors present.
+
+    # ------- T3: reasoning completeness -------
+    - id: reasoning_fields
+      layer: T3_reasoning
+      weight_in_layer: 1.00
+      metric: reasoning_completeness
+      output_field: reasoning
+      notes: All four dimensions + overall present, each above min char threshold.
+
+    # ------- T4: meta alignment (soft) -------
+    - id: meta_alignment
+      layer: T4_meta
+      weight_in_layer: 1.00
+      metric: structural_completeness
+      output_field: meta_style_signals
+      notes: Model referenced patch/meta signals in its prediction.
+
+# ================= SINGLE GAME =================
+game:
+  layer_weights:
+    G1_result:   0.50
+    G2_duration: 0.25
+    G3_kills:    0.25
+
+  tasks:
+    - id: game_winner
+      layer: G1_result
+      weight_in_layer: 1.00
+      metric: brier_binary
+      output_field: win_prob
+      notes: blue/red game winner probability vs actual winner.
+    - id: duration_mae
+      layer: G2_duration
+      weight_in_layer: 1.00
+      metric: mae
+      output_field: expected_duration_min
+      notes: predicted vs actual game length in minutes.
+    - id: kills_blue_mae
+      layer: G3_kills
+      weight_in_layer: 0.30
+      metric: mae
+      output_field: kills.blue
+    - id: kills_red_mae
+      layer: G3_kills
+      weight_in_layer: 0.30
+      metric: mae
+      output_field: kills.red
+    - id: total_kills_smape
+      layer: G3_kills
+      weight_in_layer: 0.40
+      metric: smape
+      output_field: total_kills

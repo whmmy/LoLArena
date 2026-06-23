@@ -1,0 +1,35 @@
+# LoLArena — global prediction policy
+#
+# One unified flow per match/game:
+#   system collects PandaScore context  ->  inject context_pack
+#   -> mount the SAME web_search tool (Zhipu backend) on every model
+#   -> each model decides what to search itself  ->  pure reasoning  ->  JSON
+
+# What the system collects into context_pack.json (shared by every model).
+context_pack:
+  fixture_header: true
+  rosters: true
+  recent_form: true          # last 10 games per team
+  recent_form_window: 10
+  hero_pools: true           # champions each player used recently
+  meta_reference: true       # current-patch champions + items
+  h2h: true
+
+# The unified web_search tool mounted on every model (see adapters/websearch.py).
+web_search:
+  enabled: true
+  # Hard cap on tool calls per single prediction. Protects against runaway loops.
+  max_calls_per_prediction: 12
+  # Soft guidance surfaced in the prompt (model is free to search more or less).
+  suggested_min_queries: 4
+  default_count: 8
+  default_recency: oneMonth   # oneDay | oneWeek | oneMonth | oneYear | noLimit
+
+# Output / validation
+policy:
+  prediction_lock_hours_before_kickoff: 0   # series prediction already runs at T-3h
+  result_fetch_grace_hours: 2
+  leakage_audit: true
+  require_reasoning: true
+  max_format_retries: 2
+  probability_sum_tolerance: 0.015

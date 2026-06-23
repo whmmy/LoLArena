@@ -1,0 +1,22 @@
+# LoLArena — proxy configuration.
+#
+# Outbound HTTP proxies for specific services. Set `enabled: true` and fill in
+# `url` to route that service's requests through the proxy. Leave url blank /
+# enabled: false to connect directly.
+#
+# `url` supports http://, https://, and socks5:// schemes.
+#   socks5 requires:  pip install httpx[socks]   (or `socksio`)
+# Authenticated:  http://user:pass@host:port
+#
+# All fields can ALSO be overridden by env vars (env wins over this file):
+#   LOLA_PANDASCORE_PROXY_URL=...
+#   LOLA_PANDASCORE_PROXY_ENABLED=true|false
+
+pandascore:
+  enabled: true
+  url: "http://127.0.0.1:10818"        # e.g. "http://127.0.0.1:7890" or "socks5://127.0.0.1:1080"
+
+# Reserved for future use (LLM clients, web_search, etc.) — not wired yet.
+# web_search:
+#   enabled: false
+#   url: ""

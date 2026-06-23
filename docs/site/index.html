@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🎮 LoLArena — 大模型英雄联盟比赛预测排行榜</title>
+<meta name="description" content="用真实英雄联盟比赛评测多个大模型的预测能力：系列赛胜负/比分 + 单局（BP后）胜负/时长/击杀。所有模型共享同一数据合集与同一个 web_search 工具。" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{mono:['Inter','system-ui','sans-serif']}}}}</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{color-scheme:dark}
+  html[data-theme="light"]{color-scheme:light}
+  body{background:#0a0a0f;color:#e5e7eb}
+  html[data-theme="light"] body{background:#f8fafc;color:#0f172a}
+  .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:.9rem}
+  html[data-theme="light"] .card{background:#fff;border-color:#e2e8f0}
+  .accent{color:#a78bfa}
+  .bar{height:6px;border-radius:3px;background:linear-gradient(90deg,#818cf8,#c084fc)}
+  a{color:#93c5fd}
+  .pill{font-size:.7rem;padding:.1rem .5rem;border-radius:9999px;background:rgba(167,139,250,.15);color:#c4b5fd}
+  html[data-theme="light"] .pill{background:#ede9fe;color:#6d28d9}
+  .tabbtn.active{background:rgba(167,139,250,.2);color:#c4b5fd}
+  table{border-collapse:collapse;width:100%}
+  th,td{padding:.45rem .6rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
+  html[data-theme="light"] th,html[data-theme="light"] td{border-color:#eef2f7}
+</style>
+</head>
+<body class="min-h-screen">
+<div class="max-w-6xl mx-auto px-4 py-8">
+
+  <!-- HERO -->
+  <header class="mb-10">
+    <div class="flex items-center justify-between flex-wrap gap-3">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">🎮 LoLArena</h1>
+        <p class="text-sm opacity-70 mt-1">大模型 <span class="accent">英雄联盟</span> 比赛预测竞技场</p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <button id="themeBtn" class="text-xs px-3 py-1.5 rounded-lg card">🌙/☀️</button>
+        <span class="pill" id="modelCountPill">— models</span>
+      </div>
+    </div>
+    <p class="text-xs opacity-60 mt-3 max-w-3xl">
+      系统统一取数（PandaScore）→ 给每个模型挂上<b>同一个 web_search 工具</b>（智谱后端）→
+      各模型自行检索、纯推理预测 → 赛后按真实结果打分排行。
+      <b>系列赛</b>（开赛前 3h 自动）：胜负概率 / 比分 / 总局数。
+      <b>单局</b>（BP 后手动刷新）：胜负 / 时长 / 击杀数。
+    </p>
+  </header>
+
+  <!-- INCOMING -->
+  <section class="mb-10">
+    <h2 class="text-lg font-semibold mb-3">⏳ 即将开始 <span class="text-xs opacity-50 font-normal">/ Incoming</span></h2>
+    <div id="incoming" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="mb-10">
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-semibold">🏆 排行榜</h2>
+      <div class="flex gap-1 ml-2">
+        <button data-tab="series" class="tabbtn text-xs px-3 py-1 rounded-lg card active">系列赛</button>
+        <button data-tab="game" class="tabbtn text-xs px-3 py-1 rounded-lg card">单局</button>
+      </div>
+    </div>
+    <div class="card p-4">
+      <canvas id="lbChart" height="120"></canvas>
+      <table class="mt-4 text-sm" id="lbTable"><thead></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="mb-10">
+    <div class="flex items-center gap-2 mb-3">
+      <h2 class="text-lg font-semibold">📜 历史比赛</h2>
+      <div class="flex gap-1 ml-2">
+        <button data-htab="series" class="htabbtn text-xs px-3 py-1 rounded-lg card active">系列赛</button>
+        <button data-htab="game" class="htabbtn text-xs px-3 py-1 rounded-lg card">单局</button>
+      </div>
+    </div>
+    <div id="history" class="space-y-3"></div>
+  </section>
+
+  <footer class="text-xs opacity-50 mt-12 pb-8">
+    LoLArena · 数据来自 PandaScore · web_search 由智谱提供 · 公平基线：所有模型工具能力相同
+  </footer>
+</div>
+
+<script>
+let DATA = null, lbChart=null, curTab='series', curHTab='series';
+
+async function load(){
+  try{
+    const r = await fetch('data.json?'+Date.now());
+    DATA = await r.json();
+  }catch(e){
+    document.getElementById('incoming').innerHTML = '<div class="card p-4 text-sm opacity-60">暂无数据。先运行 <code>python -m src predict &lt;match_id&gt;</code> 生成预测，或等待调度器在开赛前 3h 自动运行。</div>';
+    document.getElementById('modelCountPill').textContent = '0 models';
+    return;
+  }
+  document.getElementById('modelCountPill').textContent = (DATA.models||[]).length+' models';
+  renderIncoming();
+  renderLeaderboard();
+  renderHistory();
+}
+
+function fmtCountdown(begin){
+  if(!begin) return '';
+  const ms = new Date(begin).getTime() - Date.now();
+  if(isNaN(ms)) return '';
+  if(ms<=0) return '进行中/已开始';
+  const h=Math.floor(ms/3.6e6), m=Math.floor((ms%3.6e6)/6e4);
+  return h>0?`${h}h ${m}m 后`: `${m}m 后`;
+}
+
+function renderIncoming(){
+  const el = document.getElementById('incoming');
+  const items = DATA.incoming||[];
+  if(!items.length){ el.innerHTML='<div class="card p-4 text-sm opacity-60 col-span-full">近期暂无待预测比赛。</div>'; return; }
+  el.innerHTML = items.slice(0,9).map(m=>`
+    <div class="card p-3">
+      <div class="text-xs opacity-60">${m.league||'LoL'} · ${m.begin_at? m.begin_at.slice(0,16).replace('T',' '):''}</div>
+      <div class="font-semibold mt-1">${esc(m.blue)} <span class="opacity-40">vs</span> ${esc(m.red)}</div>
+      <div class="text-xs accent mt-2">${fmtCountdown(m.begin_at)}</div>
+      <div class="text-xs opacity-50 mt-1">${(m.predictions&&Object.keys(m.predictions).length)||0} 个模型已预测</div>
+    </div>`).join('');
+}
+
+function renderLeaderboard(){
+  const lb = curTab==='series' ? (DATA.leaderboard||[]) : (DATA.game_leaderboard||[]);
+  const nkey = curTab==='series' ? 'n_matches' : 'n_games';
+  // chart
+  const labels = lb.map(r=>r.display_name||r.model_id);
+  const scores = lb.map(r=>r.composite);
+  const colors = lb.map((_,i)=>`hsl(${260+i*30},70%,65%)`);
+  if(lbChart) lbChart.destroy();
+  lbChart = new Chart(document.getElementById('lbChart'),{
+    type:'bar',
+    data:{labels,datasets:[{label:'综合得分',data:scores,backgroundColor:colors,borderRadius:6}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{max:100}},responsive:true}
+  });
+  // table
+  const thead = `<tr><th>#</th><th>模型</th><th>综合分</th><th>${curTab==='series'?'比赛数':'局数'}</th>${curTab==='series'?'<th>T1</th><th>T2</th><th>T3</th><th>T4</th>':''}</tr>`;
+  const rows = lb.map((r,i)=>{
+    const L = r.layers||{};
+    const cells = curTab==='series'
+      ? `<td>${fmt(L.T1_result)}</td><td>${fmt(L.T2_matchup)}</td><td>${fmt(L.T3_reasoning)}</td><td>${fmt(L.T4_meta)}</td>`
+      : '';
+    return `<tr><td>${i+1}</td><td class="font-medium">${esc(r.display_name||r.model_id)}</td>
+      <td><b class="accent">${r.composite.toFixed(1)}</b></td><td>${r[nkey]||0}</td>${cells}</tr>`;
+  }).join('');
+  document.querySelector('#lbTable thead').innerHTML = thead;
+  document.querySelector('#lbTable tbody').innerHTML = rows || '<tr><td colspan="8" class="opacity-50 py-3">暂无评分（需赛后运行 grade）</td></tr>';
+}
+
+function renderHistory(){
+  const el = document.getElementById('history');
+  const items = curHTab==='series' ? (DATA.history||[]) : (DATA.game_history||[]);
+  if(!items.length){ el.innerHTML='<div class="card p-4 text-sm opacity-60">暂无历史记录。</div>'; return; }
+  el.innerHTML = items.slice(0,30).map(h=>{
+    if(curHTab==='series'){
+      const truth = h.truth||{};
+      const preds = h.predictions||{};
+      const results = h.results||{};
+      const predRows = Object.entries(preds).map(([m,p])=>{
+        const sc = results[m];
+        return `<tr><td>${esc(m)}</td><td>${p.series_score||'-'}</td><td>${sc!=null?sc.toFixed(1):'—'}</td></tr>`;
+      }).join('') || '<tr><td colspan="3" class="opacity-50">无预测</td></tr>';
+      return `<div class="card p-3">
+        <div class="flex justify-between text-xs opacity-60"><span>${h.league||''} · ${h.begin_at?h.begin_at.slice(0,10):''}</span><span class="pill">${h.status||''}</span></div>
+        <div class="font-semibold mt-1">${esc(h.blue)} vs ${esc(h.red)}</div>
+        <div class="text-xs mt-1">真实比分: <b class="accent">${truth.series_score||'—'}</b></div>
+        <table class="text-xs mt-2"><thead><tr><th>模型</th><th>预测比分</th><th>得分</th></tr></thead><tbody>${predRows}</tbody></table>
+      </div>`;
+    }else{
+      const truth = h.truth||{};
+      const preds = h.predictions||{};
+      const pr = Object.entries(preds).map(([m,p])=>`<tr><td>${esc(m)}</td><td>${p.winner||'-'}</td><td>${p.duration!=null?p.duration:'-'}</td><td>${p.total_kills!=null?p.total_kills:'-'}</td></tr>`).join('')||'<tr><td colspan="4" class="opacity-50">无预测</td></tr>';
+      const blueChamps = (h.blue||[]).map(p=>p.champion).join(', ');
+      const redChamps = (h.red||[]).map(p=>p.champion).join(', ');
+      return `<div class="card p-3">
+        <div class="text-xs opacity-60">${h.match_slug} · 第 ${h.position} 局 · ${h.bp_complete?'BP 完成':'BP 未完成'}</div>
+        <div class="text-xs mt-1">蓝: ${esc(blueChamps)} | 红: ${esc(redChamps)}</div>
+        <div class="text-xs mt-1">真实: <b class="accent">${truth.winner_side||'—'}</b> · ${truth.length_min||'—'}min</div>
+        <table class="text-xs mt-2"><thead><tr><th>模型</th><th>预测胜方</th><th>时长</th><th>总击杀</th></tr></thead><tbody>${pr}</tbody></table>
+      </div>`;
+    }
+  }).join('');
+}
+
+function fmt(v){ return v==null?'—':Number(v).toFixed(1); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+// tab switching
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tabbtn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); curTab=b.dataset.tab; renderLeaderboard();
+}));
+document.querySelectorAll('.htabbtn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.htabbtn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); curHTab=b.dataset.htab; renderHistory();
+}));
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  const cur = document.documentElement.dataset.theme;
+  document.documentElement.dataset.theme = cur==='dark'?'light':'dark';
+});
+
+load();
+setInterval(()=>{ if(DATA){ renderIncoming(); } }, 60000);
+</script>
+</body>
+</html>

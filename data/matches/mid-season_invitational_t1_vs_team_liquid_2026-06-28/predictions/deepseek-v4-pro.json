@@ -1,0 +1,118 @@
+{
+  "model_id": "deepseek-v4-pro",
+  "scope": "match",
+  "target_id": "mid-season_invitational_t1_vs_team_liquid_2026-06-28",
+  "submitted_at": "2026-06-23T08:15:54.770213+00:00",
+  "prediction": {
+    "sources": [
+      {
+        "query": "T1 vs Team Liquid MSI 2026 prediction",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:49Z"
+      },
+      {
+        "query": "T1 vs Team Liquid MSI 2026 prediction",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:51Z"
+      },
+      {
+        "query": "T1 roster 2026 LCK MSI players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:51Z"
+      },
+      {
+        "query": "T1 vs Team Liquid MSI 2026 prediction",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:52Z"
+      },
+      {
+        "query": "T1 roster 2026 LCK MSI players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:52Z"
+      },
+      {
+        "query": "Team Liquid roster 2026 LCS MSI players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:52Z"
+      },
+      {
+        "query": "T1 vs Team Liquid MSI 2026 prediction",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:54Z"
+      },
+      {
+        "query": "T1 roster 2026 LCK MSI players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:54Z"
+      },
+      {
+        "query": "Team Liquid roster 2026 LCS MSI players",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:54Z"
+      },
+      {
+        "query": "LoL patch 2026 June meta tier list",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-23T08:15:54Z"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "query": "T1 vs Team Liquid MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:49Z"
+    },
+    {
+      "query": "T1 vs Team Liquid MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:51Z"
+    },
+    {
+      "query": "T1 roster 2026 LCK MSI players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:51Z"
+    },
+    {
+      "query": "T1 vs Team Liquid MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:52Z"
+    },
+    {
+      "query": "T1 roster 2026 LCK MSI players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:52Z"
+    },
+    {
+      "query": "Team Liquid roster 2026 LCS MSI players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:52Z"
+    },
+    {
+      "query": "T1 vs Team Liquid MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:54Z"
+    },
+    {
+      "query": "T1 roster 2026 LCK MSI players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:54Z"
+    },
+    {
+      "query": "Team Liquid roster 2026 LCS MSI players",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:54Z"
+    },
+    {
+      "query": "LoL patch 2026 June meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-23T08:15:54Z"
+    }
+  ],
+  "input_tokens": 4073,
+  "output_tokens": 430,
+  "tool_calls": 4,
+  "cost_usd": 0.002102,
+  "wall_seconds": 14.5,
+  "error": "BadRequestError: Error code: 400 - {'error': {'message': \"An assistant message with 'tool_calls' must be followed by tool messages responding to each 'tool_call_id'. (insufficient tool messages following tool_calls message)\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+}

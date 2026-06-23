@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lolarena/game_prediction.schema.json",
+  "title": "LoLArena Single-Game Prediction",
+  "description": "Output schema for one game (after BP) prediction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reasoning", "win_prob", "predicted_winner", "expected_duration_min",
+    "kills", "total_kills", "key_drafted_champions", "sources"
+  ],
+  "properties": {
+    "reasoning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overall", "draft_analysis", "tempo_wincon"],
+      "properties": {
+        "overall":        { "type": "string", "minLength": 40 },
+        "draft_analysis": { "type": "string", "minLength": 120 },
+        "tempo_wincon":   { "type": "string", "minLength": 80 }
+      }
+    },
+    "win_prob": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blue", "red"],
+      "properties": {
+        "blue": { "type": "number", "minimum": 0, "maximum": 1 },
+        "red":  { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "predicted_winner": { "type": "string", "enum": ["blue", "red"] },
+    "expected_duration_min": {
+      "type": "number",
+      "minimum": 15,
+      "maximum": 70,
+      "description": "Predicted game length in minutes."
+    },
+    "kills": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blue", "red"],
+      "properties": {
+        "blue": { "type": "integer", "minimum": 0, "maximum": 80 },
+        "red":  { "type": "integer", "minimum": 0, "maximum": 80 }
+      }
+    },
+    "total_kills": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 160,
+      "description": "Must equal kills.blue + kills.red."
+    },
+    "key_drafted_champions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["champion", "team", "role", "impact"],
+        "properties": {
+          "champion": { "type": "string", "minLength": 1 },
+          "team":     { "type": "string", "enum": ["blue", "red"] },
+          "role":     { "type": "string", "enum": ["top", "jun", "mid", "adc", "sup"] },
+          "impact":   { "type": "string", "minLength": 3 }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["query", "accessed_at"],
+        "properties": {
+          "query": { "type": "string" },
+          "accessed_at": { "type": "string" }
+        }
+      }
+    }
+  }
+}
