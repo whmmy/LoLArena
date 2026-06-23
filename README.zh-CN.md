@@ -114,8 +114,8 @@ python -m src scheduler                  # 仅启动调度器（不开 Web）
 
 ## 参考实现
 
-方法论、提示语结构、缓存数据格式、编排模式参考了 [`WorldCupArena`](../WorldCupArena)（足球版）。本项目相对它的三点关键差异：
-1. 放弃 ICS，赛程直接来自 PandaScore `/lol/matches/upcoming`
+方法论、提示语结构、缓存数据格式、编排模式参考了 [`WorldCupArena`](https://github.com/wzk1015/WorldCupArena/)（足球版）。本项目相对它的三点关键差异：
+1. 赛程直接来自 PandaScore `/lol/matches/upcoming`
 2. **所有模型统一挂同一个 web_search 工具**（参考项目分 S1 注入 / S2 自搜两套）
 3. 新增单局预测（BP 后手动触发 + FastAPI 接口）
 

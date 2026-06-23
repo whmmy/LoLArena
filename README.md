@@ -144,10 +144,10 @@ Post-match ── scheduler.grade_tick ──► pull real results ──► gra
 ## Reference implementation
 
 Methodology, prompt structure, cached data shapes, and orchestration patterns
-are adapted from [`WorldCupArena`](../WorldCupArena) (the soccer counterpart).
+are adapted from [`WorldCupArena`](https://github.com/wzk1015/WorldCupArena/) (the soccer counterpart).
 Three key differences in this project:
 
-1. Dropped ICS — fixtures come directly from PandaScore
+1. fixtures come directly from PandaScore
    `/lol/matches/upcoming`.
 2. **All models share one unified `web_search` tool** (WorldCupArena split
    injected vs. self-search across two stages).
