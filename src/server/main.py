@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from pydantic import BaseModel
 
 from .. import config as cfg
@@ -133,3 +133,58 @@ def rebuild_site():
     from ..leaderboard import build_site
     payload = build_site.build()
     return {"ok": True, "matches": len(payload["history"]), "games": len(payload["game_history"])}
+
+
+# ============================== betting advice ==============================
+
+class BettingOdds(BaseModel):
+    moneyline: dict[str, float] = {}        # {"blue": 1.5, "red": 2.4}
+    correct_score: dict[str, float] = {}    # {"3-0": 2.1, "0-3": 8.0, ...}
+    handicap: dict[str, float] = {}         # {"-1.5": 1.9, "+1.5": 1.9}
+    total_games: dict[str, float] = {}      # {"over_3.5": 1.8, "under_3.5": 1.95}
+
+
+class BettingAdviceRequest(BaseModel):
+    slug: str
+    model_id: str
+    odds: BettingOdds
+
+
+@app.get("/api/betting-advice/list")
+def betting_advice_list(slug: str):
+    """All betting-advice runs for a match (newest first) — for the comparison view."""
+    from ..pipeline import betting
+    if not (cfg.MATCHES_DIR / slug).exists():
+        raise HTTPException(404, detail=f"match slug '{slug}' not found")
+    return betting.list_advice(slug)
+
+
+@app.post("/api/betting-advice")
+def betting_advice(req: BettingAdviceRequest):
+    """Stream one model's betting analysis to the browser via SSE.
+
+    Prereq: the match must already have predictions (we reason over them).
+    Returns text/event-stream:
+        event: start   data:{model_id, slug}
+        event: delta   data:{text}
+        event: done    data:{...raw_text, picks, saved, tokens, cost, error}
+    """
+    from ..pipeline import betting
+
+    mdir = cfg.MATCHES_DIR / req.slug
+    if not mdir.exists():
+        raise HTTPException(404, detail=f"match slug '{req.slug}' not found")
+    if not betting.has_predictions(req.slug):
+        raise HTTPException(400, detail="该比赛尚未预测，无法生成下注建议（需先完成系列赛预测）。")
+    odds = req.odds.model_dump()
+    if not any(odds.values()):
+        raise HTTPException(400, detail="未填入任何赔率，无法生成下注建议。")
+
+    def gen():
+        for ev in betting.stream_betting_advice(req.slug, req.model_id, odds):
+            etype = ev.pop("type")
+            yield f"event: {etype}\ndata: {json.dumps(ev, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(gen(), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-cache",
+                                      "X-Accel-Buffering": "no"})

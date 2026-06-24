@@ -9,7 +9,7 @@ base_url (and OPENAI_API_KEY if the per-model key is empty) — handy for a 中�
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Iterator
 
 from openai import OpenAI
 
@@ -63,6 +63,67 @@ class OpenAICompatRunner(BaseRunner):
             "tool_calls": tool_calls,
             "input_tokens": getattr(usage, "prompt_tokens", 0) if usage else 0,
             "output_tokens": getattr(usage, "completion_tokens", 0) if usage else 0,
+        }
+
+    # ---- streaming variant (betting-advice path: single-turn, no tools) ----
+    def stream_chat(self, messages: list[dict[str, Any]], *,
+                    allow_tools: bool = False) -> "Iterator[dict[str, Any]]":
+        """Stream one chat turn token-by-token (OpenAI stream=True).
+
+        Yields the same event shapes as BaseRunner.stream_chat. Transient
+        errors are wrapped by chat_retry on the non-stream path; here we run
+        streaming directly and surface failures as a done event with `error`.
+        """
+        kwargs: dict[str, Any] = {
+            "model": self.cfg["model"],
+            "messages": messages,
+            "temperature": 0.3,
+            "stream": True,
+            "stream_options": {"include_usage": True},
+        }
+        if allow_tools:
+            kwargs["tools"] = [ws.TOOL_OPENAI]
+            kwargs["tool_choice"] = "auto"
+        if self.cfg.get("max_tokens"):
+            kwargs["max_tokens"] = self.cfg["max_tokens"]
+
+        full_parts: list[str] = []
+        thinking_parts: list[str] = []
+        in_tok = 0
+        out_tok = 0
+        err: str | None = None
+        try:
+            stream = self.client.chat.completions.create(**kwargs)
+            for chunk in stream:
+                if not getattr(chunk, "choices", None):
+                    # final usage-only chunk (choices == []) carries the totals
+                    u = getattr(chunk, "usage", None)
+                    if u is not None:
+                        in_tok = getattr(u, "prompt_tokens", 0) or 0
+                        out_tok = getattr(u, "completion_tokens", 0) or 0
+                    continue
+                delta = chunk.choices[0].delta
+                piece = getattr(delta, "content", None)
+                if piece:
+                    full_parts.append(piece)
+                    yield {"type": "delta", "text": piece}
+                rcontent = getattr(delta, "reasoning_content", None)
+                if rcontent:
+                    thinking_parts.append(rcontent)
+                u = getattr(chunk, "usage", None)
+                if u is not None:
+                    in_tok = getattr(u, "prompt_tokens", 0) or in_tok
+                    out_tok = getattr(u, "completion_tokens", 0) or out_tok
+        except Exception as e:  # noqa: BLE001
+            err = f"{type(e).__name__}: {e}"
+
+        yield {
+            "type": "done",
+            "text": "".join(full_parts),
+            "thinking": "".join(thinking_parts) or None,
+            "input_tokens": in_tok,
+            "output_tokens": out_tok,
+            "error": err,
         }
 
     # ---- tool results: OpenAI requires one {role:"tool"} message per call_id ----
