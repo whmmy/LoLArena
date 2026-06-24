@@ -35,22 +35,46 @@ Every prediction must cover **four dimensions**:
 1️⃣ Team fundamentals · 2️⃣ Lane matchup (top/jungle/mid/bot/support) ·
 3️⃣ Patch adaptation & playstyle · 4️⃣ Historical head-to-head & psychology
 
+## Betting advice (post-prediction, value-betting)
+
+For any match that **already has model predictions**, the web UI gains a
+**🎲 下注建议** button on the match card, opening a streaming betting-advice
+panel — an arena where models are compared on their **betting judgment**:
+
+- **Input** — the user fills in the open odds: moneyline, correct score (3-0 /
+  0-3 / 1-3 …), handicap (-1.5 / +1.5), total games over/under. An odds of `0`
+  or blank means the market is **not open** and is dropped from analysis.
+- **Reasoning source** — the chosen model reasons **only** over the match's
+  already-collected `context_pack` + every model's prediction (win probs,
+  predicted score, key players, swing factors). It does **not** web_search —
+  no new information is fetched.
+- **Output** — streams token-by-token into a chat panel (SSE, marked.js
+  live-render), first a per-market value narrative, then a fixed-header
+  markdown recommendation table that the backend parses into structured picks.
+
+The recommendation table is parsed and persisted to
+`data/matches/<slug>/betting_advice/<model>_<timestamp>.json`, so running the
+panel for several models yields a **side-by-side comparison** of their
+betting acumen (who found the real value bets). This path reuses the runners'
+new `stream_chat()` streaming interface (native on OpenAI-compatible models,
+one-shot fallback elsewhere).
+
 ## Repository layout
 
 ```
 lolArena/
 ├─ configs/        models.yaml (model registry) · policy.yaml (strategy) · tasks.yaml (grading)
 │                  · leagues.yaml (tracked leagues) · proxies.yaml (outbound HTTP/SOCKS proxies)
-├─ prompts/        system.md · task_match.md · task_game.md
+├─ prompts/        system.md · task_match.md · task_game.md · betting_system.md · task_betting.md
 ├─ schemas/        match_prediction / game_prediction (JSON Schema)
 ├─ src/
 │   ├─ adapters/   pandascore.py (LoL API) · websearch.py (unified search tool)
-│   ├─ pipeline/   collect · prompt_build · validate · orchestrator · scheduler
-│   ├─ runners/    base (agent loop) · openai_compat · anthropic · google · retry (transient-error backoff)
+│   ├─ pipeline/   collect · prompt_build · validate · orchestrator · scheduler · betting
+│   ├─ runners/    base (agent loop + streaming) · openai_compat · anthropic · google · retry (transient-error backoff)
 │   ├─ graders/    grade_match · grade_game · metrics/ (Brier, MAE, sMAPE, recall, structural checks)
 │   ├─ server/     main.py (FastAPI)
 │   └─ leaderboard/build_site.py
-├─ data/           matches/<slug>/  ·  games/<slug>/g<pos>/
+├─ data/           matches/<slug>/ (predictions/, betting_advice/)  ·  games/<slug>/g<pos>/
 ├─ doc/            pandaScoreApi/ (endpoint reference) · webSearch/ (Zhipu tool docs)
 └─ docs/site/      index.html + data.json (single-page leaderboard)
 ```
@@ -99,6 +123,8 @@ enabled model in `models.yaml`.
 | `POST /api/refresh-bp`   | Fetch BP for one game; auto-runs single-game prediction if complete |
 | `POST /api/predict`      | Manually trigger series prediction for a match                 |
 | `POST /api/rebuild`      | Regenerate `data.json` after predictions land                  |
+| `POST /api/betting-advice` | **(SSE)** Stream one model's betting analysis for a predicted match |
+| `GET  /api/betting-advice/list?slug=` | List all betting-advice runs for a match (model comparison) |
 
 ## Workflow
 
