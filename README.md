@@ -39,17 +39,19 @@ Every prediction must cover **four dimensions**:
 
 ```
 lolArena/
-├─ configs/        models.yaml (model registry) · policy.yaml (strategy) · tasks.yaml (grading) · leagues.yaml (tracked leagues)
+├─ configs/        models.yaml (model registry) · policy.yaml (strategy) · tasks.yaml (grading)
+│                  · leagues.yaml (tracked leagues) · proxies.yaml (outbound HTTP/SOCKS proxies)
 ├─ prompts/        system.md · task_match.md · task_game.md
 ├─ schemas/        match_prediction / game_prediction (JSON Schema)
 ├─ src/
 │   ├─ adapters/   pandascore.py (LoL API) · websearch.py (unified search tool)
 │   ├─ pipeline/   collect · prompt_build · validate · orchestrator · scheduler
-│   ├─ runners/    base (agent loop) · openai_compat · anthropic · google
-│   ├─ graders/    grade_match · grade_game · metrics/
+│   ├─ runners/    base (agent loop) · openai_compat · anthropic · google · retry (transient-error backoff)
+│   ├─ graders/    grade_match · grade_game · metrics/ (Brier, MAE, sMAPE, recall, structural checks)
 │   ├─ server/     main.py (FastAPI)
 │   └─ leaderboard/build_site.py
 ├─ data/           matches/<slug>/  ·  games/<slug>/g<pos>/
+├─ doc/            pandaScoreApi/ (endpoint reference) · webSearch/ (Zhipu tool docs)
 └─ docs/site/      index.html + data.json (single-page leaderboard)
 ```
 
@@ -74,14 +76,29 @@ python -m src serve
 ```bash
 python -m src scan                          # Scan near-future matches due for prediction
 python -m src collect <match_id>            # Build context_pack for a match
-python -m src predict <match_id>            # Run every enabled model on a match (series prediction)
+python -m src predict <match_id> [--models a,b]   # Run models on a match (series prediction)
 python -m src refresh-bp <match_id> <pos>   # Fetch champion select for a single game
 python -m src predict-game <match_id> <pos> # Run every model on a single game after BP completes
 python -m src grade <match_id>              # Grade series predictions after the match
 python -m src grade-game <match_id> <pos>   # Grade single-game predictions after the game
+python -m src serve                         # Start FastAPI + scheduler (open http://127.0.0.1:8000)
 python -m src build-site                    # Rebuild data.json for the leaderboard
 python -m src scheduler                     # Run scheduler only (no web UI)
 ```
+
+`predict --models glm-5.2,gpt-5` runs a subset; omit the flag to run every
+enabled model in `models.yaml`.
+
+## HTTP API (src/server/main.py)
+
+| Method & path            | Purpose                                                        |
+| ------------------------ | -------------------------------------------------------------- |
+| `GET  /`                 | Single-page leaderboard (`docs/site/index.html`)               |
+| `GET  /data.json`        | Leaderboard data (empty payload if site not built yet)         |
+| `GET  /api/matches`      | List tracked matches under `data/matches/` with status         |
+| `POST /api/refresh-bp`   | Fetch BP for one game; auto-runs single-game prediction if complete |
+| `POST /api/predict`      | Manually trigger series prediction for a match                 |
+| `POST /api/rebuild`      | Regenerate `data.json` after predictions land                  |
 
 ## Workflow
 
@@ -110,17 +127,51 @@ Post-match ── scheduler.grade_tick ──► pull real results ──► gra
 - G2_duration **0.25** — game-length MAE
 - G3_kills **0.25** — per-team-kill MAE + total-kill sMAPE
 
+## Model registry (configs/models.yaml)
+
+| Model ID          | Display name     | Provider    | Runner             |
+| ----------------- | ---------------- | ----------- | ------------------ |
+| `gpt-5`           | GPT-5            | openai      | OpenAICompatRunner |
+| `claude-opus-4`   | Claude Opus 4    | anthropic   | AnthropicRunner    |
+| `gemini-3-pro`    | Gemini 3 Pro     | google      | GeminiRunner       |
+| `glm-5.2`         | GLM-5.2          | zhipu       | OpenAICompatRunner |
+| `deepseek-v4-pro` | DeepSeek V3 pro  | deepseek    | OpenAICompatRunner |
+| `qwen-max`        | Qwen Max         | dashscope   | OpenAICompatRunner |
+| `kimi-k2`         | Kimi K2          | moonshot    | OpenAICompatRunner |
+| `minimax-m3`      | MiniMax M3       | minimax     | OpenAICompatRunner |
+
+Every entry auto-mounts the same `web_search` tool. `minimax-m3` is a reasoning
+model (interleaved thinking) and ships with a longer `timeout_seconds: 600`.
+
 ## Configuration
 
 - **Add/remove models**: edit `configs/models.yaml` only. Each entry has a
-  `provider` field that picks the runner (`openai|openrouter|deepseek|dashscope|zhipu|moonshot`
+  `provider` field that picks the runner (`openai|openrouter|deepseek|dashscope|zhipu|moonshot|minimax`
   → `OpenAICompatRunner`; `anthropic` → `AnthropicRunner`; `google` →
-  `GoogleRunner`). The same `web_search` tool is auto-mounted on every model.
+  `GeminiRunner`). The same `web_search` tool is auto-mounted on every model.
 - **Tracked leagues**: `configs/leagues.yaml` (slugs come from PandaScore
   `/lol/leagues`).
-- **Prediction lead time**: env var `LOLA_PREDICT_LEAD_H` (default `3`).
-- **Shared proxy / gateway**: set `LOLA_MODEL_PROXY=https://your-proxy/v1`
-  and every model routes through it.
+- **Per-model proxy / gateway**: set `LOLA_MODEL_PROXY=https://your-proxy/v1`
+  and every model routes through it. Or override one model only by setting its
+  `<PROVIDER>_BASE_URL` (or the `base_url_env` named in its entry).
+- **Per-service HTTP/SOCKS proxy**: `configs/proxies.yaml` (e.g. route PandaScore
+  through `socks5://127.0.0.1:1080`). Env overrides: `LOLA_PANDASCORE_PROXY_URL`
+  and `LOLA_PANDASCORE_PROXY_ENABLED`. socks5 needs `pip install httpx[socks]`.
+- **Retries**: provider `_chat` calls are wrapped by `src/runners/retry.py`
+  (tenacity, 3 attempts, 2–30s exponential backoff) on transient errors only —
+  timeouts, 429, 5xx. `400/BadRequestError` is deliberately not retried.
+
+### Environment variables
+
+| Variable                 | Purpose                                                          | Default                         |
+| ------------------------ | ---------------------------------------------------------------- | ------------------------------- |
+| `PANDASCORE_API_KEY`     | LoL data (required to predict)                                   | —                               |
+| `ZHIPU_WEBSEARCH_API_KEY`| Unified search backend (required to predict)                     | —                               |
+| `<PROVIDER>_API_KEY`     | Per-model key (enable entries in `models.yaml`)                  | —                               |
+| `LOLA_PREDICT_LEAD_H`    | Hours before kickoff to run series prediction                    | `3`                             |
+| `LOLA_RESULT_GRACE_H`    | Result-fetch grace window after scheduled end                    | `2`                             |
+| `LOLA_HOST` / `LOLA_PORT`| FastAPI bind address                                             | `127.0.0.1` / `8000`            |
+| `LOLA_MODEL_PROXY`       | Route ALL models through one OpenAI-compatible base_url          | (unset = each model's own url)  |
 
 ## Data sources & limits
 
@@ -134,11 +185,13 @@ Post-match ── scheduler.grade_tick ──► pull real results ──► gra
 
 ## Adding a new model
 
-1. Add one entry to `configs/models.yaml` with the right `provider`.
+1. Add one entry to `configs/models.yaml` with the right `provider`
+   (`openai|openrouter|deepseek|dashscope|zhipu|moonshot|minimax` all map to
+   `OpenAICompatRunner`; also `anthropic`, `google`).
 2. Provide the corresponding `*_API_KEY` env var (or route through
-   `LOLA_MODEL_PROXY`).
-3. If the API speaks OpenAI chat-completions with function-calling, use
-   `openai_compat` as the provider — `web_search` is auto-mounted.
+   `LOLA_MODEL_PROXY`, or set its `base_url_env`).
+3. If the API speaks OpenAI chat-completions with function-calling, use one of
+   the OpenAI-compatible providers above — `web_search` is auto-mounted.
 4. That's it. No code changes needed.
 
 ## Reference implementation

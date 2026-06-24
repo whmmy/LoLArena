@@ -27,17 +27,19 @@
 
 ```
 lolArena/
-├─ configs/        models.yaml(模型注册) · policy.yaml(策略) · tasks.yaml(评分) · leagues.yaml(关注联赛)
+├─ configs/        models.yaml(模型注册) · policy.yaml(策略) · tasks.yaml(评分)
+│                  · leagues.yaml(关注联赛) · proxies.yaml(出站 HTTP/SOCKS 代理)
 ├─ prompts/        system.md · task_match.md · task_game.md
 ├─ schemas/        match_prediction / game_prediction (JSON Schema)
 ├─ src/
 │   ├─ adapters/   pandascore.py(LoL API) · websearch.py(统一搜索工具)
 │   ├─ pipeline/   collect · prompt_build · validate · orchestrator · scheduler
-│   ├─ runners/    base(agent loop) · openai_compat · anthropic · google
-│   ├─ graders/    grade_match · grade_game · metrics/
+│   ├─ runners/    base(agent loop) · openai_compat · anthropic · google · retry(瞬时错误重试)
+│   ├─ graders/    grade_match · grade_game · metrics/(Brier、MAE、sMAPE、召回、结构检查)
 │   ├─ server/     main.py(FastAPI)
 │   └─ leaderboard/build_site.py
 ├─ data/           matches/<slug>/  ·  games/<slug>/g<pos>/
+├─ doc/            pandaScoreApi/(接口参考) · webSearch/(智谱工具文档)
 └─ docs/site/      index.html + data.json (排行榜单页应用)
 ```
 
@@ -60,16 +62,30 @@ python -m src serve
 ## 命令行（手动操作）
 
 ```bash
-python -m src scan                       # 扫描近期待预测比赛
-python -m src collect <match_id>         # 构建某场比赛的 context_pack
-python -m src predict <match_id>         # 对一场比赛跑全部模型（系列赛预测）
+python -m src scan                            # 扫描近期待预测比赛
+python -m src collect <match_id>              # 构建某场比赛的 context_pack
+python -m src predict <match_id> [--models a,b]    # 对一场比赛跑模型（系列赛预测）
 python -m src refresh-bp <match_id> <pos>     # 拉取某局 BP
 python -m src predict-game <match_id> <pos>   # BP 完成后跑全部模型（单局预测）
-python -m src grade <match_id>           # 赛后对系列赛预测打分
+python -m src grade <match_id>                # 赛后对系列赛预测打分
 python -m src grade-game <match_id> <pos>     # 赛后对单局预测打分
-python -m src build-site                 # 重新生成 data.json
-python -m src scheduler                  # 仅启动调度器（不开 Web）
+python -m src serve                           # 启动 FastAPI + 调度器（打开 http://127.0.0.1:8000）
+python -m src build-site                      # 重新生成 data.json
+python -m src scheduler                       # 仅启动调度器（不开 Web）
 ```
+
+`predict --models glm-5.2,gpt-5` 只跑指定子集；省略则跑 `models.yaml` 里所有启用的模型。
+
+## HTTP 接口（src/server/main.py）
+
+| 方法 & 路径              | 用途                                                          |
+| ------------------------ | ------------------------------------------------------------- |
+| `GET  /`                 | 单页排行榜（`docs/site/index.html`）                          |
+| `GET  /data.json`        | 排行榜数据（未构建站点时返回空 payload）                      |
+| `GET  /api/matches`      | 列出 `data/matches/` 下所有比赛及其状态                       |
+| `POST /api/refresh-bp`   | 拉取某局 BP；BP 完整时自动跑单局预测                          |
+| `POST /api/predict`      | 手动触发某场比赛的系列赛预测                                  |
+| `POST /api/rebuild`      | 预测落盘后重新生成 `data.json`                                |
 
 ## 工作流
 
@@ -93,12 +109,45 @@ python -m src scheduler                  # 仅启动调度器（不开 Web）
 **单局**：
 - G1_result 0.50（胜负 brier）· G2_duration 0.25（时长 MAE）· G3_kills 0.25（双方击杀 MAE + 总击杀 sMAPE）
 
+## 模型注册表（configs/models.yaml）
+
+| 模型 ID           | 显示名           | Provider    | Runner             |
+| ----------------- | ---------------- | ----------- | ------------------ |
+| `gpt-5`           | GPT-5            | openai      | OpenAICompatRunner |
+| `claude-opus-4`   | Claude Opus 4    | anthropic   | AnthropicRunner    |
+| `gemini-3-pro`    | Gemini 3 Pro     | google      | GeminiRunner       |
+| `glm-5.2`         | GLM-5.2          | zhipu       | OpenAICompatRunner |
+| `deepseek-v4-pro` | DeepSeek V3 pro  | deepseek    | OpenAICompatRunner |
+| `qwen-max`        | Qwen Max         | dashscope   | OpenAICompatRunner |
+| `kimi-k2`         | Kimi K2          | moonshot    | OpenAICompatRunner |
+| `minimax-m3`      | MiniMax M3       | minimax     | OpenAICompatRunner |
+
+每条都自动挂上同一个 `web_search` 工具。`minimax-m3` 是推理模型（交错思考），`timeout_seconds: 600` 留足余量。
+
 ## 配置
 
-- **增删模型**：只改 `configs/models.yaml`（每条带 `provider`，决定走哪个 runner）。所有模型自动挂上同一个 `web_search`。
+- **增删模型**：只改 `configs/models.yaml`（每条带 `provider`，决定走哪个 runner：
+  `openai|openrouter|deepseek|dashscope|zhipu|moonshot|minimax` → `OpenAICompatRunner`；
+  `anthropic` → `AnthropicRunner`；`google` → `GeminiRunner`）。所有模型自动挂上同一个 `web_search`。
 - **关注联赛**：`configs/leagues.yaml`（slug 来自 PandaScore `/lol/leagues`）。
-- **预测提前量**：环境变量 `LOLA_PREDICT_LEAD_H`（默认 3）。
-- **代理/中转**：设 `LOLA_MODEL_PROXY=https://your-proxy/v1` 即让所有模型走同一中转。
+- **单模型代理/中转**：设 `LOLA_MODEL_PROXY=https://your-proxy/v1` 即让所有模型走同一中转；
+  或只覆盖某个模型：设其 `<PROVIDER>_BASE_URL`（或条目里的 `base_url_env`）。
+- **按服务走 HTTP/SOCKS 代理**：`configs/proxies.yaml`（如让 PandaScore 走 `socks5://127.0.0.1:1080`）。
+  环境变量覆盖：`LOLA_PANDASCORE_PROXY_URL` / `LOLA_PANDASCORE_PROXY_ENABLED`。socks5 需 `pip install httpx[socks]`。
+- **重试**：provider 的 `_chat` 调用由 `src/runners/retry.py`（tenacity，3 次、2–30s 指数退避）
+  包裹，**只**重试瞬时错误（超时、429、5xx）；`400/BadRequestError` 故意不重试。
+
+### 环境变量
+
+| 变量                     | 用途                                                  | 默认值                          |
+| ------------------------ | ----------------------------------------------------- | ------------------------------- |
+| `PANDASCORE_API_KEY`     | LoL 数据（预测必填）                                  | —                               |
+| `ZHIPU_WEBSEARCH_API_KEY`| 统一搜索后端（预测必填）                              | —                               |
+| `<PROVIDER>_API_KEY`     | 各模型密钥（在 `models.yaml` 启用对应条目）           | —                               |
+| `LOLA_PREDICT_LEAD_H`    | 开赛前多少小时跑系列赛预测                            | `3`                             |
+| `LOLA_RESULT_GRACE_H`    | 赛后拉取结果的宽限窗口（小时）                        | `2`                             |
+| `LOLA_HOST` / `LOLA_PORT`| FastAPI 绑定地址                                      | `127.0.0.1` / `8000`            |
+| `LOLA_MODEL_PROXY`       | 让所有模型走同一个 OpenAI 兼容 base_url               | （未设=各模型自己的 url）       |
 
 ## 数据来源与限制
 
@@ -107,9 +156,9 @@ python -m src scheduler                  # 仅启动调度器（不开 Web）
 
 ## 添加新模型
 
-1. 在 `configs/models.yaml` 加一条带正确 `provider` 的条目。
-2. 提供对应的 `*_API_KEY` 环境变量（或通过 `LOLA_MODEL_PROXY` 中转）。
-3. 如果 API 走 OpenAI chat-completions 并支持 function-calling，`provider` 设为 `openai_compat` —— `web_search` 自动挂上。
+1. 在 `configs/models.yaml` 加一条带正确 `provider` 的条目（`openai|openrouter|deepseek|dashscope|zhipu|moonshot|minimax` 都走 `OpenAICompatRunner`；另支持 `anthropic`、`google`）。
+2. 提供对应的 `*_API_KEY` 环境变量（或通过 `LOLA_MODEL_PROXY` 中转，或设其 `base_url_env`）。
+3. 若 API 走 OpenAI chat-completions 且支持 function-calling，`provider` 用上面任一 OpenAI 兼容项 —— `web_search` 自动挂上。
 4. 搞定，不需要改代码。
 
 ## 参考实现
