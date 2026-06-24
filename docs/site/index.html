@@ -45,6 +45,7 @@ tailwind.config = {
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
   
@@ -123,6 +124,46 @@ tailwind.config = {
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
     transform: translateY(-1px);
   }
+
+  /* ===== Betting-advice overlay panel ===== */
+  #bettingOverlay {
+    position: fixed; inset: 0; z-index: 60;
+    background: rgba(2, 6, 16, 0.72);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  #bettingOverlay.open { display: flex; }
+  #bettingPanel {
+    width: 100%; max-width: 980px; max-height: 92vh;
+    display: flex; flex-direction: column;
+    background: #0b1120; border: 1px solid rgba(200,155,60,0.25);
+    border-radius: 18px; overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  }
+  html[data-theme="light"] #bettingPanel {
+    background: #ffffff; border-color: #e2e8f0;
+  }
+  .bet-scroll { overflow-y: auto; }
+  .bet-prose { line-height: 1.75; font-size: 13px; }
+  .bet-prose h1,.bet-prose h2,.bet-prose h3 { color: #e0c068; margin: 0.8em 0 0.3em; font-weight: 800; }
+  .bet-prose h1{font-size:16px} .bet-prose h2{font-size:14px} .bet-prose h3{font-size:13px}
+  .bet-prose p { margin: 0.5em 0; }
+  .bet-prose table { border-collapse: collapse; width: 100%; margin: 0.6em 0; font-size: 12px; }
+  .bet-prose th,.bet-prose td { border: 1px solid rgba(148,163,184,0.25); padding: 5px 7px; text-align: center; }
+  .bet-prose th { background: rgba(200,155,60,0.12); color: #c89b3c; }
+  html[data-theme="light"] .bet-prose th { background: rgba(200,155,60,0.08); }
+  .bet-prose code { background: rgba(148,163,184,0.15); padding: 1px 4px; border-radius: 4px; }
+  .bet-input {
+    background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.25);
+    border-radius: 8px; padding: 6px 9px; width: 100%; font-size: 12px; color: inherit;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .bet-input:focus { outline: none; border-color: rgba(200,155,60,0.6); }
+  .bet-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: #94a3b8; }
+  @keyframes betCursorBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+  .bet-cursor::after { content:'▋'; color:#c89b3c; animation: betCursorBlink 1s steps(2) infinite; margin-left:1px; }
 </style>
 </head>
 <body class="min-h-screen dark:bg-obsidian-950 bg-slate-50 dark:text-slate-200 text-slate-800 antialiased pb-20">
@@ -285,6 +326,59 @@ tailwind.config = {
       ⚖️ 公平基线：所有參测模型共享严格相同的情报缓存包和检索机制
     </div>
   </footer>
+</div>
+
+<!-- ===== Betting-advice overlay ===== -->
+<div id="bettingOverlay">
+  <div id="bettingPanel">
+    <!-- header -->
+    <div class="flex items-center justify-between px-5 py-3 border-b border-slate-200 dark:border-slate-800/40">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-lg">🎲</span>
+        <div class="min-w-0">
+          <div class="text-sm font-black text-slate-800 dark:text-slate-100 truncate" id="betTitle">下注建议 / Betting Advice</div>
+          <div class="text-[10px] text-slate-500 dark:text-slate-400">基于本场所有模型的预测分析 · 价值投注视角</div>
+        </div>
+      </div>
+      <button id="betClose" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/40 text-slate-500 dark:text-slate-400" title="关闭">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="bet-scroll flex-1">
+      <!-- odds form -->
+      <div class="p-5 border-b border-slate-200 dark:border-slate-800/40">
+        <div class="flex items-center justify-between mb-3">
+          <div class="bet-label flex items-center gap-1.5"><span class="text-[#c89b3c]">①</span> 录入盘口赔率（留空=未开盘）</div>
+          <div class="flex items-center gap-2">
+            <select id="betModelSel" class="bet-input" style="width:auto"></select>
+          </div>
+        </div>
+        <div id="betOddsForm" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/30">
+          <span class="text-[10px] text-slate-500 dark:text-slate-400">提示：仅填已开盘的赔率；赔率填 0 或留空 = 忽略该盘口。</span>
+          <button id="betRunBtn" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-[#c89b3c] text-white text-xs font-black shadow hover:scale-[1.03] transition-transform">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            生成下注建议
+          </button>
+        </div>
+      </div>
+
+      <!-- streaming chat output -->
+      <div class="p-5">
+        <div class="bet-label flex items-center gap-1.5 mb-3"><span class="text-[#c89b3c]">②</span> 模型分析（流式输出）</div>
+        <div id="betChat" class="rounded-xl border border-slate-200 dark:border-slate-800/40 bg-slate-50/60 dark:bg-obsidian-950/40 p-4 min-h-[160px]">
+          <div class="text-[11px] text-slate-400 italic">点击「生成下注建议」开始。模型将基于本场所有模型的预测共识与赔率进行价值分析…</div>
+        </div>
+
+        <!-- comparison cards across models -->
+        <div class="mt-5">
+          <div class="bet-label flex items-center gap-1.5 mb-3"><span class="text-[#c89b3c]">③</span> 各模型下注建议对比</div>
+          <div id="betCompare" class="space-y-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -548,7 +642,10 @@ function renderSeriesMatchCard(h, opts={}){
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800/10 mt-2">
         <div class="flex items-center justify-between text-[11px] mb-2.5">
           <span class="text-slate-500 dark:text-slate-400 font-bold">大模型预测汇总 (Series)</span>
-          <span class="pill text-[9px] font-bold">${Object.keys(preds).length}个模型已投</span>
+          <div class="flex items-center gap-2">
+            ${Object.keys(preds).length ? `<button class="bet-open-btn inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#c89b3c]/10 text-[#c89b3c] border border-[#c89b3c]/25 text-[10px] font-black hover:bg-[#c89b3c]/20 transition-colors" data-slug="${escAttr(h.slug)}">🎲 下注建议</button>` : ''}
+            <span class="pill text-[9px] font-bold">${Object.keys(preds).length}个模型已投</span>
+          </div>
         </div>
         ${renderPredictionList(preds, h, 'series')}
       </div>
@@ -985,6 +1082,250 @@ document.getElementById('themeBtn').addEventListener('click',()=>{
     renderLeaderboard();
   }
 });
+
+// =================== Betting-advice panel ===================
+let BET = { slug:null, blue:null, red:null, bo:5, streaming:false };
+const betOverlay = document.getElementById('bettingOverlay');
+const betChat = document.getElementById('betChat');
+const betCompare = document.getElementById('betCompare');
+const betOddsForm = document.getElementById('betOddsForm');
+const betRunBtn = document.getElementById('betRunBtn');
+const betModelSel = document.getElementById('betModelSel');
+
+if (window.marked) { marked.setOptions({ breaks:true, gfm:true }); }
+
+// open buttons (delegated, since cards re-render)
+document.body.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.bet-open-btn');
+  if(!btn) return;
+  openBettingPanel(btn.dataset.slug);
+});
+document.getElementById('betClose').addEventListener('click', closeBettingPanel);
+betOverlay.addEventListener('click', (e)=>{ if(e.target===betOverlay) closeBettingPanel(); });
+betRunBtn.addEventListener('click', runBettingAdvice);
+
+function openBettingPanel(slug){
+  // locate the match in DATA for names + BoX
+  const all = [...(DATA.history||[]), ...(DATA.predicted_upcoming||[])];
+  const m = all.find(x=>x.slug===slug) || {};
+  BET = { slug, blue:m.blue||'蓝方', red:m.red||'红方', bo:Number(m.truth?.number_of_games||5), streaming:false };
+  document.getElementById('betTitle').textContent = `下注建议 · ${(m.blue||'蓝方')} vs ${(m.red||'红方')}`;
+  // populate model selector
+  betModelSel.innerHTML = (DATA.models||[]).map(md=>`<option value="${escAttr(md.id)}">${esc(md.display_name||md.id)}</option>`).join('') || '<option>—</option>';
+  renderOddsForm();
+  betChat.innerHTML = `<div class="text-[11px] text-slate-400 italic">点击「生成下注建议」开始。模型将基于本场所有模型的预测共识与赔率进行价值分析…</div>`;
+  betCompare.innerHTML = `<div class="text-[11px] text-slate-400 italic">暂无历史建议记录。</div>`;
+  betOverlay.classList.add('open');
+  loadAdviceList(slug);
+}
+function closeBettingPanel(){
+  betOverlay.classList.remove('open');
+  BET.streaming = false;
+}
+
+function renderOddsForm(){
+  const bo = BET.bo>=3 ? BET.bo : 5;
+  const isBo5 = bo>=5;
+  const winNeed = isBo5 ? 3 : 2;            // wins needed to take the series
+  // correct-score options: "wB-wR" where both <= winNeed and one == winNeed
+  const scores = [];
+  for(let a=0;a<=winNeed;a++) for(let b=0;b<=winNeed;b++){ if((a===winNeed||b===winNeed)&&a<winNeed+1&&b<winNeed+1&&!(a===winNeed&&b===winNeed)){ scores.push(`${a}-${b}`); } }
+  const totalLine = isBo5 ? '3.5' : '2.5';
+  const ml = `
+    <div>
+      <div class="bet-label mb-2">胜负盘 Moneyline</div>
+      <div class="grid grid-cols-2 gap-2">
+        <div><label class="text-[10px] text-[#00a3e0] font-bold">${esc(BET.blue)} 胜(蓝)</label><input class="bet-input mt-1" data-odds="moneyline.blue" type="number" step="0.01" min="0" placeholder="如 1.25"></div>
+        <div><label class="text-[10px] text-[#de2f2f] font-bold">${esc(BET.red)} 胜(红)</label><input class="bet-input mt-1" data-odds="moneyline.red" type="number" step="0.01" min="0" placeholder="如 3.8"></div>
+      </div>
+    </div>`;
+  const cs = `
+    <div>
+      <div class="bet-label mb-2">正确比分 Correct Score</div>
+      <div class="grid grid-cols-3 gap-2">
+        ${scores.map(s=>{
+          const [a,b]=s.split('-'); const tag = Number(a)>Number(b)?BET.blue:BET.red;
+          return `<div><label class="text-[9px] text-slate-500 dark:text-slate-400 font-semibold">${s} (${esc(tag)})</label><input class="bet-input mt-1" data-odds="correct_score.${s}" type="number" step="0.01" min="0" placeholder="0"></div>`;
+        }).join('')}
+      </div>
+    </div>`;
+  const hcp = `
+    <div>
+      <div class="bet-label mb-2">让分盘 Handicap</div>
+      <div class="grid grid-cols-2 gap-2">
+        <div><label class="text-[9px] text-[#00a3e0] font-semibold">${esc(BET.blue)} -1.5</label><input class="bet-input mt-1" data-odds="handicap.-1.5" type="number" step="0.01" min="0" placeholder="0"></div>
+        <div><label class="text-[9px] text-[#de2f2f] font-semibold">${esc(BET.red)} +1.5</label><input class="bet-input mt-1" data-odds="handicap.+1.5" type="number" step="0.01" min="0" placeholder="0"></div>
+      </div>
+    </div>`;
+  const tg = `
+    <div>
+      <div class="bet-label mb-2">总局数大小 Total Games</div>
+      <div class="grid grid-cols-2 gap-2">
+        <div><label class="text-[9px] text-emerald-500 font-semibold">大 ${totalLine}</label><input class="bet-input mt-1" data-odds="total_games.over_${totalLine}" type="number" step="0.01" min="0" placeholder="0"></div>
+        <div><label class="text-[9px] text-rose-500 font-semibold">小 ${totalLine}</label><input class="bet-input mt-1" data-odds="total_games.under_${totalLine}" type="number" step="0.01" min="0" placeholder="0"></div>
+      </div>
+    </div>`;
+  betOddsForm.innerHTML = ml + cs + hcp + tg;
+}
+
+function collectOdds(){
+  const odds = { moneyline:{}, correct_score:{}, handicap:{}, total_games:{} };
+  betOddsForm.querySelectorAll('input[data-odds]').forEach(inp=>{
+    const [cat, key] = inp.dataset.odds.split('.');
+    let v = parseFloat(inp.value);
+    if(!inp.value || isNaN(v) || v<=0) return;   // empty/0 => not open
+    odds[cat][key] = v;
+  });
+  return odds;
+}
+
+async function runBettingAdvice(){
+  if(BET.streaming) return;
+  const modelId = betModelSel.value;
+  const odds = collectOdds();
+  if(!modelId || betModelSel.options.length===0){ betChat.innerHTML = `<div class="text-rose-400 text-xs">没有可用模型。</div>`; return; }
+  if(!Object.values(odds).some(o=>Object.keys(o).length)){ betChat.innerHTML = `<div class="text-rose-400 text-xs">请至少填入一个开盘的赔率。</div>`; return; }
+
+  BET.streaming = true;
+  betRunBtn.disabled = true;
+  betRunBtn.classList.add('opacity-50','cursor-not-allowed');
+  betChat.innerHTML = `<div class="text-[11px] text-slate-500 dark:text-slate-400 mb-2">🤖 <b>${esc(modelName(modelId))}</b> 正在分析…</div><div id="betStream" class="bet-prose"></div>`;
+  const streamEl = document.getElementById('betStream');
+  let acc = '';
+  let lastRender = 0;
+  let cursorOn = false;
+
+  try{
+    const resp = await fetch('/api/betting-advice', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ slug:BET.slug, model_id:modelId, odds })
+    });
+    if(!resp.ok){
+      const msg = await resp.text();
+      betChat.innerHTML = `<div class="text-rose-400 text-xs">请求失败 (${resp.status})：${esc(msg)}</div>`;
+      BET.streaming=false; betRunBtn.disabled=false; betRunBtn.classList.remove('opacity-50','cursor-not-allowed');
+      return;
+    }
+    const reader = resp.body.getReader();
+    const dec = new TextDecoder();
+    let buf='';
+    let finalDone=null;
+    while(true){
+      const {value, done} = await reader.read();
+      if(done) break;
+      buf += dec.decode(value, {stream:true});
+      const events = buf.split('\n\n');
+      buf = events.pop();
+      for(const blk of events){
+        const ev = parseSSEBlock(blk);
+        if(!ev) continue;
+        if(ev.event==='delta'){
+          acc += ev.data.text || '';
+          const now=Date.now();
+          if(now-lastRender>50){
+            streamEl.classList.add('bet-cursor'); cursorOn=true;
+            streamEl.innerHTML = (window.marked?marked.parse(acc):esc(acc));
+            streamEl.scrollTop = streamEl.scrollHeight;
+            lastRender=now;
+          }
+        } else if(ev.event==='done'){
+          finalDone = ev.data;
+        }
+      }
+    }
+    streamEl.classList.remove('bet-cursor');
+    streamEl.innerHTML = (window.marked?marked.parse(acc):esc(acc)) || '<span class="text-slate-400 italic text-xs">（无输出）</span>';
+    if(finalDone && finalDone.error){
+      streamEl.insertAdjacentHTML('beforeend', `<div class="mt-2 text-rose-400 text-xs">⚠️ 错误：${esc(finalDone.error)}</div>`);
+    } else if(finalDone){
+      const meta = `✅ 已保存 · tokens ${finalDone.input_tokens??'—'}/${finalDone.output_tokens??'—'} · $${Number(finalDone.cost_usd||0).toFixed(5)}`;
+      streamEl.insertAdjacentHTML('beforeend', `<div class="mt-2 pt-2 border-t border-slate-200 dark:border-slate-800/30 text-[10px] text-[#c89b3c] font-bold">${meta}</div>`);
+      await loadAdviceList(BET.slug);
+    }
+  }catch(err){
+    betChat.insertAdjacentHTML('beforeend', `<div class="mt-2 text-rose-400 text-xs">⚠️ 连接中断：${esc(String(err))}</div>`);
+  }finally{
+    BET.streaming=false; betRunBtn.disabled=false; betRunBtn.classList.remove('opacity-50','cursor-not-allowed');
+  }
+}
+
+function parseSSEBlock(block){
+  const lines = block.split('\n').filter(Boolean);
+  if(!lines.length) return null;
+  let event='message', dataStr='';
+  for(const ln of lines){
+    if(ln.startsWith('event:')) event = ln.slice(6).trim();
+    else if(ln.startsWith('data:')) dataStr += ln.slice(5).trim();
+  }
+  let data={};
+  try{ data = dataStr? JSON.parse(dataStr):{}; }catch(e){ data = {text:dataStr}; }
+  return {event, data};
+}
+
+async function loadAdviceList(slug){
+  try{
+    const r = await fetch(`/api/betting-advice/list?slug=${encodeURIComponent(slug)}`);
+    if(!r.ok){ betCompare.innerHTML = `<div class="text-[11px] text-slate-400 italic">暂无历史建议记录。</div>`; return; }
+    const list = await r.json();
+    if(!list.length){ betCompare.innerHTML = `<div class="text-[11px] text-slate-400 italic">暂无历史建议记录。生成一次后将出现在这里，可用于横向对比各模型的下注眼力。</div>`; return; }
+    betCompare.innerHTML = list.map(renderAdviceCard).join('');
+  }catch(e){
+    betCompare.innerHTML = `<div class="text-[11px] text-slate-400 italic">加载失败。</div>`;
+  }
+}
+
+function renderAdviceCard(rec){
+  const picks = Array.isArray(rec.picks)? rec.picks:[];
+  const when = (rec.submitted_at||'').replace('T',' ').slice(0,19);
+  const model = modelName(rec.model_id);
+  const valuePicks = picks.filter(p=>String(p.value).includes('有'));
+  const summary = picks.length ? `${valuePicks.length}/${picks.length} 个有价值` : '未解析出推荐表';
+  const picksHtml = picks.length ? `
+    <div class="overflow-x-auto mt-2">
+      <table class="text-[11px] w-full">
+        <thead><tr class="text-slate-500 dark:text-slate-400 uppercase text-[9px]">
+          <th class="py-1 px-2 text-left">市场</th><th class="py-1 px-2 text-left">选择</th>
+          <th class="py-1 px-2">赔率</th><th class="py-1 px-2">模型概率</th><th class="py-1 px-2">隐含概率</th>
+          <th class="py-1 px-2">价值</th><th class="py-1 px-2">信心</th><th class="py-1 px-2 text-left">理由</th>
+        </tr></thead>
+        <tbody>
+          ${picks.map(p=>{
+            const isVal = String(p.value).includes('有');
+            const conf = String(p.conf||'');
+            const confColor = conf.includes('高')?'text-emerald-500':(conf.includes('中')?'text-amber-500':'text-slate-400');
+            return `<tr class="border-t border-slate-200 dark:border-slate-800/20">
+              <td class="py-1 px-2 font-semibold">${esc(p.market)}</td>
+              <td class="py-1 px-2 font-bold">${esc(p.pick)}</td>
+              <td class="py-1 px-2 text-center font-mono">${esc(p.odds)}</td>
+              <td class="py-1 px-2 text-center font-mono">${fmtPct(p.model_prob)}</td>
+              <td class="py-1 px-2 text-center font-mono text-slate-500">${fmtPct(p.implied_prob)}</td>
+              <td class="py-1 px-2 text-center"><span class="px-1.5 py-0.5 rounded text-[9px] font-black ${isVal?'bg-emerald-500/15 text-emerald-500':'bg-slate-500/10 text-slate-400'}">${esc(p.value)}</span></td>
+              <td class="py-1 px-2 text-center ${confColor} font-bold">${esc(p.conf)}</td>
+              <td class="py-1 px-2 text-slate-500 dark:text-slate-400">${esc(p.reason)}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>` : '';
+  return `
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800/40 bg-white dark:bg-obsidian-950/30 p-3.5">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-[#c89b3c]/15 text-[#c89b3c] border border-[#c89b3c]/25 text-[11px] font-black">${esc(model)}</span>
+          <span class="text-[10px] text-slate-500 dark:text-slate-400">${esc(when)} UTC</span>
+        </div>
+        <span class="text-[10px] font-bold ${valuePicks.length?'text-emerald-500':'text-slate-400'}">${esc(summary)}</span>
+      </div>
+      ${picksHtml}
+      ${picks.length ? `<details class="mt-2"><summary class="cursor-pointer text-[10px] text-slate-500 dark:text-slate-400 hover:text-[#c89b3c]">查看模型完整叙述原文</summary><div class="bet-prose mt-2 text-[11px] text-slate-500 dark:text-slate-400">${window.marked?marked.parse(rec.raw_text||''):esc(rec.raw_text||'')}</div></details>` : `<div class="bet-prose mt-2 text-[11px] text-slate-500 dark:text-slate-400">${window.marked?marked.parse(rec.raw_text||'(无)'):esc(rec.raw_text||'(无)')}</div>`}
+    </div>`;
+}
+
+function fmtPct(v){
+  if(v==null||v==='') return '—';
+  const n=Number(v); if(isNaN(n)) return esc(v);
+  return (n<=1? (n*100).toFixed(0): n.toFixed(0)) + '%';
+}
 
 load();
 setInterval(()=>{ if(DATA){ renderIncoming(); } }, 60000);

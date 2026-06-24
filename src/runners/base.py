@@ -15,8 +15,9 @@ import dataclasses
 import datetime as dt
 import json
 import os
+import re
 import time
-from typing import Any, Callable
+from typing import Any, Callable, Iterator
 
 from .. import config as cfg
 
@@ -71,6 +72,38 @@ class BaseRunner(abc.ABC):
         Each tool_call dict MUST be normalized to:
             { "id": str, "name": "web_search", "args": <dict|json-str> }
         """
+
+    # ---- streaming variant (used by the betting-advice path) ----
+    # The betting path is a single-turn, tool-free chat that we stream token
+    # by token to the browser. Providers that support native streaming override
+    # this (see OpenAICompatRunner). This default falls back to the non-stream
+    # _chat() and emits the whole text in one delta — so ANY runner can be used
+    # for betting, even without a streaming implementation.
+
+    def stream_chat(self, messages: list[dict[str, Any]], *,
+                    allow_tools: bool = False) -> Iterator[dict[str, Any]]:
+        """Yield streaming events for one chat turn.
+
+        Event shapes:
+            {"type": "delta",  "text": str}            # incremental text chunk
+            {"type": "done",   "text": str,            # full accumulated text
+                               "thinking": str|None,
+                               "input_tokens": int,
+                               "output_tokens": int,
+                               "error": str|None}
+        """
+        out = self._chat(messages, allow_tools=allow_tools)
+        full = out.get("text") or ""
+        if full:
+            yield {"type": "delta", "text": full}
+        yield {
+            "type": "done",
+            "text": full,
+            "thinking": out.get("thinking"),
+            "input_tokens": out.get("input_tokens", 0),
+            "output_tokens": out.get("output_tokens", 0),
+            "error": None,
+        }
 
     # ---- the unified agent loop ----
 
@@ -431,3 +464,65 @@ def _argstr(args: Any) -> str:
     if isinstance(args, str):
         return args
     return json.dumps(args, ensure_ascii=False)
+
+
+def parse_markdown_picks(text: str) -> list[dict[str, Any]]:
+    """Best-effort parse of the betting-advice recommendation table.
+
+    Expects a markdown table with a fixed header:
+        | 市场 | 选择 | 赔率 | 模型概率 | 隐含概率 | 价值 | 信心 | 理由 |
+    Returns one dict per data row (keys: market, pick, odds, model_prob,
+    implied_prob, value, confidence, reason). On any failure returns [] — the
+    caller falls back to showing the raw markdown.
+    """
+    if not text:
+        return []
+    lines = text.splitlines()
+    # find the header row by its required columns
+    header_idx = None
+    for i, ln in enumerate(lines):
+        cells = _split_md_row(ln)
+        if len(cells) >= 8 and "市场" in cells[0] and "选择" in cells[1] and "价值" in cells[5]:
+            header_idx = i
+            break
+    if header_idx is None:
+        return []
+    picks: list[dict[str, Any]] = []
+    for ln in lines[header_idx + 1:]:
+        cells = _split_md_row(ln)
+        # a separator row like |---|---|...| yields non-text cells; skip
+        if not cells or all(set(c) <= set("-: ") for c in cells):
+            continue
+        if len(cells) < 8:
+            break  # table ended
+        try:
+            picks.append({
+                "market": cells[0].strip(),
+                "pick": cells[1].strip(),
+                "odds": _to_num(cells[2]),
+                "model_prob": _to_num(cells[3]),
+                "implied_prob": _to_num(cells[4]),
+                "value": cells[5].strip(),       # 有 / 无
+                "confidence": cells[6].strip(),  # 高 / 中 / 低
+                "reason": cells[7].strip(),
+            })
+        except Exception:  # noqa: BLE001
+            break
+    return picks
+
+
+def _split_md_row(line: str) -> list[str]:
+    s = line.strip()
+    if not s.startswith("|"):
+        return []
+    s = s.strip("|")
+    return [c.strip() for c in s.split("|")]
+
+
+def _to_num(cell: str) -> float | str:
+    """Strip % and parse to float; keep original string if not numeric."""
+    v = cell.strip().replace("%", "").replace("，", ",").strip()
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return cell.strip()
