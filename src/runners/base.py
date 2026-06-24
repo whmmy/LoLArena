@@ -38,6 +38,7 @@ class RunnerResult:
     wall_seconds: float
     error: str | None = None
     search_log: list[dict[str, Any]] = dataclasses.field(default_factory=list)  # full provenance
+    rounds: list[dict[str, Any]] = dataclasses.field(default_factory=list)  # full per-turn transcript
 
 
 ProgressCallback = Callable[[dict[str, Any]], None]
@@ -81,6 +82,7 @@ class BaseRunner(abc.ABC):
         totals = {"in": 0, "out": 0, "calls": 0, "cost": 0.0}
         sources: list[dict[str, Any]] = []
         thinking_parts: list[str] = []
+        rounds: list[dict[str, Any]] = []
         raw = ""
         err: str | None = None
         pred: dict[str, Any] = {}
@@ -92,7 +94,7 @@ class BaseRunner(abc.ABC):
         try:
             self._emit(progress, "start", scope=scope, target_id=target_id)
             # 1) the search-and-reason loop until JSON or budget exhausted
-            self._agent_loop(messages, totals, sources, thinking_parts, progress)
+            self._agent_loop(messages, totals, sources, thinking_parts, rounds, progress)
 
             # 2) extract + validate JSON, with up to N repair retries
             for attempt in range(max_format_retries + 1):
@@ -111,6 +113,15 @@ class BaseRunner(abc.ABC):
                     out = self._chat(messages, allow_tools=False)
                     totals["in"] += out.get("input_tokens", 0)
                     totals["out"] += out.get("output_tokens", 0)
+                    self._emit(progress, "chat_end", round=f"repair_{attempt + 1}",
+                               input_tokens=out.get("input_tokens", 0),
+                               output_tokens=out.get("output_tokens", 0),
+                               text_chars=len(out.get("text") or ""),
+                               text=out.get("text") or "",
+                               thinking=out.get("thinking"),
+                               tool_calls=0,
+                               provider_thinking_chars=len(out.get("thinking") or ""))
+                    self._record_turn(rounds, "repair", out, round_no=None)
                     self._append_assistant(messages, out)
                 else:
                     pred = {}
@@ -122,6 +133,15 @@ class BaseRunner(abc.ABC):
                     out = self._chat(messages, allow_tools=False)
                     totals["in"] += out.get("input_tokens", 0)
                     totals["out"] += out.get("output_tokens", 0)
+                    self._emit(progress, "chat_end", round=f"repair_{attempt + 1}",
+                               input_tokens=out.get("input_tokens", 0),
+                               output_tokens=out.get("output_tokens", 0),
+                               text_chars=len(out.get("text") or ""),
+                               text=out.get("text") or "",
+                               thinking=out.get("thinking"),
+                               tool_calls=0,
+                               provider_thinking_chars=len(out.get("thinking") or ""))
+                    self._record_turn(rounds, "repair", out, round_no=None)
                     self._append_assistant(messages, out)
         except Exception as e:  # noqa: BLE001
             err = f"{type(e).__name__}: {e}"
@@ -140,6 +160,7 @@ class BaseRunner(abc.ABC):
             cost_usd=totals["cost"] + self._price(totals["in"], totals["out"]),
             wall_seconds=time.time() - t0, error=err,
             search_log=getattr(self.search, "log", []),
+            rounds=rounds,
         )
         self._emit(progress, "finish", ok=bool(result.prediction and not result.error),
                    tool_calls=result.tool_calls, input_tokens=result.input_tokens,
@@ -151,6 +172,7 @@ class BaseRunner(abc.ABC):
     # ---- agent loop shared by all providers ----
 
     def _agent_loop(self, messages, totals, sources, thinking_parts,
+                    rounds: list[dict[str, Any]],
                     progress: ProgressCallback | None = None) -> None:
         from ..adapters.websearch import format_results_for_model, sources_from_tool
 
@@ -171,9 +193,12 @@ class BaseRunner(abc.ABC):
                        input_tokens=out.get("input_tokens", 0),
                        output_tokens=out.get("output_tokens", 0),
                        text_chars=len(out.get("text") or ""),
+                       text=out.get("text") or "",
+                       thinking=out.get("thinking"),
                        tool_calls=len(calls),
                        provider_thinking_chars=len(out.get("thinking") or ""))
             if not calls:
+                self._record_turn(rounds, "agent_final", out, round_no=round_no)
                 return  # model emitted plain text (hopefully JSON) -> done
 
             # execute each web_search call and feed results back as a tool response
@@ -210,6 +235,9 @@ class BaseRunner(abc.ABC):
                     "id": call_id,
                     "text": format_results_for_model(results, query),
                 })
+            # record this reasoning turn: model text + thinking + the tool calls it
+            # made + the results we fed back, so the full chain is traceable.
+            self._record_turn(rounds, "agent", out, tool_results, round_no=round_no)
             if tool_results:
                 # Providers may return either a single message dict (Anthropic/Gemini
                 # bundle results into one user turn) or a list of OpenAI-style
@@ -238,8 +266,11 @@ class BaseRunner(abc.ABC):
                            input_tokens=out2.get("input_tokens", 0),
                            output_tokens=out2.get("output_tokens", 0),
                            text_chars=len(out2.get("text") or ""),
+                           text=out2.get("text") or "",
+                           thinking=out2.get("thinking"),
                            tool_calls=len(out2.get("tool_calls") or []),
                            provider_thinking_chars=len(out2.get("thinking") or ""))
+                self._record_turn(rounds, "final_after_budget", out2, round_no=round_no + 1)
                 return
             # loop continues -> model reasons again
 
@@ -252,6 +283,31 @@ class BaseRunner(abc.ABC):
         if progress is None:
             return
         progress({"model_id": self.model_id, "event": event, **data})
+
+    def _record_turn(self, rounds: list[dict[str, Any]], kind: str,
+                     out: dict[str, Any],
+                     tool_results: list[dict[str, Any]] | None = None,
+                     *, round_no: int | None = None) -> None:
+        """Append the full product of one _chat() call to the transcript:
+        assistant text, thinking, normalized tool calls (with args), the tool
+        results fed back, and per-turn token counts. Persisted for audit."""
+        rounds.append({
+            "seq": len(rounds) + 1,
+            "kind": kind,            # agent | agent_final | final_after_budget | repair
+            "round": round_no,       # agent-loop round number; None for repair turns
+            "text": out.get("text") or "",
+            "thinking": out.get("thinking"),
+            "tool_calls": [
+                {"id": c.get("id"), "name": c.get("name"), "args": c.get("args")}
+                for c in (out.get("tool_calls") or [])
+            ],
+            "tool_results": [
+                {"id": r.get("id"), "text": r.get("text")}
+                for r in (tool_results or [])
+            ],
+            "input_tokens": out.get("input_tokens", 0),
+            "output_tokens": out.get("output_tokens", 0),
+        })
 
     # ---- provider-overridable message normalization ----
     # Default shape = OpenAI chat-completions style. Anthropic/Gemini override.

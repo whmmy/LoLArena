@@ -262,6 +262,19 @@ def _run_all(models: list[dict], system: str, user: str, *, scope: str,
                     "searches": res.search_log,
                 }, ensure_ascii=False, indent=2), encoding="utf-8"
             )
+        # persist the full per-turn transcript (text + thinking + tool calls/
+        # results for every _chat() call) for audit / traceability
+        if getattr(res, "rounds", None):
+            rdir = out_dir / "rounds"
+            rdir.mkdir(exist_ok=True)
+            (rdir / f"{res.model_id}.json").write_text(
+                json.dumps({
+                    "model_id": res.model_id, "scope": res.scope,
+                    "target_id": res.target_id, "submitted_at": res.submitted_at,
+                    "total_turns": len(res.rounds),
+                    "rounds": res.rounds,
+                }, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
         return record
 
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
