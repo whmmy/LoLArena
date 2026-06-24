@@ -14,38 +14,38 @@
 
 models:
   # ---------------- Frontier (proprietary) ----------------
-  - id: gpt-5
-    display_name: GPT-5
-    provider: openai
-    model: gpt-5
-    api_key_env: OPENAI_API_KEY
-    base_url_env: OPENAI_BASE_URL
-    base_url: https://api.openai.com/v1
-    price_per_mtok: { input: 2.50, output: 15.00 }
-    json_mode: true
-    timeout_seconds: 180
+  # - id: gpt-5
+  #   display_name: GPT-5
+  #   provider: openai
+  #   model: gpt-5
+  #   api_key_env: OPENAI_API_KEY
+  #   base_url_env: OPENAI_BASE_URL
+  #   base_url: https://api.openai.com/v1
+  #   price_per_mtok: { input: 2.50, output: 15.00 }
+  #   json_mode: true
+  #   timeout_seconds: 180
 
-  - id: claude-opus-4
-    display_name: Claude Opus 4
-    provider: anthropic
-    model: claude-opus-4
-    api_key_env: ANTHROPIC_API_KEY
-    base_url_env: ANTHROPIC_BASE_URL
-    base_url: https://api.anthropic.com
-    price_per_mtok: { input: 3.00, output: 15.00 }
-    json_mode: false
-    timeout_seconds: 180
+  # - id: claude-opus-4
+  #   display_name: Claude Opus 4
+  #   provider: anthropic
+  #   model: claude-opus-4
+  #   api_key_env: ANTHROPIC_API_KEY
+  #   base_url_env: ANTHROPIC_BASE_URL
+  #   base_url: https://api.anthropic.com
+  #   price_per_mtok: { input: 3.00, output: 15.00 }
+  #   json_mode: false
+  #   timeout_seconds: 180
 
-  - id: gemini-3-pro
-    display_name: Gemini 3 Pro
-    provider: google
-    model: gemini-3-pro
-    api_key_env: GOOGLE_API_KEY
-    base_url_env: GOOGLE_BASE_URL
-    base_url: https://generativelanguage.googleapis.com/v1beta
-    price_per_mtok: { input: 2.00, output: 8.00 }
-    json_mode: true
-    timeout_seconds: 180
+  # - id: gemini-3-pro
+  #   display_name: Gemini 3 Pro
+  #   provider: google
+  #   model: gemini-3-pro
+  #   api_key_env: GOOGLE_API_KEY
+  #   base_url_env: GOOGLE_BASE_URL
+  #   base_url: https://generativelanguage.googleapis.com/v1beta
+  #   price_per_mtok: { input: 2.00, output: 8.00 }
+  #   json_mode: true
+  #   timeout_seconds: 180
 
   # ---------------- National / open-weight ----------------
   # Most are reached via OpenRouter (one key) or their native OpenAI-compatible endpoint.
@@ -71,10 +71,10 @@ models:
     json_mode: true
     timeout_seconds: 180
 
-  - id: qwen-max
-    display_name: Qwen Max
+  - id: qwen3.7-max
+    display_name: Qwen 3.7 Max
     provider: dashscope
-    model: qwen-max
+    model: qwen3.7-max
     api_key_env: DASHSCOPE_API_KEY
     base_url_env: DASHSCOPE_BASE_URL
     base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
@@ -82,16 +82,16 @@ models:
     json_mode: true
     timeout_seconds: 180
 
-  - id: kimi-k2
-    display_name: Kimi K2
-    provider: moonshot
-    model: kimi-k2-0905-preview
-    api_key_env: MOONSHOT_API_KEY
-    base_url_env: MOONSHOT_BASE_URL
-    base_url: https://api.moonshot.cn/v1
-    price_per_mtok: { input: 0.60, output: 2.50 }
-    json_mode: true
-    timeout_seconds: 180
+  # - id: kimi-k2
+  #   display_name: Kimi K2
+  #   provider: moonshot
+  #   model: kimi-k2-0905-preview
+  #   api_key_env: MOONSHOT_API_KEY
+  #   base_url_env: MOONSHOT_BASE_URL
+  #   base_url: https://api.moonshot.cn/v1
+  #   price_per_mtok: { input: 0.60, output: 2.50 }
+  #   json_mode: true
+  #   timeout_seconds: 180
 
   # ---------------- Optional extras (uncomment when you have a key) ----------------
   # - id: doubao-seed
