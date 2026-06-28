@@ -165,9 +165,11 @@ def betting_advice(req: BettingAdviceRequest):
 
     Prereq: the match must already have predictions (we reason over them).
     Returns text/event-stream:
-        event: start   data:{model_id, slug}
-        event: delta   data:{text}
-        event: done    data:{...raw_text, picks, saved, tokens, cost, error}
+        event: start    data:{model_id, slug}
+        event: delta    data:{text}
+        event: thinking data:{text}
+        event: ping     data:{elapsed}        # keep-alive during long waits
+        event: done     data:{...raw_text, thinking_text, picks, saved, tokens, cost, error}
     """
     from ..pipeline import betting
 
@@ -180,9 +182,42 @@ def betting_advice(req: BettingAdviceRequest):
     if not any(odds.values()):
         raise HTTPException(400, detail="未填入任何赔率，无法生成下注建议。")
 
+    # Run the (blocking, network-bound) generator on a worker thread and feed
+    # its events into a queue. The main thread drains the queue and interleaves
+    # a heartbeat every few seconds so the connection never looks idle — this
+    # is what keeps proxies/browsers from killing the stream during a long
+    # thinking phase, and lets the UI show "still working" feedback.
+    import queue
+    import threading
+    import time
+
+    out_q: "queue.Queue[tuple[str, dict | None]]" = queue.Queue()
+    HEARTBEAT = 5.0  # seconds between keep-alive pings
+
+    def worker():
+        try:
+            for ev in betting.stream_betting_advice(req.slug, req.model_id, odds):
+                etype = ev.pop("type", "message")
+                out_q.put((etype, ev))
+        except Exception as e:  # noqa: BLE001
+            out_q.put(("done", {"error": f"{type(e).__name__}: {e}"}))
+        finally:
+            out_q.put((None, None))  # sentinel: stream finished
+
+    threading.Thread(target=worker, daemon=True).start()
+
     def gen():
-        for ev in betting.stream_betting_advice(req.slug, req.model_id, odds):
-            etype = ev.pop("type")
+        t0 = time.time()
+        while True:
+            try:
+                etype, ev = out_q.get(timeout=HEARTBEAT)
+            except queue.Empty:
+                # No real event for a while → emit a heartbeat so the browser
+                # (and any reverse proxy) knows we're alive.
+                yield f"event: ping\ndata: {json.dumps({'elapsed': round(time.time() - t0, 1)}, ensure_ascii=False)}\n\n"
+                continue
+            if etype is None:  # sentinel
+                break
             yield f"event: {etype}\ndata: {json.dumps(ev, ensure_ascii=False)}\n\n"
 
     return StreamingResponse(gen(), media_type="text/event-stream",

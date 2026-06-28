@@ -243,6 +243,82 @@ Three key differences in this project:
   against `validate` and `graders`, plus `python -m src --help` and
   `python -m src build-site` (the site builder works on empty data).
 
+## Deployment (Linux / CentOS + uv)
+
+项目自带一键部署脚本，systemd 守护，开机自启 + 崩溃自动重启，监听 `0.0.0.0:8000`。
+
+### 1. 把代码放到服务器
+
+```bash
+sudo mkdir -p /opt/lolArena
+sudo chown $USER:$USER /opt/lolArena
+cd /opt
+git clone https://github.com/你的用户名/lolArena.git
+cd lolArena
+```
+
+### 2. 装系统依赖 + uv
+
+```bash
+sudo yum install -y git curl tar
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env   # 让 uv 进 PATH
+```
+
+### 3. 一键安装
+
+```bash
+bash deploy/install.sh
+```
+
+脚本会：用 uv 建虚拟环境并装依赖 → 生成 `.env`（自动把 `LOLA_HOST` 改成 `0.0.0.0`，`LOLA_PORT` 改成 `8000`）→ 安装并启用 systemd service → 开放 8000 端口 → 做一次模块导入的 sanity check。
+
+> **首次部署必读**：`src/cli.py` 的 `serve` 命令同时启动 FastAPI 和 APScheduler（`predict_tick` / `grade_tick`），所以 `ExecStart` 是 `python -m src serve` 而不是裸 `uvicorn`，否则定时跑分会失效。
+
+### 4. 填 API key 并启动
+
+```bash
+vi .env                       # 填 PANDASCORE_API_KEY + ZHIPU_WEBSEARCH_API_KEY + 至少一个模型 key
+sudo systemctl restart lolarena
+```
+
+### 5. 放行云厂商安全组
+
+去云厂商控制台，在「安全组」里放行 **8000/tcp**（脚本只处理服务器本机防火墙）。
+
+### 可调环境变量（install.sh）
+
+| 变量 | 默认 | 说明 |
+|------|------|------|
+| `PYTHON_VERSION` | `3.11` | uv 用的 Python 版本 |
+| `LOLA_HOST` | `0.0.0.0` | 监听地址（部署到服务器必须改 0.0.0.0） |
+| `LOLA_PORT` | `8000` | 监听端口 |
+| `SKIP_FIREWALL` | `0` | 设 `1` 跳过 firewalld/iptables |
+| `SKIP_ENV_EDIT` | `0` | 设 `1` 不动 `.env`（自己手配） |
+
+例：换端口 `LOLA_PORT=8888 bash deploy/install.sh`。
+
+### 常用运维命令
+
+```bash
+sudo systemctl start lolarena          # 启动
+sudo systemctl status lolarena         # 状态
+sudo journalctl -u lolarena -f         # 实时日志
+sudo systemctl restart lolarena        # 重启（改代码/改 .env 后）
+sudo systemctl stop lolarena           # 停止
+```
+
+### 更新代码
+
+```bash
+cd /opt/lolArena
+git pull
+uv sync                                # 依赖有变时, 走 pyproject.toml (无锁文件时生成 uv.lock)
+sudo systemctl restart lolarena
+```
+
+> **依赖改动**：优先改 `pyproject.toml`（uv sync 的事实源），保持与 `requirements.txt` 同步即可。
+
 ## License
 
 TBD.

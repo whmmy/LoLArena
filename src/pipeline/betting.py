@@ -20,6 +20,8 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import logging
+import time
 from pathlib import Path
 from typing import Any, Iterator
 
@@ -28,6 +30,8 @@ from ..runners import build_runner
 from ..runners.base import parse_markdown_picks
 
 PROMPTS = cfg.PROMPTS
+
+log = logging.getLogger("lolarena.betting")
 
 
 # ============================== prompt building ==============================
@@ -231,15 +235,20 @@ def stream_betting_advice(slug: str, model_id: str,
     """Run one model's betting analysis, streaming events for SSE.
 
     Yields:
-        {"type":"start",  "model_id", "slug"}
-        {"type":"delta",  "text"}                # incremental text
-        {"type":"done",   "model_id","slug","raw_text","picks",
-                          "saved","input_tokens","output_tokens","cost_usd","error"}
+        {"type":"start",    "model_id", "slug"}
+        {"type":"delta",    "text"}                 # incremental answer text
+        {"type":"thinking", "text"}                 # incremental reasoning text
+        {"type":"ping"}                             # keep-alive during long waits
+        {"type":"done",     "model_id","slug","raw_text","picks",
+                            "saved","input_tokens","output_tokens","cost_usd","error"}
     """
+    t0 = time.time()
+    log.info("betting start | slug=%s model=%s", slug, model_id)
     yield {"type": "start", "model_id": model_id, "slug": slug}
 
     model_cfg = _model_cfg(model_id)
     if model_cfg is None:
+        log.warning("betting unknown model | slug=%s model=%s", slug, model_id)
         yield {"type": "done", "model_id": model_id, "slug": slug, "raw_text": "",
                "picks": [], "saved": None, "input_tokens": 0, "output_tokens": 0,
                "cost_usd": 0.0, "error": f"unknown model_id '{model_id}'"}
@@ -252,12 +261,16 @@ def stream_betting_advice(slug: str, model_id: str,
     # Betting is tool-free; pass a dummy search tool placeholder (never invoked).
     runner = build_runner(model_cfg, search_tool=None)
     full_parts: list[str] = []
+    thinking_parts: list[str] = []
     done: dict[str, Any] = {}
     try:
         for ev in runner.stream_chat(messages, allow_tools=False):
             if ev["type"] == "delta":
                 full_parts.append(ev["text"])
                 yield {"type": "delta", "text": ev["text"]}
+            elif ev["type"] == "thinking":
+                thinking_parts.append(ev["text"])
+                yield {"type": "thinking", "text": ev["text"]}
             elif ev["type"] == "done":
                 done = ev
     except Exception as e:  # noqa: BLE001
@@ -265,6 +278,7 @@ def stream_betting_advice(slug: str, model_id: str,
                 "text": "", "thinking": None, "input_tokens": 0, "output_tokens": 0}
 
     raw_text = "".join(full_parts) or done.get("text", "")
+    thinking_text = "".join(thinking_parts) or done.get("thinking")
     picks: list[dict[str, Any]] = []
     saved: str | None = None
     err = done.get("error")
@@ -277,9 +291,20 @@ def stream_betting_advice(slug: str, model_id: str,
         usage = {"input_tokens": in_tok, "output_tokens": out_tok}
         saved = str(save_advice(slug, model_id, odds, raw_text, picks, usage))
 
+    elapsed = time.time() - t0
+    if err:
+        log.warning("betting error | slug=%s model=%s elapsed=%.1fs err=%s",
+                    slug, model_id, elapsed, err)
+    else:
+        log.info("betting done | slug=%s model=%s elapsed=%.1fs picks=%d "
+                 "tok=%d/%d thinking=%dchars saved=%s",
+                 slug, model_id, elapsed, len(picks), in_tok, out_tok,
+                 len(thinking_text or ""), bool(saved))
+
     yield {
         "type": "done", "model_id": model_id, "slug": slug,
-        "raw_text": raw_text, "picks": picks, "saved": saved,
+        "raw_text": raw_text, "thinking_text": thinking_text,
+        "picks": picks, "saved": saved,
         "input_tokens": in_tok, "output_tokens": out_tok,
         "cost_usd": _price(model_cfg, in_tok, out_tok), "error": err,
     }

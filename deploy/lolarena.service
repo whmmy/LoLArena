@@ -1,0 +1,50 @@
+[Unit]
+Description=LoLArena (FastAPI + APScheduler)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# --- Paths (edit INSTALL_DIR / USER if you didn't use the defaults) ---
+# Project lives here; the Python venv is at <INSTALL_DIR>/.venv
+# uv auto-manages the venv, so we run the venv's python directly.
+WorkingDirectory=__INSTALL_DIR__
+EnvironmentFile=__INSTALL_DIR__/.env
+
+# systemd 服务的 PATH 默认是个干净的最小集, 把 venv bin 显式放到最前面.
+Environment="PATH=__INSTALL_DIR__/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# 不缓冲 stdout/stderr, 让 journalctl -f 立刻看到日志.
+Environment="PYTHONUNBUFFERED=1"
+# 强制监听 0.0.0.0 (覆盖 .env 里的 127.0.0.1 默认值), 部署服务器必须这样.
+# 改 install.sh 的 LOLA_HOST / LOLA_PORT 环境变量即可, 这里无需手动改.
+Environment="LOLA_HOST=__LOLA_HOST__"
+Environment="LOLA_PORT=__LOLA_PORT__"
+
+# src/cli.py 的 serve 命令会同时启动 APScheduler + uvicorn, 不要换成裸 uvicorn,
+# 否则定时跑分 (predict_tick / grade_tick) 会失效.
+ExecStart=__INSTALL_DIR__/.venv/bin/python -m src serve
+
+User=__USER__
+Group=__USER__
+
+# --- Reliability ---
+# always: 任何原因退出都重启 (含 OOM, 健康检查失败等).
+Restart=always
+RestartSec=5s
+KillSignal=SIGINT
+TimeoutStopSec=20
+# 首次冷启要加载 .env + YAML, 留 60s 宽限.
+TimeoutStartSec=60
+
+# --- Hardening (轻量, 不影响功能) ---
+NoNewPrivileges=true
+# 只允许写 data/ (含 matches/ games/) 和 docs/site/ (build-site 产物),
+# 配置 / 提示词 / schema / 源码统统只读, 出事也炸不烂项目.
+ReadWritePaths=__INSTALL_DIR__/data __INSTALL_DIR__/docs/site
+
+# --- Logging → journald (view with: journalctl -u lolarena -f) ---
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=lolarena
+
+[Install]
+WantedBy=multi-user.target

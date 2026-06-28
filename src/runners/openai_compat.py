@@ -70,9 +70,12 @@ class OpenAICompatRunner(BaseRunner):
                     allow_tools: bool = False) -> "Iterator[dict[str, Any]]":
         """Stream one chat turn token-by-token (OpenAI stream=True).
 
-        Yields the same event shapes as BaseRunner.stream_chat. Transient
-        errors are wrapped by chat_retry on the non-stream path; here we run
-        streaming directly and surface failures as a done event with `error`.
+        Yields the same event shapes as BaseRunner.stream_chat, plus:
+            {"type": "thinking", "text": str}   # incremental reasoning chunk
+        so callers can show live activity during the (sometimes multi-minute)
+        thinking phase of reasoning models. Transient errors are wrapped by
+        chat_retry on the non-stream path; here we run streaming directly and
+        surface failures as a done event with `error`.
         """
         kwargs: dict[str, Any] = {
             "model": self.cfg["model"],
@@ -92,6 +95,28 @@ class OpenAICompatRunner(BaseRunner):
         in_tok = 0
         out_tok = 0
         err: str | None = None
+        # Some providers (e.g. MiniMax M3) stream reasoning inline in `content`
+        # wrapped in <think>...</think> rather than via a separate
+        # `reasoning_content` field. We split such a stream live: text inside
+        # <think> is routed to a `thinking` event, text outside to `delta`.
+        # `in_think` tracks whether we're currently inside a <think> block, and
+        # `buf` holds trailing chars that might be a partial tag boundary so we
+        # don't emit a half tag.
+        in_think = False
+        buf = ""
+        OPEN = "<think>"
+        CLOSE = "</think>"
+
+        def _route(text: str):
+            """Append `text` to the right accumulator and return its events."""
+            if not text:
+                return []
+            if in_think:
+                thinking_parts.append(text)
+                return [{"type": "thinking", "text": text}]
+            full_parts.append(text)
+            return [{"type": "delta", "text": text}]
+
         try:
             stream = self.client.chat.completions.create(**kwargs)
             for chunk in stream:
@@ -105,15 +130,42 @@ class OpenAICompatRunner(BaseRunner):
                 delta = chunk.choices[0].delta
                 piece = getattr(delta, "content", None)
                 if piece:
-                    full_parts.append(piece)
-                    yield {"type": "delta", "text": piece}
+                    buf += piece
+                    events: list[dict[str, Any]] = []
+                    while True:
+                        tag = CLOSE if in_think else OPEN
+                        idx = buf.find(tag)
+                        if idx == -1:
+                            # No full tag boundary in buffer. Emit everything
+                            # except a tail that could be the start of a tag,
+                            # which we hold back for the next chunk.
+                            safe = len(buf) - (len(tag) - 1)
+                            if safe > 0:
+                                events.extend(_route(buf[:safe]))
+                                buf = buf[safe:]
+                            break
+                        # Emit text up to the tag, then flip the think state.
+                        if idx > 0:
+                            events.extend(_route(buf[:idx]))
+                        in_think = not in_think
+                        buf = buf[idx + len(tag):]
+                    for e in events:
+                        yield e
                 rcontent = getattr(delta, "reasoning_content", None)
                 if rcontent:
                     thinking_parts.append(rcontent)
+                    # Forward reasoning live (not just in the final `done` event)
+                    # so the browser shows activity during the long thinking phase
+                    # instead of looking frozen.
+                    yield {"type": "thinking", "text": rcontent}
                 u = getattr(chunk, "usage", None)
                 if u is not None:
                     in_tok = getattr(u, "prompt_tokens", 0) or in_tok
                     out_tok = getattr(u, "completion_tokens", 0) or out_tok
+            # Flush any remainder after the stream ends.
+            if buf:
+                for e in _route(buf):
+                    yield e
         except Exception as e:  # noqa: BLE001
             err = f"{type(e).__name__}: {e}"
 
