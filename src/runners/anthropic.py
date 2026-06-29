@@ -39,7 +39,7 @@ class AnthropicRunner(BaseRunner):
             "max_tokens": self.cfg.get("max_tokens", 16000),
             "temperature": 0.3,
         }
-        if allow_tools:
+        if allow_tools and self.search is not None:
             kwargs["tools"] = [ws.TOOL_ANTHROPIC]
         resp = self.client.messages.create(**kwargs)
 

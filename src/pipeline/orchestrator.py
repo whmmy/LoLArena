@@ -159,16 +159,33 @@ def cmd_predict_game(match_id: int, position: int, *, model_ids: list[str] | Non
     # match was never predicted at series level.
     game_context = _game_context_from_pack(match, client)
 
-    system, user = prompt_build.build_game_prompt(bp, match, series_state, game_context=game_context)
+    # One-shot shared version/champion meta via web_search. Single-game runs
+    # without per-model search, so we pre-collect the current patch + drafted
+    # champions' strength ONCE and inject the same digest into every model —
+    # covering training-cutoff blind spots (new champs, current tier) without
+    # the multi-round search loop.
+    meta_snapshot = collect_mod.collect_version_meta(bp)
+    if meta_snapshot.get("digest"):
+        print(f"[predict-game] meta snapshot: patch={meta_snapshot.get('patch')} "
+              f"champs={len(meta_snapshot.get('drafted_champions', []))} "
+              f"queries={len(meta_snapshot.get('queries', []))}")
+
+    system, user = prompt_build.build_game_prompt(
+        bp, match, series_state, game_context=game_context, meta_snapshot=meta_snapshot,
+    )
     slug = _match_slug_of(match)
     target_id = f"{slug}/g{position}"
     gdir = cfg.game_dir(slug, position)
 
     models = _select_models(model_ids)
     print(f"[predict-game] match {match_id} game {position} -> {len(models)} models")
+    # Single-game prediction runs without web_search: the BP + series context_pack
+    # baseline already carry everything needed, and skipping the multi-round search
+    # loop collapses each model to a single inference pass (minutes -> seconds).
     records = _run_all(models, system, user, scope="game", target_id=target_id,
                        out_dir=gdir / "predictions",
-                       validate_fn=validate.validate_game, max_workers=max_workers)
+                       validate_fn=validate.validate_game, max_workers=max_workers,
+                       search_enabled=False)
     if auto_rebuild_site:
         _maybe_rebuild_site()
     return records
@@ -248,7 +265,8 @@ def _make_search_tool() -> WebSearchTool:
 
 
 def _run_all(models: list[dict], system: str, user: str, *, scope: str,
-             target_id: str, out_dir: Path, validate_fn, max_workers: int) -> list[dict]:
+             target_id: str, out_dir: Path, validate_fn, max_workers: int,
+             search_enabled: bool = True) -> list[dict]:
     out_dir.mkdir(parents=True, exist_ok=True)
     results: list[dict] = []
     progress_events: list[dict[str, Any]] = []
@@ -267,7 +285,8 @@ def _run_all(models: list[dict], system: str, user: str, *, scope: str,
 
     def _job(m):
         try:
-            runner = build_runner(m, _make_search_tool())
+            search_tool = _make_search_tool() if search_enabled else None
+            runner = build_runner(m, search_tool)
             res = runner.run(system, user, scope=scope, target_id=target_id,
                              validate_fn=validate_fn, progress=_progress)
         except Exception as e:  # noqa: BLE001

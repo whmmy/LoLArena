@@ -1,0 +1,482 @@
+{
+  "model_id": "deepseek-v4-pro",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g3",
+  "submitted_at": "2026-06-29T07:54:20.989469+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "DCG（红方）凭借远优于TLAW（蓝方）的阵容协同性与版本契合度，应拿下本局完成3-0横扫。TLAW选出非版本打野希瓦娜，阵容前期节奏全无，与DCG的悟空+奥莉安娜+卡蜜尔强开体系形成巨大差距。",
+      "draft_analysis": "TLAW蓝色方BP存在根本性冲突：上路雷克顿是前期线霸、下路卢锡安+芮娜塔是前期压制组合，但打野希瓦娜是纯刷野型打野，前期几乎零gank能力和零控制，无法将线上优势转化为实际击杀。中路维克托又是发育型法师，前中期影响力微弱。整体阵容前期缺乏衔接点，中后期又缺乏可靠先手开团（仅靠雷克顿闪W），团战阵型极易被拉扯瓦解。相反，DCG红方的阵容堪称教科书级：贾克斯counter雷克顿，越后期越强；悟空提供顶级的团战先手与AoE控制；奥莉安娜与悟空形成完美大招连携；下路卡莉丝塔+卡蜜尔是版本经过验证的强开线杀组合（Keria在首日对阵TL时就用卡蜜尔摧毁了TL下路）。DCG阵容前期有线权、中期有强开、后期贾克斯单带无解，三条曲线环环相扣。",
+      "tempo_wincon": "节奏掌控权完全在DCG手中。Pop9的悟空从3级起即可利用隐身gank任意一路，而Josedeodo的希瓦娜只能埋头刷野无法反制。DCG的致胜路径非常清晰：利用下路卡莉丝塔+卡蜜尔的强势对线争抢线权→辅助游走配合悟空入侵TLAW野区或越塔gank中路→6级后悟空+奥莉安娜的大招combo在龙团和先锋团碾压TLAW→中期贾克斯边带无敌，TLAW无人能处理。TLAW唯一的胜机是Morgan的雷克顿在对线期彻底打穿Flauren的贾克斯，并通过前期换线获取镀层经济建立巨大优势，但在希瓦娜无法提供任何支援的情况下，这一条件几乎不可能达成。一旦游戏超过18分钟贾克斯做出第一件成装，TLAW的上路优势就将荡然无存。"
+    },
+    "win_prob": {
+      "blue": 0.33,
+      "red": 0.67
+    },
+    "predicted_winner": "red",
+    "expected_duration_min": 31.5,
+    "kills": {
+      "blue": 9,
+      "red": 17
+    },
+    "total_kills": 26,
+    "key_drafted_champions": [
+      {
+        "champion": "Shyvana",
+        "team": "blue",
+        "role": "jun",
+        "impact": "非版本打野，前期零控制零gank，使TLAW线上优势无法转化，直接导致整局节奏崩溃"
+      },
+      {
+        "champion": "Wukong",
+        "team": "red",
+        "role": "jun",
+        "impact": "顶级团战先手与AoE控制，与奥莉安娜形成毁灭性大招combo，是DCG阵容的节奏引擎"
+      },
+      {
+        "champion": "Camille",
+        "team": "red",
+        "role": "sup",
+        "impact": "强开辅助的代表，6级后定点锁头无法反制，完美counter TLAW缺乏位移的双C"
+      },
+      {
+        "champion": "Jax",
+        "team": "red",
+        "role": "top",
+        "impact": "雷克顿的天然counter，E技能格挡鳄鱼W，越后期单带越无解，TLAW阵容无人能边线应对"
+      },
+      {
+        "champion": "Orianna",
+        "team": "red",
+        "role": "mid",
+        "impact": "与悟空大招形成wombo combo，提供线权、护盾与团战决定性的冲击波，是DCG阵容的团战保险"
+      }
+    ],
+    "sources": [
+      {
+        "query": "MSI入围赛首日结束：T1、KC均3-0横扫对手",
+        "accessed_at": "2026-06-29T07:50:14Z"
+      },
+      {
+        "query": "Shyvana jungle pro play 2025 2026 competitive win rate",
+        "accessed_at": "2026-06-29T07:50:14Z"
+      },
+      {
+        "query": "Camille support pro play league 2026 viability",
+        "accessed_at": "2026-06-29T07:50:14Z"
+      },
+      {
+        "query": "Lucian Renata Glasc bot lane combo pro play 2026",
+        "accessed_at": "2026-06-29T07:50:14Z"
+      },
+      {
+        "query": "Peyz泽丽带猫轰四杀！T1 3-0横扫TLAW",
+        "accessed_at": "2026-06-29T07:50:14Z"
+      },
+      {
+        "query": "2026 MSI 赛前盘点：11 支参赛队伍实力排行",
+        "accessed_at": "2026-06-29T07:50:14Z"
+      }
+    ]
+  },
+  "raw_text": "```json\n{\n  \"reasoning\": {\n    \"overall\": \"DCG（红方）凭借远优于TLAW（蓝方）的阵容协同性与版本契合度，应拿下本局完成3-0横扫。TLAW选出非版本打野希瓦娜，阵容前期节奏全无，与DCG的悟空+奥莉安娜+卡蜜尔强开体系形成巨大差距。\",\n    \"draft_analysis\": \"TLAW蓝色方BP存在根本性冲突：上路雷克顿是前期线霸、下路卢锡安+芮娜塔是前期压制组合，但打野希瓦娜是纯刷野型打野，前期几乎零gank能力和零控制，无法将线上优势转化为实际击杀。中路维克托又是发育型法师，前中期影响力微弱。整体阵容前期缺乏衔接点，中后期又缺乏可靠先手开团（仅靠雷克顿闪W），团战阵型极易被拉扯瓦解。相反，DCG红方的阵容堪称教科书级：贾克斯counter雷克顿，越后期越强；悟空提供顶级的团战先手与AoE控制；奥莉安娜与悟空形成完美大招连携；下路卡莉丝塔+卡蜜尔是版本经过验证的强开线杀组合（Keria在首日对阵TL时就用卡蜜尔摧毁了TL下路）。DCG阵容前期有线权、中期有强开、后期贾克斯单带无解，三条曲线环环相扣。\",\n    \"tempo_wincon\": \"节奏掌控权完全在DCG手中。Pop9的悟空从3级起即可利用隐身gank任意一路，而Josedeodo的希瓦娜只能埋头刷野无法反制。DCG的致胜路径非常清晰：利用下路卡莉丝塔+卡蜜尔的强势对线争抢线权→辅助游走配合悟空入侵TLAW野区或越塔gank中路→6级后悟空+奥莉安娜的大招combo在龙团和先锋团碾压TLAW→中期贾克斯边带无敌，TLAW无人能处理。TLAW唯一的胜机是Morgan的雷克顿在对线期彻底打穿Flauren的贾克斯，并通过前期换线获取镀层经济建立巨大优势，但在希瓦娜无法提供任何支援的情况下，这一条件几乎不可能达成。一旦游戏超过18分钟贾克斯做出第一件成装，TLAW的上路优势就将荡然无存。\"\n  },\n  \"win_prob\": { \"blue\": 0.33, \"red\": 0.67 },\n  \"predicted_winner\": \"red\",\n  \"expected_duration_min\": 31.5,\n  \"kills\": { \"blue\": 9, \"red\": 17 },\n  \"total_kills\": 26,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Shyvana\", \"team\": \"blue\", \"role\": \"jun\", \"impact\": \"非版本打野，前期零控制零gank，使TLAW线上优势无法转化，直接导致整局节奏崩溃\" },\n    { \"champion\": \"Wukong\", \"team\": \"red\", \"role\": \"jun\", \"impact\": \"顶级团战先手与AoE控制，与奥莉安娜形成毁灭性大招combo，是DCG阵容的节奏引擎\" },\n    { \"champion\": \"Camille\", \"team\": \"red\", \"role\": \"sup\", \"impact\": \"强开辅助的代表，6级后定点锁头无法反制，完美counter TLAW缺乏位移的双C\" },\n    { \"champion\": \"Jax\", \"team\": \"red\", \"role\": \"top\", \"impact\": \"雷克顿的天然counter，E技能格挡鳄鱼W，越后期单带越无解，TLAW阵容无人能边线应对\" },\n    { \"champion\": \"Orianna\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"与悟空大招形成wombo combo，提供线权、护盾与团战决定性的冲击波，是DCG阵容的团战保险\" }\n  ],\n  \"sources\": [\n    { \"query\": \"MSI入围赛首日结束：T1、KC均3-0横扫对手\", \"accessed_at\": \"2026-06-29T07:50:14Z\" },\n    { \"query\": \"Shyvana jungle pro play 2025 2026 competitive win rate\", \"accessed_at\": \"2026-06-29T07:50:14Z\" },\n    { \"query\": \"Camille support pro play league 2026 viability\", \"accessed_at\": \"2026-06-29T07:50:14Z\" },\n    { \"query\": \"Lucian Renata Glasc bot lane combo pro play 2026\", \"accessed_at\": \"2026-06-29T07:50:14Z\" },\n    { \"query\": \"Peyz泽丽带猫轰四杀！T1 3-0横扫TLAW\", \"accessed_at\": \"2026-06-29T07:50:14Z\" },\n    { \"query\": \"2026 MSI 赛前盘点：11 支参赛队伍实力排行\", \"accessed_at\": \"2026-06-29T07:50:14Z\" }\n  ]\n}\n```",
+  "thinking_text": "Let me analyze this match between DCG (Deep Cross Gaming) and TLAW (Team Liquid Alienware) in the MSI Play-In Knockouts.\n\nFirst, let me understand the situation:\n- Series score: DCG 2-0 TLAW (DCG leads)\n- This is Game 3 of a best-of-5\n- DCG is on red side, TLAW on blue side\n\nLet me look at the BP:\n\n**Blue (TLAW):**\n- Top: Morgan - Renekton\n- Jungle: Josedeodo - Shyvana\n- Mid: Quid - Viktor\n- ADC: Yeon - Lucian\n- Support: CoreJJ - Renata Glasc\n\n**Red (DCG):**\n- Top: Flauren - Jax\n- Jungle: Pop9 - Wukong\n- Mid: HongSuo (note: listed as HongSuo but player form says XiaoXiang - interesting) - Orianna\n- ADC: Feng - Kalista\n- Support: ShiauC - Camille\n\nWait, there's a discrepancy. The BP shows DCG mid as \"HongSuo\" but the roster shows \"XiaoXiang\" as the mid laner. This could be a sub or the same player with different name. I'll work with what's given.\n\nNow let me think about the draft:\n\n**TLAW (Blue):**\n- Renekton - early game lane bully, strong early-mid\n- Shyvana - farming/scaling jungler, needs time to stack\n- Viktor - scaling mage, wave clear, late game\n- Lucian - early-mid game ADC, lane bully\n- Renata Glasc - disengage/peel support, great ult\n\nTLAW has an interesting mix: Renekton + Lucian want early pressure, but Shyvana + Viktor want to scale. Some tension in the draft.\n\n**DCG (Red):**\n- Jax - scaling duelist/split pusher, good vs Renekton later\n- Wukong - teamfight jungler, great engage\n- Orianna - scaling control mage, teamfight\n- Kalista - early game ADC, lane dominance\n- Camille - engage support, picks\n\nDCG has a more coherent draft: Jax for side lane pressure, Wukong + Orianna for teamfight wombo combo, Kalista + Camille for lane aggression and picks.\n\nNow let me search for current meta info and these specific champions.\n\nKey things to check:\n1. Shyvana jungle in current meta - is she meta? She's unusual\n2. Renata Glasc + Lucian synergy\n3. Jax vs Renekton matchup\n4. Viktor vs Orianna matchup\n5. Current patch trends\n\nLet me search for these.\nThe search results didn't give me much specific info about the meta or matchups. Let me try more specific searches. From the MSI result (#6), I can see that T1 beat TLAW 3-0 and KC beat DCG 3-0. So both teams lost their first series. And now DCG is up 2-0 against TLAW in the losers bracket? Wait, let me re-read...\n\nThe series score says DCG (blue) 2-0 TLAW (red). But wait, in the BP, TLAW is on blue side and DCG is on red side. And the series score says blue is DCG leading 2-0. But the BP says blue = TLAW... Hmm, this is confusing. Let me look again.\n\nFrom the series background:\n- \"blue\": \"Deep Cross Gaming\" \n- \"red\": \"Team Liquid Alienware\"\n- \"series_score_blue\": 2, \"series_score_red\": 0\n\nSo DCG is leading 2-0 in the series. DCG is the \"blue\" team in the series context. But in the BP, the blue side picks are TLAW and red side picks are DCG. That's because in the actual game, sides are determined differently. In game 3, the side selection might have swapped.\n\nActually, looking at the MSI format, the blue/red in picks refers to the actual side of the map (blue = bottom-left, red = top-right). The series_score_blue refers to DCG (who is the blue team in the series context).\n\nSo DCG is leading 2-0. This is a match point game for DCG, elimination game for TLAW.\n\nFrom search result #6: \"T1、KC均3-0横扫对手\" - T1 beat TLAW 3-0, KC beat DCG 3-0. So both teams come from losses. In the losers' bracket, DCG has turned things around and is now up 2-0 against TLAW.\n\nLet me search for more specific information about how DCG won the first two games and the meta.\n\nLet me also search for Shyvana jungle in competitive play and the specific champion matchups.\nThe web search hasn't given me much specific data about these champion picks in the current meta. Let me try more focused searches.\n\nLet me think about what I know:\n\n1. DCG is up 2-0 in the series, TLAW is on the brink of elimination\n2. Both teams lost their first MSI matches (DCG lost 0-3 to KC, TLAW lost 0-3 to T1)\n3. In this losers' bracket match, DCG has won the first two games\n\nNow let me analyze the draft for this Game 3:\n\n**TLAW (Blue side):**\n- Renekton (Morgan) - Strong early lane bully. Morgan's Renekton: 2-3 record (40% win rate). Not his best pick.\n- Shyvana (Josedeodo) - Non-meta jungle pick. Farming/scaling jungler with weak early ganks. Unclear if this is in his pool.\n- Viktor (Quid) - Scaling control mage. Quid's Viktor: 1-2 (33.3% win rate). Not his preferred pick (he's better on Ryze, Yone).\n- Lucian (Yeon) - Early game ADC. Yeon's Lucian: 2-2 (50% win rate). Decent.\n- Renata Glasc (CoreJJ) - Disengage/peel support. Not in CoreJJ's top champion pool from the data.\n\n**DCG (Red side):**\n- Jax (Flauren) - Scaling duelist. Not in his top champion pool data. But Jax is a classic counter to Renekton scaling-wise.\n- Wukong (Pop9) - Teamfight jungler. Pop9's Wukong: 3-3 (50% win rate). Solid pick.\n- Orianna (HongSuo/XiaoXiang) - Control mage. XiaoXiang only has 2 games on data with Ryze. But Orianna is a standard mid pick. Interestingly, Quid (TLAW's mid) plays Orianna at 57.1% win rate and DCG took it away.\n- Kalista (Feng) - Early game ADC. Feng has 0 games analyzed (!), so hard to judge. But Kalista is aggressive.\n- Camille (ShiauC) - Engage support. Not in ShiauC's champion pool data! His pool: Rell, Lulu, Bard, Karma, Nautilus, Rakan. Camille support is unusual.\n\nThis is really interesting. Let me search for more context.\n\nKey observations:\n\n1. **Draft coherency**: TLAW's draft has tension - Renekton + Lucian want to dominate early, but Shyvana needs to farm and Viktor needs to scale. DCG's draft is more coherent: Jax for side lane, Wukong+Orianna for wombo combo teamfights, Kalista+Camille for aggressive bot lane and picks.\n\n2. **Shyvana pick**: This is a very unusual jungle pick. Shyvana has weak early ganks, farms heavily, and needs items + dragon stacks. Against Wukong who has strong early ganks and great teamfight engage, Shyvana is a liability early.\n\n3. **Camille support**: Off-meta but has been seen as a counter to certain comps. Camille has excellent pick potential with her ult, and pairs well with Kalista for all-in. The Kalista ult into Camille engage is a powerful combo.\n\n4. **Lucian + Renata**: This is a known strong lane combo. Lucian's passive double-tap works well with Renata's W (Bailout) and E. But Renata is not in CoreJJ's typical pool.\n\n5. **Jax vs Renekton**: Renekton bullies Jax early, but Jax outscales hard. If Jax gets through lane phase even or slightly behind, he becomes a monster split-pusher.\n\n6. **Orianna denial**: DCG took Orianna away from Quid (who has 57.1% win rate on it). This is a smart draft move.\n\nLet me search more specifically.\nThe web search results are pretty sparse for specific meta information. Let me try a few more targeted searches and then work with what I have.\n\nLet me think about this more systematically.\n\n**Series Context:**\n- DCG leads 2-0 in a Bo5\n- This is an elimination game for TLAW, match point for DCG\n- Both teams lost their opening MSI matches 0-3 (DCG to KC, TLAW to T1)\n- DCG is the underdog Cinderella story from LCP, TLAW is the experienced LCS team\n\n**Draft Analysis:**\n\nTLAW (Blue):\n- Renekton: Strong early lane bully. Morgan's record: 40% win rate (2-3). Below his average.\n- Shyvana: Off-meta jungle. Power-farming. Not in Josedeodo's champion pool data. Risky pocket pick.\n- Viktor: Scaling mage. Quid's record: 33.3% win rate (1-2). Not his best.\n- Lucian: Early-mid ADC. Yeon's record: 50%.\n- Renata Glasc: Disengage support. Not in CoreJJ's pool data. Strong W synergy with Lucian.\n\nDCG (Red):\n- Jax: Scaling duelist/splitpusher. Not in Flauren's pool. Counter-pick to auto-attackers. Outscales Renekton.\n- Wukong: Pop9's pick at 50% win rate. Good engage, teamfight.\n- Orianna: Standard control mage. Not in XiaoXiang's data (only 2 Ryze games). But Orianna is a staple. Also denies Quid's Orianna.\n- Kalista: Aggressive early ADC. Feng has 0 games in data (new player?). \n- Camille: Engage support. Not in ShiauC's pool. Unconventional pick.\n\n**Key Draft Observations:**\n\n1. **TLAW's draft has identity crisis**: Renekton + Lucian signal \"win early\", but Shyvana + Viktor signal \"scale to late.\" Shyvana offers almost no early gank pressure, which means Renekton's lane bullying won't be capitalized on. Viktor needs time to scale. This means TLAW has weak early-mid game despite having lane bullies.\n\n2. **DCG's draft is more coherent**: Jax scales, Wukong has strong early-mid ganks and teamfight, Orianna teamfight control, Kalista+Camille for aggressive bot lane and pick potential. DCG can play through early with Kalista/Camille pressure and Wukong ganks, while Jax and Orianna scale.\n\n3. **The Shyvana problem**: Shyvana jungle means TLAW effectively concedes early game jungle pressure. Against Wukong who can gank effectively from level 3 onwards, this is dangerous. DCG's lanes can play aggressively knowing Shyvana won't be there to counter-gank.\n\n4. **Camille support**: This is a high-risk, high-reward pick. If ShiauC can land hooks and create picks, DCG snowballs. Camille ult is excellent for locking down Lucian or Viktor in fights. Also synergizes with Kalista ult (Kalista throws Camille in, Camille ults).\n\n5. **Bot lane matchup**: Lucian + Renata vs Kalista + Camille. Lucian-Renata has strong trading patterns but is vulnerable to all-ins. Kalista-Camille is all-in heavy. If Camille lands E, it's very dangerous for Lucian.\n\n6. **Top lane**: Renekton should dominate Jax early. But without jungle support (Shyvana farming), Jax can survive and outscale. Renekton falls off after ~25 minutes.\n\n7. **Mid lane**: Viktor vs Orianna. Both scale. Viktor has better wave clear, Orianna has better teamfight utility. This is relatively even.\n\n**Win Conditions:**\n- TLAW: Win through Renekton top gap early, snowball Lucian, use Renata to counter-engage DCG's dive. Must end by ~30 min before Jax/Orianna outscale.\n- DCG: Survive early top pressure, win through bot/mid with Wukong ganks, scale Jax for side lane dominance, win teamfights with Wukong+Orianna combo.\n\n**Prediction Reasoning:**\n\nDCG has:\n- Better draft coherence\n- Momentum (2-0 lead)\n- Better scaling\n- Orianna denial from Quid\n- Wukong jungle advantage over Shyvana\n\nTLAW has:\n- Renekton top early advantage\n- Lucian+Renata lane pressure\n- But Shyvana pick undermines their early game plan\n- Mental pressure (down 0-2, must win)\n\nGiven Shyvana's weak early presence, DCG's Wukong can dictate the early game. Jax should be able to survive Renekton's pressure with proper wave management. DCG's bot lane with Kalista-Camille has strong all-in potential against Lucian-Renata.\n\nI think DCG wins this game. The Shyvana pick is too greedy and TLAW's comp doesn't support it well enough.\n\nLet me search for one more thing about the Viktor vs Orianna matchup and Shyvana jungle in pro.\nThe web search hasn't turned up very specific meta information about these matchups. Let me work with what I have and construct my analysis based on the data provided.\n\nLet me now put together a thorough analysis:\n\n**Overall Assessment:**\n\nDCG (red side) should win this game. The key reasons:\n1. Draft coherence: DCG has a clear teamfight identity (Wukong+Orianna) with side lane pressure (Jax) and aggressive bot lane (Kalista+Camille)\n2. TLAW's Shyvana pick creates a massive jungle gap early-mid game that undermines their Renekton/Lucian early game strategy\n3. DCG at 2-0 has momentum and psychological advantage\n4. TLAW's Viktor (33% Quid win rate) and Shyvana (off-meta, not in pool) are suboptimal\n\n**Draft Analysis:**\n\nTLAW's blue side draft:\n- Renekton: wants to dominate lane early, but Shyvana provides zero gank support. Renekton falls off after 25 min.\n- Shyvana: farm-heavy, weak early ganks, needs dragon stacks. Against Wukong who has strong early presence, this is a big liability. Shyvana will be farming while Wukong ganks.\n- Viktor: scaling mage, good wave clear but immobile. Against Orianna+Wukong, vulnerable to ganks.\n- Lucian: strong lane with Renata, but short range and falls off. \n- Renata Glasc: good disengage and W synergy with Lucian, but vulnerable to hard engage from Camille+Wukong.\n\nDCG's red side draft:\n- Jax: counters Renekton scaling-wise. Can split push and 1v1 later. Weak early but Wukong can help.\n- Wukong: strong early ganks, teamfight engage, pairs perfectly with Orianna ult.\n- Orianna: zone control, teamfight multiplier with Wukong, scales well. Also denies from Quid.\n- Kalista: strong early lane, synergizes with Camille engage. Feng is unknown quantity.\n- Camille: pick potential, ult lockdown, pairs with Kalista ult for engage.\n\n**Tempo & Win Conditions:**\n\nDCG controls the tempo through Wukong's jungle pressure. They can:\n1. Gank bot with Wukong + Camille engage for early leads\n2. Counter-gank top to protect Jax\n3. Scale into teamfights where Wukong+Orianna combo is devastating\n\nTLAW's win conditions:\n1. Renekton must crush Jax (hard without jungle help)\n2. Lucian+Renata must win bot hard enough to offset Shyvana's weak early\n3. End before Jax+Orianna outscale (by ~30 min)\n4. Shyvana must secure dragons for passive stacks\n\nGiven Shyvana is farming, DCG's lanes can play aggressively. Wukong can freely gank any lane. Even if Renekton wins lane, Jax outscales and can match him in side lane. \n\nThe Kalista+Camille bot lane is very aggressive and can snowball against Lucian+Renata if Camille lands a hook. Renata's W can save Lucian once, but Camille ult prevents escape.\n\nFor predicted duration: Given the scaling elements (Jax, Orianna, Viktor), but also the aggressive bot lane (Kalista/Camille) and DCG's likely early leads through Wukong, I'd estimate around 32-34 minutes. DCG will likely gain leads early-mid, but TLAW can stall with Viktor wave clear and Renata disengage.\n\nFor kills: DCG likely to have more kills due to Camille/Wukong pick potential and teamfight superiority. TLAW will get some kills through Renekton early and Lucian burst. I'd estimate something like DCG 15-18, TLAW 9-12.\n\nLet me now finalize the numbers:\n\n- Blue (TLAW) win probability: ~0.30\n- Red (DCG) win probability: ~0.70\n- Predicted winner: red (DCG)\n- Expected duration: ~33 min\n- Kills: DCG ~17, TLAW ~10, total ~27\n\nWait, let me reconsider. The BP shows \"blue\" picks as TLAW and \"red\" picks as DCG. In the output format, I need to use \"blue\" for TLAW and \"red\" for DCG.\n\nLet me also think about the \"HongSuo\" vs \"XiaoXiang\" issue. The BP shows \"DCG HongSuo\" on mid with Orianna. But the roster shows \"XiaoXiang\" as the mid. This could be a substitute player or a name variation. Orianna is a standard control mage - not mechanically intensive but requires good positioning and ball control. If HongSuo is a sub, this could be a risk factor. However, Orianna is one of the most standard mid laners and doesn't require extensive practice.\n\nActually wait - looking at the BP more carefully:\n- Blue side picks are listed as \"TLAW Morgan\", \"TLAW Josedeodo\", etc.\n- Red side picks are listed as \"DCG Flauren\", \"DCG Pop9\", \"DCG HongSuo\", \"DCG Feng\", \"DCG ShiauC\"\n\nSo in this game, TLAW is on blue side (map) and DCG is on red side (map). But in the series context, DCG is \"blue\" and TLAW is \"red\". The `win_prob` in the output refers to the map sides (blue=TLAW, red=DCG).\n\nNow let me also think about the psychological factor. DCG is up 2-0 and playing with house money - they can afford to lose this game and still have two more chances. TLAW is facing elimination and must win. This could lead to TLAW playing either extremely well (desperation factor) or crumbling under pressure. Given TLAW's comp in this game (Shyvana - weak early), I lean toward them crumbling.\n\nThe Shyvana pick in particular suggests TLAW might be trying a \"cheese\" strategy since they're desperate, but it creates too many problems for their draft.\n\nLet me finalize:\n\nwin_prob: { \"blue\": 0.33, \"red\": 0.67 }\npredicted_winner: \"red\"\nexpected_duration_min: 33.0\nkills: { \"blue\": 10, \"red\": 17 }\ntotal_kills: 27\n\nKey drafted champions:\n1. Shyvana (TLAW, jungle) - off-meta pick that cripples TLAW's early game jungle presence\n2. Wukong (DCG, jungle) - strong early ganks and teamfight synergy with Orianna\n3. Camille (DCG, support) - unconventional pick that enables DCG's pick-heavy playstyle\n4. Orianna (DCG, mid) - denies Quid's best champion and enables teamfight wombo combo\n5. Jax (DCG, top) - scaling counter to Renekton, provides side lane win condition\n\nLet me write up the reasoning now.\nLet me carefully analyze all the data I have to make a prediction for this single game.\n\n## Series Context\n- MSI 2026 Play-In Knockouts\n- This is Game 3 of a BO5 series\n- DCG is up 2-0 against TLAW (Team Liquid Alienware)\n- DCG needs 1 more win to sweep; TLAW is fighting for survival\n\nWait, let me re-read the data. The series_score says:\n- series_score_blue: 2 (DCG is blue in the series context)\n- series_score_red: 0 (TLAW is red in the series context)\n\nBut looking at the BP for Game 3:\n- Blue side picks: TLAW Morgan (Renekton), TLAW Josedeodo (Shyvana), TLAW Quid (Viktor), TLAW Yeon (Lucian), TLAW CoreJJ (Renata Glasc)\n- Red side picks: DCG Flauren (Jax), DCG Pop9 (Wukong), DCG HongSuo (Orianna), DCG Feng (Kalista), DCG ShiauC (Camille)\n\nSo in Game 3, TLAW is blue side and DCG is red side.\n\nFrom the MSI results search: \"T1、KC均3-0横扫对手\" - T1 beat TLAW 3-0, KC beat DCG 3-0. So both teams lost their first match in the play-in. They are now facing each other in the lower bracket (losers bracket of the play-in).\n\nWait - the series context says DCG is blue and has 2-0 lead. But the BP data says blue picks are TLAW players and red picks are DCG players. Let me reconcile...\n\nLooking at the BP data:\n- Blue picks: TLAW players\n- Red picks: DCG players\n\nBut the series_context says: \"blue\": \"Deep Cross Gaming\", \"red\": \"Team Liquid Alienware\", and series_score_blue = 2, series_score_red = 0.\n\nThis is confusing. Let me look at the `game_id` and `position`: position 3, meaning Game 3. \n\nWait - re-reading the BP: \n```\n\"picks\": {\n    \"blue\": [\n      {\"role\": \"top\", \"player\": \"TLAW Morgan\", ...},\n      ...\n    ],\n    \"red\": [\n      {\"role\": \"top\", \"player\": \"DCG Flauren\", ...},\n      ...\n    ]\n}\n```\n\nSo TLAW is on blue side for Game 3, DCG is on red side. But the series context says DCG is \"blue\" (meaning the series \"blue\" = DCG). The series_score shows DCG leads 2-0. In Game 3, the side selection might have flipped, so TLAW is on blue side for this game.\n\nActually wait - looking at the match structure more carefully, it's an MSI Play-In. DCG lost 0-3 to KC, and TLAW lost 0-3 to T1 (from search results). They then face each other in the lower bracket. So this is a fresh BO5 between DCG and TLAW where DCG is up 2-0.\n\nNow let me analyze the BP:\n\n### TLAW (Blue Side) Picks:\n- **Top - Morgan: Renekton** - Morgan has 40% win rate on Renekton (2W 3L), but his overall stats are solid (2.39 KDA, 58.97% win rate). Renekton is a lane bully, strong early game.\n- **Jungle - Josedeodo: Shyvana** - Off-meta pick! Shyvana is not in Josedeodo's champion pool from the data. This is a very unusual pick. Shyvana is generally weak in pro play - she lacks early game pressure, is farm-heavy, and only becomes relevant after level 6+ and with items. She has no CC pre-6 for ganks.\n- **Mid - Quid: Viktor** - Quid has 33.3% win rate on Viktor (1W 2L). Viktor is a late-game scaling mage, needs time to scale, weak early game.\n- **ADC - Yeon: Lucian** - Yeon has 50% win rate on Lucian (2W 2L). Lucian is strong early lane bully, pairs well with Renata.\n- **Support - CoreJJ: Renata Glasc** - Not in CoreJJ's top champion pool. Renata is a defensive/disengage support, good at counter-engage and W bailout.\n\nTLAW's comp:\n- Renekton (early game lane bully)\n- Shyvana (farming jungler, late game scaling)\n- Viktor (late game scaling mage)\n- Lucian (early-mid game ADC)\n- Renata Glasc (disengage/protective support)\n\nThis composition has conflicting identities: Lucian + Renata want to play aggressive early bot lane, but Shyvana wants to farm, Viktor wants to scale. The top side is Renekton who's strong early. The comp lacks reliable engage (no hard engage tank/initiator outside of maybe Renekton flash-W). Shyvana provides no CC for ganks. This is a very weak draft from TLAW — Shyvana is basically a \"for fun\" or desperate pick in a must-win game.\n\n### DCG (Red Side) Picks:\n- **Top - Flauren: Jax** - Jax is not in Flauren's top champion pool from the data, but it's a standard meta counter to Renekton. Jax outscales Renekton hard after 1-2 items, and his E (Counter Strike) dodges Renekton's W. Flauren's stats: 3.37 KDA, 55.88% win rate, strong carry.\n- **Jungle - Pop9: Wukong** - Pop9 has 50% win rate on Wukong (3W 3L). Wukong is a strong engage/teamfight jungler, provides excellent AoE CC with ultimate. \n- **Mid - HongSuo (XiaoXiang?): Orianna** - The mid player is listed as \"DCG HongSuo\" in BP but \"XiaoXiang\" in roster. Possibly a sub. Orianna is a classic control mage, provides wave clear, shields, and game-changing ultimate. Good synergy with Wukong (Wukong ult + Orianna ult = wombo combo).\n- **ADC - Feng: Kalista** - Feng has 0 games in data. Kalista is a lane-dominant ADC, good at early aggression, strong with engage supports. Her ultimate (Fate's Call) works well with Camille support.\n- **Support - ShiauC: Camille** - Camille support is a high-skill, aggressive engage pick. Keria played it successfully against TL in MSI (the search results mention Keria's Camille destroying TL's bot lane). ShiauC has excellent stats on engage supports (Nautilus 75%, Rakan 66.7%). Camille support is a pocket pick that's been proven effective.\n\nDCG's comp:\n- Jax (scaling split pusher, Renekton counter)\n- Wukong (engage, teamfight)\n- Orianna (control mage, teamfight wombo combo)\n- Kalista (lane dominant, engage synergy)\n- Camille (hard engage, pick potential)\n\nThis comp is extremely well-rounded: strong early game bot lane with Kalista-Camille, scaling top with Jax, teamfight wombo combo with Wukong + Orianna, and Camille provides point-and-click lockdown for picks. The synergy is excellent.\n\n### Matchup Analysis:\n\n**Top: Jax vs Renekton** - Classic matchup. Renekton wins levels 1-5, Jax starts winning after level 6 and especially after 1-2 items (Divine Sunderer/Trinity Force). Renekton MUST win lane and snowball before Jax outscales. Flauren is a better carry player than Morgan. Given Morgan's Renekton win rate is only 40%, this is not ideal for TLAW. Jax favored long-term.\n\n**Jungle: Wukong vs Shyvana** - Massive mismatch in early game. Wukong can gank from level 3 with E-Q-R combo, has stealth for creative gank paths. Shyvana is a farming jungler with ZERO CC, cannot gank effectively pre-6. Pop9 will have free reign to impact lanes while Josedeodo farms. This is a huge advantage for DCG — Pop9 can camp any lane without fear of counterganks. Shyvana also can't contest early objectives well.\n\n**Mid: Orianna vs Viktor** - Farm lane early. Both are scaling mages. Viktor slightly outranges Orianna and scales better individually, but Orianna provides more utility and teamfight power. Quid's Viktor win rate is 33.3%, below his average. The Orianna pick enables Wukong engages. Slight DCG edge due to team synergy.\n\n**Bot: Kalista + Camille vs Lucian + Renata** - Very aggressive lane. Kalista-Camille is an all-in kill lane at level 2-3. Lucian-Renata has good trading but is more poke/short-trade oriented. Camille's hookshot + ultimate at level 6 is deadly. Given that DCG is 2-0 up and likely has momentum, and that Keria's Camille destroyed TL in the T1 series, this matchup favors DCG. Feng is an unknown quantity though (0 games in data). But ShiauC is experienced on engage supports.\n\n### Overall Assessment:\n\nDCG's comp is significantly better:\n1. Wukong >>> Shyvana early game (jungle gap is massive)\n2. Jax outscales Renekton\n3. Wukong + Orianna wombo combo wins teamfights\n4. Kalista + Camille = aggressive kill lane\n5. TLAW's comp has no clear identity (early game vs scaling conflict)\n6. TLAW picked Shyvana, a non-meta jungler that provides nothing early\n7. DCG is up 2-0, TLAW is tilted/desperate\n\nTLAW's win condition: Renekton crushes Jax early, Lucian-Renata win lane hard, snowball before 25 minutes. But with Shyvana jungle, they have no early game facilitator.\n\nDCG's win condition: Play standard, let Pop9 impact lanes, scale into teamfights. Much easier to execute.\n\n**Prediction:** DCG wins. High confidence. Game duration moderate (~32 min) as DCG controls the game but doesn't speedrun it. Kill count favors DCG.\n\n### Probability:\nDCG (Red side): ~68%\nTLAW (Blue side): ~32%\n\nWait, I need to double check: the output format says blue/red for win_prob. In THIS game, TLAW is blue side and DCG is red side. The predicted_winner should be \"red\" (DCG).\n\nLet me also note: DCG's mid player is listed as \"HongSuo\" but the roster shows \"XiaoXiang\". This could be a sub. XiaoXiang only has 2 games in data with 0% win rate on Ryze. HongSuo might be a different player entirely. Either way, Orianna is a comfort pick that's easy to execute.\n\nRenata Glasc + Lucian: This is actually a strong lane combo. Lucian's passive works well with Renata's W (Bailout) and E (Loyalty Program). But Kalista-Camille has even more all-in threat.\n\nOne concern: Feng has 0 games in baseline data. He's a complete unknown. But Kalista is a mechanically demanding ADC. If he's inexperienced, this could backfire.\n\nLet me finalize. Sources from web search confirm:\n- T1 3-0 TLAW (search result #4)\n- KC 3-0 DCG (implied)\n- Keria Camille destroyed TL's bot lane\n- DCG as a team has risen from PCS/LCP\n\nI'll set win probability at:\n- Blue (TLAW): 0.33\n- Red (DCG): 0.67\n\nPredicted winner: \"red\"\nDuration: ~31.5 min\nKills: blue ~9, red ~15, total ~24\n\nKey drafted champions:\n1. Shyvana (TLAW jung) - off-meta, zero early pressure, farming pick\n2. Wukong (DCG jung) - teamfight monster, wombo combo enabler\n3. Camille (DCG sup) - aggressive engage, proven anti-TL pick\n4. Jax (DCG top) - Renekton counter, outscales hard\n5. Orianna (DCG mid) - Wukong synergy, teamfight insurance",
+  "sources": [
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:35Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:37Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:37Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:40Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:40Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:40Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:56Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:56Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:56Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:56Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:58Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:58Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:58Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:58Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:58Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:01Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:01Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:01Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:01Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:01Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:01Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "Camille support pro play league 2026 viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "Camille support pro play league 2026 viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "Lucian Renata Glasc bot lane combo pro play 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:29Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Camille support pro play league 2026 viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Lucian Renata Glasc bot lane combo pro play 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Viktor vs Orianna mid matchup league season 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:09Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Camille support pro play league 2026 viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Lucian Renata Glasc bot lane combo pro play 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Viktor vs Orianna mid matchup league season 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Wukong jungle pro build MSI 2026 patch",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:12Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Camille support pro play league 2026 viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Lucian Renata Glasc bot lane combo pro play 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Viktor vs Orianna mid matchup league season 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Wukong jungle pro build MSI 2026 patch",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs TLAW game 1 game 2 winner draft",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:51Z"
+    },
+    {
+      "query": "Shyvana jungle MSI 2026 meta strength pick rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "DCG vs Team Liquid MSI 2026 play-in results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Jax vs Renekton top lane matchup 2026 league",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "DCG TLAW MSI 2026 game 1 game 2 results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2026 meta viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Kalista Camille bot lane combo pro play MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Camille support pro play league 2026 viability",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Lucian Renata Glasc bot lane combo pro play 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Viktor vs Orianna mid matchup league season 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Wukong jungle pro build MSI 2026 patch",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs TLAW game 1 game 2 winner draft",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    },
+    {
+      "query": "Shyvana jungle pro play 2025 2026 competitive win rate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:52:53Z"
+    }
+  ],
+  "input_tokens": 157237,
+  "output_tokens": 9595,
+  "tool_calls": 12,
+  "cost_usd": 0.073449,
+  "wall_seconds": 243.35,
+  "error": null
+}

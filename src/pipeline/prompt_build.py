@@ -37,7 +37,8 @@ def build_match_prompt(context_pack: dict) -> tuple[str, str]:
 # ----------------------------- game (single, post-BP) -----------------------------
 
 def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None = None,
-                      *, game_context: dict | None = None) -> tuple[str, str]:
+                      *, game_context: dict | None = None,
+                      meta_snapshot: dict | None = None) -> tuple[str, str]:
     """Return (system_prompt, user_prompt) for a single-game prediction.
 
     bp             : the BP block from collect.fetch_game_bp
@@ -46,6 +47,9 @@ def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None =
     game_context   : optional series-level baseline subset (rosters / player_form /
                      champion pools / team_objectives) reused so models don't
                      re-search what the system already collected
+    meta_snapshot  : optional one-shot version/champion meta digest from
+                     collect.collect_version_meta (covers training-cutoff blind
+                     spots since single-game runs without per-model web_search)
     """
     system = (PROMPTS / "system.md").read_text(encoding="utf-8")
     tpl = (PROMPTS / "task_game.md").read_text(encoding="utf-8")
@@ -55,6 +59,9 @@ def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None =
     red = (opps[1]["opponent"] if len(opps) > 1 else {}).get("name", "Red")
     version = (match_fixture.get("videogame_version") or {}).get("name", "current")
     total_games = match_fixture.get("number_of_games") or bp.get("total_games") or "?"
+    # prefer the patch resolved by the meta snapshot over the (often empty) fixture field
+    if meta_snapshot and meta_snapshot.get("patch"):
+        version = meta_snapshot["patch"]
 
     series_context = {
         "league": (match_fixture.get("league") or {}).get("name"),
@@ -81,9 +88,18 @@ def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None =
             {"note": "无大局基线数据，队伍/选手状态请自行用 web_search 补足"}
         )
 
+    # One-shot version/champion meta digest (shared across all models). Empty when
+    # the lookup failed — tell the model to lean on its own knowledge instead.
+    meta_digest = (meta_snapshot or {}).get("digest") or ""
+    if meta_digest:
+        meta_block = meta_digest
+    else:
+        meta_block = "（本次未取到版本 meta 检索结果，请基于你的内在知识评估版本英雄强度与对位。）"
+
     user = (
         tpl.replace("{{series_context}}", _format_json(series_context))
            .replace("{{game_context}}", game_context_block)
+           .replace("{{meta_snapshot}}", meta_block)
            .replace("{{bp_block}}", _format_json(bp))
            .replace("{{game_position}}", str(bp.get("position", "?")))
            .replace("{{total_games}}", str(total_games))

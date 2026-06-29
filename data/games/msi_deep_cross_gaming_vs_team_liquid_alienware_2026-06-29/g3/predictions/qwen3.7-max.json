@@ -1,0 +1,134 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g3",
+  "submitted_at": "2026-06-29T07:52:30.880813+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "DCG（红色方）在2-0领先的心理优势下，拿到了更具凝聚力的阵容——卡蜜尔+卡莉斯塔的强势对线组合与悟空的前期节奏远优于TLAW的希瓦纳打野，预计DCG在前期建立优势并终结比赛。",
+      "draft_analysis": "TLAW（蓝色方）的BP存在严重的节奏冲突：鳄鱼和卢锡安需要前期打出优势，但希瓦纳打野几乎无法提供前期gank压力（她在职业赛场极为罕见，刷野型打野在当前节奏下是巨大劣势），维克托同样是后期发育型。这意味着TLAW前15分钟几乎没有主动节奏点。反观DCG（红色方），卡蜜尔辅助+卡莉斯塔是极具侵略性的下路组合，能配合打野频繁越塔制造击杀；悟空提供稳定的团战开团与前期gank能力；贾克斯可以分推牵制；发条提供团战AOE和控制。DCG的阵容曲线清晰：前期通过卡蜜尔钩锁和悟空gank建立优势，中期用发条+悟空的团战combo收割。TLAW唯一的翻盘点是维克托和希瓦纳拖到后期团战，但面对卡蜜尔的定点控制和卡莉斯塔的前期压力，很难平稳过渡。",
+      "tempo_wincon": "DCG掌握节奏主动权。Pop9的悟空（近期6场50%胜率，但英雄本身gank能力强）可以在希瓦纳刷野的空窗期频繁入侵和gank，尤其是配合ShiauC的卡蜜尔在下路制造击杀。TLAW的致胜条件是拖到30分钟后维克托和希瓦纳成型打团战，但DCG不会给他们这个机会——卡莉斯塔+卡蜜尔的前期越塔、悟空的中期开团、贾克斯的边线分推会持续压缩TLAW的发育空间。DCG大概率在25-30分钟通过大龙逼团结束比赛。"
+    },
+    "win_prob": {
+      "blue": 0.35,
+      "red": 0.65
+    },
+    "predicted_winner": "red",
+    "expected_duration_min": 30.5,
+    "kills": {
+      "blue": 9,
+      "red": 16
+    },
+    "total_kills": 25,
+    "key_drafted_champions": [
+      {
+        "champion": "Shyvana",
+        "team": "blue",
+        "role": "jun",
+        "impact": "希瓦纳打野在职业赛场极为罕见，前期gank能力几乎为零，刷野周期长，无法为鳄鱼和卢锡安提供前期支援，是TLAW阵容最大的节奏漏洞"
+      },
+      {
+        "champion": "Camille",
+        "team": "red",
+        "role": "sup",
+        "impact": "卡蜜尔辅助提供极强的定点控制和越塔能力，钩锁+大招可以配合卡莉斯塔和悟空频繁制造击杀，是DCG前期节奏的核心发动机"
+      },
+      {
+        "champion": "Kalista",
+        "team": "red",
+        "role": "adc",
+        "impact": "卡莉斯塔前期对线强势，配合卡蜜尔的侵略性打法可以在下路快速建立优势，大招的拉扯效果也与悟空的开团形成联动"
+      },
+      {
+        "champion": "Wukong",
+        "team": "red",
+        "role": "jun",
+        "impact": "悟空的隐身接近和团战AOE击飞远优于对位希瓦纳，Pop9可以在前期自由入侵和gank，中期团战的开团能力也是DCG的核心致胜手段"
+      },
+      {
+        "champion": "Viktor",
+        "team": "blue",
+        "role": "mid",
+        "impact": "维克托是TLAW唯一的后期大核，但前期对线弱势且缺乏逃生能力，面对发条的稳定推线和悟空的gank很难安全发育到成型期"
+      }
+    ],
+    "sources": [
+      {
+        "query": "LoL patch 2026 MSI meta Shyvana jungle Viktor mid tier",
+        "accessed_at": "2026-06-29T07:50:00Z"
+      },
+      {
+        "query": "DCG vs TLAW MSI 2026 Play In results game 1 2",
+        "accessed_at": "2026-06-29T07:50:00Z"
+      },
+      {
+        "query": "LoL 2026 patch Shyvana jungle competitive viability Camille support",
+        "accessed_at": "2026-06-29T07:51:00Z"
+      },
+      {
+        "query": "DCG vs KC MSI 2026 Play In result score",
+        "accessed_at": "2026-06-29T07:51:00Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"DCG（红色方）在2-0领先的心理优势下，拿到了更具凝聚力的阵容——卡蜜尔+卡莉斯塔的强势对线组合与悟空的前期节奏远优于TLAW的希瓦纳打野，预计DCG在前期建立优势并终结比赛。\",\n    \"draft_analysis\": \"TLAW（蓝色方）的BP存在严重的节奏冲突：鳄鱼和卢锡安需要前期打出优势，但希瓦纳打野几乎无法提供前期gank压力（她在职业赛场极为罕见，刷野型打野在当前节奏下是巨大劣势），维克托同样是后期发育型。这意味着TLAW前15分钟几乎没有主动节奏点。反观DCG（红色方），卡蜜尔辅助+卡莉斯塔是极具侵略性的下路组合，能配合打野频繁越塔制造击杀；悟空提供稳定的团战开团与前期gank能力；贾克斯可以分推牵制；发条提供团战AOE和控制。DCG的阵容曲线清晰：前期通过卡蜜尔钩锁和悟空gank建立优势，中期用发条+悟空的团战combo收割。TLAW唯一的翻盘点是维克托和希瓦纳拖到后期团战，但面对卡蜜尔的定点控制和卡莉斯塔的前期压力，很难平稳过渡。\",\n    \"tempo_wincon\": \"DCG掌握节奏主动权。Pop9的悟空（近期6场50%胜率，但英雄本身gank能力强）可以在希瓦纳刷野的空窗期频繁入侵和gank，尤其是配合ShiauC的卡蜜尔在下路制造击杀。TLAW的致胜条件是拖到30分钟后维克托和希瓦纳成型打团战，但DCG不会给他们这个机会——卡莉斯塔+卡蜜尔的前期越塔、悟空的中期开团、贾克斯的边线分推会持续压缩TLAW的发育空间。DCG大概率在25-30分钟通过大龙逼团结束比赛。\"\n  },\n  \"win_prob\": {\n    \"blue\": 0.35,\n    \"red\": 0.65\n  },\n  \"predicted_winner\": \"red\",\n  \"expected_duration_min\": 30.5,\n  \"kills\": {\n    \"blue\": 9,\n    \"red\": 16\n  },\n  \"total_kills\": 25,\n  \"key_drafted_champions\": [\n    {\n      \"champion\": \"Shyvana\",\n      \"team\": \"blue\",\n      \"role\": \"jun\",\n      \"impact\": \"希瓦纳打野在职业赛场极为罕见，前期gank能力几乎为零，刷野周期长，无法为鳄鱼和卢锡安提供前期支援，是TLAW阵容最大的节奏漏洞\"\n    },\n    {\n      \"champion\": \"Camille\",\n      \"team\": \"red\",\n      \"role\": \"sup\",\n      \"impact\": \"卡蜜尔辅助提供极强的定点控制和越塔能力，钩锁+大招可以配合卡莉斯塔和悟空频繁制造击杀，是DCG前期节奏的核心发动机\"\n    },\n    {\n      \"champion\": \"Kalista\",\n      \"team\": \"red\",\n      \"role\": \"adc\",\n      \"impact\": \"卡莉斯塔前期对线强势，配合卡蜜尔的侵略性打法可以在下路快速建立优势，大招的拉扯效果也与悟空的开团形成联动\"\n    },\n    {\n      \"champion\": \"Wukong\",\n      \"team\": \"red\",\n      \"role\": \"jun\",\n      \"impact\": \"悟空的隐身接近和团战AOE击飞远优于对位希瓦纳，Pop9可以在前期自由入侵和gank，中期团战的开团能力也是DCG的核心致胜手段\"\n    },\n    {\n      \"champion\": \"Viktor\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"impact\": \"维克托是TLAW唯一的后期大核，但前期对线弱势且缺乏逃生能力，面对发条的稳定推线和悟空的gank很难安全发育到成型期\"\n    }\n  ],\n  \"sources\": [\n    {\n      \"query\": \"LoL patch 2026 MSI meta Shyvana jungle Viktor mid tier\",\n      \"accessed_at\": \"2026-06-29T07:50:00Z\"\n    },\n    {\n      \"query\": \"DCG vs TLAW MSI 2026 Play In results game 1 2\",\n      \"accessed_at\": \"2026-06-29T07:50:00Z\"\n    },\n    {\n      \"query\": \"LoL 2026 patch Shyvana jungle competitive viability Camille support\",\n      \"accessed_at\": \"2026-06-29T07:51:00Z\"\n    },\n    {\n      \"query\": \"DCG vs KC MSI 2026 Play In result score\",\n      \"accessed_at\": \"2026-06-29T07:51:00Z\"\n    }\n  ]\n}",
+  "thinking_text": "Let me analyze this match carefully.\n\nFirst, let me understand the situation:\n- This is MSI 2026, Play In Knockouts\n- Deep Cross Gaming (DCG) vs Team Liquid Alienware (TLAW)\n- Series score: DCG 2 - 0 TLAW (DCG leads 2-0, this is Game 3)\n- Wait, looking at the BP data more carefully...\n\nThe BP shows:\n- Blue side: TLAW Morgan (Renekton), TLAW Josedeodo (Shyvana), TLAW Quid (Viktor), TLAW Yeon (Lucian), TLAW CoreJJ (Renata Glasc)\n- Red side: DCG Flauren (Jax), DCG Pop9 (Wukong), DCG HongSuo (Orianna), DCG Feng (Kalista), DCG ShiauC (Camille)\n\nWait, this is confusing. The blue side has TLAW players and red side has DCG players. But the fixture says blue is DCG and red is TLAW. Let me re-read...\n\nActually looking at the BP picks:\n- Blue picks have \"TLAW\" prefix - so TLAW is on blue side\n- Red picks have \"DCG\" prefix - so DCG is on red side\n\nBut the fixture header says blue: DCG, red: TLAW. This might be a data inconsistency, or the sides swapped for game 3. Let me just go with what the BP says:\n- Blue side = TLAW (Team Liquid Alienware)\n- Red side = DCG (Deep Cross Gaming)\n\nWait, but the series score says blue (DCG) leads 2-0. So DCG has won games 1 and 2. Now in game 3, TLAW is on blue side and DCG is on red side.\n\nAlso notable: DCG's mid laner in this game is \"HongSuo\" not \"XiaoXiang\" from the roster. This could be a sub or the roster data might be slightly off.\n\nNow let me analyze the BP:\n\n**TLAW (Blue):**\n- Top: Renekton (Morgan)\n- Jun: Shyvana (Josedeodo)\n- Mid: Viktor (Quid)\n- ADC: Lucian (Yeon)\n- Sup: Renata Glasc (CoreJJ)\n\n**DCG (Red):**\n- Top: Jax (Flauren)\n- Jun: Wukong (Pop9)\n- Mid: Orianna (HongSuo)\n- ADC: Kalista (Feng)\n- Sup: Camille (ShiauC)\n\nLet me think about this draft:\n\nTLAW's composition:\n- Renekton: Early game lane bully, strong in skirmishes, falls off late\n- Shyvana: Farm-heavy jungler, strong late game with dragon stacks, weak early ganks\n- Viktor: Late game hyper-carry, weak early, strong wave clear\n- Lucian: Strong early-mid game ADC, good burst\n- Renata Glasc: Enchanter with unique utility (bailout, hostile takeover ult)\n\nThis is a very late-game oriented comp with Shyvana + Viktor, but Renekton and Lucian provide early game pressure. The issue is Shyvana has very weak early gank pressure, which means Renekton needs to win lane on his own.\n\nDCG's composition:\n- Jax: Split push monster, strong duelist, scales well\n- Wukong: Strong teamfight jungler with double knockup, good engage\n- Orianna: Control mage, strong teamfight, good wave clear\n- Kalista: Early game lane bully, strong with engage supports\n- Camille (support): Very unusual pick! Could be a flex/meme pick or specific strategy. Camille support would be very aggressive with hookshot engages and true damage.\n\nWait, Camille support is extremely unusual. Let me think about this... Camille as support would have very poor gold income, making her ultimate (which scales with AD) less impactful. But her E (hookshot) + Q (true damage) could be useful for early roams and picks. This seems like a very risky/unconventional pick.\n\nActually, looking at this more carefully - Camille support could work as an aggressive engage pick with Kalista (who can dash to allies with her E passive... wait, that's not right. Kalista's W passive lets her dash to allies she's bound to with her W). Actually Kalista's ultimate (Fate's Call) knocks up her bound ally and lets them dash - this synergizes with engage supports.\n\nLet me search for current meta information about these picks.\n\nKey matchups:\n1. Renekton vs Jax: Jax generally wins this matchup after level 6, but Renekton has early pressure. Jax scales much better.\n2. Shyvana vs Wukong: Wukong has much better early gank pressure. Shyvana needs to farm.\n3. Viktor vs Orianna: Both are control mages. Orianna has better teamfight, Viktor scales better individually.\n4. Lucian vs Kalista: Both are early-game ADCs. Kalista has more mobility, Lucian has more burst.\n5. Renata Glasc vs Camille: Very unusual matchup. Renata provides utility, Camille provides engage/assassination.\n\nLet me search for some meta information.\nLet me analyze the information I've gathered:\n\n1. **Series context**: DCG leads 2-0 against TLAW in this MSI Play-In Knockout BO5. This is Game 3.\n\n2. **From the search results**: \n   - T1 beat TLAW 3-0 in the first match of the Play-In\n   - KC beat DCG... wait, let me re-read. The search says \"KC vs DCG\" was the other match on day 1. But the current match is DCG vs TLAW. So it seems like this is a losers' bracket match or a different match.\n   - Actually, looking more carefully: The Play-In has 4 teams: T1, KC, DCG, TLAW in double elimination. T1 beat TLAW 3-0, and KC played DCG. Now DCG is playing TLAW - this must be the losers' bracket match (since TLAW lost to T1 and went to losers' bracket).\n   - Wait, but DCG leads 2-0. If DCG won against KC, they'd be in winners' bracket. If DCG lost to KC, they'd be in losers' bracket playing TLAW.\n   - Actually, the series score shows DCG 2-0 TLAW. This is Game 3.\n\n3. **BP Analysis for Game 3**:\n\n**Blue side (labeled as TLAW players but on blue side):**\nWait, let me re-read the BP carefully. The picks show:\n\nBlue:\n- Top: TLAW Morgan - Renekton\n- Jun: TLAW Josedeodo - Shyvana\n- Mid: TLAW Quid - Viktor\n- ADC: TLAW Yeon - Lucian\n- Sup: TLAW CoreJJ - Renata Glasc\n\nRed:\n- Top: DCG Flauren - Jax\n- Jun: DCG Pop9 - Wukong\n- Mid: DCG HongSuo - Orianna\n- ADC: DCG Feng - Kalista\n- Sup: DCG ShiauC - Camille\n\nWait, this is confusing. The blue side has TLAW players and the red side has DCG players. But the fixture says blue = DCG, red = TLAW. Let me re-read...\n\nThe fixture_header says:\n- blue: DCG\n- red: Team Liquid\n\nBut the BP picks show:\n- blue picks: TLAW players (Morgan, Josedeodo, Quid, Yeon, CoreJJ)\n- red picks: DCG players (Flauren, Pop9, HongSuo, Feng, ShiauC)\n\nThis seems like the BP data has the sides swapped from the fixture header, or the teams swapped sides. In any case, I need to analyze based on who's playing what.\n\nActually wait - looking at the series_score: blue = DCG with 2 wins, red = TLAW with 0 wins. But in the BP, blue side has TLAW players. This could mean TLAW is on blue side for this game (game 3), while DCG is on red side. The fixture header might just be the nominal designation.\n\nLet me just analyze based on the actual picks:\n\n**TLAW (Blue side this game):**\n- Top: Morgan - Renekton\n- Jungle: Josedeodo - Shyvana\n- Mid: Quid - Viktor\n- ADC: Yeon - Lucian\n- Support: CoreJJ - Renata Glasc\n\n**DCG (Red side this game):**\n- Top: Flauren - Jax\n- Jungle: Pop9 - Wukong\n- Mid: HongSuo - Orianna (note: this is a different player from XiaoXiang who was in the roster data)\n- ADC: Feng - Kalista\n- Support: ShiauC - Camille\n\nNow let me analyze the draft:\n\n**TLAW's composition:**\n- Renekton top: Early game lane bully, strong in skirmishes, falls off late\n- Shyvana jungle: Farm-heavy jungler, strong late game with dragon stack mechanic, weak early ganks\n- Viktor mid: Late game hyper-carry, weak early, strong wave clear and teamfight\n- Lucian ADC: Strong early-mid game, good lane bully with support synergy\n- Renata Glasc support: Enchanter with anti-carry ultimate, good against dive comps\n\nThis is a very late-game oriented comp with Shyvana + Viktor, but Lucian + Renekton provide early game pressure. The issue is Shyvana is a weak early jungler which could leave lanes vulnerable.\n\n**DCG's composition:**\n- Jax top: Split push monster, strong duelist, scales well\n- Wukong jungle: Strong teamfight initiator, good ganks, mobile\n- Orianna mid: Strong teamfight, good wave clear, versatile\n- Kalista ADC: Strong lane with support synergy, good for picks with Rend\n- Camille support: Unusual pick for support, strong pick potential with ult, split push threat\n\nWait, Camille support is very unusual. Let me think about this... Camille as a support would be a pick-oriented champion with strong engage from her E and ultimate. She's not a traditional support but could work in a dive/pick composition.\n\nActually, looking at the DCG comp more carefully: Jax + Wukong + Orianna + Kalista + Camille. This is a very dive/pick oriented composition with multiple mobile champions who can isolate targets. Wukong and Camille both have strong engage, and Kalista's ult synergizes with engage supports (though Camille isn't a traditional engage support).\n\n**Key matchups:**\n1. **Top: Renekton vs Jax** - Renekton has early advantage but Jax scales better. If Jax survives early, he wins later.\n2. **Jungle: Shyvana vs Wukong** - Wukong has much better early ganks and teamfight presence. Shyvana needs to farm and scale. This is a significant advantage for DCG in the early-mid game.\n3. **Mid: Viktor vs Orianna** - Both are late-game mages. Orianna has better early game and teamfight utility. Viktor scales harder but is more vulnerable early.\n4. **Bot: Lucian/Renata vs Kalista/Camille** - Lucian is strong early. Kalista/Camille is an unusual lane but has pick potential.\n5. **Team composition**: DCG has better early-mid game jungle pressure with Wukong vs Shyvana. TLAW's comp is very farm-heavy with Shyvana needing to stack dragons.\n\n**From the T1 vs TLAW match info:**\n- TLAW struggled against T1's early pressure\n- Josedeodo had 0% kill participation in the T1 series\n- Morgan was TLAW's only bright spot on top lane\n- Quid couldn't threaten Faker mid\n\n**DCG's strengths:**\n- Pop9 is their tempo engine (described as \"节奏引擎\")\n- Flauren has strong carry potential\n- They're coming from a lower league but have been performing well\n\n**Analysis:**\n- DCG leads 2-0, massive momentum and psychological advantage\n- TLAW just got 3-0'd by T1 and is now down 0-2 in this series\n- DCG's draft with Wukong jungle gives them early tempo advantage over TLAW's Shyvana\n- Shyvana is a risky pick in competitive play - she's farm heavy and gives up early map control\n- DCG's Camille support is unusual but adds pick potential\n- TLAW's comp needs time to scale (Viktor + Shyvana) but Lucian/Renekton provide early pressure\n\nGiven:\n1. DCG's 2-0 lead and momentum\n2. TLAW's poor form (just got 3-0'd by T1, Josedeodo struggling)\n3. DCG's draft advantage with Wukong over Shyvana in early tempo\n4. DCG's Pop9 being a strong tempo player\n\nI think DCG is favored to win this game. However, TLAW's Renekton + Lucian early game could cause problems if they snowball before DCG's Jax and Orianna come online.\n\nLet me also search for more specific info about the current meta and these champion picks.\nLet me analyze the situation carefully.\n\n**Series context:**\n- DCG leads 2-0 over TLAW in this BO5 (Play-In Knockouts at MSI 2026)\n- This is Game 3\n- From the search results, I can see that T1 beat TLAW 3-0 in the first match of Play-In, and KC beat DCG 3-0... wait, let me re-read.\n\nActually, looking more carefully at the search results:\n- \"T1和KC在各自的首场比赛中均以3-0横扫了对手\" - T1 and KC both swept their opponents 3-0\n- T1 vs TLAW: T1 won 3-0\n- KC vs DCG: KC won 3-0\n\nWait, but the series score shows DCG leading TLAW 2-0. So this must be a different match - perhaps the losers' bracket match? In a double elimination format, after T1 beat TLAW 3-0 and KC beat DCG 3-0, TLAW and DCG would face each other in the losers' bracket.\n\nSo DCG vs TLAW is the losers' match, and DCG is already up 2-0. This is Game 3.\n\n**BP Analysis:**\n\nWait, I notice something odd about the BP data. The \"blue\" side picks list shows TLAW players (Morgan, Josedeodo, Quid, Yeon, CoreJJ), and the \"red\" side picks list shows DCG players (Flauren, Pop9, HongSuo, Feng, ShiauC). But the fixture says blue = DCG, red = TLAW. Let me re-read...\n\nActually looking at the BP:\n- Blue side: TLAW players (Morgan top Renekton, Josedeodo jun Shyvana, Quid mid Viktor, Yeon adc Lucian, CoreJJ sup Renata Glasc)\n- Red side: DCG players (Flauren top Jax, Pop9 jun Wukong, HongSuo mid Orianna, Feng adc Kalista, ShiauC sup Camille)\n\nWait, the blue/red in the BP seems swapped from the fixture header. The fixture says blue=DCG, red=TLAW. But the BP picks show blue=TLAW players, red=DCG players. This is confusing but I'll work with the actual player-champion assignments.\n\nLet me note: DCG mid player is \"HongSuo\" not \"XiaoXiang\" - this might be a sub or the context pack had different info.\n\n**TLAW (Blue side) composition:**\n- Top: Morgan - Renekton\n- Jungle: Josedeodo - Shyvana\n- Mid: Quid - Viktor\n- ADC: Yeon - Lucian\n- Support: CoreJJ - Renata Glasc\n\n**DCG (Red side) composition:**\n- Top: Flauren - Jax\n- Jungle: Pop9 - Wukong\n- Mid: HongSuo - Orianna\n- ADC: Feng - Kalista\n- Support: ShiauC - Camille\n\nNow let me analyze:\n\n**TLAW composition analysis:**\n- Renekton top: Early game bully, good lane presence, falls off late\n- Shyvana jungle: This is very unusual in competitive play. Shyvana is typically not a competitive jungle pick. She's a farm-heavy jungler with weak early ganks but strong late-game teamfighting with her dragon form. This is a questionable pick.\n- Viktor mid: Late-game hypercarry, weak early, strong wave clear and teamfight\n- Lucian adc: Early-mid game strong, good lane bully with the right support\n- Renata Glasc support: Good engage/disengage, anti-assassin, good with aggressive ADCs\n\nTLAW's comp has a weird curve: Renekton and Lucian want to play early, but Viktor and Shyvana want to play late. Shyvana jungle is particularly problematic as she provides very little early pressure and gank threat.\n\n**DCG composition analysis:**\n- Jax top: Split push monster, good duelist, scales well\n- Wukong jungle: Good engage, teamfight, decent early ganks with W stealth\n- Orianna mid: Safe lane, strong teamfight, good wave clear\n- Kalista adc: Very strong early game, good with engage supports, can snowball\n- Camille support: Very aggressive pick, good for early dives and picks, strong skirmishing\n\nDCG's comp is more cohesive: Kalista + Camille is a very aggressive lane that can get early picks. Wukong provides strong engage for teamfights. Jax can split push and is a strong 1v1. Orianna provides teamfight damage and utility.\n\n**Key matchups:**\n1. Top: Jax vs Renekton - Renekton has early advantage but Jax outscales and can win after level 6+items. Jax is better for split push.\n2. Jungle: Wukong vs Shyvana - Wukong has much better early gank potential. Shyvana is weak early and needs to farm. This gives Pop9 a significant early advantage.\n3. Mid: Orianna vs Viktor - Both are late-game carries. Orianna has slightly better early game and teamfight utility. Viktor is weaker early but has good wave clear.\n4. Bot: Kalista/Camille vs Lucian/Renata - Kalista/Camille is a very aggressive lane with strong pick potential. Lucian/Renata can fight back but Camille's hookshot and ultimate make her very dangerous for early dives.\n\n**Overall assessment:**\n- DCG is already up 2-0, so they have momentum and psychological advantage\n- TLAW's Shyvana jungle pick is very questionable - it provides almost no early game pressure\n- DCG's Kalista/Camille bot lane is very strong for early picks\n- Wukong over Shyvana gives DCG a significant jungle advantage in early-mid game\n- DCG's composition is more cohesive with clear win conditions (early picks with Camille/Kalista, teamfight with Wukong/Orianna, split push with Jax)\n- TLAW's composition has conflicting curves - Renekton/Lucian want early, Viktor/Shyvana want late\n\nHowever, TLAW has better individual players overall (Morgan, Quid, Yeon, CoreJJ are all experienced LCS/international players). But DCG has been playing well and is up 2-0.\n\nGiven:\n- DCG's 2-0 lead\n- TLAW's questionable Shyvana pick\n- DCG's more cohesive early-game composition\n- Wukong > Shyvana in early-mid game impact\n- Kalista/Camille strong lane\n\nI'd give DCG a significant advantage in this game. Let me estimate:\n- Win probability: DCG (red in BP but actually the team I'm analyzing) ~60%, TLAW ~40%\n\nWait, I need to be careful about which is \"blue\" and \"red\" in the output. The fixture says blue=DCG, red=TLAW. But the BP shows blue=TLAW players, red=DCG players. \n\nLooking at the output format, it says `win_prob: { blue, red }` and `predicted_winner: \"blue\"|\"red\"`. I should follow the BP's designation since that's what's given in the picks data.\n\nActually wait - re-reading the BP data more carefully:\n\n```\n\"picks\": {\n    \"blue\": [\n      { \"role\": \"top\", \"player\": \"TLAW Morgan\", \"champion\": \"Renekton\" },\n      ...\n    ],\n    \"red\": [\n      { \"role\": \"top\", \"player\": \"DCG Flauren\", \"champion\": \"Jax\" },\n      ...\n    ]\n}\n```\n\nSo in the BP, blue = TLAW, red = DCG. But in the fixture header, blue = DCG, red = TLAW. This is contradictory.\n\nFor the output, I think I should follow the BP data since that's the actual game data. So blue = TLAW, red = DCG.\n\nActually, looking at the series_score: series_score_blue = 2 (DCG), series_score_red = 0 (TLAW). And the fixture says blue = DCG, red = TLAW.\n\nBut the BP has blue = TLAW players, red = DCG players. This means in Game 3, TLAW is on blue side and DCG is on red side (sides can switch between games).\n\nSo for this specific game:\n- Blue side = TLAW\n- Red side = DCG\n\nMy prediction:\n- DCG (red) is favored due to better composition and momentum\n- Win prob: blue (TLAW) ~0.38, red (DCG) ~0.62\n- Predicted winner: red (DCG)\n\nExpected duration: With DCG's early-game focused comp (Kalista/Camille/Wukong), they should be able to snowball. But TLAW has Viktor and Shyvana who want to extend. I'd expect around 30-33 minutes.\n\nKills: DCG's comp is more kill-oriented (Camille picks, Wukong engage, Kalista skirmishing). TLAW's comp is less aggressive early. I'd expect DCG to get more kills. Maybe 15-10 or similar.\n\nLet me finalize:\n- Duration: ~31 minutes\n- Kills: blue (TLAW) 10, red (DCG) 16, total 26\n\nKey drafted champions:\n1. Shyvana (TLAW, jungle) - Very unusual pick, weak early game, questionable in competitive\n2. Camille (DCG, support) - Aggressive pick for early picks and dives\n3. Kalista (DCG, ADC) - Strong early game ADC, synergizes with Camille\n4. Wukong (DCG, jungle) - Strong engage, much better early than Shyvana\n5. Viktor (TLAW, mid) - Late game carry but weak early\n\nNow let me construct the JSON output.",
+  "sources": [
+    {
+      "query": "LoL patch 2026 MSI meta Shyvana jungle Viktor mid tier",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:45Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Shyvana jungle Viktor mid tier",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:47Z"
+    },
+    {
+      "query": "DCG vs TLAW MSI 2026 Play In results game 1 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:50:47Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Shyvana jungle Viktor mid tier",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "DCG vs TLAW MSI 2026 Play In results game 1 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "LoL 2026 patch Shyvana jungle competitive viability Camille support",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:26Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Shyvana jungle Viktor mid tier",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:28Z"
+    },
+    {
+      "query": "DCG vs TLAW MSI 2026 Play In results game 1 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:28Z"
+    },
+    {
+      "query": "LoL 2026 patch Shyvana jungle competitive viability Camille support",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:28Z"
+    },
+    {
+      "query": "DCG vs KC MSI 2026 Play In result score",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T07:51:28Z"
+    }
+  ],
+  "input_tokens": 53175,
+  "output_tokens": 6596,
+  "tool_calls": 4,
+  "cost_usd": 0.127294,
+  "wall_seconds": 133.22,
+  "error": null
+}

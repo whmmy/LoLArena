@@ -1,8 +1,8 @@
 {
-  "status": "running",
-  "winner_side": "red",
-  "blue_score": 0,
+  "status": "finished",
+  "winner_side": "blue",
+  "blue_score": 3,
   "red_score": 0,
-  "series_length": 0,
-  "series_score": "0-0"
+  "series_length": 3,
+  "series_score": "3-0"
 }

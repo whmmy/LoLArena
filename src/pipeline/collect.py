@@ -600,6 +600,72 @@ def fetch_game_bp(match: dict, position: int, client: CitoClient,
     return bp
 
 
+# ----------------------------- version meta (single game) -----------------------------
+
+def collect_version_meta(bp: dict, *, patch_version: str | None = None) -> dict:
+    """Pre-collect a one-shot version/champion meta snapshot via web_search.
+
+    Single-game prediction runs WITHOUT per-model web_search (to collapse each
+    model to a single inference pass). But models have a training cutoff and may
+    not know recent champions or the current patch's strength. So we run a small
+    number of shared searches ONCE — for the current patch and the champions
+    actually drafted this game — and inject the digest into every model's prompt.
+
+    Returns a dict shaped:
+        {"patch": str|None, "queries": [...], "digest": "<text block>"}
+    Every failure degrades gracefully (empty digest) so the run never crashes.
+    """
+    from ..adapters.websearch import WebSearchTool, format_results_for_model
+
+    # gather champion names actually picked this game
+    champs: list[str] = []
+    for side in ("blue", "red"):
+        for p in (bp.get("picks") or {}).get(side, []):
+            c = (p.get("champion") or "").strip()
+            if c and c not in champs:
+                champs.append(c)
+
+    tool = WebSearchTool()
+    queries: list[str] = []
+    blocks: list[str] = []
+    resolved_patch = patch_version
+
+    # 1) current patch version + meta overview (only if we don't already know it)
+    if not resolved_patch:
+        queries.append("League of Legends current patch version 2026")
+    else:
+        queries.append(f"LoL patch {resolved_patch} meta tier list strongest champions")
+
+    # 2) up to two targeted lookups for the drafted champions' strength / matchups.
+    #    Batch champions into one query to stay lean (single-game should be fast).
+    if champs:
+        # focus on the carries / playmakers most likely to decide the game
+        focus = champs[:6]
+        queries.append(f"LoL 2026 patch meta {', '.join(focus)} strength win rate")
+
+    for q in queries:
+        try:
+            results = tool(q, count=6, recency="oneMonth")
+            blocks.append(format_results_for_model(results, q))
+        except Exception:  # noqa: BLE001
+            blocks.append(f"[web_search '{q}']: lookup failed; rely on model knowledge.")
+
+    # try to extract a patch number from the first block's text
+    if not resolved_patch and blocks:
+        import re
+        m = re.search(r"\b(\d{2}\.\d{1,2})\b", blocks[0])
+        if m:
+            resolved_patch = m.group(1)
+
+    digest = "\n\n".join(blocks) if blocks else ""
+    return {
+        "patch": resolved_patch,
+        "drafted_champions": champs,
+        "queries": queries,
+        "digest": digest,
+    }
+
+
 # ----------------------------- helpers -----------------------------
 
 def _now() -> str:

@@ -38,7 +38,7 @@ class OpenAICompatRunner(BaseRunner):
             "messages": messages,
             "temperature": 0.3,
         }
-        if allow_tools:
+        if allow_tools and self.search is not None:
             kwargs["tools"] = [ws.TOOL_OPENAI]
             kwargs["tool_choice"] = "auto"
         if self.cfg.get("max_tokens"):

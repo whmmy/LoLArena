@@ -2,13 +2,16 @@
   "id": 115846993721104369,
   "name": "Deep Cross Gaming vs Team Liquid Alienware",
   "match_type": null,
-  "status": "running",
+  "status": "finished",
   "number_of_games": 5,
   "begin_at": "2026-06-29T03:00:00.000Z",
   "scheduled_at": "2026-06-29T03:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "dcg",
+  "winner": {
+    "id": "dcg",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
@@ -34,7 +37,7 @@
   "results": [
     {
       "team_id": "dcg",
-      "score": 1
+      "score": 3
     },
     {
       "team_id": "team-liquid",
@@ -62,18 +65,18 @@
       "winning_side": "",
       "match_id": 115846993721169906,
       "blue_team": {
-        "id": "dcg",
-        "name": "Deep Cross Gaming",
-        "acronym": "DCG",
-        "slug": "dcg",
-        "image_url": "https://static.lolesports.com/teams/1644502702164_DeepCrossGaming_W_1.png"
-      },
-      "red_team": {
         "id": "team-liquid",
         "name": "Team Liquid Alienware",
         "acronym": "TLAW",
         "slug": "team-liquid",
         "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+      },
+      "red_team": {
+        "id": "deep-cross-gaming",
+        "name": "Relove Deep Cross Gaming",
+        "acronym": "DCG",
+        "slug": "deep-cross-gaming",
+        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png"
       },
       "patch": "16.13.790.6961",
       "first_objectives": {
@@ -116,10 +119,43 @@
         "firstBaron": null,
         "firstHerald": null
       }
+    },
+    {
+      "id": "lol-game-115846993721235444",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115846993721235444,
+      "blue_team": {
+        "id": "team-liquid",
+        "name": "Team Liquid Alienware",
+        "acronym": "TLAW",
+        "slug": "team-liquid",
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+      },
+      "red_team": {
+        "id": "deep-cross-gaming",
+        "name": "Relove Deep Cross Gaming",
+        "acronym": "DCG",
+        "slug": "deep-cross-gaming",
+        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png"
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
     }
   ],
   "videogame_version": {},
   "block_name": "Play In Knockouts",
   "round": null,
-  "vod_url": "https://www.youtube.com/watch?v=CuUIAO7zJr0"
+  "vod_url": "https://www.twitch.tv/videos/2807883805"
 }

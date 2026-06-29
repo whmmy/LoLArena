@@ -56,7 +56,7 @@ class GeminiRunner(BaseRunner):
             "max_output_tokens": self.cfg.get("max_tokens", 8192),
             "automatic_function_calling": types.AutomaticFunctionCallingConfig(disable=True),
         }
-        if allow_tools:
+        if allow_tools and self.search is not None:
             kwargs["tools"] = [types.Tool(function_declarations=[ws.TOOL_GEMINI])]
         return types.GenerateContentConfig(
             **kwargs,

@@ -1,0 +1,76 @@
+{
+  "match_id": 115846993721104369,
+  "game_id": "lol-game-115846993721235444",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "TLAW Morgan",
+        "champion": "Renekton",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TLAW Josedeodo",
+        "champion": "Shyvana",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TLAW Quid",
+        "champion": "Viktor",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TLAW Yeon",
+        "champion": "Lucian",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TLAW CoreJJ",
+        "champion": "Renata Glasc",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "DCG Flauren",
+        "champion": "Jax",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "DCG Pop9",
+        "champion": "Wukong",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "DCG HongSuo",
+        "champion": "Orianna",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "DCG Feng ",
+        "champion": "Kalista",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "DCG ShiauC",
+        "champion": "Camille",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-06-29T10:54:10Z"
+}
