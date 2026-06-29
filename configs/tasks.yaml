@@ -88,17 +88,24 @@ game:
       weight_in_layer: 1.00
       metric: mae
       output_field: expected_duration_min
+      scale: 8            # |error| (min) that scores 0. Default max(2,truth) is too
+                          # tight (~2min -> 0) and rewards risk-free convergence to the
+                          # league mean. 8 lets a well-reasoned BP-specific call beat a
+                          # generic "32 min" while still punishing big misses.
       notes: predicted vs actual game length in minutes.
     - id: kills_blue_mae
       layer: G3_kills
       weight_in_layer: 0.30
       metric: mae
       output_field: kills.blue
+      scale: 8            # |error| (kills) that scores 0. Tighter than the default
+                          # max(2,truth)≈15 so a 7-kill miss actually costs something.
     - id: kills_red_mae
       layer: G3_kills
       weight_in_layer: 0.30
       metric: mae
       output_field: kills.red
+      scale: 8
     - id: total_kills_smape
       layer: G3_kills
       weight_in_layer: 0.40

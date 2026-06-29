@@ -43,6 +43,14 @@
 
 据此判断：各选手拿到的是招牌英雄还是被迫选、所选英雄在当前版本的强度、对位优劣、阵容的强势期与节奏曲线、小龙/大龙争夺能力，进而推断胜负、时长与击杀。
 
+### ⚠ 数值预测必须以历史数据为锚点（关键）
+
+**不要凭"职业赛一般 32 分钟、25 个人头"的模糊印象拍脑袋**——基线数据里已经给了两队硬统计，**先锚定再修正**，这样各局才会因 BP/态势不同而真正分化：
+
+- **击杀锚点**：`team_objectives.{side}.objective_control.kills` 的 `avg_per_game` 就是该队近 N 场真实场均人头（含 `opponent_avg_per_game` 即对手场均）。先把 `kills.{side}` 钉在该队场均人头附近，再按本局 BP 修正——前期打架阵容 / 高爆发组合 `+2~4`，运营拉扯 / 后期保排阵容 `-2~4`，滚雪球碾压局胜方人头可更高、败方被压低。务必让两局不同 BP 给出**不同**的人头分布。
+- **时长锚点**：`team_series_history.{side}.avg_game_duration_min` 是该队近 25 场系列赛的真实场均时长（若缺失，再用 `team_objectives` 的塔/龙节奏推断）。把 `expected_duration_min` 钉在两队场均时长的均值附近，再按本局 BP 修正——快节奏推进 / 早早结束阵容 `-2~4` 分钟，大后期发育 / 双 APC 保排阵容 `+2~5` 分钟。**严禁三局都给同一个 32.x**。
+- **修正要写进推理**：在 `tempo_wincon` 里点明"本局比场均长/短几分钟，因为……（具体阵容理由）"，让数值有据可查。
+
 ---
 
 ## 输出格式（只输出一个 JSON，不要 markdown 围栏）
@@ -52,7 +60,7 @@
   "reasoning": {
     "overall": "（≥40 字）本局胜负倾向与核心理由",
     "draft_analysis": "（≥120 字）双方 BP 强弱：阵容曲线、对位克制、团战/分推/前期能力",
-    "tempo_wincon": "（≥80 字）哪边掌握节奏、各自的致胜条件（前期滚雪球 / 后期团战 / 分推等）"
+    "tempo_wincon": "（≥80 字）哪边掌握节奏、各自的致胜条件（前期滚雪球 / 后期团战 / 分推等），并说明时长/人头相对历史场均如何修正及理由"
   },
   "win_prob": { "blue": 0.6, "red": 0.4 },
   "predicted_winner": "blue",
@@ -69,10 +77,10 @@
 ### 字段说明
 
 - `win_prob`：blue+red=1.0。`predicted_winner` 与更高一方一致。
-- `expected_duration_min`：本局预计时长（分钟，一位小数），LoL 职业赛通常 28~40 分钟。
-- `kills.blue` / `kills.red`：双方预计人头数（整数）。
+- `expected_duration_min`：本局预计时长（分钟，一位小数）。**以 `team_series_history` 的场均时长为锚点**，再按 BP 修正；不同阵容应有明显差异，不要每局都给同一个数。
+- `kills.blue` / `kills.red`：双方预计人头数（整数）。**以 `team_objectives.kills.avg_per_game` 为锚点**，再按 BP 修正；败方在碾压局通常被压到个位数。
 - `total_kills`：两队人头之和，必须等于 blue+red。
 - `key_drafted_champions`：决定本局走势的 2~5 个 pick（来自 BP）。
 - `sources`：本局不提供 web_search，直接填空数组 `[]` 即可。
 
-记住：直接基于上方已给的基线数据与 BP 推理、输出 JSON。只输出 JSON 本身。
+记住：**先锚定历史场均、再按本局 BP 修正**，然后输出 JSON。只输出 JSON 本身。

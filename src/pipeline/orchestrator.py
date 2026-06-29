@@ -211,12 +211,13 @@ def _last_game_summary(match: dict, position: int) -> dict | None:
 # analysis. Picked selectively to keep the prompt lean while letting models
 # reason over each player's form / champion pool without re-searching.
 _GAME_CONTEXT_BLOCKS = (
-    "fixture_header",   # patch version / league / BoX
-    "rosters",          # player -> role mapping (anchor BP picks to people)
-    "player_form",      # recent KDA / cs / dmg per player
-    "player_champion_pool",  # is a drafted champ this player's comfort pick?
-    "hero_pools",       # per-side champion pools (BP targeting)
-    "team_objectives",  # dragon/baron/tower/first-blood control -> duration+kills
+    "fixture_header",          # patch version / league / BoX
+    "rosters",                 # player -> role mapping (anchor BP picks to people)
+    "player_form",             # recent KDA / cs / dmg per player
+    "player_champion_pool",    # is a drafted champ this player's comfort pick?
+    "hero_pools",              # per-side champion pools (BP targeting)
+    "team_objectives",         # dragon/baron/tower/first-blood + kills avg -> kills anchor
+    "team_series_history",     # avg game duration + series pacing -> duration anchor
 )
 
 

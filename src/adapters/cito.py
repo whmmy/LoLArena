@@ -544,6 +544,115 @@ class CitoClient:
         return self.get(f"/lol/teams/{slug}/h2h/{opponent_slug}",
                         refresh=refresh, ttl_seconds=1800)
 
+    def team_series_history(self, slug: str, *, last: int = 25,
+                            league: str | None = None,
+                            refresh: bool = False) -> dict:
+        """Recent SERIES history for a team — the only place we can get per-game
+        `duration` (seconds) and the actual series scoreline.
+
+        `/teams/{slug}/objectives` has kills/gold/objectives but NO duration, so
+        duration prediction had no anchor. This endpoint returns completed series
+        with games[] carrying `duration` (seconds, may be null for very recent
+        matches not yet back-filled) plus team1.score/team2.score (the series
+        scoreline) — giving us BOTH the duration anchor and the sweep/series-length
+        anchor for match-level scoring.
+
+        Normalised shape (fault-tolerant; never raises):
+            {
+              "available": bool,
+              "series": [ {
+                  "date, opponent_slug, side, result(won/lost),
+                  team_score, opponent_score, series_length,
+                  games: [ {game_number, duration_min, won} ]   # duration_min nullable
+              }, ... ],
+              # aggregated anchors the prompt can cite directly:
+              "avg_game_duration_min": float | None,
+              "avg_series_length": float | None,
+              "sweep_rate": float | None,        # fraction of series won/lost 2-0 / 3-0
+              "swept_rate": float | None,        # fraction this team was swept (lost 0-2/0-3)
+            }
+        """
+        params: dict[str, Any] = {"last": last}
+        if league:
+            params["league"] = league
+        try:
+            raw = self.get(f"/lol/teams/{slug}/matches", params,
+                           refresh=refresh, ttl_seconds=3600)
+        except (CitoError, Exception):
+            return {"available": False, "series": []}
+        if not isinstance(raw, dict):
+            return {"available": False, "series": []}
+
+        is_requested = lambda team_obj: bool(team_obj.get("isRequested"))
+        series: list[dict] = []
+        durations: list[float] = []
+        series_lens: list[int] = []
+        sweeps = 0           # this team won 2-0 / 3-0 / etc.
+        swept = 0            # this team lost 0-2 / 0-3 / etc.
+        decided = 0
+        for m in raw.get("matches") or []:
+            if m.get("state") != "completed":
+                continue
+            t1, t2 = m.get("team1") or {}, m.get("team2") or {}
+            # identify which side is `slug` (this team). Cito marks the requested
+            # team with isRequested=true; else match by slug.
+            if is_requested(t1) or t1.get("slug") == slug:
+                us, them = t1, t2
+                side = "blue"
+            elif is_requested(t2) or t2.get("slug") == slug:
+                us, them = t2, t1
+                side = "red"
+            else:
+                continue
+            our_score = int(us.get("score") or 0)
+            opp_score = int(them.get("score") or 0)
+            won = our_score > opp_score
+            slen = our_score + opp_score
+            games: list[dict] = []
+            for g in m.get("games") or []:
+                dur = g.get("duration")
+                dur_min = round(dur / 60.0, 1) if isinstance(dur, (int, float)) and dur > 0 else None
+                if dur_min:
+                    durations.append(dur_min)
+                g_winner = g.get("winnerSlug")
+                games.append({
+                    "game_number": g.get("gameNumber"),
+                    "duration_min": dur_min,
+                    "won": (g_winner == slug) if g_winner else None,
+                })
+            series.append({
+                "date": (m.get("startTime") or "")[:10],
+                "league": m.get("tournamentName") or m.get("tournamentId"),
+                "opponent_slug": them.get("slug"),
+                "side": side,
+                "result": "win" if won else "loss",
+                "team_score": our_score,
+                "opponent_score": opp_score,
+                "series_length": slen,
+                "games": games,
+            })
+            if slen:
+                series_lens.append(slen)
+                decided += 1
+                # sweep: winner took it without dropping a game
+                if our_score > 0 and opp_score == 0:
+                    sweeps += 1
+                elif opp_score > 0 and our_score == 0:
+                    swept += 1
+
+        avg_dur = round(sum(durations) / len(durations), 1) if durations else None
+        avg_len = round(sum(series_lens) / len(series_lens), 1) if series_lens else None
+        return {
+            "available": bool(series),
+            "series_count": len(series),
+            "games_with_duration": len(durations),
+            "avg_game_duration_min": avg_dur,
+            "avg_series_length": avg_len,
+            "sweep_rate": round(sweeps / decided, 3) if decided else None,
+            "swept_rate": round(swept / decided, 3) if decided else None,
+            "recent_series": series,
+        }
+
     # ---------- standings ----------
     def league_standings(self, league_id: str, *, refresh: bool = False) -> list[dict]:
         """League standings (rankings[]), normalised. Returns [] if unavailable."""

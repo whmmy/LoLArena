@@ -15,6 +15,7 @@ context_pack:
   recent_form_window: 10
   h2h: true                  # derived from recent_form (0 extra requests)
   team_objectives: true      # aggregated dragon/baron/tower/gold control rates
+  team_series_history: true  # ~1 req/team: avg game duration + sweep/series-length anchors
   standings: true            # both teams' league rank + W/L
   meta_reference: true       # patch version
   # --- player-level (heavier, ~2 req/player x 10 = 20 req/match) ---
