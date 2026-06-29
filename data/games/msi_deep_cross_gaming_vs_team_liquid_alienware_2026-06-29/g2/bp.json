@@ -1,0 +1,76 @@
+{
+  "match_id": 115846993721104369,
+  "game_id": "lol-game-115846993721235443",
+  "position": 2,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "TLAW Morgan",
+        "champion": "Twisted Fate",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TLAW Josedeodo",
+        "champion": "Pantheon",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TLAW Quid",
+        "champion": "Ryze",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TLAW Yeon",
+        "champion": "Ziggs",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TLAW CoreJJ",
+        "champion": "Rell",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "DCG Flauren",
+        "champion": "Gnar",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "DCG Pop9",
+        "champion": "Olaf",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "DCG HongSuo",
+        "champion": "Taliyah",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "DCG Feng ",
+        "champion": "Senna",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "DCG ShiauC",
+        "champion": "Nautilus",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-06-29T06:45:53Z"
+}

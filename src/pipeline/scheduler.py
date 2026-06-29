@@ -20,7 +20,7 @@ from pathlib import Path
 from apscheduler.schedulers.background import BackgroundScheduler
 
 from .. import config as cfg
-from ..adapters.pandascore import PandaScoreClient
+from ..adapters.cito import CitoClient, CitoError
 from . import orchestrator as orch
 from . import collect as collect_mod
 
@@ -58,7 +58,7 @@ def _already_predicted(match: dict) -> bool:
 def predict_tick() -> None:
     """Find matches within the lead window that aren't predicted yet, and predict them."""
     try:
-        client = PandaScoreClient()
+        client = CitoClient()
         league_ids = list(client.tracked_league_ids().values())
         if not league_ids:
             return
@@ -82,23 +82,57 @@ def predict_tick() -> None:
 
 
 def grade_tick() -> None:
-    """Grade finished matches that have predictions but no results yet."""
+    """Grade finished matches that have predictions but no results yet.
+
+    fixture.json is a snapshot taken at collect time and is NOT kept in sync
+    with the API afterwards, so a match can be finished upstream while its
+    local fixture still says running/not_started. For matches that are not
+    yet marked finished locally, we ask the API for the current status before
+    deciding to skip — this keeps the autograder from missing matches that
+    concluded after the fixture snapshot.
+    """
     try:
+        client = None  # lazy-init only if we actually need an API call
         for mdir in sorted(cfg.MATCHES_DIR.glob("*")) if cfg.MATCHES_DIR.exists() else []:
             fixture_path = mdir / "fixture.json"
             if not fixture_path.exists():
                 continue
             fixture = json.loads(fixture_path.read_text(encoding="utf-8"))
-            if fixture.get("status") != "finished":
-                continue
             preds = list((mdir / "predictions").glob("*.json")) if (mdir / "predictions").exists() else []
             if not preds:
                 continue
-            results = list((mdir / "results").glob("*.json")) if (mdir / "results").exists() else []
+            rdir = mdir / "results"
+            results = [r for r in rdir.glob("*.json")
+                       if not r.stem.startswith("_")] if rdir.exists() else []
             if len(results) >= len(preds):
                 continue  # already graded
+            # If the local snapshot already says finished, grade right away.
+            # Otherwise check the live API status (the snapshot may be stale).
+            if fixture.get("status") != "finished":
+                if client is None:
+                    client = CitoClient()
+                mid = fixture.get("id")
+                live = None
+                try:
+                    live = client.match(mid, refresh=True) or {}
+                except CitoError as e:
+                    print(f"[scheduler] live status check failed for {mid}: {e}")
+                    live = {}
+                if live.get("status") != "finished":
+                    continue
+                # refresh the stale local fixture so it reflects reality
+                fixture_path.write_text(
+                    json.dumps(live, ensure_ascii=False, indent=2), encoding="utf-8")
+                fixture = live
             print(f"[scheduler] grading match {fixture.get('id')} ({mdir.name})")
-            orch.cmd_grade(fixture["id"])
+            result = orch.cmd_grade(fixture["id"])
+            # if grading failed (e.g. match id not in Cito / network), drop a
+            # marker so we don't retry every tick and spam logs.
+            if result.get("error"):
+                (mdir / "results" / "_grade_error.json").write_text(
+                    json.dumps({"match_id": fixture.get("id"),
+                                "error": result["error"]}, indent=2),
+                    encoding="utf-8")
             try:
                 from ..leaderboard import build_site
                 build_site.build()

@@ -26,14 +26,15 @@ from .. import config as cfg
 
 def build() -> dict[str, Any]:
     models = _models_meta()
-    history = _history()
+    all_matches = _all_matches()
+    history = [m for m in all_matches if m.get("status") == "finished"]
     game_history = _game_history()
     payload = {
         "models": models,
         "leaderboard": _series_leaderboard(),
         "game_leaderboard": _game_leaderboard(),
-        "incoming": _incoming(history),
-        "predicted_upcoming": _predicted_upcoming(history),
+        "incoming": _incoming(all_matches),
+        "predicted_upcoming": _predicted_upcoming(all_matches),
         "history": history,
         "game_history": game_history,
     }
@@ -61,6 +62,8 @@ def _series_leaderboard() -> list[dict]:
                                                     "layers": defaultdict(float)})
     for mdir in _match_dirs():
         for rf in (mdir / "results").glob("*.json"):
+            if rf.stem.startswith("_"):
+                continue   # _truth.json / _grade_error.json are not model results
             res = _read(rf)
             mid = rf.stem
             comp = res.get("composite", 0.0)
@@ -82,7 +85,9 @@ def _series_leaderboard() -> list[dict]:
     return rows
 
 
-def _history() -> list[dict]:
+def _all_matches() -> list[dict]:
+    """Every match dir as a record (regardless of status). Single source of
+    truth for the three-way split (incoming / predicted_upcoming / history)."""
     out = []
     for mdir in _match_dirs():
         fixture = _read(mdir / "fixture.json")
@@ -102,12 +107,24 @@ def _history() -> list[dict]:
         results = {r.get("team_id"): r.get("score", 0) for r in (fixture.get("results") or [])}
         blue_id = blue_opp.get("id")
         red_id = red_opp.get("id")
+        # fixture.json is a snapshot and can lag real status (e.g. still
+        # "running"/"not_started" after the match finished). Authoritative
+        # status comes from the grade truth when present; fall back to fixture.
+        status = fixture.get("status")
+        series_score = f"{results.get(blue_id,0)}-{results.get(red_id,0)}"
+        graded_truth = _graded_truth(mdir)
+        if graded_truth:
+            status = graded_truth.get("status") or status
+            if graded_truth.get("series_score"):
+                series_score = graded_truth["series_score"]
         truth = {
-            "status": fixture.get("status"),
-            "series_score": f"{results.get(blue_id,0)}-{results.get(red_id,0)}",
+            "status": status,
+            "series_score": series_score,
         }
         model_results: dict[str, float] = {}
         for rf in (mdir / "results").glob("*.json"):
+            if rf.stem.startswith("_"):
+                continue   # _truth.json / _grade_error.json are not model results
             model_results[rf.stem] = _read(rf).get("composite", 0.0)
         preds: dict[str, Any] = {}
         for pf in (mdir / "predictions").glob("*.json"):
@@ -120,7 +137,7 @@ def _history() -> list[dict]:
             "blue": blue, "red": red,
             "blue_image_url": blue_image_url, "red_image_url": red_image_url,
             "begin_at": fixture.get("begin_at"),
-            "status": fixture.get("status"),
+            "status": status,   # corrected status (post-grade truth wins over stale fixture)
             "truth": truth,
             "predictions": preds,
             "results": model_results,
@@ -129,19 +146,26 @@ def _history() -> list[dict]:
     return out
 
 
-def _incoming(history: list[dict] | None = None) -> list[dict]:
+def _history() -> list[dict]:
+    """Finished matches only (the leaderboard's history section)."""
+    return [m for m in _all_matches() if m.get("status") == "finished"]
+
+
+def _incoming(all_matches: list[dict] | None = None) -> list[dict]:
+    """Matches not yet finished AND not yet predicted (need a prediction)."""
     rows = []
-    for h in history if history is not None else _history():
-        if h.get("status") in ("not_started", None, "") and not h.get("predictions"):
+    for h in (all_matches if all_matches is not None else _all_matches()):
+        if h.get("status") in ("not_started", "running", None, "") and not h.get("predictions"):
             rows.append(h)
     rows.sort(key=lambda h: h.get("begin_at") or "")
     return rows[:30]
 
 
-def _predicted_upcoming(history: list[dict] | None = None) -> list[dict]:
+def _predicted_upcoming(all_matches: list[dict] | None = None) -> list[dict]:
+    """Matches not yet finished but already predicted (pending result)."""
     rows = []
-    for h in history if history is not None else _history():
-        if h.get("status") in ("not_started", None, "") and h.get("predictions"):
+    for h in (all_matches if all_matches is not None else _all_matches()):
+        if h.get("status") in ("not_started", "running", None, "") and h.get("predictions"):
             rows.append(h)
     rows.sort(key=lambda h: h.get("begin_at") or "")
     return rows[:30]
@@ -212,6 +236,17 @@ def _match_dirs() -> list[Path]:
     if not cfg.MATCHES_DIR.exists():
         return []
     return sorted(d for d in cfg.MATCHES_DIR.glob("*") if d.is_dir())
+
+
+def _graded_truth(mdir: Path) -> dict | None:
+    """Pull the authoritative post-match truth written by grade.
+
+    `cmd_grade` writes results/_truth.json (status, series_score, winner_side,
+    …). We read it so the leaderboard shows real scores even when fixture.json
+    is a stale pre-match snapshot (e.g. legacy PandaScore fixtures graded via
+    the id map).
+    """
+    return _read(mdir / "results" / "_truth.json")
 
 
 def _read(path: Path) -> dict | None:

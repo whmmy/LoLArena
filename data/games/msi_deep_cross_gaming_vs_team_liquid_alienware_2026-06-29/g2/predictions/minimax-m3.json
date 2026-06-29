@@ -1,0 +1,272 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g2",
+  "submitted_at": "2026-06-29T06:47:32.442449+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "本局看好蓝色方 TLAW（Team Liquid Alienware）取胜。TLAW 系列赛已 1-0 领先且对面 DCG 是 MSI 11 支参赛队伍中赛前实力榜第 11 名（最弱），TLAW 阵容基本面（CoreJJ 老将指挥 + Quid 曾率 100T 击败 BLG 的经验 + Yeon 稳定输出）远胜 DCG。BP 层面 TLAW 摆出 4 AP 的极端爆发/推进体系，配合 Pantheon 早期节奏与 Twisted Fate 边线/全图支援，能在上半区牢牢压制 DCG 的 Olaf–Taliyah 组合。",
+      "draft_analysis": "蓝色方 TLAW 的阵容是当前版本少见的极端多 AP 推进流：上单 Twisted Fate 提供分推 + 全图传送支援，打野 Pantheon 提供前期强点控节奏，中单 Ryze 是后期团战持续输出与控制核心，ADC Ziggs 取代传统射手提供超远距离消耗与推塔节奏，辅助 Rell 提供先手开团与保护反打。这套阵容前 15 分钟靠 Pantheon 点控 gank 与 TF 全图支援打出节奏差，20–30 分钟靠 Ziggs 长手消耗推进，30 分钟后 Ryze 接管的曲线非常清晰，缺点是 4 个魔法伤害容易被堆魔抗针对、缺乏常规射手持续 DPS、且一旦前期被反压没有稳定翻盘点。\n\n红色方 DCG 的阵容更接近标准的中期团战组合：上单 Gnar 提供前排坦克与大招团控，打野 Olaf 负责前期入侵与中后期单带收割，中单 Taliyah 的墙大招是团战分割地形的核心，ADC Senna 提供后期无限成长输出，辅助 Nautilus 提供钩子先手与连环控制。DCG 阵容优点是前排充足、控制链完整、Senna 后期满级后伤害恐怖；缺点是前期对线阶段极怕 Pantheon + TF 联动、Senna 缺乏自保容易成为 TF 黄牌/潘森跳大的目标、且 HongSuo 的 Taliyah 若在 BP 余量不大的情况下与 Quid 的 Ryze 拼补刀未必占优。",
+      "tempo_wincon": "节奏层面，TLAW 是这局毫无疑问的前期主动方：Josedeodo 的 Pantheon 必须在 6/8/10 分钟节点围绕上路 Morgan 的 TF 与中路 Quid 的 Ryze 做联动，一旦在上半区打开局面，TF 的传送和黄牌可以快速滚起雪球；Ziggs 的推线让 Yeon 不至于在下路崩盘，反而能用超远 Q 持续压低 Senna 血线。DCG 的致胜条件只能是 Pop9 的 Olaf 顶住前期入侵压力、让 HongSuo 的 Taliyah 用墙分割战场 + Gnar/Nautilus 大招形成连环控制秒杀 TLAW 的脆皮中射，并在中段（20–28 分钟）抢下小龙和男爵团奠定胜势，否则拖到 30 分钟以后 Ryze + Ziggs 双核接管，DCG 阵容将完全没有翻盘空间。综合选手差距、系列赛气势与 BP 强势期分布，TLAW 在 30 分钟左右拿下第二局的概率最大。"
+    },
+    "win_prob": {
+      "blue": 0.63,
+      "red": 0.37
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 33.5,
+    "kills": {
+      "blue": 16,
+      "red": 12
+    },
+    "total_kills": 28,
+    "key_drafted_champions": [
+      {
+        "champion": "Pantheon",
+        "team": "blue",
+        "role": "jun",
+        "impact": "前期节奏发动机，点对点硬控完美压制 DCG 打野 Olaf 与中下脆皮，是 TLAW 抢前期雪球的关键"
+      },
+      {
+        "champion": "Twisted Fate",
+        "team": "blue",
+        "role": "top",
+        "impact": "全图传送 + 黄牌单点硬控，提供边线分推与绕后支援双重功能，是这套 4AP 体系里的功能轴"
+      },
+      {
+        "champion": "Ryze",
+        "team": "blue",
+        "role": "mid",
+        "impact": "后期团战持续输出与 EW 群体控制，是 TLAW 拖入 30 分钟后接管比赛的核心"
+      },
+      {
+        "champion": "Taliyah",
+        "team": "blue",
+        "role": "jun",
+        "impact": "更正：红色方核心大招墙的施放，决定 DCG 能否在中期团战分割战场，是 DCG 仅有的翻盘支点之一"
+      },
+      {
+        "champion": "Senna",
+        "team": "red",
+        "role": "adc",
+        "impact": "后期无限成长型射手，DCG 若能将比赛拖到 35 分钟以后，Feng 的 Senna 是唯一能突破 TLAW 多 AP 阵的物理持续伤害来源"
+      }
+    ],
+    "sources": [
+      {
+        "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+        "accessed_at": "2026-06-29T06:46:00Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong picks",
+        "accessed_at": "2026-06-29T06:46:00Z"
+      },
+      {
+        "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+        "accessed_at": "2026-06-29T06:46:30Z"
+      },
+      {
+        "query": "Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane",
+        "accessed_at": "2026-06-29T06:46:30Z"
+      },
+      {
+        "query": "Team Liquid LCS 2026 Morgan Quid Josedeodo performance bot lane Yeon CoreJJ",
+        "accessed_at": "2026-06-29T06:47:00Z"
+      },
+      {
+        "query": "Ziggs ADC bot lane competitive 2026 viability AP bot meta",
+        "accessed_at": "2026-06-29T06:47:00Z"
+      }
+    ]
+  },
+  "raw_text": "<think>I have enough information now. Let me synthesize the analysis:\n\n**Key context gathered:**\n- MSI 2026 is on patch 16.13\n- DCG (Deep Cross Gaming) is ranked 11th (last) among the 11 MSI teams, from LCP (formerly PCS)\n- DCG has older veterans like Flauren with young talent, just got into MSI by beating GAM 3-2 in losers bracket\n- DCG got swept by KC earlier in their first MSI series\n- TLAW (Team Liquid Alienware) rebuilt roster: kept Yeon/CoreJJ bot lane, signed Morgan (ex-BRO top), Josedeodo (Argentine jungler), Quid (Korean mid who helped 100T beat BLG)\n- TLAW leads this series 1-0 (won game 1)\n- TLAW is from LCS, considered a mid-tier team\n\n**BP Analysis (Game 2):**\n\nBlue (TLAW):\n- Top: Twisted Fate (Morgan) - AP split pusher with teleport flank potential\n- Jungle: Pantheon (Josedeodo) - Strong early ganker, point-and-click stun\n- Mid: Ryze (Quid) - Scaling battlemage with strong teamfight\n- ADC: Ziggs (Yeon) - AP siege/poke marksman\n- Support: Rell (CoreJJ) - Engage/disengage tank support\n\nRed (DCG):\n- Top: Gnar (Flauren) - Tank/bruiser with kitable kit\n- Jungle: Olaf (Pop9) - Power farmer, strong duelist\n- Mid: Taliyah (HongSuo) - Control mage with teamfight ult\n- ADC: Senna (Feng) - Scaling support-carry hybrid\n- Support: Nautilus (ShiauC) - Hook engage tank\n\n**Matchup analysis:**\n\n1. **TF vs Gnar (Top)**: TF has range advantage but Gnar is tanky. TF needs to abuse range and use ult for flanks/teleports. Slight edge to TF in 1v1, but Gnar scales better and provides more frontline.\n\n2. **Pantheon vs Olaf (Jungle)**: Critical matchup. Pantheon has stronger early ganks and counter-jungle presence with point-click stun. Olaf has stronger 1v1 and faster clear. Pantheon should win the early game; Olaf wins if he survives and scales.\n\n3. **Ryze vs Taliyah (Mid)**: Both control mages. Taliyah has stronger roam and teamfight ult. Ryze has better scaling and 1v1. Skill matchup; depends on player.\n\n4. **Ziggs vs Senna (Bot)**: Unusual pick. Ziggs has range/poke/waveclear advantage but Senna scales better with souls. Ziggs needs to snowball lane; Senna wins if it goes long.\n\n5. **Rell vs Nautilus (Sup)**: Both engage tanks. Rell has more follow-up CC; Nautilus has hook. Slight edge to Rell in teamfight combo, Nautilus in pick.\n\n**Key observations:**\n- TLAW (blue) has FOUR magic damage dealers (TF, Pantheon, Ryze, Ziggs) - this is an extreme AP-heavy comp. Vulnerable to MR stacking but strong siege/poke\n- DCG (red) has more standard mixed damage comp with better front-to-back teamfight\n- TLAW's comp has stronger 1-9 (early) with Pantheon ganks + TF teleports\n- TLAW's comp also has strong scaling with Ryze/Ziggs\n- DCG's comp has stronger mid-game teamfight with Taliyah/Gnar/Nautilus ults\n- DCG's comp relies on Olaf scaling, which can be punished by Pantheon\n\n**Win conditions:**\n- TLAW: Snowball early with Pantheon/TF ganks → siege with Ziggs poke → outscale with Ryze\n- DCG: Survive early, win mid-game teamfights with combo ults, hope Olaf can 1v9\n\n**Prediction:**\n- TLAW leads series 1-0, has stronger roster fundamentals (CoreJJ veteran, Yeon stable, Quid who beat BLG)\n- DCG is the weakest team at MSI (ranked 11th)\n- TLAW's comp is AP-heavy but has good scaling and Pantheon can control Olaf\n- DCG has the Senna scaling win condition but needs to survive\n\nI'll favor TLAW (blue) at ~62-65%. AP-heavy comp is risky but TLAW has better players and the comp has clear path to victory.\n\nFor game length: ~32-34 minutes. Both comps have decent scaling; Ziggs siege is strong so the game likely goes long enough for Ryze to come online.\n\nKills: TLAW has more aggressive early comp, so they should get more kills. ~16-17 vs 11-12, total 27-29.\n\nLet me finalize:\n- Win prob: blue 0.63, red 0.37\n- Winner: blue (TLAW)\n- Duration: 33.5 min\n- Kills: blue 16, red 12, total 28\n\nKey drafted champions:\n- Pantheon (blue, jun): Early gank engine to shut down Olaf and snowball\n- Ziggs (blue, adc): AP siege carry, enables objective control\n- Taliyah (red, mid): Teamfight engine with ult, needs to win mid-game\n- Olaf (red, jun): Needs to survive Pantheon pressure and scale\n\nLet me output the JSON now.</think>\n\n```json\n{\n  \"reasoning\": {\n    \"overall\": \"本局看好蓝色方 TLAW（Team Liquid Alienware）取胜。TLAW 系列赛已 1-0 领先且对面 DCG 是 MSI 11 支参赛队伍中赛前实力榜第 11 名（最弱），TLAW 阵容基本面（CoreJJ 老将指挥 + Quid 曾率 100T 击败 BLG 的经验 + Yeon 稳定输出）远胜 DCG。BP 层面 TLAW 摆出 4 AP 的极端爆发/推进体系，配合 Pantheon 早期节奏与 Twisted Fate 边线/全图支援，能在上半区牢牢压制 DCG 的 Olaf–Taliyah 组合。\",\n    \"draft_analysis\": \"蓝色方 TLAW 的阵容是当前版本少见的极端多 AP 推进流：上单 Twisted Fate 提供分推 + 全图传送支援，打野 Pantheon 提供前期强点控节奏，中单 Ryze 是后期团战持续输出与控制核心，ADC Ziggs 取代传统射手提供超远距离消耗与推塔节奏，辅助 Rell 提供先手开团与保护反打。这套阵容前 15 分钟靠 Pantheon 点控 gank 与 TF 全图支援打出节奏差，20–30 分钟靠 Ziggs 长手消耗推进，30 分钟后 Ryze 接管的曲线非常清晰，缺点是 4 个魔法伤害容易被堆魔抗针对、缺乏常规射手持续 DPS、且一旦前期被反压没有稳定翻盘点。\\n\\n红色方 DCG 的阵容更接近标准的中期团战组合：上单 Gnar 提供前排坦克与大招团控，打野 Olaf 负责前期入侵与中后期单带收割，中单 Taliyah 的墙大招是团战分割地形的核心，ADC Senna 提供后期无限成长输出，辅助 Nautilus 提供钩子先手与连环控制。DCG 阵容优点是前排充足、控制链完整、Senna 后期满级后伤害恐怖；缺点是前期对线阶段极怕 Pantheon + TF 联动、Senna 缺乏自保容易成为 TF 黄牌/潘森跳大的目标、且 HongSuo 的 Taliyah 若在 BP 余量不大的情况下与 Quid 的 Ryze 拼补刀未必占优。\",\n    \"tempo_wincon\": \"节奏层面，TLAW 是这局毫无疑问的前期主动方：Josedeodo 的 Pantheon 必须在 6/8/10 分钟节点围绕上路 Morgan 的 TF 与中路 Quid 的 Ryze 做联动，一旦在上半区打开局面，TF 的传送和黄牌可以快速滚起雪球；Ziggs 的推线让 Yeon 不至于在下路崩盘，反而能用超远 Q 持续压低 Senna 血线。DCG 的致胜条件只能是 Pop9 的 Olaf 顶住前期入侵压力、让 HongSuo 的 Taliyah 用墙分割战场 + Gnar/Nautilus 大招形成连环控制秒杀 TLAW 的脆皮中射，并在中段（20–28 分钟）抢下小龙和男爵团奠定胜势，否则拖到 30 分钟以后 Ryze + Ziggs 双核接管，DCG 阵容将完全没有翻盘空间。综合选手差距、系列赛气势与 BP 强势期分布，TLAW 在 30 分钟左右拿下第二局的概率最大。\"\n  },\n  \"win_prob\": { \"blue\": 0.63, \"red\": 0.37 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 33.5,\n  \"kills\": { \"blue\": 16, \"red\": 12 },\n  \"total_kills\": 28,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Pantheon\", \"team\": \"blue\", \"role\": \"jun\", \"impact\": \"前期节奏发动机，点对点硬控完美压制 DCG 打野 Olaf 与中下脆皮，是 TLAW 抢前期雪球的关键\" },\n    { \"champion\": \"Twisted Fate\", \"team\": \"blue\", \"role\": \"top\", \"impact\": \"全图传送 + 黄牌单点硬控，提供边线分推与绕后支援双重功能，是这套 4AP 体系里的功能轴\" },\n    { \"champion\": \"Ryze\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"后期团战持续输出与 EW 群体控制，是 TLAW 拖入 30 分钟后接管比赛的核心\" },\n    { \"champion\": \"Taliyah\", \"team\": \"blue\", \"role\": \"jun\", \"impact\": \"更正：红色方核心大招墙的施放，决定 DCG 能否在中期团战分割战场，是 DCG 仅有的翻盘支点之一\" },\n    { \"champion\": \"Senna\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"后期无限成长型射手，DCG 若能将比赛拖到 35 分钟以后，Feng 的 Senna 是唯一能突破 TLAW 多 AP 阵的物理持续伤害来源\" }\n  ],\n  \"sources\": [\n    { \"query\": \"MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2\", \"accessed_at\": \"2026-06-29T06:46:00Z\" },\n    { \"query\": \"LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong picks\", \"accessed_at\": \"2026-06-29T06:46:00Z\" },\n    { \"query\": \"LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026\", \"accessed_at\": \"2026-06-29T06:46:30Z\" },\n    { \"query\": \"Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane\", \"accessed_at\": \"2026-06-29T06:46:30Z\" },\n    { \"query\": \"Team Liquid LCS 2026 Morgan Quid Josedeodo performance bot lane Yeon CoreJJ\", \"accessed_at\": \"2026-06-29T06:47:00Z\" },\n    { \"query\": \"Ziggs ADC bot lane competitive 2026 viability AP bot meta\", \"accessed_at\": \"2026-06-29T06:47:00Z\" }\n  ]\n}\n```",
+  "thinking_text": null,
+  "sources": [
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:03Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:06Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:06Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:12Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:12Z"
+    },
+    {
+      "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:12Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:14Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:14Z"
+    },
+    {
+      "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:14Z"
+    },
+    {
+      "query": "Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:14Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "\"Pantheon\" jungle \"Rell\" support \"Ryze\" mid competitive 2026 MSI picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "\"Pantheon\" jungle \"Rell\" support \"Ryze\" mid competitive 2026 MSI picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "TLAW DCG game 1 result MSI 2026 playstyles comparison Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "\"Pantheon\" jungle \"Rell\" support \"Ryze\" mid competitive 2026 MSI picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "TLAW DCG game 1 result MSI 2026 playstyles comparison Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 Morgan Quid Josedeodo performance bot lane Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:47Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Twisted Fate Pantheon Ryze Ziggs Rell strong p",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "LoL patch 16.13 tier list Pantheon Olaf jungle meta MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "Ryze vs Taliyah mid matchup MSI 2026 Ziggs Senna bot lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "\"Pantheon\" jungle \"Rell\" support \"Ryze\" mid competitive 2026 MSI picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "TLAW DCG game 1 result MSI 2026 playstyles comparison Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 Morgan Quid Josedeodo performance bot lane Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    },
+    {
+      "query": "Ziggs ADC bot lane competitive 2026 viability AP bot meta",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:50Z"
+    }
+  ],
+  "input_tokens": 43076,
+  "output_tokens": 4253,
+  "tool_calls": 8,
+  "cost_usd": 0.0,
+  "wall_seconds": 95.72,
+  "error": null
+}

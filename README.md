@@ -14,8 +14,8 @@ post-match accuracy.
 > and how they reason.
 
 - All models ingest the **same aggregated `context_pack`** built from
-  **PandaScore** (free tier) — rosters, recent form, hero pools, head-to-head,
-  meta signals.
+  **Cito API** — rosters, recent form + objective control, league standings,
+  player form & champion pools, head-to-head, and per-game BP / kills.
 - All models are mounted with the **same `web_search` tool** (backend:
   **Zhipu web_search API**, `search_pro` engine with intent recognition).
   Each model decides what to search and how many rounds.
@@ -68,14 +68,14 @@ lolArena/
 ├─ prompts/        system.md · task_match.md · task_game.md · betting_system.md · task_betting.md
 ├─ schemas/        match_prediction / game_prediction (JSON Schema)
 ├─ src/
-│   ├─ adapters/   pandascore.py (LoL API) · websearch.py (unified search tool)
+│   ├─ adapters/   cito.py (LoL data source, primary) · pandascore.py (fallback) · websearch.py (unified search tool)
 │   ├─ pipeline/   collect · prompt_build · validate · orchestrator · scheduler · betting
 │   ├─ runners/    base (agent loop + streaming) · openai_compat · anthropic · google · retry (transient-error backoff)
 │   ├─ graders/    grade_match · grade_game · metrics/ (Brier, MAE, sMAPE, recall, structural checks)
 │   ├─ server/     main.py (FastAPI)
 │   └─ leaderboard/build_site.py
-├─ data/           matches/<slug>/ (predictions/, betting_advice/)  ·  games/<slug>/g<pos>/
-├─ doc/            pandaScoreApi/ (endpoint reference) · webSearch/ (Zhipu tool docs)
+├─ data/           matches/<slug>/ (predictions/, betting_advice/)  ·  games/<slug>/g<pos>/  ·  _cito_cache/
+├─ doc/            citoapi-lol/ (primary API reference) · pandaScoreApi/ (fallback) · webSearch/ (Zhipu tool docs)
 └─ docs/site/      index.html + data.json (single-page leaderboard)
 ```
 
@@ -87,7 +87,7 @@ pip install -r requirements.txt
 
 # 2. Configure keys
 cp .env.example .env
-#   Required: PANDASCORE_API_KEY, ZHIPU_WEBSEARCH_API_KEY
+#   Required: CITO_API_KEY (or CITO_API_KEYS multi-key pool), ZHIPU_WEBSEARCH_API_KEY
 #   Per-model: <PROVIDER>_API_KEY (enable/disable entries in configs/models.yaml)
 
 # 3. Start the service (FastAPI + scheduler together)
@@ -175,14 +175,15 @@ model (interleaved thinking) and ships with a longer `timeout_seconds: 600`.
   `provider` field that picks the runner (`openai|openrouter|deepseek|dashscope|zhipu|moonshot|minimax`
   → `OpenAICompatRunner`; `anthropic` → `AnthropicRunner`; `google` →
   `GeminiRunner`). The same `web_search` tool is auto-mounted on every model.
-- **Tracked leagues**: `configs/leagues.yaml` (slugs come from PandaScore
-  `/lol/leagues`).
+- **Tracked leagues**: `configs/leagues.yaml` (`cito_league_id` maps to a Cito
+  league id like `lol-lck`; the legacy PandaScore `slug`/`id` are kept as fallback).
 - **Per-model proxy / gateway**: set `LOLA_MODEL_PROXY=https://your-proxy/v1`
   and every model routes through it. Or override one model only by setting its
   `<PROVIDER>_BASE_URL` (or the `base_url_env` named in its entry).
-- **Per-service HTTP/SOCKS proxy**: `configs/proxies.yaml` (e.g. route PandaScore
-  through `socks5://127.0.0.1:1080`). Env overrides: `LOLA_PANDASCORE_PROXY_URL`
-  and `LOLA_PANDASCORE_PROXY_ENABLED`. socks5 needs `pip install httpx[socks]`.
+- **Per-service HTTP/SOCKS proxy**: `configs/proxies.yaml` (e.g. route Cito
+  through `socks5://127.0.0.1:1080`). Env overrides: `LOLA_CITO_PROXY_URL`
+  and `LOLA_CITO_PROXY_ENABLED` (PandaScore likewise). socks5 needs
+  `pip install httpx[socks]`.
 - **Retries**: provider `_chat` calls are wrapped by `src/runners/retry.py`
   (tenacity, 3 attempts, 2–30s exponential backoff) on transient errors only —
   timeouts, 429, 5xx. `400/BadRequestError` is deliberately not retried.
@@ -191,7 +192,9 @@ model (interleaved thinking) and ships with a longer `timeout_seconds: 600`.
 
 | Variable                 | Purpose                                                          | Default                         |
 | ------------------------ | ---------------------------------------------------------------- | ------------------------------- |
-| `PANDASCORE_API_KEY`     | LoL data (required to predict)                                   | —                               |
+| `CITO_API_KEY`           | LoL data, primary source (single key; backward compatible)       | —                               |
+| `CITO_API_KEYS`          | LoL data, primary source (comma-separated multi-key pool; auto-rotates, switches on rate-limit/quota) | — |
+| `PANDASCORE_API_KEY`     | LoL data, fallback (not called by default)                       | —                               |
 | `ZHIPU_WEBSEARCH_API_KEY`| Unified search backend (required to predict)                     | —                               |
 | `<PROVIDER>_API_KEY`     | Per-model key (enable entries in `models.yaml`)                  | —                               |
 | `LOLA_PREDICT_LEAD_H`    | Hours before kickoff to run series prediction                    | `3`                             |
@@ -201,11 +204,18 @@ model (interleaved thinking) and ships with a longer `timeout_seconds: 600`.
 
 ## Data sources & limits
 
-- **LoL data**: PandaScore free tier. Free endpoints cover fixtures, teams,
-  rosters, recent form, static hero/item data, post-match scores and per-game
-  BP (picks). The **paid** Historical tier adds per-game KDA / gold / CS / damage
-  — **not** available on free. Any deeper stats must be supplemented by the
-  model's own `web_search` calls.
+- **LoL data**: Cito API (primary). The free tier covers fixtures, rosters,
+  recent form + objective control, league standings, player form & champion
+  pools, and per-game BP (picks) + kills — including the per-game detail the
+  PandaScore free tier gated behind its paid Historical plan. Free-tier quota
+  is **500 req/month/key**; set `CITO_API_KEYS` (comma-separated) to form a key
+  pool that multiplies the quota and auto-switches on rate-limit/quota errors.
+- `context_pack` blocks are individually toggleable under `context_pack:` in
+  `configs/policy.yaml`. Player-level data (`player_form` /
+  `player_champion_pool`) is the heaviest (~2 req/player); turn it off when
+  quota is tight and let models supplement via `web_search`.
+- The PandaScore client (`src/adapters/pandascore.py`) is kept as a fallback
+  and is not called by default.
 - **Search**: Zhipu `web_search` API (`search_pro` engine, with intent
   recognition). Every model uses the same backend.
 
@@ -226,8 +236,8 @@ Methodology, prompt structure, cached data shapes, and orchestration patterns
 are adapted from [`WorldCupArena`](https://github.com/wzk1015/WorldCupArena/) (the soccer counterpart).
 Three key differences in this project:
 
-1. fixtures come directly from PandaScore
-   `/lol/matches/upcoming`.
+1. fixtures come directly from the Cito API
+   `/lol/schedule/upcoming` (multi-key pool + disk cache to manage free-tier quota).
 2. **All models share one unified `web_search` tool** (WorldCupArena split
    injected vs. self-search across two stages).
 3. Added **single-game prediction** triggered manually after BP completes,
@@ -278,7 +288,7 @@ bash deploy/install.sh
 ### 4. 填 API key 并启动
 
 ```bash
-vi .env                       # 填 PANDASCORE_API_KEY + ZHIPU_WEBSEARCH_API_KEY + 至少一个模型 key
+vi .env                       # 填 CITO_API_KEY + ZHIPU_WEBSEARCH_API_KEY + 至少一个模型 key
 sudo systemctl restart lolarena
 ```
 

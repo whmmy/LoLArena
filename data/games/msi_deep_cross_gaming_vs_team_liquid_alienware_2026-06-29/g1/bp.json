@@ -1,0 +1,76 @@
+{
+  "match_id": 115846993721104369,
+  "game_id": "lol-game-115846993721169906",
+  "position": 1,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "TLAW Morgan",
+        "champion": "Ornn",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TLAW Josedeodo",
+        "champion": "Xin Zhao",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TLAW Quid",
+        "champion": "Akali",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TLAW Yeon",
+        "champion": "Varus",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TLAW CoreJJ",
+        "champion": "Bard",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "DCG Flauren",
+        "champion": "Rumble",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "DCG Pop9",
+        "champion": "Jarvan IV",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "DCG HongSuo",
+        "champion": "Cassiopeia",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "DCG Feng ",
+        "champion": "Jhin",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "DCG ShiauC",
+        "champion": "Rakan",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-06-29T06:07:24Z"
+}

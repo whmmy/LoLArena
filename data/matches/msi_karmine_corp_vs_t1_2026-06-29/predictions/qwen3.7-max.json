@@ -1,0 +1,348 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "match",
+  "target_id": "msi_karmine_corp_vs_t1_2026-06-29",
+  "submitted_at": "2026-06-29T04:25:03.503193+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "T1整体实力与大赛经验明显占优，但KC近期状态火热且社区投票意外倾向KC（57.7%），预计T1凭借更强的团战执行力和Faker的中路统治力以3-1取胜，但过程不会轻松。",
+      "fundamentals": "T1近10场5胜5负（50%），但对手均为Gen.G、HLE等LCK顶级战队，含金量极高；在MSI资格赛中3-2力克Gen.G展现强大韧性，入围赛首日3-0横扫TL，Oner首杀率66.7%，Faker发条/瑞兹均打出统治级表现。T1整体赛季战绩40胜14负（74.07%），推塔控制率62.05%、男爵控制率58.44%均为顶级。KC近10场7胜3负（70%），在LEC表现强势，入围赛3-0碾压DCG（第二局经济差超2万），Yike打野数据创MSI新纪录。但KC整体赛季战绩34胜22负（60.71%），各项客观指标均低于T1。KC是首次参加MSI，国际赛经验严重不足。",
+      "matchups": "上路：Canna（韩国老将）vs Doran——Doran对线阶段是T1公认的最大弱点，vs TL被Morgan连续单杀，Canna具备利用这一弱点的能力，但Doran团战发挥极强（'对线送团战C'），整体五五开偏Canna略优。打野：Yike vs Oner——Oner是世界级打野，前期节奏把控和小规模团战参与率极高，拼惩戒能力在vs TL中6战全胜；Yike虽然vs DCG数据亮眼，但对手实力有限，Oner明显占优。中路：kyeahoo vs Faker——Faker是MSI历史第一人（100胜里程碑），发条和瑞兹均打出统治级表现，kyeahoo虽是韩国选手但国际赛经验远不及Faker，Faker大幅领先。下路：Caliste vs Peyz——Peyz在vs Gen.G时获POM，卡莉斯塔和泽丽均展现极强carry能力，Caliste是法国新秀，国际赛首秀压力大，Peyz占优。辅助：Busio vs Keria——Keria是世界顶级辅助，卡蜜尔越塔压制力极强，Busio（美国选手）经验和操作均有差距，Keria大幅领先。综合来看，T1在中野下辅四个位置均有优势，KC仅上路可能打出对线优势。",
+      "meta_style": "当前版本（Patch 16.12）强调前期节奏与龙魂争夺，风龙魂加持下的后期hypercarry（泽丽、金克丝）极为强势。T1在vs TL时通过风龙魂+Peyz泽丽完成碾压，展现了完美的龙魂体系执行力。中路发条/瑞兹等控制型法师优先级高，Faker英雄池完美契合。辅助位卡蜜尔、巴德等进攻型辅助价值突出，Keria和Busio均能驾驭。上路纳尔、兰博等团战型英雄为主流，Canna的兰博vs DCG表现出色。T1的版本理解更深，BP灵活度更高，但vs HLE时BP曾出现问题。KC在LEC也展现了良好的版本适应力，蛇女、泽丽等pick均有使用。",
+      "h2h_psych": "双方历史上从未交手，这是首次对决。T1拥有压倒性的大赛经验优势——Faker第9次参加MSI（2冠3亚），T1自2022年起连续5年参加MSI，且是S15世界冠军。T1在韩国大田主场作战，拥有主场优势。KC是队史首次参加MSI，国际赛经验几乎为零，面对卫冕世界冠军心理压力巨大。但KC老板赛前高调发文'我们将干掉T1'，显示出强烈的自信心。T1素有'慢热'传统——世界赛常常小组赛磕磕绊绊、淘汰赛突然觉醒，但入围赛首日3-0横扫TL已展现出良好状态。社区投票57.7%看好KC，可能给T1带来额外心理压力。"
+    },
+    "win_probs": {
+      "blue": 0.4,
+      "red": 0.6
+    },
+    "predicted_winner": "red",
+    "series_score": "1-3",
+    "series_length": 4,
+    "favored_side": "red_slight",
+    "key_players": [
+      {
+        "player": "Faker",
+        "team": "red",
+        "role": "mid",
+        "reason": "MSI历史第一人（100胜），发条/瑞兹统治级表现，中路对位几乎不可能被kyeahoo压制，是T1节奏核心与精神领袖"
+      },
+      {
+        "player": "Peyz",
+        "team": "red",
+        "role": "adc",
+        "reason": "vs Gen.G获POM，卡莉斯塔和泽丽均展现极强carry能力，风龙魂体系下的终极输出点，是T1后期团战的核心保障"
+      },
+      {
+        "player": "Canna",
+        "team": "blue",
+        "role": "top",
+        "reason": "韩国老将，对线能力强，有望利用Doran对线阶段的弱点打开局面，是KC最可能打出优势的位置"
+      },
+      {
+        "player": "Oner",
+        "team": "red",
+        "role": "jun",
+        "reason": "前期节奏发动机，vs TL首杀率66.7%，拼惩戒6战全胜，赵信/蔚/盲僧均为招牌，是T1前期建立优势的关键"
+      },
+      {
+        "player": "Keria",
+        "team": "red",
+        "role": "sup",
+        "reason": "世界顶级辅助，卡蜜尔越塔压制力极强，为下路创造早期优势，团战进场时机精准"
+      },
+      {
+        "player": "Yike",
+        "team": "blue",
+        "role": "jun",
+        "reason": "vs DCG打出MSI历史级打野数据（分均刷野/分均伤害创新高），是KC前期节奏的引擎，需要与Oner争夺地图控制权"
+      }
+    ],
+    "swing_factors": [
+      "Doran对线阶段的脆弱性——若Canna在上路打出显著对线优势并转化为地图资源，KC可能掌控前期节奏",
+      "T1的慢热传统——虽然vs TL表现良好，但面对更强对手时T1常在系列赛前期丢局",
+      "男爵争夺——T1首男爵率61.5%极高，'大龙强盗'属性（vs TL偷大龙）是翻盘利器",
+      "KC的国际赛经验匮乏——首次MSI、面对卫冕世界冠军、在韩国主场，心理压力可能影响发挥",
+      "BP策略——T1 vs HLE时BP曾出现问题，若KC在BP阶段找到突破口可能偷得一局",
+      "社区舆论压力——57.7%的投票看好KC，这种'被看好'的期望可能反而成为KC的心理负担"
+    ],
+    "meta_style_signals": [
+      "风龙魂+后期hypercarry（泽丽/金克丝）体系是当前版本核心赢法，T1执行力更强",
+      "中路控制型法师（发条/瑞兹）优先级极高，Faker英雄池完美契合",
+      "进攻型辅助（卡蜜尔/巴德/芮尔）主导前期节奏，Keria的卡蜜尔越塔是T1标志性战术",
+      "上路团战型英雄（纳尔/兰博/狼母）为主流，对线压制力让位于团战贡献"
+    ],
+    "sources": [
+      {
+        "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+        "accessed_at": "2026-06-29T04:15:00Z"
+      },
+      {
+        "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+        "accessed_at": "2026-06-29T04:15:00Z"
+      },
+      {
+        "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+        "accessed_at": "2026-06-29T04:15:00Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta champions tier list",
+        "accessed_at": "2026-06-29T04:15:00Z"
+      },
+      {
+        "query": "Karmine Corp MSI 2026 play-in 3-0 result June 28",
+        "accessed_at": "2026-06-29T04:16:00Z"
+      },
+      {
+        "query": "T1 vs Karmine Corp MSI 2026 preview matchup analysis",
+        "accessed_at": "2026-06-29T04:16:00Z"
+      },
+      {
+        "query": "Karmine Corp Canna Yike kyeahoo Caliste Busio 2026 LEC performance",
+        "accessed_at": "2026-06-29T04:16:00Z"
+      },
+      {
+        "query": "KC Karmine Corp vs DCG MSI 2026 play-in result 3-0",
+        "accessed_at": "2026-06-29T04:17:00Z"
+      },
+      {
+        "query": "T1 Doran Oner Peyz Keria 2026 LCK spring roster performance",
+        "accessed_at": "2026-06-29T04:17:00Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"T1整体实力与大赛经验明显占优，但KC近期状态火热且社区投票意外倾向KC（57.7%），预计T1凭借更强的团战执行力和Faker的中路统治力以3-1取胜，但过程不会轻松。\",\n    \"fundamentals\": \"T1近10场5胜5负（50%），但对手均为Gen.G、HLE等LCK顶级战队，含金量极高；在MSI资格赛中3-2力克Gen.G展现强大韧性，入围赛首日3-0横扫TL，Oner首杀率66.7%，Faker发条/瑞兹均打出统治级表现。T1整体赛季战绩40胜14负（74.07%），推塔控制率62.05%、男爵控制率58.44%均为顶级。KC近10场7胜3负（70%），在LEC表现强势，入围赛3-0碾压DCG（第二局经济差超2万），Yike打野数据创MSI新纪录。但KC整体赛季战绩34胜22负（60.71%），各项客观指标均低于T1。KC是首次参加MSI，国际赛经验严重不足。\",\n    \"matchups\": \"上路：Canna（韩国老将）vs Doran——Doran对线阶段是T1公认的最大弱点，vs TL被Morgan连续单杀，Canna具备利用这一弱点的能力，但Doran团战发挥极强（'对线送团战C'），整体五五开偏Canna略优。打野：Yike vs Oner——Oner是世界级打野，前期节奏把控和小规模团战参与率极高，拼惩戒能力在vs TL中6战全胜；Yike虽然vs DCG数据亮眼，但对手实力有限，Oner明显占优。中路：kyeahoo vs Faker——Faker是MSI历史第一人（100胜里程碑），发条和瑞兹均打出统治级表现，kyeahoo虽是韩国选手但国际赛经验远不及Faker，Faker大幅领先。下路：Caliste vs Peyz——Peyz在vs Gen.G时获POM，卡莉斯塔和泽丽均展现极强carry能力，Caliste是法国新秀，国际赛首秀压力大，Peyz占优。辅助：Busio vs Keria——Keria是世界顶级辅助，卡蜜尔越塔压制力极强，Busio（美国选手）经验和操作均有差距，Keria大幅领先。综合来看，T1在中野下辅四个位置均有优势，KC仅上路可能打出对线优势。\",\n    \"meta_style\": \"当前版本（Patch 16.12）强调前期节奏与龙魂争夺，风龙魂加持下的后期hypercarry（泽丽、金克丝）极为强势。T1在vs TL时通过风龙魂+Peyz泽丽完成碾压，展现了完美的龙魂体系执行力。中路发条/瑞兹等控制型法师优先级高，Faker英雄池完美契合。辅助位卡蜜尔、巴德等进攻型辅助价值突出，Keria和Busio均能驾驭。上路纳尔、兰博等团战型英雄为主流，Canna的兰博vs DCG表现出色。T1的版本理解更深，BP灵活度更高，但vs HLE时BP曾出现问题。KC在LEC也展现了良好的版本适应力，蛇女、泽丽等pick均有使用。\",\n    \"h2h_psych\": \"双方历史上从未交手，这是首次对决。T1拥有压倒性的大赛经验优势——Faker第9次参加MSI（2冠3亚），T1自2022年起连续5年参加MSI，且是S15世界冠军。T1在韩国大田主场作战，拥有主场优势。KC是队史首次参加MSI，国际赛经验几乎为零，面对卫冕世界冠军心理压力巨大。但KC老板赛前高调发文'我们将干掉T1'，显示出强烈的自信心。T1素有'慢热'传统——世界赛常常小组赛磕磕绊绊、淘汰赛突然觉醒，但入围赛首日3-0横扫TL已展现出良好状态。社区投票57.7%看好KC，可能给T1带来额外心理压力。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.40,\n    \"red\": 0.60\n  },\n  \"predicted_winner\": \"red\",\n  \"series_score\": \"1-3\",\n  \"series_length\": 4,\n  \"favored_side\": \"red_slight\",\n  \"key_players\": [\n    { \"player\": \"Faker\", \"team\": \"red\", \"role\": \"mid\", \"reason\": \"MSI历史第一人（100胜），发条/瑞兹统治级表现，中路对位几乎不可能被kyeahoo压制，是T1节奏核心与精神领袖\" },\n    { \"player\": \"Peyz\", \"team\": \"red\", \"role\": \"adc\", \"reason\": \"vs Gen.G获POM，卡莉斯塔和泽丽均展现极强carry能力，风龙魂体系下的终极输出点，是T1后期团战的核心保障\" },\n    { \"player\": \"Canna\", \"team\": \"blue\", \"role\": \"top\", \"reason\": \"韩国老将，对线能力强，有望利用Doran对线阶段的弱点打开局面，是KC最可能打出优势的位置\" },\n    { \"player\": \"Oner\", \"team\": \"red\", \"role\": \"jun\", \"reason\": \"前期节奏发动机，vs TL首杀率66.7%，拼惩戒6战全胜，赵信/蔚/盲僧均为招牌，是T1前期建立优势的关键\" },\n    { \"player\": \"Keria\", \"team\": \"red\", \"role\": \"sup\", \"reason\": \"世界顶级辅助，卡蜜尔越塔压制力极强，为下路创造早期优势，团战进场时机精准\" },\n    { \"player\": \"Yike\", \"team\": \"blue\", \"role\": \"jun\", \"reason\": \"vs DCG打出MSI历史级打野数据（分均刷野/分均伤害创新高），是KC前期节奏的引擎，需要与Oner争夺地图控制权\" }\n  ],\n  \"swing_factors\": [\n    \"Doran对线阶段的脆弱性——若Canna在上路打出显著对线优势并转化为地图资源，KC可能掌控前期节奏\",\n    \"T1的慢热传统——虽然vs TL表现良好，但面对更强对手时T1常在系列赛前期丢局\",\n    \"男爵争夺——T1首男爵率61.5%极高，'大龙强盗'属性（vs TL偷大龙）是翻盘利器\",\n    \"KC的国际赛经验匮乏——首次MSI、面对卫冕世界冠军、在韩国主场，心理压力可能影响发挥\",\n    \"BP策略——T1 vs HLE时BP曾出现问题，若KC在BP阶段找到突破口可能偷得一局\",\n    \"社区舆论压力——57.7%的投票看好KC，这种'被看好'的期望可能反而成为KC的心理负担\"\n  ],\n  \"meta_style_signals\": [\n    \"风龙魂+后期hypercarry（泽丽/金克丝）体系是当前版本核心赢法，T1执行力更强\",\n    \"中路控制型法师（发条/瑞兹）优先级极高，Faker英雄池完美契合\",\n    \"进攻型辅助（卡蜜尔/巴德/芮尔）主导前期节奏，Keria的卡蜜尔越塔是T1标志性战术\",\n    \"上路团战型英雄（纳尔/兰博/狼母）为主流，对线压制力让位于团战贡献\"\n  ],\n  \"sources\": [\n    { \"query\": \"Karmine Corp vs T1 MSI 2026 prediction preview\", \"accessed_at\": \"2026-06-29T04:15:00Z\" },\n    { \"query\": \"T1 roster 2026 MSI Haetae Painter Jinbeom Cloud\", \"accessed_at\": \"2026-06-29T04:15:00Z\" },\n    { \"query\": \"Karmine Corp MSI 2026 Canna kyeahoo roster LEC\", \"accessed_at\": \"2026-06-29T04:15:00Z\" },\n    { \"query\": \"LoL patch 2026 MSI meta champions tier list\", \"accessed_at\": \"2026-06-29T04:15:00Z\" },\n    { \"query\": \"Karmine Corp MSI 2026 play-in 3-0 result June 28\", \"accessed_at\": \"2026-06-29T04:16:00Z\" },\n    { \"query\": \"T1 vs Karmine Corp MSI 2026 preview matchup analysis\", \"accessed_at\": \"2026-06-29T04:16:00Z\" },\n    { \"query\": \"Karmine Corp Canna Yike kyeahoo Caliste Busio 2026 LEC performance\", \"accessed_at\": \"2026-06-29T04:16:00Z\" },\n    { \"query\": \"KC Karmine Corp vs DCG MSI 2026 play-in result 3-0\", \"accessed_at\": \"2026-06-29T04:17:00Z\" },\n    { \"query\": \"T1 Doran Oner Peyz Keria 2026 LCK spring roster performance\", \"accessed_at\": \"2026-06-29T04:17:00Z\" }\n  ]\n}",
+  "thinking_text": "Let me analyze this match: Karmine Corp (KC) vs T1 in MSI 2026 Play-In Knockouts, Bo5 format.\n\nKey observations from context_pack:\n- KC roster: Canna (top, KR), Yike (jun, SE), kyeahoo (mid, KR), Caliste (adc, FR), Busio (sup, US)\n- T1 roster: Haetae (top, KR), Painter (jun, KR), Faker (mid, KR), Jinbeom (adc), Cloud (sup, CN)\n- KC recent form: 7W-3L in last 10 (70% WR) - beat G2 2-3, swept Mad Lions 3-0, swept GiantX 2-0\n- T1 recent form: 5W-5L in last 10 (50% WR) - split with Gen.G 3-2, lost to HLE 1-3, beat BFX\n- Team objectives: KC 34-22 (60.7% WR over 56 games), T1 40-14 (74% WR over 54 games)\n- No H2H history\n- Match is Bo5, begins 2026-06-29T08:00:00Z\n\nInteresting notes:\n- T1 has a different roster than usual - Haetae, Painter, Jinbeom, Cloud instead of Zeus, Oner, Gumayusi, Keria\n- KC has Canna (former T1 top laner) and kyeahoo (Korean mid)\n- T1's overall game record is better (74% vs 60.7%) but recent form is worse (50% vs 70%)\n\nLet me search for more information.\nLet me analyze the search results carefully.\n\nKey findings:\n\n1. **T1's actual roster at MSI 2026**: The search results reveal that T1's actual roster includes **Doran** (top), **Oner** (jungle), **Faker** (mid), **Peyz** (ADC), and **Keria** (support). The context_pack data shows different names (Haetae, Painter, Jinbeom, Cloud) which seem to be incorrect or placeholder data.\n\n2. **T1's recent performance**:\n   - T1 beat Gen.G 3-2 in the Road to MSI final to qualify as LCK #2 seed\n   - Lost to HLE 1-3 in the MSI qualifier round 3\n   - T1 beat TL 3-0 in the MSI play-in stage first match (June 28)\n   - T1 is considered S-tier along with HLE and BLG\n   - Global power ranking: T1 #3 (1482 points)\n   - Doran has been criticized for weak laning but strong teamfighting\n   - Peyz was the standout player against Gen.G\n   - Faker continues to perform well with Orianna, Ryze etc.\n\n3. **Karmine Corp**:\n   - KC is the LEC #2 seed\n   - Global power ranking: KC #10 (1379 points)\n   - KC also won 3-0 in their first play-in match on June 28\n   - The context_pack shows Canna (top), Yike (jungle), kyeahoo (mid), Caliste (ADC), Busio (support)\n   - KC beat G2 in LEC (2-3 based on recent form showing 7-3 in 10 games)\n   - KC beat Mad Lions 3-0 and GiantX 2-0\n\n4. **Match context**:\n   - This is MSI 2026 Play-In Knockouts\n   - Both T1 and KC won 3-0 on day 1 of play-ins\n   - They face each other on June 29\n   - Bo5 format (number_of_games: 5)\n   - The winner advances further in the play-in bracket\n\n5. **Meta/Patch**: \n   - Patch 16.12 seems to be the current patch\n   - S+ tier champions include Katarina, Senna, Rek'Sai\n   - The meta seems to favor strong teamfighting and early game pressure\n\n6. **Key matchup considerations**:\n   - T1 has much more international experience (Faker's 9th MSI)\n   - T1 is considered a top-3 team globally\n   - KC is ranked #10 globally\n   - T1 has been criticized for slow starts but strong adjustments\n   - Doran's weak laning could be exploited\n   - T1's team fighting and late-game macro is superior\n\nLet me search for more specific information about KC's roster and their play-in performance.\nLet me analyze what I've gathered so far:\n\n1. **T1 roster at MSI 2026**: The context_pack shows Haetae (top), Painter (jun), Faker (mid), Jinbeom (adc), Cloud (sup). But the search results mention Doran (top), Oner (jun), Faker (mid), Peyz (adc), Keria (sup). This is a major discrepancy. The context_pack roster seems wrong/outdated, or these are different players. Let me look more carefully...\n\nThe search results consistently mention:\n- Doran (top) - being singled out for poor laning\n- Oner (jungle) - strong early game, 66.7% first blood rate\n- Faker (mid) - playing Orianna, Ryze, dominant\n- Peyz (adc) - new member, POM against Gen.G, played Kalista, Zeri\n- Keria (support) - played Camille, aggressive\n\nThe context_pack shows Haetae, Painter, Faker, Jinbeom, Cloud. This is very confusing. The context_pack data might be wrong or these could be sub players. But the search results from June 28 clearly show T1's actual MSI roster is Doran/Oner/Faker/Peyz/Keria.\n\nWait - the match is on June 29, and the status is \"running\". The context_pack was collected at 2026-06-29T04:14:30Z. The match begins at 2026-06-29T08:00:00Z. So the match hasn't started yet at collection time but is marked as \"running\" - this might be a data issue.\n\nGiven the search results, the actual T1 roster at MSI 2026 is:\n- Top: Doran\n- Jungle: Oner\n- Mid: Faker\n- ADC: Peyz\n- Support: Keria\n\nThe context_pack roster (Haetae, Painter, Jinbeom, Cloud) seems to be incorrect or refers to some other context. I should use the search results as the more reliable source.\n\nFor KC (Karmine Corp):\n- Top: Canna (KR)\n- Jungle: Yike (SE)\n- Mid: kyeahoo (KR)\n- ADC: Caliste (FR)\n- Support: Busio (US)\n\n2. **Recent form**:\n- T1: 5W-5L in last 10 games (context_pack), but beat Gen.G 3-2 in Road to MSI final, beat TL 3-0 in MSI play-in first match\n- KC: 7W-3L in last 10 games (context_pack), beat DCG 3-0 in MSI play-in first match\n- T1 lost to HLE 1-3 in Road to MSI round 3\n- T1 beat Gen.G 3-2 in the final qualifier\n\n3. **Key insights from search**:\n- T1 is the S15 world champion, playing at home in Korea (Daejeon)\n- T1 is known for being slow starters but strong in international events\n- Doran has laning issues (gets solo killed frequently) but is strong in teamfights\n- Faker is in excellent form, MSI all-time kills and assists leader\n- Peyz is a new addition performing well\n- Oner has strong early game presence\n- KC beat DCG 3-0 in their first play-in match\n- KC lost to G2 in LEC finals (G2 used \"Nasus jungle\" strategy)\n- KC is first time at MSI\n- Global power ranking: T1 #3, KC #10\n- LoL Esports poll: 57.7% think KC will beat T1 (!) - this is surprising\n- KC boss posted \"we will beat T1 in 2.5 hours\" on social media\n- The match is Bo5 (number_of_games: 5)\n- Patch 16.12 is current\n\n4. **Meta (Patch 16.12)**:\n- S+ tier: Katarina, Senna, Rek'Sai, Vladimir, Garen, Jinx\n- T1 used: Nidalee (Doran), Xin Zhao (Oner), Orianna (Faker), Mel (Peyz), Camille (Keria) in game 1\n- T1 used: Ryze (Faker) in game 2, Zeri (Peyz) in game 3\n- Wind dragon soul mentioned as strong\n\n5. **Match context**:\n- This is the Winners' Bracket match of Play-In Knockouts\n- Both teams won 3-0 on day 1\n- Winner advances to next round (closer to main event)\n- Bo5 format\n\nNow let me think about the prediction:\n\n**T1 advantages:**\n- Home advantage (Korea, Daejeon)\n- S15 World Champions with immense international experience\n- Faker's legendary status and current good form\n- Oner's early game dominance\n- Peyz carrying ability\n- Keria's aggressive playmaking\n- Already warmed up with a 3-0 win\n- Higher global ranking (#3 vs #10)\n\n**KC advantages:**\n- Better recent form (7-3 vs 5-5 in last 10)\n- Canna is a Korean top laner who knows Korean playstyle\n- kyeahoo is also Korean mid laner\n- Won LEC matches convincingly (beat G2 twice, swept Mad Lions 3-0)\n- 57.7% of voters think KC will win\n- First MSI appearance - no pressure, nothing to lose\n- Strong dragon control (58.21%)\n\n**T1 weaknesses:**\n- Doran's laning is a liability (gets solo killed consistently)\n- Slow starters historically\n- Lost to HLE 1-3\n- BP issues mentioned\n\n**KC weaknesses:**\n- First MSI, less international experience\n- Lost to G2 in LEC finals\n- Lower global ranking\n- Yike and Caliste/Busio are non-Korean, potentially less coordination\n\nGiven all this, I think T1 is slightly favored but KC is a legitimate threat. The poll showing 57.7% for KC is interesting but might reflect EU optimism bias. T1's international experience, home advantage, and Faker's form should give them the edge in a Bo5.\n\nHowever, Doran's weakness against strong top laners is a concern - Canna is a solid Korean top laner who could exploit this.\n\nI'll predict T1 wins 3-1. T1's overall team coordination, Faker's mid dominance, and international experience should prevail, but KC can take a game through Canna's top lane advantage or superior dragon control.\n\nWait, let me reconsider. The poll showing 57.7% for KC is quite significant. And KC's recent form is better. But T1 at home in Korea, with their international pedigree... I think T1 slight favorite is correct.\n\nLet me set:\n- T1 (red) win probability: 0.55\n- KC (blue) win probability: 0.45\n\nActually wait - KC is blue side, T1 is red side. Let me re-read the fixture:\n- blue: KC\n- red: T1\n\nSo predicted_winner should be \"red\" for T1.\n\nWin probs: blue (KC) 0.45, red (T1) 0.55\n\nPredicted winner: red\nSeries score: 3-1 (T1-KC)\nSeries length: 4\nFavored side: red_slight\n\nNow let me also note the roster discrepancy. The context_pack shows different T1 players than what search results show. I'll use the search results for my analysis since they're more current and reliable.\n\nActually, I need to be careful. The context_pack roster for T1 shows: Haetae, Painter, Faker, Jinbeom, Cloud. But all search results from June 28 mention: Doran, Oner, Faker, Peyz, Keria. \n\nThis is a significant discrepancy. The context_pack might have incorrect data. I'll base my analysis on the search results which are clearly from the actual MSI event.\n\nLet me also note: the KC roster in context_pack (Canna, Yike, kyeahoo, Caliste, Busio) seems consistent with what I'd expect for KC.\n\nLet me now construct the full JSON output.\n\nFor key_players, I should include:\n1. Faker (T1, mid) - MSI all-time leader, dominant form\n2. Oner (T1, jun) - early game dominance, 66.7% FB rate\n3. Peyz (T1, adc) - new star, POM performance\n4. Canna (KC, top) - Korean top laner, can exploit Doran's weak laning\n5. kyeahoo (KC, mid) - Korean mid laner, key to KC's success\n6. Keria (T1, sup) - aggressive playmaking\n\nFor swing_factors:\n1. Doran's laning vulnerability vs Canna\n2. T1's slow start tendency\n3. Oner's early jungle pathing and first blood rate\n4. KC's dragon control advantage\n5. Home crowd advantage for T1\n6. BP adaptation in Bo5 format\n\nFor meta_style_signals:\n1. Patch 16.12 with S+ tier champions like Katarina, Senna, Rek'Sai\n2. Wind dragon soul as a strong objective\n3. Orianna/Ryze as Faker's pocket picks dominating mid\n4. Camille support as an aggressive pick\n\nLet me finalize the prediction. I'll go with T1 winning 3-1 as red side.\nLet me now synthesize all the information I've gathered. Let me organize the key findings:\n\n**T1 Roster (actual, from search results):**\n- Top: Doran (not Haetae as in context_pack)\n- Jungle: Oner (not Painter)\n- Mid: Faker\n- ADC: Peyz (not Jinbeom)\n- Support: Keria (not Cloud)\n\nWait, the context_pack shows different names: Haetae, Painter, Faker, Jinbeom, Cloud. But the search results consistently mention Doran, Oner, Faker, Peyz, Keria. The context_pack data might be outdated or incorrect. Let me look more carefully...\n\nActually, looking at the search results more carefully:\n- \"多兰纳尔反手拍中三人拿下双杀\" - Doran playing Gnar\n- \"Oner赵信\" - Oner playing Xin Zhao\n- \"Faker发条\" - Faker playing Orianna\n- \"Peyz梅尔\" / \"Peyz泽丽\" - Peyz playing Mel/Zeri\n- \"Keria卡密尔\" - Keria playing Camille\n\nSo the actual T1 roster at MSI 2026 is: Doran, Oner, Faker, Peyz, Keria.\n\nThe context_pack has different names (Haetae, Painter, Jinbeom, Cloud) which seems wrong. But I should work with the actual information from search results.\n\n**KC Roster (from search results and context_pack):**\n- Top: Canna\n- Jungle: Yike\n- Mid: kyeahoo\n- ADC: Caliste\n- Support: Busio\n\nThis matches the context_pack.\n\n**Key findings:**\n\n1. **T1 recent form:**\n   - LCK regular season: 2nd place\n   - Lost to HLE 1-3 in Road to MSI Round 3\n   - Beat Gen.G 3-2 in final qualifier (Peyz was POM)\n   - Recent 10 games: 5W-5L (50% win rate) - but this includes losses to Gen.G and HLE\n   - MSI Play-in Day 1: Beat TL 3-0 (but had some early game issues in games 1 and 2)\n   - Global power ranking: #3 (1482 points)\n   - S15 World Champions\n   - Faker achieved MSI 100th win milestone\n\n2. **KC recent form:**\n   - LEC: Beat G2 in some matches (2W-3L vs G2 in recent), beat Mad Lions 3-0, beat GiantX 2-0\n   - Recent 10 games: 7W-3L (70% win rate)\n   - MSI Play-in Day 1: Beat DCG 3-0 (dominant performance)\n   - Global power ranking: #10 (1379 points)\n   - First time at MSI\n   - KC boss posted on social media: \"We're going to beat T1!\"\n\n3. **Community predictions:**\n   - LoL Esports poll: 57.7% think KC will beat T1, 42.3% think T1 wins\n   - RFT.GG community ranking: T1 at A tier (#3), KC at B tier (#6)\n   - Caedrel predicts T1 as S-tier, top 3 at MSI\n\n4. **T1 weaknesses:**\n   - Doran's laning phase is consistently weak (got solo killed by Morgan multiple times vs TL)\n   - Early game can be shaky (fell behind in games 1 and 2 vs TL)\n   - BP issues noted vs HLE\n   - \"Slow start\" tendency at international events\n\n5. **T1 strengths:**\n   - Incredible team fighting and late game resilience\n   - Oner's early game pathing and skirmish presence (66.7% first blood rate vs TL)\n   - Faker's mid lane dominance and champion pool (Orianna, Ryze)\n   - Peyz's carry potential (Kalista, Zeri)\n   - Keria's aggressive playmaking (Camille)\n   - Strong Baron control (58.4% baron control rate, 61.5% first baron rate)\n   - Home advantage (MSI in Daejeon, Korea)\n\n6. **KC strengths:**\n   - Strong recent form (70% win rate in last 10)\n   - Canna is a veteran Korean top laner who can match Doran\n   - Yike had record-breaking jungle stats vs DCG\n   - kyeahoo is Korean mid laner\n   - Dominant performance vs DCG (20k+ gold lead in game 2)\n   - Good dragon control (58.2%)\n\n7. **KC weaknesses:**\n   - First MSI appearance, less international experience\n   - Lower global ranking (#10 vs T1's #3)\n   - Lost to G2 in LEC finals\n\n8. **Meta (Patch 16.12):**\n   - S+ tier: Katarina, Senna, Rek'Sai, Vladimir, Garen, Jinx\n   - From the games: Orianna, Ryze, Camille, Zeri, Kalista, Gnar, Xin Zhao, Rell, Caitlyn, Bard were all played\n   - Wind dragon soul seems powerful (Peyz's Zeri was unstoppable with it)\n\n9. **Matchup analysis:**\n   - Top: Canna vs Doran - Canna is a skilled Korean top laner, Doran has weak laning but strong teamfights. Canna could exploit Doran's laning weakness.\n   - Jungle: Yike vs Oner - Oner is world-class with excellent skirmish timing. Yike had great stats vs DCG but that was a weaker opponent.\n   - Mid: kyeahoo vs Faker - Faker is the GOAT, kyeahoo is a Korean import but less proven. Faker has clear advantage.\n   - ADC: Caliste vs Peyz - Peyz was POM in the Gen.G series and carried vs TL. Caliste is French, less proven internationally.\n   - Support: Busio vs Keria - Keria is one of the best supports in the world. Busio is American, less experienced at this level.\n\n10. **Historical context:**\n    - No previous meetings between KC and T1\n    - T1 has massive international experience (9 MSI appearances, multiple world championships)\n    - KC is at their first MSI\n    - T1 is playing at home in Korea\n\nNow let me think about the prediction:\n\nThe community poll actually favors KC (57.7%), which is surprising. But looking at the objective data:\n- T1 is ranked #3 globally, KC is #10\n- T1 has Faker, Peyz, Keria, Oner - all world-class players\n- T1 just beat TL 3-0 and is the defending world champion\n- KC beat DCG 3-0 but DCG is the weakest team in the tournament\n- T1's weakness is Doran's laning, but Canna isn't as strong as Bin or Zeus\n\nHowever, KC has some advantages:\n- Better recent form (70% vs 50%)\n- Canna could exploit Doran's weak laning\n- The community seems to think KC has a real chance\n\nBut I think T1 is still the stronger team overall. The context_pack data shows T1's recent 10 games at 50% but that's against Gen.G and HLE (top LCK teams). KC's 70% is against weaker LEC competition.\n\nT1's objective control is superior:\n- Tower control: 62.05% vs KC's 54.99%\n- Kill control: 56.7% vs KC's 53.39%\n- Baron control: 58.44% vs KC's 53.49%\n- Overall win rate in analyzed games: 74.07% vs KC's 60.71%\n\nI'll predict T1 wins, but it could be competitive. Given the community poll showing 57.7% for KC, and KC's strong form, I should give T1 a slight edge but not overwhelming.\n\nLet me set:\n- T1 win probability: 0.58\n- KC win probability: 0.42\n- Predicted score: 3-1 for T1\n- Favored side: red_slight (T1 is red side)\n\nWait, actually looking at the context_pack again:\n- blue = KC\n- red = T1\n\nSo T1 is red. Let me set:\n- blue (KC): 0.42\n- red (T1): 0.58\n- predicted_winner: \"red\"\n- series_score: \"3-1\" (red wins, so T1-KC = 3-1)\n\nWait, the series_score format says \"蓝-红\" (blue-red). So if T1 (red) wins 3-1, the score would be \"1-3\".\n\nActually, re-reading: `\"series_score\": \"3-1\"` with example \"蓝-红\". So if red wins 3-1, it should be \"1-3\".\n\nLet me reconsider. The predicted_winner should be \"red\" (T1). The series_score should be \"1-3\" (blue-red, meaning KC 1 - T1 3).\n\nActually wait, let me re-read the instructions more carefully:\n- `series_score`: 最终比分字符串，如 `\"3-1\"`（蓝-红）\n\nSo it's always blue-red format. If T1 (red) wins 3-1, then blue gets 1 and red gets 3, so \"1-3\".\n\nLet me finalize:\n- win_probs: blue 0.42, red 0.58\n- predicted_winner: \"red\"\n- series_score: \"1-3\"\n- series_length: 4\n- favored_side: \"red_slight\"\n\nKey players:\n1. Faker (T1, mid) - MSI history's most successful player, just hit 100 MSI wins, dominant on Orianna and Ryze\n2. Peyz (T1, ADC) - POM vs Gen.G, carried with Kalista and Zeri, key carry threat\n3. Canna (KC, top) - Korean veteran, can exploit Doran's weak laning\n4. Oner (T1, jungle) - 66.7% first blood rate, excellent skirmish timing\n5. Keria (T1, support) - Aggressive playmaking on Camille, creates early advantages\n6. Yike (KC, jungle) - Record-breaking stats vs DCG, key to KC's early game\n\nSwing factors:\n1. Doran's laning phase vulnerability - if Canna can snowball top lane, KC gains map control\n2. T1's slow start tendency - they often fall behind early in international tournaments\n3. Baron control - T1 has 61.5% first baron rate, crucial for closing games\n4. Faker's mid lane dominance - if kyeahoo can't contain Faker, T1 controls the map\n5. KC's international inexperience - first MSI, playing against the defending world champions in Korea\n6. BP strategy - T1's BP was questioned vs HLE, KC could exploit if T1 drafts poorly\n\nMeta signals:\n1. Orianna and Ryze are priority mid picks (Faker excels on both)\n2. Wind dragon soul is extremely powerful (Zeri/Jinx hypercarries)\n3. Camille support enables aggressive early plays\n4. Tank/bruiser top lane meta favors teamfight-oriented picks (Gnar, Rumble)\n\nNow let me write the full JSON output.\n\nActually, I need to reconsider the roster issue. The context_pack lists T1's roster as Haetae, Painter, Faker, Jinbeom, Cloud. But all search results show Doran, Oner, Faker, Peyz, Keria. The context_pack data seems to be incorrect or from a different time period. I should use the actual roster from search results in my analysis.\n\nWait, but the match is listed as \"running\" with status \"running\" and begin_at_utc \"2026-06-29T08:00:00.000Z\". The search results from June 28 show T1 beat TL 3-0, and KC beat DCG 3-0. The match between KC and T1 is scheduled for June 29.\n\nThe KC boss posted \"2个半小时后我们将干掉T1!\" on June 29, confirming the match is about to happen.\n\nThe LoL Esports poll from June 29 shows 57.7% think KC wins, 42.3% think T1 wins. This is interesting - the community actually favors KC slightly.\n\nLet me reconsider my prediction. The community favoring KC is a strong signal. But I think the objective data still favors T1:\n- T1 is #3 globally, KC is #10\n- T1's overall game record: 40W-14L (74.07%) vs KC's 34W-22L (60.71%)\n- T1 has superior objective control in most categories\n- T1 has home advantage and massive international experience\n\nHowever, KC's advantages are real:\n- Better recent 10-game form (70% vs 50%)\n- Canna can exploit Doran's weak laning\n- The community sees something\n\nI'll stick with T1 as slight favorite but adjust probabilities:\n- blue (KC): 0.43\n- red (T1): 0.57\n\nActually, given the community poll heavily favoring KC (57.7%), maybe I should be more cautious. But community polls can be biased. The analytical rankings and objective data still favor T1.\n\nLet me go with:\n- blue (KC): 0.40\n- red (T1): 0.60\n- predicted_winner: \"red\"\n- series_score: \"1-3\"\n- series_length: 4\n- favored_side: \"red_slight\"\n\nHmm, but the community poll is quite strongly in KC's favor. Let me think about why...\n\nKC beat DCG very convincingly (3-0, with a 20k gold lead in game 2). T1 beat TL 3-0 but had some shaky moments in games 1 and 2. Also, KC has been playing well in LEC, beating G2 in some games.\n\nBut TL is arguably stronger than DCG, and T1's \"shaky moments\" were still wins. T1 showed resilience and ability to come back from deficits.\n\nI think T1 is still the favorite, but it's closer than the global rankings suggest. Let me go with:\n- blue (KC): 0.42\n- red (T1): 0.58\n\nThis seems reasonable. T1 is the slight favorite but KC has a real chance.\n\nLet me finalize everything and write the JSON.",
+  "sources": [
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:36Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:38Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:38Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:41Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:41Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:41Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:43Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:43Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:43Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:43Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:02Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:02Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:02Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:02Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 play-in 3-0 result June 28",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:02Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:05Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:05Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:05Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:05Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 play-in 3-0 result June 28",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:05Z"
+    },
+    {
+      "query": "T1 vs Karmine Corp MSI 2026 preview matchup analysis",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:05Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 play-in 3-0 result June 28",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "T1 vs Karmine Corp MSI 2026 preview matchup analysis",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "Karmine Corp Canna Yike kyeahoo Caliste Busio 2026 LEC performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:08Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 play-in 3-0 result June 28",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "T1 vs Karmine Corp MSI 2026 preview matchup analysis",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "Karmine Corp Canna Yike kyeahoo Caliste Busio 2026 LEC performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "KC Karmine Corp vs DCG MSI 2026 play-in result 3-0",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:53Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Haetae Painter Jinbeom Cloud",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 Canna kyeahoo roster LEC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 play-in 3-0 result June 28",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "T1 vs Karmine Corp MSI 2026 preview matchup analysis",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "Karmine Corp Canna Yike kyeahoo Caliste Busio 2026 LEC performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "KC Karmine Corp vs DCG MSI 2026 play-in result 3-0",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    },
+    {
+      "query": "T1 Doran Oner Peyz Keria 2026 LCK spring roster performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:56Z"
+    }
+  ],
+  "input_tokens": 87136,
+  "output_tokens": 9349,
+  "tool_calls": 9,
+  "cost_usd": 0.199251,
+  "wall_seconds": 222.67,
+  "error": null
+}

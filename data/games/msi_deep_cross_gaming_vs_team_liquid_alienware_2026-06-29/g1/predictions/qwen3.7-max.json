@@ -1,0 +1,197 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g1",
+  "submitted_at": "2026-06-29T06:09:19.999963+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "TLAW（蓝色方）凭借更强的赛区实力与针对蛇女的刺客切入阵容略占上风，但DCG的团战体系（兰博+皇子）具备翻盘能力，预计TLAW以微弱优势赢下首局。",
+      "draft_analysis": "TLAW选出一套以阿卡丽为核心的刺杀/抓单阵容：赵信前期节奏强劲，可配合阿卡丽入侵野区或越塔击杀无位移的蛇女；巴德游走能力出色，能为CoreJJ创造跨地图制造人数差的机会；韦鲁斯提供远程poke与大招开团；奥恩则保障后期坦度与装备升级。DCG则拿出经典团战组合——兰博+皇子的大招联动可造成毁灭性AOE伤害，蛇女提供持续DPS与区域控制，烬+洛的下路组合兼具爆发与开团。然而蛇女面对阿卡丽+赵信的双重切入极为脆弱，一旦被针对将严重影响DCG的团战输出。TLAW阵容需要前期滚雪球，若拖入35分钟后的正面5v5团战，DCG的AOE体系将占据优势。",
+      "tempo_wincon": "TLAW掌握前期节奏主动权：赵信+阿卡丽的中野组合在6级后具备极强的击杀威胁，巴德的游走可进一步放大人数优势。TLAW的致胜条件是在20分钟前建立经济领先，通过抓单与小龙团快速结束比赛。DCG的致胜条件则是稳住对线期、保护蛇女发育，利用兰博+皇子的团战combo在关键团战中翻盘，将比赛拖入后期。"
+    },
+    "win_prob": {
+      "blue": 0.57,
+      "red": 0.43
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 31.5,
+    "kills": {
+      "blue": 14,
+      "red": 11
+    },
+    "total_kills": 25,
+    "key_drafted_champions": [
+      {
+        "champion": "Akali",
+        "team": "blue",
+        "role": "mid",
+        "impact": "阿卡丽是TLAW阵容的胜负手，其隐身与爆发能力可直接针对无位移的蛇女，若前期拿到人头将主导比赛节奏"
+      },
+      {
+        "champion": "Rumble",
+        "team": "red",
+        "role": "top",
+        "impact": "兰博在对线期可压制奥恩，为打野Pop9创造入侵与游走空间，其大招在团战中能配合皇子形成致命AOE"
+      },
+      {
+        "champion": "Jarvan IV",
+        "team": "red",
+        "role": "jun",
+        "impact": "皇子是DCG的节奏引擎，EQ+R连招提供稳定开团，与兰博大招联动是DCG团战的核心combo"
+      },
+      {
+        "champion": "Bard",
+        "team": "blue",
+        "role": "sup",
+        "impact": "巴德的游走能力是TLAW制造地图压力的关键，CoreJJ的经验使其能精准把握游走时机，为阿卡丽和赵信创造多打少机会"
+      },
+      {
+        "champion": "Cassiopeia",
+        "team": "red",
+        "role": "mid",
+        "impact": "蛇女是DCG的后期保障，若能安全发育至三件套将提供恐怖的持续输出，但面对阿卡丽+赵信的双重切入生存压力极大"
+      }
+    ],
+    "sources": [
+      {
+        "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+        "accessed_at": "2026-06-29T06:07:24Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao",
+        "accessed_at": "2026-06-29T06:07:24Z"
+      },
+      {
+        "query": "DCG Deep Cross Gaming PCS 2026 roster form results",
+        "accessed_at": "2026-06-29T06:07:24Z"
+      },
+      {
+        "query": "Team Liquid Alienware TLAW LCS 2026 results CoreJJ Yeon",
+        "accessed_at": "2026-06-29T06:07:24Z"
+      },
+      {
+        "query": "MSI 2026 play-in stage format schedule June 29",
+        "accessed_at": "2026-06-29T06:07:24Z"
+      },
+      {
+        "query": "TLAW Quid Akali 2026 LCS performance",
+        "accessed_at": "2026-06-29T06:07:24Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"TLAW（蓝色方）凭借更强的赛区实力与针对蛇女的刺客切入阵容略占上风，但DCG的团战体系（兰博+皇子）具备翻盘能力，预计TLAW以微弱优势赢下首局。\",\n    \"draft_analysis\": \"TLAW选出一套以阿卡丽为核心的刺杀/抓单阵容：赵信前期节奏强劲，可配合阿卡丽入侵野区或越塔击杀无位移的蛇女；巴德游走能力出色，能为CoreJJ创造跨地图制造人数差的机会；韦鲁斯提供远程poke与大招开团；奥恩则保障后期坦度与装备升级。DCG则拿出经典团战组合——兰博+皇子的大招联动可造成毁灭性AOE伤害，蛇女提供持续DPS与区域控制，烬+洛的下路组合兼具爆发与开团。然而蛇女面对阿卡丽+赵信的双重切入极为脆弱，一旦被针对将严重影响DCG的团战输出。TLAW阵容需要前期滚雪球，若拖入35分钟后的正面5v5团战，DCG的AOE体系将占据优势。\",\n    \"tempo_wincon\": \"TLAW掌握前期节奏主动权：赵信+阿卡丽的中野组合在6级后具备极强的击杀威胁，巴德的游走可进一步放大人数优势。TLAW的致胜条件是在20分钟前建立经济领先，通过抓单与小龙团快速结束比赛。DCG的致胜条件则是稳住对线期、保护蛇女发育，利用兰博+皇子的团战combo在关键团战中翻盘，将比赛拖入后期。\"\n  },\n  \"win_prob\": { \"blue\": 0.57, \"red\": 0.43 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 31.5,\n  \"kills\": { \"blue\": 14, \"red\": 11 },\n  \"total_kills\": 25,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Akali\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"阿卡丽是TLAW阵容的胜负手，其隐身与爆发能力可直接针对无位移的蛇女，若前期拿到人头将主导比赛节奏\" },\n    { \"champion\": \"Rumble\", \"team\": \"red\", \"role\": \"top\", \"impact\": \"兰博在对线期可压制奥恩，为打野Pop9创造入侵与游走空间，其大招在团战中能配合皇子形成致命AOE\" },\n    { \"champion\": \"Jarvan IV\", \"team\": \"red\", \"role\": \"jun\", \"impact\": \"皇子是DCG的节奏引擎，EQ+R连招提供稳定开团，与兰博大招联动是DCG团战的核心combo\" },\n    { \"champion\": \"Bard\", \"team\": \"blue\", \"role\": \"sup\", \"impact\": \"巴德的游走能力是TLAW制造地图压力的关键，CoreJJ的经验使其能精准把握游走时机，为阿卡丽和赵信创造多打少机会\" },\n    { \"champion\": \"Cassiopeia\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"蛇女是DCG的后期保障，若能安全发育至三件套将提供恐怖的持续输出，但面对阿卡丽+赵信的双重切入生存压力极大\" }\n  ],\n  \"sources\": [\n    { \"query\": \"MSI 2026 Deep Cross Gaming vs Team Liquid Alienware\", \"accessed_at\": \"2026-06-29T06:07:24Z\" },\n    { \"query\": \"LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao\", \"accessed_at\": \"2026-06-29T06:07:24Z\" },\n    { \"query\": \"DCG Deep Cross Gaming PCS 2026 roster form results\", \"accessed_at\": \"2026-06-29T06:07:24Z\" },\n    { \"query\": \"Team Liquid Alienware TLAW LCS 2026 results CoreJJ Yeon\", \"accessed_at\": \"2026-06-29T06:07:24Z\" },\n    { \"query\": \"MSI 2026 play-in stage format schedule June 29\", \"accessed_at\": \"2026-06-29T06:07:24Z\" },\n    { \"query\": \"TLAW Quid Akali 2026 LCS performance\", \"accessed_at\": \"2026-06-29T06:07:24Z\" }\n  ]\n}",
+  "thinking_text": "Let me analyze this match. It's MSI 2026, Deep Cross Gaming (DCG) vs Team Liquid Alienware (TLAW), Game 1 of a Bo5.\n\nBlue side (TLAW): Ornn (top), Xin Zhao (jun), Akali (mid), Varus (adc), Bard (sup)\nRed side (DCG): Rumble (top), Jarvan IV (jun), Cassiopeia (mid), Jhin (adc), Rakan (sup)\n\nWait, I need to re-read. The blue side is listed as \"Deep Cross Gaming\" but the picks show \"TLAW\" players. Let me re-check.\n\nActually looking at the BP:\n- Blue side picks have \"TLAW\" prefix players: Morgan, Josedeodo, Quid, Yeon, CoreJJ\n- Red side picks have \"DCG\" prefix players: Flauren, Pop9, HongSuo, Feng, ShiauC\n\nBut the series info says blue = \"Deep Cross Gaming\" and red = \"Team Liquid Alienware\". This seems contradictory - the blue side has TLAW players but is labeled as DCG? Or maybe the labeling is just the side assignment and the players are correct. Let me just go with the player names to identify teams.\n\nSo TLAW (blue side in terms of picks): Ornn, Xin Zhao, Akali, Varus, Bard\nDCG (red side in terms of picks): Rumble, Jarvan IV, Cassiopeia, Jhin, Rakan\n\nLet me search for relevant information about this match and the current meta.\nLet me analyze the search results:\n\n1. MSI 2026 is happening in Korea starting June 28. DCG (Deep Cross Gaming) is from PCS and ranked 11th (last) in a pre-MSI power ranking. TLAW (Team Liquid Alienware) is from LCS.\n2. The schedule shows TLAW vs T1 on June 28, and KC vs DCG on June 28. So this match between DCG and TLAW might be a later round match in the play-in stage.\n3. The current patch appears to be 16.13.\n\nLet me search for more specific information about the teams and their recent form.\nLet me analyze what I've gathered:\n\n1. **MSI 2026** is happening in Korea (Daejeon), starting June 28. It features 11 teams from 6 regions.\n2. **DCG (Deep Cross Gaming)** is from the LCP (PCS) region, ranked 11th (last) in a pre-MSI power ranking. They qualified as the second LCP team.\n3. **TLAW (Team Liquid Alienware)** is from the LCS. The bilibili schedule shows TLAW playing T1 on June 28 in the play-in stage, and DCG playing KC on June 28.\n4. The current patch appears to be **16.13** based on LoLalytics.\n\nWait - looking at the schedule more carefully:\n- T1 vs TLAW on June 28\n- KC vs DCG on June 28\n\nBut the match we're predicting is DCG vs TLAW. This could be a later match in the play-in stage, perhaps on June 29.\n\nLet me look at the BP:\n\n**Blue side (TLAW - Team Liquid Alienware):**\n- Top: Ornn (Morgan)\n- Jun: Xin Zhao (Josedeodo)\n- Mid: Akali (Quid)\n- ADC: Varus (Yeon)\n- Sup: Bard (CoreJJ)\n\n**Red side (DCG - Deep Cross Gaming):**\n- Top: Rumble (Flauren)\n- Jun: Jarvan IV (Pop9)\n- Mid: Cassiopeia (HongSuo)\n- ADC: Jhin (Feng)\n- Sup: Rakan (ShiauC)\n\nLet me analyze the draft:\n\n**TLAW (Blue):**\n- Ornn: Tank top, provides teamfight utility and item upgrades\n- Xin Zhao: Early-mid game aggressive jungler, good at skirmishes and ganks\n- Akali: Assasssin mid, high burst, snowball potential, weak early but strong mid-game\n- Varus: Poke/engage ADC, good with team compositions\n- Bard: Roaming support, enables map pressure and creative plays\n\n**DCG (Red):**\n- Rumble: AP top, strong lane bully and teamfight damage\n- Jarvan IV: Engage jungler, good teamfight initiator\n- Cassiopeia: Late-game hypercarry mage, zone control\n- Jhin: Burst ADC, good poke and pick potential\n- Rakan: Engage support, pairs well with teamfight comps\n\n**Draft Analysis:**\n- TLAW has a dive/assassin composition with Akali + Xin Zhao that can target DCG's backline\n- DCG has a heavy teamfight/engage composition with Rumble + J4 + Rakan\n- Cassiopeia vs Akali: Akali can dodge Cassiopeia's abilities with her shroud and mobility, but Cassiopeia has zone control\n- Varus + Bard provides good poke and roaming potential\n- Rumble vs Ornn: Rumble has lane priority, Ornn scales better for teamfights\n- J4 + Rakan is a strong engage combo\n- TLAW's comp is more skirmish-heavy and relies on Akali snowballing\n- DCG's comp is more traditional teamfight with multiple engage tools\n\n**Key considerations:**\n- TLAW is from LCS (major region), DCG is from PCS/LCP (minor region) - significant skill gap expected\n- DCG was ranked last (11th) in pre-MSI power rankings\n- CoreJJ is a veteran player with international experience\n- TLAW has the talent advantage across most positions\n\n**BP evaluation:**\n- DCG's teamfight comp with Rumble + J4 + Rakan is strong but requires good coordination\n- TLAW's Akali-centric comp needs Quid to perform well\n- Bard roaming can create advantages in other lanes\n- Xin Zhao can pressure early and prevent DCG from scaling comfortably\n- Ornn vs Rumble: Rumble wins lane but Ornn provides more team utility later\n\nGiven the skill gap between LCS and PCS, and TLAW having a reasonably solid draft with strong skirmish tools, I'd lean toward TLAW winning this game. However, DCG's teamfight composition is solid and could win if they execute well.\n\nLet me estimate:\n- Win probability: TLAW 60%, DCG 40%\n- Duration: ~32 minutes (moderate game length, TLAW's skirmish comp should create some action)\n- Kills: TLAW 15, DCG 11 (TLAW's aggressive jungler and assassin mid should generate kills)\n\nLet me search for more specific information.\nLet me analyze the information I've gathered:\n\n1. **MSI 2026 Context**: This is the MSI 2026 play-in stage, taking place in Daejeon, South Korea starting June 28. The play-in features 4 teams: T1, TLAW, KC, and DCG in a double elimination bracket.\n\n2. **Schedule**: \n   - June 28: T1 vs TLAW, KC vs DCG\n   - June 29: Winners/Losers matches\n\n3. **DCG (Deep Cross Gaming)**: \n   - From PCS/LCP region, ranked 11th (last) in the pre-MSI power rankings\n   - A young team that came up from secondary league\n   - Key players: Flauren (19-year-old top laner with carry potential), Pop9 (jungler, team's tempo engine)\n   - Bottom lane is considered weak\n   - They made it through losers bracket in their regional playoffs\n\n4. **TLAW (Team Liquid Alienware)**:\n   - LCS (North America) team\n   - CoreJJ is a veteran support player\n   - They're the LCS #2 seed\n   - They face T1 on June 28\n\nWait, looking at the BP data more carefully:\n- Blue side: TLAW (Team Liquid Alienware) - with players TLAW Morgan (top/Ornn), TLAW Josedeodo (jun/Xin Zhao), TLAW Quid (mid/Akali), TLAW Yeon (adc/Varus), TLAW CoreJJ (sup/Bard)\n- Red side: DCG (Deep Cross Gaming) - with players DCG Flauren (top/Rumble), DCG Pop9 (jun/Jarvan IV), DCG HongSuo (mid/Cassiopeia), DCG Feng (adc/Jhin), DCG ShiauC (sup/Rakan)\n\nWait, the series_score shows 0-0, and this is game 1 of a BO5. The match is on June 29 based on the schedule (since June 28 has T1 vs TLAW and KC vs DCG).\n\nActually, looking at the schedule again:\n- June 28 11:00: T1 vs TLAW\n- June 28 16:00: KC vs DCG\n- June 29 11:00: TBD vs TBD\n\nSo this match (DCG vs TLAW) on June 29 would be either a winners match or losers match in the double elimination bracket. Given both teams are playing each other, one of them must have lost on June 28 (or both, depending on bracket structure).\n\nActually wait - looking at the bilibili schedule result #6: \"入围赛 T1 06-28 11:00 TLAW\" and \"入围赛 KC 06-28 16:00 DCG\" and \"入围赛 待定 06-29 11:00 待定\"\n\nSo on June 29, it's TBD vs TBD. This could be the losers match or winners match. Since the series score is 0-0, this is a fresh BO5.\n\nNow let me analyze the BP:\n\n**Blue side (TLAW):**\n- Top: Ornn (Morgan) - Tank, teamfight utility, late-game item upgrades\n- Jungle: Xin Zhao (Josedeodo) - Early-mid game pressure, dive potential\n- Mid: Akali (Quid) - Assassin, split push, snowball potential\n- ADC: Varus (Yeon) - Poke/engage, good with Bard\n- Support: Bard (CoreJJ) - Roaming, pick potential, magical journey plays\n\n**Red side (DCG):**\n- Top: Rumble (Flauren) - Lane bully, teamfight damage, lane priority\n- Jungle: Jarvan IV (Pop9) - Early ganks, teamfight engage, combo with Rumble\n- Mid: Cassiopeia (HongSuo) - Late-game hypercarry, zone control, DPS\n- ADC: Jhin (Feng) - Burst damage, utility, long-range execute\n- Support: Rakan (ShiauC) - Engage, mobility, combo with Jhin\n\n**Draft Analysis:**\n\nTLAW's composition:\n- Ornn + Xin Zhao + Akali + Varus + Bard\n- This is a dive/pick composition with Bard roaming and Akali assassination\n- Xin Zhao provides early pressure and can dive with Akali\n- Varus gives poke and utility with his ultimate\n- Ornn provides late-game tankiness and item upgrades\n- The team has good pick potential with Bard magical journey + Akali burst\n- Weakness: Relies on getting ahead early; if Akali doesn't snowball, the team lacks sustained DPS\n\nDCG's composition:\n- Rumble + Jarvan IV + Cassiopeia + Jhin + Rakan\n- This is a teamfight-heavy composition with strong engage\n- Rumble + Jarvan IV is a classic combo (Jarvan ult + Rumble ult = massive AoE damage)\n- Cassiopeia provides incredible sustained DPS and zone control\n- Jhin + Rakan is a strong bot lane with engage and burst\n- The team has excellent teamfight potential with multiple AoE abilities\n- Weakness: Cassiopeia is immobile and vulnerable to dives; needs protection\n\n**Key Matchups:**\n1. Top: Ornn vs Rumble - Rumble has lane priority and can bully Ornn early. Rumble's push power allows Pop9 to invade or gank other lanes.\n2. Jungle: Xin Zhao vs Jarvan IV - Both are early-game junglers. Jarvan has better gank potential with his EQ+R combo. Xin Zhao is stronger in 1v1 skirmishes.\n3. Mid: Akali vs Cassiopeia - Akali can pressure Cassiopeia early and look for roams. Cassiopeia scales better but is vulnerable to Akali's all-in.\n4. Bot: Varus/Bard vs Jhin/Rakan - Rakan/Jhin has better engage. Bard can roam to impact other lanes. Varus has better poke range.\n\n**Win Condition:**\n- TLAW: Needs to snowball Akali early, use Bard roams to create picks, and end before Cassiopeia scales. Xin Zhao + Akali dives on Cassiopeia could be devastating.\n- DCG: Needs to survive early game, protect Cassiopeia, and win 5v5 teamfights with the Rumble+Jarvan combo. If the game goes past 30 minutes, DCG's teamfight comp should dominate.\n\n**Assessment:**\n- DCG is ranked last (11th) in the pre-MSI power rankings\n- TLAW is LCS #2 seed, generally considered stronger than LCP teams\n- However, DCG's teamfight composition is very strong and well-synergized\n- TLAW's composition requires precise execution and early snowball\n\nThe Rumble + Jarvan IV combo is a classic and devastating teamfight combination. Cassiopeia provides incredible sustained DPS. If DCG can weather the early storm and get to teamfights, they have a significant advantage.\n\nHowever, TLAW has CoreJJ (veteran support), and their pick composition with Bard + Akali can create advantages through superior map play. Akali can be a nightmare for Cassiopeia if she gets ahead.\n\nGiven:\n- TLAW is from a stronger region (LCS vs LCP)\n- DCG is ranked last in power rankings\n- TLAW's composition has strong pick potential\n- But DCG's teamfight comp is very solid\n\nI'll give TLAW a slight edge, maybe 55-45 or 60-40.\n\nActually, let me reconsider. The pre-MSI rankings put DCG at 11th (last). TLAW as LCS #2 seed should be considerably stronger. The composition matchup is interesting - TLAW's dive/pick comp vs DCG's teamfight comp.\n\nAkali is a strong pick into Cassiopeia because she can dodge Cassiopeia's abilities with her shroud and burst her down. Xin Zhao can also dive onto Cassiopeia. Bard provides roaming pressure that can create advantages elsewhere.\n\nHowever, Rumble + Jarvan is a very strong top-jungle duo that can create early advantages. If DCG gets ahead early, their teamfight comp becomes overwhelming.\n\nI'll go with TLAW at 55% win probability. The regional strength difference and TLAW's ability to target Cassiopeia with their dive comp gives them the edge.\n\nExpected duration: This could be a medium-length game. If TLAW snowballs, it could end around 28-30 minutes. If DCG stabilizes, it could go 33-35 minutes. I'll estimate around 31-32 minutes.\n\nKills: Given the compositions, there should be moderate fighting. TLAW's pick comp could generate kills through ganks and skirmishes. I'll estimate around 14-12 in favor of TLAW, total 26.\n\nLet me finalize my prediction:\n- Winner: TLAW (blue)\n- Win prob: 0.57 blue, 0.43 red\n- Duration: 31.5 minutes\n- Kills: blue 14, red 12, total 26\n\nKey champions:\n1. Akali (TLAW mid) - Can dive and eliminate Cassiopeia, key to TLAW's snowball\n2. Rumble (DCG top) - Lane priority and teamfight damage, key to DCG's early-mid game\n3. Jarvan IV (DCG jungle) - Engage and combo with Rumble, tempo engine\n4. Bard (TLAW support) - Roaming and pick potential, CoreJJ's signature playmaking\n5. Cassiopeia (DCG mid) - Late-game hypercarry, if protected can win teamfights",
+  "sources": [
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:39Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:42Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:42Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:51Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:51Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming PCS 2026 roster form results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:51Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:54Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:54Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming PCS 2026 roster form results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:54Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW LCS 2026 results CoreJJ Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:54Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:17Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:17Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming PCS 2026 roster form results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:17Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW LCS 2026 results CoreJJ Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:17Z"
+    },
+    {
+      "query": "MSI 2026 play-in stage format schedule June 29",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:17Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:20Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta Akali Cassiopeia Xin Zhao",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:20Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming PCS 2026 roster form results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:20Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW LCS 2026 results CoreJJ Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:20Z"
+    },
+    {
+      "query": "MSI 2026 play-in stage format schedule June 29",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:20Z"
+    },
+    {
+      "query": "TLAW Quid Akali 2026 LCS performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:20Z"
+    }
+  ],
+  "input_tokens": 26341,
+  "output_tokens": 5150,
+  "tool_calls": 6,
+  "cost_usd": 0.075106,
+  "wall_seconds": 112.21,
+  "error": null
+}

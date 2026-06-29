@@ -36,12 +36,16 @@ def build_match_prompt(context_pack: dict) -> tuple[str, str]:
 
 # ----------------------------- game (single, post-BP) -----------------------------
 
-def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None = None) -> tuple[str, str]:
+def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None = None,
+                      *, game_context: dict | None = None) -> tuple[str, str]:
     """Return (system_prompt, user_prompt) for a single-game prediction.
 
     bp             : the BP block from collect.fetch_game_bp
     match_fixture  : the raw match object (for names / version / games list)
     series_state   : optional {series_score_blue, series_score_red, last_game_summary}
+    game_context   : optional series-level baseline subset (rosters / player_form /
+                     champion pools / team_objectives) reused so models don't
+                     re-search what the system already collected
     """
     system = (PROMPTS / "system.md").read_text(encoding="utf-8")
     tpl = (PROMPTS / "task_game.md").read_text(encoding="utf-8")
@@ -68,8 +72,18 @@ def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None =
                 champs.append(p["champion"])
     champ_hint = (champs[0] if champs else "champion")
 
+    # Baseline already on hand: surface it to the model. An empty payload means
+    # the pack was unavailable, so tell the model to fetch the basics itself.
+    if game_context:
+        game_context_block = _format_json(game_context)
+    else:
+        game_context_block = _format_json(
+            {"note": "无大局基线数据，队伍/选手状态请自行用 web_search 补足"}
+        )
+
     user = (
         tpl.replace("{{series_context}}", _format_json(series_context))
+           .replace("{{game_context}}", game_context_block)
            .replace("{{bp_block}}", _format_json(bp))
            .replace("{{game_position}}", str(bp.get("position", "?")))
            .replace("{{total_games}}", str(total_games))

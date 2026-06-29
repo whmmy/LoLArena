@@ -14,9 +14,10 @@ capability differ between models and ruin the comparison. Differences between
 models must come ONLY from what they choose to search and how they reason.
 
 ## Layout cheat-sheet
-- `src/adapters/pandascore.py` — LoL data (free tier) + disk cache
+- `src/adapters/cito.py` — LoL data source (PRIMARY) + multi-key pool + disk cache. Normalises Cito responses into PandaScore-shaped match objects so the pipeline barely changed.
+- `src/adapters/pandascore.py` — legacy LoL client, kept as fallback (not called by default)
 - `src/adapters/websearch.py` — the ONE search tool + provider-specific schemas
-- `src/pipeline/collect.py` — builds context_pack.json (rosters/form/hero_pools/h2h/meta)
+- `src/pipeline/collect.py` — builds context_pack.json (rosters/form/objectives/standings/player_form/champion_pool/h2h/meta)
 - `src/pipeline/prompt_build.py` — renders system + user prompts
 - `src/pipeline/validate.py` — JSON Schema + semantic checks (probs sum, winner agrees, etc.)
 - `src/pipeline/orchestrator.py` — cmd_* entrypoints; runs all models in parallel
@@ -46,5 +47,17 @@ No formal test suite yet — verify via:
 - FastAPI `TestClient` for routes
 
 ## Env required to actually predict
-`PANDASCORE_API_KEY` + `ZHIPU_WEBSEARCH_API_KEY` + at least one model key.
+`CITO_API_KEY` (or `CITO_API_KEYS` comma-separated for a key pool) +
+`ZHIPU_WEBSEARCH_API_KEY` + at least one model key.
 Without keys, `cmd_predict` fails fast with a clear message (by design).
+
+## Data source notes (Cito)
+- `team_id` is the Cito **slug** (e.g. `t1`/`gen`); `match_id` is the Riot
+  `officialEventId` (bare numeric, stored as int). Both flow through the
+  normalised match object unchanged, so blue/red side and score comparisons in
+  collect/orchestrator/grade work as-is.
+- Response envelopes vary per endpoint (7 shapes) — `CitoClient._unwrap()`
+  strips them so callers always see a list or object.
+- Free tier is **500 req/month/key**. Player-level blocks (`player_form`,
+  `player_champion_pool`) cost ~2 req/player; toggle them in
+  `configs/policy.yaml` when quota is tight.

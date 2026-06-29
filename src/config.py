@@ -74,6 +74,24 @@ def proxies_cfg() -> dict:
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
 
 
+@lru_cache(maxsize=1)
+def match_id_map() -> dict[int, str]:
+    """Legacy PandaScore match_id -> Cito matchId mapping (see
+    configs/match_id_map.yaml). Empty dict if the file is absent.
+
+    Used by grade as a fallback when a match_id (from an old PandaScore fixture)
+    can't be looked up in Cito directly.
+    """
+    load_env()
+    path = CONFIGS / "match_id_map.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    mappings = data.get("mappings") or {}
+    # normalise keys to int, values to str
+    return {int(k): str(v) for k, v in mappings.items() if v}
+
+
 def proxy_for(service: str) -> str | None:
     """Return the proxy URL for a service (e.g. 'pandascore'), or None.
 

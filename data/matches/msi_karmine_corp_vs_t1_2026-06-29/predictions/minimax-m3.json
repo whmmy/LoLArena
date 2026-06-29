@@ -1,0 +1,401 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "match",
+  "target_id": "msi_karmine_corp_vs_t1_2026-06-29",
+  "submitted_at": "2026-06-29T04:23:05.788896+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "这是一场2026 MSI 季中冠军赛入围赛胜者组对决，T1 与 KC 的首次国际赛事交锋。综合双方阵容深度、近期状态与大赛经验，我倾向于 T1（红方）小优取胜，比分大概率 3-2 或 3-1。T1 在中下两条线（Peyz-Keria、Faker）拥有明显的人员天赋优势，KC 在上路 Canna 对 Doran、以及 Yike 前期节奏上具备抗衡能力，但 KC 缺乏国际赛经验，T1 历史上有 MSI 慢热传统，整体仍是 LCK 顶级运营与个人能力决定系列赛走向。",
+      "fundamentals": "T1（红方）近10场 5胜5负，最近两场 LCK 资格赛输 HLE 但 3-2 力克 GEN 抢到 MSI 门票；入围赛首轮 3-0 横扫 TL，但 Doran 表现明显拉胯——第二局兰博对狼母被 Morgan 两次单杀，第三局鳄鱼对线被打崩，仅靠中野辅运转才拿下比赛。整体形势属于'刚找到节奏但仍有破绽'。KC（蓝方）近10场 7胜3负，二号种子身份从 LEC 季后赛胜者组一路走来——3-1 G2、3-0 MKOI、决赛 2-3 不敌 G2、MSI 入围赛 3-0 DCG 且多项数据被刷新，目前状态曲线向上、磨合已经到位。T1 客观 16 周年来九次出征 MSI 经验丰富但历史上有'慢热'标签（2023、2024 均止步败者组）；KC 则是队史首次 MSI，球员大赛心理是一个 X 因素。关键选手方面：Faker、Keria、Peyz 三人状态均在线；KC 端 Yike 节奏凶猛、Caliste 在 DCG 战中表现被老板公开肯定，全队信心处于高位。",
+      "matchups": "对位分析——上路：Canna（KC）vs Doran（T1）五五开接近，Canna 是韩国老将且曾在 T1 体系边缘，对 Doran 的玩法熟悉；Doran 自己在与 TL 的对位中两次被单杀，状态明显不稳，这条线 KC 至少不输甚至小优。打野：Yike vs Oner 是本系列赛最有看点的对位，Yike 风格侵略性极强，Oner 入围赛首轮 66.7% 的一血参与率、6 胜拼惩局证明经验与判断力仍在线，Oner 微优。中路：kyeahoo 对 Faker 是本场最大天赋差距项，Faker 在与 TL 对位中无压力且第二局用瑞兹拿下单杀，kyeahoo 作为新人需要在全局 BP 体系下扩充英雄池才能延缓差距；中路 T1 明显占优。下路：Caliste-Busio 对 Peyz-Keria，Peyz 刚刚在 LCK 资格赛 vs GEN 系列赛中拿下 MVP（22/11/40 全队最高），Keria 是 MSI 历史最强辅助之一、入围赛首轮用卡密尔反复越塔压制 TL，KC 下路组合个人能力与大赛经验全面处于下风，下路 T1 大优。团战与控制力上 T1 拥有更高更稳的 5v5 拉扯和决策，KC 赢在前期小规模摩擦和换线节奏。综合对位权重——下路 T1 优势最大、中单 T1 稳压、上野五五开到 KC 微优，团战 T1 占上风。",
+      "meta_style": "MSI 本届继续使用全局 BP（fearless draft）+ BO5 双败赛制，这一赛制天然考验英雄池深度与团队战术储备。T1 在这个机制下受益最深——Faker、Keria、Oner 的招牌英雄池极其深厚（Oner 玩赵信/蔚/盲僧全是世界赛冠军皮肤英雄），Peyz 则在新英雄开发上一直领先。KC 一方 Yike 与 Caliste 的英雄池需要在本系列赛中进一步展示，但他们敢打敢拼的特点可能让他们在 Bo5 关键局拿出非常规选择影响比赛。当前版本（Patch 16.13）属于偏运营、控资源的中节奏版本，T1 的控龙率（首龙率 0.4444 看似一般，但首塔、首 Baron 都在 53% 以上）配合其经典运营体系契合度更高；KC 更偏前期主动找架、控小龙与首塔（首塔率 53.57%、首龙率 55.36%），在版本契合度上双方各有侧重，T1 的中后期稳定性在 Bo5 维度更值信赖。",
+      "h2h_psych": "两队历史交手数据为零，这是双方首次在国际赛事正面交锋，因此 H2H 经验几乎全部归零。心理层面，KC 处于'挑战者'姿态——老板赛前公开发文称'两个半小时后我们将干掉 T1'，下路 Caliste 赛前直言'我们来这里就是为了战胜 T1 然后打进正赛'，战队宣传片打出'是时候为我们的队伍书写历史了'，全队情绪外放、信心拉满。T1 一方作为六冠王、Faker 达成 MSI 100 胜里程碑的传奇之师，承载 LCK 赛区和 Faker 个人荣誉期待，'不能再输'的心理压力不小。体力层面，T1 6 月 28 日刚刚打完一整个 Bo5（3-0 TL 但心理消耗不小），KC 同样在 28 日 3-0 DCG，两队赛程完全对等，T1 多一天 Bo5 长局消耗但 KC 也需要面对节奏切换。大赛临场调整方面，T1 与 Faker 的 Bo5 经验是历史级资产，KC 第一年国际赛事可能在前两局高歌猛进之后，被对手教练组在中后段读出 BP 模式并针对——这是 KC 真正需要警惕的 X 因素。"
+    },
+    "win_probs": {
+      "blue": 0.45,
+      "red": 0.55
+    },
+    "predicted_winner": "red",
+    "series_score": "3-2",
+    "series_length": 5,
+    "favored_side": "red_slight",
+    "key_players": [
+      {
+        "player": "Faker",
+        "team": "red",
+        "role": "mid",
+        "reason": "刚达成 MSI 百胜里程碑，对位新人 kyeahoo 拥有绝对经验与英雄池优势，是 T1 整个体系的节拍器"
+      },
+      {
+        "player": "Keria",
+        "team": "red",
+        "role": "sup",
+        "reason": "MSI 历史级辅助，3-0 横扫 TL 时用卡密尔反复越塔，统治力足以撕开 KC 下路空间"
+      },
+      {
+        "player": "Peyz",
+        "team": "red",
+        "role": "adc",
+        "reason": "刚从 GEN 转会 T1 立刻打出 MVP 表现，22/11/40 vs GEN 系列赛数据，与 Keria 搭档的下路是 T1 最稳的胜负手"
+      },
+      {
+        "player": "Yike",
+        "team": "blue",
+        "role": "jun",
+        "reason": "KC 体系中的前期节奏引擎，侵略性极强，需要他压制 Oner 来为 KC 中下减压"
+      },
+      {
+        "player": "Canna",
+        "team": "blue",
+        "role": "top",
+        "reason": "曾是 T1 青训体系边缘，了解 LCK 风格，对位近期状态不稳的 Doran 是 KC 最现实的胜负点"
+      },
+      {
+        "player": "Doran",
+        "team": "red",
+        "role": "top",
+        "reason": "T1 唯一不稳定因素——3-0 TL 时被 Morgan 单杀两次、对线被压，他的状态回升幅度将直接决定系列赛难易程度"
+      }
+    ],
+    "swing_factors": [
+      "T1 上路 Doran 的状态：若持续被 Canna 单杀或对线压制，T1 整体节奏会被严重拖慢",
+      "全局 BP 下 KC 是否准备了有效的 Faker counter pick：kyeahoo 若能多次在 BP 上让 Faker 远离招牌英雄（Taliyah、Azir 等），可拉平中路差距",
+      "首局蓝色方优势在全局 BP 机制下被放大，T1 拿下 play-in 胜者组的同时也获得了首局蓝色方特权",
+      "KC 作为国际赛事新军的临场调整能力：前两局若能咬住 1-1，BO5 心理天平将向挑战者倾斜",
+      "Oner 的拼惩与节奏控制能否延续对 TL 时 66.7% 一血参与率的表现，将决定 T1 前期经济链是否稳固"
+    ],
+    "meta_style_signals": [
+      "全局 BP（fearless draft）下双方都需准备至少 12-15 个英雄池，T1 中下深度优势被放大",
+      "Patch 16.13 偏中节奏运营版，T1 控塔 7.3 vs 4.46 的稳态领先在 Bo5 中段更值信赖",
+      "首局蓝方继承 play-in 胜者组权益，全局 BP 下蓝色方先手 counter pick 影响被放大",
+      "KC 偏前期主动找架、控首龙首塔（首塔率 53.57%、首龙率 55.36%）的节奏特征更适合打乱 T1 慢热开局"
+    ],
+    "sources": [
+      {
+        "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+        "accessed_at": "2026-06-29T04:20:00Z"
+      },
+      {
+        "query": "Karmine Corp MSI 2026 LEC results recent form",
+        "accessed_at": "2026-06-29T04:22:00Z"
+      },
+      {
+        "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+        "accessed_at": "2026-06-29T04:25:00Z"
+      },
+      {
+        "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+        "accessed_at": "2026-06-29T04:26:00Z"
+      },
+      {
+        "query": "KC vs DCG MSI 2026 play in result sweeps",
+        "accessed_at": "2026-06-29T04:30:00Z"
+      },
+      {
+        "query": "LoL 15.13 patch meta MSI 2026 tier list top champions",
+        "accessed_at": "2026-06-29T04:32:00Z"
+      },
+      {
+        "query": "Karmine Corp LEC playoffs 2026 final vs G2 Canna top lane",
+        "accessed_at": "2026-06-29T04:35:00Z"
+      },
+      {
+        "query": "\"Karmine Corp\" vs T1 history League of Legends",
+        "accessed_at": "2026-06-29T04:38:00Z"
+      },
+      {
+        "query": "T1 MSI history slow start play in previous tournaments",
+        "accessed_at": "2026-06-29T04:41:00Z"
+      },
+      {
+        "query": "Karmine Corp play in DCG Canna Yike performance MSI 2026",
+        "accessed_at": "2026-06-29T04:43:00Z"
+      }
+    ]
+  },
+  "raw_text": "<think>The user wants me to re-output the complete JSON object only with `meta_style_signals` properly placed at root level (not nested inside reasoning).</think>\n\n{\n  \"reasoning\": {\n    \"overall\": \"这是一场2026 MSI 季中冠军赛入围赛胜者组对决，T1 与 KC 的首次国际赛事交锋。综合双方阵容深度、近期状态与大赛经验，我倾向于 T1（红方）小优取胜，比分大概率 3-2 或 3-1。T1 在中下两条线（Peyz-Keria、Faker）拥有明显的人员天赋优势，KC 在上路 Canna 对 Doran、以及 Yike 前期节奏上具备抗衡能力，但 KC 缺乏国际赛经验，T1 历史上有 MSI 慢热传统，整体仍是 LCK 顶级运营与个人能力决定系列赛走向。\",\n    \"fundamentals\": \"T1（红方）近10场 5胜5负，最近两场 LCK 资格赛输 HLE 但 3-2 力克 GEN 抢到 MSI 门票；入围赛首轮 3-0 横扫 TL，但 Doran 表现明显拉胯——第二局兰博对狼母被 Morgan 两次单杀，第三局鳄鱼对线被打崩，仅靠中野辅运转才拿下比赛。整体形势属于'刚找到节奏但仍有破绽'。KC（蓝方）近10场 7胜3负，二号种子身份从 LEC 季后赛胜者组一路走来——3-1 G2、3-0 MKOI、决赛 2-3 不敌 G2、MSI 入围赛 3-0 DCG 且多项数据被刷新，目前状态曲线向上、磨合已经到位。T1 客观 16 周年来九次出征 MSI 经验丰富但历史上有'慢热'标签（2023、2024 均止步败者组）；KC 则是队史首次 MSI，球员大赛心理是一个 X 因素。关键选手方面：Faker、Keria、Peyz 三人状态均在线；KC 端 Yike 节奏凶猛、Caliste 在 DCG 战中表现被老板公开肯定，全队信心处于高位。\",\n    \"matchups\": \"对位分析——上路：Canna（KC）vs Doran（T1）五五开接近，Canna 是韩国老将且曾在 T1 体系边缘，对 Doran 的玩法熟悉；Doran 自己在与 TL 的对位中两次被单杀，状态明显不稳，这条线 KC 至少不输甚至小优。打野：Yike vs Oner 是本系列赛最有看点的对位，Yike 风格侵略性极强，Oner 入围赛首轮 66.7% 的一血参与率、6 胜拼惩局证明经验与判断力仍在线，Oner 微优。中路：kyeahoo 对 Faker 是本场最大天赋差距项，Faker 在与 TL 对位中无压力且第二局用瑞兹拿下单杀，kyeahoo 作为新人需要在全局 BP 体系下扩充英雄池才能延缓差距；中路 T1 明显占优。下路：Caliste-Busio 对 Peyz-Keria，Peyz 刚刚在 LCK 资格赛 vs GEN 系列赛中拿下 MVP（22/11/40 全队最高），Keria 是 MSI 历史最强辅助之一、入围赛首轮用卡密尔反复越塔压制 TL，KC 下路组合个人能力与大赛经验全面处于下风，下路 T1 大优。团战与控制力上 T1 拥有更高更稳的 5v5 拉扯和决策，KC 赢在前期小规模摩擦和换线节奏。综合对位权重——下路 T1 优势最大、中单 T1 稳压、上野五五开到 KC 微优，团战 T1 占上风。\",\n    \"meta_style\": \"MSI 本届继续使用全局 BP（fearless draft）+ BO5 双败赛制，这一赛制天然考验英雄池深度与团队战术储备。T1 在这个机制下受益最深——Faker、Keria、Oner 的招牌英雄池极其深厚（Oner 玩赵信/蔚/盲僧全是世界赛冠军皮肤英雄），Peyz 则在新英雄开发上一直领先。KC 一方 Yike 与 Caliste 的英雄池需要在本系列赛中进一步展示，但他们敢打敢拼的特点可能让他们在 Bo5 关键局拿出非常规选择影响比赛。当前版本（Patch 16.13）属于偏运营、控资源的中节奏版本，T1 的控龙率（首龙率 0.4444 看似一般，但首塔、首 Baron 都在 53% 以上）配合其经典运营体系契合度更高；KC 更偏前期主动找架、控小龙与首塔（首塔率 53.57%、首龙率 55.36%），在版本契合度上双方各有侧重，T1 的中后期稳定性在 Bo5 维度更值信赖。\",\n    \"h2h_psych\": \"两队历史交手数据为零，这是双方首次在国际赛事正面交锋，因此 H2H 经验几乎全部归零。心理层面，KC 处于'挑战者'姿态——老板赛前公开发文称'两个半小时后我们将干掉 T1'，下路 Caliste 赛前直言'我们来这里就是为了战胜 T1 然后打进正赛'，战队宣传片打出'是时候为我们的队伍书写历史了'，全队情绪外放、信心拉满。T1 一方作为六冠王、Faker 达成 MSI 100 胜里程碑的传奇之师，承载 LCK 赛区和 Faker 个人荣誉期待，'不能再输'的心理压力不小。体力层面，T1 6 月 28 日刚刚打完一整个 Bo5（3-0 TL 但心理消耗不小），KC 同样在 28 日 3-0 DCG，两队赛程完全对等，T1 多一天 Bo5 长局消耗但 KC 也需要面对节奏切换。大赛临场调整方面，T1 与 Faker 的 Bo5 经验是历史级资产，KC 第一年国际赛事可能在前两局高歌猛进之后，被对手教练组在中后段读出 BP 模式并针对——这是 KC 真正需要警惕的 X 因素。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.45,\n    \"red\": 0.55\n  },\n  \"predicted_winner\": \"red\",\n  \"series_score\": \"3-2\",\n  \"series_length\": 5,\n  \"favored_side\": \"red_slight\",\n  \"key_players\": [\n    { \"player\": \"Faker\", \"team\": \"red\", \"role\": \"mid\", \"reason\": \"刚达成 MSI 百胜里程碑，对位新人 kyeahoo 拥有绝对经验与英雄池优势，是 T1 整个体系的节拍器\" },\n    { \"player\": \"Keria\", \"team\": \"red\", \"role\": \"sup\", \"reason\": \"MSI 历史级辅助，3-0 横扫 TL 时用卡密尔反复越塔，统治力足以撕开 KC 下路空间\" },\n    { \"player\": \"Peyz\", \"team\": \"red\", \"role\": \"adc\", \"reason\": \"刚从 GEN 转会 T1 立刻打出 MVP 表现，22/11/40 vs GEN 系列赛数据，与 Keria 搭档的下路是 T1 最稳的胜负手\" },\n    { \"player\": \"Yike\", \"team\": \"blue\", \"role\": \"jun\", \"reason\": \"KC 体系中的前期节奏引擎，侵略性极强，需要他压制 Oner 来为 KC 中下减压\" },\n    { \"player\": \"Canna\", \"team\": \"blue\", \"role\": \"top\", \"reason\": \"曾是 T1 青训体系边缘，了解 LCK 风格，对位近期状态不稳的 Doran 是 KC 最现实的胜负点\" },\n    { \"player\": \"Doran\", \"team\": \"red\", \"role\": \"top\", \"reason\": \"T1 唯一不稳定因素——3-0 TL 时被 Morgan 单杀两次、对线被压，他的状态回升幅度将直接决定系列赛难易程度\" }\n  ],\n  \"swing_factors\": [\n    \"T1 上路 Doran 的状态：若持续被 Canna 单杀或对线压制，T1 整体节奏会被严重拖慢\",\n    \"全局 BP 下 KC 是否准备了有效的 Faker counter pick：kyeahoo 若能多次在 BP 上让 Faker 远离招牌英雄（Taliyah、Azir 等），可拉平中路差距\",\n    \"首局蓝色方优势在全局 BP 机制下被放大，T1 拿下 play-in 胜者组的同时也获得了首局蓝色方特权\",\n    \"KC 作为国际赛事新军的临场调整能力：前两局若能咬住 1-1，BO5 心理天平将向挑战者倾斜\",\n    \"Oner 的拼惩与节奏控制能否延续对 TL 时 66.7% 一血参与率的表现，将决定 T1 前期经济链是否稳固\"\n  ],\n  \"meta_style_signals\": [\n    \"全局 BP（fearless draft）下双方都需准备至少 12-15 个英雄池，T1 中下深度优势被放大\",\n    \"Patch 16.13 偏中节奏运营版，T1 控塔 7.3 vs 4.46 的稳态领先在 Bo5 中段更值信赖\",\n    \"首局蓝方继承 play-in 胜者组权益，全局 BP 下蓝色方先手 counter pick 影响被放大\",\n    \"KC 偏前期主动找架、控首龙首塔（首塔率 53.57%、首龙率 55.36%）的节奏特征更适合打乱 T1 慢热开局\"\n  ],\n  \"sources\": [\n    { \"query\": \"Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction\", \"accessed_at\": \"2026-06-29T04:20:00Z\" },\n    { \"query\": \"Karmine Corp MSI 2026 LEC results recent form\", \"accessed_at\": \"2026-06-29T04:22:00Z\" },\n    { \"query\": \"T1 roster MSI 2026 Doran Oner Faker Peyz Keria\", \"accessed_at\": \"2026-06-29T04:25:00Z\" },\n    { \"query\": \"Karmine Corp roster 2026 Canna Yike Caliste Busio\", \"accessed_at\": \"2026-06-29T04:26:00Z\" },\n    { \"query\": \"KC vs DCG MSI 2026 play in result sweeps\", \"accessed_at\": \"2026-06-29T04:30:00Z\" },\n    { \"query\": \"LoL 15.13 patch meta MSI 2026 tier list top champions\", \"accessed_at\": \"2026-06-29T04:32:00Z\" },\n    { \"query\": \"Karmine Corp LEC playoffs 2026 final vs G2 Canna top lane\", \"accessed_at\": \"2026-06-29T04:35:00Z\" },\n    { \"query\": \"\\\"Karmine Corp\\\" vs T1 history League of Legends\", \"accessed_at\": \"2026-06-29T04:38:00Z\" },\n    { \"query\": \"T1 MSI history slow start play in previous tournaments\", \"accessed_at\": \"2026-06-29T04:41:00Z\" },\n    { \"query\": \"Karmine Corp play in DCG Canna Yike performance MSI 2026\", \"accessed_at\": \"2026-06-29T04:43:00Z\" }\n  ]\n}",
+  "thinking_text": null,
+  "sources": [
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:26Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:27Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:27Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:35Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:35Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:35Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:38Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:38Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:38Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:38Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:44Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:44Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:44Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:44Z"
+    },
+    {
+      "query": "KC vs DCG MSI 2026 play in result sweeps",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:44Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:46Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:46Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:46Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:46Z"
+    },
+    {
+      "query": "KC vs DCG MSI 2026 play in result sweeps",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:46Z"
+    },
+    {
+      "query": "LoL 15.13 patch meta MSI 2026 tier list top champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:46Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "KC vs DCG MSI 2026 play in result sweeps",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "LoL 15.13 patch meta MSI 2026 tier list top champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "Karmine Corp LEC playoffs 2026 final vs G2 Canna top lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:21:56Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "KC vs DCG MSI 2026 play in result sweeps",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "LoL 15.13 patch meta MSI 2026 tier list top champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "Karmine Corp LEC playoffs 2026 final vs G2 Canna top lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "\"Karmine Corp\" vs T1 history League of Legends",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:00Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "KC vs DCG MSI 2026 play in result sweeps",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "LoL 15.13 patch meta MSI 2026 tier list top champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "Karmine Corp LEC playoffs 2026 final vs G2 Canna top lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "\"Karmine Corp\" vs T1 history League of Legends",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "T1 MSI history slow start play in previous tournaments",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:11Z"
+    },
+    {
+      "query": "Karmine Corp vs T1 MSI 2026 Play-In Knockouts prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 LEC results recent form",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "T1 roster MSI 2026 Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "Karmine Corp roster 2026 Canna Yike Caliste Busio",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "KC vs DCG MSI 2026 play in result sweeps",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "LoL 15.13 patch meta MSI 2026 tier list top champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "Karmine Corp LEC playoffs 2026 final vs G2 Canna top lane",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "\"Karmine Corp\" vs T1 history League of Legends",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "T1 MSI history slow start play in previous tournaments",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    },
+    {
+      "query": "Karmine Corp play in DCG Canna Yike performance MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T04:22:13Z"
+    }
+  ],
+  "input_tokens": 125079,
+  "output_tokens": 8353,
+  "tool_calls": 10,
+  "cost_usd": 0.0,
+  "wall_seconds": 104.95,
+  "error": null
+}

@@ -34,6 +34,7 @@ logs/
 
 # LoLArena generated caches and reports
 data/_pandascore_cache/
+data/_cito_cache/
 data/**/predictions/run_logs/
 docs/site/data.json
 

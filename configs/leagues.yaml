@@ -15,33 +15,41 @@
 
 leagues:
   - name: LCK
+    # PandaScore (legacy / fallback)
     slug: league-of-legends-lck-champions-korea
     id: 293
+    # Cito (primary data source)
+    cito_league_id: lol-lck
     region: KR
     series_keywords: [LCK, Spring, Summer, Playoffs, Regional Finals]
   - name: LPL
     slug: league-of-legends-lpl-china
     id: 294
+    cito_league_id: lol-lpl
     region: CN
     series_keywords: [LPL, Spring, Summer, Playoffs, Regional Finals]
   - name: MSI
     slug: league-of-legends-mid-invitational
     id: 300
+    cito_league_id: lol-msi
     region: INT
     series_keywords: [Mid-Season Invitational, MSI, Mid Invitational]
   - name: Worlds
     slug: league-of-legends-world-championship
     id: 297
+    cito_league_id: lol-worlds
     region: INT
     series_keywords: [World Championship, Worlds]
   - name: LTA-North
     slug: league-of-legends-lta-north
     id: 5345
+    cito_league_id: lol-lta-north
     region: NA
     series_keywords: [LTA, North, Spring, Summer, Playoffs]
   - name: LTA-South
     slug: league-of-legends-lta-south
     id: 5346
+    cito_league_id: lol-lta-south
     region: EU
     series_keywords: [LTA, South, Spring, Summer, Playoffs]
 

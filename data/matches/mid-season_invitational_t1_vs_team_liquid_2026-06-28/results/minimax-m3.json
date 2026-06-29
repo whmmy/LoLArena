@@ -1,0 +1,39 @@
+{
+  "tasks": {
+    "series_winner_prob": {
+      "score": 92.16,
+      "metric": "brier_binary"
+    },
+    "series_score": {
+      "score": 30.0,
+      "metric": "scoreline_similarity"
+    },
+    "series_length_mae": {
+      "score": 66.67,
+      "metric": "mae"
+    },
+    "key_players": {
+      "score": 100.0,
+      "metric": "key_players_recall"
+    },
+    "swing_factors": {
+      "score": 100.0,
+      "metric": "structural_completeness"
+    },
+    "reasoning_fields": {
+      "score": 100.0,
+      "metric": "reasoning_completeness"
+    },
+    "meta_alignment": {
+      "score": 100.0,
+      "metric": "structural_completeness"
+    }
+  },
+  "layers": {
+    "T1_result": 66.58,
+    "T2_matchup": 100.0,
+    "T3_reasoning": 100.0,
+    "T4_meta": 100.0
+  },
+  "composite": 84.96
+}

@@ -1,0 +1,197 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g2",
+  "submitted_at": "2026-06-29T06:47:49.068316+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "TLAW（蓝色方）整体实力更强，已1-0领先且阵容具备极强的全球流节奏与前期滚雪球能力，DCG下路是公认短板且Senna需要时间发育，预计TLAW凭借多线施压在中前期奠定胜局。",
+      "draft_analysis": "TLAW选出了TF上路+潘森打野+瑞兹中路的三全球流体系，配合雷尔的强开团，整体阵容在6级后拥有极强的地图控制与多打少能力。Ziggs作为ADC虽然持续输出不足，但推线与消耗能力出色，可以压制Senna的发育节奏。DCG方面，纳尔上路对线期有优势但TF六级后全球支援会令其边线压力倍增；奥拉夫打野在1v1中克制潘森，但团战中被风筝风险大；塔莉垭中路与瑞兹对线五五开，但游走效率略逊于TF+潘森联动；赛娜+泰坦的下路组合需要时间堆叠赛娜被动，而TLAW的全球流体系恰恰不会给DCG这个时间窗口。整体来看TLAW的阵容曲线更平滑，前中期节奏点密集，DCG则过于依赖赛娜后期成型。",
+      "tempo_wincon": "TLAW的致胜条件是：利用潘森前期gank+TF六级后全球飞+瑞兹开大传送，在15-25分钟窗口期通过多线联动击杀DCG下路赛娜、滚起经济雪球，快速拿下龙魂与大龙结束比赛。DCG的致胜条件是：奥拉夫前期反蹲成功、纳尔上路打出线权、塔莉垭游走帮助赛娜安全发育到三件套后打后期团战。但考虑到DCG下路在联赛中就是短板，面对CoreJJ指挥的TLAW全球流联动，DCG很难守住前中期节奏。"
+    },
+    "win_prob": {
+      "blue": 0.63,
+      "red": 0.37
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 31.5,
+    "kills": {
+      "blue": 15,
+      "red": 9
+    },
+    "total_kills": 24,
+    "key_drafted_champions": [
+      {
+        "champion": "Twisted Fate",
+        "team": "blue",
+        "role": "top",
+        "impact": "全球流核心，六级后大招配合潘森形成多打少，压制DCG边线发育"
+      },
+      {
+        "champion": "Pantheon",
+        "team": "blue",
+        "role": "jun",
+        "impact": "前期gank引擎，半全球大招联动TF实现地图压制，针对DCG薄弱下路"
+      },
+      {
+        "champion": "Ryze",
+        "team": "blue",
+        "role": "mid",
+        "impact": "中后期保险与团战AOE输出，大招传送提供额外地图机动性"
+      },
+      {
+        "champion": "Senna",
+        "team": "red",
+        "role": "adc",
+        "impact": "DCG后期唯一核心输出点，需要安全发育时间，但面对全球流联动难以存活"
+      },
+      {
+        "champion": "Olaf",
+        "team": "red",
+        "role": "jun",
+        "impact": "大招免控可反制TLAW的CC密集开团，是DCG前中期最重要的节奏变量"
+      }
+    ],
+    "sources": [
+      {
+        "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+        "accessed_at": "2026-06-29T06:45:53Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta",
+        "accessed_at": "2026-06-29T06:45:53Z"
+      },
+      {
+        "query": "TLAW Team Liquid Alienware MSI 2026 CoreJJ Quid roster",
+        "accessed_at": "2026-06-29T06:46:30Z"
+      },
+      {
+        "query": "DCG Deep Cross Gaming MSI 2026 HongSuo Flauren Pop9",
+        "accessed_at": "2026-06-29T06:46:30Z"
+      },
+      {
+        "query": "MSI 2026 play-in DCG TLAW June 29 results game 2",
+        "accessed_at": "2026-06-29T06:47:10Z"
+      },
+      {
+        "query": "LoL 2026 patch Senna Ziggs pro play win rate Pantheon Olaf",
+        "accessed_at": "2026-06-29T06:47:10Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"TLAW（蓝色方）整体实力更强，已1-0领先且阵容具备极强的全球流节奏与前期滚雪球能力，DCG下路是公认短板且Senna需要时间发育，预计TLAW凭借多线施压在中前期奠定胜局。\",\n    \"draft_analysis\": \"TLAW选出了TF上路+潘森打野+瑞兹中路的三全球流体系，配合雷尔的强开团，整体阵容在6级后拥有极强的地图控制与多打少能力。Ziggs作为ADC虽然持续输出不足，但推线与消耗能力出色，可以压制Senna的发育节奏。DCG方面，纳尔上路对线期有优势但TF六级后全球支援会令其边线压力倍增；奥拉夫打野在1v1中克制潘森，但团战中被风筝风险大；塔莉垭中路与瑞兹对线五五开，但游走效率略逊于TF+潘森联动；赛娜+泰坦的下路组合需要时间堆叠赛娜被动，而TLAW的全球流体系恰恰不会给DCG这个时间窗口。整体来看TLAW的阵容曲线更平滑，前中期节奏点密集，DCG则过于依赖赛娜后期成型。\",\n    \"tempo_wincon\": \"TLAW的致胜条件是：利用潘森前期gank+TF六级后全球飞+瑞兹开大传送，在15-25分钟窗口期通过多线联动击杀DCG下路赛娜、滚起经济雪球，快速拿下龙魂与大龙结束比赛。DCG的致胜条件是：奥拉夫前期反蹲成功、纳尔上路打出线权、塔莉垭游走帮助赛娜安全发育到三件套后打后期团战。但考虑到DCG下路在联赛中就是短板，面对CoreJJ指挥的TLAW全球流联动，DCG很难守住前中期节奏。\"\n  },\n  \"win_prob\": { \"blue\": 0.63, \"red\": 0.37 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 31.5,\n  \"kills\": { \"blue\": 15, \"red\": 9 },\n  \"total_kills\": 24,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Twisted Fate\", \"team\": \"blue\", \"role\": \"top\", \"impact\": \"全球流核心，六级后大招配合潘森形成多打少，压制DCG边线发育\" },\n    { \"champion\": \"Pantheon\", \"team\": \"blue\", \"role\": \"jun\", \"impact\": \"前期gank引擎，半全球大招联动TF实现地图压制，针对DCG薄弱下路\" },\n    { \"champion\": \"Ryze\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"中后期保险与团战AOE输出，大招传送提供额外地图机动性\" },\n    { \"champion\": \"Senna\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"DCG后期唯一核心输出点，需要安全发育时间，但面对全球流联动难以存活\" },\n    { \"champion\": \"Olaf\", \"team\": \"red\", \"role\": \"jun\", \"impact\": \"大招免控可反制TLAW的CC密集开团，是DCG前中期最重要的节奏变量\" }\n  ],\n  \"sources\": [\n    { \"query\": \"MSI 2026 DCG vs Team Liquid Alienware results\", \"accessed_at\": \"2026-06-29T06:45:53Z\" },\n    { \"query\": \"LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta\", \"accessed_at\": \"2026-06-29T06:45:53Z\" },\n    { \"query\": \"TLAW Team Liquid Alienware MSI 2026 CoreJJ Quid roster\", \"accessed_at\": \"2026-06-29T06:46:30Z\" },\n    { \"query\": \"DCG Deep Cross Gaming MSI 2026 HongSuo Flauren Pop9\", \"accessed_at\": \"2026-06-29T06:46:30Z\" },\n    { \"query\": \"MSI 2026 play-in DCG TLAW June 29 results game 2\", \"accessed_at\": \"2026-06-29T06:47:10Z\" },\n    { \"query\": \"LoL 2026 patch Senna Ziggs pro play win rate Pantheon Olaf\", \"accessed_at\": \"2026-06-29T06:47:10Z\" }\n  ]\n}",
+  "thinking_text": "Let me analyze this match. It's MSI 2026, Game 2 of Deep Cross Gaming (DCG) vs Team Liquid Alienware (TLAW). DCG leads 1-0 in the series.\n\nLet me look at the BP:\n\n**Blue side (TLAW):**\n- Top: Twisted Fate (Morgan)\n- Jun: Pantheon (Josedeodo)\n- Mid: Ryze (Quid)\n- ADC: Ziggs (Yeon)\n- Sup: Rell (CoreJJ)\n\n**Red side (DCG):**\n- Top: Gnar (Flauren)\n- Jun: Olaf (Pop9)\n- Mid: Taliyah (HongSuo)\n- ADC: Senna (Feng)\n- Sup: Nautilus (ShiauC)\n\nLet me search for relevant information about this match and the current meta.\nLet me search for more specific information about the matchup and the champions picked.\nLet me analyze the information I've gathered:\n\n1. **MSI 2026 Context**: This is the MSI 2026 play-in stage. The match is between DCG (Deep Cross Gaming, from LCP/Pacific) and TLAW (Team Liquid Alienware, from LCS/North America). The series score shows TLAW leads 1-0.\n\n2. **Schedule**: On June 28, T1 vs TLAW and KC vs DCG were the first day matches. So it seems like TLAW played T1 and DCG played KC first. But this match is DCG vs TLAW - this must be a subsequent match in the play-in bracket (likely the losers' bracket or winners' bracket match on June 29).\n\n3. **DCG Roster**: Flauren (top), Pop9 (jungle), HongSuo (mid), Feng (ADC), ShiauC (support). They're a young team from LCP, came from the challenger league, upset GAM to qualify.\n\n4. **TLAW Roster**: Morgan (top), Josedeodo (jungle), Quid (mid), Yeon (ADC), CoreJJ (support). CoreJJ is a veteran LCS support.\n\n5. **Game 2 BP Analysis**:\n\n**Blue side (TLAW)**:\n- Top: Twisted Fate (Morgan)\n- Jungle: Pantheon (Josedeodo)\n- Mid: Ryze (Quid)\n- ADC: Ziggs (Yeon)\n- Support: Rell (CoreJJ)\n\n**Red side (DCG)**:\n- Top: Gnar (Flauren)\n- Jungle: Olaf (Pop9)\n- Mid: Taliyah (HongSuo)\n- ADC: Senna (Feng)\n- Support: Nautilus (ShiauC)\n\nLet me analyze the draft:\n\n**TLAW (Blue)**:\n- TF top + Ryze mid = two global/semi-global presence champions\n- Pantheon jungle = early game pressure, semi-global ultimate\n- Ziggs ADC = siege/poke, wave clear, tower taking\n- Rell support = engage, CC chain\n- This is a very \"pick and skirmish\" oriented comp with multiple global ultimates (TF, Pantheon, Ryze to some extent)\n- Weakness: Ziggs ADC means no traditional auto-carry, relies on poke and siege\n- The comp has good pick potential with TF+Pantheon+Rell dives\n\n**DCG (Red)**:\n- Gnar top = split push, teamfight with mega Gnar\n- Olaf jungle = early invade, duel potential, immune to CC\n- Taliyah mid = roaming, map control, wall changes\n- Senna ADC = scaling, utility, long range\n- Nautilus support = engage, CC, tank\n- This comp has good engage with Nautilus + Gnar + Olaf frontline\n- Senna provides scaling and utility\n- Taliyah gives roaming potential to match TF's map pressure\n\n**Key matchups**:\n- Top: TF vs Gnar - Gnar has better lane presence and teamfight, TF relies on map plays\n- Jungle: Pantheon vs Olaf - Olaf wins 1v1, Pantheon better at ganks/early dives\n- Mid: Ryze vs Taliyah - Taliyah has better roaming, Ryze scales better and has utility\n- Bot: Ziggs+Rell vs Senna+Nautilus - Ziggs pokes, Senna scales; Nautilus can engage on Ziggs\n\n**Analysis**:\n- TLAW has a very aggressive early-mid game comp with multiple global/semi-global ultimates\n- The TF+Pantheon combo is deadly for early dives and picks\n- However, Ziggs ADC means they lack sustained DPS in prolonged fights\n- DCG has better teamfight potential with Gnar+Nautilus+Olaf frontline and Senna scaling\n- Taliyah can counter TF's roaming with her own roams\n- Olaf is a problem for TLAW since he's immune to CC from Pantheon/Rell\n\nTLAW leads 1-0 in the series, so they have momentum. DCG is the underdog from a weaker region.\n\nHowever, looking at the draft more carefully:\n- TLAW's comp is very pick-oriented but lacks sustained damage\n- DCG's comp has better teamfight and scaling\n- Olaf is a strong counter to TLAW's CC-heavy comp\n- Senna+Nautilus is a solid bot lane that can survive Ziggs poke and scale\n\nI think this is relatively close. TLAW has the series lead and a more proactive draft, but DCG's comp has good answers. Let me give TLAW a slight edge due to their momentum and the pick potential of their comp, but it's not overwhelming.\n\nActually, let me reconsider. The Ziggs ADC pick is quite risky in pro play - it means TLAW is betting heavily on early-mid game picks and tower pressure. If DCG can weather the early storm, their teamfight comp with Gnar+Olaf+Nautilus+Senna should be stronger in 5v5s.\n\nBut TLAW has CoreJJ who is very experienced, and their global pressure comp can snowball quickly if they get early kills.\n\nI'll give TLAW about 55% win probability - slight favorite due to series momentum and proactive draft, but DCG's comp has good answers if they play it right.\n\nFor duration: TLAW's comp wants to end early-mid game, DCG wants to scale. If TLAW executes well, it could be around 30-33 minutes. Let me estimate 31 minutes.\n\nFor kills: With Pantheon+TF+Rell on one side and Nautilus+Olaf+Gnar on the other, there should be decent fighting. Ziggs poke can create kill pressure. I'll estimate around 14-12 in favor of TLAW, total 26.\n\nLet me do one more search to check if there's any info about this specific match.\nLet me analyze the situation based on what I've gathered:\n\n1. **Series context**: This is MSI 2026 play-in stage. The series score shows TLAW (blue) leads 1-0 over DCG (red). This is Game 2.\n\n2. **Key findings from search**:\n- T1 beat TLAW 3-0 on June 28 (first day of MSI play-in)\n- KC beat DCG 3-0 on June 28 (first day of MSI play-in)\n- So on June 29, T1 vs KC play (winners match), and TLAW vs DCG play (losers match)\n- This match (TLAW vs DCG) is the losers bracket match on June 29\n- TLAW already leads 1-0 in this BO5\n\n3. **Team strength assessment**:\n- TLAW: LCS #2 seed, has CoreJJ (veteran support), Quid (mid), Josedeodo (jungle), Morgan (top), Yeon (ADC)\n- DCG: LCP #2 seed, from PCS through promotion, considered the weakest team at MSI (ranked #11). Key players: Flauren (top, 19 years old), Pop9 (jungle), HongSuo (mid), Feng (ADC), ShiauC (support)\n- DCG's bot lane was noted as struggling even in their own league\n- DCG was swept 3-0 by KC, TLAW was swept 3-0 by T1\n\n4. **BP Analysis for Game 2**:\n\n**Blue side (TLAW)**:\n- Top: Twisted Fate (Morgan)\n- Jungle: Pantheon (Josedeodo)\n- Mid: Ryze (Quid)\n- ADC: Ziggs (Yeon)\n- Support: Rell (CoreJJ)\n\n**Red side (DCG)**:\n- Top: Gnar (Flauren)\n- Jungle: Olaf (Pop9)\n- Mid: Taliyah (HongSuo)\n- ADC: Senna (Feng)\n- Support: Nautilus (ShiauC)\n\n**Draft Analysis**:\n\nTLAW (Blue):\n- TF top + Ryze mid = double AP, both have global/semi-global presence (TF ultimate, Ryze ultimate)\n- Pantheon jungle = strong early ganks, semi-global ultimate\n- Ziggs ADC = siege/poke, wave clear, not a traditional carry\n- Rell support = engage tank, good combo with the dive composition\n- This is a very aggressive early-mid game composition with multiple global/semi-global ultimates for map pressure\n- The team has strong pick potential with TF+Pantheon+Rell dives\n- Weakness: Ziggs as ADC means limited sustained DPS in prolonged fights, relies on poke and siege\n\nDCG (Red):\n- Gnar top = split push, teamfight with mega Gnar\n- Olaf jungle = strong early duelist, good against Pantheon in 1v1\n- Taliyah mid = roaming, wave clear, good against Ryze (can roam with roams)\n- Senna ADC = scaling, utility, long range poke\n- Nautilus support = engage, CC tank\n- This is a more standard composition with scaling (Senna) and engage (Nautilus)\n- Olaf can counter-gank Pantheon effectively\n- Taliyah vs Ryze is a skill matchup, both have roaming potential\n\n**Key matchups**:\n- Top: TF vs Gnar - Gnar has lane advantage early, TF scales and has map pressure\n- Jungle: Pantheon vs Olaf - Olaf wins 1v1, but Pantheon has better gank/map pressure with TF\n- Mid: Ryze vs Taliyah - Both scale, Taliyah has better early roaming\n- Bot: Ziggs+Rell vs Senna+Nautilus - Ziggs pokes, Senna scales. Nautilus engage vs Rell engage\n\n**Overall assessment**:\n- TLAW is the stronger team (LCS #2 vs LCP #2 which is considered weaker)\n- TLAW already leads 1-0\n- TLAW's composition has strong early-mid game tempo with global pressure (TF+Pantheon+Ryze all have map-wide ultimates)\n- DCG's composition needs time for Senna to scale\n- DCG's bot lane was identified as their weakest point, and they're running Senna which needs protection\n- TLAW's dive composition (Pantheon+TF+Rell) can target DCG's weak bot lane\n- However, Olaf can be problematic for TLAW's dive-heavy approach (Olaf ultimate makes him immune to CC)\n\nGiven TLAW's overall team strength advantage, 1-0 series lead, and a composition designed for early-mid game snowball with global pressure, I'd favor TLAW (blue) to win this game.\n\nExpected duration: TLAW's comp wants to end early-mid (25-32 min), DCG wants to scale. If TLAW executes well, around 30-33 minutes.\n\nLet me estimate: TLAW wins, around 31-33 minutes, with moderate kills.\n\nLet me finalize my prediction:\n- Winner: Blue (TLAW)\n- Win probability: Blue 0.62, Red 0.38\n- Duration: ~31.5 minutes\n- Kills: Blue 15, Red 10 (total 25)\n\nKey drafted champions:\n1. Twisted Fate (blue, top) - global pressure, pick potential with Pantheon\n2. Pantheon (blue, jungle) - early gank pressure, semi-global ultimate\n3. Ryze (blue, mid) - late game insurance, teamfight damage\n4. Senna (red, adc) - DCG's scaling win condition\n5. Olaf (red, jungle) - counter to TLAW's CC-heavy dive comp",
+  "sources": [
+    {
+      "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:10Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:12Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:12Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "TLAW Team Liquid Alienware MSI 2026 CoreJJ Quid roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:21Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "TLAW Team Liquid Alienware MSI 2026 CoreJJ Quid roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming MSI 2026 HongSuo Flauren Pop9",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:24Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:53Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:53Z"
+    },
+    {
+      "query": "TLAW Team Liquid Alienware MSI 2026 CoreJJ Quid roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:53Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming MSI 2026 HongSuo Flauren Pop9",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:53Z"
+    },
+    {
+      "query": "MSI 2026 play-in DCG TLAW June 29 results game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:53Z"
+    },
+    {
+      "query": "MSI 2026 DCG vs Team Liquid Alienware results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:56Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI Ziggs ADC Ryze Twisted Fate meta",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:56Z"
+    },
+    {
+      "query": "TLAW Team Liquid Alienware MSI 2026 CoreJJ Quid roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:56Z"
+    },
+    {
+      "query": "DCG Deep Cross Gaming MSI 2026 HongSuo Flauren Pop9",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:56Z"
+    },
+    {
+      "query": "MSI 2026 play-in DCG TLAW June 29 results game 2",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:56Z"
+    },
+    {
+      "query": "LoL 2026 patch Senna Ziggs pro play win rate Pantheon Olaf",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:46:56Z"
+    }
+  ],
+  "input_tokens": 33405,
+  "output_tokens": 4286,
+  "tool_calls": 6,
+  "cost_usd": 0.080878,
+  "wall_seconds": 112.38,
+  "error": null
+}

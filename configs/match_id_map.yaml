@@ -1,0 +1,27 @@
+# LoLArena — legacy PandaScore match_id -> Cito matchId mapping.
+#
+# Use case: grade predictions that were made under the OLD PandaScore data
+# source (match_id was PandaScore's numeric id, e.g. 1524755). The current
+# pipeline talks to Cito, whose match ids are Riot numeric ids (e.g.
+# 115570934355614497, possibly with a "lol-match-" prefix). Cito cannot look
+# up a match by its PandaScore id, so we map them here.
+#
+# `cmd_grade` / `cmd_grade_game` consult this table as a fallback: when a
+# match_id isn't found in Cito directly, the mapped Cito id is used instead to
+# fetch the post-match truth. The prediction files themselves are untouched
+# (they judge winners by side: blue/red, which is source-agnostic).
+#
+# Format:  <panda_match_id>: <cito_match_id_or_numeric>
+# Leave a value empty / commented to mark "not tracked in Cito" (grade skips it).
+#
+# To find a Cito id for an old match, search by team names + date:
+#   python -c "from src.adapters.cito import CitoClient as C; \
+#     [print(e['matchId'], e['startTime'][:10], \
+#       (e.get('teams') or [{}])[0].get('name'), 'vs', \
+#       (e.get('teams') or [{},{}])[1].get('name')) \
+#      for e in (C().get('/lol/schedule/past') or [])[:20]]"
+
+mappings:
+  # MSI 2026 Play-In Knockouts (2026-06-28, both finished)
+  1524755: 115570934355614497   # T1 vs Team Liquid      -> T1 3-0 (cito completed)
+  1524754: 115570934355614503   # Karmine Corp vs DCG     -> KC 3-0 (cito completed)

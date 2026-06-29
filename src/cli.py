@@ -56,8 +56,8 @@ def main(argv: list[str] | None = None) -> int:
     if cmd == "refresh-bp":
         _need(rest, 2, "refresh-bp <match_id> <game_pos>")
         from .pipeline import collect as collect_mod
-        from .adapters.pandascore import PandaScoreClient
-        client = PandaScoreClient()
+        from .adapters.cito import CitoClient
+        client = CitoClient()
         match = collect_mod.fetch_fixture(int(rest[0]), client, refresh=True)
         bp = collect_mod.fetch_game_bp(match, int(rest[1]), client, refresh=True)
         if bp is None:

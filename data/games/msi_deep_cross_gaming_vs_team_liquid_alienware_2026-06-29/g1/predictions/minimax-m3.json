@@ -1,0 +1,232 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g1",
+  "submitted_at": "2026-06-29T06:09:11.347415+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "TLAW 凭借蓝色方先选优势与更主动的前中期节奏阵容（Xin Zhao/Akali/Bard 三核带节奏）略占上风，但 DCG 阵容后期团战上限更高（Rumble+J4+Cass 三重团战大招），双方实力接近。综合赛区强度、阵容曲线和首日表现，预测 TLAW 在这场生死局中略胜一筹。",
+      "draft_analysis": "TLAW（蓝色方）拿到一套以 Xin Zhao 为节奏核心的前中期打架阵容：Ornn 提供稳定前排与升级奖励，Akali 单线压制 Cassiopeia 关键发育，Varus 提供远程消耗与一手开团大招，Bard 则可以游走制造多线压力。这是一套典型的'先动手打优势'阵容，曲线集中在 20–30 分钟，30 分钟后乏力。DCG（红色方）则是一套纯正的团战阵容：Rumble 的大招分隔战场、Jarvan IV 的 Cataclysm 锁定、Cassiopeia 的 R 反手控场（针对 Akali 突进）、Rakan 的 W 强开、Jhin 的远距 W/大招先手，五重团战工具叠加让 DCG 在 5v5 中拥有极强的拉扯与控制链。不过这条阵容的弱点同样明显：Cassiopeia 前期对线脆、装备成型慢、Jhin 是工具人 ADC、J4 在面对 Xin Zhao 时野区 1v1 处于劣势。BP 上 TLAW 拿到了克制 Cass 的 Akali 是关键手，Bard 还能干扰 DCG 下路双人组的发育节奏。",
+      "tempo_wincon": "节奏主动权在 TLAW：Josedeodo 的 Xin Zhao 必须在前期通过入侵和 gank 拿到优势，配合 CoreJJ 的 Bard 神级游走在下路和中路寻找击杀，让 Quid 的 Akali 在 2 件套时接管比赛。如果 TLAW 能在 20 分钟左右拿到 3k+ 经济差并在 25 分钟前控下大龙，他们就能在 DCG 阵容完全成型前终结比赛。DCG 的胜算窗口在 30 分钟之后：拖到 Rumble/J4/Cass 都满装满 CD，利用 J4+Rakan 强行开团、Rumble 等温火分隔战场、Cass 控场 Akali 的进场路径来赢团。HongSuo 的 Cass 必须扛过 Akali 的前期压力，而 Pop9 的 J4 需要顶住 Josedeodo 的入侵压力。如果 TLAW 在 22 分钟前没有滚起足够雪球，DCG 的团战阵容接管比赛的概率会显著上升。"
+    },
+    "win_prob": {
+      "blue": 0.55,
+      "red": 0.45
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 33.5,
+    "kills": {
+      "blue": 15,
+      "red": 12
+    },
+    "total_kills": 27,
+    "key_drafted_champions": [
+      {
+        "champion": "Xin Zhao",
+        "team": "blue",
+        "role": "jun",
+        "impact": "TLAW 全队的节奏引擎，决定前 20 分钟雪球能否滚起来"
+      },
+      {
+        "champion": "Akali",
+        "team": "blue",
+        "role": "mid",
+        "impact": "对 Cassiopeia 形成单线压制，是 TLAW 中期接管比赛的核心"
+      },
+      {
+        "champion": "Bard",
+        "team": "blue",
+        "role": "sup",
+        "impact": "CoreJJ 招牌游走英雄，能在 DCG 阵容成型前制造多线击杀"
+      },
+      {
+        "champion": "Cassiopeia",
+        "team": "red",
+        "role": "mid",
+        "impact": "DCG 后期团战的真正核心，R 可直接废掉 Akali 突进"
+      },
+      {
+        "champion": "Rumble",
+        "team": "red",
+        "role": "top",
+        "impact": "等温火大招是 DCG 中后期团战胜负手，能强分隔 TLAW 阵型"
+      }
+    ],
+    "sources": [
+      {
+        "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+        "accessed_at": "2026-06-29T06:08:00Z"
+      },
+      {
+        "query": "LoL MSI 2026 patch version meta tier list",
+        "accessed_at": "2026-06-29T06:08:00Z"
+      },
+      {
+        "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+        "accessed_at": "2026-06-29T06:09:00Z"
+      },
+      {
+        "query": "Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ",
+        "accessed_at": "2026-06-29T06:09:00Z"
+      },
+      {
+        "query": "MSI 2026 play-in TLAW DCG June 29 match",
+        "accessed_at": "2026-06-29T06:10:00Z"
+      },
+      {
+        "query": "Akali Cassiopeia mid lane MSI 2026 meta patch strength",
+        "accessed_at": "2026-06-29T06:10:00Z"
+      }
+    ]
+  },
+  "raw_text": "<think>Now I have a good understanding. Let me think about this game carefully:\n\n**Context:**\n- This is a match in the MSI 2026 Play-In stage\n- TLAW (Team Liquid Alienware) lost 0-3 to T1 on June 28\n- DCG (Deep Cross Gaming) lost 0-3 to KC on June 28\n- This is the loser's bracket - the loser is eliminated, the winner advances\n- Series is 0-0 in this BO5 (so it's the first game of a new BO5)\n- Looking at the BP, this is game 1 of 5 (since position is 1)\n\n**Blue (TLAW):**\n- Top: Morgan - Ornn (tank, scaling)\n- Jungle: Josedeodo - Xin Zhao (early game diver)\n- Mid: Quid - Akali (assassin/skirmisher)\n- ADC: Yeon - Varus (poke/utility)\n- Support: CoreJJ - Bard (roamer)\n\n**Red (DCG):**\n- Top: Flauren - Rumble (AP bruiser, teamfight)\n- Jungle: Pop9 - Jarvan IV (engage/dive)\n- Mid: HongSuo - Cassiopeia (AP mage, late-game DPS)\n- ADC: Feng - Jhin (utility ADC)\n- Support: ShiauC - Rakan (engage support)\n\n**Analysis:**\n\nTLAW's comp: Ornn/Xin/Akali/Varus/Bard\n- This is a skirmish-heavy, pick-oriented comp with roaming potential from Bard\n- Akali is a strong solo lane threat\n- Xin Zhao needs early game to snowball\n- Varus provides poke and consistent DPS\n- The comp has decent scaling but needs to win mid-game through skirmishes\n\nDCG's comp: Rumble/J4/Cass/Jhin/Rakan\n- Strong teamfight comp with hard engage (J4 + Rakan)\n- Rumble is a top-tier teamfight champion with equalizer ult\n- Cassiopeia is a late-game monster but vulnerable to dives pre-6\n- Jhin provides pick potential with W and long-range ults\n- Rakan can flash-W engage\n- This comp has strong scaling but weak early game\n\n**Key Matchups:**\n- Morgan (Ornn) vs Flauren (Rumble): Rumble favored in lane and teamfights; Ornn is for engage and item upgrades\n- Josedeodo (Xin) vs Pop9 (J4): Both early gankers, J4 has more reliable engage\n- Quid (Akali) vs HongSuo (Cass): Akali favored pre-6, Cass scales hard\n- Yeon (Varus) vs Feng (Jhin): Varus has stronger lane, Jhin scales and provides utility\n- CoreJJ (Bard) vs ShiauC (Rakan): Bard roam vs Rakan engage\n\n**Team Performance:**\n- TLAW lost 0-3 to T1, where Josedeodo was invisible (0% kill participation in kills), but Morgan was a bright spot in lane\n- DCG lost 0-3 to KC - they struggled\n- TLAW seems slightly stronger based on regional rankings\n\n**Context:**\n- TLAW is LCS #2, DCG is LCP #2\n- This is a lower-bracket BO5 - loser is eliminated\n\n**Draft Assessment:**\n- TLAW has a more proactive draft with strong early/mid-game potential\n- DCG has better scaling but weaker early\n- DCG's teamfight is much stronger with Rumble ult, J4 ult, Cass ult (anti-engage), Rakan W, Jhin W\n- TLAW has Bard roam potential to set up picks\n- Both comps have engage, DCG has more reliable engage tools\n- DCG has more CC chaining potential\n\n**Tempo:**\n- TLAW needs early game with Xin/Akali/Bard roam to snowball\n- DCG wants to scale, get Cass/Rumble items, then teamfight\n- Bard's roaming can disrupt DCG's scaling plan\n\n**Verdict:**\nThis is a close game. DCG has a stronger late-game teamfight comp with multiple AoE ults. TLAW has a more proactive early/mid game comp.\n\nConsidering:\n- TLAW's weak performance vs T1 (3-0 loss with Josedeodo struggling)\n- DCG's weak performance vs KC (3-0 loss)\n- TLAW Morgan being a bright spot in losses\n- DCG's Pop9 being their key player\n\nBoth teams have shown weaknesses, but TLAW might be slightly better due to LCS being a stronger region than LCP. However, DCG's comp here seems more cohesive with hard engage and strong scaling.\n\nI think this game is close, with a slight edge to TLAW due to:\n1. Region strength (LCS > LCP)\n2. Bard roam creating picks\n3. Akali snowball potential\n4. Morgan was a bright spot in TL's losses\n\nBut DCG has:\n1. Strong teamfight comp\n2. Better scaling\n3. Rakan/J4 engage combo\n4. Cassiopeia late game threat\n\nI'll give TLAW a slight edge, say 55-60%. Duration around 32-34 minutes. Kills around 25-28 total.\n\nLet me finalize my prediction. Given the close nature and considering DCG's teamfight strength, I'll go with TLAW slightly favored at 55%.\n\nActually, let me reconsider. DCG's comp has:\n- Rumble equalizer (huge teamfight ult)\n- J4 Cataclysm (single target lockdown)\n- Cass Miasma (anti-engage/sustained damage)\n- Rakan W (engage)\n- Jhin W (pick)\n\nTLAW's comp has:\n- Ornn ult (AoE knockup, but slow cast)\n- Xin Zhao ult (isolation)\n- Akali (assassination)\n- Varus ult (pick)\n- Bard ult (stasis)\n\nDCG's teamfight is significantly stronger if it goes late. TLAW needs to win before 30 minutes.\n\nGiven that both teams are weak and DCG's comp scales better, but TLAW has Bard roam... I think this is 50-50 with slight edge to TLAW due to region strength. Let me go with 55% TLAW, 45% DCG.\n\nActually looking more carefully at this: TLAW on blue side has first pick advantage. They picked Xin Zhao first which suggests they wanted to secure it. The comp they built around it (Ornn/Akali/Varus/Bard) is a skirmish/snowball comp.\n\nDCG's comp is clearly built around teamfighting with multiple AoE/CC ults.\n\nI'll lean TLAW 55% given early game pressure and roam potential. Duration around 33 minutes. Total kills around 25-28.</think>\n\n```json\n{\n  \"reasoning\": {\n    \"overall\": \"TLAW 凭借蓝色方先选优势与更主动的前中期节奏阵容（Xin Zhao/Akali/Bard 三核带节奏）略占上风，但 DCG 阵容后期团战上限更高（Rumble+J4+Cass 三重团战大招），双方实力接近。综合赛区强度、阵容曲线和首日表现，预测 TLAW 在这场生死局中略胜一筹。\",\n    \"draft_analysis\": \"TLAW（蓝色方）拿到一套以 Xin Zhao 为节奏核心的前中期打架阵容：Ornn 提供稳定前排与升级奖励，Akali 单线压制 Cassiopeia 关键发育，Varus 提供远程消耗与一手开团大招，Bard 则可以游走制造多线压力。这是一套典型的'先动手打优势'阵容，曲线集中在 20–30 分钟，30 分钟后乏力。DCG（红色方）则是一套纯正的团战阵容：Rumble 的大招分隔战场、Jarvan IV 的 Cataclysm 锁定、Cassiopeia 的 R 反手控场（针对 Akali 突进）、Rakan 的 W 强开、Jhin 的远距 W/大招先手，五重团战工具叠加让 DCG 在 5v5 中拥有极强的拉扯与控制链。不过这条阵容的弱点同样明显：Cassiopeia 前期对线脆、装备成型慢、Jhin 是工具人 ADC、J4 在面对 Xin Zhao 时野区 1v1 处于劣势。BP 上 TLAW 拿到了克制 Cass 的 Akali 是关键手，Bard 还能干扰 DCG 下路双人组的发育节奏。\",\n    \"tempo_wincon\": \"节奏主动权在 TLAW：Josedeodo 的 Xin Zhao 必须在前期通过入侵和 gank 拿到优势，配合 CoreJJ 的 Bard 神级游走在下路和中路寻找击杀，让 Quid 的 Akali 在 2 件套时接管比赛。如果 TLAW 能在 20 分钟左右拿到 3k+ 经济差并在 25 分钟前控下大龙，他们就能在 DCG 阵容完全成型前终结比赛。DCG 的胜算窗口在 30 分钟之后：拖到 Rumble/J4/Cass 都满装满 CD，利用 J4+Rakan 强行开团、Rumble 等温火分隔战场、Cass 控场 Akali 的进场路径来赢团。HongSuo 的 Cass 必须扛过 Akali 的前期压力，而 Pop9 的 J4 需要顶住 Josedeodo 的入侵压力。如果 TLAW 在 22 分钟前没有滚起足够雪球，DCG 的团战阵容接管比赛的概率会显著上升。\"\n  },\n  \"win_prob\": { \"blue\": 0.55, \"red\": 0.45 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 33.5,\n  \"kills\": { \"blue\": 15, \"red\": 12 },\n  \"total_kills\": 27,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Xin Zhao\", \"team\": \"blue\", \"role\": \"jun\", \"impact\": \"TLAW 全队的节奏引擎，决定前 20 分钟雪球能否滚起来\" },\n    { \"champion\": \"Akali\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"对 Cassiopeia 形成单线压制，是 TLAW 中期接管比赛的核心\" },\n    { \"champion\": \"Bard\", \"team\": \"blue\", \"role\": \"sup\", \"impact\": \"CoreJJ 招牌游走英雄，能在 DCG 阵容成型前制造多线击杀\" },\n    { \"champion\": \"Cassiopeia\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"DCG 后期团战的真正核心，R 可直接废掉 Akali 突进\" },\n    { \"champion\": \"Rumble\", \"team\": \"red\", \"role\": \"top\", \"impact\": \"等温火大招是 DCG 中后期团战胜负手，能强分隔 TLAW 阵型\" }\n  ],\n  \"sources\": [\n    { \"query\": \"MSI 2026 Deep Cross Gaming vs Team Liquid Alienware\", \"accessed_at\": \"2026-06-29T06:08:00Z\" },\n    { \"query\": \"LoL MSI 2026 patch version meta tier list\", \"accessed_at\": \"2026-06-29T06:08:00Z\" },\n    { \"query\": \"Deep Cross Gaming DCG LCP MSI 2026 roster results\", \"accessed_at\": \"2026-06-29T06:09:00Z\" },\n    { \"query\": \"Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ\", \"accessed_at\": \"2026-06-29T06:09:00Z\" },\n    { \"query\": \"MSI 2026 play-in TLAW DCG June 29 match\", \"accessed_at\": \"2026-06-29T06:10:00Z\" },\n    { \"query\": \"Akali Cassiopeia mid lane MSI 2026 meta patch strength\", \"accessed_at\": \"2026-06-29T06:10:00Z\" }\n  ]\n}\n```",
+  "thinking_text": null,
+  "sources": [
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:36Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:39Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:39Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:46Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:46Z"
+    },
+    {
+      "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:46Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:49Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:49Z"
+    },
+    {
+      "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:49Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:49Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:53Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:53Z"
+    },
+    {
+      "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:53Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:53Z"
+    },
+    {
+      "query": "Ornn Rumble matchup MSI 2026 draft pick winrate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:07:53Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "Ornn Rumble matchup MSI 2026 draft pick winrate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "MSI 2026 play-in TLAW DCG June 29 match",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    },
+    {
+      "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    },
+    {
+      "query": "Ornn Rumble matchup MSI 2026 draft pick winrate",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    },
+    {
+      "query": "MSI 2026 play-in TLAW DCG June 29 match",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    },
+    {
+      "query": "Akali Cassiopeia mid lane MSI 2026 meta patch strength",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T06:08:06Z"
+    }
+  ],
+  "input_tokens": 31697,
+  "output_tokens": 3105,
+  "tool_calls": 7,
+  "cost_usd": 0.0,
+  "wall_seconds": 103.56,
+  "error": null
+}

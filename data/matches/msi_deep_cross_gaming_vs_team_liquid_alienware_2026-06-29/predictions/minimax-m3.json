@@ -1,0 +1,800 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "match",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29",
+  "submitted_at": "2026-06-29T05:56:24.686291+00:00",
+  "prediction": {
+    "sources": [
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:23Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:26Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:26Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:33Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:33Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:33Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:37Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:37Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:37Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:37Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:39Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:39Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:39Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:39Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:39Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:51Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:51Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:51Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:51Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:51Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:51Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:54Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:55:57Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:06Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "Quid Yeon CoreJJ mid laner LCS playoffs performance 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:08Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "Quid Yeon CoreJJ mid laner LCS playoffs performance 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "\"Flauren\" \"Pop9\" Deep Cross Gaming LCP playoff performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:11Z"
+      },
+      {
+        "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "Quid Yeon CoreJJ mid laner LCS playoffs performance 2026",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "\"Flauren\" \"Pop9\" Deep Cross Gaming LCP playoff performance",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      },
+      {
+        "query": "MSI 2026 入围赛 DCG TLAW 6月29 比赛 KC T1",
+        "engine": "search_pro",
+        "accessed_at": "2026-06-29T05:56:24Z"
+      }
+    ]
+  },
+  "raw_text": "",
+  "thinking_text": null,
+  "sources": [
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:23Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:26Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:26Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:33Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:33Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:33Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:37Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:37Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:37Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:37Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:39Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:39Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:39Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:39Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:39Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:51Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:51Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:51Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:51Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:51Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:51Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:54Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:55:57Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:06Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "Quid Yeon CoreJJ mid laner LCS playoffs performance 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:08Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "Quid Yeon CoreJJ mid laner LCS playoffs performance 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "\"Flauren\" \"Pop9\" Deep Cross Gaming LCP playoff performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:11Z"
+    },
+    {
+      "query": "MSI 2026 Play-In Knockouts Deep Cross Gaming Team Liquid",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "Team Liquid Alienware LCS 2026 Summer roster Yeon CoreJJ",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "\"Deep Cross Gaming\" LCP 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "LoL patch 14.10 MSI 2026 meta tier list strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "MSI 2026 results Play-In DCG Team Liquid Alienware",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "\"Team Liquid\" LCS 2026 playoffs LYON final result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "LoL 14.10 14.11 meta champions tier list mid top 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "\"Josedeodo\" Josedeodo LLA LCS 2026 jungler performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "MSI 2026 大田 赛程 比赛结果 入围赛 DCG TLAW",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "Quid Yeon CoreJJ mid laner LCS playoffs performance 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "\"Flauren\" \"Pop9\" Deep Cross Gaming LCP playoff performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    },
+    {
+      "query": "MSI 2026 入围赛 DCG TLAW 6月29 比赛 KC T1",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-29T05:56:24Z"
+    }
+  ],
+  "input_tokens": 108480,
+  "output_tokens": 1171,
+  "tool_calls": 12,
+  "cost_usd": 0.0,
+  "wall_seconds": 73.95,
+  "error": "UnprocessableEntityError: Error code: 422 - {'type': 'error', 'error': {'type': 'unprocessable_entity_error', 'message': 'input new_sensitive (1026)', 'http_code': '422'}, 'request_id': '06913c0a2e3169ea2225df867f781549'}"
+}

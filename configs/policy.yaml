@@ -6,14 +6,22 @@
 #   -> each model decides what to search itself  ->  pure reasoning  ->  JSON
 
 # What the system collects into context_pack.json (shared by every model).
+# Data source: Cito API (see doc/citoapi-lol/). Blocks are grouped by quota cost.
 context_pack:
+  # --- core (cheap, ~1 req/team): always on ---
   fixture_header: true
-  rosters: true
-  recent_form: true          # last 10 games per team
+  rosters: true              # /teams/{slug}/roster/history
+  recent_form: true          # last N games per team (from team objectives)
   recent_form_window: 10
-  hero_pools: true           # champions each player used recently
-  meta_reference: true       # current-patch champions + items
-  h2h: true
+  h2h: true                  # derived from recent_form (0 extra requests)
+  team_objectives: true      # aggregated dragon/baron/tower/gold control rates
+  standings: true            # both teams' league rank + W/L
+  meta_reference: true       # patch version
+  # --- player-level (heavier, ~2 req/player x 10 = 20 req/match) ---
+  # Turn off if quota is tight; models can still get this via web_search.
+  player_form: true          # /players/{id}/form (recent KDA/cs/dmg)
+  player_champion_pool: true # /players/{id}/champion-pool (BP preferences)
+  hero_pools: true           # aggregated from player_champion_pool
 
 # The unified web_search tool mounted on every model (see adapters/websearch.py).
 web_search:

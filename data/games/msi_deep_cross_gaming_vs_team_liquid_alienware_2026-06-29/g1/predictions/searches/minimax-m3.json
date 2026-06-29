@@ -1,0 +1,492 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_deep_cross_gaming_vs_team_liquid_alienware_2026-06-29/g1",
+  "submitted_at": "2026-06-29T06:09:11.347415+00:00",
+  "total_calls": 7,
+  "searches": [
+    {
+      "query": "MSI 2026 Deep Cross Gaming vs Team Liquid Alienware",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 2,
+      "results": [
+        {
+          "title": "EDG晋级伦敦大师赛胜决，BLG、TES挺进MSI",
+          "content": "EDG晋级伦敦大师赛胜决 无畏契约伦敦大师赛正在英国伦敦Copper Box Arena进行。季后赛阶段，XLG以2:1击败G2，EDG以2:1战胜FUT；在6月15日的胜者组半决赛中，EDG以2:1击败XLG，将在胜者组决赛对阵Paper Rex。XLG则进入败者组。 BLG获得LPL第二赛段优胜者，携手TES晋级MSI 2026年LPL第二赛段决赛在武汉华中科技大学光谷体育馆圆满落幕。最终BLG 3比0战胜TES，获得2026 LPL第二赛段优胜者，并作为LPL一号种子出征2026季中冠军赛（MSI），同时锁定2026电竞世俱杯（EWC）英雄联盟项目席位。TES则将以LPL二号种子身份晋级MSI。 MSI将于6月28日在韩国大田开赛 2026英雄联盟季中冠军赛将于北京时间6月28日开始。来自六大赛区的十一支队伍齐聚韩国大田市。季中冠军赛分为两个阶段：入围赛阶段（6月28日-7月1日）与淘汰赛阶段（7月3日-6日、7月8日-12日）。 今年代表各赛区出战的队伍是： LPL Bilibili Gaming (BLG) Top Esports (TES) LCK Hanwha Life Esports (HLE) T1 (T1) LEC G2 Esports (G2) Karmine Corp (KC) LCS LYON (LYON) Team Liquid Alienware (T",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "2026LPL第二赛段收官之战即将到来，MSI席位争夺战升温",
+          "content": "2026LPL第二赛段淘汰赛战火持续燃烧 双败BO5赛场悬念迭起、热血拉满 最新淘汰赛对局尘埃落定 BLG以3-0击败AL 向着更高名次与MSI席位全力冲刺 后续赛程已敲定 两场焦点BO5接连上演 锁定最终MSI出征名额 6月13日 16:00 BLG vs WE BLG携零封全胜的火热状态迎战WE 两支战队将展开生死对决 6月14日 16:00 TES vs 败者组决赛胜者 静候突围的强者，展开最终冠军争夺战 收官之战一触即发 MSI出征席位仅剩最后悬念 谁能顶住压力突围登顶？ 让我们锁定直播间660000 拭目以待各战队的巅峰表现 视频推荐",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-10"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:07:36Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "MLBBHub - MLBB Hero Stats, Tier List & Counters (2026)",
+          "content": "Live Mobile Legends Meta Live win, pick and ban rates for Patch 2.1.88, refreshed every day across all ranks. Full tier list See full win / pick / ban statistics Hero of the Day A fresh hero spotlight every day, picked from the current meta. Free Mobile Legends Tools Your ranked arsenal: every tool you need to outdraft, outbuild and outplay. Free, no login required. Latest MLBB Patch Highlights What changed in Patch 2.1.88 (June 17, 2026). All patch notes Saber Buff Saber relied too much on a single burst of damage and lacked sustained damage capabilities. Therefore, we've made adjustments to ",
+          "link": "https://www.mlbbhub.com/",
+          "media": "",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "llvm-project/libclc/configure.py at master · liuhong1happy/llvm-project · GitHub",
+          "content": "#!/usr/bin/python from __future__ import print_function def c_compiler_rule(b, name, description, compiler, flags): command = \"%s -MMD -MF $out.d %s -c -o $out $in\" % (compiler, flags) b.rule(name, command, description + \" $out\", depfile=\"$out.d\") version_major = 0; version_minor = 2; version_patch = 0; from optparse import OptionParser import os import string from subprocess import * import sys srcdir = os.path.dirname(sys.argv[0]) sys.path.insert(0, os.path.join(srcdir, 'build')) import metabuild p = OptionParser() p.add_option('--with-llvm-config', metavar='PATH', help='use given llvm-confi",
+          "link": "https://github.com/liuhong1happy/llvm-project/blob/master/libclc/configure.py",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "LLMHardware.io — Find the Best GPU for Local AI & LLMs (2026)",
+          "content": "LLMHardware .io Models 7,438 models · Updated daily Find Hardware That Runs Any LLM Locally Search 7,438+ AI models, get instant VRAM calculations, and find hardware recommendations for Llama, Qwen, ",
+          "link": "https://www.llmhardware.io/",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "kimai-python/docs/CustomerApi.md at master · kbancerz/kimai-python · GitHub",
+          "content": "master Breadcrumbs CustomerApi.md Copy path More file actions More file actions Latest commit History 489 lines (363 loc) · 16.8 KB   master Breadcrumbs Top File metadata and controls Preview Code Blame 489 lines (363 loc) · 16.8 KB Outline Edit and raw actions ion of customers api_customers_id_get GET /api/customers/{id} Returns one customer api_customers_id_meta_patch PATCH /api/customers/{id}/meta Sets the value of a meta-field for an existing customer api_customers_id_patch PATCH /api/customers/{id} Update an existing customer api_customers_id_rates_get GET /api/customers/ate for an custom",
+          "link": "https://github.com/kbancerz/kimai-python/blob/master/docs/CustomerApi.md",
+          "media": "",
+          "publish_date": "2026-05-31"
+        },
+        {
+          "title": "Articles - Marvel Snap Zone",
+          "content": "Grand Arena – Massive Melee! Limited Time Game Mode Event Details & Rewards Marvel Snap Ranked Meta Tier List: June 15, 2026 – Marvel Beach Bash Week 2 Post Balance Update Jubilee Silver Surfer & ",
+          "link": "https://marvelsnapzone.com/articles/",
+          "media": "",
+          "publish_date": "2026-06-17"
+        },
+        {
+          "title": "Meta2026:智能眼镜与可穿戴设备的全新未来",
+          "content": "在科技飞速发展的今天,Meta正计划在2026年推出一系列令人期待的可穿戴设备,尤其是智能眼镜,显示出该公司在硬件和人工智能领域的雄心壮志｡根据最新消息,Meta将于2026年下半年发布四款新智能眼镜,代号分别为Modelo､Luna､RBM2Refresh和MojitoVIP｡ Modelo是这四款产品中最早可能亮相的一款,预计在2026年6月发布｡",
+          "link": "https://www.sohu.com/a/1030987801_122004016",
+          "media": "搜狐",
+          "publish_date": "2026-06-02"
+        },
+        {
+          "title": "ICLR 2026  时间序列预测新思路:改数据不改模型,TATO降低13.6%平均MSE-CSDN博客",
+          "content": "论文聚焦时间序列预测中的大时间序列模型(LTMs)零样本/跨域应用问题｡LTMs虽能用单一 预训练 模型服务多任务,但真实时间序列存在强多样性与非平稳性,不同领域的周期､趋势､异常和尺度差异明显,导致冻结模型在新域上精度与泛化难兼顾｡ 现有做法常对每个领域微调LTM,但会增加训练成本､产生多个模型实例,并可能削弱通用性｡",
+          "link": "https://blog.csdn.net/2501_91070801/article/details/161517378",
+          "media": "",
+          "publish_date": "2026-06-22"
+        },
+        {
+          "title": "ICLR 2026两篇时间序列论文新思路:都用Patch作为建模基础单元_iclr 2026 的时间序列模型 paano-CSDN博客",
+          "content": "论文1:[ICLR 2026] PaAno: Patch-Based Representation Learning for Time-Series Anomaly Detection 方法: 构建滑动窗口提取短小的时间Patch,并使用轻量级一维卷积神经网络(1D-CNN)提取特征向量｡ 采用结合三元组损失(Triplet Loss)和前置预测任务的联合目标训练模型: ",
+          "link": "https://blog.csdn.net/2501_91070801/article/details/160599370",
+          "media": "",
+          "publish_date": "2026-06-22"
+        },
+        {
+          "title": "GitHub - Imbad0202/academic-research-skills: Academic Research Skills for Claude Code: research  write  review  revise  finalize",
+          "content": "Name Name Last commit message Last commit date Latest commit History 541 Commits 541 Commits .claude-plugin .claude-plugin .claude .claude .github .github academic-paper-reviewer academic-paper-reviewenerated. The goal is quality, not cheating. Why human-in-the-loop, not full automation?",
+          "link": "https://github.com/imbad0202/academic-research-skills",
+          "media": "",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "Intellij IDEA 2026 新特性更新!有点猛啊!",
+          "content": "<p>一个人对自己的生命投入了多少经验与洞察,他在爱中就能给出多少深度与分量</p><p>上周,我在咖啡馆写代码时,旁边坐着一位用屏幕阅读器的开发者｡他戴着耳机,手指在键盘上飞快跳跃,嘴里轻声念着几个我听得懂的:\"function... parameter... error on line 42...",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6246a1b8a5089152",
+          "media": "企鹅号",
+          "publish_date": "2026-05-31"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:07:39Z"
+    },
+    {
+      "query": "Deep Cross Gaming DCG LCP MSI 2026 roster results",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "越南GAM无缘MSI,太平洋赛区DCG成为全球第三支进MSI的队伍",
+          "content": "在今晚结束的LCP败者组决赛的比赛中,DCG在一度2-0领先被连追两局的情况下决胜局顶住压力,以3-2击败越南GAM挺进决赛｡同时DCG也成为全球第三支锁定MSI参赛资格的队伍｡",
+          "link": "https://new.qq.com/rain/a/20260606A0941600",
+          "media": "腾讯网",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "LCP最大黑马诞生!从升降赛一路杀进2026MSI舞台,DCG淘汰GAM创造历史",
+          "content": "文案 | Monte 校对 | King_Z 在刚刚结束的LCP(太平洋联赛)败者组决赛中,DCG上演了一场惊心动魄的晋级之战｡在手握2比0领先优势的情况下,他们一度被越南劲旅GAM连追两局拖入决胜局,好在关键时刻稳住阵脚,最终以3比2战胜对手,成功闯入总决赛｡ 随着这场胜利到手,DCG也正式锁定了2026 MSI参赛资格,成为全球范围内第三支确认晋级本届MSI的队伍｡(前两支是G2､TSW) ",
+          "link": "https://www.sohu.com/a/1033156706_121124868",
+          "media": "搜狐",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "DCG鏖战五局力克GAM挺进LCP第二赛段决赛,获得MSI门票",
+          "content": "刚刚结束的LCP第二赛段败者组决赛中,DCG以3-2力克GAM,顺利挺进决赛｡值得一提的是,DCG也凭借着这场胜利,拿到了MSI的门票,成为LCP第二支挺进MSI的战队｡接下来,DCG将在决赛中对阵TSW｡DCG阵容如下:上单Flauren､打野POP9､中单HongSuo､下路Feng､辅助ShiauC｡",
+          "link": "https://new.qq.com/rain/a/20260606A099QT00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "GitHub - ChrisGao001/DeepCTR: Easy-to-use,Modular and Extendible package of deep-learning based CTR models.DeepFM,DeepInterestNetwork(DIN",
+          "content": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 54 Commits 54 Commits .github/ ISSUE_TEMPLATE .github/ ISSUE_TEMPLATE deepctr deepctr docs docs examples examples tests tests .gitattributes .gitattributes .gitignore .gitignore .readthedocs.yml .readthedocs.yml .travis.yml .travis.yml LICENSE LICENSE README.md README.md setup.cfg setup.cfg setup.py setup.py View all files Repository files navigation DeepCTR DeepCTR is a Easy-to-use , Modular and Extendible package of deep-learning based CTR models along with lot",
+          "link": "https://github.com/ChrisGao001/DeepCTR",
+          "media": "",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "GitHub - florent-abdelghafour/MSI-DeepLearning: Deep learning tools for multispectral imaging · GitHub",
+          "content": "florent-abdelghafour/MSI-DeepLearning   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 28 Commits 28 Commits deep_utils deep_utils     ms_utils ms_utils     MIT License.md MIT License.md     README.md README.md     Technichal note ECC co-regis MSI.md Technichal note ECC co-regis MSI.md     UserGuide.md UserGuide.md     check_data_stats.py check_data_stats.py     checkdataset.py checkdataset.py     data_cube_loader.py data_cube_loader.py     h5_to_spectral_mean.py h5_to_spectral_mean.py     load_msi_ex.py load",
+          "link": "https://github.com/florent-abdelghafour/MSI-DeepLearning",
+          "media": "",
+          "publish_date": "2026-06-09"
+        },
+        {
+          "title": "GitHub - andylau20017/DeepCTR: Easy-to-use,Modular and Extendible package of deep-learning based CTR models.DeepFM,DeepInterestNetwork(DIN",
+          "content": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 56 Commits 56 Commits .github/ ISSUE_TEMPLATE .github/ ISSUE_TEMPLATE deepctr deepctr docs docs examples examples tests tests .gitattributes .gitattributes .gitignore .gitignore .readthedocs.yml .readthedocs.yml .travis.yml .travis.yml LICENSE LICENSE README.md README.md setup.cfg setup.cfg setup.py setup.py View all files Repository files navigation DeepCTR DeepCTR is a Easy-to-use , Modular and Extendible package of deep-learning based CTR models along with lot",
+          "link": "https://github.com/andylau20017/DeepCTR",
+          "media": "",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "deep network monitoring free download - SourceForge",
+          "content": "CLI for internet speed test via cloudflare ...The tool also stores historical test results and can export measured data as structured JSON for scripting, logging, or integration with automation tools. Users can bind tests to specific network interfaces or source IPs, making it flexible for complex networking environments or servers with multiple network paths. In addition to TUI mode, it supports headless text or JSON output for pipelines and monitoring systems. Downloads: 4 This Week A simple command line tool for text to image generation A simple command line tool for text to image generatio",
+          "link": "https://sourceforge.net/directory/command-line-tools/mac/?q=deep+network+monitoring",
+          "media": "",
+          "publish_date": "2026-06-18"
+        },
+        {
+          "title": "Article Metrics - Deep learning-based decision support system for the diagnosis of neoplastic gallbladder polyps on ultrasonography: Preliminary",
+          "content": "Deep learning-based decision support system for the diagnosis of neoplastic gallbladder polyps on ultrasonography: Preliminary results Access & Citations Article Accesses Citations Citation counts are provided by Dimensions and depend on their data availability. Counts will update daily, once available. Online attention 1 tweeters 43 Mendeley This article is in the 69 th percentile (ranked 125,495 th ) of the 419,882 tracked articles of a similar age in all journals and the 66 th percentile (ranked 1,130 th ) of the 3,365 tracked articles of a similar age in Scientific Reports View more on Alt",
+          "link": "https://www.nature.com/articles/s41598-020-64205-y/metrics",
+          "media": "Nature",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "GitHub - Bengal1/Simple-CNN-Guide: A beginner’s guide to building Convolutional Neural Networks (CNNs). · GitHub",
+          "content": "Name Name Last commit message Last commit date Latest commit   History 448 Commits 448 Commits .gitignore .gitignore     LICENSE LICENSE     README.md README.md     SimpleCNN.py SimpleCNN.py     View  how CNNs work and how to implement them. It combines theoretical explanations of key concepts from Deep Learning , such as the network architecture, Cross-Entropy Loss, and the Adam optimizer, with code implementation that showcase how these componehe input according to its specifications ( stride , padding etc.). At each position, a convolution (cross-correlation) operation is applied to the cor",
+          "link": "https://github.com/Bengal1/Simple-CNN-Guide",
+          "media": "",
+          "publish_date": "2026-05-31"
+        },
+        {
+          "title": "GitHub - DEEP-PolyU/ErrorLLM: [SIGKDD2026] ErrorLLM: Modeling SQL Errors for Text-to-SQL Refinement · GitHub",
+          "content": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit Rcrossmeister Remove macOS metadata files Jun 3, 2026 a807711 · Jun 3, 2026 History 5 Commits Open commit details 5 Commits src src Initial commit Jun 3, 2026 .gitattributes .gitattributes Initial commit May 31, 2026 .gitignore .gitignore Remove macOS metadata files Jun 3, 2026 LICENSE LICENSE Initial commit May 31, 2026 README.md README.md Update README.md Jun 3, 2026 requirements.txt requirements.txt Initial commit Jun 3, 2026 run.sh run.sh Initial commit Jun 3, 2026 Vie",
+          "link": "https://github.com/DEEP-PolyU/ErrorLLM",
+          "media": "",
+          "publish_date": "2026-06-03"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:07:46Z"
+    },
+    {
+      "query": "Team Liquid Alienware TLAW MSI 2026 Josedeodo CoreJJ",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "CoreJJ - Liquipedia League of Legends Wiki",
+          "content": "Ad-Free or Supporter Perks? Let us know what matters most to you in a future Liquipedia membership by taking this 5-minute poll. Most importantly, we will never put Liquipedia behind a paywall. From Liquipedia League of Legends Wiki Overview [ e ][ h ]  CoreJJ Player Information Name: Romanized Name: Jo Yong-in Nationality: Born: June 22, 1994 (age 31) Region:  North America Status: Active Roles: Alternate IDs: Core Approx. Total Winnings: Links Achievements History 2013-2014-09-??   Bigfile Miracle 2014-09-?? — 2014-12-??   Quvic E-Sports 2014-12-04 — 2015-11-18   Team Dignitas 2015-12-01 — 2",
+          "link": "https://liquipedia.net/leagueoflegends/CoreJJ",
+          "media": "",
+          "publish_date": "2026-06-14"
+        },
+        {
+          "title": "GitHub - sqz98700/aliware-kafka-demos: 提供各种客户端接入阿里云 消息队列 Kafka 的demo工程 · GitHub",
+          "content": "master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 89 Commits 89 Commits kafka-cpp-demo kafka-cpp-demo kafka-dotnet-demo kafka-dotnet-demo kafka-filebeat-demo kafka-filebeat-demo kafka-go-demo kafka-go-demo kafka-java-demo kafka-java-demo kafka-log-stash-demo kafka-log-stash-demo kafka-nodejs-demo kafka-nodejs-demo kafka-python-demo kafka-python-demo kafka-spring-demo kafka-spring-demo kafka-spring-stream-demo kafka-spring-stream-demo .gitignore .gitignore README.md README.md View all files Repository files navig",
+          "link": "https://github.com/sqz98700/aliware-kafka-demos",
+          "media": "",
+          "publish_date": "2026-06-02"
+        },
+        {
+          "title": "About Team Liquid",
+          "content": "We need your consent so that we and our trusted partners can store and access cookies, unique identifies, personal data, and information about your browsing behavior on your device. Preferences Privacy is important to us, so you have the option of disabling certain types of storage that may not be necessary for the basic functioning of the website. Blocking categories may impact your experience on the website. More information Accept all cookies Essentials Always active These items are required to enable basic website functionality. Marketing Marketing These items are used to deliver advertisi",
+          "link": "https://www.teamliquid.com/about",
+          "media": "",
+          "publish_date": "2026-06-18"
+        },
+        {
+          "title": "GitHub - yangtiger0306/Learn-Datascience-For-Free · GitHub",
+          "content": "Name Name Last commit message Last commit date Latest commit History 29 Commits 29 Commits README.md README.md View all files This Repository Consists of Free Resources needed for a person to learn Damain Parts. They are Part 1:- [Roadmap] Part 2:- [Free Online Courses] Part 3:- [500 Datascience Projects] Part 4:- [100+ Free Machine Learning Books] This repositary is a combination of different reso data of fixed size . One use is a data structure called a hash table, widely used in computer software for rapid data lookup. Hash functions accelerate table or database lookup by detecting duplicat",
+          "link": "https://github.com/yangtiger0306/Learn-Datascience-For-Free",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "GitHub - Bnder1/DefaultCreds-cheat-sheet: One place for all the default credentials to assist the Blue/Red teamers activities on finding",
+          "content": "Name Name Last commit message Last commit date Latest commit   History 83 Commits 83 Commits ssh_keys ssh_keys     CONTRIBUTING.md CONTRIBUTING.md     DefaultCreds-Cheat-Sheet.csv DefaultCreds-Cheat-Sheet.csv     DefaultCreds-Cheat-Sheet.ipynb DefaultCreds-Cheat-Sheet.ipynb     DefaultCreds_db.json DefaultCreds_db.json     README.md README.md     creds creds     requirements.txt requirements.txt     View all filesources. P.S : Most of the credentials are extracted from the changeme,routersploit and Seclists projects, you can use these tools to automate the process https://github.com/ztgrace/ch",
+          "link": "https://github.com/Bnder1/DefaultCreds-cheat-sheet",
+          "media": "",
+          "publish_date": "2026-06-02"
+        },
+        {
+          "title": "GitHub - b1gw00d/DefaultCreds-cheat-sheet: One place for all the default credentials to assist the Blue/Red teamers activities on finding",
+          "content": "Name Name Last commit message Last commit date Latest commit   History 88 Commits 88 Commits ssh_keys ssh_keys     CONTRIBUTING.md CONTRIBUTING.md     DefaultCreds-Cheat-Sheet.csv DefaultCreds-Cheat-Sheet.csv     DefaultCreds-Cheat-Sheet.ipynb DefaultCreds-Cheat-Sheet.ipynb     DefaultCreds_db.json DefaultCreds_db.json     README.md README.md     creds creds     requirements.txt requirements.txt     View all filesources. P.S : Most of the credentials are extracted from the changeme,routersploit and Seclists projects, you can use these tools to automate the process https://github.com/ztgrace/ch",
+          "link": "https://github.com/b1gw00d/DefaultCreds-cheat-sheet",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "GitHub - abbycantcode/DefaultCreds-cheat-sheet: One place for all the default credentials to assist the Blue/Red teamers activities on finding",
+          "content": "Name Name Last commit message Last commit date Latest commit   History 221 Commits 221 Commits ssh_keys ssh_keys     CONTRIBUTING.md CONTRIBUTING.md     DefaultCreds-Cheat-Sheet.csv DefaultCreds-Cheat-Sheet.csv     DefaultCreds-Cheat-Sheet.ipynb DefaultCreds-Cheat-Sheet.ipynb     DefaultCreds_db.json DefaultCreds_db.json     LICENSE LICENSE     README.md README.md     creds creds     requirements.txt requirements.tle sources. P.S : Most of the credentials were extracted from changeme,routersploit and Seclists projects, you can use these tools to automate the process https://github.com/ztgrace/",
+          "link": "https://github.com/abbycantcode/DefaultCreds-cheat-sheet",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "Interfejs API platformy otwartych danych dotyczących jakości powietrza: Leistikowstraße, Eichwalde, Germany Real-Time data API",
+          "content": "Interfejs API platformy otwartych danych dotyczących jakości powietrza Leistikowstraße, Eichwalde, Germany Real-Time data API Aby uzyskać dostęp do interfejsu API danych w czasie rzeczywistym dla stacji monitorowania jakości powietrza Leistikowstraße, Eichwalde, Germany (ID: A378898), musisz najpierw uzyskać własny token ze strony rejestracji tokenu platformy danych . Następnie wpisz swój token tutaj: Następnie możesz użyć następującego adresu URL, aby uzyskać dostęp do danych w czasie rzeczywistym: https://api.waqi.info/feed/A378898/?token=__YOUR_TOKEN__ . Jeśli wszystko działa poprawnie, będ",
+          "link": "https://aqicn.org/data-platform/api/A378898/pl/",
+          "media": "",
+          "publish_date": "2026-05-30"
+        },
+        {
+          "title": "/technology/epp/downloads/release/oxygen/RC2/eclipse-jee-oxygen-RC2-linux-gtk.tar.gz  Eclipse Packages",
+          "content": "File ID Download Count MD5 Sum c96ed8112318d5ae64ecb9ee4659de1c SHA1 Sum 0a6e4fd02137555808901ba9cc116e7418fc7d0d Operating System Linux 32-bit Download URL http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/RC2/eclipse-jee-oxygen-RC2-linux-gtk.tar.gz File Size SHA512 Sum b3ee91677686c22e96f5052cf2a730e7f067f0e895b6b335529274e8a0ebec47f560dd87546053e242708f975a4496ba1ccdcf0d2003d8693dfaf25f04a9b1df Related Links Eclipse Foundation Chat",
+          "link": "https://www.eclipse.org/downloads/packages/file/50135",
+          "media": "",
+          "publish_date": "2026-06-20"
+        },
+        {
+          "title": "Teamworks - Free download and install on Windows  Microsoft Store",
+          "content": "We use optional cookies to improve your experience on our websites, such as through social media connections, and to display personalized advertising based on your online activity. If you reject optional cookies, only cookies necessary to provide you the services will be used. You may change your selection by clicking “Manage Cookies” at the bottom of the page. Privacy Statement Third-Party Cookies Accept Reject Manage cookies Processing authentication...",
+          "link": "https://www.microsoft.com/en-us/store/p/teamworks/9nblggh4qj8q",
+          "media": "Microsoft",
+          "publish_date": "2026-06-12"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:07:49Z"
+    },
+    {
+      "query": "Ornn Rumble matchup MSI 2026 draft pick winrate",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "2026英雄联盟MSI季中赛即将开战!上虎牙看入围赛焦点对局!",
+          "content": "T1､KC､DCG､TLAW</strong></p><p>将争夺唯一的淘汰赛晋级名额</p><p>首日结果如何让我们拭目以待</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-2928108958-CA66431049B530F5B711782CD37A6D57/0?fmt=jpg&size=133&h=713&w=1269&ppv=1' data-aigc-mark='0'/></p><p><strong>参赛战队</strong></p><p>今年代表各大赛区的战队</p><p>分别是:</p><p>LPL:BLG､TES</p><p>LCK:HLE､T1</p><p>LEC:G2､KC</p><p>LCS:LYON､TLAW</p><p>LCP:TSW､DCG</p><p>CBLOL:FUR</p><p>值得一提的是今年在入围赛阶段</p><p>将有四支队伍进行双败淘汰分组赛</p><p>最终有一支队伍晋级淘汰赛</p><p>淘汰赛阶段仍将是八支队伍的</p><p>双败淘汰分组赛</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3737894027-06860802B3A2A309D19649AB0E53E0A7/0?",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1596a3f726778952",
+          "media": "企鹅号",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "英雄联盟MSI 2026季中冠军赛11支参赛队伍及赛程确定",
+          "content": "<p>[title-triangle]全球十一支参赛队伍及种子顺位确定</p>\n<p>英雄联盟2026季中冠军赛(MSI)的11支参赛队伍及种子顺位已全部确定｡五个主要赛区的一号种子队伍分别为:LPL赛区的BLG､LCK赛区的HLE､LEC赛区的G2､LCS赛区的LYON以及LCP赛区的TSW｡巴西CBLOL赛区的FURIA也作为一号种子参赛｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9246a30b39a42765",
+          "media": "企鹅号",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "2026 MSI 赛前盘点:11 支参赛队伍实力排行!",
+          "content": "<p>第 11 名:DCG</p><p>作为从 PCS 赛区通过升降级赛杀入 LCP 顶级联赛的新生力量,DCG 在自己的首个顶级联赛赛季表现可圈可点,进入第二赛段后依旧保持强势势头,最终在春季季后赛中从败者组一路突围,跻身联赛前二,拿到了 MSI 参赛门票｡</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-2303642003-3CC68131026D55178D2E958DFE7E5CCF/0?fmt=png&size=678&h=572&w=858&ppv=1' data-aigc-mark='0'/></p><p>这支由 Flauren 等老将搭配年轻新秀组成的队伍,上赛季还征战于次级联赛,此番登上 MSI 舞台将带来全新的气象｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7856a3cf06988552",
+          "media": "企鹅号",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "2026MSI",
+          "content": "哔哩哔哩(bilibili)直播,在这里看见最年轻的生活方式,学习､游戏､电竞､宅舞､唱见､绘画､美食等等应有尽有,快来捕捉你最喜欢的up主最真实的一面吧!",
+          "link": "https://live.bilibili.com/7734200",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "2026英雄联盟MSI前瞻:HLE、BLG、T1被列为第一梯队夺冠热门",
+          "content": "<p>[title-triangle]赛前实力分析:头部队伍优势明显,黑马难现</p>\n<p>根据赛前分析,2026年MSI可能是历史上黑马存在概率最低的一届｡随着赛区削减,参赛队伍数量不多,且各大赛区出现了不同程度的弱化和青黄不接问题｡在延用全局BP和双败赛制的背景下,Bo5对英雄池､战术储备和团队硬实力的考验极为苛刻,夺冠队伍与中下游队伍的实力差距非常明显,这使得黑马几乎不可能出现｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3106a3fb88c88565",
+          "media": "企鹅号",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "2026年MSI 11支参赛队出炉:BLG、TES、HLE、T1在列",
+          "content": "<img src='http://qqpublic.qpic.cn/qq_public/0/28-3906152064-98C5CE11AB53CA05BE54722BD45307E6/0?fmt=jpg&size=1408&h=1080&w=1920&ppv=1' data-aigc-mark='0'/></p><p>雷速体育6月14日讯 刚刚结束的MSI之路中,T1鏖战五局3-2力克Gen.",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_8486a2e917405452",
+          "media": "企鹅号",
+          "publish_date": "2026-06-14"
+        },
+        {
+          "title": "赛事官方分享MSI开赛倒计时:距离26MSI开赛还有三天",
+          "content": "虎扑06月25日讯 ",
+          "link": "https://new.qq.com/rain/a/20260625A04JGV00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "Best AI Presentation Makers for Startups of 2026 - Reviews & Comparison",
+          "content": "Compare the Top AI Presentation Makers for Startups as of June 2026 Sort By: Sponsored What are AI Presentation Makers for Startups? AI presentation makers are software tools that use artificial ",
+          "link": "https://sourceforge.net/software/ai-presentation-makers/for-startup/",
+          "media": "",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "2026MSI",
+          "content": "老实憨厚的笑笑 楚钧艾克 炫神_ Langx919 月隐空夜 4K直播间 智能验证检测中 通过验证 网络超时 请点击此处重试 只看LPL战队赛程 刷新 我的预测 正在加载… 入围赛 T1 06-28 11:00 TLAW 订阅 预测 入围赛 KC 06-28 16:00 DCG 订阅 预测 入围赛 待定 06-29 11:00 待定 订阅 入围赛 待定 06-29 16:00 待定 订阅 入围赛 ",
+          "link": "https://live.bilibili.com/6?spm_id_from=333.337.0.0",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "Physics-Project-Team-Rumble/.gitignore at main · krasimiraruseva1/Physics-Project-Team-Rumble · GitHub",
+          "content": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search ",
+          "link": "https://github.com/krasimiraruseva1/Physics-Project-Team-Rumble/blob/main/.gitignore",
+          "media": "",
+          "publish_date": "2026-06-02"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:07:53Z"
+    },
+    {
+      "query": "MSI 2026 play-in TLAW DCG June 29 match",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "2026 MSI 赛前盘点：11 支参赛队伍实力排行！",
+          "content": "2026 英雄联盟季中冠军赛入围赛将于 6 月 28 日正式开启。在赛事正式打响前，我们可以结合 11 支参赛队伍本赛季第二赛段的整体表现，尤其是季后赛阶段的发挥，梳理出一份实力排名。这份榜单仅代表个人观点，更多是娱乐参考 —— 毕竟国际赛事与联赛的竞技环境完全不同，队伍的临场调整能力，往往比纸面实力更能决定最终走向。 第 11 名：DCG 作为从 PCS 赛区通过升降级赛杀入 LCP 顶级联赛的新生力量，DCG 在自己的首个顶级联赛赛季表现可圈可点，进入第二赛段后依旧保持强势势头，最终在春季季后赛中从败者组一路突围，跻身联赛前二，拿到了 MSI 参赛门票。赛前不少人更看好 GAM 拿下这个名额，而 DCG 的突围也证明，LCP 赛区早已不是越南队伍一家独大的局面。 这支由 Flauren 等老将搭配年轻新秀组成的队伍，上赛季还征战于次级联赛，此番登上 MSI 舞台将带来全新的气象。队内最核心的两位选手分别是 19 岁的上单 Flauren 与打野 Pop9：前者具备极强的 Carry 能力，后者则是队伍的节奏引擎，在当前版本中打得游刃有余。 不过客观来看，DCG 想要从入围赛突围难度极大，面对 T1、KC 这类对手想要取胜近乎奇迹。队伍的下路组合在联赛内本身就表现挣扎，来到大田的国际赛场大概率会面临残酷的考验。但对这支年轻队伍而言，本次 MSI 更多是宝贵的经验积累，他们真正的目",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "2026英雄联盟MSI季中赛即将开战！上虎牙看入围赛焦点对局！",
+          "content": "2026英雄联盟季中赛 将于6月28日正式开启 入围赛首日 将迎来两场BO5淘汰赛 T1、KC、DCG、TLAW 将争夺唯一的淘汰赛晋级名额 首日结果如何让我们拭目以待 参赛战队 今年代表各大赛区的战队 分别是： LPL：BLG、TES LCK：HLE、T1 LEC：G2、KC LCS：LYON、TLAW LCP：TSW、DCG CBLOL：FUR 值得一提的是今年在入围赛阶段 将有四支队伍进行双败淘汰分组赛 最终有一支队伍晋级淘汰赛 淘汰赛阶段仍将是八支队伍的 双败淘汰分组赛 入围赛赛程 6月28日 11:00 T1 vs TLAW LCK二号种子T1迎战北美劲旅TLAW T1作为世界赛比较慢热的队伍 这场BO5非常考验他们的磨合调整 TLAW作为北美二号种子 面对强大的S15冠军T1 会有准备什么样的黑科技？ 16:00 KC vs DCG 欧洲二号种子KC直面LCP二号种子DCG 这是KC第一次参加MSI 他们第二赛段的表现一直很出色 直到决赛不敌G2的黑科技狗头打野 遗憾落败 这次MSI的征程他们表现又如何？ 观赛福利 MSI比赛期间每日前往直播间签到打卡 Q币、游戏周边等你来拿 还有上电视抽奖活动 IQUNIX键盘、西伯利亚耳机送不停 更有专属社群活动 加入即可与千万网友畅聊比赛 不定期抽好礼 群满1000人还可解锁超级大将 后续还有赛事预言活动开启 金币可兑换豪礼 明星",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "MSI入围赛首日结束：T1、KC均3-0横扫对手！六冠王T1却暗藏“唯一破绽”？",
+          "content": "文案 Monte 校对 KingZ 2026MSI季中赛入围赛阶段的比赛今天正式开赛了，今年入围赛相比往年绝对是流量拉满的一届，归其原因就是T1在这里，话题性自然是拉满的状态。 目前，入围赛首日的两场比赛也是结束了，最终T1和KC在各自的首场比赛中均以3-0横扫了对手，双方将在29号迎来对决。回顾这两场比赛，简单来说，虽然比分上是零封，但细看每一局比赛，双方都有一些瑕疵。 T1从未让TL找到节奏 T1与TL这场，除了第三局之外，T1在前两局都有些开局不利，但他们总是能在对手还未展开比赛前就提前终结对局。这个模式从第一局就确立，并贯穿三局始终：Oner始终会先人一步抵达每次小规模团战之中，拿下66.7%的首杀率，而对位的Josedeodo则全程0%参与；这种前期节奏优势迅速转化为下路的压制，使TL的下路几乎没有任何站稳脚跟的空间。 首局中Keria的卡蜜尔成为最佳缩影——他不断对Yeon发起进攻，反复越塔，直到TL的核心输出位彻底失去对线空间。在前期已经崩盘的情况下，TL只能寄希望于单人线的回应，而最终只有一条线做到了这一点。 Faker在中路完全没有受到Quid的威胁，并在第二局用自己的招牌英雄瑞兹完成单杀作为点睛之笔。上路则是TL唯一的亮点：Morgan顶住了Doran的压力，甚至在对抗中打出了反制效果，他在第二局的兰博对狼母中拿下两次单杀。这也一定程度上冲击了他只会玩坦克”的固",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "职业选手必须自信！Doran给MSI上单进行排名：我是第一，Zues第二， Bin第三！",
+          "content": "文案梳理 KingZ 校对 莫奈特 导语 — Doran：上单，我排第一名，职业选手要自信。” MSI2026入围赛已经在28号的韩国大田正式开赛了，在首日的揭幕战中，T1以3-0横扫了对手TL，拿下了入围赛的开门红，随后的KC也3-0横扫了DCG，这样一来，T1和KC将在29号交手，争夺率先晋级入围赛通往正赛的名额。 对于TL这一战，虽然T1的确是3-0横扫了对手，但赛后很多赛评人也提出，T1的上路doran依旧是队伍不可绕过的一个巨大隐患，因为在其他两条线均取得前中期优势的情况下，只有他的上路在前中期陷入了劣势，成为T1唯一的破绽。 对于自己首战的表现，doran自己也表示自责，在接受一家外媒采访时他表示： 比赛中的确有些时候打得很艰难，我个人也出现了一些失误，这是我们今年第一次对阵TL，所以我们还不太清楚该怎么应对他们，不过最后能够完成翻盘，我还是很庆幸的。” 后续他还被问及关于此次MSI上单选手的实力排名，一开始他很谦虚的表示，第一名应该是zeus，原因是自己与他交手过很多次，一直觉得他是位非常优秀的选手，2、3名给BIN和zuian，他提到自己看过很多LPL的比赛，他们的发挥都很出色。 但之后记者提出，如果将自己也算进去的话，doran这个ID会排名第几？ Doran自信的表现，那就把大家的排名都顺延一位，我把自己放在第一名，至于原因，他透露： 因为作为职业选手，必须要对",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "EDG晋级伦敦大师赛胜决，BLG、TES挺进MSI",
+          "content": "EDG晋级伦敦大师赛胜决 无畏契约伦敦大师赛正在英国伦敦Copper Box Arena进行。季后赛阶段，XLG以2:1击败G2，EDG以2:1战胜FUT；在6月15日的胜者组半决赛中，EDG以2:1击败XLG，将在胜者组决赛对阵Paper Rex。XLG则进入败者组。 BLG获得LPL第二赛段优胜者，携手TES晋级MSI 2026年LPL第二赛段决赛在武汉华中科技大学光谷体育馆圆满落幕。最终BLG 3比0战胜TES，获得2026 LPL第二赛段优胜者，并作为LPL一号种子出征2026季中冠军赛（MSI），同时锁定2026电竞世俱杯（EWC）英雄联盟项目席位。TES则将以LPL二号种子身份晋级MSI。 MSI将于6月28日在韩国大田开赛 2026英雄联盟季中冠军赛将于北京时间6月28日开始。来自六大赛区的十一支队伍齐聚韩国大田市。季中冠军赛分为两个阶段：入围赛阶段（6月28日-7月1日）与淘汰赛阶段（7月3日-6日、7月8日-12日）。 今年代表各赛区出战的队伍是： LPL Bilibili Gaming (BLG) Top Esports (TES) LCK Hanwha Life Esports (HLE) T1 (T1) LEC G2 Esports (G2) Karmine Corp (KC) LCS LYON (LYON) Team Liquid Alienware (T",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-16"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:08:03Z"
+    },
+    {
+      "query": "Akali Cassiopeia mid lane MSI 2026 meta patch strength",
+      "count": 5,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "cassiopeia/cassiopeia/data.py at master · meraki-analytics/cassiopeia · GitHub",
+          "content": "Region(Enum): brazil = \"BR\" europe_north_east = \"EUNE\" europe_west = \"EUW\" japan = \"JP\" korea = \"KR\" latin_america_north = \"LAN\" latin_america_south = \"LAS\" north_america =ss GameType(Enum): custom = \"CUSTOM_GAME\" tutorial = \"TUTORIAL_GAME\" matched = \"MATCHED_GAME\" class Lane(Enum): top_lane = \"TOP_LANE\" mid_lane = \"MID_LANE\" bot_lane = \"BOT_LANE\" jungle = \"JUNGLE\" utility = \"UTILITY\" def from_match_naming_scheme(string: str): return { \"BOTTOM\": Lane.bot_lane, \"MIDDLE\": Lane.mid_lane, \"MID\": Lane.mid_lane, \"TOP\": Lane.top_lane, \"JUNGLE\": Lane.jungle, \"UTILITY\"# https://discussion.developer.rio",
+          "link": "https://github.com/meraki-analytics/cassiopeia/blob/master/cassiopeia/data.py",
+          "media": "",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "Computex 2026:英特尔推出至强6能效核处理器,披露下一代数据中心GPU细节",
+          "content": "英特尔应用能源遥测技术(AET),实现实时､工作负载级的CPU能源和活动遥测,可提高工作负载级能耗的可见性｡另外还有内置于芯片的可靠性机制,包括英特尔SGX和TDX,以支持机密和多租户部署｡</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3110680641-0E8F76DF26BA4594952647C245C20914/0?",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5996a1d620d40852",
+          "media": "企鹅号",
+          "publish_date": "2026-06-01"
+        },
+        {
+          "title": "2026 MSI 赛前盘点:11 支参赛队伍实力排行!",
+          "content": "<p>2026 英雄联盟季中冠军赛入围赛将于 6 月 28 日正式开启｡在赛事正式打响前,我们可以结合 11 支参赛队伍本赛季第二赛段的整体表现,尤其是季后赛阶段的发挥,梳理出一份实力排名｡这份榜单仅代表个人观点,更多是娱乐参考 —— 毕竟国际赛事与联赛的竞技环境完全不同,队伍的临场调整能力,往往比纸面实力更能决定最终走向｡</p><p>第 11 名:DCG</p><p>作为从 PCS ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7856a3cf06988552",
+          "media": "企鹅号",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "手把手教你学 GPU SoC 芯片(12.1)--数据中心和云计算的GPU 云服务(如AWS、Azure、Google Cloud)_手把手教你学 GPU SoC 芯片-CSDN专栏",
+          "content": "GPU 云服务在现代数据中心和云计算中扮演着越来越重要的角色,尤其是在处理大规模数据集和高性能计算任务时｡以下是对主要云服务提供商(AWS､Azure､Google Cloud)提供的GPU云服务的详细介绍｡ 1. Amazon Web Services (AWS) 1.1. EC2 P3 实例 GPU :NVIDIA Tesla V100 数量 :最多8个V100 GPU 内存 :每个GPU ",
+          "link": "https://download.csdn.net/blog/column/12805089/142932226",
+          "media": "",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "setup-python/docs/advanced-usage.md at main · krishanbhasin-gc/setup-python · GitHub",
+          "content": "Advanced Usage Using the python-version input Specifying a Python version If there is a specific version of Python that you need and you don't want to worry about any potential breaking changes due ",
+          "link": "https://github.com/krishanbhasin-gc/setup-python/blob/main/docs/advanced-usage.md",
+          "media": "",
+          "publish_date": "2026-06-02"
+        },
+        {
+          "title": "Topics with Tag: Group by - Autodesk Community",
+          "content": "Topics with Tag: Group by 4 Results for \"Group by\" Related tags « ",
+          "link": "https://forums.autodesk.com/t5/forums/filteredbylabelpage/board-id/flexsim-forum-en/label-name/group%2520by",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "Bottleneck Calculator 2026  Balance Your CPU & GPU",
+          "content": "Skip to content Bottleneck Calculator 2026 – Check CPU & GPU Performance Balance 🖥️ Select CPU 🎮 Select GPU ⚙️ Show Advanced Options Calculate Bottleneck Ready to Analyze Select your CPU and GPU to ",
+          "link": "https://www.bottleneckcheck.com/",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "2026年第74届澳大利亚和新西兰心脏学会科学年会/年度科学会议(CSANZ2026) - 74th CSANZ Annual Scientific Meeting - CSANZ ASM 2026 - Cardiac ...",
+          "content": "会议时间:2026年8月6-9日 会议地点:澳大利亚 悉尼 会议简介: 2026年第74届澳大利亚和新西兰心脏学会(CSANZ)科学年会将于2026年8月6-9日在澳大利亚悉尼举行｡ 澳大利亚和新西兰心脏学会(CSANZ)是代表心脏病专家以及在心脏病学领域工作的研究人员､科学家､心血管护士､相关卫生专业人员和其他医护人员的专业机构｡",
+          "link": "http://www.8meetings.com/meetings/csanz.html",
+          "media": "",
+          "publish_date": "2026-06-09"
+        },
+        {
+          "title": "新一代Nectin-4靶向ADC临床进展积极;针对多种实体瘤,小分子KAT6抑制剂展现治疗潜力……  一周盘点",
+          "content": "1. Nectin-4靶向抗体偶联药物(ADC)CRB-701用于口咽鳞状细胞癌(OPSCC)和宫颈癌的二线治疗,在一项1/2期临床试验中展现出强效的抗肿瘤活性｡</p><p>2. 口服强效小分子KAT6抑制剂OP-3136用于多种实体瘤的初步1期临床数据积极,19名可评估疗效的患者中有13人出现了肿瘤缩小｡</p><p><img src='http://qqpublic.qpic.",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7506a1cc67638652",
+          "media": "企鹅号",
+          "publish_date": "2026-06-01"
+        },
+        {
+          "title": "2026英雄联盟MSI季中赛即将开战!上虎牙看入围赛焦点对局!",
+          "content": "<p><strong>2026英雄联盟季中赛</strong></p><p>将于<strong>6月28</strong>日正式开启</p><p>入围赛首日</p><p>将迎来两场BO5淘汰赛</p><p><strong>T1､KC､DCG､TLAW</strong></p><p>将争夺唯一的淘汰赛晋级名额</p><p>首日结果如何让我们拭目以待</p><p><img ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1596a3f726778952",
+          "media": "企鹅号",
+          "publish_date": "2026-06-27"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-06-29T06:08:06Z"
+    }
+  ]
+}
