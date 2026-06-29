@@ -79,9 +79,9 @@ class RefreshBPRequest(BaseModel):
 def refresh_bp(req: RefreshBPRequest):
     """Fetch BP for a game. If complete and predict=True, run single-game prediction."""
     from ..pipeline import collect as collect_mod
-    from ..adapters.cito import CitoClient
+    from ..adapters.cito import get_client
     try:
-        client = CitoClient()
+        client = get_client()
         match = collect_mod.fetch_fixture(req.match_id, client, refresh=True)
         bp = collect_mod.fetch_game_bp(match, req.game_pos, client, refresh=True)
     except Exception as e:  # noqa: BLE001

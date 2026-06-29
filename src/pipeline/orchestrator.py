@@ -21,7 +21,7 @@ from pathlib import Path
 from typing import Any
 
 from .. import config as cfg
-from ..adapters.cito import CitoClient, CitoError
+from ..adapters.cito import CitoClient, CitoError, get_client
 from ..adapters.websearch import WebSearchTool
 from ..runners import build_runner
 from . import collect as collect_mod
@@ -32,7 +32,7 @@ from . import prompt_build, validate
 
 def cmd_scan(*, horizon_days: int | None = None, refresh: bool = False) -> list[dict]:
     """Find upcoming tracked-league matches and persist their fixtures."""
-    client = CitoClient()
+    client = get_client()
     horizon = horizon_days or cfg.leagues_cfg().get("scan_horizon_days", 14)
     league_ids = list(client.tracked_league_ids().values())
     if not league_ids:
@@ -63,7 +63,7 @@ def cmd_scan(*, horizon_days: int | None = None, refresh: bool = False) -> list[
 
 def cmd_collect(match_id: int, *, refresh: bool = False) -> dict:
     """Build the shared context_pack.json for one match."""
-    client = CitoClient()
+    client = get_client()
     match = collect_mod.fetch_fixture(match_id, client, refresh=refresh)
     pack = collect_mod.collect_context_pack(match, client)
     print(f"[collect] context_pack written for match {match_id} "
@@ -103,7 +103,7 @@ def cmd_predict(match_id: int, *, model_ids: list[str] | None = None,
                 max_workers: int = 4, refresh: bool = False,
                 auto_rebuild_site: bool = True) -> list[dict]:
     """Run series-level prediction for every model on a match."""
-    client = CitoClient()
+    client = get_client()
     match = _load_or_fetch_fixture(match_id, client, refresh=refresh)
     if not Path(match["_match_dir"], "context_pack.json").exists():
         collect_mod.collect_context_pack(match, client)
@@ -130,7 +130,7 @@ def cmd_predict_game(match_id: int, position: int, *, model_ids: list[str] | Non
                      max_workers: int = 4, refresh_bp: bool = False,
                      auto_rebuild_site: bool = True) -> list[dict]:
     """Run single-game prediction for every model (after BP is fetched)."""
-    client = CitoClient()
+    client = get_client()
     match = collect_mod.fetch_fixture(match_id, client, refresh=refresh_bp)
     bp = collect_mod.fetch_game_bp(match, position, client, refresh=refresh_bp)
     if bp is None:
@@ -558,7 +558,7 @@ def _resolve_match_dir(match_id: int, match: dict) -> Path | None:
 def cmd_grade(match_id: int) -> dict:
     """Score every model's series prediction against the post-match truth."""
     from ..graders.grade_match import grade_match
-    client = CitoClient()
+    client = get_client()
     match = _fetch_match_for_grade(client, match_id)
     if not match:
         print(f"[grade] could not resolve match {match_id} in Cito (no mapping).")
@@ -591,7 +591,7 @@ def cmd_grade(match_id: int) -> dict:
 
 def cmd_grade_game(match_id: int, position: int) -> dict:
     from ..graders.grade_game import grade_game
-    client = CitoClient()
+    client = get_client()
     match = _fetch_match_for_grade(client, match_id)
     if not match:
         print(f"[grade-game] could not resolve match {match_id} in Cito (no mapping).")

@@ -27,6 +27,7 @@ live under /api/v1.
 
 from __future__ import annotations
 
+import functools
 import hashlib
 import json
 import threading
@@ -114,6 +115,17 @@ class CitoKeyPool:
         with self._lock:
             self._rate_until[key] = time.time() + self.EXHAUSTED_COOLDOWN
 
+    def throttled_until(self) -> float:
+        """When the soonest-unlocking key becomes available again.
+
+        Returns 0.0 if at least one key is free right now, else the earliest
+        unlock time (epoch seconds). Lets callers back off without re-firing.
+        """
+        with self._lock:
+            now = time.time()
+            soonest = min(self._rate_until[k] for k in self.keys)
+            return 0.0 if soonest <= now else soonest
+
 
 def _load_keys() -> list[str]:
     """Read keys from CITO_API_KEYS (comma-separated) or CITO_API_KEY."""
@@ -123,6 +135,24 @@ def _load_keys() -> list[str]:
         return [k.strip() for k in multi.split(",") if k.strip()]
     single = cfg.env("CITO_API_KEY")
     return [single] if single else []
+
+
+@functools.lru_cache(maxsize=1)
+def get_client() -> CitoClient:
+    """Process-wide shared CitoClient (and thus shared key-pool cooldown state).
+
+    `_raw_get` builds a fresh `httpx.Client` per request, so this is safe to
+    share across threads/scheduler ticks; the only shared mutable state is the
+    locked `key_pool`. Sharing it means a 429 cooldown set by one caller (e.g.
+    a bursty `cmd_predict`) is honoured by every other caller (scheduler ticks,
+    server refresh) instead of being forgotten because each built its own pool.
+    """
+    return CitoClient()
+
+
+def is_rate_limited_error(exc: BaseException) -> bool:
+    """True if a CitoError was raised due to rate-limiting (429)."""
+    return isinstance(exc, CitoError) and "429" in str(exc)
 
 
 # ============================== client ==============================
@@ -145,6 +175,10 @@ class CitoClient:
         self.timeout = timeout
         # proxy: explicit arg wins, else read proxies.yaml / env
         self.proxy = proxy if proxy is not None else cfg.proxy_for("cito")
+
+    def throttled_until(self) -> float:
+        """Pass-through to the key pool: when the soonest key unlocks (0.0 = free)."""
+        return self.key_pool.throttled_until()
 
     # ---------- core request w/ disk cache + key rotation ----------
     def _cache_path(self, path: str, params: dict[str, Any]) -> Path:
@@ -340,7 +374,8 @@ class CitoClient:
         uniq: list[dict] = []
         seen: set[int] = set()
         for lid in league_ids:
-            raw = self.get(f"/lol/leagues/{lid}/schedule", ttl_seconds=300)
+            raw = self.get(f"/lol/leagues/{lid}/schedule",
+                           ttl_seconds=cfg.env_int("LOLA_CITO_SCHEDULE_TTL", 3600))
             # the cached payload may be the inner {leagueId, events:[...]} object
             # (unwrap strips the outer {success, data}) OR a bare events list.
             events = raw.get("events") if isinstance(raw, dict) else raw
