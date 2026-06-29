@@ -482,7 +482,10 @@ function renderIncoming(){
   
   el.innerHTML = items.slice(0,9).map(m=>`
     <div class="esports-glass p-4 rounded-xl esports-glow-effect">
-      <div class="text-[10px] font-bold tracking-wider text-[#c89b3c] uppercase pb-2 border-b border-slate-200 dark:border-slate-800/20">${m.league||'LoL Match'}</div>
+      <div class="flex items-center justify-between flex-wrap gap-1 pb-2 border-b border-slate-200 dark:border-slate-800/20">
+        <div class="text-[10px] font-bold tracking-wider text-[#c89b3c] uppercase">${m.league||'LoL Match'}</div>
+        ${m.match_id ? actionBtn('series-predict','⚡ 触发分析',{tip:'运行所有模型进行系列赛预测',tone:'amber',data:{slug:m.slug, 'match-id':m.match_id}}) : ''}
+      </div>
       
       <div class="my-4">
         ${renderTeamMatchupLayout(m)}
@@ -671,7 +674,9 @@ function renderSeriesMatchCard(h, opts={}){
       <div class="pt-3 border-t border-slate-200 dark:border-slate-800/10 mt-2">
         <div class="flex items-center justify-between text-[11px] mb-2.5">
           <span class="text-slate-500 dark:text-slate-400 font-bold">大模型预测汇总 (Series)</span>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 flex-wrap justify-end">
+            ${h.match_id ? actionBtn('series-predict','⚡ 触发分析',{tip:'运行所有模型进行系列赛预测',tone:'amber',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
+            ${h.match_id && !isUpcomingStatus(h.status) && h.status!=='live' ? actionBtn('series-grade','✅ 结算',{tip:'根据真实赛果打分',tone:'emerald',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
             ${Object.keys(preds).length ? `<button class="bet-open-btn inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#c89b3c]/10 text-[#c89b3c] border border-[#c89b3c]/25 text-[10px] font-black hover:bg-[#c89b3c]/20 transition-colors" data-slug="${escAttr(h.slug)}">🎲 下注建议</button>` : ''}
             <span class="pill text-[9px] font-bold">${Object.keys(preds).length}个模型已投</span>
           </div>
@@ -685,15 +690,23 @@ function renderSeriesMatchCard(h, opts={}){
 function renderSingleGameCard(h) {
   const truth = h.truth||{};
   const preds = h.predictions||{};
-  const blueChamps = renderChampsPills(h.blue, 'blue');
-  const redChamps = renderChampsPills(h.red, 'red');
+  const blueChamps = renderChampsPills(h.blue_picks, 'blue');
+  const redChamps = renderChampsPills(h.red_picks, 'red');
+  const bpReady = !!h.bp_complete;
+  const gameFinished = truth.winner_side != null;
+  const mData = {slug:h.match_slug, 'match-slug':h.match_slug, 'match-id':h.match_id, pos:h.position};
   
   return `
     <div class="esports-glass p-5 rounded-2xl esports-glow-effect flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between flex-wrap gap-2 text-xs text-slate-400 pb-3 border-b border-slate-200 dark:border-slate-800/10">
           <span class="font-bold tracking-wide text-[#c89b3c] text-[11px] uppercase truncate max-w-[200px]" title="${escAttr(h.match_slug)}">${esc(h.match_slug || 'Single Game')}</span>
-          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#c89b3c]/15 text-[#c89b3c] border border-[#c89b3c]/25">第 ${h.position} 局</span>
+          <div class="flex items-center gap-2 flex-wrap justify-end">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#c89b3c]/15 text-[#c89b3c] border border-[#c89b3c]/25">第 ${h.position} 局</span>
+            ${h.match_id ? actionBtn('game-refresh-bp','🔄 刷新BP',{tip:'从官方拉取BP',tone:'blue',data:mData}) : ''}
+            ${h.match_id ? actionBtn('game-predict','⚡ 分析',{tip: bpReady?'运行所有模型分析本局':'需先刷新BP',disabled:!bpReady,tone:'amber',data:mData}) : ''}
+            ${h.match_id && gameFinished ? actionBtn('game-grade','✅ 结算',{tip:'根据真实赛果打分',tone:'emerald',data:mData}) : ''}
+          </div>
         </div>
 
         <div class="my-4 space-y-3">
@@ -711,9 +724,10 @@ function renderSingleGameCard(h) {
 
           <div class="flex items-center justify-between text-xs py-1.5 px-3 rounded-xl bg-slate-50/85 dark:bg-obsidian-950/40 border border-slate-200 dark:border-slate-800/40 shadow-inner">
             <span class="text-slate-550 dark:text-slate-400 font-medium">真实单局赛果</span>
-            <span class="font-bold text-[#c89b3c]">
-              ${truth.winner_side ? `胜方: <b class="${truth.winner_side==='blue'?'text-[#00a3e0]':'text-[#de2f2f]'} font-extrabold">${truth.winner_side==='blue'?'蓝方':'红方'}</b>` : '<span class="text-slate-500 text-[11px]">等待官方实录</span>'} 
-              ${truth.length_min ? ` · ${truth.length_min} min` : ''}
+            <span class="font-bold text-[#c89b3c] flex items-center gap-2 flex-wrap justify-end">
+              ${truth.winner_side ? `<span>胜方: <b class="${truth.winner_side==='blue'?'text-[#00a3e0]':'text-[#de2f2f]'} font-extrabold">${truth.winner_side==='blue'?'蓝方':'红方'}</b></span>` : (truth.status==='finished' ? '<span class="text-amber-500 text-[11px]">赛果待官方回填</span>' : '<span class="text-slate-500 text-[11px]">等待官方实录</span>')}
+              ${truth.length_min ? `<span class="text-slate-500">· ${truth.length_min} min</span>` : ''}
+              ${(truth.total_kills!=null) ? `<span class="text-slate-500">· 总击杀 ${truth.total_kills}</span>` : ''}
             </span>
           </div>
         </div>
@@ -803,7 +817,10 @@ function renderPrediction(modelId, rec, score, h, scope){
   const summary = rec.summary||rec||{};
   const detail = rec.detail||{};
   const pred = detail.prediction||rec.prediction||rec||{};
-  const probs = summary.win_probs||pred.win_probs||{};
+  // Series uses the plural `win_probs`; single-game uses the singular `win_prob`.
+  // The backend normalises both into summary.win_probs, but we also fall back
+  // to the raw fields so legacy/already-built payloads keep working.
+  const probs = summary.win_probs||pred.win_probs||pred.win_prob||{};
   
   const winnerSideValue = summary.predicted_winner||summary.winner||pred.predicted_winner||pred.winner||'-';
   const winnerSide = String(winnerSideValue).toLowerCase();
@@ -821,7 +838,11 @@ function renderPrediction(modelId, rec, score, h, scope){
     winnerBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 dark:bg-slate-800/30 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700/10">—</span>`;
   }
 
-  const scoreText = scope==='series' ? (summary.series_score||pred.series_score||'-') : (summary.duration!=null?`${summary.duration}m`:'-');
+  const scoreText = scope==='series'
+    ? (summary.series_score||pred.series_score||'-')
+    : (summary.duration!=null
+        ? `${summary.duration}m`
+        : (pred.expected_duration_min!=null?`${pred.expected_duration_min}m`:'-'));
   const cost = detail.cost_usd != null ? `$${Number(detail.cost_usd).toFixed(5)}` : '—';
   const tokens = `${detail.input_tokens??'—'} / ${detail.output_tokens??'—'}`;
   
@@ -855,12 +876,18 @@ function renderPrediction(modelId, rec, score, h, scope){
       <div class="p-4 border-t border-slate-200 dark:border-slate-800/20 bg-slate-50/50 dark:bg-obsidian-900/30 space-y-4 shadow-inner">
         ${detail.error?`<div class="p-3 rounded-lg border border-red-500/25 bg-red-500/5 text-rose-400 font-mono text-[11px]">${esc(detail.error)}</div>`:''}
         
+        <!-- Single-game numeric predictions: duration / kills / total kills -->
+        ${scope==='game'?renderGameStatRow(summary, pred, h):''}
+        
         <!-- Reasoning Cards Grid -->
         ${renderReasoningGrid(pred.reasoning)}
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- Key Players Badges -->
+          <!-- Key Players Badges (series) -->
           ${renderKeyPlayersChips(pred.key_players)}
+          
+          <!-- Key drafted champions (single-game) -->
+          ${renderKeyChampionsChips(pred.key_drafted_champions)}
           
           <!-- Swing Factors and Meta style signals -->
           <div class="space-y-4">
@@ -910,6 +937,80 @@ function renderProbabilityBar(probs, h) {
       <div class="h-1.5 w-full flex rounded-full overflow-hidden bg-slate-200 dark:bg-slate-800">
         <div class="bg-[#00a3e0] h-full shadow" style="width: ${pBluePercent}%"></div>
         <div class="bg-[#de2f2f] h-full shadow" style="width: ${pRedPercent}%"></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderGameStatRow(summary, pred, h) {
+  // Single-game numeric predictions: expected duration, per-side kills, total kills.
+  const duration = summary.duration != null ? summary.duration : pred.expected_duration_min;
+  const kills = summary.kills != null ? summary.kills : pred.kills;
+  const totalKills = summary.total_kills != null ? summary.total_kills : pred.total_kills;
+  const kBlue = kills && kills.blue != null ? kills.blue : null;
+  const kRed = kills && kills.red != null ? kills.red : null;
+
+  const cards = [
+    {
+      icon: '⏱️', label: '预计时长', value: duration != null ? `${duration}<span class="text-[9px] opacity-60 ml-0.5">min</span>` : '—',
+      accent: 'text-[#c89b3c]',
+    },
+    {
+      icon: '⚔️', label: `${esc(h.blue||'蓝方')} 击杀`, value: kBlue != null ? kBlue : '—',
+      accent: 'text-[#00a3e0]',
+    },
+    {
+      icon: '⚔️', label: `${esc(h.red||'红方')} 击杀`, value: kRed != null ? kRed : '—',
+      accent: 'text-[#de2f2f]',
+    },
+    {
+      icon: '💀', label: '总击杀', value: totalKills != null ? totalKills : '—',
+      accent: 'text-slate-800 dark:text-slate-100',
+    },
+  ];
+
+  return `
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+      ${cards.map(c => `
+        <div class="bg-white dark:bg-obsidian-950/35 border border-slate-200 dark:border-slate-800/30 rounded-xl px-3 py-2.5 flex items-center gap-2.5">
+          <span class="text-base flex-none">${c.icon}</span>
+          <div class="min-w-0">
+            <div class="text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold truncate">${c.label}</div>
+            <div class="font-black text-lg ${c.accent} leading-tight">${c.value}</div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderKeyChampionsChips(champions) {
+  if(!Array.isArray(champions)||!champions.length) return '';
+  const roleIcons = { top:'🛡️', jun:'🍃', jungle:'🍃', mid:'⚡', adc:'🏹', bot:'🏹', sup:'🧪', support:'🧪' };
+  return `
+    <div class="bg-white dark:bg-obsidian-950/35 border border-slate-200 dark:border-slate-800/35 p-4 rounded-xl font-sans">
+      <div class="font-extrabold text-slate-800 dark:text-slate-100 text-[10px] uppercase tracking-wider mb-3 pb-1.5 border-b border-[#c89b3c]/20 flex items-center gap-2">
+        <span>⭐ 预测关键选角 / Key Drafted Champions</span>
+      </div>
+      <div class="space-y-2.5">
+        ${champions.map(item => {
+          if (!item) return '';
+          const role = String(item.role || '').toLowerCase();
+          const rIcon = roleIcons[role] || '👤';
+          const team = String(item.team || '').toLowerCase();
+          const teamTag = team==='blue'
+            ? '<span class="text-[#00a3e0]">蓝方</span>'
+            : (team==='red' ? '<span class="text-[#de2f2f]">红方</span>' : '');
+          return `
+            <div class="flex items-start gap-2.5 bg-slate-50 dark:bg-obsidian-955/35 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800/15">
+              <span class="text-slate-700 dark:text-slate-250 py-0.5 px-1.5 bg-amber-100 dark:bg-lolGold/15 text-[9px] font-black rounded border border-lolGold/25 flex-none uppercase">${rIcon} ${esc(item.role||'')}</span>
+              <div class="min-w-0">
+                <div class="font-black text-xs text-slate-800 dark:text-slate-200">${esc(item.champion||'—')} <span class="text-[9px] font-bold opacity-70">${teamTag}</span></div>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed font-semibold">${esc(item.impact||item.reason||'')}</p>
+              </div>
+            </div>
+          `;
+        }).join('')}
       </div>
     </div>
   `;
@@ -1544,6 +1645,195 @@ function fmtPct(v){
   const n=Number(v); if(isNaN(n)) return esc(v);
   return (n<=1? (n*100).toFixed(0): n.toFixed(0)) + '%';
 }
+
+// ============================== action buttons ==============================
+// Manual triggers: refresh BP / analyze / settle. Clicks are delegated through
+// [data-action] so they survive card re-renders. Each call POSTs to a backend
+// endpoint, flips the button to a loading spinner, then polls /data.json until
+// the expected change (new predictions / new results) shows up — at which point
+// the whole board re-renders via load().
+
+function actionBtn(action, label, {tip='', danger=false, disabled=false, tone='amber', data={}}={}){
+  const tones = {
+    amber:  'bg-[#c89b3c]/10 text-[#c89b3c] border-[#c89b3c]/25 hover:bg-[#c89b3c]/20',
+    blue:  'bg-[#00a3e0]/10 text-[#00a3e0] border-[#00a3e0]/25 hover:bg-[#00a3e0]/20',
+    red:   'bg-[#de2f2f]/10 text-[#de2f2f] border-[#de2f2f]/25 hover:bg-[#de2f2f]/20',
+    slate: 'bg-slate-500/10 text-slate-400 border-slate-500/20 hover:bg-slate-500/20',
+    emerald:'bg-emerald-500/10 text-emerald-500 border-emerald-500/25 hover:bg-emerald-500/20',
+  };
+  const cls = danger ? tones.red : (tones[tone]||tones.amber);
+  const dis = disabled ? ' data-disabled="1" style="opacity:.45;cursor:not-allowed"' : '';
+  const dataAttrs = Object.entries(data)
+    .map(([k,v])=>` data-${k}="${escAttr(String(v))}"`).join('');
+  return `<button class="act-btn inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border ${cls} text-[10px] font-black transition-colors disabled:cursor-wait" data-action="${action}" data-tip="${escAttr(tip)}"${dis}${dataAttrs}>${label}</button>`;
+}
+
+// single shared poller so overlapping triggers don't stack timers
+let _pollTimer=null, _pollToken=0;
+
+function setBtnState(btn, state, html){
+  if(!btn) return;
+  if(state==='loading'){
+    btn.dataset.loading='1';
+    btn.disabled=true;
+    btn.classList.add('cursor-wait');
+    btn.innerHTML = `<svg class="animate-spin h-3 w-3" viewBox="0 0 24 24" fill="none"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.4 0 0 5.4 0 12h4z"></path></svg><span>${html||'处理中…'}</span>`;
+  } else {
+    delete btn.dataset.loading;
+    btn.disabled=false;
+    btn.classList.remove('cursor-wait');
+    if(html!=null) btn.innerHTML=html;
+  }
+}
+
+// Find a series record by slug anywhere it might live.
+function _findSeries(slug){
+  return [...(DATA.history||[]), ...(DATA.predicted_upcoming||[]), ...(DATA.incoming||[])]
+    .find(x=>x.slug===slug);
+}
+function _findGame(matchSlug, pos){
+  return (DATA.game_history||[]).find(g=>g.match_slug===matchSlug && g.position===pos);
+}
+
+// Signature used to detect a change after a trigger lands + site rebuilds.
+function _snapshot(kind, ctx){
+  if(kind==='series-pred'){
+    const m=_findSeries(ctx.slug); return Object.keys(m?.predictions||{}).length;
+  }
+  if(kind==='series-grade'){
+    const m=_findSeries(ctx.slug); return Object.keys(m?.results||{}).length;
+  }
+  if(kind==='game-pred'){
+    const g=_findGame(ctx.matchSlug, ctx.pos); return Object.keys(g?.predictions||{}).length;
+  }
+  if(kind==='game-grade'){
+    const g=_findGame(ctx.matchSlug, ctx.pos); return Object.keys(g?.results||{}).length;
+  }
+  return 0;
+}
+
+async function runAction(btn, endpoint, payload, watch, opts={}){
+  const label0 = btn.innerHTML;
+  setBtnState(btn, 'loading', opts.busyText||'处理中…');
+  try{
+    const r = await fetch(endpoint, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload),
+    });
+    const data = await r.json().catch(()=>({}));
+    if(!r.ok){
+      const msg = data.detail || data.message || `HTTP ${r.status}`;
+      setBtnState(btn, 'done', `✗ 失败`);
+      flashToast('操作失败：'+msg, 'error');
+      setTimeout(()=>setBtnState(btn,'idle',label0), 2500);
+      return;
+    }
+    // The backend runs synchronously and rebuilds data.json itself, but a
+    // race with file write is possible — poll a couple of times for the
+    // expected change to appear, then refresh the board.
+    if(opts.waitChange!==false){
+      pollForChange(watch, async ()=>{
+        await load();
+        setBtnState(btn, 'done', opts.doneText||'✓ 完成');
+        flashToast(opts.okMsg||'已完成，已刷新数据。', 'ok');
+        setTimeout(()=>setBtnState(btn,'idle',label0), 2200);
+      });
+    } else {
+      await load();
+      setBtnState(btn, 'done', opts.doneText||'✓ 完成');
+      flashToast(opts.okMsg||'已完成。', 'ok');
+      setTimeout(()=>setBtnState(btn,'idle',label0), 2200);
+    }
+  } catch(e){
+    setBtnState(btn, 'done', '✗ 错误');
+    flashToast('网络错误：'+e.message, 'error');
+    setTimeout(()=>setBtnState(btn,'idle',label0), 2500);
+  }
+}
+
+function pollForChange(watch, onChange){
+  const before = _snapshot(watch.kind, watch.ctx);
+  const token = ++_pollToken;
+  if(_pollTimer){ clearTimeout(_pollTimer); _pollTimer=null; }
+  const t0 = Date.now();
+  const MAX = 12*60*1000;  // give up after ~12 min (series prediction can be slow)
+  const tick = async ()=>{
+    if(token!==_pollToken) return;   // a newer trigger superseded us
+    try{
+      const r = await fetch('data.json?'+Date.now());
+      DATA = await r.json();
+    }catch(e){ /* keep old DATA */ }
+    const now = _snapshot(watch.kind, watch.ctx);
+    if(now !== before){
+      onChange();
+      return;
+    }
+    if(Date.now()-t0 > MAX){
+      onChange();   // refresh anyway so the user isn't stuck on "loading"
+      return;
+    }
+    _pollTimer = setTimeout(tick, 3000);
+  };
+  _pollTimer = setTimeout(tick, 1500);  // first check after a short delay
+}
+
+// a tiny toast (no existing one in the app)
+function flashToast(msg, kind='ok'){
+  let el = document.getElementById('actToast');
+  if(!el){
+    el = document.createElement('div');
+    el.id='actToast';
+    el.className='fixed top-4 right-4 z-[100] px-4 py-2.5 rounded-xl text-[12px] font-bold shadow-lg border transition-all duration-300 pointer-events-none';
+    document.body.appendChild(el);
+  }
+  const colors = {
+    ok:    'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
+    error: 'bg-red-500/15 text-red-400 border-red-500/30',
+    info:  'bg-slate-500/15 text-slate-300 border-slate-500/30',
+  };
+  el.className='fixed top-4 right-4 z-[100] px-4 py-2.5 rounded-xl text-[12px] font-bold shadow-lg border transition-all duration-300 pointer-events-none '+(colors[kind]||colors.info);
+  el.textContent = msg;
+  el.style.opacity='1'; el.style.transform='translateY(0)';
+  clearTimeout(el._t);
+  el._t = setTimeout(()=>{ el.style.opacity='0'; el.style.transform='translateY(-8px)'; }, 2600);
+}
+
+// global delegated click handler for all action buttons
+document.body.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.act-btn[data-action]');
+  if(!btn || btn.dataset.disabled==='1' || btn.dataset.loading==='1') return;
+  const action = btn.dataset.action;
+  const mid = btn.dataset.matchId;
+  const pos = Number(btn.dataset.pos);
+  const slug = btn.dataset.slug;
+  const matchSlug = btn.dataset.matchSlug;
+
+  if(action==='series-predict'){
+    runAction(btn,'/api/predict',{match_id:Number(mid)},
+      {kind:'series-pred', ctx:{slug}},
+      {busyText:'分析中…', okMsg:'系列赛分析已完成。', doneText:'✓ 已生成'});
+  }
+  else if(action==='series-grade'){
+    runAction(btn,'/api/grade',{match_id:Number(mid)},
+      {kind:'series-grade', ctx:{slug}},
+      {busyText:'结算中…', okMsg:'系列赛已结算。', doneText:'✓ 已结算'});
+  }
+  else if(action==='game-refresh-bp'){
+    runAction(btn,'/api/refresh-bp',{match_id:Number(mid), game_pos:pos, predict:false},
+      {kind:'game-pred', ctx:{matchSlug, pos}},
+      {busyText:'刷新BP…', okMsg:'BP 刷新完成。', doneText:'✓ BP已就绪', waitChange:false});
+  }
+  else if(action==='game-predict'){
+    runAction(btn,'/api/predict-game',{match_id:Number(mid), game_pos:pos},
+      {kind:'game-pred', ctx:{matchSlug, pos}},
+      {busyText:'分析中…', okMsg:'单局分析已完成。', doneText:'✓ 已生成'});
+  }
+  else if(action==='game-grade'){
+    runAction(btn,'/api/grade-game',{match_id:Number(mid), game_pos:pos},
+      {kind:'game-grade', ctx:{matchSlug, pos}},
+      {busyText:'结算中…', okMsg:'本局已结算。', doneText:'✓ 已结算'});
+  }
+});
 
 load();
 setInterval(()=>{ if(DATA){ renderIncoming(); } }, 60000);

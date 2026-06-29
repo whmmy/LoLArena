@@ -1,0 +1,10 @@
+{
+  "winner_side": null,
+  "length_min": 0.0,
+  "kills": {
+    "blue": 0,
+    "red": 0
+  },
+  "total_kills": 0,
+  "status": "finished"
+}

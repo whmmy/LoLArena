@@ -6,6 +6,10 @@ Routes:
   GET  /api/matches      -> list tracked matches (from data/)
   POST /api/refresh-bp   -> fetch BP for one game; if complete, auto-predict
   POST /api/predict      -> manually trigger series prediction for a match
+  POST /api/predict-game -> manually trigger single-game analysis (post-BP, step 2)
+  POST /api/grade        -> settle a finished series (score vs truth)
+  POST /api/grade-game   -> settle one finished game (score vs truth)
+  POST /api/rebuild      -> regenerate data.json
 """
 
 from __future__ import annotations
@@ -125,6 +129,70 @@ def api_predict(req: PredictRequest):
     failed = [r.get("model_id") for r in recs if r.get("error")]
     return {"ok": True, "predicted": ok, "total": len(recs),
             "site_rebuilt": True, "failed_models": failed, "results": recs}
+
+
+class PredictGameRequest(BaseModel):
+    match_id: int
+    game_pos: int
+
+
+@app.post("/api/predict-game")
+def api_predict_game(req: PredictGameRequest):
+    """Manually trigger single-game analysis for one game (post-BP, step 2 of 2).
+
+    This is the decoupled half of refresh-bp: the UI calls refresh-bp first
+    (predict=false) to fetch BP, then this endpoint to run the models.
+    """
+    from ..pipeline import orchestrator as orch
+    # Pre-check BP completeness so we can return a clear 400 instead of a silent
+    # empty list (cmd_predict_game only prints a warning when BP is incomplete).
+    from ..adapters.cito import get_client
+    from ..pipeline import collect as collect_mod
+    try:
+        client = get_client()
+        match = collect_mod.fetch_fixture(req.match_id, client, refresh=False)
+        bp = collect_mod.fetch_game_bp(match, req.game_pos, client, refresh=False)
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(500, detail=f"fetch failed: {e}")
+    if bp is None:
+        raise HTTPException(400, detail=f"Game {req.game_pos} not found for match {req.match_id}.")
+    if not bp.get("bp_complete"):
+        raise HTTPException(400, detail="BP 尚未完成，请先点击「刷新BP」。")
+    recs = orch.cmd_predict_game(req.match_id, req.game_pos)
+    ok = sum(1 for r in recs if r.get("prediction") and not r.get("error"))
+    failed = [r.get("model_id") for r in recs if r.get("error")]
+    return {"ok": True, "predicted": ok, "total": len(recs),
+            "site_rebuilt": True, "failed_models": failed, "results": recs}
+
+
+class GradeRequest(BaseModel):
+    match_id: int
+
+
+@app.post("/api/grade")
+def api_grade(req: GradeRequest):
+    """Settle a finished series: score every model's prediction vs truth."""
+    from ..pipeline import orchestrator as orch
+    out = orch.cmd_grade(req.match_id)
+    return {"ok": True, "site_rebuilt": True,
+            "truth": out.get("truth"), "results": out.get("results", {}),
+            "error": out.get("error")}
+
+
+class GradeGameRequest(BaseModel):
+    match_id: int
+    game_pos: int
+
+
+@app.post("/api/grade-game")
+def api_grade_game(req: GradeGameRequest):
+    """Settle one finished game: score every model's game prediction vs truth."""
+    from ..pipeline import orchestrator as orch
+    out = orch.cmd_grade_game(req.match_id, req.game_pos)
+    return {"ok": True, "site_rebuilt": True,
+            "position": out.get("position"),
+            "truth": out.get("truth"), "results": out.get("results", {}),
+            "error": out.get("error")}
 
 
 @app.post("/api/rebuild")

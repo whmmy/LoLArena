@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-06-29T04:14:30Z",
+  "collected_at": "2026-06-29T12:17:15Z",
   "fixture_header": {
     "match_id": 115570934355614509,
     "name": "Karmine Corp vs T1",
@@ -14,7 +14,7 @@
     "number_of_games": 5,
     "begin_at_utc": "2026-06-29T08:00:00.000Z",
     "patch_version": null,
-    "status": "running",
+    "status": "finished",
     "blue": {
       "id": "kc",
       "name": "Karmine Corp",
@@ -32,7 +32,7 @@
       "location": null
     },
     "block_name": "Play In Knockouts",
-    "vod_url": "https://www.youtube.com/watch?v=X4Yiwuw0Sao"
+    "vod_url": "https://www.twitch.tv/videos/2807883805"
   },
   "rosters": {
     "blue": {
@@ -513,6 +513,472 @@
         "first_dragon_rate": 0.4444,
         "first_baron_rate": 0.6154
       }
+    }
+  },
+  "team_series_history": {
+    "blue": {
+      "available": true,
+      "series_count": 49,
+      "games_with_duration": 117,
+      "avg_game_duration_min": 33.7,
+      "avg_series_length": 2.7,
+      "sweep_rate": 0.367,
+      "swept_rate": 0.143,
+      "recent_series": [
+        {
+          "date": "2026-06-29",
+          "league": "2026",
+          "opponent_slug": "t1",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 3,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-28",
+          "league": "2026",
+          "opponent_slug": "dcg",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "league": "Winter 2026",
+          "opponent_slug": "g2-esports",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 3,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 32.4,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 22.8,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 35.5,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 29.8,
+              "won": false
+            },
+            {
+              "game_number": 5,
+              "duration_min": 26.3,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-06",
+          "league": "Winter 2026",
+          "opponent_slug": "mad-lions",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 42.1,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 35.7,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 37.0,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-01",
+          "league": "Winter 2026",
+          "opponent_slug": "giantx-lec",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 33.9,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 29.7,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-30",
+          "league": "Winter 2026",
+          "opponent_slug": "navi",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 1,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 29.3,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 31.2,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 38.4,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 26.6,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-23",
+          "league": "Winter 2026",
+          "opponent_slug": "g2",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 3,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 44.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 27.5,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 30.8,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 26.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-10",
+          "league": "Winter 2026",
+          "opponent_slug": "giantx-lec",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 2,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 32.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 41.3,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 32.1,
+              "won": false
+            }
+          ]
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "series_count": 49,
+      "games_with_duration": 121,
+      "avg_game_duration_min": 32.5,
+      "avg_series_length": 2.9,
+      "sweep_rate": 0.449,
+      "swept_rate": 0.102,
+      "recent_series": [
+        {
+          "date": "2026-06-29",
+          "league": "2026",
+          "opponent_slug": "kc",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-28",
+          "league": "2026",
+          "opponent_slug": "tlaw",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "league": "Summer 2024",
+          "opponent_slug": "gen",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 2,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 31.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 39.2,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 44.9,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 32.7,
+              "won": false
+            },
+            {
+              "game_number": 5,
+              "duration_min": 28.4,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "league": "Summer 2024",
+          "opponent_slug": "hle",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 3,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 37.9,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 34.5,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 31.8,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 32.3,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-30",
+          "league": "Summer 2024",
+          "opponent_slug": "bfx",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 37.9,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 29.8,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-28",
+          "league": "Summer 2024",
+          "opponent_slug": "kt",
+          "side": "red",
+          "result": "win",
+          "team_score": 1,
+          "opponent_score": 0,
+          "series_length": 1,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 28.8,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "league": "Summer 2024",
+          "opponent_slug": "bro",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 33.1,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 28.8,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-20",
+          "league": "Summer 2024",
+          "opponent_slug": "drx",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 28.3,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 31.1,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 27.1,
+              "won": true
+            }
+          ]
+        }
+      ]
     }
   },
   "team_standings": {

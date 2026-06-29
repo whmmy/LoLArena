@@ -557,7 +557,12 @@ def _resolve_match_dir(match_id: int, match: dict) -> Path | None:
 
 
 def cmd_grade(match_id: int) -> dict:
-    """Score every model's series prediction against the post-match truth."""
+    """Score every model's series prediction against the post-match truth.
+
+    Also cascades into the series' single games: any finished game that already
+    has predictions gets graded+cached too, so one series grade keeps the
+    single-game leaderboard in sync.
+    """
     from ..graders.grade_match import grade_match
     client = get_client()
     match = _fetch_match_for_grade(client, match_id)
@@ -587,10 +592,26 @@ def cmd_grade(match_id: int) -> dict:
             json.dumps(scores, ensure_ascii=False, indent=2), encoding="utf-8")
         out["results"][model_id] = scores
         print(f"  {model_id}: composite={scores.get('composite', 0):.1f}")
+
+    # Cascade: grade each finished game that has predictions, so the single-game
+    # leaderboard + cached bp.json truth stay in sync with the series grade.
+    # Only touches games that actually have a prediction dir on disk; games with
+    # no predictions are skipped silently (grading them would be a no-op).
+    for g in match.get("games") or []:
+        try:
+            gp = g.get("position")
+            if gp is None:
+                continue
+            gdir = cfg.game_dir(mdir.name, gp)
+            if (gdir / "predictions").exists() and any((gdir / "predictions").glob("*.json")):
+                cmd_grade_game(match_id, gp, auto_rebuild_site=False)
+        except Exception as e:  # noqa: BLE001
+            print(f"[grade] cascade game {g.get('position')} failed: {e}")
+    _maybe_rebuild_site()
     return out
 
 
-def cmd_grade_game(match_id: int, position: int) -> dict:
+def cmd_grade_game(match_id: int, position: int, *, auto_rebuild_site: bool = True) -> dict:
     from ..graders.grade_game import grade_game
     client = get_client()
     match = _fetch_match_for_grade(client, match_id)
@@ -606,16 +627,67 @@ def cmd_grade_game(match_id: int, position: int) -> dict:
     detail = client.game_detail(g["id"], refresh=True) or {}
     truth = _truth_for_game(match, detail, g)
     slug = _match_slug_of(match) if match.get("opponents") else f"match_{match_id}"
-    pdir = cfg.game_dir(slug, position) / "predictions"
+    gdir = cfg.game_dir(slug, position)
+    pdir = gdir / "predictions"
+    # Persist the authoritative truth + per-model scores under the game dir's
+    # results/ (mirrors cmd_grade's series-level persistence) so the leaderboard
+    # shows real single-game scores after a page rebuild.
+    rdir = gdir / "results"
+    rdir.mkdir(parents=True, exist_ok=True)
+    (rdir / "_truth.json").write_text(
+        json.dumps(truth, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Cache the resolved truth back into bp.json too: the API stub is often
+    # sparse (winner_id/length missing), and build_site reads bp.json for the
+    # card's truth line. Mirroring here means one grade keeps everything in sync.
+    _cache_truth_into_bp(gdir / "bp.json", truth, match)
     out: dict[str, Any] = {"match_id": match_id, "position": position,
                            "truth": truth, "results": {}}
     for pf in sorted(pdir.glob("*.json")):
         model_id = pf.stem
         rec = json.loads(pf.read_text(encoding="utf-8"))
         scores = grade_game(rec.get("prediction", {}), truth)
+        (rdir / f"{model_id}.json").write_text(
+            json.dumps(scores, ensure_ascii=False, indent=2), encoding="utf-8")
         out["results"][model_id] = scores
         print(f"  {model_id}: composite={scores.get('composite', 0):.1f}")
+    if auto_rebuild_site:
+        _maybe_rebuild_site()
     return out
+
+
+def _cache_truth_into_bp(bp_path: Path, truth: dict, match: dict) -> None:
+    """Mirror the resolved game truth into bp.json so the truth survives a site
+    rebuild without re-grading, and so the BP file is a self-contained record.
+
+    Resolves winner_id/winner_name from the match opponents by side. Leaves the
+    existing picks/BP fields untouched.
+    """
+    if not bp_path.exists():
+        return
+    try:
+        bp = json.loads(bp_path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return
+    side = truth.get("winner_side")
+    opps = match.get("opponents") or []
+    winner_id, winner_name = None, None
+    if side in ("blue", "red"):
+        idx = 0 if side == "blue" else 1
+        if len(opps) > idx:
+            winner_id = (opps[idx]["opponent"] or {}).get("id")
+            winner_name = (opps[idx]["opponent"] or {}).get("name")
+    bp["status"] = truth.get("status") or bp.get("status")
+    bp["winner_side"] = side
+    if winner_id:
+        bp["winner_id"] = winner_id
+    if winner_name:
+        bp["winner_name"] = winner_name
+    if truth.get("length_min"):
+        bp["length_sec"] = round(float(truth["length_min"]) * 60)
+    if truth.get("kills"):
+        bp["kills"] = truth["kills"]
+        bp["total_kills"] = truth.get("total_kills")
+    bp_path.write_text(json.dumps(bp, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def _truth_for_match(match: dict) -> dict:
@@ -648,11 +720,15 @@ def _truth_for_game(match: dict, detail: dict, game_stub: dict) -> dict:
         side = winning_side
     else:
         winner_id = (game_stub.get("winner") or {}).get("id")
-        side = "blue" if winner_id == blue_id else "red"
+        side = "blue" if winner_id == blue_id else "red" if winner_id == red_id else None
+
     # total kills from per-player stats. Prefer the explicit per-player `side`
     # (Cito) over team-id matching, which is unreliable across match/game order.
     kills = {"blue": 0, "red": 0}
+    stats_final = True   # whether the stats endpoint had FINAL numbers (not 0-drafts)
     for p in detail.get("players", []) or []:
+        if p.get("finalStatsAvailable") is False:
+            stats_final = False
         k = int(p.get("kills") or 0)
         pside = str(p.get("side") or "").lower()
         if pside in ("blue", "red"):
@@ -663,6 +739,13 @@ def _truth_for_game(match: dict, detail: dict, game_stub: dict) -> dict:
                 kills["blue"] += k
             elif tid == red_id:
                 kills["red"] += k
+
+    # When the game stub lacks an explicit winner but the stats are final and
+    # asymmetric, the higher-kill side is the winner. (We can't use raw kill
+    # counts when finalStatsAvailable is False — those are placeholder 0s.)
+    if side is None and stats_final and (kills["blue"] != kills["red"]):
+        side = "blue" if kills["blue"] > kills["red"] else "red"
+
     length_min = round((game_stub.get("length") or detail.get("length") or 0) / 60.0, 1)
     return {
         "winner_side": side,

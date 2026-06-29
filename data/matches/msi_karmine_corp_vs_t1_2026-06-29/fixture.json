@@ -2,13 +2,16 @@
   "id": 115570934355614509,
   "name": "Karmine Corp vs T1",
   "match_type": null,
-  "status": "running",
+  "status": "finished",
   "number_of_games": 5,
   "begin_at": "2026-06-29T08:00:00.000Z",
   "scheduled_at": "2026-06-29T08:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "t1",
+  "winner": {
+    "id": "t1",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
@@ -18,7 +21,7 @@
         "name": "Karmine Corp",
         "acronym": "KC",
         "slug": "kc",
-        "image_url": "http://static.lolesports.com/teams/1704714951336_KC.png"
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png"
       }
     },
     {
@@ -27,7 +30,7 @@
         "name": "T1",
         "acronym": "T1",
         "slug": "t1",
-        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
       }
     }
   ],
@@ -38,22 +41,121 @@
     },
     {
       "team_id": "t1",
-      "score": 1
+      "score": 3
     }
   ],
   "league": {
     "id": "lol-msi",
     "name": "MSI",
-    "slug": null
+    "slug": "msi"
   },
   "serie": {},
   "tournament": {
-    "id": null,
-    "name": null
+    "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614510",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614510,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      },
+      "red_team": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png"
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614511",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614511,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      },
+      "red_team": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png"
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614512",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614512,
+      "blue_team": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png"
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Play In Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.twitch.tv/videos/2807883805"
 }
