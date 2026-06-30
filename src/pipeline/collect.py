@@ -144,6 +144,16 @@ def collect_context_pack(match: dict, client: CitoClient) -> dict:
             "red": _team_objectives_block(red_obj),
         }
 
+    # team series history: the ONLY source of per-game `duration` and actual
+    # series scores. objectives has kills/gold but no duration; this block gives
+    # the duration anchor (single-game) and sweep/series-length anchor (match).
+    # ~1 req/team — cheap. Optional via policy.
+    if policy.get("team_series_history", True):
+        pack["team_series_history"] = {
+            "blue": _series_history_block(client, blue_slug, league.get("slug")),
+            "red": _series_history_block(client, red_slug, league.get("slug")),
+        }
+
     # league standings for both teams (new block)
     if policy.get("standings", True) and league_id:
         pack["team_standings"] = _standings_block(client, league_id, blue_slug, red_slug)
@@ -337,6 +347,34 @@ def _team_objectives_block(obj_data: dict | None) -> dict:
         },
         "objective_control": control,
         "first_objectives": first_obj,
+    }
+
+
+def _series_history_block(client: CitoClient, slug: str | None,
+                           league_slug: str | None) -> dict:
+    """Series-history anchors: avg game duration + sweep/series-length tendencies.
+
+    Surfaced as a compact block the prompt can cite directly. The full per-series
+    list is kept (trimmed) so models can sanity-check style, but the aggregate
+    fields are the workhorses for duration & series-score prediction.
+    """
+    if not slug:
+        return _unavailable("no team slug")
+    try:
+        hist = client.team_series_history(slug, last=25, league=league_slug)
+    except Exception as e:
+        return _unavailable(f"{type(e).__name__}: {str(e)[:120]}")
+    if not hist.get("available"):
+        return _unavailable("team_series_history unavailable")
+    return {
+        "available": True,
+        "series_count": hist.get("series_count"),
+        "games_with_duration": hist.get("games_with_duration"),
+        "avg_game_duration_min": hist.get("avg_game_duration_min"),
+        "avg_series_length": hist.get("avg_series_length"),
+        "sweep_rate": hist.get("sweep_rate"),          # this team won 2-0/3-0
+        "swept_rate": hist.get("swept_rate"),          # this team lost 0-2/0-3
+        "recent_series": hist.get("recent_series", [])[:8],  # trim for prompt size
     }
 
 

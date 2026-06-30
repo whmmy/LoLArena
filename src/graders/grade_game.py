@@ -39,6 +39,12 @@ def _score_task(task: dict, pred: dict, truth: dict) -> float:
     metric = task["metric"]
     field = task["output_field"]
     truth_side = truth.get("winner_side")
+    # optional per-task MAE scale (the |error| that scores 0). Default in metrics
+    # is max(2, |truth|), which is far too tight for game duration (~2min -> 0),
+    # so tasks.yaml can override it (e.g. duration: 8) to stop rewarding risk-free
+    # convergence to the league mean.
+    scale = task.get("scale")
+    mae_kwargs = {"scale": float(scale)} if scale is not None else {}
     try:
         if metric == "brier_binary":
             probs = pred.get(field) or {}
@@ -47,14 +53,14 @@ def _score_task(task: dict, pred: dict, truth: dict) -> float:
             return M.brier_binary(probs, truth_side)
         if metric == "mae":
             if field == "expected_duration_min":
-                return M.mae(pred.get(field, 0), truth.get("length_min", 0))
+                return M.mae(pred.get(field, 0), truth.get("length_min", 0), **mae_kwargs)
             # kills.blue / kills.red -> nested
             if field == "kills.blue":
                 return M.mae((pred.get("kills") or {}).get("blue", 0),
-                             (truth.get("kills") or {}).get("blue", 0))
+                             (truth.get("kills") or {}).get("blue", 0), **mae_kwargs)
             if field == "kills.red":
                 return M.mae((pred.get("kills") or {}).get("red", 0),
-                             (truth.get("kills") or {}).get("red", 0))
+                             (truth.get("kills") or {}).get("red", 0), **mae_kwargs)
         if metric == "smape":
             return M.smape(pred.get(field, 0), truth.get("total_kills", 0))
     except Exception:  # noqa: BLE001

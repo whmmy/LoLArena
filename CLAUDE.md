@@ -61,3 +61,15 @@ Without keys, `cmd_predict` fails fast with a clear message (by design).
 - Free tier is **500 req/month/key**. Player-level blocks (`player_form`,
   `player_champion_pool`) cost ~2 req/player; toggle them in
   `configs/policy.yaml` when quota is tight.
+- **`team_objectives` has kills/gold/objectives but NO game duration.** The
+  duration + series-sweep anchors come from a separate `team_series_history`
+  block (`/lol/teams/{slug}/matches`, ~1 req/team) which is the ONLY source of
+  per-game `duration` and real series scores. This block feeds both the
+  single-game duration anchor and the series-score (sweep) anchor — keep it on
+  or those predictions revert to league-mean priors. Note: very recent matches
+  (last ~1-2 days) often have `duration: null` until Cito back-fills, so the
+  anchor uses older games.
+- **Scoring scales are task-config-driven** (`scale:` in `configs/tasks.yaml`).
+  The MAE default `max(2, |truth|)` is far too tight for game duration (~2min
+  miss -> 0), so duration/kills tasks set an explicit `scale`. Changing it
+  changes how much a BP-specific call is rewarded vs a risk-free mean guess.

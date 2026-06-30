@@ -1,6 +1,6 @@
 {
-  "match_id": 115846993721104369,
-  "game_id": "lol-game-115846993721169906",
+  "match_id": 115570934355614509,
+  "game_id": "lol-game-115570934355614510",
   "position": 1,
   "status": "finished",
   "length_sec": null,
@@ -10,73 +10,67 @@
     "blue": [
       {
         "role": "top",
-        "player": "TLAW Morgan",
-        "champion": "Ornn",
+        "player": "T1 Doran",
+        "champion": "Jayce",
         "spells": []
       },
       {
         "role": "jun",
-        "player": "TLAW Josedeodo",
-        "champion": "Xin Zhao",
+        "player": "T1 Oner",
+        "champion": "Nocturne",
         "spells": []
       },
       {
         "role": "mid",
-        "player": "TLAW Quid",
+        "player": "T1 Faker",
         "champion": "Akali",
         "spells": []
       },
       {
         "role": "adc",
-        "player": "TLAW Yeon",
-        "champion": "Varus",
+        "player": "T1 Peyz",
+        "champion": "Mel",
         "spells": []
       },
       {
         "role": "sup",
-        "player": "TLAW CoreJJ",
-        "champion": "Bard",
+        "player": "T1 Keria",
+        "champion": "Pyke",
         "spells": []
       }
     ],
     "red": [
       {
         "role": "top",
-        "player": "DCG Flauren",
-        "champion": "Rumble",
+        "player": "KC Canna",
+        "champion": "Sion",
         "spells": []
       },
       {
         "role": "jun",
-        "player": "DCG Pop9",
-        "champion": "Jarvan IV",
+        "player": "KC Yike",
+        "champion": "Naafiri",
         "spells": []
       },
       {
         "role": "mid",
-        "player": "DCG HongSuo",
-        "champion": "Cassiopeia",
+        "player": "KC kyeahoo",
+        "champion": "Orianna",
         "spells": []
       },
       {
         "role": "adc",
-        "player": "DCG Feng ",
-        "champion": "Jhin",
+        "player": "KC Caliste",
+        "champion": "Ashe",
         "spells": []
       },
       {
         "role": "sup",
-        "player": "DCG ShiauC",
-        "champion": "Rakan",
+        "player": "KC Busio",
+        "champion": "Seraphine",
         "spells": []
       }
     ]
   },
-  "fetched_at": "2026-06-29T06:07:24Z",
-  "winner_side": null,
-  "kills": {
-    "blue": 0,
-    "red": 0
-  },
-  "total_kills": 0
+  "fetched_at": "2026-06-29T12:17:20Z"
 }

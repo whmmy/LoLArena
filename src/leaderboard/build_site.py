@@ -133,6 +133,7 @@ def _all_matches() -> list[dict]:
                 preds[pf.stem] = rec
         out.append({
             "slug": mdir.name,
+            "match_id": fixture.get("id"),
             "league": header.get("league") or (fixture.get("league") or {}).get("name"),
             "blue": blue, "red": red,
             "blue_image_url": blue_image_url, "red_image_url": red_image_url,
@@ -197,6 +198,10 @@ def _game_history() -> list[dict]:
     if not cfg.GAMES_DIR.exists():
         return out
     for match_dir in sorted(cfg.GAMES_DIR.glob("*")):
+        # Resolve human-readable blue/red team names from the parent match
+        # fixture. The bp.json only stores champion picks (an array), so
+        # without this the UI would render "[object Object]" for team names.
+        blue_name, red_name, match_id = _match_meta(match_dir.name)
         for gdir in sorted(match_dir.glob("g*")):
             bp = _read(gdir / "bp.json") or {}
             preds: dict[str, Any] = {}
@@ -204,30 +209,77 @@ def _game_history() -> list[dict]:
                 rec = _prediction_record(pf)
                 if rec:
                     preds[pf.stem] = rec
-            truth = {
-                "winner_side": _winner_side(bp),
-                "length_min": round((bp.get("length_sec") or 0) / 60.0, 1),
-                "status": bp.get("status"),
-            }
+            # Game truth, most-authoritative first:
+            #   1. results/_truth.json — written by cmd_grade_game (resolved)
+            #   2. bp.json cached fields — cmd_grade_game mirrors truth here
+            #      (winner_side/length_sec/kills/total_kills) so the truth line
+            #      survives a rebuild without re-grading.
+            #   3. bp.json raw fields — sparse/None when the API stub is empty.
+            graded = _read(gdir / "results" / "_truth.json") or {}
+            if graded:
+                truth = {
+                    "winner_side": graded.get("winner_side") or bp.get("winner_side"),
+                    "length_min": graded.get("length_min") if graded.get("length_min") else
+                                  round((bp.get("length_sec") or 0) / 60.0, 1),
+                    "kills": graded.get("kills") or bp.get("kills"),
+                    "total_kills": graded.get("total_kills") or bp.get("total_kills"),
+                    "status": graded.get("status") or bp.get("status"),
+                }
+            else:
+                truth = {
+                    "winner_side": bp.get("winner_side") or _winner_side(bp),
+                    "length_min": round((bp.get("length_sec") or 0) / 60.0, 1),
+                    "kills": bp.get("kills"),
+                    "total_kills": bp.get("total_kills"),
+                    "status": bp.get("status"),
+                }
+            # per-model graded composite (written by cmd_grade_game). Skip
+            # `_`-prefixed files (e.g. _truth.json) — they're not model results.
+            game_results: dict[str, float] = {}
+            for rf in (gdir / "results").glob("*.json"):
+                if rf.stem.startswith("_"):
+                    continue
+                game_results[rf.stem] = _read(rf).get("composite", 0.0)
             out.append({
                 "match_slug": match_dir.name,
+                "match_id": match_id,
                 "position": bp.get("position") or int(gdir.name[1:]),
-                "blue": (bp.get("picks", {}).get("blue")),
-                "red": (bp.get("picks", {}).get("red")),
+                "blue": blue_name,
+                "red": red_name,
+                "blue_picks": (bp.get("picks", {}).get("blue")),
+                "red_picks": (bp.get("picks", {}).get("red")),
                 "bp_complete": bp.get("bp_complete"),
                 "truth": truth,
                 "predictions": preds,
-                "results": {},   # filled by grader when results are written here
+                "results": game_results,
             })
     return out
 
 
+def _match_meta(match_slug: str) -> tuple[str, str, int | None]:
+    """Resolve blue/red display names + the numeric match_id for a single-game
+    match from its parent fixture under data/matches/<match_slug>/."""
+    mdir = cfg.MATCHES_DIR / match_slug
+    if not mdir.exists():
+        return "?", "?", None
+    fixture = _read(mdir / "fixture.json") or {}
+    pack = _read(mdir / "context_pack.json") or {}
+    header = pack.get("fixture_header", {})
+    header_blue = header.get("blue") or {}
+    header_red = header.get("red") or {}
+    opps = fixture.get("opponents") or []
+    blue_opp = opps[0]["opponent"] if opps else {}
+    red_opp = opps[1]["opponent"] if len(opps) > 1 else {}
+    blue = blue_opp.get("name") or header_blue.get("name") or "?"
+    red = red_opp.get("name") or header_red.get("name") or "?"
+    return blue, red, fixture.get("id")
+
+
 def _winner_side(bp: dict) -> str | None:
-    wid = bp.get("winner_id")
-    if not wid:
-        return None
-    # crude: we don't always store blue/red team ids in bp; leave None if unknown
-    return None
+    """Best-effort winner side from a bp.json. cmd_grade_game caches an explicit
+    `winner_side` here; otherwise we can't infer blue/red from bp alone."""
+    side = bp.get("winner_side")
+    return side if side in ("blue", "red") else None
 
 
 # ----------------------------- helpers -----------------------------
@@ -280,10 +332,14 @@ def _prediction_record(path: Path) -> dict[str, Any] | None:
 
 
 def _prediction_summary(prediction: dict[str, Any]) -> dict[str, Any]:
+    # Series predictions use the plural `win_probs` ({blue,red}); single-game
+    # predictions use the singular `win_prob`. Normalise so the frontend can
+    # always read probabilities from `win_probs`.
+    win_probs = prediction.get("win_probs") or prediction.get("win_prob")
     return {
         "series_score": prediction.get("series_score"),
         "series_length": prediction.get("series_length"),
-        "win_probs": prediction.get("win_probs"),
+        "win_probs": win_probs,
         "predicted_winner": prediction.get("predicted_winner"),
         "favored_side": prediction.get("favored_side"),
         "winner": prediction.get("predicted_winner"),

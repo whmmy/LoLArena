@@ -1,0 +1,59 @@
+{
+  "id": 115570934355614521,
+  "name": "Team Liquid Alienware vs Karmine Corp",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 5,
+  "begin_at": "2026-06-30T08:00:00.000Z",
+  "scheduled_at": "2026-06-30T08:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "tlaw",
+        "name": "Team Liquid Alienware",
+        "acronym": "TLAW",
+        "slug": "tlaw",
+        "image_url": "http://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "http://static.lolesports.com/teams/1704714951336_KC.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "tlaw",
+      "score": 0
+    },
+    {
+      "team_id": "karmine-corp",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-msi",
+    "name": "MSI",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": null,
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Play In Knockouts",
+  "round": null,
+  "vod_url": null
+}
