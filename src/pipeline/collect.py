@@ -362,7 +362,7 @@ def _series_history_block(client: CitoClient, slug: str | None,
         return _unavailable("no team slug")
     try:
         hist = client.team_series_history(slug, last=25, league=league_slug)
-    except (CitoError, Exception) as e:
+    except Exception as e:
         return _unavailable(f"{type(e).__name__}: {str(e)[:120]}")
     if not hist.get("available"):
         return _unavailable("team_series_history unavailable")

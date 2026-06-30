@@ -560,7 +560,7 @@ class CitoClient:
         Normalised shape (fault-tolerant; never raises):
             {
               "available": bool,
-              "series": [ {
+              "recent_series": [ {
                   "date, opponent_slug, side, result(won/lost),
                   team_score, opponent_score, series_length,
                   games: [ {game_number, duration_min, won} ]   # duration_min nullable
@@ -568,7 +568,7 @@ class CitoClient:
               # aggregated anchors the prompt can cite directly:
               "avg_game_duration_min": float | None,
               "avg_series_length": float | None,
-              "sweep_rate": float | None,        # fraction of series won/lost 2-0 / 3-0
+              "sweep_rate": float | None,        # fraction of series won 2-0 / 3-0
               "swept_rate": float | None,        # fraction this team was swept (lost 0-2/0-3)
             }
         """
@@ -578,10 +578,10 @@ class CitoClient:
         try:
             raw = self.get(f"/lol/teams/{slug}/matches", params,
                            refresh=refresh, ttl_seconds=3600)
-        except (CitoError, Exception):
-            return {"available": False, "series": []}
+        except Exception:
+            return {"available": False, "recent_series": []}
         if not isinstance(raw, dict):
-            return {"available": False, "series": []}
+            return {"available": False, "recent_series": []}
 
         is_requested = lambda team_obj: bool(team_obj.get("isRequested"))
         series: list[dict] = []

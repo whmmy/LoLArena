@@ -604,17 +604,24 @@ def cmd_grade(match_id: int) -> dict:
                 continue
             gdir = cfg.game_dir(mdir.name, gp)
             if (gdir / "predictions").exists() and any((gdir / "predictions").glob("*.json")):
-                cmd_grade_game(match_id, gp, auto_rebuild_site=False)
+                # Pass the already-fetched match so each game isn't re-fetched
+                # with refresh=True (avoids an N+1 of network round-trips).
+                cmd_grade_game(match_id, gp, auto_rebuild_site=False, _match=match)
         except Exception as e:  # noqa: BLE001
             print(f"[grade] cascade game {g.get('position')} failed: {e}")
     _maybe_rebuild_site()
     return out
 
 
-def cmd_grade_game(match_id: int, position: int, *, auto_rebuild_site: bool = True) -> dict:
+def cmd_grade_game(match_id: int, position: int, *,
+                   auto_rebuild_site: bool = True,
+                   _match: dict | None = None) -> dict:
     from ..graders.grade_game import grade_game
     client = get_client()
-    match = _fetch_match_for_grade(client, match_id)
+    # _match is the already-fetched match passed in by cmd_grade's cascade to
+    # avoid an N+1 re-fetch (with refresh=True) per game. Callers hitting the
+    # HTTP endpoint leave it None and we fetch here.
+    match = _match if _match is not None else _fetch_match_for_grade(client, match_id)
     if not match:
         print(f"[grade-game] could not resolve match {match_id} in Cito (no mapping).")
         return {"match_id": match_id, "position": position,
@@ -639,7 +646,7 @@ def cmd_grade_game(match_id: int, position: int, *, auto_rebuild_site: bool = Tr
     # Cache the resolved truth back into bp.json too: the API stub is often
     # sparse (winner_id/length missing), and build_site reads bp.json for the
     # card's truth line. Mirroring here means one grade keeps everything in sync.
-    _cache_truth_into_bp(gdir / "bp.json", truth, match)
+    _cache_truth_into_bp(gdir / "bp.json", truth)
     out: dict[str, Any] = {"match_id": match_id, "position": position,
                            "truth": truth, "results": {}}
     for pf in sorted(pdir.glob("*.json")):
@@ -655,33 +662,26 @@ def cmd_grade_game(match_id: int, position: int, *, auto_rebuild_site: bool = Tr
     return out
 
 
-def _cache_truth_into_bp(bp_path: Path, truth: dict, match: dict) -> None:
+def _cache_truth_into_bp(bp_path: Path, truth: dict) -> None:
     """Mirror the resolved game truth into bp.json so the truth survives a site
     rebuild without re-grading, and so the BP file is a self-contained record.
 
-    Resolves winner_id/winner_name from the match opponents by side. Leaves the
-    existing picks/BP fields untouched.
+    winner_id/winner_name come straight from _truth_for_game (resolved from the
+    game stub's authoritative `winner`, NOT from opponents[0]=blue which is an
+    unreliable proxy for in-game side). Leaves existing picks/BP fields untouched.
     """
     if not bp_path.exists():
         return
     try:
         bp = json.loads(bp_path.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError):
+    except json.JSONDecodeError:
         return
-    side = truth.get("winner_side")
-    opps = match.get("opponents") or []
-    winner_id, winner_name = None, None
-    if side in ("blue", "red"):
-        idx = 0 if side == "blue" else 1
-        if len(opps) > idx:
-            winner_id = (opps[idx]["opponent"] or {}).get("id")
-            winner_name = (opps[idx]["opponent"] or {}).get("name")
     bp["status"] = truth.get("status") or bp.get("status")
-    bp["winner_side"] = side
-    if winner_id:
-        bp["winner_id"] = winner_id
-    if winner_name:
-        bp["winner_name"] = winner_name
+    bp["winner_side"] = truth.get("winner_side")
+    if truth.get("winner_id"):
+        bp["winner_id"] = truth["winner_id"]
+    if truth.get("winner_name"):
+        bp["winner_name"] = truth["winner_name"]
     if truth.get("length_min"):
         bp["length_sec"] = round(float(truth["length_min"]) * 60)
     if truth.get("kills"):
@@ -745,10 +745,21 @@ def _truth_for_game(match: dict, detail: dict, game_stub: dict) -> dict:
     # counts when finalStatsAvailable is False — those are placeholder 0s.)
     if side is None and stats_final and (kills["blue"] != kills["red"]):
         side = "blue" if kills["blue"] > kills["red"] else "red"
+        print(f"[grade-game] winner_side inferred from kills "
+              f"({kills['blue']}-{kills['red']}, no explicit winner on the "
+              f"game stub) -> {side}")
 
     length_min = round((game_stub.get("length") or detail.get("length") or 0) / 60.0, 1)
+    # Authoritative winner team object, straight from the game stub (NOT derived
+    # from opponents[0]=blue, which is unreliable for in-game side). Falls back
+    # to the opponents array only if the stub has no winner.
+    winner = game_stub.get("winner")
+    winner_id = (winner or {}).get("id") if winner else None
+    winner_name = (winner or {}).get("name") if winner else None
     return {
         "winner_side": side,
+        "winner_id": winner_id,
+        "winner_name": winner_name,
         "length_min": length_min,
         "kills": kills,
         "total_kills": kills["blue"] + kills["red"],
