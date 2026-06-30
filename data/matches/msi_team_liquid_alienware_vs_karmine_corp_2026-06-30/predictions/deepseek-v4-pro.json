@@ -1,0 +1,497 @@
+{
+  "model_id": "deepseek-v4-pro",
+  "scope": "match",
+  "target_id": "msi_team_liquid_alienware_vs_karmine_corp_2026-06-30",
+  "submitted_at": "2026-06-30T01:50:24.129672+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "Karmine Corp (KC) 胜算更高，预计 3-1 战胜 Team Liquid Alienware (TLAW)。两队虽都在入围赛被 T1 3-0 横扫并同样 3-0 横扫 DCG，但 KC 在 LEC 春季赛与 G2 打满五局的决赛表现、更优的团队数据以及下野核心的显著对位优势，使他们在 BO5 中占据上风。",
+      "fundamentals": "TLAW 近 10 场 6 胜 4 负（60%），但其中 3 场败给 Lyon Gaming（0-3 横扫）暴露出不稳定；近期 MSI 被 T1 横扫后调整赢下 DCG，运营中后期能力尚可但前期节奏乏力——打野 Josedeodo 在首场对 T1 时首杀参与率为 0%。56 场大样本下 TLAW 胜率仅 50%，场均击杀 11.36、控龙率 45% 均处劣势。KC 近 10 场 7 胜 3 负（70%），春季季后赛 3-0 横扫 MKOI、决赛 2-3 惜败 G2，整体状态更稳定。56 场大样本胜率 60.7%，场均击杀 14.46、控龙率 58.2%、场均经济领先约 3000，几乎全维度压制 TLAW。关键选手方面，TLAW 中单 Quid 的 Ryze（87.5% 胜率）是最大武器，但下路 Yeon（KDA 3.69）在国际赛面对顶级 ADC 时表现挣扎；KC 的 ADC Caliste（KDA 4.84，分均经济 515）和打野 Yike（Vi 胜率 72.7%）状态火热，是团队核心驱动。",
+      "matchups": "上路 Morgan vs Canna：两位韩援上单的对决。Morgan 在对 T1 时使用兰博单杀 Doran 的狼母，奥恩 100% 胜率（4 场）是可靠坦克选择；Canna 的兰博胜率 77.8%（9 场）且纳尔 100% 胜率，英雄池更深但兰博在 26.13 版本被削弱。对线端双方均势，团战端 Canna 经验更丰富，略占优势。打野 Josedeodo vs Yike：Yike 的 Vi 11 场 72.7% 胜率是其招牌，对 T1 时奇亚娜大招命中四人展现 carry 能力；Josedeodo 的 Naafiri 100% 胜率但 Vi 仅 25%，首杀参与率在对 T1 时为 0%，前期节奏稳定性不足。Yike 在数据（场均击杀 3.76 vs 2.75、分均伤害 486 vs 428）和大赛经验上均明显占优，是 KC 的节奏支点。中路 Quid vs kyeahoo：Quid 的 Ryze（87.5% 胜率，8 场）和 Yone（80% 胜率）是核心武器，但其他英雄表现一般；kyeahoo 的 Ahri 100% 胜率（5 场）、Azir 57.1% 胜率，池子深厚且稳定。双方中路对决接近均势，Quid 的 Ryze 可能成为 TLAW 偷下一局的关键。下路 Yeon vs Caliste：这是最大的对位差距。Caliste KDA 4.84、分均补刀 10.63、分均经济 515，三项数据全面领先 Yeon（KDA 3.69、CS 9.02、经济 431）；其 Xayah（100% 胜率）和 Zeri（100% 胜率）几乎无解。Yeon 在对 T1 时被 Peyz 完全压制，面对同样顶级的 Caliste 将承受巨大压力。KC 下路优势明显。辅助 CoreJJ vs Busio：CoreJJ 是世界冠军老将，Bard 胜率 80%、Seraphine 100%，经验丰富但近期数据下滑（场均助攻 7.97）；Busio 场均助攻 10.53、Lulu 100% 胜率（6 场）、Rakan 83.3% 胜率，游走和团战参与度更高。两人均在 26.13 版本受 Bard 削弱影响。略倾向于 CoreJJ 的大赛经验，但 Busio 当前状态更好。整体对位 KC 在下野占优，TLAW 仅中路 Ryze 有突破可能，KC 在边线团战控制力更强。",
+      "meta_style": "MSI 2026 使用 26.13 版本，入围赛采用全局无畏征召（Global Fearless Draft）BO5。该版本对兰博、巴德进行削弱（影响 Canna 的招牌兰博和 CoreJJ 的 Bard），对千珏、德莱文进行增强。当前版本主流阵容仍以中野节奏联动和下路 carry 能力为核心，双射手和摇摆中单（如 Yone、Ryze）仍具竞争力。KC 更契合版本：Caliste 的 Xayah/Zeri 是版本顶级 AD 选择，Yike 的 Vi 和 Pantheon 契合前期打架节奏，kyeahoo 的 Ahri/Azir 提供稳定的中路线权。TLAW 依赖 Quid 的 Ryze 作为战术支点，但 Yeon 的英雄池（Ezreal、Caitlyn）在当前版本并非最强势。KC 在 LEC 决赛与 G2 打满五局的 BO5 经验，使他们对全局 BP 的适应度和战术储备深度明显优于在 LCS 赛区强度较低环境下的 TLAW。版本整体向 KC 倾斜。",
+      "h2h_psych": "这是两队历史首次交手（H2H 记录为 0），无直接交锋数据可供参考。心理层面，KC 作为 LEC 二号种子首次参加 MSI，队中有 Canna（前 T1 上单，世界赛经验丰富）和 Yike（前 G2 打野）等大赛老将，且刚刚在 LEC 决赛与 G2 打满五局，抗压能力和 BO5 韧性经过验证。TLAW 方面 CoreJJ 拥有世界冠军经验，但队伍整体国际赛样本较少。赛程上两队休息时间相当（均于 6 月 29 日比赛后休息一天），体力因素持平。本场为败者组淘汰赛——输者直接出局、胜者将对阵 T1 争夺唯一晋级名额——压力巨大，KC 在高压 BO5 经验（LEC 决赛 2-3 G2）上略占心理优势。"
+    },
+    "win_probs": {
+      "blue": 0.35,
+      "red": 0.65
+    },
+    "predicted_winner": "red",
+    "series_score": "1-3",
+    "series_length": 4,
+    "favored_side": "red_strong",
+    "key_players": [
+      {
+        "player": "Caliste",
+        "team": "red",
+        "role": "adc",
+        "reason": "KC 的绝对核心输出，KDA 4.84、分均经济 515 均为两队 ADC 最高，Xayah/Zeri 100% 胜率在全局 BP 下提供稳定 carry 保障，对位 Yeon 有明显压制力"
+      },
+      {
+        "player": "Yike",
+        "team": "red",
+        "role": "jun",
+        "reason": "KC 前期节奏发动机，Vi 胜率 72.7%（11场），对 T1 时奇亚娜发挥亮眼，对阵 Josedeodo 在首杀率、野区控制上均占优"
+      },
+      {
+        "player": "Quid",
+        "team": "blue",
+        "role": "mid",
+        "reason": "TLAW 能否拿下一局的最大变数，Ryze 胜率 87.5%（8场）是其王牌英雄，若能在全局 BP 中拿到 Ryze 并打出中路压制，TLAW 可能偷下一胜"
+      },
+      {
+        "player": "Canna",
+        "team": "red",
+        "role": "top",
+        "reason": "前 T1 上单，兰博胜率 77.8%（9场），纳尔 100% 胜率，经验丰富，在边线单带和团战绕后方面能给 TLAW 造成巨大威胁"
+      }
+    ],
+    "swing_factors": [
+      "Quid 能否在全局 BP 中拿到 Ryze 并打出效果——这是 TLAW 最有希望破局的对位，若被 KC 针对性 ban 掉则 TLAW 胜率骤降",
+      "Yeon 是否能顶住 Caliste 的对线压力——下路差距过大将导致 TLAW 前期龙区全失、中期团战缺乏输出",
+      "Josedeodo 的前期节奏能否改善——对 T1 时 0% 首杀参与率若延续，TLAW 将直接被 Yike 滚起雪球",
+      "全局 BP 下的英雄池深度——KC 在 LEC 决赛 BO5 展现的战术储备更厚，TLAW 在 LCS 低强度环境下的英雄池可能到第三局后出现问题",
+      "26.13 版本兰博和巴德的削弱——直接影响 Canna 的招牌兰博和 CoreJJ 的 Bard，但 Canna 有纳尔/杰斯替代，CoreJJ 有 Neeko/Rakan 应对",
+      "败者组淘汰赛的心理压力——输者直接回家，TLAW 的 CoreJJ 虽有世界赛经验但队伍整体国际赛抗压能力不如 KC"
+    ],
+    "meta_style_signals": [
+      "MSI 2026 版本 26.13：兰博/巴德削弱，千珏/德莱文增强，全局无畏征召 BO5",
+      "下路 carry 仍为版本主流，Caliste 的 Xayah/Zeri 100% 胜率完美契合，Yeon 的 Ezreal/Caitlyn 为次选",
+      "中野节奏联动决定前期走向，Yike 的 Vi/Pantheon 和 kyeahoo 的 Ahri 是版本强势前期组合",
+      "全局 BP 下英雄池深度是关键，KC 在 LEC 决赛 BO5 的战术多样性优于 TLAW 在 LCS 的储备"
+    ],
+    "sources": [
+      {
+        "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "MSI 2026 LoL play-in results TLAW KC",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "T1 3-0 KC MSI 2026 game details Yike Caliste Canna",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "TLAW 3-0 DCG MSI 2026 game recap Morgan Quid Yeon",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "KC Karmine Corp LEC 2026 spring split final G2 result",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "MSI 2026 patch 26.13 meta champions tier list strong picks",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      },
+      {
+        "query": "2026 MSI 赛前盘点 11 支参赛队伍实力排行",
+        "accessed_at": "2026-06-30T01:46:40Z"
+      }
+    ]
+  },
+  "raw_text": "```json\n{\n  \"reasoning\": {\n    \"overall\": \"Karmine Corp (KC) 胜算更高，预计 3-1 战胜 Team Liquid Alienware (TLAW)。两队虽都在入围赛被 T1 3-0 横扫并同样 3-0 横扫 DCG，但 KC 在 LEC 春季赛与 G2 打满五局的决赛表现、更优的团队数据以及下野核心的显著对位优势，使他们在 BO5 中占据上风。\",\n    \"fundamentals\": \"TLAW 近 10 场 6 胜 4 负（60%），但其中 3 场败给 Lyon Gaming（0-3 横扫）暴露出不稳定；近期 MSI 被 T1 横扫后调整赢下 DCG，运营中后期能力尚可但前期节奏乏力——打野 Josedeodo 在首场对 T1 时首杀参与率为 0%。56 场大样本下 TLAW 胜率仅 50%，场均击杀 11.36、控龙率 45% 均处劣势。KC 近 10 场 7 胜 3 负（70%），春季季后赛 3-0 横扫 MKOI、决赛 2-3 惜败 G2，整体状态更稳定。56 场大样本胜率 60.7%，场均击杀 14.46、控龙率 58.2%、场均经济领先约 3000，几乎全维度压制 TLAW。关键选手方面，TLAW 中单 Quid 的 Ryze（87.5% 胜率）是最大武器，但下路 Yeon（KDA 3.69）在国际赛面对顶级 ADC 时表现挣扎；KC 的 ADC Caliste（KDA 4.84，分均经济 515）和打野 Yike（Vi 胜率 72.7%）状态火热，是团队核心驱动。\",\n    \"matchups\": \"上路 Morgan vs Canna：两位韩援上单的对决。Morgan 在对 T1 时使用兰博单杀 Doran 的狼母，奥恩 100% 胜率（4 场）是可靠坦克选择；Canna 的兰博胜率 77.8%（9 场）且纳尔 100% 胜率，英雄池更深但兰博在 26.13 版本被削弱。对线端双方均势，团战端 Canna 经验更丰富，略占优势。打野 Josedeodo vs Yike：Yike 的 Vi 11 场 72.7% 胜率是其招牌，对 T1 时奇亚娜大招命中四人展现 carry 能力；Josedeodo 的 Naafiri 100% 胜率但 Vi 仅 25%，首杀参与率在对 T1 时为 0%，前期节奏稳定性不足。Yike 在数据（场均击杀 3.76 vs 2.75、分均伤害 486 vs 428）和大赛经验上均明显占优，是 KC 的节奏支点。中路 Quid vs kyeahoo：Quid 的 Ryze（87.5% 胜率，8 场）和 Yone（80% 胜率）是核心武器，但其他英雄表现一般；kyeahoo 的 Ahri 100% 胜率（5 场）、Azir 57.1% 胜率，池子深厚且稳定。双方中路对决接近均势，Quid 的 Ryze 可能成为 TLAW 偷下一局的关键。下路 Yeon vs Caliste：这是最大的对位差距。Caliste KDA 4.84、分均补刀 10.63、分均经济 515，三项数据全面领先 Yeon（KDA 3.69、CS 9.02、经济 431）；其 Xayah（100% 胜率）和 Zeri（100% 胜率）几乎无解。Yeon 在对 T1 时被 Peyz 完全压制，面对同样顶级的 Caliste 将承受巨大压力。KC 下路优势明显。辅助 CoreJJ vs Busio：CoreJJ 是世界冠军老将，Bard 胜率 80%、Seraphine 100%，经验丰富但近期数据下滑（场均助攻 7.97）；Busio 场均助攻 10.53、Lulu 100% 胜率（6 场）、Rakan 83.3% 胜率，游走和团战参与度更高。两人均在 26.13 版本受 Bard 削弱影响。略倾向于 CoreJJ 的大赛经验，但 Busio 当前状态更好。整体对位 KC 在下野占优，TLAW 仅中路 Ryze 有突破可能，KC 在边线团战控制力更强。\",\n    \"meta_style\": \"MSI 2026 使用 26.13 版本，入围赛采用全局无畏征召（Global Fearless Draft）BO5。该版本对兰博、巴德进行削弱（影响 Canna 的招牌兰博和 CoreJJ 的 Bard），对千珏、德莱文进行增强。当前版本主流阵容仍以中野节奏联动和下路 carry 能力为核心，双射手和摇摆中单（如 Yone、Ryze）仍具竞争力。KC 更契合版本：Caliste 的 Xayah/Zeri 是版本顶级 AD 选择，Yike 的 Vi 和 Pantheon 契合前期打架节奏，kyeahoo 的 Ahri/Azir 提供稳定的中路线权。TLAW 依赖 Quid 的 Ryze 作为战术支点，但 Yeon 的英雄池（Ezreal、Caitlyn）在当前版本并非最强势。KC 在 LEC 决赛与 G2 打满五局的 BO5 经验，使他们对全局 BP 的适应度和战术储备深度明显优于在 LCS 赛区强度较低环境下的 TLAW。版本整体向 KC 倾斜。\",\n    \"h2h_psych\": \"这是两队历史首次交手（H2H 记录为 0），无直接交锋数据可供参考。心理层面，KC 作为 LEC 二号种子首次参加 MSI，队中有 Canna（前 T1 上单，世界赛经验丰富）和 Yike（前 G2 打野）等大赛老将，且刚刚在 LEC 决赛与 G2 打满五局，抗压能力和 BO5 韧性经过验证。TLAW 方面 CoreJJ 拥有世界冠军经验，但队伍整体国际赛样本较少。赛程上两队休息时间相当（均于 6 月 29 日比赛后休息一天），体力因素持平。本场为败者组淘汰赛——输者直接出局、胜者将对阵 T1 争夺唯一晋级名额——压力巨大，KC 在高压 BO5 经验（LEC 决赛 2-3 G2）上略占心理优势。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.35,\n    \"red\": 0.65\n  },\n  \"predicted_winner\": \"red\",\n  \"series_score\": \"1-3\",\n  \"series_length\": 4,\n  \"favored_side\": \"red_strong\",\n  \"key_players\": [\n    {\n      \"player\": \"Caliste\",\n      \"team\": \"red\",\n      \"role\": \"adc\",\n      \"reason\": \"KC 的绝对核心输出，KDA 4.84、分均经济 515 均为两队 ADC 最高，Xayah/Zeri 100% 胜率在全局 BP 下提供稳定 carry 保障，对位 Yeon 有明显压制力\"\n    },\n    {\n      \"player\": \"Yike\",\n      \"team\": \"red\",\n      \"role\": \"jun\",\n      \"reason\": \"KC 前期节奏发动机，Vi 胜率 72.7%（11场），对 T1 时奇亚娜发挥亮眼，对阵 Josedeodo 在首杀率、野区控制上均占优\"\n    },\n    {\n      \"player\": \"Quid\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"reason\": \"TLAW 能否拿下一局的最大变数，Ryze 胜率 87.5%（8场）是其王牌英雄，若能在全局 BP 中拿到 Ryze 并打出中路压制，TLAW 可能偷下一胜\"\n    },\n    {\n      \"player\": \"Canna\",\n      \"team\": \"red\",\n      \"role\": \"top\",\n      \"reason\": \"前 T1 上单，兰博胜率 77.8%（9场），纳尔 100% 胜率，经验丰富，在边线单带和团战绕后方面能给 TLAW 造成巨大威胁\"\n    }\n  ],\n  \"swing_factors\": [\n    \"Quid 能否在全局 BP 中拿到 Ryze 并打出效果——这是 TLAW 最有希望破局的对位，若被 KC 针对性 ban 掉则 TLAW 胜率骤降\",\n    \"Yeon 是否能顶住 Caliste 的对线压力——下路差距过大将导致 TLAW 前期龙区全失、中期团战缺乏输出\",\n    \"Josedeodo 的前期节奏能否改善——对 T1 时 0% 首杀参与率若延续，TLAW 将直接被 Yike 滚起雪球\",\n    \"全局 BP 下的英雄池深度——KC 在 LEC 决赛 BO5 展现的战术储备更厚，TLAW 在 LCS 低强度环境下的英雄池可能到第三局后出现问题\",\n    \"26.13 版本兰博和巴德的削弱——直接影响 Canna 的招牌兰博和 CoreJJ 的 Bard，但 Canna 有纳尔/杰斯替代，CoreJJ 有 Neeko/Rakan 应对\",\n    \"败者组淘汰赛的心理压力——输者直接回家，TLAW 的 CoreJJ 虽有世界赛经验但队伍整体国际赛抗压能力不如 KC\"\n  ],\n  \"meta_style_signals\": [\n    \"MSI 2026 版本 26.13：兰博/巴德削弱，千珏/德莱文增强，全局无畏征召 BO5\",\n    \"下路 carry 仍为版本主流，Caliste 的 Xayah/Zeri 100% 胜率完美契合，Yeon 的 Ezreal/Caitlyn 为次选\",\n    \"中野节奏联动决定前期走向，Yike 的 Vi/Pantheon 和 kyeahoo 的 Ahri 是版本强势前期组合\",\n    \"全局 BP 下英雄池深度是关键，KC 在 LEC 决赛 BO5 的战术多样性优于 TLAW 在 LCS 的储备\"\n  ],\n  \"sources\": [\n    {\n      \"query\": \"Team Liquid Alienware vs Karmine Corp MSI 2026 play-in\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"MSI 2026 LoL play-in results TLAW KC\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"T1 3-0 KC MSI 2026 game details Yike Caliste Canna\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"TLAW 3-0 DCG MSI 2026 game recap Morgan Quid Yeon\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"KC Karmine Corp LEC 2026 spring split final G2 result\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"MSI 2026 patch 26.13 meta champions tier list strong picks\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    },\n    {\n      \"query\": \"2026 MSI 赛前盘点 11 支参赛队伍实力排行\",\n      \"accessed_at\": \"2026-06-30T01:46:40Z\"\n    }\n  ]\n}\n```",
+  "thinking_text": "Let me analyze this match: Team Liquid Alienware (TLAW) vs Karmine Corp (KC) at MSI 2026 Play In Knockouts. This is a Bo5 series starting at 2026-06-30T08:00:00Z.\n\nLet me first gather more information through web searches before making my prediction.\n\nKey things I need to research:\n1. Latest form of both teams at MSI 2026 (they've both played recent MSI matches against T1 and DCG)\n2. Match results from recent MSI play-in stage\n3. Current meta and patch for MSI 2026\n4. Any roster changes or news\n5. Head-to-head context (though they've never met)\n\nLet me start searching.\nLet me gather more specific information. From the search results, I can see:\n\n1. MSI 2026 Play-In results so far:\n   - T1 3-0 TLAW (June 28)\n   - KC 3-0 DCG (June 28)\n   - T1 3-0 KC (June 29)\n   - TLAW 3-0 DCG (June 29) - DCG eliminated\n   \n2. Now TLAW vs KC play in the losers' bracket for a chance to face T1 again\n\n3. Key observations from the articles:\n   - T1 3-0 TLAW: Morgan was the only bright spot, solo-killing Doran twice. TLAW's bot lane was heavily abused by Keria/Peyz. Josedeodo 0% first blood participation.\n   - T1 3-0 KC: KC showed some fight (especially game 2 with Yike's Qiyana) but T1's macro was superior\n   - TLAW 3-0 DCG: TLAW showed good mid-late game macro against DCG\n\nLet me search for more specific information about the TLAW vs KC matchup, their recent forms in detail, and the meta.\nLet me gather more targeted information. I need details on:\n1. The specific MSI results: T1 vs TLAW (details of each game), KC vs DCG, T1 vs KC, TLAW vs DCG\n2. Player performances in these MSI games\n3. Current meta at MSI 2026\n4. Patch version info\n\nLet me search for more details.\nNow I have a good picture. Let me search for a few more specific things:\n\n1. The patch 26.13 details - what champions are strong/weak\n2. TLAW vs DCG match details to understand TLAW's form against weaker opponents\n3. The LEC vs LCS comparison, as KC is LEC #2 and TLAW is LCS #2\n4. KC's recent form against G2\n\nKey findings so far:\n- MSI 2026 is on patch 26.13\n- MSI uses Fearless Draft (全局BP) and double elimination\n- T1 3-0 TLAW (June 28): TLAW's bot lane was heavily abused by Keria/Peyz, Morgan was the only bright spot (solo-killed Doran twice on Rumble vs Ambessa)\n- KC 3-0 DCG (June 28): KC swept DCG \n- T1 3-0 KC (June 29): KC showed fight in game 2 (Yike Qiyana hit 4-man ult, Canna Renekton flank) but T1's macro was superior. KC got swept.\n- TLAW 3-0 DCG (June 29): TLAW showed good mid-late game macro against DCG\n\nNow for the matchup analysis:\n- Both teams got 3-0'd by T1\n- Both teams 3-0'd DCG\n- So they've faced common opponents but haven't faced each other\n\nLet me search for more details on the meta and patch.\nLet me now synthesize all the information I've gathered and produce the required JSON output.\n\n**Key findings from web search:**\n\n1. **Match context**: This is MSI 2026 Play-In Knockouts, a Bo5 between TLAW and KC on June 30, 2026. They're fighting for a spot to face T1 in the final play-in qualification match.\n\n2. **Recent MSI results**:\n   - T1 3-0 TLAW (June 28)\n   - KC 3-0 DCG (June 28)\n   - T1 3-0 KC (June 29)\n   - TLAW 3-0 DCG (June 29)\n\n3. **TLAW's performance vs T1**: They got swept 3-0. Morgan was the only bright spot on TLAW, playing well against Doran - getting solo kills on Rumble vs Ambessa in game 2. Josedeodo had 0% first blood participation. Yeon and CoreJJ's bot lane was completely dismantled by Peyz/Keria. Quid was neutralized by Faker.\n\n4. **TLAW's performance vs DCG**: 3-0 sweep. Morgan played Ornn and got POG in game 1. Yeon said before the match that if they lost to DCG they might as well swim home. TLAW showed strong mid-late game macro against DCG.\n\n5. **KC's performance vs DCG**: 3-0 sweep in their first match. Yike on Naafiri, kyeahoo on Orianna, Caliste on Caitlyn, Busio on Bard in the detailed game.\n\n6. **KC's performance vs T1**: Got 3-0 swept. Yike had moments with Qiyana hitting 4-man ultimates and Canna with Renekton perfect flanks in game 2, but T1 was too strong. Caliste was heavily targeted and couldn't carry. Busio's Nami/Neeko weren't effective enough.\n\n7. **Both teams lost 3-0 to T1** - this establishes their relative level.\n\n8. **LEC context**: KC finished 2nd in LEC Spring 2026, losing 3-2 to G2 in finals. They 3-0'd MKOI in losers' finals to qualify for MSI. KC has Yike (from G2 previously, very experienced), Canna (ex-T1, experienced), Caliste (young French ADC prodigy), Busio (ex-100T, NA support), kyeahoo (Korean mid).\n\n9. **Patch**: MSI 2026 is on patch 26.13. Changes include Kindred/Draven buffs, Rumble/Bard nerfs. Global BP (Fearless Draft) in play-ins.\n\n10. **Power rankings**: RFT.gg ranks KC as B tier, TLAW as C tier. KC is considered one tier above TLAW.\n\n11. **Head-to-head**: This is their first meeting ever.\n\n**Analysis by dimension:**\n\n**Overall**: KC is a B-tier team vs TLAW's C-tier per community rankings. Both got 3-0'd by T1. But KC showed more fight against T1 (game 2 was competitive with Yike's Qiyana). KC finished 2nd in LEC taking G2 to 5 games. TLAW is LCS 2nd seed but looked shaky. KC should be favored.\n\n**Fundamentals**: \n- TLAW: 6-4 last 10 (60%), but recent 3-game sweep loss to Lyon Gaming is concerning. They got 3-0'd by T1. Swept DCG 3-0. Average game time 32.9 min. Win rate in last 56 games is exactly 50%. First blood rate 58.9% is decent.\n- KC: 7-3 last 10 (70%), stronger. Lost 3-2 to G2 in LEC finals (very close). 3-0'd MKOI. Lost 3-0 to T1 but showed resistance. Win rate 60.7% in last 56 games. Better objective control across the board: dragons 2.91 vs 2.2, barons 0.82 vs 0.71, towers 6.79 vs 5.77, kills 14.46 vs 11.36, gold 67157 vs 61328.\n- KC has better stats in almost every category.\n\n**Matchups**:\n- Top: Morgan vs Canna. Both Korean tops. Morgan had standout moments vs Doran (solo kills). Canna is experienced ex-T1. Canna's Rumble is 77.8% WR (9 games). Morgan's Ornn is 100% (4 games), Ambessa 75%. Roughly even with slight Canna edge.\n- Jungle: Josedeodo vs Yike. Yike is a proven LEC top jungler, former G2. His Vi is 72.7% WR (11 games). Josedeodo's Naafiri is 100% (4 games) but Vi only 25%. Yike showed carry potential vs T1 with Qiyana. Yike has better stats and more consistent KDA variance. Edge: KC.\n- Mid: Quid vs kyeahoo. Quid's Ryze 87.5% (8 games) is a major weapon. kyeahoo's Ahri 100% (5 games). Both have deep pools. Quid was neutralized by Faker; kyeahoo also struggled vs Faker. Slight edge Quid on Ryze pocket pick. \n- ADC: Yeon vs Caliste. Caliste has 4.84 KDA, Yeon 3.69. Caliste: 10.63 CS/min, 515.46 gold/min. Yeon: 9.02 CS/min, 430.81 gold/min. Caliste is clearly stronger - higher damage (804 vs 748), better KDA, better CS. Caliste's Xayah 100%, Zeri 100%. Edge: KC big.\n- Support: CoreJJ vs Busio. CoreJJ is a world champion veteran but older. Busio has 10.53 assists/game, CoreJJ 7.97. Busio's Lulu 100% (6 games), Rakan 83.3% (6 games). CoreJJ's Bard 80%, Seraphine 100%. Edge: slight CoreJJ for experience but Busio has better recent form stats.\n\nOverall matchups: KC favored in jungle and ADC, roughly even in top/mid, slight TLAW in support. \n\n**Meta/Style**: Patch 26.13 with Global Fearless Draft. Rumble nerfed (impacts Canna). Bard nerfed (impacts CoreJJ). Kindred/Draven buffed. Both teams favor fighting styles. The meta requires deep champion pools due to Fearless Draft. KC's deeper run in LEC and experience with Fearless in longer series should help. KC also showed better composition diversity.\n\n**H2H/Psych**: First meeting ever. Both teams have pressure - this is an elimination match (loser goes home, winner faces T1). KC has more big-stage experience (Canna worlds experience with T1, Yike at G2 worlds). TLAW's CoreJJ has world championship experience. Both teams are coming off 3-0 losses to T1, but TLAW also swept DCG while KC got swept by T1 more recently (June 29). The rest timing is similar.\n\n**Sweep analysis**: \n- TLAW sweep_rate: 0.327, swept_rate: 0.347\n- KC sweep_rate: 0.367, swept_rate: 0.143\n- KC's swept_rate is much lower (14.3% vs 34.7%), meaning KC rarely gets swept.\n- Both teams average series length ~2.7 (KC) and 2.4 (TLAW).\n- Given KC is favored but not overwhelmingly so, 3-1 seems appropriate. KC sweep_rate is 36.7% but TLAW swept_rate of 34.7% is high. Actually looking more carefully: TLAW got swept by T1 recently, and by Lyon Gaming. KC swept_rate is low (14.3%) suggesting they're harder to sweep.\n\nI'll go with KC winning 3-1. Win probability around 65-35 favoring KC.\n\nLet me now craft the final JSON. I need to be careful about normalization: blue = TLAW, red = KC.\n\nWin_probs: blue 0.35, red 0.65.\nPredicted_winner: red\nSeries_score: \"1-3\" (blue-red format: TLAW 1 - KC 3)\nSeries_length: 4\nFavored_side: red_strong or red_slight? Given the tier difference and head-to-head stats, I'd say red_slight to red_strong. The teams aren't that far apart (both lost 3-0 to T1, both swept DCG 3-0). I'll go with red_slight.\n\nActually, re-examining: KC is B tier, TLAW C tier per rankings. KC has better stats, better ADC, better jungle. But the gap isn't massive. I'll say red_strong at 0.65 win prob.\n\nWait, 0.65 is more in the red_slight to red_moderate range. Let me reconsider. At 0.65-0.35, that's a significant edge. I'll go red_strong (≥0.65).\n\nActually let me reconsider the favored_side values: blue_strong/blue_slight/even/red_slight/red_strong. With 65-35 it's red_strong.\n\nKey players: Caliste (ADC diff), Yike (jungle diff), Quid (Ryze pocket pick could steal a game), Morgan (only consistent TLAW performer vs T1), kyeahoo (Ahri 100% WR).\n\nLet me finalize.",
+  "sources": [
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:47:51Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:47:53Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:47:53Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:47:56Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:47:56Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:47:56Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:06Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:06Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:06Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:06Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:10Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:10Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:10Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:10Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:10Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:13Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:13Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:13Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:13Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:13Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:13Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:20Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "T1 3-0 KC MSI 2026 game details Yike Caliste Canna",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:24Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "T1 3-0 KC MSI 2026 game details Yike Caliste Canna",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:27Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "T1 3-0 KC MSI 2026 game details Yike Caliste Canna",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "MSI 2026 patch 26.13 meta champions tier list strong picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:39Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "T1 3-0 KC MSI 2026 game details Yike Caliste Canna",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "MSI 2026 patch 26.13 meta champions tier list strong picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "TLAW 3-0 DCG MSI 2026 game recap Morgan Quid Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:42Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 play-in",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "MSI 2026 LoL play-in results TLAW KC",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "Karmine Corp MSI 2026 roster Caliste Yike",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "Team Liquid Alienware vs Karmine Corp MSI 2026 prediction preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "TLAW TL Alienware MSI 2026 Quid Yeon CoreJJ performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "KC Karmine Corp MSI 2026 Yike kyeahoo Caliste Busio performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "T1 3-0 TLAW MSI 2026 game details Morgan Yeon Josedeodo",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "T1 3-0 KC MSI 2026 game details Yike Caliste Canna",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "MSI 2026 patch 26.13 meta champions tier list strong picks",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "TLAW 3-0 DCG MSI 2026 game recap Morgan Quid Yeon",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    },
+    {
+      "query": "KC Karmine Corp LEC 2026 spring split final G2 result",
+      "engine": "search_pro",
+      "accessed_at": "2026-06-30T01:48:44Z"
+    }
+  ],
+  "input_tokens": 204587,
+  "output_tokens": 9656,
+  "tool_calls": 12,
+  "cost_usd": 0.092456,
+  "wall_seconds": 162.9,
+  "error": null
+}

@@ -427,6 +427,12 @@ class CitoClient:
         meta = self.get(f"/lol/matches/{mid}", refresh=refresh, ttl_seconds=300)
         if not meta or not isinstance(meta, dict):
             return None
+        # Fault tolerance: if the caller passed a GAME id (not a series id),
+        # Cito returns a {match, game} wrapper instead of a bare match object.
+        # Unwrap the series data so grading still works instead of silently
+        # resolving to 0-0. (The right id is the parent series id in .matchId.)
+        if "match" in meta and isinstance(meta["match"], dict) and "team1" not in meta:
+            meta = meta["match"]
         games_raw = self.get(f"/lol/matches/{mid}/games", refresh=refresh, ttl_seconds=300)
         games = [_norm_game(g) for g in (games_raw or []) if isinstance(g, dict)]
         return _norm_match_from_detail(meta, games)
@@ -763,20 +769,29 @@ def _state_map(state: str | None) -> str | None:
     return _STATE_MAP.get(state.lower(), state.lower())
 
 
+def _strip_id_prefix(v: Any) -> int | None:
+    """Strip any Cito id prefix (lol-match-/lol-game-/lol-tournament-...) and
+    return the bare numeric id, or None if not numeric. Used to normalise both
+    match and game ids — Cito decorates them with a type prefix in some fields."""
+    if v is None:
+        return None
+    s = str(v)
+    for pfx in ("lol-match-", "lol-game-", "lol-tournament-"):
+        if s.startswith(pfx):
+            s = s[len(pfx):]
+            break
+    try:
+        return int(s)
+    except ValueError:
+        return None
+
+
 def _match_id_value(obj: dict) -> int | None:
     """Pull a bare numeric match id from any of Cito's id fields."""
     for k in ("officialEventId", "esportsApiId", "matchId"):
-        v = obj.get(k)
-        if v is None:
-            continue
-        s = str(v)
-        # strip a possible lol-match- prefix
-        if s.startswith("lol-match-"):
-            s = s[len("lol-match-"):]
-        try:
-            return int(s)
-        except ValueError:
-            continue
+        mid = _strip_id_prefix(obj.get(k))
+        if mid is not None:
+            return mid
     return None
 
 
@@ -936,6 +951,13 @@ def _norm_game(g: dict) -> dict:
     red = _team_stub(g.get("redTeam") or {})
     winning_side = str(g.get("winningSide") or "").lower()    # blue/red
     winner_slug = g.get("winnerSlug")
+    # Parent SERIES id. NB: must NOT use the generic _match_id_value() here —
+    # that helper keys on esportsApiId first, which on a GAME object is the
+    # game's OWN id, not the parent series id. The series id lives in `matchId`
+    # (e.g. "lol-match-115570934355614509"). Without this, fixture.json stores
+    # the game id as match_id, and /api/grade then queries Cito with a game id
+    # -> Cito returns a {match, game} wrapper -> truth resolves to 0-0.
+    parent_match_id = _strip_id_prefix(g.get("matchId"))
     return {
         "id": gid,
         "position": g.get("gameNumber"),
@@ -943,7 +965,7 @@ def _norm_game(g: dict) -> dict:
         "length": g.get("duration"),
         "winner": {"id": winner_slug},
         "winning_side": winning_side,
-        "match_id": _match_id_value(g),
+        "match_id": parent_match_id,
         "blue_team": blue,
         "red_team": red,
         "patch": g.get("patch"),
