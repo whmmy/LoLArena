@@ -747,6 +747,10 @@ class CitoClient:
                 "deaths": int(p.get("deaths") or 0),
                 "assists": int(p.get("assists") or 0),
                 "stats_status": p.get("statsStatus"),
+                # finalStatsAvailable: False means kills/deaths/etc are placeholder
+                # 0s (metadata_only). Kept so grading can detect non-final stats
+                # and fall back to the game stub's team kills for truth.
+                "final_stats_available": p.get("finalStatsAvailable"),
             })
         return {"players": players, "_source": "games/stats"}
 
@@ -804,16 +808,24 @@ def _game_id_value(obj: dict) -> str | None:
 
 
 def _team_stub(team_obj: dict, *, score_key: str = "score") -> dict:
-    """Normalise a Cito team object (team1/team2/teams[]) into our team stub."""
+    """Normalise a Cito team object (team1/team2/teams[]) into our team stub.
+
+    Keeps kills/towers when present (game-level blueTeam/redTeam carry them
+    even before finalStatsAvailable flips true — useful as a truth fallback)."""
     if not isinstance(team_obj, dict):
         return {}
-    return {
+    stub = {
         "id": team_obj.get("slug"),                       # slug = our team_id
         "name": team_obj.get("name"),
         "acronym": team_obj.get("code") or team_obj.get("shortName"),
         "slug": team_obj.get("slug"),
         "image_url": team_obj.get("logoUrl") or team_obj.get("imageUrl"),
     }
+    if team_obj.get("kills") is not None:
+        stub["kills"] = team_obj.get("kills")
+    if team_obj.get("towers") is not None:
+        stub["towers"] = team_obj.get("towers")
+    return stub
 
 
 def _norm_match_from_schedule(item: dict) -> dict:

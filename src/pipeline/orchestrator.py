@@ -73,6 +73,21 @@ def cmd_collect(match_id: int, *, refresh: bool = False) -> dict:
 
 
 def _match_slug_of(match: dict) -> str:
+    """Stable slug for a match's on-disk dir.
+
+    CRITICAL: reuse the EXISTING match dir name when one exists for this
+    match_id (looked up from data/matches/*/fixture.json). Cito team names
+    drift over time (e.g. "Deep Cross Gaming" -> "Relove Deep Cross Gaming"
+    when a sponsor changes), so deriving the slug fresh from the latest team
+    names would splinter one series across two dirs and the game cards / truth
+    would never line up. Only derive a new slug when no dir exists yet.
+    """
+    mid = match.get("id")
+    if mid is not None:
+        from . import collect as collect_mod
+        existing = collect_mod._find_existing_match_dir(mid)
+        if existing is not None:
+            return existing.name
     opps = match.get("opponents") or []
     league = (match.get("league") or {}).get("name", "LoL")
     return cfg.match_slug(league, opps[0]["opponent"]["name"],
@@ -593,20 +608,19 @@ def cmd_grade(match_id: int) -> dict:
         out["results"][model_id] = scores
         print(f"  {model_id}: composite={scores.get('composite', 0):.1f}")
 
-    # Cascade: grade each finished game that has predictions, so the single-game
-    # leaderboard + cached bp.json truth stay in sync with the series grade.
-    # Only touches games that actually have a prediction dir on disk; games with
-    # no predictions are skipped silently (grading them would be a no-op).
+    # Cascade: grade each finished game so the single-game truth (winner/
+    # duration/kills) is written even for games that were never predicted —
+    # without this, the game card shows "赛果待官方回填" forever. cmd_grade_game
+    # writes the truth BEFORE scoring predictions, so a prediction-less game
+    # still gets its _truth.json + bp.json cached; the score loop is just empty.
     for g in match.get("games") or []:
         try:
             gp = g.get("position")
             if gp is None:
                 continue
-            gdir = cfg.game_dir(mdir.name, gp)
-            if (gdir / "predictions").exists() and any((gdir / "predictions").glob("*.json")):
-                # Pass the already-fetched match so each game isn't re-fetched
-                # with refresh=True (avoids an N+1 of network round-trips).
-                cmd_grade_game(match_id, gp, auto_rebuild_site=False, _match=match)
+            # Pass the already-fetched match so each game isn't re-fetched
+            # with refresh=True (avoids an N+1 of network round-trips).
+            cmd_grade_game(match_id, gp, auto_rebuild_site=False, _match=match)
         except Exception as e:  # noqa: BLE001
             print(f"[grade] cascade game {g.get('position')} failed: {e}")
     _maybe_rebuild_site()
@@ -727,7 +741,7 @@ def _truth_for_game(match: dict, detail: dict, game_stub: dict) -> dict:
     kills = {"blue": 0, "red": 0}
     stats_final = True   # whether the stats endpoint had FINAL numbers (not 0-drafts)
     for p in detail.get("players", []) or []:
-        if p.get("finalStatsAvailable") is False:
+        if p.get("final_stats_available") is False:
             stats_final = False
         k = int(p.get("kills") or 0)
         pside = str(p.get("side") or "").lower()
@@ -739,6 +753,20 @@ def _truth_for_game(match: dict, detail: dict, game_stub: dict) -> dict:
                 kills["blue"] += k
             elif tid == red_id:
                 kills["red"] += k
+
+    # Fallback: the per-player /stats endpoint is often NOT final yet
+    # (finalStatsAvailable=False -> kills are placeholder 0s) even though the
+    # game is over. But the game stub's blue_team/red_team (from the
+    # /matches/{id}/games list) carry REAL team kills/towers as soon as the
+    # game ends. Use those when per-player stats aren't ready, and treat them
+    # as final for winner inference (a real finished game has real team kills).
+    if not stats_final:
+        bt = (game_stub.get("blue_team") or {})
+        rt = (game_stub.get("red_team") or {})
+        tk_blue, tk_red = bt.get("kills"), rt.get("kills")
+        if isinstance(tk_blue, (int, float)) and isinstance(tk_red, (int, float)):
+            kills = {"blue": int(tk_blue), "red": int(tk_red)}
+            stats_final = True
 
     # When the game stub lacks an explicit winner but the stats are final and
     # asymmetric, the higher-kill side is the winner. (We can't use raw kill

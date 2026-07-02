@@ -133,7 +133,11 @@ def _all_matches() -> list[dict]:
                 preds[pf.stem] = rec
         out.append({
             "slug": mdir.name,
-            "match_id": fixture.get("id"),
+            # Serialise as a STRING: Cito/Riot match ids are 18-digit integers
+            # that exceed JS Number.MAX_SAFE_INTEGER, so JSON.parse + Number()
+            # on the frontend silently corrupt them (...369 -> ...370). The
+            # frontend carries this string through verbatim (no Number()).
+            "match_id": str(fixture["id"]) if fixture.get("id") is not None else None,
             "league": header.get("league") or (fixture.get("league") or {}).get("name"),
             "blue": blue, "red": red,
             "blue_image_url": blue_image_url, "red_image_url": red_image_url,
@@ -242,7 +246,8 @@ def _game_history() -> list[dict]:
                 game_results[rf.stem] = _read(rf).get("composite", 0.0)
             out.append({
                 "match_slug": match_dir.name,
-                "match_id": match_id,
+                # string id — see note above (avoid JS Number precision loss)
+                "match_id": str(match_id) if match_id is not None else None,
                 "position": bp.get("position") or int(gdir.name[1:]),
                 "blue": blue_name,
                 "red": red_name,

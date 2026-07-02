@@ -5,6 +5,7 @@ Routes:
   GET  /data.json        -> docs/site/data.json
   GET  /api/matches      -> list tracked matches (from data/)
   POST /api/refresh-bp   -> fetch BP for one game; if complete, auto-predict
+  POST /api/refresh-bp-all -> fetch BP for EVERY game in a series at once
   POST /api/predict      -> manually trigger series prediction for a match
   POST /api/predict-game -> manually trigger single-game analysis (post-BP, step 2)
   POST /api/grade        -> settle a finished series (score vs truth)
@@ -113,6 +114,37 @@ def refresh_bp(req: RefreshBPRequest):
         "site_rebuilt": bool(req.predict),
         "failed_models": failed,
     }
+
+
+class RefreshBpAllRequest(BaseModel):
+    match_id: int
+
+
+@app.post("/api/refresh-bp-all")
+def refresh_bp_all(req: RefreshBpAllRequest):
+    """Fetch BP for EVERY game in a series at once.
+
+    This is the series-level entry point — BP collection belongs on the series
+    card, not the per-game card. Creates the g1/g2/g3 dirs so game cards appear,
+    then a rebuild surfaces them. Returns per-game BP completeness.
+    """
+    from ..pipeline import collect as collect_mod
+    from ..adapters.cito import get_client
+    try:
+        client = get_client()
+        match = collect_mod.fetch_fixture(req.match_id, client, refresh=True)
+        recs = collect_mod.fetch_all_game_bps(match, client, refresh=True)
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(500, detail=f"fetch failed: {e}")
+    games = [{"position": r.get("position"),
+              "bp_complete": bool((r.get("bp") or {}).get("bp_complete"))}
+             for r in recs]
+    complete = sum(1 for g in games if g["bp_complete"])
+    # Rebuild so the freshly-created game cards show up immediately.
+    from ..pipeline import orchestrator as orch
+    orch._maybe_rebuild_site()
+    return {"ok": True, "total": len(games), "bp_complete": complete,
+            "site_rebuilt": True, "games": games}
 
 
 class PredictRequest(BaseModel):

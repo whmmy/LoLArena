@@ -638,6 +638,35 @@ def fetch_game_bp(match: dict, position: int, client: CitoClient,
     return bp
 
 
+def fetch_all_game_bps(match: dict, client: CitoClient, *,
+                       refresh: bool = False) -> list[dict]:
+    """Fetch BP for EVERY game in a series at once.
+
+    This is the series-level entry point the UI should call (from the series
+    card) — BP collection is a per-series, not per-game, operation. Creates the
+    g1/g2/g3 dirs so the game cards appear, and returns one record per game
+    (None entries for games that couldn't be resolved). Never raises; per-game
+    failures are swallowed so one missing game doesn't block the rest.
+    """
+    games = match.get("games") or []
+    # match may be schedule-only (no games[] yet) — re-fetch to populate them.
+    if not games:
+        match = client.match(match.get("id"), refresh=refresh) or match
+        games = match.get("games") or []
+    out: list[dict] = []
+    for g in games:
+        pos = g.get("position")
+        if pos is None:
+            continue
+        try:
+            bp = fetch_game_bp(match, pos, client, refresh=refresh)
+            out.append({"position": pos, "bp": bp})
+        except Exception as e:  # noqa: BLE001
+            print(f"[bp-all] game {pos} failed: {e}")
+            out.append({"position": pos, "bp": None, "error": str(e)[:120]})
+    return out
+
+
 # ----------------------------- version meta (single game) -----------------------------
 
 def collect_version_meta(bp: dict, *, patch_version: str | None = None) -> dict:

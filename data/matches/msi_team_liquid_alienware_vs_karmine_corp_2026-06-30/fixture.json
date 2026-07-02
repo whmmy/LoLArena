@@ -2,13 +2,16 @@
   "id": 115570934355614521,
   "name": "Team Liquid Alienware vs Karmine Corp",
   "match_type": null,
-  "status": "not_started",
+  "status": "finished",
   "number_of_games": 5,
   "begin_at": "2026-06-30T08:00:00.000Z",
   "scheduled_at": "2026-06-30T08:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "tlaw",
+  "winner": {
+    "id": "tlaw",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
@@ -18,7 +21,7 @@
         "name": "Team Liquid Alienware",
         "acronym": "TLAW",
         "slug": "tlaw",
-        "image_url": "http://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
       }
     },
     {
@@ -27,14 +30,14 @@
         "name": "Karmine Corp",
         "acronym": "KC",
         "slug": "karmine-corp",
-        "image_url": "http://static.lolesports.com/teams/1704714951336_KC.png"
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png"
       }
     }
   ],
   "results": [
     {
       "team_id": "tlaw",
-      "score": 0
+      "score": 3
     },
     {
       "team_id": "karmine-corp",
@@ -44,16 +47,127 @@
   "league": {
     "id": "lol-msi",
     "name": "MSI",
-    "slug": null
+    "slug": "msi"
   },
   "serie": {},
   "tournament": {
-    "id": null,
-    "name": null
+    "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614522",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614521,
+      "blue_team": {
+        "id": "team-liquid",
+        "name": "Team Liquid Alienware",
+        "acronym": "TLAW",
+        "slug": "team-liquid",
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png",
+        "kills": 15,
+        "towers": 3
+      },
+      "red_team": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png",
+        "kills": 7,
+        "towers": 2
+      },
+      "patch": null,
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614523",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614521,
+      "blue_team": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png",
+        "kills": 15,
+        "towers": 2
+      },
+      "red_team": {
+        "id": "team-liquid",
+        "name": "Team Liquid Alienware",
+        "acronym": "TLAW",
+        "slug": "team-liquid",
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png",
+        "kills": 22,
+        "towers": 6
+      },
+      "patch": null,
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614524",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614521,
+      "blue_team": {
+        "id": "team-liquid",
+        "name": "Team Liquid Alienware",
+        "acronym": "TLAW",
+        "slug": "team-liquid",
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png",
+        "kills": 21,
+        "towers": 6
+      },
+      "red_team": {
+        "id": "karmine-corp",
+        "name": "Karmine Corp",
+        "acronym": "KC",
+        "slug": "karmine-corp",
+        "image_url": "https://static.lolesports.com/teams/1704714951336_KC.png",
+        "kills": 8,
+        "towers": 2
+      },
+      "patch": null,
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Play In Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.youtube.com/watch?v=SpxN8HQ6GIY"
 }

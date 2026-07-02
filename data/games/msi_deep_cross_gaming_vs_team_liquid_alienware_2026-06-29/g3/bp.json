@@ -73,10 +73,10 @@
     ]
   },
   "fetched_at": "2026-06-29T10:54:10Z",
-  "winner_side": null,
+  "winner_side": "blue",
   "kills": {
-    "blue": 0,
-    "red": 0
+    "blue": 17,
+    "red": 9
   },
-  "total_kills": 0
+  "total_kills": 26
 }

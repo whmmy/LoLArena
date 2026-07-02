@@ -675,6 +675,7 @@ function renderSeriesMatchCard(h, opts={}){
         <div class="flex items-center justify-between text-[11px] mb-2.5">
           <span class="text-slate-500 dark:text-slate-400 font-bold">大模型预测汇总 (Series)</span>
           <div class="flex items-center gap-2 flex-wrap justify-end">
+            ${h.match_id ? actionBtn('series-refresh-bp','🔄 刷新全部BP',{tip:'从官方批量拉取该系列所有小局BP',tone:'blue',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
             ${h.match_id ? actionBtn('series-predict','⚡ 触发分析',{tip:'运行所有模型进行系列赛预测',tone:'amber',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
             ${h.match_id && !isUpcomingStatus(h.status) && h.status!=='live' ? actionBtn('series-grade','✅ 结算',{tip:'根据真实赛果打分',tone:'emerald',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
             ${Object.keys(preds).length ? `<button class="bet-open-btn inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#c89b3c]/10 text-[#c89b3c] border border-[#c89b3c]/25 text-[10px] font-black hover:bg-[#c89b3c]/20 transition-colors" data-slug="${escAttr(h.slug)}">🎲 下注建议</button>` : ''}
@@ -693,7 +694,11 @@ function renderSingleGameCard(h) {
   const blueChamps = renderChampsPills(h.blue_picks, 'blue');
   const redChamps = renderChampsPills(h.red_picks, 'red');
   const bpReady = !!h.bp_complete;
-  const gameFinished = truth.winner_side != null;
+  // Show the settle button whenever the game is over (status=finished), even
+  // before Cito back-fills winner/kills — settling forces a refresh, which is
+  // exactly how you pull the latest truth. (Don't gate on winner_side!=null,
+  // or the button never appears while truth shows "赛果待官方回填".)
+  const gameFinished = truth.status === 'finished';
   const mData = {slug:h.match_slug, 'match-slug':h.match_slug, 'match-id':h.match_id, pos:h.position};
   
   return `
@@ -703,7 +708,6 @@ function renderSingleGameCard(h) {
           <span class="font-bold tracking-wide text-[#c89b3c] text-[11px] uppercase truncate max-w-[200px]" title="${escAttr(h.match_slug)}">${esc(h.match_slug || 'Single Game')}</span>
           <div class="flex items-center gap-2 flex-wrap justify-end">
             <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#c89b3c]/15 text-[#c89b3c] border border-[#c89b3c]/25">第 ${h.position} 局</span>
-            ${h.match_id ? actionBtn('game-refresh-bp','🔄 刷新BP',{tip:'从官方拉取BP',tone:'blue',data:mData}) : ''}
             ${h.match_id ? actionBtn('game-predict','⚡ 分析',{tip: bpReady?'运行所有模型分析本局':'需先刷新BP',disabled:!bpReady,tone:'amber',data:mData}) : ''}
             ${h.match_id && gameFinished ? actionBtn('game-grade','✅ 结算',{tip:'根据真实赛果打分',tone:'emerald',data:mData}) : ''}
           </div>
@@ -1803,33 +1807,36 @@ document.body.addEventListener('click', (e)=>{
   const btn = e.target.closest('.act-btn[data-action]');
   if(!btn || btn.dataset.disabled==='1' || btn.dataset.loading==='1') return;
   const action = btn.dataset.action;
+  // ⚠ Keep match_id as a STRING, never Number(). Cito/Riot ids are 18-digit
+  // integers that exceed Number.MAX_SAFE_INTEGER, so Number() silently
+  // corrupts them (115846993721104369 -> ...370) and the backend then 404s.
   const mid = btn.dataset.matchId;
   const pos = Number(btn.dataset.pos);
   const slug = btn.dataset.slug;
   const matchSlug = btn.dataset.matchSlug;
 
-  if(action==='series-predict'){
-    runAction(btn,'/api/predict',{match_id:Number(mid)},
+  if(action==='series-refresh-bp'){
+    runAction(btn,'/api/refresh-bp-all',{match_id:mid},
+      {kind:'series-pred', ctx:{slug}},
+      {busyText:'刷新全部BP…', okMsg:'该系列全部小局BP已刷新。', doneText:'✓ BP已就绪', waitChange:false});
+  }
+  else if(action==='series-predict'){
+    runAction(btn,'/api/predict',{match_id:mid},
       {kind:'series-pred', ctx:{slug}},
       {busyText:'分析中…', okMsg:'系列赛分析已完成。', doneText:'✓ 已生成'});
   }
   else if(action==='series-grade'){
-    runAction(btn,'/api/grade',{match_id:Number(mid)},
+    runAction(btn,'/api/grade',{match_id:mid},
       {kind:'series-grade', ctx:{slug}},
       {busyText:'结算中…', okMsg:'系列赛已结算。', doneText:'✓ 已结算'});
   }
-  else if(action==='game-refresh-bp'){
-    runAction(btn,'/api/refresh-bp',{match_id:Number(mid), game_pos:pos, predict:false},
-      {kind:'game-pred', ctx:{matchSlug, pos}},
-      {busyText:'刷新BP…', okMsg:'BP 刷新完成。', doneText:'✓ BP已就绪', waitChange:false});
-  }
   else if(action==='game-predict'){
-    runAction(btn,'/api/predict-game',{match_id:Number(mid), game_pos:pos},
+    runAction(btn,'/api/predict-game',{match_id:mid, game_pos:pos},
       {kind:'game-pred', ctx:{matchSlug, pos}},
       {busyText:'分析中…', okMsg:'单局分析已完成。', doneText:'✓ 已生成'});
   }
   else if(action==='game-grade'){
-    runAction(btn,'/api/grade-game',{match_id:Number(mid), game_pos:pos},
+    runAction(btn,'/api/grade-game',{match_id:mid, game_pos:pos},
       {kind:'game-grade', ctx:{matchSlug, pos}},
       {busyText:'结算中…', okMsg:'本局已结算。', doneText:'✓ 已结算'});
   }
