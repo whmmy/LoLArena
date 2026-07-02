@@ -166,6 +166,92 @@ tailwind.config = {
   .bet-cursor::after { content:'▋'; color:#c89b3c; animation: betCursorBlink 1s steps(2) infinite; margin-left:1px; }
   @keyframes betSpin { to { transform: rotate(360deg); } }
   .bet-spin { animation: betSpin 0.8s linear infinite; }
+
+  /* ===== Manual BP editor overlay ===== */
+  #bpEditorOverlay {
+    position: fixed; inset: 0; z-index: 60;
+    background: rgba(2, 6, 16, 0.72);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  #bpEditorOverlay.open { display: flex; }
+  #bpEditorPanel {
+    width: 100%; max-width: 1120px; max-height: 94vh;
+    display: flex; flex-direction: column;
+    background: #0b1120; border: 1px solid rgba(200,155,60,0.25);
+    border-radius: 18px; overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  }
+  html[data-theme="light"] #bpEditorPanel {
+    background: #ffffff; border-color: #e2e8f0;
+  }
+  /* team slot lanes — blue left, red right */
+  .bp-side {
+    border-radius: 14px; padding: 10px;
+    border: 2px solid transparent; transition: all .18s;
+    background: rgba(148,163,184,0.05);
+  }
+  .bp-side.blue { border-color: rgba(0,163,224,0.18); }
+  .bp-side.red  { border-color: rgba(222,47,47,0.18); }
+  .bp-side.selected.blue { border-color: #00a3e0; box-shadow: 0 0 0 2px rgba(0,163,224,0.25), 0 0 22px rgba(0,163,224,0.15); }
+  .bp-side.selected.red  { border-color: #de2f2f; box-shadow: 0 0 0 2px rgba(222,47,47,0.25), 0 0 22px rgba(222,47,47,0.15); }
+  /* a single player slot (empty placeholder or filled champion) */
+  .bp-slot {
+    position: relative; display: flex; flex-direction: column; align-items: center;
+    width: 92px; min-height: 110px; padding: 6px 4px; border-radius: 12px;
+    border: 1.5px dashed rgba(148,163,184,0.35); background: rgba(148,163,184,0.04);
+    cursor: pointer; transition: all .15s;
+  }
+  .bp-slot.empty:hover { border-color: rgba(200,155,60,0.6); background: rgba(200,155,60,0.06); }
+  .bp-slot.filled { border-style: solid; border-color: rgba(148,163,184,0.3); background: rgba(17,23,38,0.5); cursor: grab; }
+  html[data-theme="light"] .bp-slot.filled { background: #f8fafc; }
+  .bp-slot.drag-over { border-color: #c89b3c; box-shadow: 0 0 0 2px rgba(200,155,60,0.3); }
+  .bp-slot .bp-champ-icon { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; background: rgba(148,163,184,0.12); }
+  .bp-slot .bp-champ-name { font-size: 10px; font-weight: 700; margin-top: 3px; max-width: 84px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bp-slot .bp-player-name { font-size: 9px; color: #94a3b8; max-width: 84px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bp-slot .bp-role-tag { font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: #c89b3c; }
+  .bp-slot .bp-remove {
+    position: absolute; top: 2px; right: 2px; width: 18px; height: 18px; border-radius: 50%;
+    display: none; align-items: center; justify-content: center;
+    background: rgba(222,47,47,0.85); color: #fff; font-size: 11px; line-height: 1; cursor: pointer;
+  }
+  .bp-slot.filled:hover .bp-remove { display: flex; }
+  /* champion pool grid */
+  .bp-pool {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 6px; align-content: start;
+  }
+  .bp-champ {
+    display: flex; flex-direction: column; align-items: center; cursor: pointer;
+    padding: 4px 2px; border-radius: 10px; border: 1.5px solid transparent;
+    transition: all .12s; user-select: none;
+  }
+  .bp-champ:hover { border-color: rgba(200,155,60,0.5); background: rgba(200,155,60,0.08); transform: translateY(-1px); }
+  .bp-champ img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: rgba(148,163,184,0.12); }
+  .bp-champ .bp-champ-label { font-size: 9px; font-weight: 600; margin-top: 2px; max-width: 60px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; }
+  .bp-champ.used { opacity: 0.28; cursor: not-allowed; filter: grayscale(0.8); }
+  .bp-champ.used:hover { border-color: transparent; background: transparent; transform: none; }
+  .bp-empty-note { color: #94a3b8; font-size: 11px; padding: 8px; text-align: center; }
+  /* small game-picker popover anchored to the series-card button */
+  #bpGamePicker {
+    position: fixed; z-index: 70; display: none;
+    background: #0b1120; border: 1px solid rgba(200,155,60,0.3);
+    border-radius: 12px; padding: 8px; box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+    min-width: 180px;
+  }
+  html[data-theme="light"] #bpGamePicker { background:#fff; border-color:#e2e8f0; }
+  #bpGamePicker.open { display: block; }
+  #bpGamePicker .gp-title { font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: .04em; padding: 2px 6px 6px; }
+  #bpGamePicker .gp-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 6px 10px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 700;
+    transition: background .12s;
+  }
+  #bpGamePicker .gp-item:hover { background: rgba(200,155,60,0.12); }
+  #bpGamePicker .gp-item .gp-tag { font-size: 9px; font-weight: 800; color: #c89b3c; }
+  #bpGamePicker .gp-item .gp-empty { font-size: 9px; color: #64748b; font-weight: 600; }
 </style>
 </head>
 <body class="min-h-screen dark:bg-obsidian-950 bg-slate-50 dark:text-slate-200 text-slate-800 antialiased pb-20">
@@ -408,6 +494,74 @@ tailwind.config = {
       </div>
     </div>
   </div>
+</div>
+
+<!-- ===== Manual BP editor overlay ===== -->
+<div id="bpEditorOverlay">
+  <div id="bpEditorPanel">
+    <!-- header -->
+    <div class="flex items-center justify-between px-5 py-3 border-b border-slate-200 dark:border-slate-800/40">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-lg">✋</span>
+        <div class="min-w-0">
+          <div class="text-sm font-black text-slate-800 dark:text-slate-100 truncate" id="bpEditorTitle">手动 BP 编辑器</div>
+          <div class="text-[10px] text-slate-500 dark:text-slate-400" id="bpEditorSub">点选红/蓝方后，再点英雄填入空位 · 槽位可拖拽换位 · 已选英雄不可重复</div>
+        </div>
+      </div>
+      <button id="bpEditorClose" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/40 text-slate-500 dark:text-slate-400" title="关闭">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- loading / body -->
+    <div id="bpEditorBody" class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- team slot lanes -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bp-side blue" data-side="blue">
+          <div class="flex items-center gap-2 mb-2">
+            <span id="bpBlueLogo" class="w-6 h-6 rounded-full bg-[#00a3e0]/10 border border-[#00a3e0]/30 flex items-center justify-center text-[9px] font-black text-[#00a3e0]">🟦</span>
+            <span class="text-[11px] font-black text-[#00a3e0]" id="bpBlueName">蓝方</span>
+          </div>
+          <div class="flex flex-wrap gap-2" id="bpBlueSlots"></div>
+        </div>
+        <div class="bp-side red" data-side="red">
+          <div class="flex items-center gap-2 mb-2 justify-end">
+            <span class="text-[11px] font-black text-[#de2f2f]" id="bpRedName">红方</span>
+            <span id="bpRedLogo" class="w-6 h-6 rounded-full bg-[#de2f2f]/10 border border-[#de2f2f]/30 flex items-center justify-center text-[9px] font-black text-[#de2f2f]">🟥</span>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-end" id="bpRedSlots"></div>
+        </div>
+      </div>
+
+      <!-- search + champion pool -->
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input id="bpSearch" type="text" placeholder="搜索英雄名 / 中文别名（如 狐狸、剑魔、Lee Sin）…" class="bet-input" style="max-width:420px">
+          <span class="text-[10px] text-slate-400 ml-auto" id="bpPoolCount"></span>
+        </div>
+        <div id="bpChampionPool" class="bp-pool" style="max-height: 46vh; overflow-y: auto;"></div>
+      </div>
+    </div>
+
+    <!-- footer actions -->
+    <div class="flex items-center justify-between px-5 py-3 border-t border-slate-200 dark:border-slate-800/40 bg-slate-50/60 dark:bg-obsidian-950/40">
+      <span class="text-[11px] text-slate-500 dark:text-slate-400" id="bpFooterStat">已选 0/10</span>
+      <div class="flex items-center gap-2">
+        <button id="bpClearBtn" class="px-3 py-1.5 rounded-lg text-[11px] font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/40 transition-colors">清空</button>
+        <button id="bpSaveBtn" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-[#c89b3c] text-white text-xs font-black shadow hover:scale-[1.03] transition-transform">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          保存 BP
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- game-picker popover (anchored to the ✋ series-card button at open time) -->
+<div id="bpGamePicker">
+  <div class="gp-title">选择要编辑的小局</div>
+  <div id="bpGamePickerList"></div>
 </div>
 
 <script>
@@ -676,6 +830,7 @@ function renderSeriesMatchCard(h, opts={}){
           <span class="text-slate-500 dark:text-slate-400 font-bold">大模型预测汇总 (Series)</span>
           <div class="flex items-center gap-2 flex-wrap justify-end">
             ${h.match_id ? actionBtn('series-refresh-bp','🔄 刷新全部BP',{tip:'从官方批量拉取该系列所有小局BP',tone:'blue',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
+            ${h.match_id ? actionBtn('series-manual-bp','✋ 手动小局',{tip:'手动创建/编辑某一小局的BP（BP接口慢时用）',tone:'slate',data:{slug:h.slug, 'match-id':h.match_id, 'number-of-games':(h.number_of_games||5)}}) : ''}
             ${h.match_id ? actionBtn('series-predict','⚡ 触发分析',{tip:'运行所有模型进行系列赛预测',tone:'amber',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
             ${h.match_id && !isUpcomingStatus(h.status) && h.status!=='live' ? actionBtn('series-grade','✅ 结算',{tip:'根据真实赛果打分',tone:'emerald',data:{slug:h.slug, 'match-id':h.match_id}}) : ''}
             ${Object.keys(preds).length ? `<button class="bet-open-btn inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#c89b3c]/10 text-[#c89b3c] border border-[#c89b3c]/25 text-[10px] font-black hover:bg-[#c89b3c]/20 transition-colors" data-slug="${escAttr(h.slug)}">🎲 下注建议</button>` : ''}
@@ -708,6 +863,7 @@ function renderSingleGameCard(h) {
           <span class="font-bold tracking-wide text-[#c89b3c] text-[11px] uppercase truncate max-w-[200px]" title="${escAttr(h.match_slug)}">${esc(h.match_slug || 'Single Game')}</span>
           <div class="flex items-center gap-2 flex-wrap justify-end">
             <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#c89b3c]/15 text-[#c89b3c] border border-[#c89b3c]/25">第 ${h.position} 局</span>
+            ${h.match_id ? actionBtn('manual-bp','✋ 手动',{tip:'手动为选手选择英雄（BP 接口慢/不可用时用）',tone:'slate',data:mData}) : ''}
             ${h.match_id ? actionBtn('game-predict','⚡ 分析',{tip: bpReady?'运行所有模型分析本局':'需先刷新BP',disabled:!bpReady,tone:'amber',data:mData}) : ''}
             ${h.match_id && gameFinished ? actionBtn('game-grade','✅ 结算',{tip:'根据真实赛果打分',tone:'emerald',data:mData}) : ''}
           </div>
@@ -1802,6 +1958,385 @@ function flashToast(msg, kind='ok'){
   el._t = setTimeout(()=>{ el.style.opacity='0'; el.style.transform='translateY(-8px)'; }, 2600);
 }
 
+// ====================== Manual BP editor ======================
+// Independent of the (unstable) auto BP fetch. Lets the user hand-pick
+// champions for each player slot, drag slots between sides, remove picks,
+// and save straight into bp.json. Mirrors the betting-overlay open/close
+// pattern. Champion icons come from PandaScore via /api/champions.
+const ROLE_ORDER_BP = ['top','jun','mid','adc','sup'];
+const ROLE_LABELS_BP = { top:'上单', jun:'打野', mid:'中单', adc:'下路', sup:'辅助' };
+let BP = null;   // editor state, set on openBpEditor()
+
+function openBpEditor(matchId, pos, matchSlug){
+  BP = {
+    matchId: String(matchId), pos: Number(pos), slug: matchSlug,
+    selectedSide: null,
+    roster: { blue:[], red:[] },          // [{role,name,id}]
+    team: { blue:{}, red:{} },            // {name,acronym,image_url}
+    picks: { blue:[null,null,null,null,null], red:[null,null,null,null,null] }, // aligned to ROLE_ORDER_BP
+    champions: [],                          // [{name,slug,image_url,aliases}]
+    champByName: {},
+    drag: null,                             // {side,role} being dragged
+  };
+  bpEditorOpen();
+  document.getElementById('bpEditorTitle').textContent = `手动 BP · 第 ${pos} 局`;
+  renderBpSlots();
+  renderBpFooter();
+  // async load roster + champions + prefill
+  loadBpEditorData();
+}
+
+// ----- series-card game picker popover -----
+// The series card has no single game position, so clicking "✋ 手动小局"
+// opens a small popover listing 第1..第N局 (N = BoN). Selecting one opens
+// the BP editor for that game (creating its dir on save). Each game row is
+// marked with the champion count if it already has picks.
+function openBpGamePicker(matchId, matchSlug, numberOfGames, anchorBtn){
+  const pop = document.getElementById('bpGamePicker');
+  const list = document.getElementById('bpGamePickerList');
+  const n = Math.max(1, Number(numberOfGames)||5);
+  const games = DATA.game_history || [];
+  let html = '';
+  for(let i=1;i<=n;i++){
+    const g = games.find(x=>x.match_slug===matchSlug && x.position===i);
+    const has = g && Array.isArray(g.blue_picks) && Array.isArray(g.red_picks);
+    const cnt = has ? (g.blue_picks.length + g.red_picks.length) : 0;
+    const tag = has ? (g.bp_complete ? '已满' : `${cnt}/10`) : '空';
+    html += `<div class="gp-item" data-gp-pos="${i}">
+      <span>第 ${i} 局</span>
+      <span class="${has?'gp-tag':'gp-empty'}">${tag}</span>
+    </div>`;
+  }
+  list.innerHTML = html;
+  // wire item clicks
+  list.querySelectorAll('.gp-item').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      closeBpGamePicker();
+      openBpEditor(matchId, Number(el.dataset.gpPos), matchSlug);
+    });
+  });
+  // anchor the popover under the clicked button
+  pop.classList.add('open');
+  const r = anchorBtn.getBoundingClientRect();
+  const popRect = pop.getBoundingClientRect();
+  let left = r.left;
+  let top = r.bottom + 6;
+  // keep it on-screen
+  if(left + popRect.width > window.innerWidth - 8) left = window.innerWidth - popRect.width - 8;
+  if(left < 8) left = 8;
+  if(top + popRect.height > window.innerHeight - 8) top = r.top - popRect.height - 6;
+  pop.style.left = left + 'px';
+  pop.style.top = top + 'px';
+}
+function closeBpGamePicker(){
+  document.getElementById('bpGamePicker').classList.remove('open');
+}
+
+function bpEditorOpen(){
+  document.getElementById('bpEditorOverlay').classList.add('open');
+}
+function bpEditorClose(){
+  const ov = document.getElementById('bpEditorOverlay');
+  ov.classList.remove('open');
+  // reset search so it's clean next time
+  const s = document.getElementById('bpSearch');
+  if(s) s.value = '';
+  BP = null;
+}
+
+async function loadBpEditorData(){
+  const body = document.getElementById('bpEditorBody');
+  const poolEl = document.getElementById('bpChampionPool');
+  poolEl.innerHTML = `<div class="bp-empty-note col-span-full">加载英雄池与选手数据中…</div>`;
+  try {
+    const [rosterRes, champRes, prefilled] = await Promise.all([
+      fetch(`/api/match-roster?slug=${encodeURIComponent(BP.slug)}`).then(r=>r.json()),
+      fetch('/api/champions').then(r=>r.json()),
+      (async()=>{ const g=_findGame(BP.slug, BP.pos); return g || null; })(),
+    ]);
+    BP.roster = {
+      blue: (rosterRes.blue && rosterRes.blue.players) || [],
+      red:  (rosterRes.red  && rosterRes.red.players)  || [],
+    };
+    BP.team = { blue: rosterRes.blue?.team||{}, red: rosterRes.red?.team||{} };
+    BP.champions = Array.isArray(champRes) ? champRes : [];
+    BP.champByName = {};
+    BP.champions.forEach(c=>{ BP.champByName[c.name] = c; });
+    // team headers
+    document.getElementById('bpBlueName').textContent = BP.team.blue?.name || '蓝方';
+    document.getElementById('bpRedName').textContent  = BP.team.red?.name  || '红方';
+    setBpTeamLogo('bpBlueLogo', BP.team.blue, '#00a3e0');
+    setBpTeamLogo('bpRedLogo',  BP.team.red,  '#de2f2f');
+    // prefill from existing bp.json picks (data.json blue_picks/red_picks)
+    if(prefilled){
+      prefillBpSide(prefilled.blue_picks, 'blue');
+      prefillBpSide(prefilled.red_picks,  'red');
+    }
+    renderBpSlots();
+    renderBpPool();
+    renderBpFooter();
+  } catch(e){
+    poolEl.innerHTML = `<div class="bp-empty-note col-span-full">加载失败：${esc(e.message)}（可重试：关闭再打开）</div>`;
+  }
+}
+
+function setBpTeamLogo(elId, team, color){
+  const el = document.getElementById(elId);
+  if(!el) return;
+  if(team && team.image_url){
+    el.innerHTML = `<img src="${escAttr(team.image_url)}" style="width:100%;height:100%;object-fit:contain" referrerpolicy="no-referrer" alt="">`;
+    el.style.background = 'transparent'; el.style.border = 'none';
+  } else {
+    el.textContent = (team && team.acronym ? team.acronym.slice(0,2) : '?');
+  }
+}
+
+function prefillBpSide(picks, side){
+  if(!Array.isArray(picks)) return;
+  for(const p of picks){
+    const idx = ROLE_ORDER_BP.indexOf(p.role);
+    if(idx>=0 && p.champion){
+      BP.picks[side][idx] = { role:p.role, player:p.player||null, champion:p.champion };
+    }
+  }
+}
+
+function renderBpSlots(){
+  for(const side of ['blue','red']){
+    const container = document.getElementById(side==='blue'?'bpBlueSlots':'bpRedSlots');
+    const roster = BP.roster[side] || [];
+    const roleToPlayer = {};
+    roster.forEach(p=>{ roleToPlayer[p.role]=p.name; });
+    const html = ROLE_ORDER_BP.map((role, i)=>{
+      const pick = BP.picks[side][i];
+      const playerName = pick?.player || roleToPlayer[role] || '';
+      const champ = pick ? BP.champByName[pick.champion] : null;
+      const img = champ?.image_url || '';
+      return bpSlotHtml(side, role, i, pick, playerName, img);
+    }).join('');
+    container.innerHTML = html;
+  }
+  wireBpSlots();
+}
+
+function bpSlotHtml(side, role, idx, pick, playerName, imgUrl){
+  const roleLabel = ROLE_LABELS_BP[role] || role;
+  if(!pick){
+    return `<div class="bp-slot empty" data-side="${side}" data-role="${role}" data-idx="${idx}" title="点击选中${side==='blue'?'蓝':'红'}方">
+      <span class="bp-role-tag">${esc(roleLabel)}</span>
+      <div style="width:52px;height:52px;border-radius:10px;border:1.5px dashed rgba(148,163,184,0.3);display:flex;align-items:center;justify-content:center;color:#64748b;font-size:20px;margin-top:4px">+</div>
+      <span class="bp-player-name">${esc(playerName||'空位')}</span>
+    </div>`;
+  }
+  return `<div class="bp-slot filled" draggable="true" data-side="${side}" data-role="${role}" data-idx="${idx}" data-champion="${escAttr(pick.champion)}">
+    <span class="bp-remove" data-remove="1" title="移除">×</span>
+    <span class="bp-role-tag">${esc(roleLabel)}</span>
+    ${imgUrl ? `<img class="bp-champ-icon" src="${escAttr(imgUrl)}" referrerpolicy="no-referrer" alt="${escAttr(pick.champion)}" loading="lazy">` : `<div class="bp-champ-icon" style="display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:18px">?</div>`}
+    <span class="bp-champ-name">${esc(pick.champion)}</span>
+    <span class="bp-player-name">${esc(playerName||'')}</span>
+  </div>`;
+}
+
+function wireBpSlots(){
+  document.querySelectorAll('#bpEditorPanel .bp-slot').forEach(slot=>{
+    const side = slot.dataset.side;
+    // click selects the side (and a specific slot if empty)
+    slot.addEventListener('click', (e)=>{
+      if(e.target.closest('[data-remove]')){
+        const idx = Number(slot.dataset.idx);
+        BP.picks[side][idx] = null;
+        renderBpSlots(); renderBpPool(); renderBpFooter();
+        return;
+      }
+      selectBpSide(side);
+    });
+    // drag source
+    slot.addEventListener('dragstart', (e)=>{
+      if(!slot.classList.contains('filled')){ e.preventDefault(); return; }
+      BP.drag = { side: slot.dataset.side, idx: Number(slot.dataset.idx) };
+      e.dataTransfer.effectAllowed = 'move';
+      try{ e.dataTransfer.setData('text/plain','bp'); }catch(_){}
+    });
+    slot.addEventListener('dragover', (e)=>{
+      if(!BP.drag) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      slot.classList.add('drag-over');
+    });
+    slot.addEventListener('dragleave', ()=> slot.classList.remove('drag-over'));
+    slot.addEventListener('drop', (e)=>{
+      e.preventDefault();
+      slot.classList.remove('drag-over');
+      if(!BP.drag) return;
+      const tgtSide = slot.dataset.side, tgtIdx = Number(slot.dataset.idx);
+      const src = BP.drag;
+      const a = BP.picks[src.side][src.idx];
+      const b = BP.picks[tgtSide][tgtIdx];
+      // swap (works for filled<->filled and filled<->empty): move A to target,
+      // and if target had B, put B back where A came from (cross-side allowed).
+      BP.picks[tgtSide][tgtIdx] = a;
+      BP.picks[src.side][src.idx] = b;
+      // keep each pick's role aligned to its new slot's role (so a champion
+      // dragged to a new role slot adopts that role — that's the point of
+      // "swap positions").
+      if(a) a.role = ROLE_ORDER_BP[tgtIdx];
+      if(b) b.role = ROLE_ORDER_BP[src.idx];
+      BP.drag = null;
+      renderBpSlots(); renderBpFooter();
+    });
+    slot.addEventListener('dragend', ()=>{ BP.drag=null; document.querySelectorAll('.bp-slot.drag-over').forEach(s=>s.classList.remove('drag-over')); });
+  });
+}
+
+function selectBpSide(side){
+  BP.selectedSide = side;
+  document.querySelectorAll('#bpEditorPanel .bp-side').forEach(el=>{
+    el.classList.toggle('selected', el.dataset.side===side);
+  });
+}
+
+function usedBpChampions(){
+  const set = new Set();
+  for(const side of ['blue','red']){
+    BP.picks[side].forEach(p=>{ if(p) set.add(p.champion); });
+  }
+  return set;
+}
+
+function renderBpPool(){
+  const pool = document.getElementById('bpChampionPool');
+  const q = (document.getElementById('bpSearch').value||'').trim().toLowerCase();
+  const used = usedBpChampions();
+  let list = BP.champions;
+  if(q){
+    list = list.filter(c=>{
+      if(c.name.toLowerCase().includes(q)) return true;
+      if((c.slug||'').toLowerCase().includes(q)) return true;
+      if((c.aliases||[]).some(a=>String(a).toLowerCase().includes(q))) return true;
+      return false;
+    });
+  }
+  document.getElementById('bpPoolCount').textContent = `${list.length} 个英雄${q?'（搜索结果）':''}`;
+  if(!list.length){
+    pool.innerHTML = `<div class="bp-empty-note col-span-full">没有匹配的英雄。</div>`;
+    return;
+  }
+  pool.innerHTML = list.map(c=>{
+    const isUsed = used.has(c.name);
+    return `<div class="bp-champ ${isUsed?'used':''}" data-champion="${escAttr(c.name)}" title="${escAttr(c.name)}${(c.aliases&&c.aliases.length)?' · '+escAttr(c.aliases.slice(0,4).join(' / ')):''}">
+      ${c.image_url ? `<img src="${escAttr(c.image_url)}" referrerpolicy="no-referrer" alt="${escAttr(c.name)}" loading="lazy">` : `<div style="width:48px;height:48px;border-radius:8px;background:rgba(148,163,184,0.12);display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:9px">?</div>`}
+      <span class="bp-champ-label">${esc(c.name)}</span>
+    </div>`;
+  }).join('');
+  // wire champion clicks
+  pool.querySelectorAll('.bp-champ').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      if(el.classList.contains('used')) return;
+      pickBpChampion(el.dataset.champion);
+    });
+  });
+}
+
+function pickBpChampion(championName){
+  if(!BP.selectedSide){
+    flashToast('请先点选红方或蓝方再挑英雄。','info');
+    return;
+  }
+  const side = BP.selectedSide;
+  const used = usedBpChampions();
+  if(used.has(championName)){
+    flashToast(`${championName} 已被选择，不能重复。`,'info');
+    return;
+  }
+  const slots = BP.picks[side];
+  const emptyIdx = slots.findIndex(p=>!p);
+  if(emptyIdx<0){
+    flashToast(`${side==='blue'?'蓝':'红'}方已满 5 人，请先移除或拖拽换位。`,'info');
+    return;
+  }
+  const role = ROLE_ORDER_BP[emptyIdx];
+  const roleToPlayer = {};
+  (BP.roster[side]||[]).forEach(p=>{ roleToPlayer[p.role]=p.name; });
+  slots[emptyIdx] = { role, player: roleToPlayer[role]||null, champion: championName };
+  renderBpSlots(); renderBpPool(); renderBpFooter();
+}
+
+function renderBpFooter(){
+  let count = 0;
+  for(const side of ['blue','red']) count += BP.picks[side].filter(p=>p).length;
+  document.getElementById('bpFooterStat').textContent = `已选 ${count}/10${BP.selectedSide?(' · 当前选中 '+(BP.selectedSide==='blue'?'蓝方':'红方')):''}`;
+}
+
+async function saveBpEditor(btn){
+  const label0 = btn.innerHTML;
+  setBtnState(btn,'loading','保存中…');
+  const blue=[], red=[];
+  ROLE_ORDER_BP.forEach((role,i)=>{
+    const pb=BP.picks.blue[i]; if(pb) blue.push({role:pb.role, player:pb.player, champion:pb.champion, spells:[]});
+    const pr=BP.picks.red[i];  if(pr) red.push({role:pr.role, player:pr.player, champion:pr.champion, spells:[]});
+  });
+  try{
+    const r = await fetch('/api/save-bp',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ match_id: BP.matchId, game_pos: BP.pos, blue, red }),
+    });
+    const data = await r.json().catch(()=>({}));
+    if(!r.ok){
+      const msg = data.detail || data.message || `HTTP ${r.status}`;
+      setBtnState(btn,'done','✗ 失败');
+      flashToast('保存失败：'+msg,'error');
+      setTimeout(()=>setBtnState(btn,'idle',label0),2200);
+      return;
+    }
+    setBtnState(btn,'done','✓ 已保存');
+    flashToast(data.bp_complete?'BP 已保存（双方已满）。':'BP 已保存（未满 5v5）。','ok');
+    bpEditorClose();
+    // refresh the board so the game card reflects the manual picks
+    await load();
+    setTimeout(()=>setBtnState(btn,'idle',label0),1800);
+  }catch(e){
+    setBtnState(btn,'done','✗ 错误');
+    flashToast('网络错误：'+e.message,'error');
+    setTimeout(()=>setBtnState(btn,'idle',label0),2500);
+  }
+}
+
+// wire editor static controls once
+(function wireBpEditorControls(){
+  // These elements exist in the DOM already (the overlay markup), so we can
+  // bind directly — no need to wait for a render.
+  const close=()=>bpEditorClose();
+  const ov=document.getElementById('bpEditorOverlay');
+  document.getElementById('bpEditorClose').addEventListener('click', close);
+  ov.addEventListener('click',(e)=>{ if(e.target===ov) close(); });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape' && ov.classList.contains('open')) close(); });
+  const search=document.getElementById('bpSearch');
+  search.addEventListener('input', ()=>renderBpPool());
+  document.getElementById('bpClearBtn').addEventListener('click', ()=>{
+    if(!BP) return;
+    BP.picks={blue:[null,null,null,null,null], red:[null,null,null,null,null]};
+    renderBpSlots(); renderBpPool(); renderBpFooter();
+  });
+  document.getElementById('bpSaveBtn').addEventListener('click', (e)=> saveBpEditor(e.currentTarget));
+  // click on a side lane background also selects that side
+  document.querySelectorAll('#bpEditorPanel .bp-side').forEach(el=>{
+    el.addEventListener('click',(e)=>{
+      // let slot clicks bubble naturally; only select when clicking the lane bg
+      if(e.target.closest('.bp-slot')) return;
+      selectBpSide(el.dataset.side);
+    });
+  });
+  // game-picker popover: close on outside click / Escape
+  const gp = document.getElementById('bpGamePicker');
+  document.addEventListener('click',(e)=>{
+    if(!gp.classList.contains('open')) return;
+    if(e.target.closest('#bpGamePicker') || e.target.closest('[data-action="series-manual-bp"]')) return;
+    closeBpGamePicker();
+  });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeBpGamePicker(); });
+  window.addEventListener('blur', closeBpGamePicker);
+})();
+
 // global delegated click handler for all action buttons
 document.body.addEventListener('click', (e)=>{
   const btn = e.target.closest('.act-btn[data-action]');
@@ -1814,11 +2349,16 @@ document.body.addEventListener('click', (e)=>{
   const pos = Number(btn.dataset.pos);
   const slug = btn.dataset.slug;
   const matchSlug = btn.dataset.matchSlug;
+  const numberOfGames = Number(btn.dataset.numberOfGames)||5;
 
   if(action==='series-refresh-bp'){
     runAction(btn,'/api/refresh-bp-all',{match_id:mid},
       {kind:'series-pred', ctx:{slug}},
       {busyText:'刷新全部BP…', okMsg:'该系列全部小局BP已刷新。', doneText:'✓ BP已就绪', waitChange:false});
+  }
+  else if(action==='series-manual-bp'){
+    // Open the per-game picker anchored under the button (no backend POST).
+    openBpGamePicker(mid, matchSlug, numberOfGames, btn);
   }
   else if(action==='series-predict'){
     runAction(btn,'/api/predict',{match_id:mid},
@@ -1839,6 +2379,10 @@ document.body.addEventListener('click', (e)=>{
     runAction(btn,'/api/grade-game',{match_id:mid, game_pos:pos},
       {kind:'game-grade', ctx:{matchSlug, pos}},
       {busyText:'结算中…', okMsg:'本局已结算。', doneText:'✓ 已结算'});
+  }
+  else if(action==='manual-bp'){
+    // Opens the manual BP editor overlay (no backend POST on click).
+    openBpEditor(mid, pos, matchSlug);
   }
 });
 

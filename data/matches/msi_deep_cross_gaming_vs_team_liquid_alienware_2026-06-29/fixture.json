@@ -69,14 +69,18 @@
         "name": "Team Liquid Alienware",
         "acronym": "TLAW",
         "slug": "team-liquid",
-        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png",
+        "kills": 18,
+        "towers": 8
       },
       "red_team": {
         "id": "deep-cross-gaming",
         "name": "Relove Deep Cross Gaming",
         "acronym": "DCG",
         "slug": "deep-cross-gaming",
-        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png"
+        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png",
+        "kills": 10,
+        "towers": 1
       },
       "patch": "16.13.790.6961",
       "first_objectives": {
@@ -102,14 +106,18 @@
         "name": "Team Liquid Alienware",
         "acronym": "TLAW",
         "slug": "team-liquid",
-        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png",
+        "kills": 20,
+        "towers": 10
       },
       "red_team": {
         "id": "deep-cross-gaming",
         "name": "Relove Deep Cross Gaming",
         "acronym": "DCG",
         "slug": "deep-cross-gaming",
-        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png"
+        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png",
+        "kills": 14,
+        "towers": 3
       },
       "patch": "16.13.790.6961",
       "first_objectives": {
@@ -135,14 +143,18 @@
         "name": "Team Liquid Alienware",
         "acronym": "TLAW",
         "slug": "team-liquid",
-        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+        "image_url": "https://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png",
+        "kills": 17,
+        "towers": 7
       },
       "red_team": {
         "id": "deep-cross-gaming",
         "name": "Relove Deep Cross Gaming",
         "acronym": "DCG",
         "slug": "deep-cross-gaming",
-        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png"
+        "image_url": "https://static.lolesports.com/teams/1773832146741_LCP_DCG_Full_W.png",
+        "kills": 9,
+        "towers": 2
       },
       "patch": "16.13.790.6961",
       "first_objectives": {

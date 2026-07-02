@@ -1,0 +1,21 @@
+{
+  "match_id": 115570969745329263,
+  "game_id": "lol-game-115570969745329266",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": false,
+  "picks": {
+    "blue": [],
+    "red": []
+  },
+  "fetched_at": "2026-07-02T01:47:38Z",
+  "note": "Game stats not yet available. Re-run after the game is played or once Cito populates the /games/{id}/stats data.",
+  "winner_side": null,
+  "kills": {
+    "blue": 0,
+    "red": 0
+  },
+  "total_kills": 0
+}

@@ -11,6 +11,9 @@ Routes:
   POST /api/grade        -> settle a finished series (score vs truth)
   POST /api/grade-game   -> settle one finished game (score vs truth)
   POST /api/rebuild      -> regenerate data.json
+  GET  /api/champions    -> full champion roster (name+icon+aliases) for the manual BP editor
+  GET  /api/match-roster -> blue/red 5-man rosters (role+name) for a match slug
+  POST /api/save-bp      -> manually save picks into bp.json (manual BP editor)
 """
 
 from __future__ import annotations
@@ -233,6 +236,152 @@ def rebuild_site():
     from ..leaderboard import build_site
     payload = build_site.build()
     return {"ok": True, "matches": len(payload["history"]), "games": len(payload["game_history"])}
+
+
+# ================================ manual BP editor ================================
+
+@app.get("/api/champions")
+def api_champions():
+    """Full champion roster for the manual BP editor.
+
+    Each entry: {name, slug, image_url, big_image_url, aliases:[...]}. Aliases
+    are Chinese nicknames joined from repo-root champion_aliases.py. Disk-cached
+    in PandaScore's _pandascore_cache (24h TTL) + 5 min in-memory cache here.
+    Returns [] if PandaScore is unreachable (editor still opens, just iconless).
+    """
+    from . import champions as champ_mod
+    return champ_mod.get_champions_data()
+
+
+@app.get("/api/match-roster")
+def api_match_roster(slug: str):
+    """Blue/red 5-man rosters for a match, read from the on-disk context_pack.
+
+    Independent of the (unstable) game-stats BP API. Used by the manual BP
+    editor to know which player fills each role slot. Returns players in
+    canonical role order (top/jun/mid/adc/sup).
+    """
+    pack_path = cfg.MATCHES_DIR / slug / "context_pack.json"
+    if not pack_path.exists():
+        raise HTTPException(404, detail=f"context_pack not found for slug '{slug}'")
+    pack = json.loads(pack_path.read_text(encoding="utf-8"))
+    rosters = pack.get("rosters") or {}
+
+    def _side(side: str) -> dict:
+        block = rosters.get(side) or {}
+        team = block.get("team") or {}
+        players = block.get("players") or []
+        # Ensure canonical role order; the context_pack already stores
+        # canonical role keys, but re-sort defensively.
+        order = {"top": 0, "jun": 1, "mid": 2, "adc": 3, "sup": 4}
+        players = sorted(players, key=lambda p: order.get(p.get("role"), 99))
+        return {
+            "team": {
+                "name": team.get("name"),
+                "acronym": team.get("acronym"),
+                "image_url": team.get("image_url"),
+            },
+            "players": [{"role": p.get("role"), "name": p.get("name"),
+                         "id": p.get("id")} for p in players],
+            "available": bool(block.get("available", True)),
+        }
+
+    return {"blue": _side("blue"), "red": _side("red")}
+
+
+class SaveBPPick(BaseModel):
+    role: str
+    player: str | None = None
+    champion: str
+    spells: list[str] = []
+
+
+class SaveBPRequest(BaseModel):
+    # Cito/Riot ids are 18-digit — JS loses precision, so the UI sends a string.
+    # Accept either; FastAPI coerces numeric strings to int via the match lookup.
+    match_id: int
+    game_pos: int
+    blue: list[SaveBPPick]
+    red: list[SaveBPPick]
+
+
+@app.post("/api/save-bp")
+def save_bp(req: SaveBPRequest):
+    """Persist manually-picked champions into bp.json.
+
+    Writes to data/games/<slug>/g<pos>/bp.json — the SAME file the auto-BP
+    fetcher writes — preserving its existing non-pick fields (status/length/
+    winner/game_id). Sets bp_complete when both sides reach 5 picks, then
+    rebuilds data.json so the UI updates immediately. Does NOT auto-predict
+    (the user runs single-game analysis separately after saving).
+    """
+    from ..pipeline import collect as collect_mod
+    from ..adapters.cito import get_client
+    from ..pipeline import orchestrator as orch
+
+    try:
+        client = get_client()
+        match = collect_mod.fetch_fixture(req.match_id, client, refresh=False)
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(500, detail=f"无法加载比赛数据: {e}")
+
+    # Resolve the EXISTING match dir by fixture id — never re-derive the slug
+    # from the match object, because the league/team names in the freshly-fetched
+    # detail can differ from how the dir was originally created at scan time
+    # (e.g. "ReLove Deep Cross Gaming" vs "Deep Cross Gaming"), which would
+    # silently write to a brand-new, orphaned dir. _find_existing_match_dir is
+    # the same lookup fetch_fixture uses for exactly this reason.
+    existing_dir = collect_mod._find_existing_match_dir(req.match_id)
+    if existing_dir is None:
+        raise HTTPException(404, detail=f"找不到 match_id={req.match_id} 对应的比赛目录，请先扫描/预测该比赛。")
+    slug = existing_dir.name
+    gdir = cfg.game_dir(slug, req.game_pos)
+    bp_path = gdir / "bp.json"
+
+    # Find the game stub for game_id / status / length / winner preservation.
+    games = match.get("games") or []
+    game_stub = next((g for g in games if g.get("position") == req.game_pos), {})
+
+    # Keep whatever bp.json already holds (e.g. fetched_at, cached truth) and
+    # only overwrite picks + bp_complete + identifying fields.
+    existing: dict[str, Any] = {}
+    if bp_path.exists():
+        try:
+            existing = json.loads(bp_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing = {}
+
+    def _dump(picks: list[SaveBPPick]) -> list[dict]:
+        return [{"role": p.role, "player": p.player, "champion": p.champion,
+                 "spells": p.spells} for p in picks]
+
+    blue_list = _dump(req.blue)
+    red_list = _dump(req.red)
+    complete = len(blue_list) >= 5 and len(red_list) >= 5
+
+    bp = {
+        "match_id": match.get("id"),
+        "game_id": existing.get("game_id") or game_stub.get("id"),
+        "position": req.game_pos,
+        "status": existing.get("status") or game_stub.get("status"),
+        "length_sec": existing.get("length_sec", game_stub.get("length")),
+        "winner_id": existing.get("winner_id", (game_stub.get("winner") or {}).get("id")),
+        "bp_complete": complete,
+        "picks": {"blue": blue_list, "red": red_list},
+        "fetched_at": existing.get("fetched_at"),
+        "manual": True,   # mark this BP as hand-entered (auto-fetch overwrites it)
+    }
+    # Preserve any truth fields the grader may have mirrored in earlier.
+    for k in ("winner_side", "kills", "total_kills", "length_min"):
+        if k in existing:
+            bp[k] = existing[k]
+
+    bp_path.write_text(json.dumps(bp, ensure_ascii=False, indent=2), encoding="utf-8")
+    orch._maybe_rebuild_site()
+    return {
+        "ok": True, "bp_complete": complete, "site_rebuilt": True,
+        "blue_picks": blue_list, "red_picks": red_list,
+    }
 
 
 # ============================== betting advice ==============================

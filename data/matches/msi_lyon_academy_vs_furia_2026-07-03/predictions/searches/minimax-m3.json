@@ -1,0 +1,811 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "match",
+  "target_id": "msi_lyon_academy_vs_furia_2026-07-03",
+  "submitted_at": "2026-07-02T02:04:42.647345+00:00",
+  "total_calls": 12,
+  "searches": [
+    {
+      "query": "Lyon Academy vs FURIA MSI 2026 knockout prediction",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "北美LYON成为全球第七支锁定MSI参赛资格的队伍",
+          "content": "在今晨结束的LCS春季赛胜者组决赛的比赛中,LYON以3-0横扫常规赛头名C9挺进决赛,同时他们也成为全球第七支锁定MSI参赛资格的队伍｡目前各赛区锁定MSI参赛资格的队伍如下:LPL:TES(正赛)LEC:G2(正赛)､KC(入围赛)LCS:LYONLCP:TSW(正赛)､DCG(入围赛)CBLOL:FURIA(正赛)",
+          "link": "https://new.qq.com/rain/a/20260608A020KS00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "英雄联盟MSI 2026季中冠军赛11支参赛队伍及赛程确定",
+          "content": "五个主要赛区的一号种子队伍分别为:LPL赛区的BLG､LCK赛区的HLE､LEC赛区的G2､LCS赛区的LYON以及LCP赛区的TSW｡巴西CBLOL赛区的FURIA也作为一号种子参赛｡二号种子队伍分别为:LCK赛区的T1､LPL赛区的TES､LCS赛区的TL､LEC赛区的KC以及LCP赛区的DCG｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9246a30b39a42765",
+          "media": "企鹅号",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "印度上单又来了!LYON 3-0横扫C9挺进决赛,拿下MSI门票",
+          "content": "刚刚结束的LCS春季赛胜者组决赛中,LYON 3-0横扫C9,顺利挺进决赛｡这也意味着,LYON锁定了MSI的参赛资格,成为全球第七支确认参加MSI的队伍｡LYON阵容如下:上单Dhokla､打野Inspired､中单Saint､下路Berserker､辅助Isles｡",
+          "link": "https://new.qq.com/rain/a/20260608A0282100",
+          "media": "腾讯网",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "内讧不断却轻松夺冠?LYON零封TL捧杯",
+          "content": "6月15日,在2026年LCS春季赛决赛中,墨西哥战队LYON完全统治了赛场｡他们以干净利落的3-0横扫了满怀希望但未能如愿的TL,夺得队史首座LCS冠军奖杯｡在胜者组决赛以3-0横扫C9晋级决赛后,LYON就已经成功锁定了2026年季中冠军赛的名额｡然而,我看完决赛的第一局就觉得没有可能——双方双C的竞技状态完全不在一个档次,Inspired也能够在野区压制对手,对位领先了110刀｡稳健而从容的节奏是LYON在整个系列赛中取得胜利的关键｡第一局看起来TL似乎有机会拿下,因为LYON一度龟缩防守､试图稳住阵脚｡然而,TL显然没有意识到Saint今天状态火热｡这位韩国中单的阿卡丽以极其精准的走位在团战中穿梭,避免被对手锁定,并成功刺杀对方的核心输出｡到了第二局,TL似乎还在纠结上一局是怎么从手中溜走的｡LYON通过乐芙兰和孙悟空的中野组合持续施压,而TL未能抓住对手的失误发起反击｡尽管Josedeodo的嘉文四世三次抢下关键地图资源,为队伍保留了希望,但LYON始终牢牢掌控局势,顺利拿到赛点｡第三局LYON一鼓作气,从开场到结束完全主宰了比赛,加里奥､魔腾与兰博的组合撕碎了TL的后排｡尽管TL拿出了重做后的希瓦娜打野,却很难在资源团战中取得优势｡Saint前两局使用刺客英雄的出色",
+          "link": "https://new.qq.com/rain/a/20260615A08K5A00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-15"
+        },
+        {
+          "title": "印度神王又要来了!LYON零封C9打进MSI,G2力克KC拿下LEC冠军",
+          "content": "<p>北京时间今日凌晨,英雄联盟各大赛区春季赛收官战接连打响,两大MSI参赛名额尘埃落定!北美LCS赛区爆出重磅冷门,LYON以干净利落的3-0横扫豪门C9,率先锁定北美赛区MSI席位,成为本赛季北美第一支挺进季中冠军赛的队伍;与此同时,欧洲LEC赛区总决赛上演巅峰对决,G2 ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7626a26383842552",
+          "media": "企鹅号",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "Welcome  The Breaker Lab",
+          "content": "News Hannah Barsouk named a Goldwater Scholar -- Congrats Hannah! April 11, 2024 Ronald Breaker elected to American Academy of Microbiology February 15, 2024 Congrats to Seth Lyon for winning a ",
+          "link": "http://breaker.yale.edu/",
+          "media": "",
+          "publish_date": "2026-06-23"
+        },
+        {
+          "title": "WHO Academy",
+          "content": "Learn anywhere, any time Discover a vast collection of high-quality courses on essential health topics. The WHO Academy provides top-tier courses designed by learning experts, along with numerous ",
+          "link": "https://www.who.int/about/who-academy",
+          "media": "",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "Home  Journal of Geodesy  Springer Nature Link",
+          "content": "Continuation of Bulletin Géodésique and manuscripta geodaetica Publishing model : Hybrid Overview The Journal of Geodesy is an international journal concerned with the study of scientific problems of ",
+          "link": "https://www.springer.com/journal/190",
+          "media": "",
+          "publish_date": "2026-06-26"
+        },
+        {
+          "title": "Mine-vs-Rock-Prediction/Copy of sonar data.csv at main · ksy2912/Mine-vs-Rock-Prediction · GitHub",
+          "content": "Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   main Breadcrumbs Copy of sonar data.csv Copy path More file actions More file actions Latest commit History 85.7 K",
+          "link": "https://github.com/ksy2912/Mine-vs-Rock-Prediction/blob/main/Copy%2520of%2520sonar%2520data.csv",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "Home - European Academy of Paediatrics -",
+          "content": "Skip to content Latest News & Updates CEPAS 2026: See the Interactive Programme & Submit a Late Breaking Abstract! June 4, 2026 READ POST Children in the Current EU Health Policy: Advancing ",
+          "link": "https://www.eapaediatrics.eu/",
+          "media": "",
+          "publish_date": "2026-06-30"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:01:43Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 results CBLOL champion",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "FURIA 3-1力克LOS夺得巴西赛区第一赛段冠军,晋级MSI",
+          "content": "在稍早结束的CBLOL(巴西赛区)第一赛段总决赛中,FURIA 3-1击败了LOS,夺得了赛区第一赛段的冠军,成功晋级MSI季中冠军杯｡至此FUR战队将代表CBLOL赛区,成为全球第5支确定获得2026MSI参赛资格的战队!",
+          "link": "https://new.qq.com/rain/a/20260607A01MVT00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-07"
+        },
+        {
+          "title": "GitHub - marcoaacoliveira/checker_lol · GitHub",
+          "content": "  master Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 21 Commits 21 Commits spec spec     .gitignore .gitignore     .rspec .rspec     Gemfile Gemfile     Gemfile.lock Gemfile.lock     README.rdoc README.rdoc     champion.rb champion.rb     checker.rb checker.rb     config.rb config.rb     View all files Repository files navigation Esse projeto visa facilitar o desenvolvimento de app com a API do League of Legends. Trabalhando numa classe as principais funções utilizadas, facilitando ao desenvolvedor o uso da mes",
+          "link": "https://github.com/marcoantoniooliveira/checker_lol",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "GitHub - chanseul01/RecycleLoRA: [CVPR 2026 Findings] RecycleLoRA: Rank-Revealing QR-Based Dual-LoRA Subspace Adaptation for Domain Generalized",
+          "content": "chanseul01/RecycleLoRA   main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 8 Commits 8 Commits README.md README.md     View all files Repository files navigation No releases published Uh oh! There was an error while loading. Please reload this page . Uh oh! There was an error while loading. Please reload this page . Footer © 2026 GitHub, Inc. Footer navigation Manage cookies Do not share my personal information You can’t perform that action at this time.",
+          "link": "https://github.com/chanseul01/RecycleLoRA",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "LOLBAS/OtherMSBinaries/Msxsl.md at master · WiredTurtle/LOLBAS · GitHub",
+          "content": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   master Breadcrumbs Msxsl.md Copy path More file actions More file actions Latest commit History 10 line",
+          "link": "https://github.com/WiredTurtle/LOLBAS/blob/master/OtherMSBinaries/Msxsl.md",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "LOLBAS/OSLibraries/Shdocvw.md at master · EgeBalci/LOLBAS · GitHub",
+          "content": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   master Breadcrumbs Shdocvw.md Copy path More file actions More file actions Latest commit History 29 li",
+          "link": "https://github.com/EgeBalci/LOLBAS/blob/master/OSLibraries/Shdocvw.md",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "GitHub - m4rcel-lol/bwfall: Binary Waterfall for Linux [Main support for Arch Linux & Alpine Linux] · GitHub",
+          "content": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 14 Commits 14 Commits aur-bwfall aur-bwfall     man man     pkg pkg     src src     tests tests     .SRCINFO .SRCINFO     00_START_HERE.md 00_START_HERE.md     BUILD_COMPLETE.md BUILD_COMPLETE.md     CHANGELOG.md CHANGELOG.md     CONTRIBUTING.md CONTRIBUTING.md     DELIVERY_SUMMARY.md DELIVERY_SUMMARY.md     FINAL_CHECKLIST.md FINAL_CHECKLIST.md     GITHUB_SETUP.md GITHUB_SETUP.md     LICENSE LICENSE     Makefile Makefile     PKGBUILD PKGBUILD     PROJECT_SUMMA",
+          "link": "https://github.com/m4rcel-lol/bwfall",
+          "media": "",
+          "publish_date": "2026-06-07"
+        },
+        {
+          "title": "GitHub - luizfelipe9627/login-lol: Criado a área de login do jogo League of Legends da empresa Riot Games. · GitHub",
+          "content": "  main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit   History 4 Commits 4 Commits src/ assets src/ assets     LICENSE.md LICENSE.md     README.md README.md     index.html index.html     View all files Repository files navigation Login - League of Legends 📄 Descrição League of Legends é um jogo eletrônico do gênero multiplayer online battle arena desenvolvido e publicado pela Riot Games. Foi lançado em outubro de 2009 para Microsoft Windows e em março de 2013 para macOS. 📑 Observação Projeto criado com o intuito de passar ",
+          "link": "https://github.com/luizfelipe9627/login-lol",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "【保姆级教程】2026最新:使用 LoRA 高效微调 Qwen3.6-35B 大模型(基于 Unsloth / Hugging Face)_qwen36微调-CSDN博客",
+          "content": "随着阿里通义千问 Qwen3.6 家族的开源。Qwen3.6-35B 凭借其在逻辑推理、代码生成及中文语境下的卓越表现,成为了企业级应用和个人开发者眼中的“香饽饽”。35B 的参数量在性能与算力成本之间取得了完美的平衡。 然而,如何用有限的算力对其进行个性化微调,依然是不少开发者面临的痛点。本文将带大家通过 **PEFT (LoRA)** 技术,在单卡/双卡消费级显卡上实现 Qwen3.6-35B 的全流程微调。**本文提供全套可运行代码,建议收藏备用!** 一、环境准备与依赖安装 在开始之前,我们需要配置好标准的深度学习环境。建议使用 Python 3.10+ 和PyTorch 2.2+。 执行以下命令安装核心依赖: ```bash pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 pip install transformers datasets accelerate peft trl bitsandbytes ``` > 注意: 为了让 35B 模型在消费级显卡(如RTX 4090 或A100 40G)上运行,我们必须引入 bitsandbytes 进行 4-bit 或8-bit 量化加载。 > 二、数据集准备(以JSONL 格式为例) 为了让",
+          "link": "https://blog.csdn.net/lzj781210/article/details/161440678",
+          "media": "",
+          "publish_date": "2026-06-26"
+        },
+        {
+          "title": "Best AI Fine-Tuning Platforms for Chromebook of 2026 - Reviews & Comparison",
+          "content": "Compare the Top AI Fine-Tuning Platforms for Chromebook as of June 2026 Sort By: Sponsored What are AI Fine-Tuning Platforms for Chromebook? AI fine-tuning platforms are tools used to improve the performance of artificial intelligence models. These platforms provide a framework for training and optimizing AI algorithms, allowing them to better understand and respond to data. They offer a variety of features such as automated hyperparameter tuning and data augmentation techniques. Users can also visualize the training process and monitor the model's accuracy over time. Overall, these platforms ",
+          "link": "https://sourceforge.net/software/ai-fine-tuning/chromebook/",
+          "media": "",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "Central Córdoba (Rosario) 2026 Results - ESPN",
+          "content": "Argentine Primera C News France vs Northern Ireland: Kick-off time, how to watch, stats, team news Everything you need to know ahead of France's international friendly against Northern Ireland on Monday. Simulating the World Cup: Who did EA predict as winners? How did USMNT get on? EA has previously simulated the World Cup hundreds of times using its game and correctly predicted the winners for the past four World Cups. Gordon Strachan's iconic celebration? Archie Gemmill's solo stunner? ESPN's Mark Donaldson ranks Scotland's greatest World Cup moments. Put your football knowledge to the test ",
+          "link": "https://www.espn.com/soccer/team/results/_/id/10148/central%2520c%25C3%2583%25C2%2583%25C3%2582%25C2%2583%25C3%2583%25C2%2582%25C3%2582%25C2%2583%25C3%2583%25C2%2583%25C3%2582%25C2%2582%25C3%2583%25C2%2582%25C3%2582%25C2%2583%25C3%2583%25C2%2583%25C3%2582%25C2%2583%25C3%2583%25C2%2582%25C3%2582%25C2%2582%25C3%2583%25C2%2583%25C3%2582%25C2%2582%25C3%2583%25C2%2582%25C3%2582%25C2%2583%25C3%2583%25C2%2583%25C3%2582%25C2%2583%25C3%2583%25C2%2582%25C3%2582%25C2%2583%25C3%2583%25C2%2583%25C3%2582%25C2%2582%25C3%2583%25C2%2582%25C3%2582%25C2%2582%25C3%2583%25C2%2583%25C3%2582%25C2%2583%25C3%2583%25C2%2582%25C3%2582%25C2%2582%25C3%2583%25C2%2583%25C3%2582%25C2%2582%25C3%2583%25C2%2582%25C3%2582%25C2%25B3rdoba%2520de%2520rosario",
+          "media": "",
+          "publish_date": "2026-06-07"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:01:47Z"
+    },
+    {
+      "query": "Lyon Academy LCS 2026 summer roster Berserker Inspired",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "2026美本Top30学校怎么申请?申请路径解析与艺术爬藤差异化策略",
+          "content": "<p>\"美本前30学校怎么申请\"是近年留学咨询中最常被提及的问题之一｡美国本科前30(U.S. News National Universities Top 30)包含八所常春藤盟校及斯坦福､麻省理工､芝加哥､西北､约翰霍普金斯､范德堡､莱斯､圣母､加州大学伯克利/洛杉矶､南加州､卡内基梅隆､密歇根安娜堡､弗吉尼亚､北卡教堂山､埃默里､乔治城､纽约大学等院校｡这些学校采用Holistic ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1576a33a84492052",
+          "media": "企鹅号",
+          "publish_date": "2026-06-18"
+        },
+        {
+          "title": "Home",
+          "content": "member events dining + events Athletic Center inquire Academy Membership Golf ABOUT Member Login > The Blog dining + events Athletic Center inquire Academy Membership Golf ABOUT Member Login > ",
+          "link": "http://www.calabasasgolf.com/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "Raidercast - We Love The Mighty Canberra Raiders",
+          "content": "Skip to content BREAKING VIDEO: This basically turned into Karaoke 😂 VIDEO: Sights and sounds of the 2026 team photo VIDEO: Raiders Academy sustains success in 2026 'This season's on the line': ",
+          "link": "http://raidercast.com.au/",
+          "media": "",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "The Philly Soccer Page – The Ball is Round. The Place is Philly.",
+          "content": "Analysis Philadelphia Union II Union II Midseason Roster Review 2026: Goalkeepers and Defenders Read More Analysis Philadelphia Union II Union II Midseason Roster Review 2026: Midfielders Read More ",
+          "link": "https://phillysoccerpage.net/",
+          "media": "",
+          "publish_date": "2026-06-30"
+        },
+        {
+          "title": "Best NoRedInk Alternatives & Competitors",
+          "content": "1 Lumio SMART Technologies Lumio is a web-based learning platform that offers more ways to effortlessly make learning fun and engaging on student devices.Whether educators have PDFs, Google Slides, ",
+          "link": "https://sourceforge.net/software/product/NoRedInk/alternatives",
+          "media": "",
+          "publish_date": "2026-06-02"
+        },
+        {
+          "title": "Best Home Care Software in South America of 2026 - Reviews & Comparison",
+          "content": "1 Aaniie Aaniie Care Smart, Intuitive, and Affordable – A Complete Platform for Home Care Providers. See why more providers are choosing Aaniie (formerly Smartcare) for managing home care services. ",
+          "link": "https://sourceforge.net/software/home-care/south-america/",
+          "media": "",
+          "publish_date": "2026-06-10"
+        },
+        {
+          "title": "Cambridge Summer Courses 2026 - Reach Cambridge",
+          "content": "Dreaming of a summer abroad? Experience the magic of Cambridge this summer Join students aged 14-18 from around the world for an unforgettable summer at Cambridge. Tailored content – Expert-led ",
+          "link": "http://www.reachcambridge.com/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "Ireland Summer Games 2026  The Special Olympics",
+          "content": "// Spotlight - Opening Ceremony Celebrations Video Watch Video Your Impact It was truly a night to remember as the President of Ireland, Catherine Connelly officially opened the Ireland Summer Games, ",
+          "link": "https://www.irelandgames.ie/",
+          "media": "",
+          "publish_date": "2026-06-30"
+        },
+        {
+          "title": "Cian Medley 2025-26 Stats per Game - NCAAM - ESPN",
+          "content": "Game Log 2025-26 Season Glossary 3P% : 3-Point Field Goal Percentage 3PT : 3-Point Field Goals Made-Attempted AST : Assists BLK : Blocks FG : Field Goals Made-Attempted FG% : Field Goal Percentage FT ",
+          "link": "https://www.espn.com/mens-college-basketball/player/gamelog/_/id/5174637/cian-medley",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "2026-2027申请季剑桥大学各学院面试汇总",
+          "content": "近期,剑桥大学公布了2026-2027申请季各学院的面试形式和时间,其中Churchill College､Selwyn College､Emmanuel College､King's College､Trinity College这五个学院要求全部学生都必须前往剑桥参加线下面试,时间集中在2026年12月的前三周｡其余大多数学院将继续接受线上或线下模式进行面试｡拿到面邀的学生,基本上要参加1~2场面试,每场面试时间为35分钟至1小时不等,少部分学生要求参加3~4场面试｡如果进入winter pool,一般会要求多参加一场额外面试｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_0276a447f3309252",
+          "media": "企鹅号",
+          "publish_date": "2026-07-01"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:01:50Z"
+    },
+    {
+      "query": "MSI 2026 Lyon Academy FURIA knockout stage",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "英雄联盟MSI 2026季中冠军赛11支参赛队伍及赛程确定",
+          "content": "五个主要赛区的一号种子队伍分别为:LPL赛区的BLG､LCK赛区的HLE､LEC赛区的G2､LCS赛区的LYON以及LCP赛区的TSW｡巴西CBLOL赛区的FURIA也作为一号种子参赛｡二号种子队伍分别为:LCK赛区的T1､LPL赛区的TES､LCS赛区的TL､LEC赛区的KC以及LCP赛区的DCG｡入围赛定于6月28日开打,采用双败BO5赛制｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9246a30b39a42765",
+          "media": "企鹅号",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "巴西FURIA 3-1 LOS:狗头打野赛点局翻盘,FURIA连续进MSI",
+          "content": "巴西CBLOL今晨结束第二赛段决赛日比赛争夺,FURIA在第四局一度陷入劣势的情况下依靠打野狗头三杀一波翻盘,最终以3-1击败LOS拿下第二赛段冠军,同时锁定MSI参赛资格｡",
+          "link": "https://new.qq.com/rain/a/20260607A01M7W00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-07"
+        },
+        {
+          "title": "2026英雄联盟季中冠军赛赛程表_msi2026赛程时间表_一聚教程网",
+          "content": "英雄联盟2024年的mis季中冠军赛已经到了八强的时候,入围八强的八支队伍分别是GeN、BLG、TL、G2、T1、TES、PSG、FNC,本次的八强依然采用了bo5的打法,用户们可以在本站了解有关本次季中冠军赛的赛程。 英雄联盟2024季中冠军赛赛程表 2024英雄联盟赛程时间安排 入围赛:5月1日-5月5日 胜败分组赛:5月7日-12日,5月14日-18日 决赛:5月19日 2024英雄联盟入围赛晋级规则 1、8支战队参加,分为A、B两个小组,每个小组四支战队 2、各组内进行BO3对局,G5、G6、G9、G10比赛中获胜的四支战队晋级小组赛 晋级示意图: 以上就是2024英雄联盟季中冠军赛赛程表的全部内容了,文章版权归原作者所有,如有侵权,请及时联系本站删除,更多相关msi2024赛程表时间的攻略资讯,请关注收藏西西软件下载站。",
+          "link": "https://www.111cn.net/new/556941.htm",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "2026MSI",
+          "content": "老实憨厚的笑笑 楚钧艾克 赵俊日 4K直播间 网络不给力 请点击此处重试 只看LPL战队赛程 刷新 我的预测 分 T1 06-29 11:00 KC 数据 回放 入围赛 分 TLAW 06-29 16:00 DCG 数据 回放 入围赛 分 TLAW 06-30 16:00 KC 数据 回放 入围赛 分 T1 07-01 16:00 TLAW 数据 回放 淘汰赛 HLE 07-03 11:00 TSW 订阅 预测 淘汰赛 G2 07-03 16:00 TES 订阅 预测 淘汰赛 LYON 07-04 11:00 FUR 订阅 预测 淘汰赛 BLG 07-04 16:00 T1 订阅 预测 入围赛 6月28日11:00 数据 回放 T1 TLAW 入围赛 6月28日16:00 数据 回放 KC DCG 入围赛 6月29日16:00 数据 回放 TLAW DCG 入围赛 6月29日11:00 数据 回放 T1 入围赛 6月30日16:00 数据 回放 TLAW 入围赛 7月01日16:00 数据 回放 T1 TLAW 刷新 每日任务-观看赛事直播间 仅观看【哔哩哔哩英雄联盟赛事】直播间可获取积分 去观看 观看官方赛事直播10分钟 积分+2 观看官方赛事直播20分钟 积分+2 观看官方赛事直播30分钟 积分+2 每日任务-观看2026英雄联盟MSI稿件 仅观看6月28日0点后发布的≥15s",
+          "link": "https://live.bilibili.com/6?spm_id_from=333.337.0.0",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "Locking Studs MS21260 On Lexco Cable Manufacturers",
+          "content": "Home | About Us | Products | Cable Fittings | Cable Hardware | Assemblies | Services | Contact Us Product Catalog Search Catalog By Keyword By Cross Reference By Item # All Categories Locking Studs MS21260 Request for Quote 0 Items Check up to five results to perform an action. larger image Locking Stud MS21260 (AN 669) (NAS 650) Download PDF Download PDF Printable Page Email This Page Save To Favorites Please wait… MORE IMAGES · DOWNLOADS Video - Threaded Studs & Plugs Guide to Custom Threaded Studs or Plugs Results Per Page : 25 50 100 200 Results 1 - 42 of 42 1 Item # To Fit Wire Rope Dia (",
+          "link": "https://catalog.lexcocable.com/viewitems/all-categories-military-specifications/locking-studs?plpver=10&sortid=3838&measuresortid=0&pagesize=200&pagenum=1",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "msi-dataplane/CODE_OF_CONDUCT.md at main · Azure/msi-dataplane · GitHub",
+          "content": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   main Breadcrumbs CODE_OF_CONDUCT.md Copy path More file actions More file actions Latest commit History",
+          "link": "https://github.com/Azure/msi-dataplane/blob/main/CODE_OF_CONDUCT.md",
+          "media": "",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "2026算法应用主题赛初赛-小学4-6组(c)试卷(含答案详细解析)_c2026年5月信息学奥赛小学组初赛答案-CSDN博客",
+          "content": "一、单选题(10 题,每题 5 分,共50 分) 第1题(5 分) 执行for(int k=5; k>=1; k--) { cout << k; }后,屏幕输出为? A. 5432 B. 01234 C. 54321 D. 12345 答案:C解析:循环从k=5开始,每次减1,直到k=1停止,依次输出 5、4、3、2、1。 第2题(5 分) 如果一个正整数 a,既是 8 的倍数,又是 24 的约数,它的 C++ 表达式应该如何表示? A. 8 % a == 0 && 24 % a == 0; B. a % 8 == 0 && 24 % a == 0; C. 8 % a == 0 && a % 24 == 0; D. a / 8 == 0 && 24 / 8 == 0; 答案:B解析:a是8的倍数 → a%8==0;a是24的约数 → 24%a==0,用&&连接。 第3题(5 分) 在C++ 中,变量char grade = 'A';中,grade 存储的数据类型是? A. int B. double C. char D. bool 答案:C解析:char是字符类型,专门存储单个字符(如字母、符号)。 第4题(5 分) 执行代码int a; cin >> a;时,若从键盘输入 50 后按回车,变量 a 的值为? A. “50” B. 50 C. 0 D. ‘5’ 答案:B解析:int",
+          "link": "https://blog.csdn.net/Sinsa110/article/details/161371132",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "VS2026  C 游戏服务器集群编译部署实战(14 个组件完整流程)_vs2026 umdf 编译 msb406-CSDN博客",
+          "content": "本文详细介绍在 Windows 环境下使用 Visual Studio 2026 编译和部署 C++ 游戏服务器集群的完整流程。涵盖环境配置、MSBuild 命令行编译、依赖问题排查、多服务器组件启动等核心环节,为游戏服务器开发者提供一套可落地的工程化方案。一、前言 在大型多人在线游戏(MMO)架构中,服务器集群通常由多个独立的服务组件构成,包括协调服务、登录服务、游戏服务、比赛服务、聊天服务等。如何高效地编译、部署和管理这些组件,是每个游戏服务器团队必须面对的工程挑战。 本文以 **PlatformServer** 项目为例,演示如何在 **Windows + Visual Studio 2026** 环境下,完成包含 **14 个服务器组件** 的游戏服务器集群的编译与部署。项目采用纯 C++ 开发,涉及 MFC、共享内存、网络通信等核心技术。二、项目架构概览 ### 2.1 服务器组件列表 PlatformServer 解决方案包含以下核心组件: | 组件名称 | 输出文件 | 功能描述 协调服务器 | Correspond.exe | 服务注册与发现 | | 登录服务器 | LogonServer.exe | 用户认证 | | 游戏服务器 | GameServer.exe | 核心游戏逻辑 | | 比赛服务 | MatchService.dll | 比赛房间管理 | | 聊",
+          "link": "https://blog.csdn.net/fittec/article/details/158887053",
+          "media": "",
+          "publish_date": "2026-06-29"
+        },
+        {
+          "title": "2026MSI",
+          "content": "老实憨厚的笑笑 楚钧艾克 赵俊日 4K直播间 哔哩哔哩英雄联盟赛事 3707.0万人气 72.5 万点赞 3707.0万人气 72.5 万点赞 G 更多设置 blg不打下路的, blg表演赛罢了 blg一号种子十六强太厉害了 我想起了开心的事情,24msi [x] 画面异常?切换解码策略试试 默认 AV1 HEVC AVC 播放器日志信息 显示日志 复制日志 下载日志 视频统计信息 Room Player 3.11.3-508387df Copyright bilibili 2026 关闭 bilibili 击杀纳什男爵 • T1 击杀纳什男爵 • T1 击杀山脉亚龙 • T1 击杀山脉亚龙 • T1 击杀纳什男爵 • T1 击杀纳什男爵 • T1 团灭对手 • T1 团灭对手 • T1 开始 开始 第一滴血 • T1 第一滴血 • T1 击杀山脉亚龙 • T1 击杀山脉亚龙 • T1 击杀虚空巢虫 • T1 击杀虚空巢虫 • T1 击杀云端亚龙 • T1 击杀云端亚龙 • T1 第一座塔 • T1 第一座塔 • T1 击杀炼金科技亚龙 • TLAW 击杀炼金科技亚龙 • TLAW 五杀 • T1 五杀 • T1 点击取消静音 选手评分 BLG加油 10电池 AL加油 10电池 WBG加油 10电池 IG加油 10电池 开球 1电池 人气票 1电池 退钱 99电池 心动盲盒 150",
+          "link": "https://live.bilibili.com/6?live_from=81001",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "Article Metrics  MicroRNA-216a (miRNA-216a); miRNA-217  Science-Business eXchange  Springer Nature Link",
+          "content": "Your privacy, your choice We use essential cookies to make sure the site can function. We also use optional cookies for advertising, personalisation of content, usage analysis, and social media, as well as to allow video information to be shared for both marketing, analytics and editorial purposes. By accepting optional cookies, you consent to the processing of your personal data - including transfers to third parties. Some third parties are outside of the European Economic Area, with varying standards of data protection. Manage preferences for further information and to change your choices. A",
+          "link": "https://link.springer.com/article/10.1038/scibx.2009.1021/metrics",
+          "media": "",
+          "publish_date": "2026-06-17"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:01:59Z"
+    },
+    {
+      "query": "LYON Dhokla Saint Mitir roster change 2026",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "Lynndyl Ramadan Timing 2026 Calendar - Sehri and Iftar Timetable",
+          "content": "Ramadan calendar 2026 Lynndyl depends on today Sehri timing Lynndyl and today iftar timing Lynndyl for the complete month of Ramadan. Ramadan 2026 starts on Feb 19, 2026 and ends on Mar 20, 2026 in Lynndyl. You can see the daily Sehri timing in Lynndyl and iftar time Lynndyl in Ramzan at UrduPoint. However, today Sehri timing in Lynndyl is 06:29 AM, and today iftar timing Lynndyl is 10:53 PM as on Jun 04, 2026 (18th Dhu l-Hidjdja 1447). Sehri and Iftar Timing in Lynndyl Today DATE SEHRI IFTAR Jun 04, 2026 06:29 AM 10:53 PM Sehri timing in Lynndyl today, on Jun 04, 2026 (18th Dhu l-Hidjdja 1447",
+          "link": "https://www.urdupoint.com/islam/lynndyl-ramadan-calendar-sehar-aftar-timing.html",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "BREAKING CHANGE: box all webhook variants to reduce clone stack usage (#794) · arlyon/async-stripe@560d7a2 · GitHub",
+          "content": "Appearance settings Platform APPLICATION SECURITY Solutions BY COMPANY SIZE Resources EXPLORE BY TOPIC SUPPORT & SERVICES Open Source COMMUNITY REPOSITORIES Enterprise ENTERPRISE SOLUTIONS AVAILABLE ADD-ONS Search or jump to... Provide feedback Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Relo",
+          "link": "https://github.com/arlyon/async-stripe/actions/runs/19641450531/workflow",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "Worldskillsireland",
+          "content": "Skip to content Facebook Twitter Instagram Linkedin REGISTER TO ATTEND WorldSkills 2026 Skills. Change. Lives 16-18 September 2026 | RDS Simmonscourt REGISTER TO ATTEND WORLDSKILLS 2026 WORLDSKILLS IRELAND 2025 HIGHLIGHTS WHO ARE WORLDSKILLS IRELAND Worldskills Ireland is a partne Times Higher Options event again. find out more Supported by: 10th – 15th September 2024 Location: Lyon, France WorldSkills Iyon 2024 Detail 25th – 27th September 2024 Location: RDS Simmonscourt, Dubementor] Elementor: Used by the website's WordPress theme. Allows the website owner to implement or change the site's c",
+          "link": "https://worldskillsireland.ie/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "Cristian's Homepage",
+          "content": "Scientific publications S. K. Khadka, S. Bayhan, R. Holz, and C. Hesselman, \"Detecting and Characterizing Exposed BGP Routers\" , Traffic Measurements and Analysis conference (TMA2026), Delft, the Netherlands, June-July 2026 [PDF] S. Kastanakis, S. K. Khadka, E. Jaw, and C. Hesselman, \"Critical BGP Prefixes: A Measurement-based Investigation of Critical Infrastructure Security\" , IOCRCI Workshop, IFIP Networking 2026 Conference, Lugano, Switzerland, May 2026 [PDF] P. Huppert, M. Müller, T. Wabeke, C. Hesselman, P.-T. de Boer, and R. Holz, \"Zone Scanninurefor Enriching Networked Interactive Mult",
+          "link": "https://hesselman.net/",
+          "media": "",
+          "publish_date": "2026-06-07"
+        },
+        {
+          "title": "Home - LyonHeart Equine Assisted Learning",
+          "content": "Break through educational, emotional, social, and behavioral barriers by interacting with horses. Learn How What We Offer Through group and one-on-one sessions interacting with horses and ponies while completing on-the-ground activities (no riding), we can help develop motivation, confidence, critical thinking, communication and leadership skills, as well as work to overcome depression, anxiety, behavioral problems, educational challenges and much more.  When you are ready: call us to schedule a complimentary 30-minute \"Meet the Herd\". Group Programs HorsePowered Reading * Math * Life Skills *",
+          "link": "https://www.lyonheartequinelearning.org/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "Le Chaudron",
+          "content": "Derniers sujets » Sup ? par white-banshee Lun 25 Mai - 11:58 » formation de l'école européenne par Angegrr Ven 15 Mai - 22:02 » l'onguent de soucis (antiseptique cicatrisant) par louise Mer 11 Mar - 14:41 » l'école lyonnaise des plantes médicinales par michele52 Sam 13 Sep - 11:17 » pommade par arwen Jeu 11 Sep - 18:07 Navigation Portail Index Membres Profil FAQ Rechercher formation de l'école européenne Dim 18 Mar - 19:42 par Dounez Commentaires : 20 l'école lyonnaise des plantes médicinales Dim 28 Mai - 21:36 par plantophile voila une école en france qui fournit des cours d'herboristerie, so",
+          "link": "https://le-chaudron.1fr1.net/",
+          "media": "",
+          "publish_date": "2026-06-20"
+        },
+        {
+          "title": "Films Boutique",
+          "content": "The Golden Age Cannes 2026 Classics Tin Castle Cannes 2026 Critics' Week Competition Soumsoum, The Night of the Stars Berlinale 2026 Competition FIPRESCI Award Berlinale 2026 Sydney FF 2026 The President's Cake Cannes 2025 Directors’ Fortnight Cannes 2025 People's Choice Award Cannes y Pieter-Jan De Pue 2026 - Belgium/Netherlands/Germany/Sweden - Documentary In Eastern Ukraine, childhood neighbors find their lives violently derailed by a shifting frontline. Natasha, a promising bo, opens a new chapter in the life of the two young men immersed in love and desire, and the will to change the stat",
+          "link": "https://www.filmsboutique.com/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "Programme - Le Complexe café-théâtre de Lyon",
+          "content": "Aller au contenu Programme aujourd'hui - mardi 30 juin 2026 Mon héros 20:30 Salle du Haut En savoir + Réserver Salle Climatisée L'OPEN MIC en ESPAGNOL ! 20:30 Salle du Bas En savoir + Réserver Salle Climatisée demain - mercredi 1 juillet 2026 Mars ou crève mercredi 1 juillet 20:30 Salle du Haut En savoir + Réserver Salle Climatisée Closu dire) mercredi 1 juillet 20:30 Salle du Bas En savoir + Réserver Salle Climatisée jeudi 2 juillet 2026 LE COMPLEXE COMEDY CLUB - Un plateau d'humoristes ! jeudi 2 juillet 20:30 Salle du Bas En savoi 🇧🇫 Burkina Faso +226 🇧🇬 Bulgaria +359 🇧🇭 Bahrain +973 🇧🇮 Buru",
+          "link": "https://www.lecomplexelyon.com/",
+          "media": "",
+          "publish_date": "2026-06-30"
+        },
+        {
+          "title": "Home - Districlass Médical",
+          "content": "Entreprise Documentations Produits Partenariats Agenda Contact fr en L'expérience au service de la santé Conception, fabrication, distribution de dispositifs médicaux implantables. En savoir + Nos produits Districlass médical SA, société Française et indépendante, est l’un des leaders de la chambre implantable en Europe, certifié sous le Règlement (UE) 2017/745 , et spécialiste du matériel médicochirurgical dans le traitement de chimiothérapie. Districlass recherche des sociétés de distribution de matériel médical, dans l’objectif d’un partenariat de commercialisation de notre gamme de chambre",
+          "link": "https://districlass.com/",
+          "media": "",
+          "publish_date": "2026-06-26"
+        },
+        {
+          "title": "INTERCUT 2026 - La 15e édition des Rencontres Internationales de l’usinage",
+          "content": "La 15è édition des Rencontres Internationales de l’Usinage est organisée par le Cetim et le consortium Intercut Network* les 9 et 10 décembre sur le site de Senlis. Intercut est le rendez-vous de tous les professionnels de l’usinage. Des conférences de haut niveau afin d’enrichir sa veille technologique, des ateliers de démonstrations techniques, un espace d’exposition de partenaires industriels et des points de rencontre favorisant les échanges, seront proposés aux visiteurs. Durant 2 jours, les participants pourront appréhender de manière concrète des opérations, dispositifs ou procédés inno",
+          "link": "https://www.intercut-expo.com/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:02:02Z"
+    },
+    {
+      "query": "\"Lyon Academy\" FURIA MSI 2026 match preview",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 1,
+      "results": [
+        {
+          "title": "印度神王又要来了！LYON零封C9打进MSI，G2力克KC拿下LEC冠军",
+          "content": "北京时间今日凌晨，英雄联盟各大赛区春季赛收官战接连打响，两大MSI参赛名额尘埃落定！北美LCS赛区爆出重磅冷门，LYON以干净利落的3-0横扫豪门C9，率先锁定北美赛区MSI席位，成为本赛季北美第一支挺进季中冠军赛的队伍；与此同时，欧洲LEC赛区总决赛上演巅峰对决，G2 Esports苦战五局，以3-2险胜KC战队，再度登顶联赛冠军，成功斩获LEC赛区MSI一号种子参赛资格，两大老牌赛区的新老强者顺利会师MSI舞台。 本次LCS胜者组决赛堪称颠覆性对决，面对常规赛劲旅C9，LYON全员状态拉满，全程掌控比赛节奏，没有给对手任何反扑机会，以碾压之势完成零封爆冷，强势晋级LCS春季赛总决赛的同时，稳稳拿下北美赛区首张MSI门票，缔造了本赛季LCS赛场最大惊喜之一。 本场系列赛的绝对功臣当属LYON上单Dhokla，这名实力派上单打出了统治级表现，三局比赛全程稳定发挥，攻防两端兼顾，合计交出14杀9死30助攻的华丽数据，凭借无可替代的赛场作用，毫无悬念斩获系列赛MVP，成为队伍零封夺冠、晋级MSI的核心支柱。 Dhokla的亮眼爆发并非偶然，这名上单早已在世界赛场证明过自己。在此前的全球总决赛中，Dhokla就曾凭借极致的对线操作，成功单杀当时状态火热的BLG上单Bin，一战扬名，让全球观众记住了这名北美实力派上单。如果BLG能顺利晋级本届MSI，这两位上单选手有望再次交手！ 大洋彼岸的",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-08"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:02:04Z"
+    },
+    {
+      "query": "LYON LCS 2026 MSI roster changes mid swap",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "印度上单又来了!LYON 3-0横扫C9挺进决赛,拿下MSI门票",
+          "content": "刚刚结束的LCS春季赛胜者组决赛中,LYON 3-0横扫C9,顺利挺进决赛｡这也意味着,LYON锁定了MSI的参赛资格,成为全球第七支确认参加MSI的队伍｡LYON阵容如下:上单Dhokla､打野Inspired､中单Saint､下路Berserker､辅助Isles｡",
+          "link": "https://new.qq.com/rain/a/20260608A0282100",
+          "media": "腾讯网",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "内讧不断却轻松夺冠?LYON零封TL捧杯",
+          "content": "6月15日,在2026年LCS春季赛决赛中,墨西哥战队LYON完全统治了赛场｡在胜者组决赛以3-0横扫C9晋级决赛后,LYON就已经成功锁定了2026年季中冠军赛的名额｡这次击败TL夺冠后,他们将确保获得MSI淘汰赛阶段的名额,届时可能面对LPL赛区的BLG和TES､LCK赛区的HLE以及LEC赛区的G2等强队｡",
+          "link": "https://new.qq.com/rain/a/20260615A08K5A00",
+          "media": "腾讯网",
+          "publish_date": "2026-06-15"
+        },
+        {
+          "title": "内讧不断却轻松夺冠?LYON零封TL捧杯",
+          "content": "<p>毫无疑问,LYON是目前《英雄联盟》北美最强的战队,因为他们拥有野王Inspired｡6月15日,在2026年LCS春季赛决赛中,墨西哥战队LYON完全统治了赛场｡他们以干净利落的3-0横扫了满怀希望但未能如愿的TL,夺得队史首座LCS冠军奖杯｡</p><p>这也是继3月赢得LCS季前赛冠军后,LYON连续第二次捧起联赛冠军奖杯｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3226a2fdbdf77352",
+          "media": "企鹅号",
+          "publish_date": "2026-06-15"
+        },
+        {
+          "title": "LCS的衰落不只因为成绩,而是失去灵魂",
+          "content": "<p>2026年《英雄联盟》北美LCS联赛于6月15日落下帷幕,LYON在决赛中击败TL,成功夺冠｡然而,据电竞数据网站Esports Charts统计,本届LCS春季赛的峰值观众数仅为183,152人,创下北美LCS赛事的历史新低｡这已是LCS连续第二个赛季未能突破20万峰值观众大关,而2026年举办的两项LCS赛事,目前均位列联赛近期观赛排名的末席｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5966a31399b13552",
+          "media": "企鹅号",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "Cincinnati Reds 2026 Roster Transactions - ESPN",
+          "content": "Skip to main content Skip to navigation Cincinnati Reds 31-31 5th in NL Cent June DATE TRANSACTION Sent C Jose Trevino on a rehab assignment to Louisville (IL). Sent RHP Lyon Richardson and LHP ",
+          "link": "https://www.espn.com/mlb/team/transactions/_/name/cin",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "英雄联盟MSI 2026季中冠军赛11支参赛队伍及赛程确定",
+          "content": "五个主要赛区的一号种子队伍分别为:LPL赛区的BLG､LCK赛区的HLE､LEC赛区的G2､LCS赛区的LYON以及LCP赛区的TSW｡巴西CBLOL赛区的FURIA也作为一号种子参赛｡二号种子队伍分别为:LCK赛区的T1､LPL赛区的TES､LCS赛区的TL､LEC赛区的KC以及LCP赛区的DCG｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9246a30b39a42765",
+          "media": "企鹅号",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "2026年MSI 11支参赛队出炉:BLG、TES、HLE、T1在列",
+          "content": "<p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3906152064-98C5CE11AB53CA05BE54722BD45307E6/0?fmt=jpg&size=1408&h=1080&w=1920&ppv=1' data-aigc-mark='0'/></p><p>雷速体育6月14日讯 ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_8486a2e917405452",
+          "media": "企鹅号",
+          "publish_date": "2026-06-14"
+        },
+        {
+          "title": "2026英雄联盟MSI前瞻:HLE、BLG、T1被列为第一梯队夺冠热门",
+          "content": "<p>[title-triangle]赛前实力分析:头部队伍优势明显,黑马难现</p>\n<p>根据赛前分析,2026年MSI可能是历史上黑马存在概率最低的一届｡随着赛区削减,参赛队伍数量不多,且各大赛区出现了不同程度的弱化和青黄不接问题｡在延用全局BP和双败赛制的背景下,Bo5对英雄池､战术储备和团队硬实力的考验极为苛刻,夺冠队伍与中下游队伍的实力差距非常明显,这使得黑马几乎不可能出现｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3106a3fb88c88565",
+          "media": "企鹅号",
+          "publish_date": "2026-06-27"
+        },
+        {
+          "title": "Releases · OneUptime/oneuptime · GitHub",
+          "content": "Releases: OneUptime/oneuptime 04 Jun 19:21 github-actions 10.5.31 c806648 This commit was signed with the committer’s verified signature . nawazdhandala Nawaz Dhandala GPG key ID: 96C5DCA24769DBCA ",
+          "link": "https://github.com/oneuptime/oneuptime/releases",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "kinderswap-subgraph/LICENSE at main · devmexos/kinderswap-subgraph · GitHub",
+          "content": "GNU GENERAL PUBLIC LICENSE Version 3 , 29 June 2007 Copyright ( C ) 2007 Free Software Foundation , Inc . < https : / / fsf . org / > Everyone is permitted to copy and distribute verbatim copies of ",
+          "link": "https://github.com/devmexos/kinderswap-subgraph/blob/main/LICENSE",
+          "media": "",
+          "publish_date": "2026-06-06"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:03:14Z"
+    },
+    {
+      "query": "MSI 2026 patch version League of Legends meta",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 1,
+      "results": [
+        {
+          "title": "2026 英雄联盟季中冠军赛（MSI）终极观赛指南：赛制、赛程与看点全解析",
+          "content": "2026 年英雄联盟季中冠军赛（MSI）已经于 6 月 28 日在韩国大田广域市正式拉开帷幕。作为年度最重要的国际赛事之一，MSI 不仅是各赛区顶尖强队的正面交锋，其结果更将直接决定年底全球总决赛（Worlds 2026）的额外名额归属，重要性不言而喻。 今年，赛事不仅首次落户韩国科技之都”大田，入围赛阶段更迎来了堪称史上最残酷”的重大赛制改革。无论你是计划熬夜观赛，还是亲临现场助威，这份涵盖所有关键信息的指南都将是你不可或缺的观赛伴侣。 一、 赛事总览：历史首登韩国大田 本届 MSI 迎来历史性时刻——首次在韩国大田广域市举办。此前，大田仅举办过 2023 年 LCK 夏季赛总决赛，此次承办全球级别的 MSI 尚属首次。赛事场馆设于大田会展中心第二展厅（DCC 2），这座科技之都将电竞热情与科技创新融为一体，为全球观众带来全新体验。 赛事全称为 2026 季中冠军赛（Mid-Season Invitational 2026），比赛日期从 2026 年 6 月 28 日持续至 7 月 12 日，共计 15 天。共有 11 支队伍参赛，其中 LPL、LCK、LEC、LCS、LCP 五大主要赛区各派出 2 支队伍，巴西赛区（CBLOL）派出 1 支代表队。赛事总奖金池为 134 万美元基础奖金，加上 2026 MSI 专属游戏道具及皮肤销售额 25% 的众筹注入。基础分配方案为冠军 5",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-29"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:03:16Z"
+    },
+    {
+      "query": "FURIA Tatu Tutsz Guigo MSI 2026 results",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "Furia中单:向HLE、BLG学到很多;想抽到HLE、说不定能赢",
+          "content": "虎扑07月01日讯 2026MSI媒体日Furia战队中单Tutz选手接受外媒视频采访,原视频部分内容翻译如下:Q:上一届MSI你们需要打入围赛,这次你们直接晋级淘汰赛,淘汰赛有很多强队比如BLG､HLE,竞争非常激烈,比如要和knight､Zeka交手｡不知道你是否有在训练赛和他们交手,你怎么看可能会和他们交手呢?",
+          "link": "https://new.qq.com/rain/a/20260701A02QT600",
+          "media": "腾讯网",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "LOL2026MSIFUR战队名单汇总_一聚教程网",
+          "content": "FUR战队介绍 FUR战队上单选手 游戏ID:Guigo 姓名:Guilherme Araújo Ruiz FUR战队打野选手 游戏ID:Tatu 姓名:Pedro Seixas FUR战队中单选手 游戏ID:Tutsz 姓名:Arthur Peixoto Machado FUR战队AD选手 游戏ID:Ayu 姓名:Andrey Saraiva FUR战队辅助选手 游戏ID:JoJo ",
+          "link": "https://www.111cn.net/new/593701.htm",
+          "media": "",
+          "publish_date": "2026-06-26"
+        },
+        {
+          "title": "2026 MSI 赛前盘点:11 支参赛队伍实力排行!",
+          "content": "<p>2026 英雄联盟季中冠军赛入围赛将于 6 月 28 日正式开启｡在赛事正式打响前,我们可以结合 11 支参赛队伍本赛季第二赛段的整体表现,尤其是季后赛阶段的发挥,梳理出一份实力排名｡这份榜单仅代表个人观点,更多是娱乐参考 —— 毕竟国际赛事与联赛的竞技环境完全不同,队伍的临场调整能力,往往比纸面实力更能决定最终走向｡</p><p>第 11 名:DCG</p><p>作为从 PCS ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7856a3cf06988552",
+          "media": "企鹅号",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "【2026msi微星U盘排行榜】msi微星U盘哪款好_msi微星U盘推荐-ZOL排行榜",
+          "content": "排名 图片 型号 价格 热度 评分 微星 S-100(8GB) 综合介绍|参数|图片|点评 ¥45 无评分,去点评 > 对比 2 微星 M08L I代(16GB) 综合介绍|参数|图片|点评 ¥105 8.0分 对比 3 微星 M08L I代(32GB) 综合介绍|参数|图片|点评 ¥260 8.0分 对比 4 微星 M01旋转随身碟(4GB) 综合介绍|参数|图片|点评 ¥29 无评分,去点评 ",
+          "link": "http://top.zol.com.cn/compositor/37/manu_133.html",
+          "media": "中关村在线",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "微星(MSI)泰坦16 Max 2026:游戏本中的性能怪兽",
+          "content": "在现代游戏与创作的交汇点上,选择一款性能强劲且稳定的游戏本至关重要｡作为一名游戏爱好者和创作者,我一直在寻找能够满足高性能需求的笔记本电脑｡最近,我体验了微星(MSI)泰坦16 Max 2026,这款笔记本不仅搭载了最新的英特尔酷睿Ultra 9处理器和NVIDIA GeForce RTX 5070Ti显卡,还拥有出色的散热系统和高刷新率显示屏,让我对它的性能表现充满期待｡ 核心体验 1. ",
+          "link": "https://www.sohu.com/a/1032552981_122645056",
+          "media": "搜狐",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "【2026msi微星准系统排行榜】msi微星准系统哪款好_msi微星准系统推荐-ZOL排行榜",
+          "content": "排名 图片 型号 价格 热度 评分 msi微星宙斯盾 Z5(R5 5600X/RX6600XT) 综合介绍|参数|图片|点评 ¥7999 无评分,去点评 > 对比 2 msi微星宙斯盾 Z5(R5 5600X) 综合介绍|参数|图片|点评 ¥5199 无评分,去点评 > ",
+          "link": "https://top.zol.com.cn/compositor/94/manu_133.html",
+          "media": "中关村在线",
+          "publish_date": "2026-06-10"
+        },
+        {
+          "title": "英雄联盟MSI 2026季中冠军赛11支参赛队伍及赛程确定",
+          "content": "<p>[title-triangle]全球十一支参赛队伍及种子顺位确定</p>\n<p>英雄联盟2026季中冠军赛(MSI)的11支参赛队伍及种子顺位已全部确定｡五个主要赛区的一号种子队伍分别为:LPL赛区的BLG､LCK赛区的HLE､LEC赛区的G2､LCS赛区的LYON以及LCP赛区的TSW｡巴西CBLOL赛区的FURIA也作为一号种子参赛｡",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9246a30b39a42765",
+          "media": "企鹅号",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "微星(MSI)泰坦16 Max 2026:高性能游戏本的极致体验",
+          "content": "在如今这个数字化､游戏化的时代,选择一款合适的游戏本不仅关乎游戏体验,也关乎工作效率｡最近,我有幸体验了微星(MSI)泰坦16 Max 2026,这款搭载英特尔® 酷睿™ Ultra 9处理器和NVIDIA® GeForce RTX 5070Ti显卡的高性能游戏本,真的是让我惊喜不断｡接下来,我将通过我的真实使用感受,带大家深入了解这款笔记本的独特魅力｡ 引言:沉浸在游戏与工作的双重享受中 ",
+          "link": "https://www.sohu.com/a/1032049648_122645057",
+          "media": "搜狐",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "2026MSI",
+          "content": "老实憨厚的笑笑 楚钧艾克 赵俊日 4K直播间 哔哩哔哩英雄联盟赛事 3707.0万人气 72.5 万点赞 3707.0万人气 72.5 万点赞 G 更多设置 blg不打下路的, blg表演赛罢了 blg一号种子十六强太厉害了 我想起了开心的事情,24msi [x] 画面异常?切换解码策略试试 默认 AV1 HEVC AVC 播放器日志信息 显示日志 复制日志 下载日志 视频统计信息 Room ",
+          "link": "https://live.bilibili.com/6?live_from=81001",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "2026英雄联盟MSI季中赛即将开战!上虎牙看入围赛焦点对局!",
+          "content": "<p><strong>2026英雄联盟季中赛</strong></p><p>将于<strong>6月28</strong>日正式开启</p><p>入围赛首日</p><p>将迎来两场BO5淘汰赛</p><p><strong>T1､KC､DCG､TLAW</strong></p><p>将争夺唯一的淘汰赛晋级名额</p><p>首日结果如何让我们拭目以待</p><p><img ",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_1596a3f726778952",
+          "media": "企鹅号",
+          "publish_date": "2026-06-27"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:03:19Z"
+    },
+    {
+      "query": "\"Lyon Academy\" 2026 MSI roster Castle Mitir",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "印度神王又要来了!LYON零封C9打进MSI,G2力克KC拿下LEC冠军",
+          "content": "LYON以干净利落的3-0横扫豪门C9,率先锁定北美赛区MSI席位,成为本赛季北美第一支挺进季中冠军赛的队伍;与此同时,欧洲LEC赛区总决赛上演巅峰对决,G2 Esports苦战五局,以3-2险胜KC战队,再度登顶联赛冠军,成功斩获LEC赛区MSI一号种子参赛资格,两大老牌赛区的新老强者顺利会师MSI舞台｡</p><p><img src='http://qqpublic.qpic.",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7626a26383842552",
+          "media": "企鹅号",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "Lyster Ramadan Timing 2026 Calendar - Sehri and Iftar Timetable",
+          "content": "Lyster Ramadan Timing 2026 Calendar - Sehri and Iftar Timetable Ramadan calendar 2026 Lyster depends on today Sehri timing Lyster and today iftar timing Lyster for the complete month of Ramadan. Ramadan 2026 starts on Feb 19, 2026 and ends on Mar 20, 2026 in Lyster. You can see the daily Sehri timing in Lyster and iftar time Lyster in Ramzan at UrduPoint. However, today Sehri timing in Lyster is 03:50 AM, and today iftar timing Lyster is 09:40 PM as on Jun 15, 2026 (29th Dhu l-Hidjdja 1447). Sehri and Iftar Timing in Lyster Today DATE SEHRI IFTAR Sehri timing in Lyster today, on Jun 15, 2026 (",
+          "link": "https://www.urdupoint.com/islam/lyster-ramadan-calendar-sehar-aftar-timing.html",
+          "media": "",
+          "publish_date": "2026-06-15"
+        },
+        {
+          "title": "motion-academy/package.json at main · CaliCastle/motion-academy · GitHub",
+          "content": "Navigation Menu Toggle navigation Appearance settings Search or jump to... Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Cancel Create saved search Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert Files Expand file tree   main Breadcrumbs package.json Copy path More file actions More file actions Latest commit History 30 li",
+          "link": "https://github.com/CaliCastle/motion-academy/blob/main/package.json",
+          "media": "",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "N-Methyl-1-(5-methyl-1,2,4-oxadiazol-3-yl)methanamineCAS号1082766-58-2 价格/规格/供应商 共2条–960化工网",
+          "content": "N-甲基-1-(5-甲基-1,2,4-恶二唑-3-基)甲胺 科研试剂 更新日期:2026-06-05 试剂级 1g ￥ 2313.52 18939883912 3003949364 联系人:顾经理 询单 上海瀚思化工有限公司 N-甲基-1-(5-甲基-1,2,4-恶二唑-3-基)甲胺 科研试剂 更新日期:2025-04-25 - 1g ￥ 2891.90 13167063860 3004013043 联系人:阿拉丁 询单 上海阿拉丁生化科技股份有限公司 为您找到2条N-Methyl-1-(5-methyl-1,2,4-oxadiazol-3-yl)methanamine产品厂家、不同纯度、规格信息,您还可以找到N-Methyl-1-(5-methyl-1,2,4-oxadiazol-3-yl)methanamine相关产品,相关化合物,相关问答,同时可以了解N-Methyl-1-(5-methyl-1,2,4-oxadiazol-3-yl)methanamine百科信息。我们会尽量为您提供优质、准确、全面的产品信息。 wap版: ",
+          "link": "http://www.chem960.com/chanpin/843120494/",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "2026MSI",
+          "content": "老实憨厚的笑笑 楚钧艾克 赵俊日 4K直播间 哔哩哔哩英雄联盟赛事 3707.0万人气 72.5 万点赞 3707.0万人气 72.5 万点赞 G 更多设置 blg不打下路的, blg表演赛罢了 blg一号种子十六强太厉害了 我想起了开心的事情,24msi [x] 画面异常?切换解码策略试试 默认 AV1 HEVC AVC 播放器日志信息 显示日志 复制日志 下载日志 视频统计信息 Room Player 3.11.3-508387df Copyright bilibili 2026 关闭 bilibili 击杀纳什男爵 • T1 击杀纳什男爵 • T1 击杀山脉亚龙 • T1 击杀山脉亚龙 • T1 击杀纳什男爵 • T1 击杀纳什男爵 • T1 团灭对手 • T1 团灭对手 • T1 开始 开始 第一滴血 • T1 第一滴血 • T1 击杀山脉亚龙 • T1 击杀山脉亚龙 • T1 击杀虚空巢虫 • T1 击杀虚空巢虫 • T1 击杀云端亚龙 • T1 击杀云端亚龙 • T1 第一座塔 • T1 第一座塔 • T1 击杀炼金科技亚龙 • TLAW 击杀炼金科技亚龙 • TLAW 五杀 • T1 五杀 • T1 点击取消静音 选手评分 BLG加油 10电池 AL加油 10电池 WBG加油 10电池 IG加油 10电池 开球 1电池 人气票 1电池 退钱 99电池 心动盲盒 150",
+          "link": "https://live.bilibili.com/6?live_from=81001",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "Cytidine, 2'-deoxy-2'-(methyldithio)- (9CI) CAS#: 260366-26-5",
+          "content": "Cytidine, 2'-deoxy-2'-(methyldithio)- (9CI) Company Name: NewCan Biotech Limited Tel: +86-571-86912261 19975279805 Email: sales@newcanbio.com Cytidine, 2'-deoxy-2'-(methyldithio)- (9CI) Basic information Product Name: Cytidine, 2'-deoxy-2'-(methyldithio)- (9CI) Synonyms: Cytidine, 2'-deoxy-2'-(methyldithio)- (9CI) ; 2'-deoxy-2'-(methyldithio)Cytidine CAS: 260366-26-5 MF: C10H15N3O4S2 MW: 305.37 EINECS: Product Categories: Mol File: 260366-26-5.mol Cytidine, 2'-deoxy-2'-(methyldithio)- (9CI) Chemical Properties Boiling point 575.7±60.0 °C(Predicted) density 1.74±0.1 g/cm3(Predicted) pka 13.38±0",
+          "link": "https://www.chemicalbook.com/ProductChemicalPropertiesCB510879244_EN.htm",
+          "media": "",
+          "publish_date": "2026-06-09"
+        },
+        {
+          "title": "2026MSI",
+          "content": "老实憨厚的笑笑 楚钧艾克 赵俊日 4K直播间 网络不给力 请点击此处重试 只看LPL战队赛程 刷新 我的预测 分 T1 06-29 11:00 KC 数据 回放 入围赛 分 TLAW 06-29 16:00 DCG 数据 回放 入围赛 分 TLAW 06-30 16:00 KC 数据 回放 入围赛 分 T1 07-01 16:00 TLAW 数据 回放 淘汰赛 HLE 07-03 11:00 TSW 订阅 预测 淘汰赛 G2 07-03 16:00 TES 订阅 预测 淘汰赛 LYON 07-04 11:00 FUR 订阅 预测 淘汰赛 BLG 07-04 16:00 T1 订阅 预测 入围赛 6月28日11:00 数据 回放 T1 TLAW 入围赛 6月28日16:00 数据 回放 KC DCG 入围赛 6月29日16:00 数据 回放 TLAW DCG 入围赛 6月29日11:00 数据 回放 T1 入围赛 6月30日16:00 数据 回放 TLAW 入围赛 7月01日16:00 数据 回放 T1 TLAW 刷新 每日任务-观看赛事直播间 仅观看【哔哩哔哩英雄联盟赛事】直播间可获取积分 去观看 观看官方赛事直播10分钟 积分+2 观看官方赛事直播20分钟 积分+2 观看官方赛事直播30分钟 积分+2 每日任务-观看2026英雄联盟MSI稿件 仅观看6月28日0点后发布的≥15s",
+          "link": "https://live.bilibili.com/6?spm_id_from=333.337.0.0",
+          "media": "",
+          "publish_date": "2026-06-28"
+        },
+        {
+          "title": "Home  American Academy in Rome",
+          "content": "View the Spring 2026 Calendar of Events June 1, 2026 Ludovico Einaudi Awarded the 2026 McKim Medal https://aarome.org/news/features/ludovico-einaudi-mckim-medal Thursday, June 18, 2026–6:00 PM Andrew Wilson – The Water-mills on the Janiculum and the Gothic Siege of Rome https://aarome.org/events/andrew-wilson-water-mills-janiculum-gothic-siege-rome May 20, 2026 Fellows in Focus: Will Pedrick https://aarome.org/news/features/fellows-focus-will-pedrick June 8, 2026 Fellows in Focus: Mirko Andolina https://aarome.org/news/features/fellows-focus-mirko-andolina What’s New Visiting Artists & Scholar",
+          "link": "https://aarome.org/",
+          "media": "",
+          "publish_date": "2026-06-19"
+        },
+        {
+          "title": "GitHub - ThomasGorges/icdar2026-circleid-baseline · GitHub",
+          "content": "main Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 1 Commit 1 Commit LICENSE LICENSE README.md README.md baseline.ipynb baseline.ipynb View all files Repository files navigation CircleID Baseline (ICDAR 2026) This repository contains a minimal ResNet18 baseline for the CircleID competition (writer identification + pen classification) of ICDAR 2026.We provide a single notebook for both tasks, which finetunes a pretrained ResNet 18 and create a submission file for the respective Kaggle challenge. Dataset Data layout:",
+          "link": "https://github.com/ThomasGorges/icdar2026-circleid-baseline",
+          "media": "",
+          "publish_date": "2026-06-08"
+        },
+        {
+          "title": "2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)phenoxy)-N,N-diphenylacetamide CAS#: 1408320-36-4",
+          "content": "2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)phenoxy)-N,N-diphenylacetamide 2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)phenoxy)-N,N-diphenylacetamide 基本信息 中文名称 2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)phenoxy)-N,N-diphenylacetamide 中文同义词 英文名称 2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)phenoxy)-N,N-diphenylacetamide 英文同义词 2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)phenoxy)-N,N-diphenylacetamide;Acetamide, 2-[2-[[bis(2-pyridinylmethyl)amino]methyl]phenoxy]-N,N-diphenyl- CAS号 1408320-36-4 分子式 C33H30N4O2 分子量 514.62 EINECS号 相关类别 Mol文件 1408320-36-4.mol 结构式 2-(2-((bis(pyridin-2-ylmethyl)amino)methyl)",
+          "link": "https://www.chemicalbook.com/ProductChemicalPropertiesCB414130496.htm",
+          "media": "",
+          "publish_date": "2026-06-08"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:03:32Z"
+    },
+    {
+      "query": "2026 MSI power ranking Lyon FURIA predicted",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 2,
+      "results": [
+        {
+          "title": "2026 MSI 赛前盘点：11 支参赛队伍实力排行！",
+          "content": "2026 英雄联盟季中冠军赛入围赛将于 6 月 28 日正式开启。在赛事正式打响前，我们可以结合 11 支参赛队伍本赛季第二赛段的整体表现，尤其是季后赛阶段的发挥，梳理出一份实力排名。这份榜单仅代表个人观点，更多是娱乐参考 —— 毕竟国际赛事与联赛的竞技环境完全不同，队伍的临场调整能力，往往比纸面实力更能决定最终走向。 第 11 名：DCG 作为从 PCS 赛区通过升降级赛杀入 LCP 顶级联赛的新生力量，DCG 在自己的首个顶级联赛赛季表现可圈可点，进入第二赛段后依旧保持强势势头，最终在春季季后赛中从败者组一路突围，跻身联赛前二，拿到了 MSI 参赛门票。赛前不少人更看好 GAM 拿下这个名额，而 DCG 的突围也证明，LCP 赛区早已不是越南队伍一家独大的局面。 这支由 Flauren 等老将搭配年轻新秀组成的队伍，上赛季还征战于次级联赛，此番登上 MSI 舞台将带来全新的气象。队内最核心的两位选手分别是 19 岁的上单 Flauren 与打野 Pop9：前者具备极强的 Carry 能力，后者则是队伍的节奏引擎，在当前版本中打得游刃有余。 不过客观来看，DCG 想要从入围赛突围难度极大，面对 T1、KC 这类对手想要取胜近乎奇迹。队伍的下路组合在联赛内本身就表现挣扎，来到大田的国际赛场大概率会面临残酷的考验。但对这支年轻队伍而言，本次 MSI 更多是宝贵的经验积累，他们真正的目",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-25"
+        },
+        {
+          "title": "历史总是惊人的相似，连续两年，T1靠着“新队员”晋级MSI舞台！今年能夺冠吗？",
+          "content": "文案 Monte 校对 KingZ 《英雄联盟》电竞2026年上半年决出世界最强战队的国际赛事——MSI（季中邀请赛）将于本月28日在大田开赛。韩国赛区代表为HLE和T1。继去年之后，T1此次同样依靠新成员”的出色发挥，以二号种子身份成功晋级。 T1在韩国《英雄联盟》职业联赛LCK常规赛第一、第二轮中获得第二名。6月12日，他们在MSI资格赛（Road to MSI）第三轮中对阵常规赛排名第一的HLE，结果HLE以3比1完胜。T1无论是在BP阶段还是比赛内容上都显得有所动摇。不过，在14日进行的最终战中，T1出乎大多数业内人士的预料，战胜了Gen.G Esports。 在与Gen.G鏖战至第五局的系列赛中，T1表现最亮眼的选手无疑是Peyz”。从第一局到第五局，他始终发挥稳定。尤其是在第二局中，他选出卡莉丝塔，充分展现了自己的Carry能力。赛后，他被评选为POM（Player of the Match，本场最佳选手）。 有趣的是，在2025年Road to MSI期间，T1同样是凭借新成员的出色发挥获得了参赛资格。当时刚刚加盟T1的Doran”表现神勇，接连击败KT Rolster和HLE，帮助队伍以二号种子身份晋级。仿佛平行时空一般，DORAN当时也是带领队伍赢下比赛，并且在两场比赛中都获得了POM。 自2022年以来，T1已经连续五年站上MSI舞台。此外，他们总计九次晋级MS",
+          "link": "",
+          "media": "",
+          "publish_date": "2026-06-20"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:03:33Z"
+    },
+    {
+      "query": "LCS 2026 summer split roster changes Lyon",
+      "count": 8,
+      "recency": "oneMonth",
+      "engine": "search_pro",
+      "result_count": 10,
+      "results": [
+        {
+          "title": "Los Angeles Rams 2026 Roster Transactions - ESPN",
+          "content": "ESPN's NFL Nation shares insights from every minicamp, including Tua Tagovailoa's impressive display. Cardinals quarterback Carson Beck said he's jumped in headfirst into the early days of his NFL ",
+          "link": "https://www.espn.com/nfl/team/transactions/_/name/lar",
+          "media": "",
+          "publish_date": "2026-06-16"
+        },
+        {
+          "title": "2026 Spring/Summer Home Page",
+          "content": "We value your privacy We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. ",
+          "link": "https://www.lutsen.com/",
+          "media": "",
+          "publish_date": "2026-07-01"
+        },
+        {
+          "title": "Lefteris Liotopoulos 2025-26 NCAAM Splits - ESPN",
+          "content": "Skip to main content Skip to navigation split Home ",
+          "link": "https://www.espn.com/mens-college-basketball/player/splits/_/id/5145712/lefteris-liotopoulos",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "Summer Game Fest 2026 - Live June 5, 2026 from Dolby Theatre in LA",
+          "content": "Watch live now Watch the replay Watch live now Watch the replay Summer Game Fest 2026 See what's next in video games Live from the Dolby Theatre, hosted by Geoff Keighley and Lucy James. Get a ",
+          "link": "http://www.summergamefest.com/",
+          "media": "",
+          "publish_date": "2026-06-30"
+        },
+        {
+          "title": "Article Metrics - Light entrainment of the SCN circadian clock and implications for personalized alterations of corticosterone rhythms in shift",
+          "content": "Light entrainment of the SCN circadian clock and implications for personalized alterations of corticosterone rhythms in shift work and jet lag Access & Citations 12k Article Accesses Citations ",
+          "link": "https://www.nature.com/articles/s41598-021-97019-7/metrics",
+          "media": "Nature",
+          "publish_date": "2026-06-04"
+        },
+        {
+          "title": "Article Metrics - Update on lipid-lowering therapy and LDL-cholesterol targets  Nature Reviews Cardiology",
+          "content": "Access & Citations Article Accesses Citations Citation counts are provided by Dimensions and depend on their data availability. Counts will update daily, once available. Online attention 3 Connotea ",
+          "link": "https://www.nature.com/articles/ncpcardio0613/metrics",
+          "media": "Nature",
+          "publish_date": "2026-06-06"
+        },
+        {
+          "title": "Lindsey Loutsenhizer 2025-26 Stats per Game - NCAAW - ESPN",
+          "content": "ing the impact of top 2027 forwards Eve Long (Notre Dame) and Lauren Hassell (Vanderbilt). Lauren Hassell, top-10 women's hoops recruit, commits to",
+          "link": "https://www.espn.com/womens-college-basketball/player/gamelog/_/id/10903/lindsey-loutsenhizer",
+          "media": "",
+          "publish_date": "2026-06-05"
+        },
+        {
+          "title": "ICML 2026 REViT 发布  这可能是这个 Transformer 时代,CNN最后的体面",
+          "content": "<p>原文作者:公众号“集智实验室”</p><p>原文链接:https://mp.weixin.qq.com/s/A55BBhD3e_s3VVC7mw1JNw</p><p>雷峰网转载</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-136598200-953672037194AE5D9827B217344876EA/0?",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6936a3e004530852",
+          "media": "企鹅号",
+          "publish_date": "2026-06-26"
+        },
+        {
+          "title": "Releases · ExponentiallyDigital/GuildRouter · GitHub",
+          "content": "Releases: ExponentiallyDigital/GuildRouter Compare Choose a tag to compare Sorry, something went wrong. Filter Loading Sorry, something went wrong. Uh oh! There was an error while loading. Please ",
+          "link": "https://github.com/ExponentiallyDigital/GuildRouter/releases",
+          "media": "",
+          "publish_date": "2026-06-03"
+        },
+        {
+          "title": "ICLR 2026  SFT之前就预测模型能力变化",
+          "content": ".5-7B,变化最大的前100维就占了全部变化量的25%;</p><p>而把这些维度清零,模型数学能力立刻崩了,清零随机维度却没事｡</p><p>论文最巧的一步就是在微调前就把这些维度找出来｡</p><p><img src='http://qqpublic.qpic.cn/qq_public/0/28-3512891276-CAE3B7AEA6F87D573CECDD4BB5310A10/0?",
+          "link": "https://so.html5.qq.com/page/real/search_news?docid=70000021_8996a24cc3624752",
+          "media": "企鹅号",
+          "publish_date": "2026-06-07"
+        }
+      ],
+      "error": null,
+      "cached": false,
+      "accessed_at": "2026-07-02T02:03:36Z"
+    }
+  ]
+}

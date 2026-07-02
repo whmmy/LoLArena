@@ -1,0 +1,58 @@
+{
+  "id": 115570934355614539,
+  "name": "Hanwha Life Esports vs Team Secret Whales",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 5,
+  "begin_at": "2026-07-04T03:00:00.000Z",
+  "scheduled_at": "2026-07-04T03:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "hle",
+        "name": "Hanwha Life Esports",
+        "acronym": "HLE",
+        "slug": "hle",
+        "image_url": "https://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "tsw",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "tsw",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "hle",
+      "score": 0
+    },
+    {
+      "team_id": "tsw",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-msi",
+    "name": "MSI",
+    "slug": "msi"
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-msi_2026"
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Knockouts",
+  "round": null,
+  "vod_url": null
+}

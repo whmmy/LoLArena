@@ -1,0 +1,59 @@
+{
+  "id": 115570934355614545,
+  "name": "G2 Esports vs TOP ESPORTS",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 5,
+  "begin_at": "2026-07-04T08:00:00.000Z",
+  "scheduled_at": "2026-07-04T08:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "g2",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2",
+        "image_url": "http://static.lolesports.com/teams/G2-FullonDark.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "tes",
+        "name": "TOP ESPORTS",
+        "acronym": "TES",
+        "slug": "tes",
+        "image_url": "http://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "g2",
+      "score": 0
+    },
+    {
+      "team_id": "tes",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-msi",
+    "name": "MSI",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": null,
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Knockouts",
+  "round": null,
+  "vod_url": null
+}

@@ -1,0 +1,525 @@
+{
+  "model_id": "deepseek-v4-pro",
+  "scope": "match",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03",
+  "submitted_at": "2026-07-02T01:58:03.606025+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG略占上风，预计以3-1取胜。核心理由：BLG在上中两条单人线拥有显著的个人能力优势（Bin对位Haetae的压制、Knight对位Faker的近期数据优势），而T1的上路选手Haetae（Doran）在入围赛中被外卡上单多次单杀，暴露了严重的对线短板。T1虽然在入围赛9-0横扫弱旅展现了韧性和团战能力，但面对BLG这种级别的对手，上路缺口可能被无限放大。BLG的LPL冠军气势加上更深厚的英雄池储备，在全局BP赛制下更具优势。",
+      "fundamentals": "BLG近10场8胜2负，LPL第二赛段从败者组一穿五夺冠，3-0横扫TES的表现展现了顶级统治力。全队赛季胜率69.35%（43胜19负），场均击杀17.1、场均塔数7.05，小龙控制率56.8%、大龙控制率63.4%，运营压制力极强。核心选手Knight赛季KDA高达7.41（64场76.56%胜率），是公认的世界第一中单候选人；Bin的KDA 4.62、胜率76.56%，英雄池涵盖Sion、Jayce、Gnar、Jax等版本强势英雄。唯一隐忧是Viper被分析师Caedrel评价为还在找状态像个乘客，其75.31%胜率虽高但过程并非完美。T1近10场LCK战绩仅5胜5负，包括1-3输给HLE、与GEN打满5局，仅在入围赛9-0横扫弱旅才拉回信心。T1赛季总胜率74.07%（40胜14负）在54场样本中表现不错，但近期LCK对手明显更强时战绩平庸。Jinbeom（Peyz）仅4场比赛样本（50%胜率），射手位稳定性存疑。Cloud（Keria）KDA 4.97是T1最稳定的点，但Haetae（Doran）KDA仅3.25、入围赛数据在上单中排名垫底，是T1最大软肋。",
+      "matchups": "上路：Bin对Haetae是全场最大差距。Bin赛季KDA 4.62、分均伤害643，擅长Jayce（87.5%胜率）、Gnar（83.3%）、Jax（100%），对线压制力LPL顶级。Haetae（Doran）入围赛对阵TL的Morgan时被单杀两次，对阵KC的Canna时同样对线劣势，赛评人一致认为他是T1最大隐患。虽然Doran团战端有亮眼发挥（对线送团战C），但面对Bin这种级别的压制型上单，前期崩盘风险极高。打野：Xun赛季KDA 5.88、Jarvan IV 88.9%胜率、Lee Sin 100%胜率，前期节奏和反蹲意识出色。Painter（Oner）KDA 3.25但入围赛表现神勇（赵信抢龙、蔚开团），是T1前期节奏核心。Xun数据更优，但Painter大赛经验更丰富。中路：Knight KDA 7.41对Faker KDA 3.23，数据面呈碾压之势。Knight英雄池（LeBlanc 80%、Ryze/Viktor/Orianna均100%）更广，Faker依赖Anivia（77.8%）、Azir（75%）。但Faker的MSI和世界赛经验无人能及，关键局可能有超常发挥。下路：Viper KDA 6.21、Caitlyn 75%、Ezreal 80% vs Jinbeom（Peyz）仅4场数据、KDA 2.92。Viper纸面实力更强，但乘客评价令人警惕。Jinbeom入围赛表现亮眼（五杀泽丽），样本虽小但状态正热。辅助：ON（KDA 4.15、Bard 71.4%、Seraphine 100%）vs Cloud/Keria（KDA 4.97、Bard仅40%、Alistar 75%）。ON的开团和游走是BLG节奏发动机，Cloud稳定性更高但Bard熟练度偏低。团战端BLG自评团战打得非常好，依靠Bin和Knight的双C体系，边线控制力更强。",
+      "meta_style": "2026 MSI采用全局BP（Fearless Draft）Bo5赛制，对队伍英雄池深度和战术储备要求极高。当前版本（Patch 16.11/16.12）上路强势英雄包括Sion、Jayce、Gnar、Renekton、Ambessa，中路流行Annie、LeBlanc、Azir、Anivia，打野以Jarvan IV、Xin Zhao、Lee Sin为主，ADC位Caitlyn、Ezreal、Varus优先，辅助Bard、Alistar、Rakan常见。BLG在这套Meta中契合度更高：Bin的Sion（80%）、Jayce（87.5%）、Gnar（83.3%）均属顶级；Knight的英雄覆盖Annie（83.3%）、LeBlanc（80%）、Ryze/Viktor（100%）全版本主流；Xun的Jarvan IV（88.9%）是当前版本T1级打野。T1方面，Haetae的英雄池（Sion 75%、Ambessa 57.1%、Renekton 83.3%）虽然也不错，但Ambessa胜率偏低；Faker的Anivia（77.8%）是招牌但容易被BAN针对。全局BP下，BLG可用的备用英雄更多（Bin有Yorick/Jax、Knight有Cassiopeia/Orianna），T1在打到第四、五局时BP选择会显著受限。此外，BLG场均游戏时长32.8分钟偏向中后期运营团战，T1则善于翻盘和韧性局，两队在比赛节奏上存在风格碰撞。",
+      "h2h_psych": "两队历史交手记录为零（context_pack中meetings=0），但这是MSI淘汰赛首轮的中韩焦点战。T1拥有9次MSI参赛经历（历史第一），Faker刚完成MSI 100胜里程碑，是国际赛经验最丰富的选手。BLG连续第4年、Bin连续第5年参加MSI，此前最好成绩为亚军，始终未能突破最后一步。心理层面，T1在韩国大田主场作战，拥有现场观众支持，且从入围赛9-0一路碾压获得正赛门票，士气正盛、手感已热身完毕。BLG则跳过了入围赛直接晋级，休息时间较长（自6月14日LPL决赛后约20天未打正式比赛），可能面临慢热风险——正如Knight在采访中所说我们有一段时间没和他们交过手了。体力方面，T1在6月28日-7月1日连打三场BO5共9局、有一定消耗；BLG则是以逸待劳。Caedrel的赛前预测将HLE排第一、BLG第二、T1第三，外媒夺冠概率LCK 66% vs LPL 30%，舆论整体略微看好LCK，这可能给BLG带来额外证明自己的动力。Bin与Doran的世一上之争为比赛增添了个人对决的戏剧性和心理压力。"
+    },
+    "win_probs": {
+      "blue": 0.62,
+      "red": 0.38
+    },
+    "predicted_winner": "blue",
+    "series_score": "3-1",
+    "series_length": 4,
+    "favored_side": "blue_strong",
+    "key_players": [
+      {
+        "player": "Bin",
+        "team": "blue",
+        "role": "top",
+        "reason": "对位T1最大弱点Haetae（Doran），Bin的压制力有望在上路直接打出突破口。Jayce、Gnar、Jax等英雄均处于版本强势期，若取得线权可辐射全局。"
+      },
+      {
+        "player": "Knight",
+        "team": "blue",
+        "role": "mid",
+        "reason": "赛季KDA 7.41、被外媒誉为世界第一中单，LeBlanc、Ryze、Viktor均为100%胜率绝活。与Faker的中路对决是系列赛的风向标。"
+      },
+      {
+        "player": "Faker",
+        "team": "red",
+        "role": "mid",
+        "reason": "MSI 100胜里程碑持有者、历史最伟大选手。即便近期数据不如Knight，Faker的关键局经验和翻盘嗅觉是T1能在劣势局中翻盘的最大依仗。"
+      },
+      {
+        "player": "Xun",
+        "team": "blue",
+        "role": "jun",
+        "reason": "赛季KDA 5.88、Lee Sin和Jarvan IV胜率极高，前期节奏能力将决定BLG能否尽早建立优势滚起雪球。"
+      },
+      {
+        "player": "Cloud",
+        "team": "red",
+        "role": "sup",
+        "reason": "KDA 4.97全队最稳定、Alistar和Karma均为高胜率。作为T1的节奏发动机和团战关键先生，他是T1下路对抗Viper加ON组合的核心保障。"
+      },
+      {
+        "player": "ON",
+        "team": "blue",
+        "role": "sup",
+        "reason": "Bard（71.4%）和Seraphine（100%）在当前版本极为强势，ON的游走和开团能力是BLG中期节奏的关键催化剂。"
+      }
+    ],
+    "swing_factors": [
+      "Haetae（Doran）的对线表现：入围赛被外卡上单多次单杀，若面对Bin再度崩线，T1将被迫倾斜大量资源保护上路，打乱全局节奏",
+      "全局BP赛制下的英雄池深度：BLG可用的英雄组合更多（Bin有6个、Knight有6个高胜率英雄），第3到5局T1的BP空间将急剧收窄",
+      "Viper的状态：被Caedrel评价为仍在找状态像个乘客，若其未能发挥作用，BLG的火力输出将过度依赖上中两条单人线",
+      "T1的翻盘韧性：入围赛多次在落后5千多经济下凭团战翻盘，Faker加Cloud的后期决策能力不容低估",
+      "BLG的慢热风险：自6月14日LPL决赛后近20天未打正式比赛，而T1已完成9局热身，BLG第一局可能需时间适应",
+      "韩国大田主场优势：现场观众支持T1，可能在关键时刻影响选手心态和沟通"
+    ],
+    "meta_style_signals": [
+      "全局BP（Fearless Draft）Bo5：强调英雄池深度和战术多样性，BLG的可用英雄池比T1更广",
+      "上单位置强度决定比赛走向：Sion、Jayce、Gnar版本强势，Bin的英雄池完美覆盖且胜率极高",
+      "打野前期节奏关键：Jarvan IV、Lee Sin、Xin Zhao为版本主流，Xun在Jarvan（88.9%胜率）上拥有绝对自信",
+      "辅助游走型英雄（Bard/Seraphine）优先级高：ON的Seraphine 100%胜率是BLG的隐藏王牌"
+    ],
+    "sources": [
+      {
+        "query": "BLG vs T1 MSI 2026 knockout prediction",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "MSI 2026 League of Legends bracket results",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list current",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "Bin vs Doran head to head record 2025 2026",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "MSI 2026 meta picks bans global BP strongest champions",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "BLG T1 MSI 2026 prediction analysis betting odds",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "T1 weaknesses MSI 2026 Doran laning phase problems Oner Faker",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      },
+      {
+        "query": "BLG Bin Knight Xun Viper ON MSI 2026 form strengthen",
+        "accessed_at": "2026-07-02T01:52:05Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"BLG略占上风，预计以3-1取胜。核心理由：BLG在上中两条单人线拥有显著的个人能力优势（Bin对位Haetae的压制、Knight对位Faker的近期数据优势），而T1的上路选手Haetae（Doran）在入围赛中被外卡上单多次单杀，暴露了严重的对线短板。T1虽然在入围赛9-0横扫弱旅展现了韧性和团战能力，但面对BLG这种级别的对手，上路缺口可能被无限放大。BLG的LPL冠军气势加上更深厚的英雄池储备，在全局BP赛制下更具优势。\",\n    \"fundamentals\": \"BLG近10场8胜2负，LPL第二赛段从败者组一穿五夺冠，3-0横扫TES的表现展现了顶级统治力。全队赛季胜率69.35%（43胜19负），场均击杀17.1、场均塔数7.05，小龙控制率56.8%、大龙控制率63.4%，运营压制力极强。核心选手Knight赛季KDA高达7.41（64场76.56%胜率），是公认的世界第一中单候选人；Bin的KDA 4.62、胜率76.56%，英雄池涵盖Sion、Jayce、Gnar、Jax等版本强势英雄。唯一隐忧是Viper被分析师Caedrel评价为还在找状态像个乘客，其75.31%胜率虽高但过程并非完美。T1近10场LCK战绩仅5胜5负，包括1-3输给HLE、与GEN打满5局，仅在入围赛9-0横扫弱旅才拉回信心。T1赛季总胜率74.07%（40胜14负）在54场样本中表现不错，但近期LCK对手明显更强时战绩平庸。Jinbeom（Peyz）仅4场比赛样本（50%胜率），射手位稳定性存疑。Cloud（Keria）KDA 4.97是T1最稳定的点，但Haetae（Doran）KDA仅3.25、入围赛数据在上单中排名垫底，是T1最大软肋。\",\n    \"matchups\": \"上路：Bin对Haetae是全场最大差距。Bin赛季KDA 4.62、分均伤害643，擅长Jayce（87.5%胜率）、Gnar（83.3%）、Jax（100%），对线压制力LPL顶级。Haetae（Doran）入围赛对阵TL的Morgan时被单杀两次，对阵KC的Canna时同样对线劣势，赛评人一致认为他是T1最大隐患。虽然Doran团战端有亮眼发挥（对线送团战C），但面对Bin这种级别的压制型上单，前期崩盘风险极高。打野：Xun赛季KDA 5.88、Jarvan IV 88.9%胜率、Lee Sin 100%胜率，前期节奏和反蹲意识出色。Painter（Oner）KDA 3.25但入围赛表现神勇（赵信抢龙、蔚开团），是T1前期节奏核心。Xun数据更优，但Painter大赛经验更丰富。中路：Knight KDA 7.41对Faker KDA 3.23，数据面呈碾压之势。Knight英雄池（LeBlanc 80%、Ryze/Viktor/Orianna均100%）更广，Faker依赖Anivia（77.8%）、Azir（75%）。但Faker的MSI和世界赛经验无人能及，关键局可能有超常发挥。下路：Viper KDA 6.21、Caitlyn 75%、Ezreal 80% vs Jinbeom（Peyz）仅4场数据、KDA 2.92。Viper纸面实力更强，但乘客评价令人警惕。Jinbeom入围赛表现亮眼（五杀泽丽），样本虽小但状态正热。辅助：ON（KDA 4.15、Bard 71.4%、Seraphine 100%）vs Cloud/Keria（KDA 4.97、Bard仅40%、Alistar 75%）。ON的开团和游走是BLG节奏发动机，Cloud稳定性更高但Bard熟练度偏低。团战端BLG自评团战打得非常好，依靠Bin和Knight的双C体系，边线控制力更强。\",\n    \"meta_style\": \"2026 MSI采用全局BP（Fearless Draft）Bo5赛制，对队伍英雄池深度和战术储备要求极高。当前版本（Patch 16.11/16.12）上路强势英雄包括Sion、Jayce、Gnar、Renekton、Ambessa，中路流行Annie、LeBlanc、Azir、Anivia，打野以Jarvan IV、Xin Zhao、Lee Sin为主，ADC位Caitlyn、Ezreal、Varus优先，辅助Bard、Alistar、Rakan常见。BLG在这套Meta中契合度更高：Bin的Sion（80%）、Jayce（87.5%）、Gnar（83.3%）均属顶级；Knight的英雄覆盖Annie（83.3%）、LeBlanc（80%）、Ryze/Viktor（100%）全版本主流；Xun的Jarvan IV（88.9%）是当前版本T1级打野。T1方面，Haetae的英雄池（Sion 75%、Ambessa 57.1%、Renekton 83.3%）虽然也不错，但Ambessa胜率偏低；Faker的Anivia（77.8%）是招牌但容易被BAN针对。全局BP下，BLG可用的备用英雄更多（Bin有Yorick/Jax、Knight有Cassiopeia/Orianna），T1在打到第四、五局时BP选择会显著受限。此外，BLG场均游戏时长32.8分钟偏向中后期运营团战，T1则善于翻盘和韧性局，两队在比赛节奏上存在风格碰撞。\",\n    \"h2h_psych\": \"两队历史交手记录为零（context_pack中meetings=0），但这是MSI淘汰赛首轮的中韩焦点战。T1拥有9次MSI参赛经历（历史第一），Faker刚完成MSI 100胜里程碑，是国际赛经验最丰富的选手。BLG连续第4年、Bin连续第5年参加MSI，此前最好成绩为亚军，始终未能突破最后一步。心理层面，T1在韩国大田主场作战，拥有现场观众支持，且从入围赛9-0一路碾压获得正赛门票，士气正盛、手感已热身完毕。BLG则跳过了入围赛直接晋级，休息时间较长（自6月14日LPL决赛后约20天未打正式比赛），可能面临慢热风险——正如Knight在采访中所说我们有一段时间没和他们交过手了。体力方面，T1在6月28日-7月1日连打三场BO5共9局、有一定消耗；BLG则是以逸待劳。Caedrel的赛前预测将HLE排第一、BLG第二、T1第三，外媒夺冠概率LCK 66% vs LPL 30%，舆论整体略微看好LCK，这可能给BLG带来额外证明自己的动力。Bin与Doran的世一上之争为比赛增添了个人对决的戏剧性和心理压力。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.62,\n    \"red\": 0.38\n  },\n  \"predicted_winner\": \"blue\",\n  \"series_score\": \"3-1\",\n  \"series_length\": 4,\n  \"favored_side\": \"blue_strong\",\n  \"key_players\": [\n    {\n      \"player\": \"Bin\",\n      \"team\": \"blue\",\n      \"role\": \"top\",\n      \"reason\": \"对位T1最大弱点Haetae（Doran），Bin的压制力有望在上路直接打出突破口。Jayce、Gnar、Jax等英雄均处于版本强势期，若取得线权可辐射全局。\"\n    },\n    {\n      \"player\": \"Knight\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"reason\": \"赛季KDA 7.41、被外媒誉为世界第一中单，LeBlanc、Ryze、Viktor均为100%胜率绝活。与Faker的中路对决是系列赛的风向标。\"\n    },\n    {\n      \"player\": \"Faker\",\n      \"team\": \"red\",\n      \"role\": \"mid\",\n      \"reason\": \"MSI 100胜里程碑持有者、历史最伟大选手。即便近期数据不如Knight，Faker的关键局经验和翻盘嗅觉是T1能在劣势局中翻盘的最大依仗。\"\n    },\n    {\n      \"player\": \"Xun\",\n      \"team\": \"blue\",\n      \"role\": \"jun\",\n      \"reason\": \"赛季KDA 5.88、Lee Sin和Jarvan IV胜率极高，前期节奏能力将决定BLG能否尽早建立优势滚起雪球。\"\n    },\n    {\n      \"player\": \"Cloud\",\n      \"team\": \"red\",\n      \"role\": \"sup\",\n      \"reason\": \"KDA 4.97全队最稳定、Alistar和Karma均为高胜率。作为T1的节奏发动机和团战关键先生，他是T1下路对抗Viper加ON组合的核心保障。\"\n    },\n    {\n      \"player\": \"ON\",\n      \"team\": \"blue\",\n      \"role\": \"sup\",\n      \"reason\": \"Bard（71.4%）和Seraphine（100%）在当前版本极为强势，ON的游走和开团能力是BLG中期节奏的关键催化剂。\"\n    }\n  ],\n  \"swing_factors\": [\n    \"Haetae（Doran）的对线表现：入围赛被外卡上单多次单杀，若面对Bin再度崩线，T1将被迫倾斜大量资源保护上路，打乱全局节奏\",\n    \"全局BP赛制下的英雄池深度：BLG可用的英雄组合更多（Bin有6个、Knight有6个高胜率英雄），第3到5局T1的BP空间将急剧收窄\",\n    \"Viper的状态：被Caedrel评价为仍在找状态像个乘客，若其未能发挥作用，BLG的火力输出将过度依赖上中两条单人线\",\n    \"T1的翻盘韧性：入围赛多次在落后5千多经济下凭团战翻盘，Faker加Cloud的后期决策能力不容低估\",\n    \"BLG的慢热风险：自6月14日LPL决赛后近20天未打正式比赛，而T1已完成9局热身，BLG第一局可能需时间适应\",\n    \"韩国大田主场优势：现场观众支持T1，可能在关键时刻影响选手心态和沟通\"\n  ],\n  \"meta_style_signals\": [\n    \"全局BP（Fearless Draft）Bo5：强调英雄池深度和战术多样性，BLG的可用英雄池比T1更广\",\n    \"上单位置强度决定比赛走向：Sion、Jayce、Gnar版本强势，Bin的英雄池完美覆盖且胜率极高\",\n    \"打野前期节奏关键：Jarvan IV、Lee Sin、Xin Zhao为版本主流，Xun在Jarvan（88.9%胜率）上拥有绝对自信\",\n    \"辅助游走型英雄（Bard/Seraphine）优先级高：ON的Seraphine 100%胜率是BLG的隐藏王牌\"\n  ],\n  \"sources\": [\n    {\n      \"query\": \"BLG vs T1 MSI 2026 knockout prediction\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"BILIBILI GAMING BLG roster 2026 Viper Knight Bin\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"T1 roster 2026 Haetae Painter Jinbeom Cloud Faker\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"MSI 2026 League of Legends bracket results\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"BLG Viper ADC 2026 LPL performance MSI preview\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"LoL patch 2026 MSI meta tier list current\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"Bin vs Doran head to head record 2025 2026\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"MSI 2026 meta picks bans global BP strongest champions\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"BLG T1 MSI 2026 prediction analysis betting odds\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"T1 weaknesses MSI 2026 Doran laning phase problems Oner Faker\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    },\n    {\n      \"query\": \"BLG Bin Knight Xun Viper ON MSI 2026 form strengthen\",\n      \"accessed_at\": \"2026-07-02T01:52:05Z\"\n    }\n  ]\n}",
+  "thinking_text": "Let me analyze this match between BILIBILI GAMING (BLG) and T1 in MSI Knockouts, scheduled for July 3, 2026. This is a Bo5 series.\n\nLet me start by understanding the data provided:\n\n**BLG (Blue side):**\n- Top: Bin\n- Jungle: Xun\n- Mid: Knight\n- ADC: Viper\n- Support: ON\n- Recent form: 8-2 in last 10 games (80% win rate)\n- Overall objective control is strong\n\n**T1 (Red side):**\n- Top: Haetae\n- Jungle: Painter\n- Mid: Faker\n- ADC: Jinbeom\n- Support: Cloud\n- Recent form: 5-5 in last 10 games (50% win rate)\n- T1 has some newer/less experienced players\n\nKey observations from the data:\n1. BLG has Viper as ADC - this is notable as Viper was previously on HLE/EDG, now on BLG\n2. T1 has several names I don't recognize from classic T1: Haetae (top), Painter (jungle), Jinbeom (ADC), Cloud (support). Only Faker remains.\n3. T1's recent form is concerning: 5-5 in last 10, with losses to Gen.G and HLE\n4. BLG is 8-2 in last 10\n\nLet me now search for more information about these teams, the MSI 2026 context, and the current meta.\nInteresting findings from the search results:\n\n1. The T1 roster being mentioned in the search results is DIFFERENT from what's in the context_pack. The search results mention: Doran (top), Oner (jungle), Faker (mid), Peyz (ADC), and what seems like a different support. But the context_pack shows: Haetae (top), Painter (jungle), Faker (mid), Jinbeom (ADC), Cloud (support).\n\nWait, this is confusing. Let me re-read...\n\nThe search results from #2 say: \"Peyz五杀泽丽全场carry\" and mention \"Oner赵信\" and \"Doran安蓓萨\" and \"Faker岩雀\". So the actual T1 roster in the search results seems to be: Doran (top), Oner (jungle), Faker (mid), Peyz (ADC), and some support. But the context_pack shows Haetae, Painter, Jinbeom, Cloud.\n\nThis is a discrepancy. The context_pack is the official data from the system, and it shows the roster that will be used for this match. Let me search more specifically.\n\nActually wait - the context_pack lists the roster for THIS match. The search results about T1's MSI 2026 run mention Doran, Oner, Peyz etc. as being the actual T1 players. But the context_pack has completely different names: Haetae, Painter, Jinbeom, Cloud.\n\nThis is very odd. Let me search more specifically about T1's actual roster for this match.\n\nActually, looking more carefully at the search results, result #1 mentions \"Doran\" multiple times. Let me search for T1's current roster more specifically.\n\nLet me also check: the match is BLG vs T1 on July 4, 2026 (based on result #3 which says \"7月4日 16:00 BLG vs T1\"). But the context_pack says July 3. There might be timezone differences.\n\nThe context_pack is the ground truth provided by the system. It lists the rosters as they will be for this match. The search results show different players - but those might be referring to T1's earlier MSI matches, not necessarily this specific match. Or the context_pack might have different/alternate names.\n\nActually wait - I should trust the context_pack for the official match data. The search results might be using different names or the context_pack might have updated roster info. Let me search more.\n\nBut actually, re-reading result #2 more carefully: \"Oner赵信抓下，Peyz伊泽瑞尔击杀芮尔拿到一血\" - this is describing T1's match against TLAW. The context mentions Doran, Oner, Faker, Peyz. But in the context_pack, the T1 roster is Haetae, Painter, Faker, Jinbeom, Cloud.\n\nThis is a major discrepancy. The context_pack might be using different player IDs or the data might be from a different time. But for the purpose of this prediction, I must use the context_pack data as the baseline. The web search results might be from different sources or using different naming conventions.\n\nWait, actually, result #6 says \"T1 9:0 进入正赛\" and mentions Doran, Oner, Faker, Peyz, and what appears to be a support. But the context_pack shows T1's recent 10 games with 5-5 record, which doesn't match the \"9-0 in MSI play-ins\" narrative.\n\nHmm, I think there might be a disconnect. The context_pack's recent_form for T1 shows LCK matches (against Gen.G, HLE, BFX) from June, while the MSI play-in results are from June 28-July 1. The context_pack data was collected on July 2, so it should include some MSI data...\n\nActually, looking at the recent_form data more carefully:\n- T1's recent matches include dates 2026-06-14 (vs Gen.G, LCK), 2026-06-12 (vs HLE, LCK), 2026-05-30 (vs BFX, LCK)\n- But the team_series_history shows T1 playing MSI matches: 2026-07-01 (vs TLAW), 2026-06-29 (vs KC), 2026-06-28 (vs TLAW) - all 3-0 sweeps\n\nSo the recent_form (last 10 games) shows T1 at 5-5, but their recent MSI series history shows dominating 3-0 sweeps in the play-in stage. The recent_form might not have been updated with MSI play-in games.\n\nAnd the roster discrepancy: the search results consistently mention Doran, Oner, Peyz as T1 players during MSI 2026. But the context_pack shows Haetae, Painter, Jinbeom. This is very strange. Let me search for clarification.\n\nActually, perhaps the context_pack is using a different database or the player names are coded differently. The context_pack is the \"ground truth\" for this prediction task. Let me proceed with the context_pack data but use web search to supplement.\n\nLet me search for more specific information about the matchup.\nVery important findings:\n\n1. The T1 actual MSI 2026 roster is: Doran (top), Oner (jungle), Faker (mid), Peyz (ADC), and Keria (support) - based on all the search results consistently mentioning these names. But the context_pack shows Haetae, Painter, Jinbeom, Cloud. This is a major discrepancy.\n\n2. The search results consistently mention Doran, Oner, Faker, Peyz, Keria as T1's active players for MSI 2026. The context_pack might have some kind of anonymized/placeholder names or it could be from a different dataset.\n\n3. T1 went 9-0 in MSI play-ins (3-0 vs TL, 3-0 vs KC, 3-0 vs TL again). They are showing strong form despite some shaky moments.\n\n4. BLG won LPL second stage 3-0 vs TES, with Viper as their ADC. Caedrel noted Viper is \"still finding his form\" and is \"like a passenger\" at times.\n\n5. Bin vs Doran is being billed as the \"world's best top laner\" matchup.\n\n6. BLG has been to 4 consecutive MSIs, with two runner-up finishes.\n\n7. The match is scheduled for July 4, 2026 (based on search results), though context_pack says July 3 - likely timezone difference.\n\n8. Caedrel's power ranking: HLE > BLG > T1 (all S-tier), with T1 slightly behind.\n\n9. BLG's recent form: 3-0 sweep of TES in LPL finals, but had a tough 3-2 series vs WE before that. Their ADC Viper has been inconsistent.\n\nNow, I need to work with the context_pack data while acknowledging the real-world information. The context_pack is the official system data for this prediction. Let me use the web search to get additional context and then make my prediction based on all available evidence.\n\nKey facts for my analysis:\n\n**BLG:**\n- Recent 10 games: 8-2 (80% win rate)\n- Recent LPL champions, 3-0 sweep of TES\n- Strong solo lanes: Bin (top) and Knight (mid)\n- Viper ADC - good stats but Caedrel says he's \"like a passenger\"\n- Xun jungle with strong Lee Sin (100% WR) and Jarvan IV (88.9% WR)\n- ON support with Seraphine (100% WR) and Bard\n- High objective control rates\n- Bin: KDA 4.62, consistency 59.67\n- Knight: KDA 7.41, consistency 29.7 (volatile but high ceiling)\n- BLG sweep_rate: 0.429, swept_rate: 0.143\n\n**T1 (per context_pack - Haetae, Painter, Faker, Jinbeom, Cloud):**\n- Recent 10 games: 5-5 (50% win rate) - but these are LCK games\n- However, MSI play-in results show dominant 9-0 record\n- Faker is the only veteran, with newer players around him\n- Haetae top: KDA 3.25, consistency 61.75\n- Painter jungle: KDA 3.25, consistency 60.61\n- Faker mid: KDA 3.23, consistency 56.35\n- Jinbeom ADC: only 4 games analyzed, KDA 2.92\n- Cloud support: KDA 4.97, consistency 65.3\n- T1 sweep_rate: 0.469, swept_rate: 0.102\n\nWait, looking at the T1 recent series more carefully: T1 swept TLAW 3-0 (July 1), swept KC 3-0 (June 29), swept TLAW 3-0 (June 28), beat Gen.G 3-2 (June 14), lost to HLE 1-3 (June 12). That's a strong MSI showing.\n\nBut the context_pack's recent_form (10 games, 5-5) seems to be from LCK only. The MSI play-in data is in team_series_history.\n\nGiven that the actual T1 roster is Doran/Oner/Faker/Peyz/Keria (as per all search results) but the context_pack has different names, I should base my analysis primarily on the context_pack data while incorporating the real-world information from searches. The context_pack is the \"ground truth\" for this task.\n\nLet me also search for more specific matchup analysis and recent meta information.\n\nActually, let me reconsider. The context_pack is an official dataset. Maybe the names Haetae, Painter, Jinbeom, Cloud are alternate names/codes used in this system. The search results are clear that the actual T1 roster playing MSI 2026 is Doran, Oner, Faker, Peyz, and Keria. But for the prediction, I need to use the context_pack as the baseline. I'll note the real-world info in my reasoning.\n\nActually, wait - looking again at the context_pack more carefully:\n- The data was collected at \"2026-07-02T01:52:05Z\"\n- T1's recent_form shows games from May 30 to June 14 - these are LCK matches only\n- T1's team_series_history shows MSI play-in matches from June 28 to July 1\n\nSo the recent_form hasn't been updated with MSI play-in games. But T1 went 9-0 in play-ins which is very strong.\n\nLet me now search for more specific matchup analysis and meta information.\nLet me now search for more specific information about T1's recent form and weaknesses, and also about BLG's current state going into MSI.\n\nKey findings so far:\n1. T1 roster in reality: Doran, Oner, Faker, Peyz, Keria - but context_pack has different names\n2. T1 went 9-0 in MSI play-ins (3 sweeps)\n3. BLG won LPL 3-0 over TES, Viper seen as inconsistent\n4. Caedrel ranks: HLE > BLG > T1\n5. Doran is seen as a weakness/fragile point for T1 (good in teamfights, struggles in lane)\n6. BLG's solo lanes (Bin, Knight) are seen as dominant\n7. Match scheduled for July 4, 2026\n\nLet me get more specific analysis about the matchup.\nLet me compile everything I've gathered from the search results and the context_pack to build my analysis.\n\n## Key findings from web search:\n\n### T1 Roster Note:\n- The context_pack lists T1 players as Haetae, Painter, Faker, Jinbeom, Cloud\n- BUT all the search results (news articles) refer to T1 players as: **Doran, Oner, Faker, Peyz, Keria** — these are the real T1 players\n- Haetae/Painter/Jinbeom/Cloud are likely aliases/codenames used in this simulation data\n- I need to use the aliases in context_pack but map them to their real counterparts for analysis:\n  - Haetae = Doran (top)\n  - Painter = Oner (jungle)\n  - Faker = Faker (mid)\n  - Jinbeom = Peyz (ADC)\n  - Cloud = Keria (support)\n\n### T1 MSI 2026 form:\n- T1 went 9-0 through play-ins (3 × 3-0 sweeps over TLAW/TL and KC)\n- T1 showed resilience, coming back from deficits\n- Doran (Haetae) was a major weakness — frequently solo-killed, lost lane, but performed better in teamfights\n- Oner (Painter) was dominant in play-ins\n- Peyz (Jinbeom) was in great form — got a pentakill\n- Faker performed well overall\n\n### BLG form:\n- BLG won LPL 2nd Stage, 3-0 over TES in the final\n- BLG had a tough series against WE (3-2) but won\n- Bin, Knight in excellent form\n- Viper reportedly \"looking for form,\" described as \"a passenger\" by Caedrel\n- Caedrel ranks HLE > BLG > T1\n- General consensus: BLG among top 3 favorites\n\n### Head-to-head context:\n- No direct H2H history from context_pack data (meetings: 0)\n- Bin vs Doran is a major storyline (\"world's best top\" debate)\n- BLG vs T1 will be played July 4\n\n### Meta context:\n- MSI uses Global BP (Fearless draft) for Bo5\n- Patch 16.11/16.12 based on LoLalytics data\n- Champions seen: Sion, Jayce, Gnar, Rumble, Ambessa, Renekton, etc.\n\nNow let me construct the reasoning:\n\n## Analysis\n\n### Overall:\nBLG enters as slight favorites. Both teams are S-tier, but BLG's dominant LPL run and T1's exploitable top lane weakness (Haetae/Doran) give BLG the edge. T1's 9-0 play-in run was against much weaker opposition, masking structural issues.\n\n### Fundamentals:\n- BLG: 8-2 in last 10, 76.56% win rate overall (64 games). Won LPL 2nd stage, 3-0 sweep over TES. Strong objective control (56.8% dragon, 63.4% baron). Knight has 7.41 KDA, 76.56% win rate.\n- T1: Only 5-5 in last 10 LCK matches. Lost to GEN (1-3) and HLE (1-3). 9-0 in play-in but weak opponents. T1 has better overall record (74.07% in 54 games) but recent LCK form is concerning. Jinbeom (Peyz) only 4 games analyzed.\n- Key concern: Viper's integration into BLG still a question mark per Caedrel. But BLG's solo lanes (Bin, Knight) are elite.\n\n### Matchups:\n- Top: Bin >> Haetae (Doran). Bin has 4.62 KDA, 76.56% win rate, Jayce 87.5% WR, Gnar 83.3%, Jax 100%. Haetae (Doran) is the weakest link on T1 — consistently solo-killed in play-ins by Morgan. Bin should dominate this lane which creates snowball potential for BLG.\n- Jungle: Xun (5.88 KDA, Lee Sin 100%, Jarvan 88.9%) vs Painter/Oner (3.25 KDA). Xun has better KDA and consistency, but Painter has clutch potential.\n- Mid: Knight (7.41 KDA, 76.56% WR) vs Faker (3.23 KDA, 66.1% WR). Knight is statistically far superior and was called \"world's best player\" by analysts. Knight's champion pool (LeBlanc, Ryze, Viktor, Annie) is versatile. Faker still has Anivia (77.8%), Akali/Orianna (100%) but his overall stats are lower.\n- ADC: Viper (6.21 KDA, 75.31% WR) vs Jinbeom/Peyz (2.92 KDA, only 4 games, 50% WR). Viper's stats are strong but analyst noted he's \"still finding form.\" Jinbeom's sample size is tiny, but Peyz was very good in play-ins.\n- Support: ON (4.15 KDA, 76.56% WR, Bard 71.4%, Seraphine 100%) vs Cloud/Keria (4.97 KDA, 60% WR). Both are elite playmakers. Slight edge to Cloud for KDA consistency.\n\n### Meta/Style:\n- MSI uses Global BP (Fearless draft) — favors teams with deep champion pools\n- BLG's champion pool depth appears stronger: Bin (Sion, Jayce, Gnar, Rumble, Yorick, Jax), Knight (Annie, LeBlanc, Ryze, Viktor, Cassiopeia, Orianna), Xun (Jarvan, Pantheon, Lee Sin, Wukong, Xin Zhao, Poppy)\n- T1 relies heavily on specific picks: Haetae (Sion, Ambessa, Renekton), Faker (Anivia, TF), Painter (Vi, Xin Zhao)\n- BLG's teamfight is self-described as their strength (per Knight interview). T1 is known for resilience and comebacks.\n\n### H2H/Psych:\n- No direct H2H in data. But T1 has massive MSI/worlds experience (9 MSI appearances, most ever). Faker's big-game experience is unmatched.\n- BLG: 4th consecutive MSI, but never won it (two runner-ups). Bin's 5th MSI.\n- T1 has home crowd advantage (Korea).\n- T1 came from play-ins — more warm-up matches but also more fatigue risk.\n- BLG rested but could be cold.\n\n### Series prediction:\n- BLG sweep_rate: 42.9%, T1 sweep_rate: 46.9%\n- BLG swept_rate: 14.3%, T1 swept_rate: 10.2%\n- Both teams have high sweep rates. BLG's recent sweep of TES (3-0) shows dominance.\n- However, this is S-tier vs S-tier. T1's play-in form (9-0) = momentum.\n- Given BLG's edge in solo lanes and T1's top lane vulnerability, BLG should win.\n- T1's resilience suggests they'll take at least 1 game → 3-1 for BLG.\n- Actually, let me reconsider. BLG sweep_rate is 42.9% — very high. T1 swept_rate is only 10.2% (rarely gets swept). So 3-0 is less likely.\n- BLG avg series length 2.9, T1 avg 2.9 → both close to 3 → tight series.\n- Given the gap is significant but T1 has Faker/resilience: 3-1 BLG.\n\nWin probs: BLG ~0.62, T1 ~0.38\n\nLet me finalize.\n\nActually, I need to be more careful. Let me review the data again:\n\nBLG's roster per context_pack: Bin, Xun, Knight, Viper, ON\nT1's roster per context_pack: Haetae, Painter, Faker, Jinbeom, Cloud\n\nBut from web search, T1's actual MSI roster is: Doran, Oner, Faker, Peyz, Keria.\n\nThe context_pack uses aliases (likely anonymized), but the stats align. I should use the names from context_pack in my output.\n\nImportant details:\n- Haetae (Doran): KDA 3.25, win rate 63.64%, champion pool Sion/Ambessa/Renekton. Weak laning, good teamfighting.\n- Painter (Oner): KDA 3.25, win rate 68.97%, champion pool Vi/Xin Zhao/Pantheon\n- Jinbeom (Peyz): KDA 2.92, only 4 games analyzed, 50% WR. Champion pool Jhin/Caitlyn/Ashe\n- Cloud (Keria): KDA 4.97, win rate 60%, champion pool Bard/Alistar/Poppy\n\nBLG:\n- Bin: KDA 4.62, WR 76.56%, Jayce 87.5%, Sion 80%, Gnar 83.3%\n- Xun: KDA 5.88, WR 76.56%, Jarvan 88.9%, Lee Sin 100%\n- Knight: KDA 7.41, WR 76.56%\n- Viper: KDA 6.21, WR 75.31%, Caitlyn 75%, Ezreal 80%\n- ON: KDA 4.15, WR 76.56%\n\nThe gap is clear: BLG is statistically superior in almost every metric. The main question is whether T1's big-game experience can overcome this.\n\nFor series_score: BLG handily favored. Sweep_rate 42.9% for BLG is high but T1's swept_rate is only 10.2% (very hard to sweep). T1's recent LCK form (5-5) is mediocre but they won play-ins convincingly. Given the home crowd and Faker factor, I'll go 3-1.\n\nWin probs: BLG 0.62, T1 0.38\n\nKey players:\n1. Bin (BLG top) - massive lane advantage over Haetae\n2. Knight (BLG mid) - best player in the world right now\n3. Faker (T1 mid) - clutch factor, experience\n4. Xun (BLG jungle) - high KDA, strong early game\n5. Cloud (T1 support) - playmaker\n6. Viper (BLG ADC) - needs to show up\n\nSwing factors:\n- Haetae/Doran's laning phase — if he gets solo-killed repeatedly by Bin, T1's gameplan collapses\n- Global BP depth — BLG has wider champion pools\n- T1's comeback/resilience factor\n- BLG could be cold after not playing for weeks\n- Viper's form — if he's still \"passenger mode,\" T1 can exploit bot lane\n- Home crowd advantage for T1\n\nMeta signals:\n- Global BP/Fearless draft rewards deep champion pools\n- Patch favors strong solo lanes (Bin/Knight advantage)\n- Sion/Rumble/Jayce/Gnar in top meta\n- Mage supports (Seraphine, Bard) are strong — ON excels here\n\nLet me now write the final JSON.",
+  "sources": [
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:36Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:39Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:39Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:44Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:44Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:44Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:44Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:14Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:14Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:14Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:14Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:14Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:16Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:16Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:16Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:16Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:16Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:16Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list current",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:19Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list current",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "Bin vs Doran head to head record 2025 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:51Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list current",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "Bin vs Doran head to head record 2025 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "MSI 2026 meta picks bans global BP strongest champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:53Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list current",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "Bin vs Doran head to head record 2025 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "MSI 2026 meta picks bans global BP strongest champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "BLG T1 MSI 2026 prediction analysis betting odds",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:54:56Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list current",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "Bin vs Doran head to head record 2025 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "MSI 2026 meta picks bans global BP strongest champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "BLG T1 MSI 2026 prediction analysis betting odds",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "T1 weaknesses MSI 2026 Doran laning phase problems Oner Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:05Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG roster 2026 Viper Knight Bin",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "T1 roster 2026 Haetae Painter Jinbeom Cloud Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "MSI 2026 League of Legends bracket results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "T1 MSI 2026 Doran Oner Peyz roster vs BLG July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "BLG Viper ADC 2026 LPL performance MSI preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list current",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "Bin vs Doran head to head record 2025 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "MSI 2026 meta picks bans global BP strongest champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "BLG T1 MSI 2026 prediction analysis betting odds",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "T1 weaknesses MSI 2026 Doran laning phase problems Oner Faker",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    },
+    {
+      "query": "BLG Bin Knight Xun Viper ON MSI 2026 form strengths",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:55:08Z"
+    }
+  ],
+  "input_tokens": 263843,
+  "output_tokens": 15853,
+  "tool_calls": 12,
+  "cost_usd": 0.122976,
+  "wall_seconds": 282.21,
+  "error": null
+}

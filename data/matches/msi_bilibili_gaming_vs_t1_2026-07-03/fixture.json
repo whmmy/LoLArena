@@ -1,0 +1,58 @@
+{
+  "id": 115570934355614527,
+  "name": "BILIBILI GAMING vs T1",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 5,
+  "begin_at": "2026-07-03T03:00:00.000Z",
+  "scheduled_at": "2026-07-03T03:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "blg",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "blg",
+        "image_url": "https://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "blg",
+      "score": 0
+    },
+    {
+      "team_id": "t1",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-msi",
+    "name": "MSI",
+    "slug": "msi"
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-msi_2026"
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Knockouts",
+  "round": null,
+  "vod_url": null
+}

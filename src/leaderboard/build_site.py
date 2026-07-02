@@ -135,13 +135,14 @@ def _all_matches() -> list[dict]:
             "slug": mdir.name,
             # Serialise as a STRING: Cito/Riot match ids are 18-digit integers
             # that exceed JS Number.MAX_SAFE_INTEGER, so JSON.parse + Number()
-            # on the frontend silently corrupt them (...369 -> ...370). The
+            # on the frontend silently corrupts them (...369 -> ...370). The
             # frontend carries this string through verbatim (no Number()).
             "match_id": str(fixture["id"]) if fixture.get("id") is not None else None,
             "league": header.get("league") or (fixture.get("league") or {}).get("name"),
             "blue": blue, "red": red,
             "blue_image_url": blue_image_url, "red_image_url": red_image_url,
             "begin_at": fixture.get("begin_at"),
+            "number_of_games": fixture.get("number_of_games") or 5,  # BoN, drives the manual-BP game picker
             "status": status,   # corrected status (post-grade truth wins over stale fixture)
             "truth": truth,
             "predictions": preds,

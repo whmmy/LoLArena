@@ -1,0 +1,249 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "match",
+  "target_id": "msi_hanwha_life_esports_vs_team_secret_whales_2026-07-04",
+  "submitted_at": "2026-07-02T01:38:27.780971+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "HLE作为LCK一号种子、本届MSI夺冠概率最高的队伍（外媒给出38%），面对LCP赛区冠军TSW拥有压倒性的赛区实力差、国际大赛经验与主场优势，预测HLE横扫晋级。",
+      "fundamentals": "HLE近10场6胜4负（60%），在LCK MSI选拔赛中3-1击败T1锁定一号种子，展现出极强的Bo5调整能力；Zeus（60.47%胜率、3.1 KDA）与Gumayusi（60.47%胜率、3.57 KDA）是经历过多次MSI/世界赛的世界级选手，英雄池深厚（Zeus的Sion/Jayce、Gumayusi的Caitlyn/Ziggs均高胜率）。但Jackal（29.17%胜率）和Cracker（32.14%胜率）个人数据偏低，是潜在隐患。TSW近10场7胜3负（70%），在LCP赛区统治力强，但在Kickoff 2026中被DCG（PCS升班马）1-3和2-2两度逼入苦战，暴露出面对稍强对手时收官阶段不稳定的问题，教练WarHorse也承认队伍在高压下存在短板。",
+      "matchups": "上路：Zeus（Sion 5-1、Jayce 4-0）对阵Hiro02（仅1场数据样本），Zeus的英雄池深度与对线经验远超对手，HLE上路优势明显。打野：Hizto（72%胜率、5.46 KDA、Vi 7-0）数据亮眼，但LCP竞争强度远低于LCK；Jackal虽然胜率偏低但面对T1时表现出色，且HLE整体运营弥补个人波动，此位置TSW略有数据优势但实战差距存疑。中路：Dire（72%胜率、Ahri 7-0、Ryze 6-1）在LCP表现统治级，但Cracker在LCK高强度对抗中积累了更丰富的经验，对位接近均势。下路：Gumayusi（连续五年MSI经验、Caitlyn 5-0）对阵Eddie（6.67 KDA），Gumayusi的大赛心态和英雄池是决定性优势。辅助：Bie（Nautilus 7-2）与Bluffing实力接近，但Bluffing与Gumayusi的默契度更高。团战方面，HLE的Baron控制率（62.9%）和推塔效率（场均6.26塔）在LCK级别对抗中已得到验证，TSW虽然数据更好（69.2% Baron控制率）但对手强度不可同日而语。",
+      "meta_style": "当前MSI版本延续全局BP模式，Bo5对英雄池深度和战术储备要求极高。HLE拥有Zeus的多面手英雄池（Sion/Yorick/Jayce/Rumble/K'Sante）、Gumayusi的多样ADC选择（Caitlyn/Ziggs/Corki/MF/Ashe），战术灵活度高。TSW的核心阵容围绕Hizto的Vi/Xin Zhao/Jarvan IV突进体系和Dire的Ahri/Ryze/Aurora控制链，风格较为固定。在LCK级别的高压BP环境中，HLE的阵容深度和教练组准备更充分。版本偏向中前期节奏争夺与Baron窗口期决策，HLE在LCK中已反复验证了这些关键节点的执行力。",
+      "h2h_psych": "两队无历史交手记录。但心理层面差距巨大：Zeus与Gumayusi自2022年起连续参加MSI（2022亚军、2023/2024季军），拥有丰富的国际大赛经验和抗压能力；TSW全员为越南选手，国际赛经验有限，且TSW官方社交媒体在抽签结果出炉后发文'见鬼别搞我们'，LCP官推也表示'我们是不是要完蛋了'，显示出明显的心理劣势。MSI在韩国大田举办，HLE享有主场优势，TSW需要适应长途旅行与时差。TSW教练WarHorse赛前表示一直在研究T1比赛来准备，但面对实力更强的HLE，临场调整空间极为有限。"
+    },
+    "win_probs": {
+      "blue": 0.83,
+      "red": 0.17
+    },
+    "predicted_winner": "blue",
+    "series_score": "3-0",
+    "series_length": 3,
+    "favored_side": "blue_strong",
+    "key_players": [
+      {
+        "player": "Zeus",
+        "team": "blue",
+        "role": "top",
+        "reason": "前T1世界冠军上单，Sion/Jayce等英雄胜率极高，对线压制力与团战切入是HLE前期节奏的核心支点"
+      },
+      {
+        "player": "Gumayusi",
+        "team": "blue",
+        "role": "adc",
+        "reason": "连续五年MSI经验的历史级ADC，Caitlyn 5-0、Ziggs 4-0，大赛心态稳定，是HLE后期输出的绝对保障"
+      },
+      {
+        "player": "Dire",
+        "team": "red",
+        "role": "mid",
+        "reason": "TSW核心carry点，Ahri 7-0、Ryze 6-1，若能在中路打开局面是TSW唯一可能制造 upset 的关键"
+      },
+      {
+        "player": "Hizto",
+        "team": "red",
+        "role": "jun",
+        "reason": "Vi 7-0的完美胜率，TSW前期节奏引擎，能否在野区压制Jackal决定TSW是否有机会"
+      },
+      {
+        "player": "Cracker",
+        "team": "blue",
+        "role": "mid",
+        "reason": "个人胜率偏低（32%）但LCK高强度对抗经验丰富，若被Dire压制可能成为HLE的薄弱环节"
+      }
+    ],
+    "swing_factors": [
+      "LCK与LCP赛区实力鸿沟：HLE在LCK中击败T1、与Gen.G鏖战，竞争强度远超TSW在LCP面对DCG/SAI的比赛",
+      "HLE中野状态波动：Jackal（29%胜率）和Cracker（32%胜率）若在国际赛压力下失常，可能给TSW可乘之机",
+      "TSW心理劣势：抽签后官方社交媒体表达恐惧，未战先怯的心态可能影响临场发挥",
+      "主场优势：MSI在韩国大田举办，HLE无需适应环境，TSW面临长途旅行与时差调整",
+      "全局BP下的英雄池深度：Bo5中HLE的多面手阵容（Zeus 6+英雄、Gumayusi 6+英雄）比TSW更耐消耗",
+      "TSW收官阶段稳定性：教练WarHorse承认队伍在高压下存在短板，面对HLE的运营压力可能放大这一问题"
+    ],
+    "meta_style_signals": [
+      "全局BP模式下Bo5对英雄池深度要求极高，HLE上单Zeus和ADC Gumayusi的多英雄熟练度是核心优势",
+      "版本偏向中前期节奏争夺与Baron窗口期决策，HLE在LCK中Baron控制率62.9%已验证执行力",
+      "突进型打野（Vi/Xin Zhao/Jarvan IV）为双方共同核心选择，Hizto的Vi 7-0 vs Jackal的Vi 1-2形成鲜明对比",
+      "控制型中单（Ahri/Ryze/Orianna）在版本中地位稳固，Dire的Ahri 7-0是TSW最重要的BP资产"
+    ],
+    "sources": [
+      {
+        "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+        "accessed_at": "2026-07-02T01:35:00Z"
+      },
+      {
+        "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+        "accessed_at": "2026-07-02T01:35:00Z"
+      },
+      {
+        "query": "Team Secret Whales VCS 2026 MSI performance",
+        "accessed_at": "2026-07-02T01:35:00Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta tier list champions",
+        "accessed_at": "2026-07-02T01:35:00Z"
+      },
+      {
+        "query": "TSW Team Secret Whales LCP 2026 roster results",
+        "accessed_at": "2026-07-02T01:36:00Z"
+      },
+      {
+        "query": "HLE Zeus Cracker Jackal LCK 2026 form performance",
+        "accessed_at": "2026-07-02T01:36:00Z"
+      },
+      {
+        "query": "LoL patch 25.13 MSI 2026 meta champions",
+        "accessed_at": "2026-07-02T01:36:00Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"HLE作为LCK一号种子、本届MSI夺冠概率最高的队伍（外媒给出38%），面对LCP赛区冠军TSW拥有压倒性的赛区实力差、国际大赛经验与主场优势，预测HLE横扫晋级。\",\n    \"fundamentals\": \"HLE近10场6胜4负（60%），在LCK MSI选拔赛中3-1击败T1锁定一号种子，展现出极强的Bo5调整能力；Zeus（60.47%胜率、3.1 KDA）与Gumayusi（60.47%胜率、3.57 KDA）是经历过多次MSI/世界赛的世界级选手，英雄池深厚（Zeus的Sion/Jayce、Gumayusi的Caitlyn/Ziggs均高胜率）。但Jackal（29.17%胜率）和Cracker（32.14%胜率）个人数据偏低，是潜在隐患。TSW近10场7胜3负（70%），在LCP赛区统治力强，但在Kickoff 2026中被DCG（PCS升班马）1-3和2-2两度逼入苦战，暴露出面对稍强对手时收官阶段不稳定的问题，教练WarHorse也承认队伍在高压下存在短板。\",\n    \"matchups\": \"上路：Zeus（Sion 5-1、Jayce 4-0）对阵Hiro02（仅1场数据样本），Zeus的英雄池深度与对线经验远超对手，HLE上路优势明显。打野：Hizto（72%胜率、5.46 KDA、Vi 7-0）数据亮眼，但LCP竞争强度远低于LCK；Jackal虽然胜率偏低但面对T1时表现出色，且HLE整体运营弥补个人波动，此位置TSW略有数据优势但实战差距存疑。中路：Dire（72%胜率、Ahri 7-0、Ryze 6-1）在LCP表现统治级，但Cracker在LCK高强度对抗中积累了更丰富的经验，对位接近均势。下路：Gumayusi（连续五年MSI经验、Caitlyn 5-0）对阵Eddie（6.67 KDA），Gumayusi的大赛心态和英雄池是决定性优势。辅助：Bie（Nautilus 7-2）与Bluffing实力接近，但Bluffing与Gumayusi的默契度更高。团战方面，HLE的Baron控制率（62.9%）和推塔效率（场均6.26塔）在LCK级别对抗中已得到验证，TSW虽然数据更好（69.2% Baron控制率）但对手强度不可同日而语。\",\n    \"meta_style\": \"当前MSI版本延续全局BP模式，Bo5对英雄池深度和战术储备要求极高。HLE拥有Zeus的多面手英雄池（Sion/Yorick/Jayce/Rumble/K'Sante）、Gumayusi的多样ADC选择（Caitlyn/Ziggs/Corki/MF/Ashe），战术灵活度高。TSW的核心阵容围绕Hizto的Vi/Xin Zhao/Jarvan IV突进体系和Dire的Ahri/Ryze/Aurora控制链，风格较为固定。在LCK级别的高压BP环境中，HLE的阵容深度和教练组准备更充分。版本偏向中前期节奏争夺与Baron窗口期决策，HLE在LCK中已反复验证了这些关键节点的执行力。\",\n    \"h2h_psych\": \"两队无历史交手记录。但心理层面差距巨大：Zeus与Gumayusi自2022年起连续参加MSI（2022亚军、2023/2024季军），拥有丰富的国际大赛经验和抗压能力；TSW全员为越南选手，国际赛经验有限，且TSW官方社交媒体在抽签结果出炉后发文'见鬼别搞我们'，LCP官推也表示'我们是不是要完蛋了'，显示出明显的心理劣势。MSI在韩国大田举办，HLE享有主场优势，TSW需要适应长途旅行与时差。TSW教练WarHorse赛前表示一直在研究T1比赛来准备，但面对实力更强的HLE，临场调整空间极为有限。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.83,\n    \"red\": 0.17\n  },\n  \"predicted_winner\": \"blue\",\n  \"series_score\": \"3-0\",\n  \"series_length\": 3,\n  \"favored_side\": \"blue_strong\",\n  \"key_players\": [\n    { \"player\": \"Zeus\", \"team\": \"blue\", \"role\": \"top\", \"reason\": \"前T1世界冠军上单，Sion/Jayce等英雄胜率极高，对线压制力与团战切入是HLE前期节奏的核心支点\" },\n    { \"player\": \"Gumayusi\", \"team\": \"blue\", \"role\": \"adc\", \"reason\": \"连续五年MSI经验的历史级ADC，Caitlyn 5-0、Ziggs 4-0，大赛心态稳定，是HLE后期输出的绝对保障\" },\n    { \"player\": \"Dire\", \"team\": \"red\", \"role\": \"mid\", \"reason\": \"TSW核心carry点，Ahri 7-0、Ryze 6-1，若能在中路打开局面是TSW唯一可能制造 upset 的关键\" },\n    { \"player\": \"Hizto\", \"team\": \"red\", \"role\": \"jun\", \"reason\": \"Vi 7-0的完美胜率，TSW前期节奏引擎，能否在野区压制Jackal决定TSW是否有机会\" },\n    { \"player\": \"Cracker\", \"team\": \"blue\", \"role\": \"mid\", \"reason\": \"个人胜率偏低（32%）但LCK高强度对抗经验丰富，若被Dire压制可能成为HLE的薄弱环节\" }\n  ],\n  \"swing_factors\": [\n    \"LCK与LCP赛区实力鸿沟：HLE在LCK中击败T1、与Gen.G鏖战，竞争强度远超TSW在LCP面对DCG/SAI的比赛\",\n    \"HLE中野状态波动：Jackal（29%胜率）和Cracker（32%胜率）若在国际赛压力下失常，可能给TSW可乘之机\",\n    \"TSW心理劣势：抽签后官方社交媒体表达恐惧，未战先怯的心态可能影响临场发挥\",\n    \"主场优势：MSI在韩国大田举办，HLE无需适应环境，TSW面临长途旅行与时差调整\",\n    \"全局BP下的英雄池深度：Bo5中HLE的多面手阵容（Zeus 6+英雄、Gumayusi 6+英雄）比TSW更耐消耗\",\n    \"TSW收官阶段稳定性：教练WarHorse承认队伍在高压下存在短板，面对HLE的运营压力可能放大这一问题\"\n  ],\n  \"meta_style_signals\": [\n    \"全局BP模式下Bo5对英雄池深度要求极高，HLE上单Zeus和ADC Gumayusi的多英雄熟练度是核心优势\",\n    \"版本偏向中前期节奏争夺与Baron窗口期决策，HLE在LCK中Baron控制率62.9%已验证执行力\",\n    \"突进型打野（Vi/Xin Zhao/Jarvan IV）为双方共同核心选择，Hizto的Vi 7-0 vs Jackal的Vi 1-2形成鲜明对比\",\n    \"控制型中单（Ahri/Ryze/Orianna）在版本中地位稳固，Dire的Ahri 7-0是TSW最重要的BP资产\"\n  ],\n  \"sources\": [\n    { \"query\": \"Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction\", \"accessed_at\": \"2026-07-02T01:35:00Z\" },\n    { \"query\": \"HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi\", \"accessed_at\": \"2026-07-02T01:35:00Z\" },\n    { \"query\": \"Team Secret Whales VCS 2026 MSI performance\", \"accessed_at\": \"2026-07-02T01:35:00Z\" },\n    { \"query\": \"LoL patch 2026 MSI meta tier list champions\", \"accessed_at\": \"2026-07-02T01:35:00Z\" },\n    { \"query\": \"TSW Team Secret Whales LCP 2026 roster results\", \"accessed_at\": \"2026-07-02T01:36:00Z\" },\n    { \"query\": \"HLE Zeus Cracker Jackal LCK 2026 form performance\", \"accessed_at\": \"2026-07-02T01:36:00Z\" },\n    { \"query\": \"LoL patch 25.13 MSI 2026 meta champions\", \"accessed_at\": \"2026-07-02T01:36:00Z\" }\n  ]\n}",
+  "thinking_text": "Let me analyze this match between Hanwha Life Esports (HLE) and Team Secret Whales (TSW) at MSI Knockouts. Let me first understand the data:\n\n**HLE (Blue side):**\n- Roster: Zeus (top), Jackal (jun), Cracker (mid), Gumayusi (adc), Bluffing (sup) - all Korean\n- Recent form: 6W-4L in last 10 games (60% win rate)\n- Beat T1 3-1, beat BRO, lost to Gen.G 1-2, lost to NS 1-1, lost to DK 0-2\n- Team objectives: 52% win rate over 50 games, dragon control 48.67%, baron control 62.9%\n- Series history: sweep rate 34.7%, swept rate 28.6%, avg series length 2.5\n\n**TSW (Red side):**\n- Roster: Hiro02 (top), Hizto (jun), Dire (mid), Eddie (adc), Bie (sup) - all Vietnamese\n- Recent form: 7W-3L in last 10 games (70% win rate)\n- Lost to DCG 1-3, lost to DCG 2-2, beat MVK 3-0, beat DFM 2-1, beat SGB 2-0\n- Team objectives: 65.45% win rate over 55 games, dragon control 57.21%, baron control 69.23%\n- Series history: sweep rate 38.8%, swept rate 24.5%, avg series length 2.6\n\nKey observations:\n- This is a cross-regional match (LCK vs VCS/LCP)\n- HLE has Zeus and Gumayusi - former T1 players with world championship experience\n- TSW is a Vietnamese team (Team Secret Whales)\n- HLE's recent series show mixed results but against top LCK competition\n- TSW's recent series show they lost to DCG twice but beat other teams\n\nLet me search for more information about this match, the current meta, and both teams.\nLet me analyze the search results and gather more information. Key findings so far:\n\n1. HLE is LCK #1 seed, beat T1 3-1 to qualify for MSI\n2. TSW is LCP #1 seed (Team Secret Whales)\n3. HLE roster: Zeus (top), Jackal (jun), Cracker (mid), Gumayusi (adc), Bluffing (sup) - all Korean\n4. TSW roster: Hiro02, Hizto, Dire, Eddie, Bie - all Vietnamese\n5. MSI 2026 is in Daejeon, Korea\n6. HLE, BLG, T1 are considered tier 1 favorites\n7. The match is in Knockouts stage, Bo5\n\nLet me search for more specific information about TSW and the current meta.\nLet me analyze the data I've gathered and make a comprehensive prediction.\n\nKey findings from web search:\n1. HLE is LCK #1 seed, beat T1 3-1 to qualify for MSI. They're considered one of the top favorites (38% win probability per foreign media).\n2. TSW is LCP #1 seed (Vietnamese team, formerly known as GAM/Team Secret Whales). They won LCP second split.\n3. TSW's reaction to drawing HLE: \"Oh no, don't do this to us!\" - LCP official: \"Are we done for?\"\n4. HLE roster: Zeus (top), Jackal (jungle), Cracker (mid), Gumayusi (adc), Bluffing (support) - all Korean\n5. TSW roster: Hiro02, Hizto, Dire, Eddie, Bie - all Vietnamese\n6. MSI 2026 is in Daejeon, Korea. HLE has home advantage.\n7. HLE is considered first tier along with BLG and T1.\n8. The match is in the Knockouts stage, Bo5.\n9. TSW coach WarHorse mentioned they've been working on fixing late-game issues and high-pressure stability.\n\nNow let me analyze the data:\n\n**HLE (Blue side):**\n- Recent form: 6W-4L in last 10 games (60% WR)\n- Beat T1 3-1 in LCK MSI qualifier\n- Lost to Gen.G 1-2, lost to NS 1-1, beat BRO 1-0\n- Zeus: 60.47% WR, 3.1 KDA, strong on Sion/Jayce/Yorick\n- Jackal: Only 29.17% WR in 24 games - concerning\n- Cracker: 32.14% WR in 28 games - also concerning\n- Gumayusi: 60.47% WR, 3.57 KDA, excellent on Caitlyn/Ziggs/Ashe\n- Bluffing: 35.48% WR - mediocre\n- Team objectives: 52% WR over 50 games, decent baron control (62.9%)\n- Series history: sweep_rate 0.347, swept_rate 0.286, avg_series_length 2.5\n\n**TSW (Red side):**\n- Recent form: 7W-3L in last 10 games (70% WR)\n- Won LCP second split championship\n- Lost to DCG 1-3 and 2-2 in recent series\n- Hizto: 72% WR, 5.46 KDA, excellent on Vi (7-0)/Xin Zhao/Jarvan IV\n- Dire: 72% WR, 5.49 KDA, dominant on Ahri (7-0)/Ryze/Aurora\n- Eddie: 72% WR, 6.67 KDA, strong on Kai'Sa (4-0)/Corki/Jhin\n- Bie: 72% WR, 6.41 KDA, excellent on Nautilus (7-2)\n- Hiro02: Only 1 game analyzed\n- Team objectives: 65.45% WR over 55 games, excellent dragon (57.2%) and baron (69.2%) control\n- Series history: sweep_rate 0.388, swept_rate 0.245, avg_series_length 2.6\n\n**Key Analysis:**\n\n1. **Region gap**: LCK vs LCP (Vietnam). LCK is historically a much stronger region. HLE is LCK #1 seed, while TSW is LCP #1 seed but LCP is considered a weaker region.\n\n2. **Player quality**: HLE has Zeus and Gumayusi who are world-class players with extensive international experience (former T1 players, multiple MSI appearances). TSW's players have impressive stats in LCP but haven't proven themselves internationally.\n\n3. **HLE's weaknesses**: Jackal (29% WR) and Cracker (32% WR) have concerning win rates. However, they performed well against T1 in the qualifier.\n\n4. **TSW's strengths**: Very high team win rate (72% for most players), excellent objective control, good sweep rate. But they struggled against DCG (a PCS team that was considered weak).\n\n5. **TSW's own reaction**: Their social media expressed dismay at drawing HLE, suggesting they recognize the skill gap.\n\n6. **Home advantage**: MSI is in Korea, HLE's home turf.\n\n7. **Experience**: Zeus and Gumayusi have been to MSI 4 times before (2022-2025). TSW players have limited international experience.\n\n8. **Meta**: The current meta seems to favor strong jungle-mid synergy and carry ADCs. Both teams have good options here.\n\n**Prediction reasoning:**\n\nHLE is clearly the stronger team on paper:\n- LCK #1 seed vs LCP #1 seed (massive region gap)\n- World-class top laner (Zeus) and ADC (Gumayusi)\n- Home advantage in Korea\n- 38% tournament win probability (highest of any team)\n- TSW's own reaction suggests they know they're underdogs\n\nHowever, HLE has some concerns:\n- Jackal and Cracker have low individual win rates\n- They lost to Gen.G and had a mixed record in LCK\n\nTSW has:\n- Strong team stats in LCP\n- Good objective control\n- But struggled against DCG (a weaker team)\n- Limited international experience\n\nGiven the massive skill gap between LCK and LCP, and HLE being the tournament favorite, I predict HLE wins convincingly. \n\nLooking at sweep rates:\n- HLE sweep_rate: 0.347 (about 1/3 of their series wins are sweeps)\n- TSW swept_rate: 0.245\n- HLE avg_series_length: 2.5 (relatively short)\n\nGiven the massive region gap and HLE being the #1 favorite, I think a 3-0 or 3-1 is most likely. The instructions say to be bold with sweeps when there's a clear skill gap. HLE's sweep rate is 0.347 (close to the 0.35 threshold), and this is a cross-region matchup with a massive skill differential.\n\nI'll go with 3-0 for HLE. The region gap is enormous (LCK #1 vs LCP), TSW struggled against DCG (a team considered much weaker), and TSW's own social media reaction suggests they know they're outmatched. HLE has world-class players in Zeus and Gumayusi, and they're playing at home in Korea.\n\nWin probability: HLE 0.82, TSW 0.18\n\nActually, let me reconsider. TSW did win LCP and has a 70% recent win rate. They're not complete pushovers. But the LCK-LCP gap is historically massive. Let me go with 3-1 to be slightly more conservative, but still bold.\n\nWait, the instructions say: \"实力档差大（如世界冠军 vs 外卡/新军）、强队近期连胜且横扫率高、BP 储备深 → 敢给 3-0\"\n\nHLE is LCK #1 seed (essentially a championship-level team), TSW is from LCP (essentially a wildcard-level region). HLE beat T1 3-1 convincingly. TSW struggled against DCG. The skill gap is enormous.\n\nI'll go with 3-0 for HLE. This is a case where the region gap is so massive that a sweep is very likely.\n\nLet me finalize:\n- Win probs: HLE 0.82, TSW 0.18\n- Predicted winner: blue (HLE)\n- Series score: 3-0\n- Series length: 3\n- Favored side: blue_strong",
+  "sources": [
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:35Z"
+    },
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:38Z"
+    },
+    {
+      "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:38Z"
+    },
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:41Z"
+    },
+    {
+      "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:41Z"
+    },
+    {
+      "query": "Team Secret Whales VCS 2026 MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:41Z"
+    },
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:43Z"
+    },
+    {
+      "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:43Z"
+    },
+    {
+      "query": "Team Secret Whales VCS 2026 MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:43Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:43Z"
+    },
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:54Z"
+    },
+    {
+      "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:54Z"
+    },
+    {
+      "query": "Team Secret Whales VCS 2026 MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:54Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:54Z"
+    },
+    {
+      "query": "TSW Team Secret Whales LCP 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:54Z"
+    },
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:57Z"
+    },
+    {
+      "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:57Z"
+    },
+    {
+      "query": "Team Secret Whales VCS 2026 MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:57Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:57Z"
+    },
+    {
+      "query": "TSW Team Secret Whales LCP 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:57Z"
+    },
+    {
+      "query": "HLE Zeus Cracker Jackal LCK 2026 form performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:57Z"
+    },
+    {
+      "query": "Hanwha Life Esports vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    },
+    {
+      "query": "HLE Hanwha Life Esports MSI 2026 roster Zeus Gumayusi",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    },
+    {
+      "query": "Team Secret Whales VCS 2026 MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta tier list champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    },
+    {
+      "query": "TSW Team Secret Whales LCP 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    },
+    {
+      "query": "HLE Zeus Cracker Jackal LCK 2026 form performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    },
+    {
+      "query": "LoL patch 25.13 MSI 2026 meta champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:36:59Z"
+    }
+  ],
+  "input_tokens": 82469,
+  "output_tokens": 5009,
+  "tool_calls": 7,
+  "cost_usd": 0.164008,
+  "wall_seconds": 132.8,
+  "error": null
+}

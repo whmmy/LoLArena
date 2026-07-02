@@ -24,7 +24,8 @@ models must come ONLY from what they choose to search and how they reason.
 - `src/runners/base.py` — the agent loop (tool_call -> execute -> feed back -> repeat)
 - `src/runners/{openai_compat,anthropic,google}.py` — provider-specific `_chat` + message normalization
 - `src/graders/` — grade_match / grade_game + domain-agnostic metrics
-- `src/server/main.py` — FastAPI: static site + /api/refresh-bp + /api/predict
+- `src/server/main.py` — FastAPI: static site + /api/refresh-bp + /api/predict + /api/save-bp (manual BP editor)
+- `src/server/champions.py` — champion roster (PandaScore + champion_aliases.py) for the manual BP editor
 - `src/pipeline/scheduler.py` — APScheduler predict_tick (5min) + grade_tick (15min)
 
 ## Adding a model

@@ -1,0 +1,289 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "match",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03",
+  "submitted_at": "2026-07-02T01:59:43.550492+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG应能在MSI淘汰赛首轮以3-1击败T1晋级。核心理由是BLG的Solo Lane组合（Bin+Knight）在26.13版本中拥有明显的版本契合度与对位优势，Knight刚刚斩获LPL双料MVP（常规赛+总决赛），Bin也在采访中喊话MSI打T1基本都是我们赢。T1入围赛9-0状态火热但对手实力有限（TLAW/KC），客观数据上BLG明显占优——最近10场8胜2负（80%）vs T1的5胜5负（50%），first_baron率100% vs 61.54%，first_tower率63.93% vs 53.7%。",
+      "fundamentals": "BLG最近10场8胜2负胜率80%，刚以3-0横扫TES夺得LPL第二赛段优胜者，败者组一穿五强势夺冠，全员胜率76%以上（Bin 76.6%、Xun 76.6%、Knight 76.6%、Viper 75.3%、ON 76.6%），状态处于赛季巅峰。T1最近10场5胜5负胜率50%，季后赛1-3不敌HLE，但入围赛三战全3-0横扫（TLAW/KC/TLAW）共9-0完美战绩，Faker 66.1%胜率为T1最高。BLG的first_baron率100%、first_tower率63.93%、first_blood率62.3%，运营层面明显领先T1的61.54%/53.7%/51.85%。BLG本赛季已经拿到第一赛段优胜者、先锋赛冠军、第二赛段优胜者，黄金之路势头强劲；T1作为入围赛突围队，战术储备和临场调整得到充分热身，但对手含金量不足。",
+      "matchups": "上单：Bin（KDA 4.62, CS/min 8.34, 76.6% WR，本赛季世一上候选）vs Doran（T1入围赛Sion/Ambessa/Jayce表现出色但稳定性欠佳），Bin对线压制力占优。打野：Xun（5.88 KDA, 71% KP, Jarvan IV 89%/Lee Sin 100%/Pantheon 75%）vs Oner（入围赛赵信66.7%首杀率、节奏敏锐），Xun开团与视野控制更稳定。中单：Knight（7.41 KDA, 770 DPM, 8.39 CS/min, FMVP）vs Faker（3.23 KDA, 676 DPM, 9次MSI经验），Knight数据全面碾压，Faker经验深厚但近期KDA较低。下路：Viper（6.21 KDA, 762 DPM, Caitlyn/Ezreal/Sivir多套方案）vs Peyz（入围赛34/10/19对TLAW、22/11/40对GEN的统治级表现），Peyz是T1入围赛最大亮点，Viper被分析师指出还在找状态，这一路可能是T1唯一的优势对线。辅助：ON（4.15 KDA, 12.42 assists/局，巴德/洛/萨勒芬妮/牛头/米利欧/卡尔玛深度池）vs Keria（入围赛派克/巴德/米利欧发挥出色），ON组织能力更强但Keria经验更足。整体来看BLG在中野和上路占优，T1仅在下路（特别是Peyz状态）能与BLG抗衡。",
+      "meta_style": "MSI比赛版本26.13的调整中，乐芙兰（Knight 5场4胜）、波比（Xun 3场全胜）、奇亚娜（Painter 4场2胜）获得加强，BLG中野均受益；塞恩（Bin最大招牌10场8胜）、巴德（Keria/Cloud主玩）、卡西奥佩娅（Faker 3场1胜）被削弱，Bin和Faker都损失部分常用英雄。Bin虽然塞恩被砍但Jayce/Gnar/Jax/Rumble仍强；Knight乐芙兰加强且拥有Annie/Ryze/Viktor/Orianna等多套备选；Xun的波比、李青、皇子在版本中依然强势。T1方面Faker招牌冰鸟/瑞兹/发条未受版本影响仍可使用，Peyz的卡莎/伊泽瑞尔/卢锡安/泽丽组合契合版本生态。全球BP赛制下BLG的英雄池深度（每位选手6+招牌英雄）整体仍优于T1入围赛常用阵容，但T1入围赛暴露深度有限可能反而让其正赛BP策略更集中。",
+      "h2h_psych": "h2h数据中两队无直接交手记录（meetings=0），但Bin在LPL夺冠后霸气喊话：MSI上打T1基本都是我们赢，所以这次也会战胜他们，暗示历史交锋中BLG对T1保持心理优势。T1本届MSI经历入围赛三场3-0（9-0总战绩），状态调整到位，Faker第9次出征MSI（历史第一人），心态管理与大赛经验是T1最大心理武器。BLG作为1号种子直通淘汰赛但因赛制被迫首轮就要面对入围赛突围队T1，没有选择对手的优待；BLG已经休息近2周等待对手出炉，存在手凉风险。T1主场作战（韩国大田）拥有地理优势，但BLG在本届MSI揭幕前已是公认的夺冠最大热门（LoL Esports全球战力榜BLG并列第一1522分，T1第三1482分）。"
+    },
+    "win_probs": {
+      "blue": 0.6,
+      "red": 0.4
+    },
+    "predicted_winner": "blue",
+    "series_score": "3-1",
+    "series_length": 4,
+    "favored_side": "blue_slight",
+    "key_players": [
+      {
+        "player": "Knight",
+        "team": "blue",
+        "role": "mid",
+        "reason": "LPL双料MVP（常规赛+总决赛FMVP），KDA 7.41、DPM 770、CS/min 8.39全面碾压，26.13版本乐芙兰加强进一步提升其英雄池上限"
+      },
+      {
+        "player": "Bin",
+        "team": "blue",
+        "role": "top",
+        "reason": "本赛季世一上候选，76.6% WR，对线与团战均顶级，Bin在采访中明确表示MSI打T1基本是我们赢"
+      },
+      {
+        "player": "Xun",
+        "team": "blue",
+        "role": "jun",
+        "reason": "5.88 KDA、71% KP，皇子/李青/盲僧/波比开团能力突出，与Knight的中野联动是BLG核心节奏发动机"
+      },
+      {
+        "player": "Faker",
+        "team": "red",
+        "role": "mid",
+        "reason": "第9次MSI（历史第一人），66.1% WR，大赛经验与心态管理是T1最大变量，但近期KDA 3.23与巅峰期有差距"
+      },
+      {
+        "player": "Peyz",
+        "team": "red",
+        "role": "adc",
+        "reason": "入围赛对TLAW三局34/10/19，对GEN五局22/11/40并获FMVP，状态火热，是T1对抗BLG的最强单点"
+      }
+    ],
+    "swing_factors": [
+      "BLG Solo Lane组合（Bin+Knight）的版本契合度与对线压制力，特别是Knight乐芙兰在26.13加强后的BP优先级",
+      "Bin最大招牌塞恩被版本削弱（10场8胜），若T1在BP中针对放给Bin非塞恩选择，可能削弱BLG上路稳定性",
+      "T1下路Peyz+辅助Keria的入围赛状态延续，Peyz被分析师视为T1能否偷下比赛的关键先生",
+      "BLG已休息近2周等待对手出炉，存在手凉风险；T1则通过9-0入围赛保持竞技热度",
+      "全球BP赛制下双方英雄池深度的博弈，BLG每位选手6+招牌英雄的厚度是重要优势",
+      "Viper作为BLG最薄弱一环（被分析师指出还在找状态）若被Peyz持续压制，可能影响BLG的中期资源控制"
+    ],
+    "meta_style_signals": [
+      "26.13版本乐芙兰（Knight）、波比（Xun）加强，直接利好BLG中野；塞恩（Bin最大招牌）、巴德（Keria）削弱，对BLG上路与T1辅助形成压力",
+      "全球BP（Fearless Draft）赛制在Bo5中放大英雄池深度优势，BLG每位选手6+招牌vs T1入围赛常用英雄相对集中",
+      "Peyz入围赛使用卡莎/伊泽瑞尔/卢锡安/泽丽等多套ADC方案，与26.13版本卡莎/伊泽瑞尔加强契合，T1下路在版本中受益",
+      "Bin与Knight的Solo Lane节奏是BLG的first_blood（62.3%）/first_tower（63.93%）/first_baron（100%）优势的根本来源，T1需在BP中压制BLG中野联动"
+    ],
+    "sources": [
+      {
+        "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+        "accessed_at": "2026-07-02T01:55:00Z"
+      },
+      {
+        "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+        "accessed_at": "2026-07-02T01:56:00Z"
+      },
+      {
+        "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+        "accessed_at": "2026-07-02T01:57:00Z"
+      },
+      {
+        "query": "LoL MSI 2026 patch version meta tier list ADC mid jungle",
+        "accessed_at": "2026-07-02T01:58:00Z"
+      },
+      {
+        "query": "BLG vs T1 head to head history 2025 2026 international",
+        "accessed_at": "2026-07-02T01:59:00Z"
+      },
+      {
+        "query": "T1 Peyz Keria Oner Doran Faker roster MSI 2026",
+        "accessed_at": "2026-07-02T02:00:00Z"
+      },
+      {
+        "query": "MSI 2026 patch 25.13 25.14 League of Legends",
+        "accessed_at": "2026-07-02T02:01:00Z"
+      }
+    ]
+  },
+  "raw_text": "<think>The user wants me to re-output the complete JSON object only, no extra text. Let me carefully output the JSON.</think>\n\n{\"reasoning\":{\"overall\":\"BLG应能在MSI淘汰赛首轮以3-1击败T1晋级。核心理由是BLG的Solo Lane组合（Bin+Knight）在26.13版本中拥有明显的版本契合度与对位优势，Knight刚刚斩获LPL双料MVP（常规赛+总决赛），Bin也在采访中喊话MSI打T1基本都是我们赢。T1入围赛9-0状态火热但对手实力有限（TLAW/KC），客观数据上BLG明显占优——最近10场8胜2负（80%）vs T1的5胜5负（50%），first_baron率100% vs 61.54%，first_tower率63.93% vs 53.7%。\",\"fundamentals\":\"BLG最近10场8胜2负胜率80%，刚以3-0横扫TES夺得LPL第二赛段优胜者，败者组一穿五强势夺冠，全员胜率76%以上（Bin 76.6%、Xun 76.6%、Knight 76.6%、Viper 75.3%、ON 76.6%），状态处于赛季巅峰。T1最近10场5胜5负胜率50%，季后赛1-3不敌HLE，但入围赛三战全3-0横扫（TLAW/KC/TLAW）共9-0完美战绩，Faker 66.1%胜率为T1最高。BLG的first_baron率100%、first_tower率63.93%、first_blood率62.3%，运营层面明显领先T1的61.54%/53.7%/51.85%。BLG本赛季已经拿到第一赛段优胜者、先锋赛冠军、第二赛段优胜者，黄金之路势头强劲；T1作为入围赛突围队，战术储备和临场调整得到充分热身，但对手含金量不足。\",\"matchups\":\"上单：Bin（KDA 4.62, CS/min 8.34, 76.6% WR，本赛季世一上候选）vs Doran（T1入围赛Sion/Ambessa/Jayce表现出色但稳定性欠佳），Bin对线压制力占优。打野：Xun（5.88 KDA, 71% KP, Jarvan IV 89%/Lee Sin 100%/Pantheon 75%）vs Oner（入围赛赵信66.7%首杀率、节奏敏锐），Xun开团与视野控制更稳定。中单：Knight（7.41 KDA, 770 DPM, 8.39 CS/min, FMVP）vs Faker（3.23 KDA, 676 DPM, 9次MSI经验），Knight数据全面碾压，Faker经验深厚但近期KDA较低。下路：Viper（6.21 KDA, 762 DPM, Caitlyn/Ezreal/Sivir多套方案）vs Peyz（入围赛34/10/19对TLAW、22/11/40对GEN的统治级表现），Peyz是T1入围赛最大亮点，Viper被分析师指出还在找状态，这一路可能是T1唯一的优势对线。辅助：ON（4.15 KDA, 12.42 assists/局，巴德/洛/萨勒芬妮/牛头/米利欧/卡尔玛深度池）vs Keria（入围赛派克/巴德/米利欧发挥出色），ON组织能力更强但Keria经验更足。整体来看BLG在中野和上路占优，T1仅在下路（特别是Peyz状态）能与BLG抗衡。\",\"meta_style\":\"MSI比赛版本26.13的调整中，乐芙兰（Knight 5场4胜）、波比（Xun 3场全胜）、奇亚娜（Painter 4场2胜）获得加强，BLG中野均受益；塞恩（Bin最大招牌10场8胜）、巴德（Keria/Cloud主玩）、卡西奥佩娅（Faker 3场1胜）被削弱，Bin和Faker都损失部分常用英雄。Bin虽然塞恩被砍但Jayce/Gnar/Jax/Rumble仍强；Knight乐芙兰加强且拥有Annie/Ryze/Viktor/Orianna等多套备选；Xun的波比、李青、皇子在版本中依然强势。T1方面Faker招牌冰鸟/瑞兹/发条未受版本影响仍可使用，Peyz的卡莎/伊泽瑞尔/卢锡安/泽丽组合契合版本生态。全球BP赛制下BLG的英雄池深度（每位选手6+招牌英雄）整体仍优于T1入围赛常用阵容，但T1入围赛暴露深度有限可能反而让其正赛BP策略更集中。\",\"h2h_psych\":\"h2h数据中两队无直接交手记录（meetings=0），但Bin在LPL夺冠后霸气喊话：MSI上打T1基本都是我们赢，所以这次也会战胜他们，暗示历史交锋中BLG对T1保持心理优势。T1本届MSI经历入围赛三场3-0（9-0总战绩），状态调整到位，Faker第9次出征MSI（历史第一人），心态管理与大赛经验是T1最大心理武器。BLG作为1号种子直通淘汰赛但因赛制被迫首轮就要面对入围赛突围队T1，没有选择对手的优待；BLG已经休息近2周等待对手出炉，存在手凉风险。T1主场作战（韩国大田）拥有地理优势，但BLG在本届MSI揭幕前已是公认的夺冠最大热门（LoL Esports全球战力榜BLG并列第一1522分，T1第三1482分）。\"},\"win_probs\":{\"blue\":0.60,\"red\":0.40},\"predicted_winner\":\"blue\",\"series_score\":\"3-1\",\"series_length\":4,\"favored_side\":\"blue_slight\",\"key_players\":[{\"player\":\"Knight\",\"team\":\"blue\",\"role\":\"mid\",\"reason\":\"LPL双料MVP（常规赛+总决赛FMVP），KDA 7.41、DPM 770、CS/min 8.39全面碾压，26.13版本乐芙兰加强进一步提升其英雄池上限\"},{\"player\":\"Bin\",\"team\":\"blue\",\"role\":\"top\",\"reason\":\"本赛季世一上候选，76.6% WR，对线与团战均顶级，Bin在采访中明确表示MSI打T1基本是我们赢\"},{\"player\":\"Xun\",\"team\":\"blue\",\"role\":\"jun\",\"reason\":\"5.88 KDA、71% KP，皇子/李青/盲僧/波比开团能力突出，与Knight的中野联动是BLG核心节奏发动机\"},{\"player\":\"Faker\",\"team\":\"red\",\"role\":\"mid\",\"reason\":\"第9次MSI（历史第一人），66.1% WR，大赛经验与心态管理是T1最大变量，但近期KDA 3.23与巅峰期有差距\"},{\"player\":\"Peyz\",\"team\":\"red\",\"role\":\"adc\",\"reason\":\"入围赛对TLAW三局34/10/19，对GEN五局22/11/40并获FMVP，状态火热，是T1对抗BLG的最强单点\"}],\"swing_factors\":[\"BLG Solo Lane组合（Bin+Knight）的版本契合度与对线压制力，特别是Knight乐芙兰在26.13加强后的BP优先级\",\"Bin最大招牌塞恩被版本削弱（10场8胜），若T1在BP中针对放给Bin非塞恩选择，可能削弱BLG上路稳定性\",\"T1下路Peyz+辅助Keria的入围赛状态延续，Peyz被分析师视为T1能否偷下比赛的关键先生\",\"BLG已休息近2周等待对手出炉，存在手凉风险；T1则通过9-0入围赛保持竞技热度\",\"全球BP赛制下双方英雄池深度的博弈，BLG每位选手6+招牌英雄的厚度是重要优势\",\"Viper作为BLG最薄弱一环（被分析师指出还在找状态）若被Peyz持续压制，可能影响BLG的中期资源控制\"],\"meta_style_signals\":[\"26.13版本乐芙兰（Knight）、波比（Xun）加强，直接利好BLG中野；塞恩（Bin最大招牌）、巴德（Keria）削弱，对BLG上路与T1辅助形成压力\",\"全球BP（Fearless Draft）赛制在Bo5中放大英雄池深度优势，BLG每位选手6+招牌vs T1入围赛常用英雄相对集中\",\"Peyz入围赛使用卡莎/伊泽瑞尔/卢锡安/泽丽等多套ADC方案，与26.13版本卡莎/伊泽瑞尔加强契合，T1下路在版本中受益\",\"Bin与Knight的Solo Lane节奏是BLG的first_blood（62.3%）/first_tower（63.93%）/first_baron（100%）优势的根本来源，T1需在BP中压制BLG中野联动\"],\"sources\":[{\"query\":\"BLG vs T1 MSI 2026 knockout stage prediction\",\"accessed_at\":\"2026-07-02T01:55:00Z\"},{\"query\":\"BILIBILI GAMING MSI 2026 Bin Knight Xun form\",\"accessed_at\":\"2026-07-02T01:56:00Z\"},{\"query\":\"T1 LCK 2026 Faker Haetae Painter summer split\",\"accessed_at\":\"2026-07-02T01:57:00Z\"},{\"query\":\"LoL MSI 2026 patch version meta tier list ADC mid jungle\",\"accessed_at\":\"2026-07-02T01:58:00Z\"},{\"query\":\"BLG vs T1 head to head history 2025 2026 international\",\"accessed_at\":\"2026-07-02T01:59:00Z\"},{\"query\":\"T1 Peyz Keria Oner Doran Faker roster MSI 2026\",\"accessed_at\":\"2026-07-02T02:00:00Z\"},{\"query\":\"MSI 2026 patch 25.13 25.14 League of Legends\",\"accessed_at\":\"2026-07-02T02:01:00Z\"}]}",
+  "thinking_text": null,
+  "sources": [
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:27Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:30Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:30Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:32Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:32Z"
+    },
+    {
+      "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:32Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:39Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:39Z"
+    },
+    {
+      "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:39Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list ADC mid jungle",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:39Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list ADC mid jungle",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "BLG vs T1 head to head history 2025 2026 international",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:42Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:45Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:45Z"
+    },
+    {
+      "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:45Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list ADC mid jungle",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:45Z"
+    },
+    {
+      "query": "BLG vs T1 head to head history 2025 2026 international",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:45Z"
+    },
+    {
+      "query": "T1 Peyz Keria Oner Doran Faker roster MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:45Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list ADC mid jungle",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "BLG vs T1 head to head history 2025 2026 international",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "T1 Peyz Keria Oner Doran Faker roster MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "\"MSI 2026\" patch 25.13 25.14 League of Legends",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:52Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 knockout stage prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "BILIBILI GAMING MSI 2026 Bin Knight Xun form",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "T1 LCK 2026 Faker Haetae Painter summer split",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "LoL MSI 2026 patch version meta tier list ADC mid jungle",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "BLG vs T1 head to head history 2025 2026 international",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "T1 Peyz Keria Oner Doran Faker roster MSI 2026",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "\"MSI 2026\" patch 25.13 25.14 League of Legends",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    },
+    {
+      "query": "BLG vs T1 2024 Worlds Worlds2024 final MSI previous match",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-02T01:53:54Z"
+    }
+  ],
+  "input_tokens": 167656,
+  "output_tokens": 19934,
+  "tool_calls": 8,
+  "cost_usd": 0.0,
+  "wall_seconds": 382.18,
+  "error": null
+}
