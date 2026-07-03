@@ -69,6 +69,7 @@ python -m src refresh-bp <match_id> <pos>     # 拉取某局 BP
 python -m src predict-game <match_id> <pos>   # BP 完成后跑全部模型（单局预测）
 python -m src grade <match_id>                # 赛后对系列赛预测打分
 python -m src grade-game <match_id> <pos>     # 赛后对单局预测打分
+python -m src regrade                         # 用当前评分配置离线重算所有已评分比赛
 python -m src serve                           # 启动 FastAPI + 调度器（打开 http://127.0.0.1:8000）
 python -m src build-site                      # 重新生成 data.json
 python -m src scheduler                       # 仅启动调度器（不开 Web）
@@ -100,14 +101,17 @@ python -m src scheduler                       # 仅启动调度器（不开 Web�
 
 ## 评分（configs/tasks.yaml）
 
-**系列赛**（四层加权综合，0-100）：
-- T1_result 0.45（胜负概率 brier + 比分相似度 + 总局数 MAE）
-- T2_matchup 0.25（关键选手召回 + 摇摆因素完整性）
-- T3_reasoning 0.15（四维推理完整性）
-- T4_meta 0.15（版本信号引用）
+**系列赛**（三层加权综合，0-100）。每一层都**对照赛果真相校验，没有白送分**：
+- T1_result 0.55（胜负概率 brier + 比分相似度 + 总局数 MAE）
+- T2_skill 0.30（模型的胜率是否**优于朴素基线**——基线由两队长期胜率构造。模型=基线→50，更准→更高，更差→更低。只会说"强队赢"的模型只能拿约 50）
+- T3_lineup 0.15（命中的**真实首发选手**比例，对照 context_pack.rosters，编造/过时的选手名不再得分）
+
+自由文本字段（reasoning / swing_factors / meta_style_signals）保留在 schema 和前端供人阅读，但**不计入总分**——它们没有客观赛后真相可比对，而旧的"存在性/字数检查"会让每个模型白拿 100 分（占总分 55%），导致模型间完全没有区分度。
+
+改完评分配置后，离线重算所有已评分比赛（不消耗 API）：`python -m src regrade`
 
 **单局**：
-- G1_result 0.50（胜负 brier）· G2_duration 0.25（时长 MAE）· G3_kills 0.25（双方击杀 MAE + 总击杀 sMAPE）
+- G1_result 0.50（胜负 brier）· G2_duration 0.25（时长 MAE，真值缺失时跳过该层归一化）· G3_kills 0.25（双方击杀 MAE + 总击杀 sMAPE）
 
 ## 模型注册表（configs/models.yaml）
 

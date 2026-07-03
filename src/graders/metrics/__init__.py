@@ -33,6 +33,55 @@ def brier_binary(probs: dict[str, float], truth_side: str) -> float:
     return 100.0 * (1.0 - brier / 2.0)
 
 
+def _brier_raw(probs: dict[str, float], truth_side: str) -> float:
+    """Raw Brier score in [0, 2] (lower = better). 2 = confidently wrong."""
+    p_true = _clamp01(probs.get(truth_side, 0.5))
+    return (p_true - 1.0) ** 2 + (1.0 - p_true) ** 2
+
+
+def skill_score(pred_probs: dict[str, float],
+                baseline_probs: dict[str, float],
+                truth_side: str) -> float:
+    """Does the model's probability BEAT a naive historical baseline?
+
+    The baseline is built from each team's long-run win rate
+    (`team_objectives.game_record.win_rate`), so a model that merely parrots
+    "the stronger team historically" earns ~50. Skill is how much BETTER the
+    model's Brier is than the baseline Brier, scaled so:
+
+        model == baseline -> 50
+        model brier half of baseline -> 100
+        model brier double baseline -> 0
+        (clamped to [0, 100])
+
+    On the 6-game MSI sample this baseline called the winner 4/6 (>coin flip),
+    so it is a non-trivial bar: a model must add real analytical value to
+    score above the midpoint, not just pick the favorite.
+
+    Returns 50.0 (neutral) when no baseline is available — a missing baseline
+    should neither reward nor punish a model.
+    """
+    if not baseline_probs:
+        return 50.0
+    if not truth_side:
+        return 50.0
+    model_brier = _brier_raw(pred_probs, truth_side)
+    base_brier = _brier_raw(baseline_probs, truth_side)
+    if base_brier <= 0:
+        # baseline is perfectly confident and correct; nothing can beat it.
+        return 50.0 if model_brier <= 0 else 0.0
+    if model_brier <= 0:
+        # model is perfectly confident and correct; cap at the top.
+        return 100.0
+    # improvement_ratio in (0, +inf): <1 means model beats baseline.
+    improvement_ratio = model_brier / base_brier
+    # Map ratio -> score: ratio 1.0 -> 50, ratio 0.5 -> 100, ratio 2.0 -> 0.
+    # Linear in log space so the scale is symmetric for over/underperformance.
+    import math
+    score = 50.0 * (1.0 - math.log(improvement_ratio) / math.log(2.0))
+    return max(0.0, min(100.0, score))
+
+
 def brier_multiclass(probs: dict[str, float], truth_label: str) -> float:
     """Multiclass Brier -> 0-100 goodness. probs need not be normalized."""
     items = list(probs.items())

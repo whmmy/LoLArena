@@ -4,5 +4,53 @@
   "blue_score": 0,
   "red_score": 3,
   "series_length": 3,
-  "series_score": "0-3"
+  "series_score": "0-3",
+  "blue_players": [
+    {
+      "name": "Morgan",
+      "role": "top"
+    },
+    {
+      "name": "Josedeodo",
+      "role": "jun"
+    },
+    {
+      "name": "Quid",
+      "role": "mid"
+    },
+    {
+      "name": "Yeon",
+      "role": "adc"
+    },
+    {
+      "name": "CoreJJ",
+      "role": "sup"
+    }
+  ],
+  "red_players": [
+    {
+      "name": "Haetae",
+      "role": "top"
+    },
+    {
+      "name": "Painter",
+      "role": "jun"
+    },
+    {
+      "name": "Faker",
+      "role": "mid"
+    },
+    {
+      "name": "Jinbeom",
+      "role": "adc"
+    },
+    {
+      "name": "Cloud",
+      "role": "sup"
+    }
+  ],
+  "baseline_probs": {
+    "blue": 0.403,
+    "red": 0.597
+  }
 }

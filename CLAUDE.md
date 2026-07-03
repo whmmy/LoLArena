@@ -36,9 +36,28 @@ function-calling, use `openai_compat`. Done — it auto-mounts web_search.
 
 ## When editing prompts
 `prompts/*.md` are read fresh on every prediction (no restart needed). The
-required `reasoning.*` subfield names are enforced by BOTH the schema
-(`schemas/*.schema.json` minLength) and the grader
-(`graders/grade_match.py` reasoning_completeness). Keep them in sync.
+`reasoning.*` subfield structure is enforced by the schema
+(`schemas/*.schema.json` minLength) only — the grader no longer scores these
+free-text fields (they have no ground truth to check, and the old length check
+gave every model a flat 100).
+
+## Scoring design (configs/tasks.yaml + graders/)
+Series composite is THREE truth-validated layers, no free points:
+- `T1_result` 0.55 — brier(score) + scoreline + length-MAE
+- `T2_skill` 0.30 — `skill_score`: does the model's win_prob BEAT a naive
+  baseline (`truth["baseline_probs"]`, built from each team's long-run win
+  rate in `team_objectives.game_record.win_rate`)? model==baseline→50.
+- `T3_lineup` 0.15 — `key_players_recall` against `truth["blue_players"]`/
+  `["red_players"]` (now actually fed from `context_pack.rosters`; was empty
+  before, which forced the metric to always return 100).
+
+The grader's `truth` is enriched in `orchestrator._truth_for_match` with
+`blue_players`/`red_players`/`baseline_probs` read from `context_pack.json`
+(off-disk, no network at grade time). `cmd_regrade` re-scores all historical
+matches offline with the current config — run it after touching tasks.yaml.
+
+Single-game `duration_mae` returns None (skipped + renormalized) when
+`truth.length_min` is 0/missing, so missing Cito data doesn't pollute scores.
 
 ## Running tests
 No formal test suite yet — verify via:

@@ -105,6 +105,7 @@ python -m src refresh-bp <match_id> <pos>   # Fetch champion select for a single
 python -m src predict-game <match_id> <pos> # Run every model on a single game after BP completes
 python -m src grade <match_id>              # Grade series predictions after the match
 python -m src grade-game <match_id> <pos>   # Grade single-game predictions after the game
+python -m src regrade                       # Re-score ALL graded matches with current config (offline)
 python -m src serve                         # Start FastAPI + scheduler (open http://127.0.0.1:8000)
 python -m src build-site                    # Rebuild data.json for the leaderboard
 python -m src scheduler                     # Run scheduler only (no web UI)
@@ -140,17 +141,32 @@ Post-match ── scheduler.grade_tick ──► pull real results ──► gra
 
 ## Scoring (configs/tasks.yaml)
 
-**Series** — weighted composite, 0–100:
+**Series** — weighted composite, 0–100. Every layer is validated against
+ground truth; there are **no free points** for merely filling in a text field:
 
-- T1_result **0.45** — win-prob Brier + score similarity + total-games MAE
-- T2_matchup **0.25** — key-player recall + swing-factor completeness
-- T3_reasoning **0.15** — four-dimension reasoning completeness
-- T4_meta **0.15** — patch/meta signal citations
+- T1_result **0.55** — win-prob Brier + scoreline similarity + total-games MAE
+- T2_skill **0.30** — does the model's `win_prob` *beat* a naive baseline built
+  from each team's long-run win rate? (model==baseline→50, better→higher,
+  worse→lower). A model that merely parrots "the favorite wins" earns ~50;
+  real analytical value is what lifts this.
+- T3_lineup **0.15** — fraction of the *actual* starting lineup the model
+  named as key players (checked against `context_pack.rosters`, so inventing
+  or stale names no longer scores).
+
+Free-text fields (`reasoning`, `swing_factors`, `meta_style_signals`) stay in
+the schema and the UI for human reading but do **not** enter the composite —
+they have no objective post-match truth to check against, and the old
+presence/length checks gave every model a flat 100 (55% of the score), which
+collapsed all discrimination between models.
+
+Re-score all already-graded matches after changing the scoring config (fully
+offline, no API calls): `python -m src regrade`
 
 **Single game**:
 
 - G1_result **0.50** — win-prob Brier
-- G2_duration **0.25** — game-length MAE
+- G2_duration **0.25** — game-length MAE (skipped when truth length is
+  missing/0, so the layer renormalizes over the games that do have truth)
 - G3_kills **0.25** — per-team-kill MAE + total-kill sMAPE
 
 ## Model registry (configs/models.yaml)

@@ -18,19 +18,37 @@ def grade_game(prediction: dict[str, Any], truth: dict[str, Any]) -> dict[str, A
     tasks = spec["tasks"]
 
     layers: dict[str, float] = {}
+    # per-layer sum of weights actually applied (tasks can return None to opt
+    # out — e.g. duration when truth.length_min is missing/0 — so the layer is
+    # renormalized over the tasks that DID score, rather than dragging in a
+    # garbage 0 from a missing truth value).
+    layer_w_used: dict[str, float] = {}
     task_scores: dict[str, dict[str, Any]] = {}
 
     for t in tasks:
         layer = t["layer"]
         w_in = float(t["weight_in_layer"])
         score = _score_task(t, prediction, truth)
+        if score is None:
+            # truth unavailable for this task — record as skipped, don't score it
+            task_scores[t["id"]] = {"score": None, "metric": t["metric"],
+                                    "skipped": "truth unavailable"}
+            continue
         task_scores[t["id"]] = {"score": round(score, 2), "metric": t["metric"]}
         layers[layer] = layers.get(layer, 0.0) + score * w_in
+        layer_w_used[layer] = layer_w_used.get(layer, 0.0) + w_in
 
-    composite = sum(layers.get(L, 0.0) * w for L, w in layer_weights.items())
+    # renormalize each layer to its configured weight over the tasks that scored
+    weighted_layers: dict[str, float] = {}
+    for layer, raw in layers.items():
+        used = layer_w_used.get(layer, 0.0)
+        weighted_layers[layer] = (raw / used) if used > 0 else 0.0
+
+    composite = sum(weighted_layers.get(L, 0.0) * w
+                    for L, w in layer_weights.items()) if layer_weights else 0.0
     return {
         "tasks": task_scores,
-        "layers": {L: round(v, 2) for L, v in layers.items()},
+        "layers": {L: round(v, 2) for L, v in weighted_layers.items()},
         "composite": round(composite, 2),
     }
 
@@ -53,7 +71,15 @@ def _score_task(task: dict, pred: dict, truth: dict) -> float:
             return M.brier_binary(probs, truth_side)
         if metric == "mae":
             if field == "expected_duration_min":
-                return M.mae(pred.get(field, 0), truth.get("length_min", 0), **mae_kwargs)
+                # truth.length_min is 0.0 when Cito hasn't backfilled it (every
+                # game in the current dataset). Scoring against 0 would either
+                # hand out near-0 to every model or reward convergence to 0,
+                # polluting the leaderboard. Skip instead — the layer renormalizes
+                # over the kills tasks that DO have truth.
+                truth_len = truth.get("length_min")
+                if not truth_len:
+                    return None
+                return M.mae(pred.get(field, 0), truth_len, **mae_kwargs)
             # kills.blue / kills.red -> nested
             if field == "kills.blue":
                 return M.mae((pred.get("kills") or {}).get("blue", 0),

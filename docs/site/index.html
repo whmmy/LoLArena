@@ -733,7 +733,7 @@ function renderLeaderboard(){
       <th class="py-3 px-4 text-left font-bold tracking-wider">评测大模型 / Model</th>
       <th class="py-3 px-4 text-center font-bold tracking-wider">综合评分</th>
       <th class="py-3 px-4 text-center font-bold tracking-wider">${curTab==='series'?'系列赛数':'BP局数'}</th>
-      ${curTab==='series'?'<th class="py-3 px-4 text-center font-bold tracking-wider">T1 赛果</th><th class="py-3 px-4 text-center font-bold tracking-wider">T2 对位</th><th class="py-3 px-4 text-center font-bold tracking-wider">T3 推理</th><th class="py-3 px-4 text-center font-bold tracking-wider">T4 版本</th>':''}
+      ${curTab==='series'?'<th class="py-3 px-4 text-center font-bold tracking-wider">T1 赛果</th><th class="py-3 px-4 text-center font-bold tracking-wider">T2 超越基线</th><th class="py-3 px-4 text-center font-bold tracking-wider">T3 选手</th>':''}
     </tr>`;
     
   // Table rows
@@ -741,9 +741,8 @@ function renderLeaderboard(){
     const L = r.layers||{};
     const cells = curTab==='series'
       ? `<td class="text-center font-mono py-3 font-semibold">${fmtCellBadge(L.T1_result)}</td>
-         <td class="text-center font-mono py-3 font-semibold">${fmtCellBadge(L.T2_matchup)}</td>
-         <td class="text-center font-mono py-3 font-semibold">${fmtCellBadge(L.T3_reasoning)}</td>
-         <td class="text-center font-mono py-3 font-semibold">${fmtCellBadge(L.T4_meta)}</td>`
+         <td class="text-center font-mono py-3 font-semibold">${fmtCellBadge(L.T2_skill)}</td>
+         <td class="text-center font-mono py-3 font-semibold">${fmtCellBadge(L.T3_lineup)}</td>`
       : '';
       
     let rankBadge = '';
@@ -770,7 +769,7 @@ function renderLeaderboard(){
   }).join('');
   
   document.querySelector('#lbTable thead').innerHTML = thead;
-  document.querySelector('#lbTable tbody').innerHTML = rows || '<tr><td colspan="8" class="opacity-50 text-center py-4">暂无评分颗粒（需要赛后评估逻辑 grade-match / grade-game 自动算出成绩）</td></tr>';
+  document.querySelector('#lbTable tbody').innerHTML = rows || '<tr><td colspan="7" class="opacity-50 text-center py-4">暂无评分颗粒（需要赛后评估逻辑 grade-match / grade-game 自动算出成绩）</td></tr>';
 }
 
 function renderHistory(){

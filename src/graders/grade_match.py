@@ -50,19 +50,22 @@ def _score_task(task: dict, pred: dict, truth: dict,
             if not truth_side:
                 return 50.0
             return M.brier_binary(probs, truth_side)
+        if metric == "skill_score":
+            # Does the model's win_prob beat a naive historical baseline?
+            # truth["baseline_probs"] is built from each team's long-run win
+            # rate (see orchestrator._baseline_probs_from_pack). Missing
+            # baseline -> skill_score returns a neutral 50 (no penalty/reward).
+            if not truth_side:
+                return 50.0
+            return M.skill_score(pred.get(field) or {},
+                                 truth.get("baseline_probs") or {},
+                                 truth_side)
         if metric == "scoreline_similarity":
             return M.scoreline_similarity(pred.get(field, ""), truth.get("series_score", ""))
         if metric == "mae":
             return M.mae(pred.get(field, 0), truth.get("series_length", 0))
         if metric == "key_players_recall":
             return M.key_players_recall(pred.get(field, []), all_players)
-        if metric == "structural_completeness":
-            return M.structural_completeness(pred.get(field), min_items=1, min_str_len=3)
-        if metric == "reasoning_completeness":
-            req = ["overall", "fundamentals", "matchups", "meta_style", "h2h_psych"]
-            mins = {"overall": 40, "fundamentals": 120, "matchups": 150,
-                    "meta_style": 100, "h2h_psych": 80}
-            return M.reasoning_completeness(pred.get(field), req, mins)
     except Exception as e:  # noqa: BLE001
         return 0.0
     return 0.0

@@ -4,5 +4,8 @@
   "blue_score": 3,
   "red_score": 0,
   "series_length": 3,
-  "series_score": "3-0"
+  "series_score": "3-0",
+  "blue_players": [],
+  "red_players": [],
+  "baseline_probs": {}
 }

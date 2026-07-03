@@ -12,28 +12,19 @@
       "score": 100.0,
       "metric": "mae"
     },
+    "skill_vs_baseline": {
+      "score": 100.0,
+      "metric": "skill_score"
+    },
     "key_players": {
-      "score": 100.0,
+      "score": 50.0,
       "metric": "key_players_recall"
-    },
-    "swing_factors": {
-      "score": 100.0,
-      "metric": "structural_completeness"
-    },
-    "reasoning_fields": {
-      "score": 100.0,
-      "metric": "reasoning_completeness"
-    },
-    "meta_alignment": {
-      "score": 100.0,
-      "metric": "structural_completeness"
     }
   },
   "layers": {
     "T1_result": 98.56,
-    "T2_matchup": 100.0,
-    "T3_reasoning": 100.0,
-    "T4_meta": 100.0
+    "T2_skill": 100.0,
+    "T3_lineup": 50.0
   },
-  "composite": 99.35
+  "composite": 91.71
 }

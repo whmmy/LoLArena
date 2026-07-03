@@ -586,11 +586,12 @@ def cmd_grade(match_id: int) -> dict:
         return {"match_id": match_id, "error": "unresolved in Cito", "results": {}}
     if match.get("status") != "finished":
         print(f"[grade] match {match_id} status={match.get('status')} (not finished).")
-    truth = _truth_for_match(match)
     mdir = _resolve_match_dir(match_id, match)
     if mdir is None:
         print(f"[grade] no prediction dir found for match {match_id}.")
+        truth = _truth_for_match(match)
         return {"match_id": match_id, "truth": truth, "results": {}}
+    truth = _truth_for_match(match, match_dir=mdir)
     pdir = mdir / "predictions"
     rdir = mdir / "results"
     rdir.mkdir(exist_ok=True)
@@ -625,6 +626,65 @@ def cmd_grade(match_id: int) -> dict:
             print(f"[grade] cascade game {g.get('position')} failed: {e}")
     _maybe_rebuild_site()
     return out
+
+
+def cmd_regrade(*, auto_rebuild_site: bool = True) -> dict:
+    """Re-score EVERY already-graded match with the current scoring config.
+
+    Fully OFFLINE: no Cito calls, no API quota. It reuses the authoritative
+    `results/_truth.json` (real scores/winner) and the pre-match
+    `context_pack.json` (rosters + win-rate baseline), rebuilds an enhanced
+    truth (with lineup + baseline_probs), and re-runs grade_match on the
+    stored predictions. Use this after changing configs/tasks.yaml or the
+    grader/metrics to make the new scheme take effect on historical data.
+
+    Single-game results are NOT re-graded here (they have no truth changes);
+    their stored _truth.json + scores remain valid.
+    """
+    from ..graders.grade_match import grade_match
+    if not cfg.MATCHES_DIR.exists():
+        print("[regrade] no matches dir.")
+        return {"regraded": 0}
+    n = 0
+    for mdir in sorted(cfg.MATCHES_DIR.glob("*")):
+        truth_path = mdir / "results" / "_truth.json"
+        pdir = mdir / "predictions"
+        if not truth_path.exists() or not pdir.exists():
+            continue
+        base_truth = json.loads(truth_path.read_text(encoding="utf-8"))
+        # enrich the stored truth with lineup + baseline from context_pack
+        pack = _load_context_pack(mdir)
+        blue_players, red_players = _lineup_from_pack(pack)
+        truth = {**base_truth,
+                 "blue_players": blue_players,
+                 "red_players": red_players,
+                 "baseline_probs": _baseline_probs_from_pack(pack)}
+        rdir = mdir / "results"
+        out: dict[str, Any] = {"match": mdir.name, "truth": truth, "results": {}}
+        any_pred = False
+        for pf in sorted(pdir.glob("*.json")):
+            model_id = pf.stem
+            if model_id in ("rounds", "run_logs"):
+                continue
+            rec = json.loads(pf.read_text(encoding="utf-8"))
+            pred = rec.get("prediction", {})
+            if not pred:
+                continue
+            any_pred = True
+            scores = grade_match(pred, truth)
+            (rdir / f"{model_id}.json").write_text(
+                json.dumps(scores, ensure_ascii=False, indent=2), encoding="utf-8")
+            out["results"][model_id] = scores
+            print(f"  [{mdir.name[:30]}] {model_id}: composite={scores.get('composite', 0):.1f}")
+        # keep the enriched truth on disk so future rebuilds stay consistent
+        if any_pred:
+            (rdir / "_truth.json").write_text(
+                json.dumps(truth, ensure_ascii=False, indent=2), encoding="utf-8")
+            n += 1
+    print(f"[regrade] re-graded {n} match(es) with current scoring config.")
+    if auto_rebuild_site:
+        _maybe_rebuild_site()
+    return {"regraded": n}
 
 
 def cmd_grade_game(match_id: int, position: int, *,
@@ -704,13 +764,23 @@ def _cache_truth_into_bp(bp_path: Path, truth: dict) -> None:
     bp_path.write_text(json.dumps(bp, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _truth_for_match(match: dict) -> dict:
+def _truth_for_match(match: dict, match_dir: Path | None = None) -> dict:
     opps = match.get("opponents") or []
     blue_id = opps[0]["opponent"]["id"] if opps else None
     red_id = opps[1]["opponent"]["id"] if len(opps) > 1 else None
     results = {r.get("team_id"): r.get("score", 0) for r in (match.get("results") or [])}
     blue_score = results.get(blue_id, 0)
     red_score = results.get(red_id, 0)
+
+    # Feed the starting lineup + a naive historical-win-rate baseline into
+    # truth, so graders can do real validation instead of handing out free
+    # points. Both come from the pre-match context_pack (already on disk), so
+    # grading never re-hits the network. Missing pack -> empty/None -> the
+    # corresponding metric degrades to neutral (handled in the grader).
+    pack = _load_context_pack(match_dir)
+    blue_players, red_players = _lineup_from_pack(pack)
+    baseline_probs = _baseline_probs_from_pack(pack)
+
     return {
         "status": match.get("status"),
         "winner_side": "blue" if blue_score > red_score else "red",
@@ -718,7 +788,65 @@ def _truth_for_match(match: dict) -> dict:
         "red_score": red_score,
         "series_length": blue_score + red_score,
         "series_score": f"{blue_score}-{red_score}",
+        "blue_players": blue_players,
+        "red_players": red_players,
+        "baseline_probs": baseline_probs,
     }
+
+
+def _load_context_pack(match_dir: Path | None) -> dict:
+    """Read the pre-match context_pack.json next to the fixture, if present.
+
+    Returns {} on any miss (missing dir, missing file, bad JSON) — callers
+    treat absence as 'no baseline / no lineup', which the grader scores neutrally.
+    """
+    if not match_dir:
+        return {}
+    pack_path = match_dir / "context_pack.json"
+    if not pack_path.exists():
+        return {}
+    try:
+        return json.loads(pack_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _lineup_from_pack(pack: dict) -> tuple[list[dict], list[dict]]:
+    """Starting 5-man lineups per side from context_pack.rosters.
+
+    Each player dict carries {name, role} — the exact shape key_players_recall
+    normalizes against. Falls back to [] when rosters are unavailable.
+    """
+    def _side(side: str) -> list[dict]:
+        block = ((pack.get("rosters") or {}).get(side) or {})
+        if not block.get("available"):
+            return []
+        return [{"name": p.get("name"), "role": p.get("role")}
+                for p in (block.get("players") or []) if p.get("name")]
+    return _side("blue"), _side("red")
+
+
+def _baseline_probs_from_pack(pack: dict) -> dict[str, float]:
+    """Naive win-prob baseline from each side's long-run win rate.
+
+    Uses team_objectives.game_record.win_rate (probe-validated to call the
+    winner 4/6 on the MSI sample — better than a coin flip, so beating it
+    means the model added real signal). Returns {} when the data is missing
+    or degenerate, in which case skill_score scores the model neutrally (50).
+    """
+    def _wr(side: str) -> float | None:
+        block = ((pack.get("team_objectives") or {}).get(side) or {})
+        if not block.get("available"):
+            return None
+        wr = ((block.get("game_record") or {}).get("win_rate"))
+        return float(wr) if isinstance(wr, (int, float)) else None
+    wr_blue, wr_red = _wr("blue"), _wr("red")
+    if wr_blue is None or wr_red is None:
+        return {}
+    denom = wr_blue + wr_red
+    if denom <= 0:
+        return {}
+    return {"blue": round(wr_blue / denom, 4), "red": round(wr_red / denom, 4)}
 
 
 def _truth_for_game(match: dict, detail: dict, game_stub: dict) -> dict:

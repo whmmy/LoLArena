@@ -8,6 +8,8 @@ Commands:
   refresh-bp <match_id> <pos>     fetch BP for a game (no prediction)
   grade <match_id>           score series predictions vs truth
   grade-game <match_id> <pos>     score one game's predictions
+  regrade                    re-score ALL already-graded matches with the
+                             current scoring config (offline, no API calls)
   serve                      start FastAPI + scheduler
   build-site                 regenerate data.json for the leaderboard
 
@@ -75,6 +77,10 @@ def main(argv: list[str] | None = None) -> int:
         _need(rest, 2, "grade-game <match_id> <game_pos>")
         from .pipeline import orchestrator as orch
         orch.cmd_grade_game(int(rest[0]), int(rest[1]))
+        return 0
+    if cmd == "regrade":
+        from .pipeline import orchestrator as orch
+        orch.cmd_regrade()
         return 0
     if cmd == "serve":
         import uvicorn

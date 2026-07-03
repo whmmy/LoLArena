@@ -11,12 +11,15 @@
 #   layer_weight    : weight of the parent layer in the composite
 
 # ================= SERIES (match) =================
+# Layers are all HARD-VALIDATED against ground truth — no free points for
+# filling in text fields. Free-text fields (reasoning / swing_factors /
+# meta_style_signals) are kept in the schema + shown in the UI but do NOT
+# enter the composite; only verifiable predictions move the score.
 match:
   layer_weights:
-    T1_result:    0.45
-    T2_matchup:   0.25
-    T3_reasoning: 0.15
-    T4_meta:      0.15
+    T1_result:  0.55      # did the model get the result right?
+    T2_skill:   0.30      # did the model's probability BEAT a naive baseline?
+    T3_lineup:  0.15      # did it name the players who actually decided it?
 
   tasks:
     # ------- T1: core result -------
@@ -39,35 +42,36 @@ match:
       output_field: series_length
       notes: predicted total games vs true total games.
 
-    # ------- T2: matchup analysis (soft truth — graded structurally) -------
+    # ------- T2: skill vs naive baseline -------
+    - id: skill_vs_baseline
+      layer: T2_skill
+      weight_in_layer: 1.00
+      metric: skill_score
+      output_field: win_probs
+      notes: >
+        Does the model's win_prob beat a naive baseline built from each team's
+        long-run win rate (team_objectives.game_record.win_rate)? model==baseline
+        -> 50; model better -> higher; model worse -> lower. Missing baseline
+        (no context_pack data) -> neutral 50. A model that merely parrots
+        "favorite wins" earns ~50; real analytical value is what lifts this.
+
+    # ------- T3: lineup recall (now truth-fed, no longer free 100) -------
     - id: key_players
-      layer: T2_matchup
-      weight_in_layer: 0.60
+      layer: T3_lineup
+      weight_in_layer: 1.00
       metric: key_players_recall
       output_field: key_players
-      notes: Fraction of the 10 starting players the model flagged as decisive that actually stood out.
-    - id: swing_factors
-      layer: T2_matchup
-      weight_in_layer: 0.40
-      metric: structural_completeness
-      output_field: swing_factors
-      notes: At least N concrete swing factors present.
+      notes: >
+        Fraction of the real starting lineup the model named as key players.
+        Truth players now come from context_pack.rosters (was empty before,
+        which made every model score 100). A model naming invented/irrelevant
+        names no longer gets a free pass.
 
-    # ------- T3: reasoning completeness -------
-    - id: reasoning_fields
-      layer: T3_reasoning
-      weight_in_layer: 1.00
-      metric: reasoning_completeness
-      output_field: reasoning
-      notes: All four dimensions + overall present, each above min char threshold.
-
-    # ------- T4: meta alignment (soft) -------
-    - id: meta_alignment
-      layer: T4_meta
-      weight_in_layer: 1.00
-      metric: structural_completeness
-      output_field: meta_style_signals
-      notes: Model referenced patch/meta signals in its prediction.
+    # NOTE: reasoning / swing_factors / meta_style_signals are intentionally
+    # NOT scored — they have no ground truth to check against, and the old
+    # structural/length checks gave every model a flat 100 (55% of the
+    # composite), collapsing all discrimination. They remain in the schema
+    # and the UI for human reading.
 
 # ================= SINGLE GAME =================
 game:
