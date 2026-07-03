@@ -1,0 +1,30 @@
+{
+  "tasks": {
+    "game_winner": {
+      "score": 79.75,
+      "metric": "brier_binary"
+    },
+    "duration_mae": {
+      "score": 0.0,
+      "metric": "mae"
+    },
+    "kills_blue_mae": {
+      "score": 0.0,
+      "metric": "mae"
+    },
+    "kills_red_mae": {
+      "score": 75.0,
+      "metric": "mae"
+    },
+    "total_kills_smape": {
+      "score": 67.16,
+      "metric": "smape"
+    }
+  },
+  "layers": {
+    "G1_result": 79.75,
+    "G2_duration": 0.0,
+    "G3_kills": 49.37
+  },
+  "composite": 52.22
+}

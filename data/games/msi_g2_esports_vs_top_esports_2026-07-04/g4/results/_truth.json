@@ -1,0 +1,12 @@
+{
+  "winner_side": null,
+  "winner_id": null,
+  "winner_name": null,
+  "length_min": 0.0,
+  "kills": {
+    "blue": 12,
+    "red": 12
+  },
+  "total_kills": 24,
+  "status": "finished"
+}
