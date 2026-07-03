@@ -72,15 +72,38 @@ def _parse_dt(s: str | None) -> datetime | None:
 
 
 def _match_slug_of(match: dict) -> str:
+    """Stable slug for a match's on-disk dir.
+
+    CRITICAL: reuse the EXISTING match dir name when one exists for this
+    match_id (looked up from data/matches/*/fixture.json). Cito team names
+    drift over time (e.g. "LYON Academy" -> "LYON"), so deriving the slug
+    fresh from the latest team names would point predictions at a dir that
+    doesn't exist, make _already_predicted return False forever, and cause
+    predict_tick to re-run (and re-bill) every tick. Mirrors the fix already
+    in orchestrator._match_slug_of. Only derive a new slug when no dir exists.
+    """
+    mid = match.get("id")
+    if mid is not None:
+        from . import collect as collect_mod
+        existing = collect_mod._find_existing_match_dir(mid)
+        if existing is not None:
+            return existing.name
     opps = match.get("opponents") or []
     league = (match.get("league") or {}).get("name", "LoL")
     return cfg.match_slug(league, opps[0]["opponent"]["name"],
                           opps[1]["opponent"]["name"], match.get("begin_at") or "")
 
 
-def _already_predicted(match: dict) -> bool:
-    slug = _match_slug_of(match)
-    pdir = cfg.MATCHES_DIR / slug / "predictions"
+def _already_predicted(match: dict, *, match_dir: Path | None = None) -> bool:
+    """True if at least one model prediction already exists for this match.
+
+    Prefers the concrete on-disk dir we're iterating over (match_dir) when
+    available — that's the ground truth and avoids any slug derivation.
+    Falls back to _match_slug_of (which now reuses the existing dir via id)
+    only when no dir is provided.
+    """
+    pdir = (match_dir / "predictions") if match_dir is not None \
+        else cfg.MATCHES_DIR / _match_slug_of(match) / "predictions"
     return pdir.exists() and any(pdir.glob("*.json"))
 
 
@@ -149,7 +172,7 @@ def predict_tick() -> None:
             # only matches starting within the lead window (and already begun)
             if not (now - timedelta(minutes=30) <= begin <= now + lead):
                 continue
-            if _already_predicted(fixture):
+            if _already_predicted(fixture, match_dir=mdir):
                 continue
             mid = fixture.get("id")
             print(f"[scheduler] predicting match {mid} ({mdir.name}) "

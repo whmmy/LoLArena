@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614539,
+  "game_id": "lol-game-115570934355614540",
+  "position": 1,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "HLE Zeus",
+        "champion": "Jayce",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "HLE Kanavi",
+        "champion": "Skarner",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "HLE Zeka",
+        "champion": "Cassiopeia",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "HLE Gumayusi",
+        "champion": "Ziggs",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "HLE Delight",
+        "champion": "Shen",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "TSW Pun",
+        "champion": "Sion",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TSW Hizto",
+        "champion": "Lee Sin",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TSW Dire",
+        "champion": "Ryze",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TSW Eddie",
+        "champion": "Ezreal",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TSW Bie",
+        "champion": "Rell",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T05:40:35Z",
+  "winner_side": "red",
+  "kills": {
+    "blue": 9,
+    "red": 10
+  },
+  "total_kills": 19
+}

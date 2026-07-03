@@ -2,13 +2,16 @@
   "id": 115570934355614539,
   "name": "Hanwha Life Esports vs Team Secret Whales",
   "match_type": null,
-  "status": "not_started",
+  "status": "finished",
   "number_of_games": 5,
   "begin_at": "2026-07-04T03:00:00.000Z",
   "scheduled_at": "2026-07-04T03:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "hle",
+  "winner": {
+    "id": "hle",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
@@ -23,10 +26,10 @@
     },
     {
       "opponent": {
-        "id": "tsw",
+        "id": "team-secret-whales",
         "name": "Team Secret Whales",
         "acronym": "TSW",
-        "slug": "tsw",
+        "slug": "team-secret-whales",
         "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png"
       }
     }
@@ -34,10 +37,10 @@
   "results": [
     {
       "team_id": "hle",
-      "score": 0
+      "score": 3
     },
     {
-      "team_id": "tsw",
+      "team_id": "team-secret-whales",
       "score": 0
     }
   ],
@@ -50,9 +53,121 @@
   "tournament": {
     "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614540",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614539,
+      "blue_team": {
+        "id": "hle",
+        "name": "Hanwha Life Esports",
+        "acronym": "HLE",
+        "slug": "hle",
+        "image_url": "https://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+        "kills": 9,
+        "towers": 8
+      },
+      "red_team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "kills": 10,
+        "towers": 1
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614541",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614539,
+      "blue_team": {
+        "id": "hle",
+        "name": "Hanwha Life Esports",
+        "acronym": "HLE",
+        "slug": "hle",
+        "image_url": "https://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+        "kills": 22,
+        "towers": 5
+      },
+      "red_team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "kills": 17,
+        "towers": 0
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614542",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614539,
+      "blue_team": {
+        "id": "hle",
+        "name": "Hanwha Life Esports",
+        "acronym": "HLE",
+        "slug": "hle",
+        "image_url": "https://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png",
+        "kills": 18,
+        "towers": 9
+      },
+      "red_team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "kills": 9,
+        "towers": 2
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.youtube.com/watch?v=EuQTljwgLsE"
 }

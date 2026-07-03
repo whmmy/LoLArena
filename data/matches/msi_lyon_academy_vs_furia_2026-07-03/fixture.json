@@ -1,6 +1,6 @@
 {
   "id": 115570934355614533,
-  "name": "Lyon Academy vs FURIA",
+  "name": "LYON vs FURIA",
   "match_type": null,
   "status": "not_started",
   "number_of_games": 5,
@@ -15,10 +15,10 @@
     {
       "opponent": {
         "id": "lyon",
-        "name": "Lyon Academy",
+        "name": "LYON",
         "acronym": "LYON",
         "slug": "lyon",
-        "image_url": "http://static.lolesports.com/teams/1771401158736_FULL_COLOR_FOR_DARK_BG-1.png"
+        "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
       }
     },
     {

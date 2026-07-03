@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614539,
+  "game_id": "lol-game-115570934355614542",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "HLE Zeus",
+        "champion": "Dr. Mundo",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "HLE Kanavi",
+        "champion": "Nocturne",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "HLE Zeka",
+        "champion": "Viktor",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "HLE Gumayusi",
+        "champion": "Miss Fortune",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "HLE Delight",
+        "champion": "Bard",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "TSW Pun",
+        "champion": "Renekton",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TSW Hizto",
+        "champion": "Naafiri",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TSW Dire",
+        "champion": "Hwei",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TSW Eddie",
+        "champion": "Caitlyn",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TSW Bie",
+        "champion": "Karma",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T05:40:40Z",
+  "winner_side": "blue",
+  "kills": {
+    "blue": 18,
+    "red": 9
+  },
+  "total_kills": 27
+}
