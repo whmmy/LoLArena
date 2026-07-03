@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614545,
+  "game_id": "lol-game-115570934355614547",
+  "position": 2,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "TES ZUIAN",
+        "champion": "Renekton",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TES Tian",
+        "champion": "Jarvan IV",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TES Creme",
+        "champion": "Aurora",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TES JackeyLove",
+        "champion": "Ezreal",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TES fengyue",
+        "champion": "Neeko",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "G2 BrokenBlade",
+        "champion": "K'Sante",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "G2 SkewMond",
+        "champion": "Xin Zhao",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "G2 Caps",
+        "champion": "Ahri",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "G2 Hans Sama",
+        "champion": "Yunara",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "G2 Labrov",
+        "champion": "Lulu",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T09:35:45Z"
+}

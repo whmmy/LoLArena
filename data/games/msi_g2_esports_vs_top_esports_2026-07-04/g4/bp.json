@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614545,
+  "game_id": "lol-game-115570934355614549",
+  "position": 4,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "G2 BrokenBlade",
+        "champion": "Gnar",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "G2 SkewMond",
+        "champion": "Vi",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "G2 Caps",
+        "champion": "Twisted Fate",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "G2 Hans Sama",
+        "champion": "Lucian",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "G2 Labrov",
+        "champion": "Milio",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "TES ZUIAN",
+        "champion": "Tristana",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TES Tian",
+        "champion": "Nocturne",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TES Creme",
+        "champion": "Hwei",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TES JackeyLove",
+        "champion": "Jhin",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TES fengyue",
+        "champion": "Karma",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T09:35:59Z"
+}

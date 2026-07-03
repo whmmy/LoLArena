@@ -2,7 +2,7 @@
   "id": 115570934355614545,
   "name": "G2 Esports vs TOP ESPORTS",
   "match_type": null,
-  "status": "not_started",
+  "status": "running",
   "number_of_games": 5,
   "begin_at": "2026-07-04T08:00:00.000Z",
   "scheduled_at": "2026-07-04T08:00:00.000Z",
@@ -18,7 +18,7 @@
         "name": "G2 Esports",
         "acronym": "G2",
         "slug": "g2",
-        "image_url": "http://static.lolesports.com/teams/G2-FullonDark.png"
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png"
       }
     },
     {
@@ -27,33 +27,218 @@
         "name": "TOP ESPORTS",
         "acronym": "TES",
         "slug": "tes",
-        "image_url": "http://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png"
+        "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png"
       }
     }
   ],
   "results": [
     {
       "team_id": "g2",
-      "score": 0
+      "score": 2
     },
     {
       "team_id": "tes",
-      "score": 0
+      "score": 2
     }
   ],
   "league": {
     "id": "lol-msi",
     "name": "MSI",
-    "slug": null
+    "slug": "msi"
   },
   "serie": {},
   "tournament": {
-    "id": null,
-    "name": null
+    "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614546",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614545,
+      "blue_team": {
+        "id": "g2",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 11,
+        "towers": 5
+      },
+      "red_team": {
+        "id": "tes",
+        "name": "TOP ESPORTS",
+        "acronym": "TES",
+        "slug": "tes",
+        "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png",
+        "kills": 6,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614547",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614545,
+      "blue_team": {
+        "id": "g2",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 22,
+        "towers": 5
+      },
+      "red_team": {
+        "id": "tes",
+        "name": "TOP ESPORTS",
+        "acronym": "TES",
+        "slug": "tes",
+        "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png",
+        "kills": 11,
+        "towers": 2
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614548",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614545,
+      "blue_team": {
+        "id": "g2",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 10,
+        "towers": 3
+      },
+      "red_team": {
+        "id": "tes",
+        "name": "TOP ESPORTS",
+        "acronym": "TES",
+        "slug": "tes",
+        "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png",
+        "kills": 27,
+        "towers": 7
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614549",
+      "position": 4,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614545,
+      "blue_team": {
+        "id": "tes",
+        "name": "TOP ESPORTS",
+        "acronym": "TES",
+        "slug": "tes",
+        "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png",
+        "kills": 12,
+        "towers": 9
+      },
+      "red_team": {
+        "id": "g2",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 12,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614550",
+      "position": 5,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614545,
+      "blue_team": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 5,
+        "towers": 0
+      },
+      "red_team": {
+        "id": "top-esports",
+        "name": "TOP ESPORTS",
+        "acronym": "TES",
+        "slug": "top-esports",
+        "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png",
+        "kills": 3,
+        "towers": 0
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.youtube.com/watch?v=xbho33Gp_lU"
 }

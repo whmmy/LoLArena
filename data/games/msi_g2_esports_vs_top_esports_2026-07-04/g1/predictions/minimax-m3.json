@@ -1,0 +1,66 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_g2_esports_vs_top_esports_2026-07-04/g1",
+  "submitted_at": "2026-07-03T09:45:47.161934+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "本局G2（红方）略占优势。G2五人近期胜率集中在68-73%，状态明显优于TES的46-51%；BP上G2的LeBlanc+Ashe+Rumble+Olaf组合前中期打架/抓人能力强，正好克制TES需要拖到后期的Cassiopeia发育曲线；TES阵容偏单核Cassiopeia后期，被G2阵容抓到机会风险较高。综合状态与BP节奏判断G2取胜概率略高。",
+      "draft_analysis": "G2阵容是经典的'刺客+功能AD+团战AOE上单+侵略性打野+硬辅'组合：Caps的LeBlanc对线压制Creme的Cassiopeia（LeBlanc前6级击杀压力极大，6级后Cassio未成型前依然被动），SkewMond的Olaf前期入侵Naafiri野区、争夺河蟹/小龙，BrokenBlade的Rumble在团战用Equalizer能打出大量AOE伤害，Hans Sama的Ashe提供视野+远程开团，Labrov的Braum提供强力护盾/反打控制。TES阵容是'战士上单+刺客型打野+后期APC+功能AD+硬辅'：ZUIAN的Ambessa单带/团战搅局能力强，Tian的Naafiri中期打架也不错，JackeyLove的Varus提供poke，fengyue的Nautilus是开团核心——但Cassiopeia是唯一后期大核，前中期输出缺口大，且没有强aoe清线能力。对线期G2中野双前期英雄的入侵会给TES很大压力；如果拖到35分钟后，TES的Cassiopeia接管比赛能力才会反超。",
+      "tempo_wincon": "G2掌握节奏：他们一塔率60%、一龙率43%、一Baron率70%，擅长把前期优势转化为塔和大龙。G2的致胜条件是Olaf前期压制Naafiri、LeBlanc前中期击杀/游走Cassiopeia、20-25分钟通过Rumble+Ashe+LeBlanc的小规模团战滚起雪球，27-32分钟拿下大龙一波结束。TES的致胜条件是Cassiopeia无压力发育到30+分钟三件套，再用Nautilus R的团战开团配合Ambessa/Naafiri冲阵。综合BP与近期状态，预计本局G2会在30-33分钟结束战斗，时长略低于G2场均32.1与TES场均31.2的平均值（31.2），按31.0分钟估算。击杀方面，G2场均15.3、TES场均14.82，Olaf+LeBlanc+Ashe抓人组合会推高G2的击杀数、压低TES的击杀数，按G2 16 / TES 12 / 总计28估算（略低于两队场均总和30.1，反映G2获胜局中TES被压制的特征）。"
+    },
+    "win_prob": {
+      "blue": 0.44,
+      "red": 0.56
+    },
+    "predicted_winner": "red",
+    "expected_duration_min": 31.0,
+    "kills": {
+      "blue": 12,
+      "red": 16
+    },
+    "total_kills": 28,
+    "key_drafted_champions": [
+      {
+        "champion": "LeBlanc",
+        "team": "red",
+        "role": "mid",
+        "impact": "Caps的招牌刺客英雄，前中期对Cassiopeia形成击杀压力，是G2的节奏发动机"
+      },
+      {
+        "champion": "Olaf",
+        "team": "red",
+        "role": "jun",
+        "impact": "前期入侵能力强，压制Naafiri野区，建立前期优势的关键"
+      },
+      {
+        "champion": "Cassiopeia",
+        "team": "blue",
+        "role": "mid",
+        "impact": "TES唯一后期大核，被压则TES阵容输出不足"
+      },
+      {
+        "champion": "Ashe",
+        "team": "red",
+        "role": "adc",
+        "impact": "远程开团+视野功能，配合LeBlanc形成抓人组合"
+      },
+      {
+        "champion": "Rumble",
+        "team": "red",
+        "role": "top",
+        "impact": "团战AOE核心，Equalizer大招能改变团战走向"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "<think>\nThe user wants me to re-output the complete JSON object only, with no extra text. Let me output the JSON cleanly.\n</think>\n{\"reasoning\":{\"overall\":\"本局G2（红方）略占优势。G2五人近期胜率集中在68-73%，状态明显优于TES的46-51%；BP上G2的LeBlanc+Ashe+Rumble+Olaf组合前中期打架/抓人能力强，正好克制TES需要拖到后期的Cassiopeia发育曲线；TES阵容偏单核Cassiopeia后期，被G2阵容抓到机会风险较高。综合状态与BP节奏判断G2取胜概率略高。\",\"draft_analysis\":\"G2阵容是经典的'刺客+功能AD+团战AOE上单+侵略性打野+硬辅'组合：Caps的LeBlanc对线压制Creme的Cassiopeia（LeBlanc前6级击杀压力极大，6级后Cassio未成型前依然被动），SkewMond的Olaf前期入侵Naafiri野区、争夺河蟹/小龙，BrokenBlade的Rumble在团战用Equalizer能打出大量AOE伤害，Hans Sama的Ashe提供视野+远程开团，Labrov的Braum提供强力护盾/反打控制。TES阵容是'战士上单+刺客型打野+后期APC+功能AD+硬辅'：ZUIAN的Ambessa单带/团战搅局能力强，Tian的Naafiri中期打架也不错，JackeyLove的Varus提供poke，fengyue的Nautilus是开团核心——但Cassiopeia是唯一后期大核，前中期输出缺口大，且没有强aoe清线能力。对线期G2中野双前期英雄的入侵会给TES很大压力；如果拖到35分钟后，TES的Cassiopeia接管比赛能力才会反超。\",\"tempo_wincon\":\"G2掌握节奏：他们一塔率60%、一龙率43%、一Baron率70%，擅长把前期优势转化为塔和大龙。G2的致胜条件是Olaf前期压制Naafiri、LeBlanc前中期击杀/游走Cassiopeia、20-25分钟通过Rumble+Ashe+LeBlanc的小规模团战滚起雪球，27-32分钟拿下大龙一波结束。TES的致胜条件是Cassiopeia无压力发育到30+分钟三件套，再用Nautilus R的团战开团配合Ambessa/Naafiri冲阵。综合BP与近期状态，预计本局G2会在30-33分钟结束战斗，时长略低于G2场均32.1与TES场均31.2的平均值（31.2），按31.0分钟估算。击杀方面，G2场均15.3、TES场均14.82，Olaf+LeBlanc+Ashe抓人组合会推高G2的击杀数、压低TES的击杀数，按G2 16 / TES 12 / 总计28估算（略低于两队场均总和30.1，反映G2获胜局中TES被压制的特征）。\"},\"win_prob\":{\"blue\":0.44,\"red\":0.56},\"predicted_winner\":\"red\",\"expected_duration_min\":31.0,\"kills\":{\"blue\":12,\"red\":16},\"total_kills\":28,\"key_drafted_champions\":[{\"champion\":\"LeBlanc\",\"team\":\"red\",\"role\":\"mid\",\"impact\":\"Caps的招牌刺客英雄，前中期对Cassiopeia形成击杀压力，是G2的节奏发动机\"},{\"champion\":\"Olaf\",\"team\":\"red\",\"role\":\"jun\",\"impact\":\"前期入侵能力强，压制Naafiri野区，建立前期优势的关键\"},{\"champion\":\"Cassiopeia\",\"team\":\"blue\",\"role\":\"mid\",\"impact\":\"TES唯一后期大核，被压则TES阵容输出不足\"},{\"champion\":\"Ashe\",\"team\":\"red\",\"role\":\"adc\",\"impact\":\"远程开团+视野功能，配合LeBlanc形成抓人组合\"},{\"champion\":\"Rumble\",\"team\":\"red\",\"role\":\"top\",\"impact\":\"团战AOE核心，Equalizer大招能改变团战走向\"}],\"sources\":[]}",
+  "thinking_text": null,
+  "sources": [],
+  "input_tokens": 43736,
+  "output_tokens": 7426,
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 94.88,
+  "error": null
+}

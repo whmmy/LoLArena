@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614545,
+  "game_id": "lol-game-115570934355614550",
+  "position": 5,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "G2 BrokenBlade",
+        "champion": "Anivia",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "G2 SkewMond",
+        "champion": "Poppy",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "G2 Caps",
+        "champion": "Mel",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "G2 Hans Sama",
+        "champion": "Sivir",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "G2 Labrov",
+        "champion": "Rell",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "TES ZUIAN",
+        "champion": "Ornn",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TES Tian",
+        "champion": "Maokai",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TES Creme",
+        "champion": "Yone",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TES JackeyLove",
+        "champion": "Ziggs",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TES fengyue",
+        "champion": "Pantheon",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T09:36:32Z"
+}

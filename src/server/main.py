@@ -369,7 +369,7 @@ def save_bp(req: SaveBPRequest):
         "bp_complete": complete,
         "picks": {"blue": blue_list, "red": red_list},
         "fetched_at": existing.get("fetched_at"),
-        "manual": True,   # mark this BP as hand-entered (auto-fetch overwrites it)
+        "manual": True,   # hand-entered; fetch_game_bp keeps it until real (complete) data lands
     }
     # Preserve any truth fields the grader may have mirrored in earlier.
     for k in ("winner_side", "kills", "total_kills", "length_min"):

@@ -1,0 +1,60 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "game",
+  "target_id": "msi_g2_esports_vs_top_esports_2026-07-04/g1",
+  "submitted_at": "2026-07-03T09:45:17.845979+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "本局TES（Red）在BP上形成了对G2（Blue）的显著克制，凭借Olaf的免控与Braum的护盾完美化解了G2的强开体系，预计TES将掌控前中期节奏并赢下比赛。",
+      "draft_analysis": "G2（Blue）选出了Ambessa、Naafiri、Cassiopeia、Varus与Nautilus的冲阵与强开阵容，依赖Nautilus与Varus的先手以及蛇女的后期兜底。然而TES（Red）的BP极具针对性：Olaf的大招免控让Nautilus的进场形同虚设，Braum的举盾完美格挡Varus的Poke与大招，LeBlanc则在对线期极大压制Cassiopeia的发育并限制其支援。TES的阵容在反打、野区对抗与中野节奏上全面占优，G2的笨重阵容难以发挥。",
+      "tempo_wincon": "TES（Red）掌握前中期节奏，致胜条件是通过LeBlanc与Olaf的中野联动在前期打崩G2的中下路，利用Ashe的大招与Braum的反打在小规模团战中滚起雪球，避免与蛇女拖入大后期。G2的致胜条件则是依靠Nautilus的绕后开团与Ambessa的单带牵扯，强行拖到蛇女三件套。时长锚点基于两队场均31.6分钟，本局TES前期攻势猛烈但G2有蛇女兜底，预计时长修正为32.8分钟。击杀锚点基于TES场均14.8与G2场均15.3，本局TES反打与刺客属性易造击杀，预计TES 17杀，G2 11杀，总计28杀。"
+    },
+    "win_prob": {
+      "blue": 0.4,
+      "red": 0.6
+    },
+    "predicted_winner": "red",
+    "expected_duration_min": 32.8,
+    "kills": {
+      "blue": 11,
+      "red": 17
+    },
+    "total_kills": 28,
+    "key_drafted_champions": [
+      {
+        "champion": "Olaf",
+        "team": "red",
+        "role": "jun",
+        "impact": "免控机制完美克制Blue方的Nautilus和Varus强开体系，野区单挑压制Naafiri。"
+      },
+      {
+        "champion": "Braum",
+        "team": "red",
+        "role": "sup",
+        "impact": "防盗门举盾极大限制了Varus的Poke与大招开团，保护Ashe免受冲阵威胁。"
+      },
+      {
+        "champion": "LeBlanc",
+        "team": "red",
+        "role": "mid",
+        "impact": "前期高爆发与游走能力压制Cassiopeia的发育，并能配合Olaf入侵野区。"
+      },
+      {
+        "champion": "Cassiopeia",
+        "team": "blue",
+        "role": "mid",
+        "impact": "Blue方唯一的后期大核与持续输出点，但前期面临LeBlanc的极大对线压力。"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"本局TES（Red）在BP上形成了对G2（Blue）的显著克制，凭借Olaf的免控与Braum的护盾完美化解了G2的强开体系，预计TES将掌控前中期节奏并赢下比赛。\",\n    \"draft_analysis\": \"G2（Blue）选出了Ambessa、Naafiri、Cassiopeia、Varus与Nautilus的冲阵与强开阵容，依赖Nautilus与Varus的先手以及蛇女的后期兜底。然而TES（Red）的BP极具针对性：Olaf的大招免控让Nautilus的进场形同虚设，Braum的举盾完美格挡Varus的Poke与大招，LeBlanc则在对线期极大压制Cassiopeia的发育并限制其支援。TES的阵容在反打、野区对抗与中野节奏上全面占优，G2的笨重阵容难以发挥。\",\n    \"tempo_wincon\": \"TES（Red）掌握前中期节奏，致胜条件是通过LeBlanc与Olaf的中野联动在前期打崩G2的中下路，利用Ashe的大招与Braum的反打在小规模团战中滚起雪球，避免与蛇女拖入大后期。G2的致胜条件则是依靠Nautilus的绕后开团与Ambessa的单带牵扯，强行拖到蛇女三件套。时长锚点基于两队场均31.6分钟，本局TES前期攻势猛烈但G2有蛇女兜底，预计时长修正为32.8分钟。击杀锚点基于TES场均14.8与G2场均15.3，本局TES反打与刺客属性易造击杀，预计TES 17杀，G2 11杀，总计28杀。\"\n  },\n  \"win_prob\": {\n    \"blue\": 0.4,\n    \"red\": 0.6\n  },\n  \"predicted_winner\": \"red\",\n  \"expected_duration_min\": 32.8,\n  \"kills\": {\n    \"blue\": 11,\n    \"red\": 17\n  },\n  \"total_kills\": 28,\n  \"key_drafted_champions\": [\n    {\n      \"champion\": \"Olaf\",\n      \"team\": \"red\",\n      \"role\": \"jun\",\n      \"impact\": \"免控机制完美克制Blue方的Nautilus和Varus强开体系，野区单挑压制Naafiri。\"\n    },\n    {\n      \"champion\": \"Braum\",\n      \"team\": \"red\",\n      \"role\": \"sup\",\n      \"impact\": \"防盗门举盾极大限制了Varus的Poke与大招开团，保护Ashe免受冲阵威胁。\"\n    },\n    {\n      \"champion\": \"LeBlanc\",\n      \"team\": \"red\",\n      \"role\": \"mid\",\n      \"impact\": \"前期高爆发与游走能力压制Cassiopeia的发育，并能配合Olaf入侵野区。\"\n    },\n    {\n      \"champion\": \"Cassiopeia\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"impact\": \"Blue方唯一的后期大核与持续输出点，但前期面临LeBlanc的极大对线压力。\"\n    }\n  ],\n  \"sources\": []\n}",
+  "thinking_text": "用户要求预测一场英雄联盟单局比赛的结果，基于提供的BP、队伍基线数据、版本meta等信息。\n比赛是 G2 Esports (Blue) vs TOP ESPORTS (Red) 的 MSI 淘汰赛，当前系列赛比分 2:2，这是第5局（决胜局）。（注意：context_pack里写的是 position: 1，但series_score是2:2，可能是系统生成的数据有些矛盾，但series_score明确是2:2，last_game_summary null。不过BP里的position是1，可能是指这局的数据。不管怎样，按照决胜局或者关键局的心态来分析，或者直接看BP和基本面）。\n等等，BP数据里：\nBlue (G2) 的 picks 写的是：\ntop: TES ZUIAN - Ambessa (这里名字写错了，写成了TES ZUIAN，但队伍是blue G2，可能是数据生成时的错误，实际应该是G2 BrokenBlade，但BP里写的是TES ZUIAN？不对，看BP：\nblue:\ntop: TES ZUIAN - Ambessa\njun: TES Tian - Naafiri\nmid: TES Creme - Cassiopeia\nadc: TES JackeyLove - Varus\nsup: TES fengyue - Nautilus\n\nred:\ntop: G2 BrokenBlade - Rumble\njun: G2 SkewMond - Olaf\nmid: G2 Caps - LeBlanc\nadc: G2 Hans Sama - Ashe\nsup: G2 Labrov - Braum\n\n这明显是BP数据里的队伍和选手名字弄反了或者混乱了。\nBlue方（G2）的选手名字被写成了TES的选手（ZUIAN, Tian, Creme, JackeyLove, fengyue），但英雄是 Ambessa, Naafiri, Cassiopeia, Varus, Nautilus。\nRed方（TES）的选手名字被写成了G2的选手（BrokenBlade, SkewMond, Caps, Hans Sama, Labrov），英雄是 Rumble, Olaf, LeBlanc, Ashe, Braum。\n根据常理，G2的选手是BrokenBlade, SkewMond, Caps, Hans Sama, Labrov。TES的选手是369(ZUIAN?), naiyou(Tian?), Creme, JiaQi(JackeyLove?), fengyue。\n所以实际上：\nBlue方是G2，选出的英雄是：Ambessa, Naafiri, Cassiopeia, Varus, Nautilus。\nRed方是TES，选出的英雄是：Rumble, Olaf, LeBlanc, Ashe, Braum。\n（或者Blue方是TES，Red方是G2？看fixture_header，blue是G2，red是TES。所以Blue=G2，Red=TES。BP里的player名字写错了，但英雄对应关系应该是：\nG2 (Blue): Ambessa (Top), Naafiri (Jun), Cassiopeia (Mid), Varus (Adc), Nautilus (Sup).\nTES (Red): Rumble (Top), Olaf (Jun), LeBlanc (Mid), Ashe (Adc), Braum (Sup).\n等一下，BP里的red方选手名字是G2的，blue方是TES的。这可能是生成数据时的映射错误。我需要按照“Blue方英雄阵容”和“Red方英雄阵容”来分析，同时结合队伍基本面。\nBlue方（G2）：Ambessa, Naafiri, Cassiopeia, Varus, Nautilus。这是一个非常强势的前中期打架和开团阵容。Nautilus+Varus有双控，Cassiopeia中后期伤害高，Ambessa和Naafiri冲阵。\nRed方（TES）：Rumble, Olaf, LeBlanc, Ashe, Braum。Rumble和Olaf是前中期野区强势，LeBlanc刺客，Ashe+Braum是经典下路组合，有开团和反打。\n\n让我们重新核对一下基本面数据：\nG2 (Blue):\nTop: BrokenBlade (K'Sante, Kled, Rumble, Ornn) -> 这里选了Ambessa（可能是新英雄或者他最近练的，369在数据里Ambessa选了5把）。\nJun: SkewMond (Xin Zhao, Pantheon, Skarner) -> 选了Naafiri。\nMid: Caps (Orianna, Ahri, Taliyah) -> 选了Cassiopeia。\nAdc: Hans Sama (Sivir, Ezreal, Caitlyn, Ashe) -> 选了Varus。\nSup: Labrov (Bard, Lulu, Neeko) -> 选了Nautilus。\n\nTES (Red):\nTop: 369 (Ambessa, Rumble, Sion) -> 选了Rumble。\nJun: naiyou (Pantheon, Xin Zhao, Wukong) -> 选了Olaf。\nMid: Creme (Annie, Yone, Aurora, Cassiopeia) -> 选了LeBlanc。\nAdc: JiaQi (Ashe, Yunara, Sivir) -> 选了Ashe。\nSup: fengyue (Seraphine, Nautilus, Alistar) -> 选了Braum。\n\n可以看出，BP数据里的player字段确实把TES和G2的名字写反了（Blue写了TES的人，Red写了G2的人），但英雄是真实的。我将以英雄阵容为准，Blue代表G2，Red代表TES。\nBlue (G2) 阵容：Ambessa, Naafiri, Cassiopeia, Varus, Nautilus。\nRed (TES) 阵容：Rumble, Olaf, LeBlanc, Ashe, Braum。\n\n分析阵容：\nG2 (Blue)：\n上单 Ambessa：新英雄/冲阵战士，单带和团战切入强。\n打野 Naafiri：前期节奏和野区对抗强，配合中下越塔。\n中单 Cassiopeia：线霸，中后期持续输出，但怕突脸。\nADC Varus：穿甲或特效流，提供poke和开团（R）。\n辅助 Nautilus：强开团，配合Varus和Ambessa进场。\n整体：强开团，前中期节奏紧凑，有蛇女兜底后期。\n\nTES (Red)：\n上单 Rumble：线霸，团战大招分割战场。\n打野 Olaf：野区单挑王，免控，克制Nautilus和Varus的开团。\n中单 LeBlanc：刺客，前期游走，秒脆皮，克制蛇女。\nADC Ashe：功能性ADC，提供视野和开团（R），配合Braum。\n辅助 Braum：反打和保护神，克制Varus的poke和飞行道具。\n整体：反打能力强，野区对抗强（Olaf），中野节奏快（LeBlanc+Olaf）。\n\n对位分析：\n上单：Ambessa vs Rumble。Rumble前期对线压制力强，Ambessa需要发育和操作，Rumble占优。\n打野：Naafiri vs Olaf。Olaf在野区单挑和2v2中占据绝对优势，Naafiri需要避战或依靠线上支援。\n中单：Cassiopeia vs LeBlanc。LeBlanc前期有爆发和游走优势，蛇女前期较弱且怕Gank，LeBlanc占优。\n下路：Varus+Nautilus vs Ashe+Braum。Braum完美克制Varus的Q和R，Nautilus开团也会被Braum防盗门挡住。Ashe+Braum线权可能稍弱，但反打极强。\n\n综合来看，TES (Red) 的阵容在BP上非常克制G2 (Blue)。Olaf克制强开，Braum克制Varus，LeBlanc克制蛇女。G2的阵容虽然扎实，但面对TES的针对性Pick显得笨重。\n因此，Red (TES) 胜率更高。\n\n时长与击杀锚点：\nG2 场均时长 32.1 分钟，场均击杀 15.3，对手 11.65。\nTES 场均时长 31.2 分钟，场均击杀 14.82，对手 15.44。\n平均时长约 31.6 分钟。\n本局TES阵容反打和刺客属性强，LeBlanc和Olaf容易在前期滚雪球，但Ashe和Braum偏向拉扯，Rumble打团。G2有蛇女，如果能拖住会有后期能力。预计时长在 32.5 分钟左右。\n击杀方面，TES前期优势大，可能会爆发较多战斗。TES预计 16 杀，G2预计 11 杀。总击杀 27。\n\n修正：\nBlue (G2) 胜率 0.40，Red (TES) 胜率 0.60。\n预测胜者：red。\n时长：32.8 分钟。\n击杀：blue 11, red 17, total 28。\n\n检查BP里的英雄名字：\nBlue: Ambessa, Naafiri, Cassiopeia, Varus, Nautilus\nRed: Rumble, Olaf, LeBlanc, Ashe, Braum\n\nKey drafted champions:\n1. Olaf (Red, Jun): 免控机制完美克制Blue方的Nautilus和Varus强开体系，野区单挑压制Naafiri。\n2. Braum (Red, Sup): 防盗门举盾极大限制了Varus的Poke与大招开团，保护Ashe免受冲阵威胁。\n3. LeBlanc (Red, Mid): 前期高爆发与游走能力压制Cassiopeia的发育，并能配合Olaf入侵野区。\n4. Cassiopeia (Blue, Mid): Blue方唯一的后期大核与持续输出点，但前期面临LeBlanc的极大对线压力。\n\nReasoning:\noverall: 本局TES（Red）在BP上形成了对G2（Blue）的显著克制，凭借Olaf的免控与Braum的护盾完美化解了G2的强开体系，预计TES将掌控前中期节奏并赢下比赛。\ndraft_analysis: G2（Blue）选出了Ambessa、Naafiri、Cassiopeia、Varus与Nautilus的冲阵与强开阵容，依赖Nautilus与Varus的先手以及蛇女的后期兜底。然而TES（Red）的BP极具针对性：Olaf的大招免控让Nautilus的进场形同虚设，Braum的举盾完美格挡Varus的Poke与大招，LeBlanc则在对线期极大压制Cassiopeia的发育并限制其支援。TES的阵容在反打、野区对抗与中野节奏上全面占优，G2的笨重阵容难以发挥。\ntempo_wincon: TES（Red）掌握前中期节奏，致胜条件是通过LeBlanc与Olaf的中野联动在前期打崩G2的中下路，利用Ashe的大招与Braum的反打在小规模团战中滚起雪球，避免与蛇女拖入大后期。G2的致胜条件则是依靠Nautilus的绕后开团与Ambessa的单带牵扯，强行拖到蛇女三件套。时长锚点基于两队场均31.6分钟，本局TES前期攻势猛烈但G2有蛇女兜底，预计时长修正为32.8分钟。击杀锚点基于TES场均14.8与G2场均15.3，本局TES反打与刺客属性易造击杀，预计TES 17杀，G2 11杀，总计28杀。\n\n检查JSON格式和要求。\nwin_prob: blue 0.4, red 0.6\npredicted_winner: red\nexpected_duration_min: 32.8\nkills: blue 11, red 17\ntotal_kills: 28\nkey_drafted_champions: 4个。\nsources: []\n\n注意：BP数据里的player名字写反了，我在reasoning里直接用队伍名（G2/TES）和英雄名，避免被错误的名字干扰。Blue代表G2，Red代表TES。\nBlue: Ambessa, Naafiri, Cassiopeia, Varus, Nautilus\nRed: Rumble, Olaf, LeBlanc, Ashe, Braum\n\n确认无误。\n输出纯JSON。",
+  "sources": [],
+  "input_tokens": 21415,
+  "output_tokens": 3470,
+  "tool_calls": 0,
+  "cost_usd": 0.056472,
+  "wall_seconds": 65.6,
+  "error": null
+}

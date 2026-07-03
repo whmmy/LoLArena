@@ -87,6 +87,36 @@ def _find_existing_match_dir(match_id: int) -> Path | None:
     return None
 
 
+def _game_dir_for_match(match: dict, position: int) -> Path:
+    """Resolve the game dir for a match by fixture id first (matches save_bp),
+    falling back to re-deriving the slug from match fields. This keeps the auto
+    fetcher and the manual editor reading/writing the same path even when team
+    or league names differ between the originally-scanned fixture and a freshly
+    fetched detail.
+    """
+    existing = _find_existing_match_dir(match.get("id"))
+    if existing is not None:
+        return cfg.game_dir(existing.name, position)
+    opps = match.get("opponents") or []
+    return cfg.game_dir(cfg.match_slug(
+        (match.get("league") or {}).get("name", "LoL"),
+        opps[0]["opponent"]["name"] if len(opps) > 0 else "unknown",
+        opps[1]["opponent"]["name"] if len(opps) > 1 else "unknown",
+        match.get("begin_at") or "",
+    ), position)
+
+
+def _read_bp(gdir: Path) -> dict | None:
+    """Read and parse the bp.json in a game dir, or None if missing/invalid."""
+    bp_path = gdir / "bp.json"
+    if not bp_path.exists():
+        return None
+    try:
+        return json.loads(bp_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+
+
 def collect_context_pack(match: dict, client: CitoClient) -> dict:
     """Build the shared context_pack and persist it next to fixture.json.
 
@@ -627,11 +657,23 @@ def fetch_game_bp(match: dict, position: int, client: CitoClient,
         bp["note"] = ("Game stats not yet available. Re-run after the game is "
                       "played or once Cito populates the /games/{id}/stats data.")
 
-    gdir = cfg.game_dir(cfg.match_slug(
-        (match.get("league") or {}).get("name", "LoL"),
-        opps[0]["opponent"]["name"], opps[1]["opponent"]["name"],
-        match.get("begin_at") or "",
-    ), position)
+    # Resolve the game dir the SAME way save_bp does — by fixture id lookup —
+    # so manual and auto BP always land in (and read from) the same place.
+    # Re-deriving the slug from match names can diverge when the freshly-fetched
+    # detail uses different team/league spelling than at scan time.
+    gdir = _game_dir_for_match(match, position)
+
+    # Fallback: if the remote gave us an INCOMPLETE BP this run but the disk
+    # already holds a complete one (hand-entered via save_bp, or a previous
+    # successful fetch), keep the disk version instead of clobbering it with
+    # empties. This is what stops predict-game from reporting "refresh BP" right
+    # after the user manually filled it in. When the real data lands (complete),
+    # we fall through and overwrite as usual.
+    if not complete:
+        existing = _read_bp(gdir)
+        if existing and existing.get("bp_complete"):
+            return existing
+
     (gdir / "bp.json").write_text(
         json.dumps(bp, ensure_ascii=False, indent=2), encoding="utf-8"
     )

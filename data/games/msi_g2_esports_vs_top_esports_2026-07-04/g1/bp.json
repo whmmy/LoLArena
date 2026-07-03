@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614545,
+  "game_id": "lol-game-115570934355614546",
+  "position": 1,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "TES ZUIAN",
+        "champion": "Ambessa",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TES Tian",
+        "champion": "Naafiri",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TES Creme",
+        "champion": "Cassiopeia",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TES JackeyLove",
+        "champion": "Varus",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TES fengyue",
+        "champion": "Nautilus",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "G2 BrokenBlade",
+        "champion": "Rumble",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "G2 SkewMond",
+        "champion": "Olaf",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "G2 Caps",
+        "champion": "LeBlanc",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "G2 Hans Sama",
+        "champion": "Ashe",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "G2 Labrov",
+        "champion": "Braum",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T09:44:05Z"
+}

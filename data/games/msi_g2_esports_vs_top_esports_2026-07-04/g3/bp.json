@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614545,
+  "game_id": "lol-game-115570934355614548",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "TES ZUIAN",
+        "champion": "Sion",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "TES Tian",
+        "champion": "Wukong",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "TES Creme",
+        "champion": "Ryze",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "TES JackeyLove",
+        "champion": "Aphelios",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "TES fengyue",
+        "champion": "Thresh",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "G2 BrokenBlade",
+        "champion": "Kled",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "G2 SkewMond",
+        "champion": "Skarner",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "G2 Caps",
+        "champion": "Syndra",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "G2 Hans Sama",
+        "champion": "Xayah",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "G2 Labrov",
+        "champion": "Rakan",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-03T09:35:48Z"
+}
