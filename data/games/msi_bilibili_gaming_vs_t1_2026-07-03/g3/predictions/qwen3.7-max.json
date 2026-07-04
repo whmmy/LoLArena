@@ -1,0 +1,60 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "game",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03/g3",
+  "submitted_at": "2026-07-04T08:17:18.651954+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG凭借Wukong、Annie与Leona组成的三核强开AOE体系，在中期团战中拥有毁灭性的打击能力，而T1的法核下路与缺乏前排的阵容难以抵挡BLG的冲阵，BLG胜率显著占优。",
+      "draft_analysis": "BLG选出了Wukong、Annie和Leona的“大招流”强开体系，团战AOE与控制链拉满，Senna提供安全的拉扯与持续输出空间。T1则选出Vel'Koz法核下路配合Ryze中单，主打前中期推线与支援节奏，但阵容严重缺乏前排坦克，且Vel'Koz和Ryze均无位移，面对BLG的锁头强开极易被秒杀。T1仅靠Jax单带和Alistar保护难以在5v5团战中抗衡BLG的冲阵，BP上BLG的团战容错率远高于T1。",
+      "tempo_wincon": "BLG的致胜条件是通过Leona和Wukong在中期小龙团中主动开团，利用Annie的爆发瞬间融化T1无位移C位，滚起雪球后利用大龙逼团结束比赛。T1必须依靠Qiyana和Ryze在前期边线游走建立优势，避免进入5v5阵地战。时长锚定两队均值32.7分钟，因BLG强开阵容在中期25-30分钟发力且容易通过团战一波流终结，修正至30.5分钟。击杀锚定BLG场均17.1与T1对手14.43，因BLG团战AOE极易拿多头且T1C位生存环境差，修正为BLG 19杀、T1 11杀，总计30杀。"
+    },
+    "win_prob": {
+      "blue": 0.65,
+      "red": 0.35
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 30.5,
+    "kills": {
+      "blue": 19,
+      "red": 11
+    },
+    "total_kills": 30,
+    "key_drafted_champions": [
+      {
+        "champion": "Wukong",
+        "team": "blue",
+        "role": "jun",
+        "impact": "团战核心发动机，大招配合Annie和Leona能打出毁天灭地的AOE控制链，是BLG中期接管比赛的保障。"
+      },
+      {
+        "champion": "Annie",
+        "team": "blue",
+        "role": "mid",
+        "impact": "Knight的招牌高胜率英雄，提供稳定的点控与瞬间爆发，完美契合队伍的强开冲阵体系。"
+      },
+      {
+        "champion": "Vel'Koz",
+        "team": "red",
+        "role": "adc",
+        "impact": "法核下路虽然推线快，但毫无位移且身板脆弱，在BLG的多重锁头强开面前是巨大的突破口。"
+      },
+      {
+        "champion": "Leona",
+        "team": "blue",
+        "role": "sup",
+        "impact": "提供远距离稳定开团与连环控制，负责在团战中第一时间锁定T1的无位移C位，为队友创造输出环境。"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"BLG凭借Wukong、Annie与Leona组成的三核强开AOE体系，在中期团战中拥有毁灭性的打击能力，而T1的法核下路与缺乏前排的阵容难以抵挡BLG的冲阵，BLG胜率显著占优。\",\n    \"draft_analysis\": \"BLG选出了Wukong、Annie和Leona的“大招流”强开体系，团战AOE与控制链拉满，Senna提供安全的拉扯与持续输出空间。T1则选出Vel'Koz法核下路配合Ryze中单，主打前中期推线与支援节奏，但阵容严重缺乏前排坦克，且Vel'Koz和Ryze均无位移，面对BLG的锁头强开极易被秒杀。T1仅靠Jax单带和Alistar保护难以在5v5团战中抗衡BLG的冲阵，BP上BLG的团战容错率远高于T1。\",\n    \"tempo_wincon\": \"BLG的致胜条件是通过Leona和Wukong在中期小龙团中主动开团，利用Annie的爆发瞬间融化T1无位移C位，滚起雪球后利用大龙逼团结束比赛。T1必须依靠Qiyana和Ryze在前期边线游走建立优势，避免进入5v5阵地战。时长锚定两队均值32.7分钟，因BLG强开阵容在中期25-30分钟发力且容易通过团战一波流终结，修正至30.5分钟。击杀锚定BLG场均17.1与T1对手14.43，因BLG团战AOE极易拿多头且T1C位生存环境差，修正为BLG 19杀、T1 11杀，总计30杀。\"\n  },\n  \"win_prob\": {\n    \"blue\": 0.65,\n    \"red\": 0.35\n  },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 30.5,\n  \"kills\": {\n    \"blue\": 19,\n    \"red\": 11\n  },\n  \"total_kills\": 30,\n  \"key_drafted_champions\": [\n    {\n      \"champion\": \"Wukong\",\n      \"team\": \"blue\",\n      \"role\": \"jun\",\n      \"impact\": \"团战核心发动机，大招配合Annie和Leona能打出毁天灭地的AOE控制链，是BLG中期接管比赛的保障。\"\n    },\n    {\n      \"champion\": \"Annie\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"impact\": \"Knight的招牌高胜率英雄，提供稳定的点控与瞬间爆发，完美契合队伍的强开冲阵体系。\"\n    },\n    {\n      \"champion\": \"Vel'Koz\",\n      \"team\": \"red\",\n      \"role\": \"adc\",\n      \"impact\": \"法核下路虽然推线快，但毫无位移且身板脆弱，在BLG的多重锁头强开面前是巨大的突破口。\"\n    },\n    {\n      \"champion\": \"Leona\",\n      \"team\": \"blue\",\n      \"role\": \"sup\",\n      \"impact\": \"提供远距离稳定开团与连环控制，负责在团战中第一时间锁定T1的无位移C位，为队友创造输出环境。\"\n    }\n  ],\n  \"sources\": []\n}",
+  "thinking_text": "用户要求预测一场英雄联盟单局比赛的结果，基于提供的BP、队伍基线数据、版本meta等信息。\n比赛是 MSI 淘汰赛，BLG (Blue) vs T1 (Red)，当前比分 1:1，这是第3局。\nBLG 阵容：Zaahen (上), Wukong (野), Annie (中), Senna (下), Leona (辅)\nT1 阵容：Jax (上), Qiyana (野), Ryze (中), Vel'Koz (下), Alistar (辅)\n\n注意：提供的BP里有一些非传统英雄或者可能是拼写错误/新英雄，比如 Zaahen (可能是指某个新英雄或者拼写错误，比如可能是Zac? 或者是2026年的新英雄？根据搜索结果，没有Zaahen，但有个Locke是新英雄。不管怎样，当作上单坦克/战士处理)，Vel'Koz 作为 ADC (非常规，可能是法核下路)。\nBLG:\n上单: Zaahen (未知/新英雄，假设为前排/战士)\n打野: Wukong (Bin/Xun? Wukong是Xun的招牌，胜率0.6，5场) -> 等等，Wukong在Xun的pool里。\n中单: Annie (Knight招牌，胜率0.8333，6场)\nADC: Senna (Viper没玩过Senna，但Senna是经典ADC/辅助)\n辅助: Leona (ON没玩过Leona，但Leona是硬辅)\n\nT1:\n上单: Jax (Haetae玩过1场，胜率1)\n打野: Qiyana (Painter玩过4场，胜率0.5) -> 等等，Qiyana通常是中单，这里放在打野？或者Faker玩Qiyana中单，Ryze打野？不，BP里明确写了：jun: Qiyana, mid: Ryze。Ryze打野？或者位置摇摆。\n中单: Ryze (Faker没玩过Ryze，但Ryze是中单/打野)\nADC: Vel'Koz (法核下路)\n辅助: Alistar (Cloud玩过4场，胜率0.75)\n\n分析阵容：\nBLG：Wukong + Annie + Leona，这是一个非常强的强开/团战阵容。Wukong大招配合Annie大招和Leona大招，团战AOE和控制拉满。Senna提供拉扯和持续输出。\nT1：Jax, Qiyana, Ryze, Vel'Koz, Alistar。T1的阵容偏向中野节奏和法核，Vel'Koz下路推线快，配合Alistar可以打线优。Ryze和Qiyana的中野组合（或者摇摆）在前期小规模团战和支援上很强，但后期团战面对BLG的强开AOE阵容（Wukong+Annie+Leona）会非常难打，因为T1缺乏足够的前排来保护Vel'Koz和Ryze，Jax需要切入，Alistar是唯一的前排。\n\nBLG的团战能力明显优于T1。BLG的Wukong, Annie, Leona三个大招流英雄在中期小龙团和大龙团中拥有毁灭性的AOE能力。T1的阵容如果前期不能通过Qiyana和Ryze的游走建立巨大优势，中期团战会被BLG的强开融化。\n\n数据锚点：\nBLG 场均时长：32.8 分钟。场均击杀：17.1，对手 11.55。\nT1 场均时长：32.7 分钟。场均击杀：18.89，对手 14.43。\n本局BLG是强开团战阵容，T1是前中期节奏+法核阵容。如果BLG在中期团战获胜，可能会在30-33分钟左右结束比赛。预计时长 31.5 分钟。\n击杀方面，BLG的团战AOE容易拿多头，预计BLG 18 杀，T1 12 杀。总计 30 杀。\n\n修正：\nBLG 阵容团战极强，Wukong+Annie+Leona 的三核强开体系。\nT1 选出 Vel'Koz 下路和 Ryze 中单，偏向Poke和支援，但面对 Leona+Wukong 的强开，Vel'Koz 生存环境极差。\n因此，BLG 胜率较高，预计 0.65 vs 0.35。\n\n关键英雄：\nWukong (BLG, jun) - 团战核心，配合Annie和Leona打出完美AOE。\nAnnie (BLG, mid) - Knight的招牌，高爆发和稳定控制，配合打野进场。\nVel'Koz (T1, adc) - 法核下路，推线快但无位移，面对强开阵容是突破口。\nLeona (BLG, sup) - 强开辅助，锁定T1无位移C位。\n\n构建 reasoning：\noverall: BLG凭借Wukong、Annie与Leona组成的三核强开AOE体系，在中期团战中拥有毁灭性的打击能力，而T1的法核下路与缺乏前排的阵容难以抵挡BLG的冲阵，BLG胜率显著占优。\ndraft_analysis: BLG选出了Wukong、Annie和Leona的“大招流”强开体系，团战AOE与控制链拉满，Senna提供安全的拉扯输出空间。T1则选出Vel'Koz法核下路配合Ryze中单，主打前中期推线与支援节奏，但阵容严重缺乏前排坦克，且Vel'Koz和Ryze均无位移，面对BLG的锁头强开极易被秒杀。T1仅靠Jax单带和Alistar保护难以在5v5团战中抗衡BLG的冲阵。\ntempo_wincon: BLG的致胜条件是通过Leona和Wukong在中期小龙团中主动开团，利用Annie的爆发瞬间融化T1无位移C位，滚起雪球后利用大龙逼团结束比赛。T1必须依靠Qiyana和Ryze在前期边线游走建立优势，避免进入5v5阵地战。时长锚定两队均值32.7分钟，因BLG强开阵容在中期25-30分钟发力且容易一波流终结，修正至30.5分钟。击杀锚定BLG场均17.1与T1对手14.43，因BLG团战AOE极易拿多头且T1C位生存环境差，修正为BLG 19杀、T1 11杀，总计30杀。\n\n检查字段：\nwin_prob: blue 0.65, red 0.35\npredicted_winner: blue\nexpected_duration_min: 30.5\nkills: blue 19, red 11\ntotal_kills: 30\nkey_drafted_champions: Wukong, Annie, Vel'Koz, Leona\n\n确保没有使用外部搜索，sources为空。\nJSON格式正确，无markdown。\n字数要求：\noverall >= 40字\ndraft_analysis >= 120字\ntempo_wincon >= 80字\n均满足。",
+  "sources": [],
+  "input_tokens": 21162,
+  "output_tokens": 2408,
+  "tool_calls": 0,
+  "cost_usd": 0.04927,
+  "wall_seconds": 44.32,
+  "error": null
+}

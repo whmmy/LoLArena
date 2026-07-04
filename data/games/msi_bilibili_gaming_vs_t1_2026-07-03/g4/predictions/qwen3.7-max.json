@@ -1,0 +1,60 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "game",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03/g4",
+  "submitted_at": "2026-07-04T09:22:49.601117+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG凭借下路Caitlyn与Elise的极致对线压制力，以及Skarner的控图与越塔能力，在前期推塔与资源争夺中占据明显优势，整体阵容的容错率与节奏连贯性更佳，胜率更高。",
+      "draft_analysis": "BLG选出Caitlyn+Elise的强势打线组合，配合Skarner的控制链，前期极易在下路打开缺口并速推一塔，中路Aurora保障中期团战AOE与拉扯，上路Gwen作为后期单带与团战大核。T1的阵容偏向中野联动，K'Sante负责抗压，Ahri与Jarvan IV寻找游走机会，但下路Mel+Pyke在面对长手消耗与爆发组合时对线极其难受，Pyke前期难以发挥游走特长，且阵容整体缺乏稳定的后期输出核心，一旦前期劣势极易被滚雪球。",
+      "tempo_wincon": "BLG掌握前期推塔与地图资源节奏，致胜条件是通过下路压制速推一塔，解放Elise配合Skarner入侵野区，中期利用Aurora的团战能力接管比赛。T1的致胜条件是依赖Ahri与Jarvan IV的中野游走以及Pyke的强行支援来挽回下路劣势，并在中期通过强开团寻找机会。因BLG速推体系发力早且T1下路易崩盘，预计时长较两队场均（约32.7分钟）缩短至30.5分钟；BLG击杀数略高于其场均（17.1），T1因下路被压制且缺乏正面反打手段，击杀数被显著压低，预计比分为18-10。"
+    },
+    "win_prob": {
+      "blue": 0.65,
+      "red": 0.35
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 30.5,
+    "kills": {
+      "blue": 18,
+      "red": 10
+    },
+    "total_kills": 28,
+    "key_drafted_champions": [
+      {
+        "champion": "Caitlyn",
+        "team": "blue",
+        "role": "adc",
+        "impact": "下路对线核心，利用手长优势与夹子体系压制对手，是BLG前期速推一塔与建立经济优势的绝对发起者。"
+      },
+      {
+        "champion": "Elise",
+        "team": "blue",
+        "role": "sup",
+        "impact": "配合Caitlyn打线杀的节奏发动机，结茧控制链完美契合越塔与前期小规模团战，能迅速解放游走。"
+      },
+      {
+        "champion": "Pyke",
+        "team": "red",
+        "role": "sup",
+        "impact": "T1破局的关键变量，在对线期极度劣势的情况下，必须通过大招斩杀机制与游走支援帮助中野建立优势以弥补下路缺口。"
+      },
+      {
+        "champion": "Aurora",
+        "team": "blue",
+        "role": "mid",
+        "impact": "BLG的中期团战核心，提供强大的AOE伤害与地形拉扯能力，确保队伍在小龙与先锋团战的正面胜率。"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"BLG凭借下路Caitlyn与Elise的极致对线压制力，以及Skarner的控图与越塔能力，在前期推塔与资源争夺中占据明显优势，整体阵容的容错率与节奏连贯性更佳，胜率更高。\",\n    \"draft_analysis\": \"BLG选出Caitlyn+Elise的强势打线组合，配合Skarner的控制链，前期极易在下路打开缺口并速推一塔，中路Aurora保障中期团战AOE与拉扯，上路Gwen作为后期单带与团战大核。T1的阵容偏向中野联动，K'Sante负责抗压，Ahri与Jarvan IV寻找游走机会，但下路Mel+Pyke在面对长手消耗与爆发组合时对线极其难受，Pyke前期难以发挥游走特长，且阵容整体缺乏稳定的后期输出核心，一旦前期劣势极易被滚雪球。\",\n    \"tempo_wincon\": \"BLG掌握前期推塔与地图资源节奏，致胜条件是通过下路压制速推一塔，解放Elise配合Skarner入侵野区，中期利用Aurora的团战能力接管比赛。T1的致胜条件是依赖Ahri与Jarvan IV的中野游走以及Pyke的强行支援来挽回下路劣势，并在中期通过强开团寻找机会。因BLG速推体系发力早且T1下路易崩盘，预计时长较两队场均（约32.7分钟）缩短至30.5分钟；BLG击杀数略高于其场均（17.1），T1因下路被压制且缺乏正面反打手段，击杀数被显著压低，预计比分为18-10。\"\n  },\n  \"win_prob\": {\n    \"blue\": 0.65,\n    \"red\": 0.35\n  },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 30.5,\n  \"kills\": {\n    \"blue\": 18,\n    \"red\": 10\n  },\n  \"total_kills\": 28,\n  \"key_drafted_champions\": [\n    {\n      \"champion\": \"Caitlyn\",\n      \"team\": \"blue\",\n      \"role\": \"adc\",\n      \"impact\": \"下路对线核心，利用手长优势与夹子体系压制对手，是BLG前期速推一塔与建立经济优势的绝对发起者。\"\n    },\n    {\n      \"champion\": \"Elise\",\n      \"team\": \"blue\",\n      \"role\": \"sup\",\n      \"impact\": \"配合Caitlyn打线杀的节奏发动机，结茧控制链完美契合越塔与前期小规模团战，能迅速解放游走。\"\n    },\n    {\n      \"champion\": \"Pyke\",\n      \"team\": \"red\",\n      \"role\": \"sup\",\n      \"impact\": \"T1破局的关键变量，在对线期极度劣势的情况下，必须通过大招斩杀机制与游走支援帮助中野建立优势以弥补下路缺口。\"\n    },\n    {\n      \"champion\": \"Aurora\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"impact\": \"BLG的中期团战核心，提供强大的AOE伤害与地形拉扯能力，确保队伍在小龙与先锋团战的正面胜率。\"\n    }\n  ],\n  \"sources\": []\n}",
+  "thinking_text": "用户要求预测一场英雄联盟单局比赛的结果，基于提供的BP、队伍基线数据、版本meta和系列赛背景。\n比赛是 MSI 2026，BLG (Blue) vs T1 (Red)。\n当前系列赛比分：BLG 2 - 1 T1。这是第4局。\n上一局（第3局）信息缺失（length_min: 0.0, winner: null），但大比分是2-1。\n\nBP情况：\nBlue (BLG):\nTop: Gwen\nJun: Skarner\nMid: Aurora\nAdc: Caitlyn\nSup: Elise\n\nRed (T1):\nTop: K'Sante\nJun: Jarvan IV\nMid: Ahri\nAdc: Mel (新英雄？或者可能是拼写错误，但按照提供的数据处理，或者可能是Miss Fortune的缩写？不，Mel可能是新英雄或者特定称呼，前面提到2026年新英雄Locke，这里Mel可能是某种新英雄或特定AD。不管怎样，当作远程AD处理)\nSup: Pyke\n\n分析BLG阵容：\nGwen (上), Skarner (野), Aurora (中), Caitlyn (AD), Elise (辅)。\nBLG选出了Caitlyn + Elise的下路组合，极具前期压制力和推塔能力，配合Skarner的控制和Aurora的团战/支援，Gwen作为后期大核和单带点。\nElise辅助配合Caitlyn，前期对线非常强势，容易拿一血和一塔。\nSkarner在野区有较强控制，配合中下越塔能力强。\n\n分析T1阵容：\nK'Sante (上), Jarvan IV (野), Ahri (中), Mel (AD), Pyke (辅)。\nT1选出了K'Sante抗压，Jarvan IV + Ahri的中野组合，带有一定的游走和强开能力。下路Mel + Pyke，Pyke辅助偏向游走和斩杀，但面对Caitlyn+Elise的长手和爆发，对线期会非常难受。\nT1的阵容偏向中前期节奏和中野联动，但下路对线劣势明显。\n\n基线数据：\nBLG场均时长 32.8分钟，场均击杀 17.1，对手 11.55。\nT1场均时长 32.7分钟，场均击杀 18.89，对手 14.43。\n\n对位分析：\n上路：Gwen vs K'Sante。K'Sante前期能抗压，但后期Gwen单带和团战威胁更大。\n打野：Skarner vs Jarvan IV。Skarner的压制力和地图控制（特别是蝎子重做后的机制）在控图和配合线上越塔方面很强。Jarvan IV偏向强开。\n中路：Aurora vs Ahri。Aurora团战和拉扯能力强，Ahri偏向游走和抓单。\n下路：Caitlyn+Elise vs Mel+Pyke。BLG下路对线绝对优势，Elise的结茧配合Caitlyn的夹子，极易产生线杀或推塔。Pyke在对线期面对长手组合很难发挥，只能游走。\n\n节奏与致胜条件：\nBLG的致胜条件是利用下路Caitlyn+Elise的强势期，快速推掉下路一塔，解放辅助进行野区入侵和地图资源控制，同时Gwen在边线发育，中后期接管比赛。\nT1的致胜条件是Ahri和Jarvan IV在中野取得优势，Pyke尽早游走帮助中上建立优势，弥补下路的劣势，并在中期通过强开团打赢团战。\n由于BLG的下路组合过于强势，且Skarner和Aurora的团战能力不俗，BLG在前期更容易滚起雪球，特别是推塔节奏。\n\n时长预测：\nBLG场均32.8，T1场均32.7。\n本局BLG有Caitlyn+Elise的速推体系，且T1下路劣势可能导致一塔速掉，BLG滚雪球能力较强。预计时长会比平均稍短，约 30.5 分钟。\n\n击杀预测：\nBLG场均17.1，T1场均18.89。\n本局BLG下路容易出线杀，且Skarner和Elise的控制链容易抓人。T1的Pyke游走可能带来一些击杀，但整体BLG优势较大。\n预计BLG击杀 18，T1击杀 10。总击杀 28。\n\n关键英雄：\nCaitlyn (BLG AD) - 下路对线核心，速推塔节奏的发起者。\nElise (BLG Sup) - 配合Caitlyn打线杀，前期节奏发动机。\nPyke (T1 Sup) - T1破局的关键，必须通过游走挽回下路劣势。\nAurora (BLG Mid) - 团战核心，提供强大的AOE和拉扯能力。\n\n概率：\nBLG 0.65, T1 0.35。BLG阵容在前期对线和推塔节奏上更占优。\n\n检查JSON格式和要求：\n- reasoning包含overall, draft_analysis, tempo_wincon\n- win_prob, predicted_winner, expected_duration_min, kills, total_kills, key_drafted_champions, sources\n- 不使用markdown围栏，直接输出JSON。\n- 时长和击杀基于历史数据修正。\nBLG时长32.8，修正为30.5（速推阵容）。\nBLG击杀17.1 -> 18，T1击杀14.43 -> 10（T1下路被压制，难以爆发大规模团战，多为被抓）。\n\n撰写reasoning：\noverall: BLG凭借下路Caitlyn与Elise的极致对线压制力，以及Skarner的控图能力，在前期推塔与资源争夺中占据明显优势，胜率更高。\ndraft_analysis: BLG选出Caitlyn+Elise的强势打线组合，配合Skarner的越塔与控图，前期节奏明确，Gwen保障后期单带与团战上限。T1的K'Sante与Ahri偏向中野联动与抗压，但下路Mel+Pyke在面对长手消耗组合时极易崩盘，Pyke难以在对线期发挥作用，阵容容错率较低且缺乏稳定的后期大核。\ntempo_wincon: BLG掌握前期推塔与小龙节奏，致胜条件是通过下路线杀或速推一塔解放Elise，配合Skarner入侵野区滚起雪球，中期利用Aurora的团战能力终结比赛。T1需依赖Ahri与Jarvan IV的中野游走以及Pyke的支援来弥补下路劣势。因BLG速推体系发力早，预计时长较两队场均（约32.7分钟）缩短至30.5分钟；BLG击杀数略高于场均（17.1），T1因下路被压制且缺乏反打手段，击杀数被压低，预计18-10。\n\n调整JSON字段，确保没有markdown。\n```json\n{\n  \"reasoning\": {\n...\n```\n不用markdown，直接输出大括号开头的字符串。",
+  "sources": [],
+  "input_tokens": 21535,
+  "output_tokens": 2354,
+  "tool_calls": 0,
+  "cost_usd": 0.049522,
+  "wall_seconds": 45.33,
+  "error": null
+}

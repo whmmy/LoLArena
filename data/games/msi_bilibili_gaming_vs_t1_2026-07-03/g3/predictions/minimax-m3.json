@@ -1,0 +1,72 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03/g3",
+  "submitted_at": "2026-07-04T08:17:16.577403+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "本局 T1 略占上风。BLG 的硬开团体系（Annie+Leona+Wukong）有强力 wombo 潜力，但 Zaahen 是 Bin 完全未使用过的英雄、Senna 又在 26.13 被削弱，且阵容极度依赖先手；T1 阵容则更稳健——Jax 分推、Ryze 后期、Vel'Koz 远程poke、Qiyana 抓边，Alistar 既可开团也能打断 BLG 连招，整体节奏与容错率更胜一筹。",
+      "draft_analysis": "BLG 蓝色方拿到的是一套纯团战一波流阵容：Bin 的 Zaahen 完全不在其招牌池（Sion/Jayce/Gnar/Rumble/Yorick/Jax），属于被迫/隐藏选人，存在手感与版本熟悉度的双重隐患；Xun 的 Wukong 是他的招牌（pick_rate 0.111，胜率 60%）；Knight 的 Annie 是其最高频 mid（6 选 5 胜 83.3%），Tibbers 闪现大与 Leona 的日蚀耀斑、Wukong 的腾云突击能形成三层连环控制；Viper 拿到 Senna，但其招牌是 Caitlyn/Ezreal/Sivir/Corki/Varus/Lucian——Senna 在他手上并不熟，并且 26.13 补丁刚对 Senna 做了削弱（dot esports 提到 Senna nerfs），后期 carry 能力打折；ON 的 Leona 同样不在其招牌池（Bard/Rakan/Seraphine/Alistar/Milio/Karma），属于功能性补位。BLG 的 wincon 非常单一：必须靠硬开团秒掉 T1 前排或核心，否则进入消耗战 Senna 输出不够、Zaahen 不稳定。T1 红色方阵容曲线更平滑：Haetae 的 Jax 是其招牌（虽样本少但 100% 胜率），单带强；Painter 的 Qiyana 在其池内（4 选 50%），可边路抓人或小规模秒杀；Faker 拿到 Ryze 严格来说不在其招牌池（招牌是 Anivia/TF/Azir/Akali/Orianna/Cassiopeia），但 Faker 的英雄理解与线上抗压能力弥补了熟练度问题；Jinbeom 的 Vel'Koz 同样不在其有限池内（Jhin/Caitlyn/Ashe），属于被迫选择，但 Vel'Koz 长手poke 配合 Ryze 能形成远程消耗体系；Cloud 的 Alistar 是其招牌（4 选 3 胜 75%），可以顶开 BLG 的连环控制并提供反打。T1 不必硬接团，可以分推 + poke 拖后期等 Jax/Ryze 装备成型。",
+      "tempo_wincon": "节奏主导权偏向 T1——他们具备分推（Jax）+ 远程poke（Vel'Koz+Ryze）+ 反开团（Alistar）的多重解法，不需要强行 5v5；BLG 则必须主动开团，前期抓到一波完美连环控制才能滚起雪球。考虑到双方都有后期英雄（Senna/Ryze/Jax），且都依赖先手机会，本局时长会比两队场均（BLG 32.8 / T1 32.7）略长一些，锚定在 33~34 分钟区间。击杀数方面，以两队历史场均（BLG 场均 17.1 vs 11.55 死、T1 场均 18.89 vs 14.43 死）为基础，再根据本局 BP 调整：BLG 的硬开团一波流如果打出来会显著提升人头（T1 团灭），但打不出来会被 T1 慢慢消耗，整体 BLG 略低于其场均，T1 略低于其场均——预计 BLG 约 15、T1 约 17，总计 32。Senna 的削弱让 BLG 后期兑现能力下降，进一步压低 BLG 的击杀期望。"
+    },
+    "win_prob": {
+      "blue": 0.45,
+      "red": 0.55
+    },
+    "predicted_winner": "red",
+    "expected_duration_min": 33.5,
+    "kills": {
+      "blue": 15,
+      "red": 17
+    },
+    "total_kills": 32,
+    "key_drafted_champions": [
+      {
+        "champion": "Zaahen",
+        "team": "blue",
+        "role": "top",
+        "impact": "Bin 完全未使用过的隐藏 pick，是本局最大不确定性，既可能是黑科技也可能是败笔"
+      },
+      {
+        "champion": "Annie",
+        "team": "blue",
+        "role": "mid",
+        "impact": "BLG wombo 体系核心，闪现+Tibbers 与 Leona/Wukong 形成三层连环控制，但 Knight 必须每波团都开到人"
+      },
+      {
+        "champion": "Senna",
+        "team": "blue",
+        "role": "adc",
+        "impact": "后期 scaling 主力，但 26.13 补丁刚被削弱，且不在 Viper 招牌池内，carry 期望打折扣"
+      },
+      {
+        "champion": "Jax",
+        "team": "blue",
+        "role": "top",
+        "impact": "T1 分推/单带核心，Haetae 招牌英雄，可在 BLG 主动开团时单带牵制，逼 BLG 阵型分散"
+      },
+      {
+        "champion": "Vel'Koz",
+        "team": "red",
+        "role": "adc",
+        "impact": "远程poke 消耗 + 真伤大招反打 BLG 冲阵，与 Ryze 一起构建远程消耗体系，是 T1 拖后期的关键"
+      },
+      {
+        "champion": "Alistar",
+        "team": "red",
+        "role": "sup",
+        "impact": "Cloud 招牌英雄，可顶飞打断 BLG 的 Annie+Leona 连招，是 T1 反制 BLG wombo 的关键"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "<think>Let me analyze this game carefully.\n\n**Series Context:**\n- MSI Knockouts\n- BLG vs T1, series score 1-1\n- This is Game 3\n- Patch: 26.13 (mentioned in web search context - Senna nerfs, LeBlanc buffs, Locke release)\n\n**BLG (Blue side):**\n- Top: Zaahen\n- Jungle: Wukong\n- Mid: Annie\n- ADC: Senna\n- Support: Leona\n\n**T1 (Red side):**\n- Top: Jax\n- Jungle: Qiyana\n- Mid: Ryze\n- ADC: Vel'Koz\n- Support: Alistar\n\n**Key observations:**\n\n1. **Zaahen** - This is likely a new champion or one not in the data. The web search mentions \"Locke\" as the newest champion in Patch 26.13. Zaahen might be another name or it could be related. Actually, looking at the patch notes reference, \"Locke, the Ashen Exorcist\" is the newest champion. Zaahen could be a different champion. Wait - looking more carefully, Zaahen doesn't appear in any champion pool data. This could be a newer champion or a renamed one.\n\n2. **Champion Pool Analysis:**\n   - BLG's picks vs their pools:\n     - Bin playing Zaahen - NOT in Bin's pool at all (Bin has Sion, Jayce, Gnar, Rumble, Yorick, Jax). Zaahen is completely off-meta for him.\n     - Xun playing Wukong - YES, this is in his pool (5 picks, 60% WR)\n     - Knight playing Annie - YES, this is his most-picked mid (6 picks, 83.3% WR)\n     - Viper playing Senna - NOT in Viper's pool (Viper plays Caitlyn, Ezreal, Sivir, Corki, Varus, Lucian)\n     - ON playing Leona - NOT in ON's pool (ON plays Bard, Rakan, Seraphine, Alistar, Milio, Karma)\n   \n   - T1's picks vs their pools:\n     - Haetae playing Jax - YES (1 pick, 100% WR)\n     - Painter playing Qiyana - YES (4 picks, 50% WR)\n     - Faker playing Ryze - NOT in Faker's pool (Faker plays Anivia, TF, Azir, Akali, Orianna, Cassiopeia)\n     - Jinbeom playing Vel'Koz - NOT in his pool (only Jhin, Caitlyn, Ashe in pool)\n     - Cloud playing Alistar - YES (4 picks, 75% WR)\n\n3. **Draft Analysis:**\n\n**BLG composition:**\n- Top: Zaahen (unknown, likely off-meta)\n- Jungle: Wukong (strong teamfight diver)\n- Mid: Annie (burst mage with Tibbers stun)\n- ADC: Senna (scaling support/ADC hybrid, long range)\n- Support: Leona (hard engage tank)\n\nBLG's comp is all about hard engage and pick potential. Annie + Leona is a massive wombo combo. Senna provides long-range poke and scaling. Wukong can flank. Zaahen is the unknown factor.\n\n**T1 composition:**\n- Top: Jax (split pusher, scaling duelist)\n- Jungle: Qiyana (assassin with terrain-based combos)\n- Mid: Ryze (utility mage, late-game scaling, waveclear)\n- ADC: Vel'Koz (poke mage bot, long range)\n- Support: Alistar (hard engage tank with knockback)\n\nT1's comp has poke (Vel'Koz, Ryze), split push (Jax), and pick potential (Qiyana, Alistar).\n\n4. **Patch Context (26.13):**\n- Senna was NERFED - this is important because Senna on ADC was nerfed\n- This makes the Senna pick for BLG less optimal\n\n5. **Key Matchups:**\n\n- Top: Jax vs Zaahen - If Zaahen is a tank or bruiser, Jax could split push effectively. If Zaahen is unknown, it's hard to evaluate.\n- Jungle: Wukong vs Qiyana - Wukong is better in teamfights; Qiyana is better at picks\n- Mid: Annie vs Ryze - Annie has explosive burst, Ryze has scaling and waveclear\n- ADC: Senna vs Vel'Koz - Senna has range and utility; Vel'Koz has burst poke\n- Support: Leona vs Alistar - Both engage supports; Alistar has more peel\n\n6. **Win Conditions:**\n\nBLG wins by:\n- Hard engages with Annie/Leona wombo\n- Picking off isolated targets with Wukong flanks\n- Senna scaling into late game\n\nT1 wins by:\n- Split pushing with Jax\n- Poke wars with Vel'Koz/Ryze\n- Qiyana picks on sidelanes\n- Disengaging engages with Alistar\n\n7. **Historical Averages:**\n- BLG avg game duration: 32.8 min\n- T1 avg game duration: 32.7 min\n- Average: ~32.75 min\n- BLG avg kills: 17.1, opp: 11.55 → total ~28.65\n- T1 avg kills: 18.89, opp: 14.43 → total ~33.32\n\n8. **Game tempo:**\n\nBLG's comp with Annie/Leona wants to fight early-mid. Senna scales, so they could also play scaling if they survive.\nT1's comp with Jax wants to scale and split. Vel'Koz/Ryze poke wants to whittle down before fights. This suggests a longer game.\n\nThe Senna nerf in 26.13 hurts BLG's late-game insurance. The unknown Zaahen pick is risky.\n\n9. **Win Probability Assessment:**\n\nT1 has:\n- Better overall win rate (74.07% vs 69.35%)\n- Higher first blood rate (51.85% vs 62.3% - wait BLG is higher)\n- More experience with their picks\n- Better scaling comp\n- Jax as a split pusher can pressure Zaahen\n\nBLG has:\n- Better teamfight comp with wombo potential (Annie+Leona)\n- Senna scaling\n- Strong jungle presence (Xun on Wukong)\n- Higher first blood rate (62.3%)\n\nThe unknown Zaahen pick is a significant unknown. BLG is putting Bin on an off-meta pick while Haetae is on Jax, a champion he knows.\n\nGiven:\n- T1's higher overall win rate and form\n- Better champion mastery on most picks (T1's players mostly know their picks)\n- BLG's risky Zaahen pick + Senna post-nerf\n- T1's comp naturally scales and splits\n\nI'd lean slightly toward T1, maybe 45-48% BLG and 52-55% T1. The composition and champion mastery favor T1, but BLG's wombo potential could surprise.\n\nActually, let me reconsider. The wombo combo (Annie + Leona) is extremely powerful in coordinated play. If BLG can land a good engage, they can delete priority targets. Wukong flank + Annie flash ult + Leona ult + Senna ult is a lot of layered CC.\n\nBut T1 has Alistar to disengage, and Qiyana can punish over-extension.\n\nLet me also consider:\n- This is Game 3, series tied 1-1\n- BLG is on blue side (advantageous in many metas)\n- The unknown champion Zaahen is a wildcard\n\nI'll give this one slight edge to T1 due to better scaling and champion mastery, but it's close.\n\n**My prediction:**\n- Win probability: BLG 45%, T1 55%\n- Expected duration: ~33.5 minutes (slightly longer due to scaling comps)\n- Kills: BLG ~15, T1 ~17, total ~32\n\nWait, let me anchor this to historical data more carefully:\n- BLG avg kills: 17.1, opp avg kills against: 11.55\n- T1 avg kills: 18.89, opp avg kills against: 14.43\n- BLG total per game: 17.1 + 11.55 = 28.65\n- T1 total per game: 18.89 + 14.43 = 33.32\n\nAverage of these two: ~31\n\nFor this game, given:\n- BLG's all-in wombo comp wants shorter fights but can struggle against scaling\n- T1's poke/split comp wants longer games\n- Senna nerf means scaling isn't as strong\n\nThe expected game length should be around 33 minutes (slightly above average because both comps have scaling elements but also engage potential for shorter fights).\n\nFor kills:\n- BLG should get around 15-17 (anchored to their 17.1)\n- T1 should get around 16-18 (anchored to their 18.89)\n- But considering Senna nerf and Zaahen off-meta, BLG might underperform slightly\n\nLet me set:\n- BLG: 15 kills\n- T1: 17 kills\n- Total: 32 kills\n- Duration: 33.5 minutes\n\nActually, given the off-meta Zaahen pick, this could go either way. Let me think about who has more coherent team comps.\n\nT1's comp:\n- Jax (split/scaling top)\n- Qiyana (assassin/snowball jungle)\n- Ryze (scaling mid)\n- Vel'Koz (poke bot)\n- Alistar (engage/peel support)\n\nThis comp has a clear identity: scale, poke, split. Alistar can engage or peel.\n\nBLG's comp:\n- Zaahen (unknown top)\n- Wukong (engage jungle)\n- Annie (burst engage mid)\n- Senna (scaling poke ADC)\n- Leona (engage support)\n\nThis comp is all-in teamfight. If they can't get engages off, they lose.\n\nI think T1 has the more coherent comp here. Slight edge to T1.\n\nFinal prediction:\n- T1 wins 55-45\n- Duration: 33.5 min\n- BLG: 15 kills, T1: 17 kills, total: 32\n\nLet me write the JSON now.\n\nActually, one more consideration - the series is 1-1 in MSI Knockouts, which is high-stakes. Teams often play more conservatively in such situations, but they also can throw everything at each other.\n\nAlso, the patches note mentions Senna nerfs in 26.13. This is a direct nerf to BLG's bot lane carry, which could significantly impact their win condition.\n\nLet me finalize:\n- BLG win prob: 0.45\n- T1 win prob: 0.55\n- Duration: 33.5\n- BLG kills: 15\n- T1 kills: 17\n- Total: 32\n\nKey drafted champions:\n- Annie (BLG mid) - wombo combo centerpiece\n- Leona (BLG sup) - engage partner\n- Senna (BLG ADC) - scaling carry (nerfed)\n- Jax (T1 top) - split pusher\n- Ryze (T1 mid) - scaling waveclear\n\nSources: empty array since web_search is not provided for this task.</think>\n\n{\n  \"reasoning\": {\n    \"overall\": \"本局 T1 略占上风。BLG 的硬开团体系（Annie+Leona+Wukong）有强力 wombo 潜力，但 Zaahen 是 Bin 完全未使用过的英雄、Senna 又在 26.13 被削弱，且阵容极度依赖先手；T1 阵容则更稳健——Jax 分推、Ryze 后期、Vel'Koz 远程poke、Qiyana 抓边，Alistar 既可开团也能打断 BLG 连招，整体节奏与容错率更胜一筹。\",\n    \"draft_analysis\": \"BLG 蓝色方拿到的是一套纯团战一波流阵容：Bin 的 Zaahen 完全不在其招牌池（Sion/Jayce/Gnar/Rumble/Yorick/Jax），属于被迫/隐藏选人，存在手感与版本熟悉度的双重隐患；Xun 的 Wukong 是他的招牌（pick_rate 0.111，胜率 60%）；Knight 的 Annie 是其最高频 mid（6 选 5 胜 83.3%），Tibbers 闪现大与 Leona 的日蚀耀斑、Wukong 的腾云突击能形成三层连环控制；Viper 拿到 Senna，但其招牌是 Caitlyn/Ezreal/Sivir/Corki/Varus/Lucian——Senna 在他手上并不熟，并且 26.13 补丁刚对 Senna 做了削弱（dot esports 提到 Senna nerfs），后期 carry 能力打折；ON 的 Leona 同样不在其招牌池（Bard/Rakan/Seraphine/Alistar/Milio/Karma），属于功能性补位。BLG 的 wincon 非常单一：必须靠硬开团秒掉 T1 前排或核心，否则进入消耗战 Senna 输出不够、Zaahen 不稳定。T1 红色方阵容曲线更平滑：Haetae 的 Jax 是其招牌（虽样本少但 100% 胜率），单带强；Painter 的 Qiyana 在其池内（4 选 50%），可边路抓人或小规模秒杀；Faker 拿到 Ryze 严格来说不在其招牌池（招牌是 Anivia/TF/Azir/Akali/Orianna/Cassiopeia），但 Faker 的英雄理解与线上抗压能力弥补了熟练度问题；Jinbeom 的 Vel'Koz 同样不在其有限池内（Jhin/Caitlyn/Ashe），属于被迫选择，但 Vel'Koz 长手poke 配合 Ryze 能形成远程消耗体系；Cloud 的 Alistar 是其招牌（4 选 3 胜 75%），可以顶开 BLG 的连环控制并提供反打。T1 不必硬接团，可以分推 + poke 拖后期等 Jax/Ryze 装备成型。\",\n    \"tempo_wincon\": \"节奏主导权偏向 T1——他们具备分推（Jax）+ 远程poke（Vel'Koz+Ryze）+ 反开团（Alistar）的多重解法，不需要强行 5v5；BLG 则必须主动开团，前期抓到一波完美连环控制才能滚起雪球。考虑到双方都有后期英雄（Senna/Ryze/Jax），且都依赖先手机会，本局时长会比两队场均（BLG 32.8 / T1 32.7）略长一些，锚定在 33~34 分钟区间。击杀数方面，以两队历史场均（BLG 场均 17.1 vs 11.55 死、T1 场均 18.89 vs 14.43 死）为基础，再根据本局 BP 调整：BLG 的硬开团一波流如果打出来会显著提升人头（T1 团灭），但打不出来会被 T1 慢慢消耗，整体 BLG 略低于其场均，T1 略低于其场均——预计 BLG 约 15、T1 约 17，总计 32。Senna 的削弱让 BLG 后期兑现能力下降，进一步压低 BLG 的击杀期望。\"\n  },\n  \"win_prob\": { \"blue\": 0.45, \"red\": 0.55 },\n  \"predicted_winner\": \"red\",\n  \"expected_duration_min\": 33.5,\n  \"kills\": { \"blue\": 15, \"red\": 17 },\n  \"total_kills\": 32,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Zaahen\", \"team\": \"blue\", \"role\": \"top\", \"impact\": \"Bin 完全未使用过的隐藏 pick，是本局最大不确定性，既可能是黑科技也可能是败笔\" },\n    { \"champion\": \"Annie\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"BLG wombo 体系核心，闪现+Tibbers 与 Leona/Wukong 形成三层连环控制，但 Knight 必须每波团都开到人\" },\n    { \"champion\": \"Senna\", \"team\": \"blue\", \"role\": \"adc\", \"impact\": \"后期 scaling 主力，但 26.13 补丁刚被削弱，且不在 Viper 招牌池内，carry 期望打折扣\" },\n    { \"champion\": \"Jax\", \"team\": \"blue\", \"role\": \"top\", \"impact\": \"T1 分推/单带核心，Haetae 招牌英雄，可在 BLG 主动开团时单带牵制，逼 BLG 阵型分散\" },\n    { \"champion\": \"Vel'Koz\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"远程poke 消耗 + 真伤大招反打 BLG 冲阵，与 Ryze 一起构建远程消耗体系，是 T1 拖后期的关键\" },\n    { \"champion\": \"Alistar\", \"team\": \"red\", \"role\": \"sup\", \"impact\": \"Cloud 招牌英雄，可顶飞打断 BLG 的 Annie+Leona 连招，是 T1 反制 BLG wombo 的关键\" }\n  ],\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "sources": [],
+  "input_tokens": 18398,
+  "output_tokens": 3701,
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 42.25,
+  "error": null
+}

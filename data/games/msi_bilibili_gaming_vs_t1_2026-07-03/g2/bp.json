@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614527,
+  "game_id": "lol-game-115570934355614529",
+  "position": 2,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "BLG Bin",
+        "champion": "Renekton",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "BLG Xun",
+        "champion": "Naafiri",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "BLG Knight",
+        "champion": "Swain",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "BLG Viper",
+        "champion": "Ezreal",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "BLG ON",
+        "champion": "Bard",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "T1 Doran",
+        "champion": "Ambessa",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "T1 Oner",
+        "champion": "Lee Sin",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "T1 Faker",
+        "champion": "Galio",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "T1 Peyz",
+        "champion": "Kai'Sa",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "T1 Keria",
+        "champion": "Camille",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-04T08:01:21Z"
+}

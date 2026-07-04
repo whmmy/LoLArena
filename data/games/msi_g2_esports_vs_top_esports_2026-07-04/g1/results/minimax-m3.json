@@ -5,8 +5,9 @@
       "metric": "brier_binary"
     },
     "duration_mae": {
-      "score": 0.0,
-      "metric": "mae"
+      "score": null,
+      "metric": "mae",
+      "skipped": "truth unavailable"
     },
     "kills_blue_mae": {
       "score": 87.5,
@@ -23,7 +24,6 @@
   },
   "layers": {
     "G1_result": 68.64,
-    "G2_duration": 0.0,
     "G3_kills": 46.69
   },
   "composite": 45.99

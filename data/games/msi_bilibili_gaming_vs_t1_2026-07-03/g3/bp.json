@@ -1,0 +1,77 @@
+{
+  "match_id": 115570934355614527,
+  "game_id": "lol-game-115570934355614530",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": null,
+        "champion": "Zaahen",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": null,
+        "champion": "Wukong",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": null,
+        "champion": "Annie",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": null,
+        "champion": "Senna",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": null,
+        "champion": "Leona",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": null,
+        "champion": "Jax",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": null,
+        "champion": "Qiyana",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": null,
+        "champion": "Ryze",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": null,
+        "champion": "Vel'Koz",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": null,
+        "champion": "Alistar",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-04T08:01:24Z",
+  "manual": true
+}

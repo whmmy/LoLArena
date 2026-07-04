@@ -1,0 +1,56 @@
+{
+  "status": "finished",
+  "winner_side": "blue",
+  "blue_score": 3,
+  "red_score": 0,
+  "series_length": 3,
+  "series_score": "3-0",
+  "blue_players": [
+    {
+      "name": "Castle",
+      "role": "top"
+    },
+    {
+      "name": "Inspired",
+      "role": "jun"
+    },
+    {
+      "name": "Mitir",
+      "role": "mid"
+    },
+    {
+      "name": "Berserker",
+      "role": "adc"
+    },
+    {
+      "name": "Isles",
+      "role": "sup"
+    }
+  ],
+  "red_players": [
+    {
+      "name": "Guigo",
+      "role": "top"
+    },
+    {
+      "name": "Tatu",
+      "role": "jun"
+    },
+    {
+      "name": "Tutsz",
+      "role": "mid"
+    },
+    {
+      "name": "Ayu",
+      "role": "adc"
+    },
+    {
+      "name": "JoJo",
+      "role": "sup"
+    }
+  ],
+  "baseline_probs": {
+    "blue": 0.4216,
+    "red": 0.5784
+  }
+}

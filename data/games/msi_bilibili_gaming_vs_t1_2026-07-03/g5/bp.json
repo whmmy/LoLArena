@@ -1,0 +1,77 @@
+{
+  "match_id": 115570934355614527,
+  "game_id": null,
+  "position": 5,
+  "status": null,
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": null,
+        "champion": "Gwen",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": null,
+        "champion": "Skarner",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": null,
+        "champion": "Aurora",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": null,
+        "champion": "Caitlyn",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": null,
+        "champion": "Elise",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": null,
+        "champion": "K'Sante",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": null,
+        "champion": "Jarvan IV",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": null,
+        "champion": "Ahri",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": null,
+        "champion": "Mel",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": null,
+        "champion": "Pyke",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": null,
+  "manual": true
+}

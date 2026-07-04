@@ -1,0 +1,66 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03/g4",
+  "submitted_at": "2026-07-04T09:24:15.650452+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG 在 BP 上通过 Viper 的招牌 Caitlyn + ON 的侵略性 Elise 辅助锁定了下路对线优势，Knight 在中路对抗非 Faker 招牌池英雄的 Ahri 也占据上风；T1 方面 Jinbeom 仅有 4 场样本数据且使用新英雄 Mel，下路天然劣势，Faker 的 Ahri 在其近期英雄池外，整体看 BLG 在 BP 与系列赛气势（2-1 领先）上更值得被看好。",
+      "draft_analysis": "BLG 的 Gwen-Skarner-Aurora-Caitlyn-Elise 是一套标准的下路碾压加中期团战阵容：Caitlyn + Elise 是版本最强的推线组合之一，Viper 在 Caitlyn 上 8 场 75% 胜率是绝对招牌；Gwen 提供分推和后期团战保障；Skarner 的 R 团控是开团利器；Aurora 提供中距离追击与拉扯。这套阵容在 6 级后的团战和小龙争夺中占据优势。T1 的 K'Sante-J4-Ahri-Mel-Pyke 是一套更依赖前期 pick 的阵容：J4 + Ahri + Pyke 三重硬控能寻找边路击杀，K'Sante 是稳定前排，Mel 作为新英雄提供法术伤害型 AD 输出。但问题在于 Pyke 与 Mel 都需要打出击杀或压制才能滚动雪球，而对面 Caitlyn 推线过强会让他们很难找到下路击杀机会；Faker 的 Ahri 不在他近 20 场招牌池（Anivia/TF/Azir/Akali/Orianna/Cassiopeia）里，虽是经典英雄但近期手感存疑；Painter 的 Jarvan IV 在他的池子里也只有 33% 胜率，是明显的低熟练度 pick。下路对线阶段 BLG 应当轻松压制，T1 只能寄望中上两路或野区前期碰撞制造突破口。",
+      "tempo_wincon": "BLG 的致胜路径是：下路 Caitlyn + Elise 推掉一塔，转线中路逼团，围绕 Skarner R 控住关键目标打小龙，28 到 32 分钟终结。T1 的致胜路径是：J4 + Ahri + Pyke 在前 15 分钟围绕上路 K'Sante 或中路制造击杀，用 Pyke 滚起雪球，25 分钟左右抢下大龙逼团。考虑到 BLG 场均时长 32.8 分、T1 场均 32.7 分，本局因双方都有前期侵略性元素会比场均略短，预测 31.0 分钟左右结束；人头方面，BLG 场均 17.1 / T1 场均 18.9，但本局 BLG 拿到强势 BP 应略低于其场均（更可能是碾压局而非大乱斗），T1 在不顺利时会偏低于场均，预计 BLG 16 人头、T1 11 人头，合计 27。"
+    },
+    "win_prob": {
+      "blue": 0.57,
+      "red": 0.43
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 31.0,
+    "kills": {
+      "blue": 16,
+      "red": 11
+    },
+    "total_kills": 27,
+    "key_drafted_champions": [
+      {
+        "champion": "Caitlyn",
+        "team": "blue",
+        "role": "adc",
+        "impact": "Viper 招牌英雄（8 场 75% 胜率），版本强势推线 AD，配合 Elise 应能轻松压制 Mel + Pyke 的下路组合，是本局 BP 核心"
+      },
+      {
+        "champion": "Elise",
+        "team": "blue",
+        "role": "sup",
+        "impact": "侵略性辅助与 Caitlyn 形成推线加击杀组合，ON 在 Bard 和 Rakan 之外展示英雄池深度"
+      },
+      {
+        "champion": "Skarner",
+        "team": "blue",
+        "role": "jun",
+        "impact": "Xun 团控发动机，R 拖拽在大小龙团战中能创造决定性优势"
+      },
+      {
+        "champion": "Ahri",
+        "team": "red",
+        "role": "mid",
+        "impact": "虽是 Faker 经典英雄但不在其近 20 场招牌池中，Knight 在中路对抗中应有优势"
+      },
+      {
+        "champion": "Mel",
+        "team": "red",
+        "role": "adc",
+        "impact": "Jinbeom 数据极少（4 场样本），使用新英雄面对 Viper 的招牌 Caitlyn，下路是 T1 最大短板"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "<think>The user wants me to output only the JSON object, no extra text. Let me make sure it's valid JSON.</think>\n\n{\n  \"reasoning\": {\n    \"overall\": \"BLG 在 BP 上通过 Viper 的招牌 Caitlyn + ON 的侵略性 Elise 辅助锁定了下路对线优势，Knight 在中路对抗非 Faker 招牌池英雄的 Ahri 也占据上风；T1 方面 Jinbeom 仅有 4 场样本数据且使用新英雄 Mel，下路天然劣势，Faker 的 Ahri 在其近期英雄池外，整体看 BLG 在 BP 与系列赛气势（2-1 领先）上更值得被看好。\",\n    \"draft_analysis\": \"BLG 的 Gwen-Skarner-Aurora-Caitlyn-Elise 是一套标准的下路碾压加中期团战阵容：Caitlyn + Elise 是版本最强的推线组合之一，Viper 在 Caitlyn 上 8 场 75% 胜率是绝对招牌；Gwen 提供分推和后期团战保障；Skarner 的 R 团控是开团利器；Aurora 提供中距离追击与拉扯。这套阵容在 6 级后的团战和小龙争夺中占据优势。T1 的 K'Sante-J4-Ahri-Mel-Pyke 是一套更依赖前期 pick 的阵容：J4 + Ahri + Pyke 三重硬控能寻找边路击杀，K'Sante 是稳定前排，Mel 作为新英雄提供法术伤害型 AD 输出。但问题在于 Pyke 与 Mel 都需要打出击杀或压制才能滚动雪球，而对面 Caitlyn 推线过强会让他们很难找到下路击杀机会；Faker 的 Ahri 不在他近 20 场招牌池（Anivia/TF/Azir/Akali/Orianna/Cassiopeia）里，虽是经典英雄但近期手感存疑；Painter 的 Jarvan IV 在他的池子里也只有 33% 胜率，是明显的低熟练度 pick。下路对线阶段 BLG 应当轻松压制，T1 只能寄望中上两路或野区前期碰撞制造突破口。\",\n    \"tempo_wincon\": \"BLG 的致胜路径是：下路 Caitlyn + Elise 推掉一塔，转线中路逼团，围绕 Skarner R 控住关键目标打小龙，28 到 32 分钟终结。T1 的致胜路径是：J4 + Ahri + Pyke 在前 15 分钟围绕上路 K'Sante 或中路制造击杀，用 Pyke 滚起雪球，25 分钟左右抢下大龙逼团。考虑到 BLG 场均时长 32.8 分、T1 场均 32.7 分，本局因双方都有前期侵略性元素会比场均略短，预测 31.0 分钟左右结束；人头方面，BLG 场均 17.1 / T1 场均 18.9，但本局 BLG 拿到强势 BP 应略低于其场均（更可能是碾压局而非大乱斗），T1 在不顺利时会偏低于场均，预计 BLG 16 人头、T1 11 人头，合计 27。\"\n  },\n  \"win_prob\": { \"blue\": 0.57, \"red\": 0.43 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 31.0,\n  \"kills\": { \"blue\": 16, \"red\": 11 },\n  \"total_kills\": 27,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Caitlyn\", \"team\": \"blue\", \"role\": \"adc\", \"impact\": \"Viper 招牌英雄（8 场 75% 胜率），版本强势推线 AD，配合 Elise 应能轻松压制 Mel + Pyke 的下路组合，是本局 BP 核心\" },\n    { \"champion\": \"Elise\", \"team\": \"blue\", \"role\": \"sup\", \"impact\": \"侵略性辅助与 Caitlyn 形成推线加击杀组合，ON 在 Bard 和 Rakan 之外展示英雄池深度\" },\n    { \"champion\": \"Skarner\", \"team\": \"blue\", \"role\": \"jun\", \"impact\": \"Xun 团控发动机，R 拖拽在大小龙团战中能创造决定性优势\" },\n    { \"champion\": \"Ahri\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"虽是 Faker 经典英雄但不在其近 20 场招牌池中，Knight 在中路对抗中应有优势\" },\n    { \"champion\": \"Mel\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"Jinbeom 数据极少（4 场样本），使用新英雄面对 Viper 的招牌 Caitlyn，下路是 T1 最大短板\" }\n  ],\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "sources": [],
+  "input_tokens": 42308,
+  "output_tokens": 5817,
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 131.38,
+  "error": null
+}

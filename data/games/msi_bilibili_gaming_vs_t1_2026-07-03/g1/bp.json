@@ -1,0 +1,76 @@
+{
+  "match_id": 115570934355614527,
+  "game_id": "lol-game-115570934355614528",
+  "position": 1,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "T1 Doran",
+        "champion": "Yorick",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "T1 Oner",
+        "champion": "Vi",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "T1 Faker",
+        "champion": "Cassiopeia",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "T1 Peyz",
+        "champion": "Jhin",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "T1 Keria",
+        "champion": "Nautilus",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "BLG Bin",
+        "champion": "Jayce",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "BLG Xun",
+        "champion": "Poppy",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "BLG Knight",
+        "champion": "Viktor",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "BLG Viper",
+        "champion": "Ziggs",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "BLG ON",
+        "champion": "Shen",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-04T08:01:19Z"
+}

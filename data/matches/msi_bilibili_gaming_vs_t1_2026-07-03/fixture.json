@@ -2,7 +2,7 @@
   "id": 115570934355614527,
   "name": "BILIBILI GAMING vs T1",
   "match_type": null,
-  "status": "not_started",
+  "status": "running",
   "number_of_games": 5,
   "begin_at": "2026-07-03T03:00:00.000Z",
   "scheduled_at": "2026-07-03T03:00:00.000Z",
@@ -18,7 +18,7 @@
         "name": "BILIBILI GAMING",
         "acronym": "BLG",
         "slug": "blg",
-        "image_url": "http://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
+        "image_url": "https://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
       }
     },
     {
@@ -27,33 +27,177 @@
         "name": "T1",
         "acronym": "T1",
         "slug": "t1",
-        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
       }
     }
   ],
   "results": [
     {
       "team_id": "blg",
-      "score": 0
+      "score": 2
     },
     {
       "team_id": "t1",
-      "score": 0
+      "score": 1
     }
   ],
   "league": {
     "id": "lol-msi",
     "name": "MSI",
-    "slug": null
+    "slug": "msi"
   },
   "serie": {},
   "tournament": {
-    "id": null,
-    "name": null
+    "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614528",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614527,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 10,
+        "towers": 6
+      },
+      "red_team": {
+        "id": "blg",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "blg",
+        "image_url": "https://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png",
+        "kills": 15,
+        "towers": 4
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614529",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614527,
+      "blue_team": {
+        "id": "blg",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "blg",
+        "image_url": "https://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png",
+        "kills": 14,
+        "towers": 7
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 7,
+        "towers": 2
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614530",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614527,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 3,
+        "towers": 2
+      },
+      "red_team": {
+        "id": "blg",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "blg",
+        "image_url": "https://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png",
+        "kills": 13,
+        "towers": 7
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614531",
+      "position": 4,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614527,
+      "blue_team": {
+        "id": "bilibili-gaming",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "bilibili-gaming",
+        "image_url": "https://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      },
+      "patch": null,
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.youtube.com/watch?v=vR7BCkBPPPo"
 }

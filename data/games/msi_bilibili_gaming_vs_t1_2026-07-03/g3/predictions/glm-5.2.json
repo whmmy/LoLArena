@@ -1,0 +1,60 @@
+{
+  "model_id": "glm-5.2",
+  "scope": "game",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03/g3",
+  "submitted_at": "2026-07-04T08:17:55.006885+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG凭借前期控制链阵容（Annie+Leona+Wukong）在中前期掌握节奏主动权，Knight的Annie是83.3%胜率的招牌英雄，对位Faker非常规Ryze有明显前期压制力。T1阵容偏后期发育且ADC选手Jinbeom经验不足，难以在BLG快节奏下稳住局势。",
+      "draft_analysis": "BLG选出前期进攻性极强的阵容：Leona+Annie+Wukong构成三重控制链，小龙和峡谷先锋团战极具统治力；Senna虽被26.13版本nerf，但成长性和减速仍能补充后期输出。T1则选出Jax+Ryze双后期核心，搭配Qiyana前期节奏和Vel'Koz消耗，整体曲线偏慢。关键问题在于T1的Vel'Koz ADC是非常规pick且Jinbeom仅有4场职业赛经验，面对Leona+Senna的强开组合自保困难。Faker的Ryze不在其近期英雄池中（池中有Anivia/TF/Azir等），前期对线Knight的Annie将承受巨大压力。Bin虽拿到不在英雄池的Zaahen，但其对线能力足以稳住，且BLG不依赖上路carry。T1的Alistar虽能反开，但面对BLG多控制链难以兼顾开团与保护Vel'Koz。整体而言BLG阵容协调性更好、前期强度更高，T1则存在前期薄弱、关键位置经验不足的隐患。",
+      "tempo_wincon": "BLG的致胜条件是利用Annie+Leona前期控制优势在15-25分钟窗口期拿下小龙和峡谷先锋，通过团战滚雪球压制T1发育空间。T1则需要Qiyana找到前期gank节奏帮Ryze渡过对线期，拖到30分钟后让Jax分推和Ryze成型。时长方面，BLG场均32.8分钟、T1场均32.7分钟，本局BLG前期阵容若顺利可在28-30分钟结束，而T1后期阵容若拖住则可能到35分钟以上，综合预期31.5分钟。击杀方面，BLG场均17.1人，前期控制链阵容预计维持17人左右；T1场均18.89人但被前期压制预计降至12人，总击杀约29。"
+    },
+    "win_prob": {
+      "blue": 0.6,
+      "red": 0.4
+    },
+    "predicted_winner": "blue",
+    "expected_duration_min": 31.5,
+    "kills": {
+      "blue": 17,
+      "red": 12
+    },
+    "total_kills": 29,
+    "key_drafted_champions": [
+      {
+        "champion": "Annie",
+        "team": "blue",
+        "role": "mid",
+        "impact": "Knight招牌英雄83.3%胜率，前期爆发和控制对Faker的Ryze形成强力压制，是BLG前期节奏核心"
+      },
+      {
+        "champion": "Leona",
+        "team": "blue",
+        "role": "sup",
+        "impact": "提供强开团控制，与Annie/Wukong构成控制链，针对T1无位移的Vel'Koz ADC"
+      },
+      {
+        "champion": "Ryze",
+        "team": "red",
+        "role": "mid",
+        "impact": "Faker非常规pick，前期弱势对线Annie压力巨大，但若拖到后期是T1翻盘核心输出"
+      },
+      {
+        "champion": "Vel'Koz",
+        "team": "red",
+        "role": "adc",
+        "impact": "非常规ADC pick，消耗和真实伤害强但自保差，面对BLG强开阵容生存困难"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "```json\n{\n  \"reasoning\": {\n    \"overall\": \"BLG凭借前期控制链阵容（Annie+Leona+Wukong）在中前期掌握节奏主动权，Knight的Annie是83.3%胜率的招牌英雄，对位Faker非常规Ryze有明显前期压制力。T1阵容偏后期发育且ADC选手Jinbeom经验不足，难以在BLG快节奏下稳住局势。\",\n    \"draft_analysis\": \"BLG选出前期进攻性极强的阵容：Leona+Annie+Wukong构成三重控制链，小龙和峡谷先锋团战极具统治力；Senna虽被26.13版本nerf，但成长性和减速仍能补充后期输出。T1则选出Jax+Ryze双后期核心，搭配Qiyana前期节奏和Vel'Koz消耗，整体曲线偏慢。关键问题在于T1的Vel'Koz ADC是非常规pick且Jinbeom仅有4场职业赛经验，面对Leona+Senna的强开组合自保困难。Faker的Ryze不在其近期英雄池中（池中有Anivia/TF/Azir等），前期对线Knight的Annie将承受巨大压力。Bin虽拿到不在英雄池的Zaahen，但其对线能力足以稳住，且BLG不依赖上路carry。T1的Alistar虽能反开，但面对BLG多控制链难以兼顾开团与保护Vel'Koz。整体而言BLG阵容协调性更好、前期强度更高，T1则存在前期薄弱、关键位置经验不足的隐患。\",\n    \"tempo_wincon\": \"BLG的致胜条件是利用Annie+Leona前期控制优势在15-25分钟窗口期拿下小龙和峡谷先锋，通过团战滚雪球压制T1发育空间。T1则需要Qiyana找到前期gank节奏帮Ryze渡过对线期，拖到30分钟后让Jax分推和Ryze成型。时长方面，BLG场均32.8分钟、T1场均32.7分钟，本局BLG前期阵容若顺利可在28-30分钟结束，而T1后期阵容若拖住则可能到35分钟以上，综合预期31.5分钟。击杀方面，BLG场均17.1人，前期控制链阵容预计维持17人左右；T1场均18.89人但被前期压制预计降至12人，总击杀约29。\"\n  },\n  \"win_prob\": { \"blue\": 0.6, \"red\": 0.4 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 31.5,\n  \"kills\": { \"blue\": 17, \"red\": 12 },\n  \"total_kills\": 29,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Annie\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"Knight招牌英雄83.3%胜率，前期爆发和控制对Faker的Ryze形成强力压制，是BLG前期节奏核心\" },\n    { \"champion\": \"Leona\", \"team\": \"blue\", \"role\": \"sup\", \"impact\": \"提供强开团控制，与Annie/Wukong构成控制链，针对T1无位移的Vel'Koz ADC\" },\n    { \"champion\": \"Ryze\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"Faker非常规pick，前期弱势对线Annie压力巨大，但若拖到后期是T1翻盘核心输出\" },\n    { \"champion\": \"Vel'Koz\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"非常规ADC pick，消耗和真实伤害强但自保差，面对BLG强开阵容生存困难\" }\n  ],\n  \"sources\": []\n}\n```",
+  "thinking_text": "让我仔细分析这场比赛。\n\n## 比赛背景\n- 赛事：MSI 2026\n- BO5系列赛第3局\n- BLG（蓝色方）vs T1（红色方）\n- 系列赛比分：1-1\n- 比赛日期：2026-07-03\n\n## BP分析\n\n### BLG（蓝色方）\n- 上单: Zaahen (Bin)\n- 打野: Wukong (Xun)\n- 中单: Annie (Knight)\n- ADC: Senna (Viper)\n- 辅助: Leona (ON)\n\n### T1（红色方）\n- 上单: Jax (Haetae)\n- 打野: Qiyana (Painter)\n- 中单: Ryze (Faker)\n- ADC: Vel'Koz (Jinbeom)\n- 辅助: Alistar (Cloud)\n\n## 关键分析点\n\n### 1. 英雄池匹配度\n\n**BLG蓝色方：**\n- Bin拿到Zaahen - 这不在他的英雄池里（英雄池有Sion, Jayce, Gnar, Rumble, Yorick, Jax）。Zaahen可能是新英雄或者不常见的pick，需要考虑Bin是否熟悉。\n- Xun拿到Wukong - 在英雄池中，5场3胜60%胜率，算是比较熟悉的。\n- Knight拿到Annie - 在英雄池中，6场5胜83.3%胜率，非常强力的招牌英雄。\n- Viper拿到Senna - 不在英雄池中（英雄池有Caitlyn, Ezreal, Sivir, Corki, Varus, Lucian）。Senna作为ADC可能需要适应。\n- ON拿到Leona - 不在英雄池中（英雄池有Bard, Rakan, Seraphine, Alistar, Milio, Karma）。Leona是硬控辅助，但ON之前没玩过。\n\n**T1红色方：**\n- Haetae拿到Jax - 在英雄池中，1场1胜100%胜率，但样本极小。\n- Painter拿到Qiyana - 在英雄池中，4场2胜50%胜率。\n- Faker拿到Ryze - 不在他的英雄池中（英雄池有Anivia, TF, Azir, Akali, Orianna, Cassiopeia）。不过Faker是出了名的英雄海选手。\n- Jinbeom拿到Vel'Koz - 不在英雄池中（英雄池有Jhin, Caitlyn, Ashe）。Vel'Koz作为ADC是非常规pick。\n- Cloud拿到Alistar - 在英雄池中，4场3胜75%胜率。\n\n### 2. 阵容分析\n\n**BLG阵容：Zaahen + Wukong + Annie + Senna + Leona**\n- 前期打架能力强：Wukong + Annie + Leona都是非常强力的前期英雄\n- 团战控制链：Leona开团 → Annie晕 → Wukong大招跟进\n- Senna提供后期成长性和减速\n- Zaahen作为上单，需要看具体属性\n- 整体偏前期进攻，团战控制充足\n\n**T1阵容：Jax + Qiyana + Ryze + Vel'Koz + Alistar**\n- Jax后期分推强，但前期较弱\n- Qiyana前期爆发高，但需要节奏\n- Ryze中后期发力，前期较弱\n- Vel'Koz提供远程消耗和真实伤害\n- Alistar开团保护\n- 整体偏中后期，前期需要稳住\n\n### 3. 对位分析\n\n**上路：Bin (Zaahen) vs Haetae (Jax)**\n- Bin近期状态非常好（76.56%胜率，4.62 KDA）\n- Haetae也不错（63.64%胜率，3.25 KDA）\n- Jax后期单带强，但Bin的对线能力出色\n- Bin拿到不熟悉的Zaahen可能是个风险\n\n**打野：Xun (Wukong) vs Painter (Qiyana)**\n- Xun的Wukong有60%胜率\n- Painter的Qiyana只有50%胜率\n- Wukong团战更强，Qiyana前期gank更凶\n- Xun整体数据更好（5.88 KDA vs 3.25 KDA）\n\n**中路：Knight (Annie) vs Faker (Ryze)**\n- Knight的Annie有83.3%胜率，非常强力\n- Faker的Ryze不在他的常规英雄池中\n- Annie前期爆发高，可以压制Ryze的发育\n- Knight近期状态极佳（7.41 KDA）\n\n**下路：Viper (Senna) + ON (Leona) vs Jinbeom (Vel'Koz) + Cloud (Alistar)**\n- Viper是顶级ADC，但Senna不在他的常规英雄池\n- Jinbeom只有4场比赛数据，经验不足\n- Vel'Koz作为ADC非常规，可能被Senna的射程优势克制\n- Leona + Senna有很强的先手能力\n- Alistar可以反开保护\n\n### 4. 阵容节奏曲线\n\n**BLG：**\n- 前期强势（Annie + Wukong + Leona）\n- 中期团战控制链完整\n- Senna后期也有成长性\n- 整体偏前期到中期\n\n**T1：**\n- 前期较弱（Ryze + Jax需要发育）\n- Qiyana需要找到节奏\n- 中后期Jax分推 + Ryze持续输出\n- Vel'Koz提供消耗和真实伤害\n- 整体偏中后期\n\n### 5. 版本信息\n当前版本是26.13左右（2026年6月底），Senna被nerf了。这对BLG的Senna pick不利。\n\n### 6. 数据锚点\n\n**时长锚点：**\n- BLG场均时长：32.8分钟\n- T1场均时长：32.7分钟\n- 均值约32.75分钟\n\nBLG前期阵容，如果顺利可能在28-30分钟结束。但T1有后期英雄，如果拖住可能到35+分钟。考虑到BLG的前期进攻性和T1的后期潜力，我预计约31-32分钟。\n\n**击杀锚点：**\n- BLG场均击杀：17.1，对手场均11.55\n- T1场均击杀：18.89，对手场均14.43\n\nBLG前期阵容如果顺利，可能打出17-19个人头。T1如果被压制可能在10-12个人头。\n\n### 7. 综合判断\n\nBLG的优势：\n1. 前期节奏更强（Annie + Wukong + Leona）\n2. Knight的Annie是招牌英雄，83.3%胜率\n3. 团战控制链完整\n4. 整体选手状态更好（76.56% vs 63.64-69%）\n5. 系列赛1-1，BLG在BO5中调整能力强\n\nT1的优势：\n1. Faker的大赛经验\n2. 后期阵容如果拖住有翻盘能力\n3. Jax分推可能牵制BLG\n4. Vel'Koz真实伤害克制坦克\n\n但考虑到：\n- BLG前期阵容可以压制T1的发育型英雄\n- Knight的Annie对Faker的Ryze有前期优势\n- BLG整体选手状态更好\n- T1的ADC选手Jinbeom经验不足（只有4场数据）\n- T1的Vel'Koz ADC是非常规pick，可能不稳定\n\n我预测BLG赢下这局，概率约60-65%。\n\n时长预测：考虑到BLG前期阵容vs T1后期阵容，如果BLG顺利可能在30分钟左右结束，但T1有后期翻盘能力可能拖延。预计31.5分钟。\n\n击杀预测：\n- BLG：17（接近场均17.1，前期阵容可能略高）\n- T1：12（被压制，低于场均18.89但不会太低因为有后期英雄）\n\n让我再仔细想想...\n\n实际上，T1的阵容有一些问题：\n1. Vel'Koz作为ADC非常规，Jinbeom只有4场比赛经验\n2. Faker的Ryze不在常规英雄池\n3. 前期较弱，容易被BLG滚雪球\n\n但T1也有优势：\n1. Alistar + Qiyana的前期gank能力\n2. Jax后期分推\n3. Vel'Koz的消耗能力在团战中很强\n4. Faker的大赛经验\n\n整体来看，BLG的阵容更协调，前期更强，且选手状态更好。我给BLG 62%的胜率。\n\n关于Zaahen - 这可能是一个新英雄或者重做英雄。从版本信息看，26.13版本有新英雄Locke。Zaahen可能是另一个新英雄或者我没识别出来的英雄。考虑到Bin的英雄池里没有这个英雄，这可能是一个风险因素，但也可能是版本强势英雄。\n\n让我重新考虑一下...\n\n实际上，我注意到版本信息中提到了\"Locke, the Ashen Exorcist\"作为26.13的新英雄。Zaahen可能是另一个新英雄或者是某个英雄的别名。无论如何，Bin没有在近期比赛中使用过这个英雄，这是一个不确定性因素。\n\n但考虑到Bin是顶级上单，且BLG整体阵容更强，我仍然倾向于BLG获胜。\n\n最终预测：\n- 胜方：BLG（蓝色方）\n- 胜率：BLG 62%, T1 38%\n- 时长：31.5分钟\n- 击杀：BLG 17, T1 12\n- 总击杀：29\n\n让我再调整一下...\n\n考虑到：\n1. BLG前期阵容（Annie + Wukong + Leona）vs T1后期阵容（Ryze + Jax）\n2. BLG如果前期打出优势可以快速结束\n3. 但T1有Faker的经验和调整能力\n4. 系列赛1-1，双方都有压力\n\n时长方面，BLG前期阵容如果顺利可能在28-30分钟结束。但T1的后期阵容如果拖住可能到34+分钟。考虑到两种可能性，我取中间值31.5分钟。\n\n击杀方面：\n- BLG前期阵容如果打出优势，可能拿到18-20个人头\n- T1被压制可能在10-12个人头\n- 但如果T1拖到后期，击杀可能会更接近\n\n我最终预测：\n- BLG 17击杀, T1 12击杀, 总计29\n- 时长31.5分钟\n- BLG 62%胜率\n\n等一下，让我再想想关于Zaahen这个英雄。在LoL中，我不确定Zaahen是哪个英雄。可能是：\n1. 一个新英雄（2026年发布的）\n2. 某个英雄的别名或不同语言名称\n\n无论如何，从BP分析来看，BLG的整体阵容更协调，前期更强。\n\n再考虑一下T1的阵容：\n- Jax + Qiyana + Ryze + Vel'Koz + Alistar\n- 这个阵容的问题是前期伤害不足，需要Qiyana找到节奏\n- Vel'Koz作为ADC虽然消耗能力强，但自保能力差\n- Alistar需要保护Vel'Koz，但又需要开团\n- Jax需要单带，但BLG的Leona + Annie可以强开团\n\nBLG的阵容：\n- Zaahen + Wukong + Annie + Senna + Leona\n- 前期控制链强（Leona + Annie + Wukong）\n- Senna提供后期成长性\n- 整体阵容协调性好\n\n我维持BLG 62%的预测。\n\n关于时长，考虑到BLG前期阵容vs T1后期阵容：\n- 如果BLG前期打出优势，可能在28-30分钟结束\n- 如果T1拖住，可能到34+分钟\n- 综合考虑，31.5分钟是合理的\n\n关于击杀：\n- BLG场均17.1，前期阵容可能略高，给17\n- T1场均18.89，但被前期阵容压制，给12\n- 总计29\n\n这个预测看起来合理。让我最终确认一下。\n\n实际上，我再想想，BLG的阵容有一些不确定性：\n1. Bin的Zaahen不在英雄池中\n2. Viper的Senna不在英雄池中\n3. ON的Leona不在英雄池中\n\n这意味着BLG有3个位置拿到了不熟悉的英雄，这是一个风险。但考虑到：\n- Bin是顶级上单，适应能力强\n- Viper是经验丰富的ADC\n- ON的Leona虽然不在英雄池，但Leona是基础辅助英雄\n\n而T1方面：\n1. Faker的Ryze不在英雄池\n2. Jinbeom的Vel'Koz不在英雄池\n3. Haetae的Jax只有1场经验\n\nT1有2个位置不熟悉，1个位置经验极少。\n\n综合来看，BLG虽然有不熟悉英雄的问题，但整体阵容更协调，选手状态更好。我维持BLG 60%的预测。\n\n让我稍微调整一下概率，考虑到BLG有3个不熟悉英雄的风险：\n- BLG 60%, T1 40%\n\n这个预测看起来合理。\n\n最终输出：\n\n```json\n{\n  \"reasoning\": {\n    \"overall\": \"BLG凭借前期强势的控制链阵容（Annie+Leona+Wukong）在中前期掌握主动权，Knight的Annie是83.3%胜率的招牌英雄，对位Faker的非常规Ryze有明显前期压制力。T1阵容偏后期发育但前期薄弱，且ADC选手Jinbeom经验不足，难以在BLG的快节奏下稳住局势。\",\n    \"draft_analysis\": \"BLG选出一套前期进攻性极强的阵容：Leona+Annie+Wukong构成三重控制链，小龙和峡谷先锋团战极具统治力；Senna虽然被26.13版本nerf，但其成长性和减速仍能补充后期输出。T1则选出Jax+Ryze的双后期核心阵容，搭配Qiyana前期节奏和Vel'Koz消耗，整体曲线偏慢。关键问题在于T1的Vel'Koz ADC是非常规pick且Jinbeom仅有4场职业赛经验，面对Leona+Senna的强开组合自保困难。Faker的Ryze不在其近期英雄池中（池中有Anivia/TF/Azir等），前期对线Knight的Annie将承受巨大压力。Bin虽然拿到不在英雄池的Zaahen，但其对线能力足以稳住，且BLG不依赖上路carry。T1的Alistar虽能反开，但面对BLG多控制链难以兼顾开团与保护Vel'Koz。\",\n    \"tempo_wincon\": \"BLG的致胜条件是利用Annie+Leona的前期控制优势在15-25分钟窗口期拿下小龙和峡谷先锋，通过团战滚雪球压制T1的发育空间。T1则需要Qiyana找到前期gank节奏帮Ryze渡过对线期，拖到30分钟后让Jax分推和Ryze成型。时长方面，BLG场均32.8分钟、T1场均32.7分钟，但本局BLG前期阵容若顺利可在28-30分钟结束，而T1后期阵容若拖住则可能到35分钟以上，综合预期31.5分钟。击杀方面，BLG场均17.1人，前期控制链阵容预计维持17人左右；T1场均18.89人但被前期压制预计降至12人，总击杀约29。\"\n  },\n  \"win_prob\": { \"blue\": 0.6, \"red\": 0.4 },\n  \"predicted_winner\": \"blue\",\n  \"expected_duration_min\": 31.5,\n  \"kills\": { \"blue\": 17, \"red\": 12 },\n  \"total_kills\": 29,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Annie\", \"team\": \"blue\", \"role\": \"mid\", \"impact\": \"Knight招牌英雄，83.3%胜率，前期爆发和控制对Faker的Ryze形成强力压制，是BLG前期节奏的核心\" },\n    { \"champion\": \"Leona\", \"team\": \"blue\", \"role\": \"sup\", \"impact\": \"提供强开团控制，与Annie/Wukong构成控制链，针对T1无位移的Vel'Koz ADC\" },\n    { \"champion\": \"Ryze\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"Faker非常规pick，前期弱势对线Knight的Annie压力巨大，但若拖到后期则是T1翻盘的核心输出\" },\n    { \"champion\": \"Vel'Koz\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"非常规ADC pick，消耗和真实伤害强但自保能力差，面对BLG强开阵容生存困难\" }\n  ],\n  \"sources\": []\n}\n```",
+  "sources": [],
+  "input_tokens": 18577,
+  "output_tokens": 4555,
+  "tool_calls": 0,
+  "cost_usd": 0.032235,
+  "wall_seconds": 80.68,
+  "error": null
+}
