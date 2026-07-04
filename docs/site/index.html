@@ -170,8 +170,11 @@ tailwind.config = {
   /* ===== Manual BP editor overlay ===== */
   #bpEditorOverlay {
     position: fixed; inset: 0; z-index: 60;
-    background: rgba(2, 6, 16, 0.72);
-    backdrop-filter: blur(6px);
+    /* NOTE: intentionally NO backdrop-filter here. A blur on this full-screen
+       overlay is the #1 cause of lag/freeze during drag-to-swap in the BP
+       editor — the browser re-runs the blur on every dragover repaint, which
+       cripples low-end machines. Use a darker solid tint instead. */
+    background: rgba(2, 6, 16, 0.86);
     display: none;
     align-items: center; justify-content: center;
     padding: 16px;
@@ -190,7 +193,7 @@ tailwind.config = {
   /* team slot lanes — blue left, red right */
   .bp-side {
     border-radius: 14px; padding: 10px;
-    border: 2px solid transparent; transition: all .18s;
+    border: 2px solid transparent; transition: border-color .18s, box-shadow .18s;
     background: rgba(148,163,184,0.05);
   }
   .bp-side.blue { border-color: rgba(0,163,224,0.18); }
@@ -202,12 +205,16 @@ tailwind.config = {
     position: relative; display: flex; flex-direction: column; align-items: center;
     width: 92px; min-height: 110px; padding: 6px 4px; border-radius: 12px;
     border: 1.5px dashed rgba(148,163,184,0.35); background: rgba(148,163,184,0.04);
-    cursor: pointer; transition: all .15s;
+    cursor: pointer; transition: border-color .15s, box-shadow .15s, background-color .15s;
   }
   .bp-slot.empty:hover { border-color: rgba(200,155,60,0.6); background: rgba(200,155,60,0.06); }
   .bp-slot.filled { border-style: solid; border-color: rgba(148,163,184,0.3); background: rgba(17,23,38,0.5); cursor: grab; }
   html[data-theme="light"] .bp-slot.filled { background: #f8fafc; }
   .bp-slot.drag-over { border-color: #c89b3c; box-shadow: 0 0 0 2px rgba(200,155,60,0.3); }
+  /* While dragging, kill all transitions on slots/sides so the drag-over
+     highlight toggles are instant — no animation work per frame. */
+  #bpEditorPanel.bp-dragging .bp-slot,
+  #bpEditorPanel.bp-dragging .bp-side { transition: none !important; }
   .bp-slot .bp-champ-icon { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; background: rgba(148,163,184,0.12); }
   .bp-slot .bp-champ-name { font-size: 10px; font-weight: 700; margin-top: 3px; max-width: 84px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .bp-slot .bp-player-name { font-size: 9px; color: #94a3b8; max-width: 84px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -226,7 +233,7 @@ tailwind.config = {
   .bp-champ {
     display: flex; flex-direction: column; align-items: center; cursor: pointer;
     padding: 4px 2px; border-radius: 10px; border: 1.5px solid transparent;
-    transition: all .12s; user-select: none;
+    transition: border-color .12s, background-color .12s, transform .12s; user-select: none;
   }
   .bp-champ:hover { border-color: rgba(200,155,60,0.5); background: rgba(200,155,60,0.08); transform: translateY(-1px); }
   .bp-champ img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: rgba(148,163,184,0.12); }
@@ -2155,12 +2162,16 @@ function wireBpSlots(){
       BP.drag = { side: slot.dataset.side, idx: Number(slot.dataset.idx) };
       e.dataTransfer.effectAllowed = 'move';
       try{ e.dataTransfer.setData('text/plain','bp'); }catch(_){}
+      // flag the panel so CSS disables transitions during the drag (see stylesheet)
+      document.getElementById('bpEditorPanel').classList.add('bp-dragging');
     });
     slot.addEventListener('dragover', (e)=>{
       if(!BP.drag) return;
       e.preventDefault();
       e.dataTransfer.dropEffect = 'move';
-      slot.classList.add('drag-over');
+      // only touch the DOM when the class actually changes — avoids needless
+      // style recalc on every dragover firing (which is many times per frame).
+      if(!slot.classList.contains('drag-over')) slot.classList.add('drag-over');
     });
     slot.addEventListener('dragleave', ()=> slot.classList.remove('drag-over'));
     slot.addEventListener('drop', (e)=>{
@@ -2183,7 +2194,11 @@ function wireBpSlots(){
       BP.drag = null;
       renderBpSlots(); renderBpFooter();
     });
-    slot.addEventListener('dragend', ()=>{ BP.drag=null; document.querySelectorAll('.bp-slot.drag-over').forEach(s=>s.classList.remove('drag-over')); });
+    slot.addEventListener('dragend', ()=>{
+      BP.drag=null;
+      document.getElementById('bpEditorPanel').classList.remove('bp-dragging');
+      document.querySelectorAll('.bp-slot.drag-over').forEach(s=>s.classList.remove('drag-over'));
+    });
   });
 }
 
