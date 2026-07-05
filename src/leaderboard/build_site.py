@@ -203,10 +203,9 @@ def _game_history() -> list[dict]:
     if not cfg.GAMES_DIR.exists():
         return out
     for match_dir in sorted(cfg.GAMES_DIR.glob("*")):
-        # Resolve human-readable blue/red team names from the parent match
-        # fixture. The bp.json only stores champion picks (an array), so
-        # without this the UI would render "[object Object]" for team names.
-        blue_name, red_name, match_id = _match_meta(match_dir.name)
+        # match_id is series-level; blue/red names are resolved PER GAME below
+        # (LOL swaps sides every game), so only fetch the id here.
+        _, _, match_id = _match_meta(match_dir.name)
         for gdir in sorted(match_dir.glob("g*")):
             bp = _read(gdir / "bp.json") or {}
             preds: dict[str, Any] = {}
@@ -245,17 +244,18 @@ def _game_history() -> list[dict]:
                 if rf.stem.startswith("_"):
                     continue
                 game_results[rf.stem] = _read(rf).get("composite", 0.0)
+            # Resolve this game's real blue/red team names from its fixture stub.
+            # Sides swap per game, so this MUST be per-position — not the series
+            # order — or cards/badges label the wrong team on most games.
+            position = bp.get("position") or int(gdir.name[1:])
+            blue_name, red_name, _ = _match_meta(match_dir.name, position)
             out.append({
                 "match_slug": match_dir.name,
                 # string id — see note above (avoid JS Number precision loss)
                 "match_id": str(match_id) if match_id is not None else None,
-                "position": bp.get("position") or int(gdir.name[1:]),
-                # If the user flipped blue/red for this game in the manual BP
-                # editor, swap the display names so cards/badges label the
-                # correct team. Picks are already stored on the chosen sides,
-                # so they are NOT swapped here.
-                "blue": red_name if bp.get("sides_swapped") else blue_name,
-                "red": blue_name if bp.get("sides_swapped") else red_name,
+                "position": position,
+                "blue": blue_name,
+                "red": red_name,
                 "blue_picks": (bp.get("picks", {}).get("blue")),
                 "red_picks": (bp.get("picks", {}).get("red")),
                 "bp_complete": bp.get("bp_complete"),
@@ -266,9 +266,16 @@ def _game_history() -> list[dict]:
     return out
 
 
-def _match_meta(match_slug: str) -> tuple[str, str, int | None]:
-    """Resolve blue/red display names + the numeric match_id for a single-game
-    match from its parent fixture under data/matches/<match_slug>/."""
+def _match_meta(match_slug: str, position: int | None = None) -> tuple[str, str, int | None]:
+    """Resolve blue/red display names + the numeric match_id for a game from its
+    parent fixture under data/matches/<match_slug>/.
+
+    LOL swaps blue/red every game, so when `position` is given we resolve names
+    from that game's stub (fixture.games[].blue_team/red_team) — the in-game
+    side that actually matches the bp.json picks. We only fall back to the
+    series-level opponents[0/1] order when the game stub has no sides yet
+    (pre-match). See _norm_game in adapters/cito.py for the stub shape.
+    """
     mdir = cfg.MATCHES_DIR / match_slug
     if not mdir.exists():
         return "?", "?", None
@@ -280,8 +287,19 @@ def _match_meta(match_slug: str) -> tuple[str, str, int | None]:
     opps = fixture.get("opponents") or []
     blue_opp = opps[0]["opponent"] if opps else {}
     red_opp = opps[1]["opponent"] if len(opps) > 1 else {}
-    blue = blue_opp.get("name") or header_blue.get("name") or "?"
-    red = red_opp.get("name") or header_red.get("name") or "?"
+    # Per-game sides take priority over the (fixed, often-wrong) series order.
+    blue = red = None
+    if position is not None:
+        game_stub = next((g for g in (fixture.get("games") or [])
+                          if g.get("position") == position), None)
+        bt = (game_stub or {}).get("blue_team") or {}
+        rt = (game_stub or {}).get("red_team") or {}
+        blue = bt.get("name")
+        red = rt.get("name")
+    if not blue:
+        blue = blue_opp.get("name") or header_blue.get("name") or "?"
+    if not red:
+        red = red_opp.get("name") or header_red.get("name") or "?"
     return blue, red, fixture.get("id")
 
 
