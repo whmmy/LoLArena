@@ -55,8 +55,23 @@ def build_game_prompt(bp: dict, match_fixture: dict, series_state: dict | None =
     tpl = (PROMPTS / "task_game.md").read_text(encoding="utf-8")
 
     opps = match_fixture.get("opponents") or []
-    blue = (opps[0]["opponent"] if opps else {}).get("name", "Blue")
-    red = (opps[1]["opponent"] if len(opps) > 1 else {}).get("name", "Red")
+    # Blue/red team names. LOL swaps sides every game, so we MUST resolve them
+    # from this game's stub (games[].blue_team/red_team), NOT from the
+    # series-level opponents[0/1] order — that order is fixed for the whole
+    # series and disagrees with the in-game side on most games, which would
+    # hand the model a series_context.blue that contradicts bp.picks.blue and
+    # silently flip every red/blue stat (kills, winner). Fallback to the
+    # series order only when the game hasn't been assigned sides yet.
+    pos = bp.get("position")
+    games = match_fixture.get("games") or []
+    game_stub = next((g for g in games if g.get("position") == pos), None)
+    bt = (game_stub or {}).get("blue_team") or {}
+    rt = (game_stub or {}).get("red_team") or {}
+    if bt.get("name") and rt.get("name"):
+        blue, red = bt["name"], rt["name"]
+    else:
+        blue = (opps[0]["opponent"] if opps else {}).get("name", "Blue")
+        red = (opps[1]["opponent"] if len(opps) > 1 else {}).get("name", "Red")
     version = (match_fixture.get("videogame_version") or {}).get("name", "current")
     total_games = match_fixture.get("number_of_games") or bp.get("total_games") or "?"
     # prefer the patch resolved by the meta snapshot over the (often empty) fixture field

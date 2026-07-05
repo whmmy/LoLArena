@@ -303,10 +303,6 @@ class SaveBPRequest(BaseModel):
     game_pos: int
     blue: list[SaveBPPick]
     red: list[SaveBPPick]
-    # True when the user flipped blue/red in the editor for THIS game (each
-    # game's sides are independent). We only persist the flag; the picks above
-    # are already stored on the user-chosen sides, so no swap happens here.
-    sides_swapped: bool = False
 
 
 @app.post("/api/save-bp")
@@ -374,7 +370,6 @@ def save_bp(req: SaveBPRequest):
         "picks": {"blue": blue_list, "red": red_list},
         "fetched_at": existing.get("fetched_at"),
         "manual": True,   # hand-entered; fetch_game_bp keeps it until real (complete) data lands
-        "sides_swapped": req.sides_swapped,  # UI flipped blue/red for this game
     }
     # Preserve any truth fields the grader may have mirrored in earlier.
     for k in ("winner_side", "kills", "total_kills", "length_min"):

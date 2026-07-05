@@ -523,12 +523,6 @@ tailwind.config = {
     <!-- loading / body -->
     <div id="bpEditorBody" class="flex-1 overflow-y-auto p-5 space-y-4">
       <!-- team slot lanes -->
-      <div class="flex items-center justify-center mb-1">
-        <button id="bpSwapBtn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 transition-colors" title="交换红蓝方对应的队伍（每局独立）">
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 4 4 4M16 17l4-4-4-4M4 11h16M20 13H4"/></svg>
-          交换红蓝方
-        </button>
-      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="bp-side blue" data-side="blue">
           <div class="flex items-center gap-2 mb-2">
@@ -1989,7 +1983,6 @@ function openBpEditor(matchId, pos, matchSlug){
     champions: [],                          // [{name,slug,image_url,aliases}]
     champByName: {},
     drag: null,                             // {side,role} being dragged
-    swapped: false,                         // true if user flipped blue/red teams for this game
   };
   bpEditorOpen();
   document.getElementById('bpEditorTitle').textContent = `手动 BP · 第 ${pos} 局`;
@@ -2075,19 +2068,23 @@ async function loadBpEditorData(){
     BP.champions = Array.isArray(champRes) ? champRes : [];
     BP.champByName = {};
     BP.champions.forEach(c=>{ BP.champByName[c.name] = c; });
-    // prefill from existing bp.json picks (data.json blue_picks/red_picks).
-    // Picks are stored on the user's chosen sides, so on a swapped game the
-    // blue_picks here are already the real-blue-side picks — do NOT swap them.
+    // prefill from existing bp.json picks (data.json blue_picks/red_picks)
     if(prefilled){
       prefillBpSide(prefilled.blue_picks, 'blue');
       prefillBpSide(prefilled.red_picks,  'red');
-    }
-    // If this game was saved with sides flipped, swap team+roster so the lanes
-    // show the correct team logos/names/players (picks stay — see comment above).
-    if(prefilled && prefilled.sides_swapped){
-      BP.swapped = true;
-      const _t = BP.team.blue; BP.team.blue = BP.team.red; BP.team.red = _t;
-      const _r = BP.roster.blue; BP.roster.blue = BP.roster.red; BP.roster.red = _r;
+      // Align team/roster to this game's REAL blue/red sides. LOL swaps sides
+      // every game, but /api/match-roster returns the series-level order
+      // (opponents[0]=blue), which is wrong on most games. data.json's
+      // per-game blue/red (rebuilt by build_site from the fixture stub) is the
+      // truth — if it disagrees with the roster order, swap team+roster so
+      // logos/names/players match the in-game side. Picks are already on the
+      // correct sides (stored by in-game side), so they are NOT swapped.
+      const realBlue = (prefilled.blue||'').trim();
+      const defaultBlue = (BP.team.blue?.name||'').trim();
+      if(realBlue && defaultBlue && realBlue !== defaultBlue){
+        const _t = BP.team.blue; BP.team.blue = BP.team.red; BP.team.red = _t;
+        const _r = BP.roster.blue; BP.roster.blue = BP.roster.red; BP.roster.red = _r;
+      }
     }
     renderBpTeamHeaders();
     renderBpSlots();
@@ -2115,21 +2112,6 @@ function renderBpTeamHeaders(){
   document.getElementById('bpRedName').textContent  = BP.team.red?.name  || '红方';
   setBpTeamLogo('bpBlueLogo', BP.team.blue, '#00a3e0');
   setBpTeamLogo('bpRedLogo',  BP.team.red,  '#de2f2f');
-}
-
-// One-click swap of which team is blue vs red. Flips team, roster AND picks
-// (so an in-progress selection follows the teams), toggles BP.swapped, and
-// re-renders. Players stay aligned because the pick's `player` field travels
-// with the pick and renderBpSlots maps roster->role for display.
-function swapBpSides(){
-  if(!BP) return;
-  const t = BP.team.blue; BP.team.blue = BP.team.red; BP.team.red = t;
-  const r = BP.roster.blue; BP.roster.blue = BP.roster.red; BP.roster.red = r;
-  const p = BP.picks.blue; BP.picks.blue = BP.picks.red; BP.picks.red = p;
-  BP.swapped = !BP.swapped;
-  renderBpTeamHeaders();
-  renderBpSlots();
-  renderBpFooter();
 }
 
 function prefillBpSide(picks, side){
@@ -2327,7 +2309,7 @@ async function saveBpEditor(btn){
   try{
     const r = await fetch('/api/save-bp',{
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ match_id: BP.matchId, game_pos: BP.pos, blue, red, sides_swapped: !!BP.swapped }),
+      body: JSON.stringify({ match_id: BP.matchId, game_pos: BP.pos, blue, red }),
     });
     const data = await r.json().catch(()=>({}));
     if(!r.ok){
@@ -2367,7 +2349,6 @@ async function saveBpEditor(btn){
     renderBpSlots(); renderBpPool(); renderBpFooter();
   });
   document.getElementById('bpSaveBtn').addEventListener('click', (e)=> saveBpEditor(e.currentTarget));
-  document.getElementById('bpSwapBtn').addEventListener('click', ()=>{ if(BP) swapBpSides(); });
   // click on a side lane background also selects that side
   document.querySelectorAll('#bpEditorPanel .bp-side').forEach(el=>{
     el.addEventListener('click',(e)=>{
