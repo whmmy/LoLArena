@@ -1,0 +1,442 @@
+{
+  "model_id": "deepseek-v4-pro",
+  "scope": "match",
+  "target_id": "msi_t1_vs_furia_2026-07-05",
+  "submitted_at": "2026-07-05T13:26:11.633769+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "T1将以3-0横扫FURIA晋级败者组下一轮。LCK二号种子兼S15世界冠军与巴西CBLOL代表之间存在不可逾越的实力鸿沟——T1入围赛9-0全胜、与BLG打满五局展现顶级竞争力，而FURIA刚刚被北美LYON以3-0零封。全局BP赛制将进一步放大两队在英雄池深度与战术储备上的差距。",
+      "fundamentals": "T1在MSI入围赛阶段以三个3-0横扫TL、KC、TL，合计9-0未尝一败，展现了碾压级的运营执行力与团战韧性。ADC Peyz是T1当前最火热的选手——入围赛决赛对阵TL砍下五杀并获系列赛MVP，对阵BLG首局烬打出6/1/6再获MVP。辅助Keria国际赛事总助攻数已超越Faker成为历史第一，其派克、巴德等英雄的游走与开团能力极强。中单Faker经验丰富、英雄池深厚。打野Oner拼惩戒成功率极高且前期节奏稳定。T1的弱点是上单Doran——入围赛分均伤害与伤害转化率在全部上单中排名垫底，但面对CBLOL级别的对手其压力将大幅减轻。FURIA近10场CBLOL比赛8胜2负，但在MSI正赛首轮被LYON横扫，暴露出前期能取得优势但中后期运营与决策能力严重不足的问题——对阵LYON首局曾领先却被翻盘、第三局更是全程被压制。FURIA在巴西联赛的统治力（82%胜率、场均击杀17.5、一塔率73%）在跨赛区对抗中完全失效。",
+      "matchups": "上路Doran vs Guigo：Doran虽在入围赛数据垫底但对阵BLG时掘墓等英雄仍有作用，Guigo的赛恩等坦克英雄在CBLOL有表现但对线压制力有限，Doran应能稳住甚至取得优势。打野Oner vs Tatu：Oner是T1前期节奏的核心发动机，其赵信、蔚、盲僧等英雄熟练度极高且拼惩戒胜率惊人；Tatu在巴西联赛表现稳定但面对LCK顶级打野将承受巨大压力，野区入侵与资源控制将全面落后。中路Faker vs Tutsz：Faker九届MSI经验、英雄池覆盖阿卡丽、辛德拉、岩雀、瑞兹等，Tutsz虽在对阵LYON时使用瑞兹完成过中路单杀展现个人能力，但整体对线压制力、游走节奏与团战输出与Faker差距悬殊。下路Peyz/Keria vs Ayu/JoJo：这是全场差距最大的位置——Peyz在本届MSI已斩获五杀且多次获得MVP，Keria的派克、巴德等游走型辅助能彻底打乱FURIA的节奏；Ayu与JoJo在巴西联赛表现尚可但面对世界顶级下路组合几乎没有对线存活空间。团战层面T1的协同性与残局处理能力远超FURIA——T1多次在落后局面下通过完美团战逆转，而FURIA对阵LYON时多次在有优势的情况下团战崩盘。边线控制方面T1的131分带体系成熟，FURIA缺乏有效应对手段。",
+      "meta_style": "MSI 2026采用全局BP（Fearless Draft）双败淘汰BO5赛制，这对英雄池深度提出了极高要求。当前版本主流阵容偏向多核输出与灵活摇摆——中单阿卡丽、辛德拉、岩雀、蛇女等兼具对线与游走能力，下路梅尔、烬、伊泽瑞尔、泽丽等功能型与carry型AD并重，辅助位置派克、巴德等游走开团英雄优先级高，打野赵信、蔚、盲僧等节奏型英雄为主流。T1的英雄池深度是本届赛事最大优势之一：Keria能掏派克、巴德、泰坦、米利欧等多风格辅助，Faker英雄海不受限制，Peyz从烬到泽丽到卢锡安均有顶级表现，Oner的英雄池也与版本高度契合。相比之下，FURIA在CBLOL的英雄选择相对固定且面对全局BP时储备明显不足——对阵LYON三局已暴露出在第三局BP捉襟见肘的困境。此外T1擅长在劣势中通过资源置换与团战翻盘，其比赛节奏适应性极强，而FURIA在面对强队时一旦前期节奏受挫便陷入迷茫。",
+      "h2h_psych": "两队此前从未交手，这是双方首次在正式比赛中相遇。心理层面T1占据绝对优势：拥有Faker等多名世界冠军成员，MSI、S赛等国际大赛经验丰富到奢侈的程度。T1刚刚与BLG打满五局惜败，虽消耗较大但士气并未崩溃——Peyz赛后表示会好好准备下一场，队伍展现出迅速调整的能力。FURIA则是CBLOL首次以单独名额参加MSI淘汰赛，国际大赛经验极度匮乏。刚被北美LYON以3-0零封对信心的打击不可忽视——三局比赛中多次在优势局面下被翻盘暴露出心态波动问题。赛程方面T1连续两天作战（7月4日vs BLG、7月5日vs FURIA），存在体力消耗隐患，但FURIA同样连续作战且自身调整能力更弱。此外比赛在韩国大田举办，T1拥有实际上的主场优势。最大的不确定因素是T1是否会因轻视对手而在BP或前期放松警惕，但以T1的职业素养和淘汰赛生死战的紧迫性，这种概率极低。"
+    },
+    "win_probs": {
+      "blue": 0.93,
+      "red": 0.07
+    },
+    "predicted_winner": "blue",
+    "series_score": "3-0",
+    "series_length": 3,
+    "favored_side": "blue_strong",
+    "key_players": [
+      {
+        "player": "Peyz",
+        "team": "blue",
+        "role": "adc",
+        "reason": "T1本届MSI最火热的Carry点——入围赛决赛五杀泽丽、对阵BLG首局MVP烬，输出能力在当前版本处于巅峰状态，面对FURIA下路将形成碾压级对位优势"
+      },
+      {
+        "player": "Keria",
+        "team": "blue",
+        "role": "sup",
+        "reason": "国际赛事历史助攻王，派克、巴德等游走型辅助能彻底撕裂FURIA的边线与野区节奏，其与Oner的野辅联动是T1前期压制的关键引擎"
+      },
+      {
+        "player": "Faker",
+        "team": "blue",
+        "role": "mid",
+        "reason": "九届MSI的传奇中单，英雄池深不见底且大赛经验无可匹敌，在全局BP赛制下能为T1提供BP灵活性，是队伍逆境中的定海神针"
+      },
+      {
+        "player": "Oner",
+        "team": "blue",
+        "role": "jun",
+        "reason": "前期节奏与拼惩戒能力在本届MSI极为突出——对阵TL时1滴血抢大龙堪称神迹，赵信、蔚等版本强势打野操作顶级，将彻底压制Tatu的野区发育"
+      },
+      {
+        "player": "Tutsz",
+        "team": "red",
+        "role": "mid",
+        "reason": "FURIA在对阵LYON时唯一展现个人能力的选手——瑞兹中路单杀辛德拉拿到一血，若FURIA有任何爆冷希望，必须依靠Tutsz在中路打出超常表现"
+      }
+    ],
+    "swing_factors": [
+      "T1连续两天作战的体力消耗——7月4日与BLG打满五局高强度对决，不到24小时即迎战FURIA，若T1前期注意力不集中可能给FURIA偷局机会",
+      "Doran上路对线状态——入围赛数据垫底的上单若在弱旅面前再度出现被单杀等失误，可能影响T1整体节奏并给FURIA注入信心",
+      "全局BP下FURIA的英雄池极限——BO5打到第三局时FURIA的熟练英雄可能已消耗殆尽，这是T1最可能实现碾压式横扫的结构性原因",
+      "T1下路对位优势能否转化为速推节奏——若Peyz/Keria在对线期即打穿Ayu/JoJo，T1将迅速滚起雪球并以短时长结束比赛",
+      "FURIA前期gank执行力——对阵LYON时FURIA曾通过上路4包1取得优势，若Tatu能复刻类似节奏并在T1的Doran身上找到突破口，可能制造意外"
+    ],
+    "meta_style_signals": [
+      "全局BP（Fearless Draft）BO5赛制极大惩罚英雄池浅的队伍，T1五名选手的英雄池深度在本次MSI属于第一梯队",
+      "下路生态以功能型AD（烬、艾希）与Carry型AD（泽丽、伊泽瑞尔、卢锡安）并重，Peyz两者皆精，版本契合度极高",
+      "辅助位游走型英雄（派克、巴德）与保护型英雄（米利欧、塔姆）的灵活切换是当前版本胜负手，Keria在这两类英雄上均为世界顶尖",
+      "中野节奏主导前期——Faker与Oner的组合在面对BLG之外的对手时几乎从未在前中期陷入被动，版本强势中野英雄（辛德拉/岩雀+蔚/赵信）均在T1的英雄池内"
+    ],
+    "sources": [
+      {
+        "query": "T1 vs FURIA MSI 2026 match prediction",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "T1 MSI 2026 roster lineup players",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "FURIA LoL MSI 2026 roster CBLOL",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "LYON vs FURIA MSI 2026 July 4 match results",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "T1 BLG MSI 2026 game details Doran Peyz performance",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      },
+      {
+        "query": "MSI 2026 meta champions priority picks bans July",
+        "accessed_at": "2026-07-05T03:00:00Z"
+      }
+    ]
+  },
+  "raw_text": "```json\n{\n  \"reasoning\": {\n    \"overall\": \"T1将以3-0横扫FURIA晋级败者组下一轮。LCK二号种子兼S15世界冠军与巴西CBLOL代表之间存在不可逾越的实力鸿沟——T1入围赛9-0全胜、与BLG打满五局展现顶级竞争力，而FURIA刚刚被北美LYON以3-0零封。全局BP赛制将进一步放大两队在英雄池深度与战术储备上的差距。\",\n    \"fundamentals\": \"T1在MSI入围赛阶段以三个3-0横扫TL、KC、TL，合计9-0未尝一败，展现了碾压级的运营执行力与团战韧性。ADC Peyz是T1当前最火热的选手——入围赛决赛对阵TL砍下五杀并获系列赛MVP，对阵BLG首局烬打出6/1/6再获MVP。辅助Keria国际赛事总助攻数已超越Faker成为历史第一，其派克、巴德等英雄的游走与开团能力极强。中单Faker经验丰富、英雄池深厚。打野Oner拼惩戒成功率极高且前期节奏稳定。T1的弱点是上单Doran——入围赛分均伤害与伤害转化率在全部上单中排名垫底，但面对CBLOL级别的对手其压力将大幅减轻。FURIA近10场CBLOL比赛8胜2负，但在MSI正赛首轮被LYON横扫，暴露出前期能取得优势但中后期运营与决策能力严重不足的问题——对阵LYON首局曾领先却被翻盘、第三局更是全程被压制。FURIA在巴西联赛的统治力（82%胜率、场均击杀17.5、一塔率73%）在跨赛区对抗中完全失效。\",\n    \"matchups\": \"上路Doran vs Guigo：Doran虽在入围赛数据垫底但对阵BLG时掘墓等英雄仍有作用，Guigo的赛恩等坦克英雄在CBLOL有表现但对线压制力有限，Doran应能稳住甚至取得优势。打野Oner vs Tatu：Oner是T1前期节奏的核心发动机，其赵信、蔚、盲僧等英雄熟练度极高且拼惩戒胜率惊人；Tatu在巴西联赛表现稳定但面对LCK顶级打野将承受巨大压力，野区入侵与资源控制将全面落后。中路Faker vs Tutsz：Faker九届MSI经验、英雄池覆盖阿卡丽、辛德拉、岩雀、瑞兹等，Tutsz虽在对阵LYON时使用瑞兹完成过中路单杀展现个人能力，但整体对线压制力、游走节奏与团战输出与Faker差距悬殊。下路Peyz/Keria vs Ayu/JoJo：这是全场差距最大的位置——Peyz在本届MSI已斩获五杀且多次获得MVP，Keria的派克、巴德等游走型辅助能彻底打乱FURIA的节奏；Ayu与JoJo在巴西联赛表现尚可但面对世界顶级下路组合几乎没有对线存活空间。团战层面T1的协同性与残局处理能力远超FURIA——T1多次在落后局面下通过完美团战逆转，而FURIA对阵LYON时多次在有优势的情况下团战崩盘。边线控制方面T1的131分带体系成熟，FURIA缺乏有效应对手段。\",\n    \"meta_style\": \"MSI 2026采用全局BP（Fearless Draft）双败淘汰BO5赛制，这对英雄池深度提出了极高要求。当前版本主流阵容偏向多核输出与灵活摇摆——中单阿卡丽、辛德拉、岩雀、蛇女等兼具对线与游走能力，下路梅尔、烬、伊泽瑞尔、泽丽等功能型与carry型AD并重，辅助位置派克、巴德等游走开团英雄优先级高，打野赵信、蔚、盲僧等节奏型英雄为主流。T1的英雄池深度是本届赛事最大优势之一：Keria能掏派克、巴德、泰坦、米利欧等多风格辅助，Faker英雄海不受限制，Peyz从烬到泽丽到卢锡安均有顶级表现，Oner的英雄池也与版本高度契合。相比之下，FURIA在CBLOL的英雄选择相对固定且面对全局BP时储备明显不足——对阵LYON三局已暴露出在第三局BP捉襟见肘的困境。此外T1擅长在劣势中通过资源置换与团战翻盘，其比赛节奏适应性极强，而FURIA在面对强队时一旦前期节奏受挫便陷入迷茫。\",\n    \"h2h_psych\": \"两队此前从未交手，这是双方首次在正式比赛中相遇。心理层面T1占据绝对优势：拥有Faker等多名世界冠军成员，MSI、S赛等国际大赛经验丰富到奢侈的程度。T1刚刚与BLG打满五局惜败，虽消耗较大但士气并未崩溃——Peyz赛后表示会好好准备下一场，队伍展现出迅速调整的能力。FURIA则是CBLOL首次以单独名额参加MSI淘汰赛，国际大赛经验极度匮乏。刚被北美LYON以3-0零封对信心的打击不可忽视——三局比赛中多次在优势局面下被翻盘暴露出心态波动问题。赛程方面T1连续两天作战（7月4日vs BLG、7月5日vs FURIA），存在体力消耗隐患，但FURIA同样连续作战且自身调整能力更弱。此外比赛在韩国大田举办，T1拥有实际上的主场优势。最大的不确定因素是T1是否会因轻视对手而在BP或前期放松警惕，但以T1的职业素养和淘汰赛生死战的紧迫性，这种概率极低。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.93,\n    \"red\": 0.07\n  },\n  \"predicted_winner\": \"blue\",\n  \"series_score\": \"3-0\",\n  \"series_length\": 3,\n  \"favored_side\": \"blue_strong\",\n  \"key_players\": [\n    {\n      \"player\": \"Peyz\",\n      \"team\": \"blue\",\n      \"role\": \"adc\",\n      \"reason\": \"T1本届MSI最火热的Carry点——入围赛决赛五杀泽丽、对阵BLG首局MVP烬，输出能力在当前版本处于巅峰状态，面对FURIA下路将形成碾压级对位优势\"\n    },\n    {\n      \"player\": \"Keria\",\n      \"team\": \"blue\",\n      \"role\": \"sup\",\n      \"reason\": \"国际赛事历史助攻王，派克、巴德等游走型辅助能彻底撕裂FURIA的边线与野区节奏，其与Oner的野辅联动是T1前期压制的关键引擎\"\n    },\n    {\n      \"player\": \"Faker\",\n      \"team\": \"blue\",\n      \"role\": \"mid\",\n      \"reason\": \"九届MSI的传奇中单，英雄池深不见底且大赛经验无可匹敌，在全局BP赛制下能为T1提供BP灵活性，是队伍逆境中的定海神针\"\n    },\n    {\n      \"player\": \"Oner\",\n      \"team\": \"blue\",\n      \"role\": \"jun\",\n      \"reason\": \"前期节奏与拼惩戒能力在本届MSI极为突出——对阵TL时1滴血抢大龙堪称神迹，赵信、蔚等版本强势打野操作顶级，将彻底压制Tatu的野区发育\"\n    },\n    {\n      \"player\": \"Tutsz\",\n      \"team\": \"red\",\n      \"role\": \"mid\",\n      \"reason\": \"FURIA在对阵LYON时唯一展现个人能力的选手——瑞兹中路单杀辛德拉拿到一血，若FURIA有任何爆冷希望，必须依靠Tutsz在中路打出超常表现\"\n    }\n  ],\n  \"swing_factors\": [\n    \"T1连续两天作战的体力消耗——7月4日与BLG打满五局高强度对决，不到24小时即迎战FURIA，若T1前期注意力不集中可能给FURIA偷局机会\",\n    \"Doran上路对线状态——入围赛数据垫底的上单若在弱旅面前再度出现被单杀等失误，可能影响T1整体节奏并给FURIA注入信心\",\n    \"全局BP下FURIA的英雄池极限——BO5打到第三局时FURIA的熟练英雄可能已消耗殆尽，这是T1最可能实现碾压式横扫的结构性原因\",\n    \"T1下路对位优势能否转化为速推节奏——若Peyz/Keria在对线期即打穿Ayu/JoJo，T1将迅速滚起雪球并以短时长结束比赛\",\n    \"FURIA前期gank执行力——对阵LYON时FURIA曾通过上路4包1取得优势，若Tatu能复刻类似节奏并在T1的Doran身上找到突破口，可能制造意外\"\n  ],\n  \"meta_style_signals\": [\n    \"全局BP（Fearless Draft）BO5赛制极大惩罚英雄池浅的队伍，T1五名选手的英雄池深度在本次MSI属于第一梯队\",\n    \"下路生态以功能型AD（烬、艾希）与Carry型AD（泽丽、伊泽瑞尔、卢锡安）并重，Peyz两者皆精，版本契合度极高\",\n    \"辅助位游走型英雄（派克、巴德）与保护型英雄（米利欧、塔姆）的灵活切换是当前版本胜负手，Keria在这两类英雄上均为世界顶尖\",\n    \"中野节奏主导前期——Faker与Oner的组合在面对BLG之外的对手时几乎从未在前中期陷入被动，版本强势中野英雄（辛德拉/岩雀+蔚/赵信）均在T1的英雄池内\"\n  ],\n  \"sources\": [\n    {\n      \"query\": \"T1 vs FURIA MSI 2026 match prediction\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"T1 MSI 2026 roster lineup players\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"FURIA LoL MSI 2026 roster CBLOL\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"T1 vs FURIA MSI 2026 lower bracket match July 5\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"LYON vs FURIA MSI 2026 July 4 match results\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"T1 BLG MSI 2026 game details Doran Peyz performance\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"T1 roster 2026 MSI Doran Oner Faker Peyz Keria\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    },\n    {\n      \"query\": \"MSI 2026 meta champions priority picks bans July\",\n      \"accessed_at\": \"2026-07-05T03:00:00Z\"\n    }\n  ]\n}\n```",
+  "thinking_text": "Let me analyze this scenario carefully. The context_pack shows a match between \"T1\" (blue side) and \"FURIA\" (red side) in MSI 2026 Knockouts. However, looking at the rosters, both teams have the exact same players: Guigo (top), Tatu (jun), Tutsz (mid), Ayu (adc), JoJo (sup) - all Brazilian. And the blue team has the name \"T1\" but with the slug \"fur\" and FURIA's image URL. The red team is \"FURIA\" with the same slug \"fur\".\n\nWait, this is very confusing. Let me re-read the data carefully.\n\nThe blue team:\n- name: \"T1\"\n- acronym: \"T1\"\n- slug: \"fur\"\n- image_url: T1's logo\n- Players: Guigo, Tatu, Tutsz, Ayu, JoJo (all Brazilian)\n\nThe red team:\n- name: \"FURIA\"\n- acronym: \"FUR\"\n- slug: \"fur\"\n- image_url: FURIA's logo\n- Players: Guigo, Tatu, Tutsz, Ayu, JoJo (all Brazilian)\n\nBoth teams have identical rosters - same player names, same IDs, same nationalities. This looks like a data error or a data quality issue. The \"T1\" blue team is labeled as T1 but has the slug \"fur\" and Brazilian players that match FURIA's actual roster.\n\nThe recent_form data is also identical for both teams - same matches, same results, same win rate (0.8), same objective stats.\n\nThe h2h shows 0 meetings between these teams, both with slug \"fur\".\n\nThe team_series_history is also identical for both.\n\nThis seems to be a data error where both sides have the same data. But the match is labeled \"T1 vs FURIA\" in MSI 2026 Knockouts.\n\nLet me think about what the real T1 and FURIA would be:\n\n- T1 is a legendary Korean team (LCK), with players like Zeus/Oner/Faker/Gumayusi/Keria (or their 2026 equivalents)\n- FURIA is a Brazilian team (CBLOL)\n\nThe data provided has clear data quality issues - the blue team is labeled \"T1\" but has FURIA's Brazilian roster and FURIA's slug. This is likely a data integration problem.\n\nBut wait - looking more carefully at the team IDs, both have id \"fur\". And both rosters are identical. And the recent form, objectives, series history are all identical between blue and red.\n\nGiven this is likely a data error, I should still try to make predictions based on the actual teams. Let me search for information about the real T1 and FURIA in 2026 MSI.\n\nLet me proceed with web searches to understand what's really happening.\nNow I have a much clearer picture. Let me piece together the key findings:\n\n1. This is MSI 2026, and the match is T1 vs FURIA. But the data pack has a critical issue: the \"blue\" team is labeled \"T1\" but has FURIA's Brazilian roster, and both teams share identical rosters and stats. This is clearly a data error.\n\n2. From the search results:\n   - T1 (LCK) went through the MSI play-in stage, winning all three BO5s 3-0 (vs TL, KC, TL again). Then in the knockout stage, T1 lost 2-3 to BLG and dropped to the lower bracket.\n   - The match on July 4 featured LYON vs FUR (FURIA), where LYON swept FURIA 3-0.\n   - After BLG beat T1 3-2, T1 dropped to the lower bracket and their next opponent would be FURIA (who lost to LYON 3-0).\n   - The match date in the data pack is July 5, 2026 - which is exactly the lower bracket match between T1 and FURIA!\n\n3. So this is a lower bracket match in MSI 2026 Knockouts: T1 (from LCK) vs FURIA (from CBLOL/Brazil). \n\n4. The data pack has the wrong roster for the \"blue\" T1 - it has FURIA's Brazilian players. The real T1 roster for 2026 MSI would be: Doran (top), Oner (jungle), Faker (mid), Peyz (ADC), Keria (support).\n\n5. From search results:\n   - T1 went 9-0 in play-ins (three 3-0 sweeps)\n   - T1 lost 2-3 to BLG in a close series\n   - FURIA got swept 3-0 by LYON\n   - T1 is a world-class team (S15 champions, LCK second seed)\n   - FURIA is a Brazilian/CBLOL team - significantly weaker\n\nLet me search for more specific information.\nNow I have a much clearer picture. Let me summarize what I know:\n\n1. **The Match**: T1 vs FURIA, MSI 2026 Knockouts, Lower Bracket Round 1, July 5, 2026 at 03:00 UTC (likely 11:00 AM local/KST). This is a BO5 match.\n\n2. **The Data Pack Issue**: The data pack has severe data quality problems. The \"blue\" team is labeled \"T1\" but has FURIA's Brazilian roster (Guigo, Tatu, Tutsz, Ayu, JoJo). Both blue and red sides have identical data - same players, same recent form, same team stats. This is clearly a data error. The \"blue\" T1 should actually be the real T1 with Doran/Oner/Faker/Peyz/Keria.\n\n3. **Real T1 Roster (2026 MSI)**:\n   - Top: Doran\n   - Jungle: Oner\n   - Mid: Faker\n   - ADC: Peyz\n   - Support: Keria\n\n4. **FURIA Roster (CBLOL)**:\n   - Top: Guigo\n   - Jungle: Tatu\n   - Mid: Tutsz\n   - ADC: Ayu\n   - Support: JoJo\n\n5. **Recent Results**:\n   - T1: Went 9-0 in play-ins (three 3-0 sweeps vs TL, KC, TL). Then lost 2-3 to BLG in a close BO5. T1 is a world-class team, S15 champions, LCK #2 seed.\n   - FURIA: Got swept 3-0 by LYON (NA LCS) on July 4. FURIA is CBLOL's representative - a minor region team.\n\n6. **Head-to-head**: No prior meetings between these teams (different regions).\n\n7. **Context**: T1 dropped to lower bracket after losing to BLG. FURIA dropped to lower bracket after losing to LYON. The winner stays alive in MSI, the loser is eliminated.\n\nNow let me analyze:\n\n**Fundamentals**: T1 is an LCK powerhouse and S15 world champion. They dominated play-ins 9-0 (three 3-0 sweeps), and took BLG (the tournament favorite) to 5 games. FURIA is a CBLOL team that got crushed 3-0 by LYON, who themselves are not considered a top-tier team. The skill gap is enormous.\n\n**Matchups**: Every position heavily favors T1. Faker vs Tutsz in mid is a massive mismatch. Peyz/Keria vs Ayu/JoJo in bot lane is also heavily T1-favored. Doran may have weaknesses but against Guigo from CBLOL he should be fine. Oner vs Tatu is heavily T1-favored.\n\n**Meta/Style**: T1 showed adaptability in the BLG series - they can play various compositions. FURIA's style against LYON showed they can get early leads but struggle to close and get out-scaled.\n\n**H2H/Psych**: T1 has massive international experience. FURIA has none at this level. T1 just came off a heartbreaking 2-3 loss to BLG - they'll be motivated to bounce back. FURIA got swept by LYON - their confidence may be shaken.\n\n**Series score prediction**: Given the enormous skill gap between an LCK #2 seed/S15 champion and a CBLOL representative, and T1's sweep rate in play-ins (100% - three 3-0s), and FURIA getting swept recently, this should be a 3-0 for T1.\n\nWait, but T1 just lost to BLG 2-3, so they might have some fatigue. But the skill gap is still enormous. Let me look at sweep rates from the data - but the data in the pack is identical for both \"T1\" and \"FURIA\" (both showing the same FURIA data). The sweep_rate shown is 0.429 and swept_rate is 0.224.\n\nHowever, since the data is for FURIA's actual CBLOL performance, I should note that FURIA in their domestic league had a high sweep rate, but in MSI they've already been swept by LYON.\n\nFor T1, they swept all three play-in series (100% sweep rate), and they lost 2-3 to BLG. So T1's sweep rate in MSI so far is 3/4 series = 0.75.\n\nGiven the massive disparity, I'm going to predict a 3-0 for T1.\n\nFor win_probs, T1 should be heavily favored. I'd say something like 0.92 for T1 (blue) and 0.08 for FURIA (red). But wait - in the data pack, T1 is blue and FURIA is red. Let me be careful with the naming.\n\nActually, looking at the data pack again: \n- Blue: name \"T1\", slug \"fur\" (but this is clearly FURIA's data)\n- Red: name \"FURIA\", slug \"fur\"\n\nThe match is listed as \"T1 vs FURIA\" with T1 as blue and FURIA as red. Even though the data is mixed up, the fixture header indicates T1 is blue and FURIA is red. So I should predict the blue side (T1) to win.\n\nLet me now construct the prediction. I need to be careful: the data in the context_pack is unreliable due to the data error, so I'll rely on my web search findings.\n\nLet me also search for more specific information about the meta and patch.\nNow let me search for more on T1's specific performance against BLG and the meta they're playing.\nNow I have a very comprehensive picture. Let me compile my analysis:\n\n**Key Facts:**\n\n1. **T1** (LCK #2, S15 Champion):\n   - Roster: Doran (Top), Oner (Jungle), Faker (Mid), Peyz (ADC), Keria (Support)\n   - Play-ins: 9-0 (three 3-0 sweeps vs TL, KC, TL)\n   - Lost 2-3 to BLG in knockout round 1 (July 4)\n   - Dropped to lower bracket\n   - Peyz is in incredible form - MVP performances, 5-kill games\n   - Keria has the most international assists in history\n   - Doran is the weak link - had lowest stats among all MSI top laners\n   - Global power ranking: #3\n\n2. **FURIA** (CBLOL #1):\n   - Roster: Guigo (Top), Tatu (Jungle), Tutsz (Mid), Ayu (ADC), JoJo (Support)\n   - Got swept 3-0 by LYON (NA LCS) on July 4\n   - Showed some early game strength but couldn't close games\n   - CBLOL is a minor region - significant gap in competition level\n   - FURIA was ranked as an \"outsider/wildcard\" team\n\n3. **Head-to-Head**: No prior meetings. First time these teams face each other.\n\n4. **Match Context**: \n   - Lower bracket elimination match - loser goes home\n   - T1 just played a 5-game series vs BLG the day before\n   - FURIA got swept 3-0 by LYON the day before\n   - Both teams have one day between matches (July 4 → July 5)\n\n5. **Meta/Version**:\n   - MSI 2026 uses global BP (fearless draft in BO5)\n   - Champions seen: Azir, Kalista, Jayce, Nautilus, Vi, Ziggs, Thresh, Kindred, Mel, Camille, Sylas, etc.\n   - T1 showed flexibility with picks like Pyke (Keria), Kindred, etc.\n   - FURIA showed Ryze, Sion, Seraphine, etc.\n\nNow let me construct the prediction.\n\n**overall**: T1 should win decisively. The gap between an LCK #2/S15 champion and a CBLOL representative is massive. T1 went 9-0 through play-ins and took BLG (tournament favorite) to 5 games. FURIA got swept by LYON. T1 in 3-0.\n\n**fundamentals**: T1 has been dominant in MSI. In play-ins they went 9-0 with three 3-0 sweeps. Against BLG they went the distance, showing they can compete at the highest level. Peyz has been their star performer with multiple MVP performances. Keria's playmaking is world-class. Doran is a liability but against CBLOL competition he should still be fine. FURIA went 8-2 in their last 10 in CBLOL but that's against much weaker competition. They showed flashes against LYON but couldn't close.\n\n**matchups**: Every position heavily favors T1. The biggest gaps are in mid (Faker vs Tutsz), bot (Peyz/Keria vs Ayu/JoJo), and jungle (Oner vs Tatu). Even Doran should have an advantage against Guigo despite his weaknesses. T1's macro and teamfighting is light-years ahead.\n\n**meta_style**: MSI 2026 features global BP (fearless draft), which favors teams with deep champion pools like T1. T1 showed they can play multiple styles - from early game aggression with Pyke to scaling with Azir/Viktor. FURIA's champion pools are likely much shallower, which will be severely punished in a BO5 with fearless draft.\n\n**h2h_psych**: No prior meetings. T1 has massive international experience - Faker's 9th MSI, multiple world championships. FURIA has very limited international experience. T1 coming off a tough loss to BLG will be motivated to prove themselves. FURIA coming off a sweep by LYON may have shaken confidence. One concern: T1 fatigue from the 5-game series vs BLG just the day before.\n\n**Series score**: I'm going with 3-0. T1's sweep rate is very high (3/4 series in MSI = 75%). FURIA was just swept. The skill gap is enormous. This is a classic cross-region mismatch.\n\n**win_probs**: T1 (blue) should be heavily favored. I'll go with 0.93 for blue, 0.07 for red.\n\nWait, I need to be more careful. Let me check - the data pack says T1 is blue and FURIA is red. The match header confirms this. And blue has the higher win probability.\n\nLet me also think about swing factors:\n- Doran's performance could be a vulnerability, but FURIA's Guigo likely can't exploit it\n- FURIA showed they can get early leads against LYON before throwing\n- T1's potential fatigue from 5 games vs BLG\n- FURIA's fearless draft champion pool depth being tested\n- T1's bot lane dominance (Peyz + Keria)\n- If T1 disrespects FURIA and drafts poorly\n\nFor key players: Peyz (ADC - T1's most in-form player), Keria (Support - playmaker), Faker (Mid - experience and leadership), Oner (Jungle - objective control), Tutsz (Mid - FURIA's best performer vs LYON with Ryze solo kill).\n\nNow let me finalize the JSON.",
+  "sources": [
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:38Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:40Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:40Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:40Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:40Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:40Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:54Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:54Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:54Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:54Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:55Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:55Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:55Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:55Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:55Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:57Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:57Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:57Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:57Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:57Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:23:57Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:30Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "FURIA CBLOL 2026 split 2 performance Guigo Tutsz Ayu",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:32Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "FURIA CBLOL 2026 split 2 performance Guigo Tutsz Ayu",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "LYON vs FURIA MSI 2026 July 4 match results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:33Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "FURIA CBLOL 2026 split 2 performance Guigo Tutsz Ayu",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "LYON vs FURIA MSI 2026 July 4 match results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "T1 BLG MSI 2026 game details Doran Peyz performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:39Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 match prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "T1 MSI 2026 roster lineup players",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "FURIA LoL MSI 2026 roster CBLOL",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "T1 vs FURIA MSI 2026 lower bracket match July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "FURIA MSI 2026 players roster Guigo Tatu Tutsz Ayu JoJo",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "T1 roster 2026 MSI Doran Oner Faker Peyz Keria",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "MSI 2026 LoL patch version meta tier list July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "FURIA CBLOL 2026 split 2 performance Guigo Tutsz Ayu",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "LYON vs FURIA MSI 2026 July 4 match results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "T1 BLG MSI 2026 game details Doran Peyz performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    },
+    {
+      "query": "MSI 2026 meta champions priority picks bans July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:24:40Z"
+    }
+  ],
+  "input_tokens": 151433,
+  "output_tokens": 7002,
+  "tool_calls": 11,
+  "cost_usd": 0.068275,
+  "wall_seconds": 169.34,
+  "error": null
+}

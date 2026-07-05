@@ -1,0 +1,1193 @@
+{
+  "collected_at": "2026-07-05T13:22:54Z",
+  "fixture_header": {
+    "match_id": 115570934355614563,
+    "name": "T1 vs FURIA",
+    "league": "MSI",
+    "league_id": "lol-msi",
+    "serie": null,
+    "tournament": "2026",
+    "tier": null,
+    "region": null,
+    "stage_hint": "T1 vs FURIA",
+    "match_type": null,
+    "number_of_games": 5,
+    "begin_at_utc": "2026-07-05T03:00:00.000Z",
+    "patch_version": null,
+    "status": "not_started",
+    "blue": {
+      "id": "fur",
+      "name": "T1",
+      "acronym": "T1",
+      "slug": "fur",
+      "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+      "location": null
+    },
+    "red": {
+      "id": "fur",
+      "name": "FURIA",
+      "acronym": "FUR",
+      "slug": "fur",
+      "image_url": "http://static.lolesports.com/teams/FURIA---black.png",
+      "location": null
+    },
+    "block_name": "Knockouts"
+  },
+  "rosters": {
+    "blue": {
+      "team": {
+        "id": "fur",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "fur",
+        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Guigo",
+          "id": "d6921d36-ea76-4b9d-864d-186c5ed8857c",
+          "nationality": "BR"
+        },
+        {
+          "role": "jun",
+          "name": "Tatu",
+          "id": "07aec0f1-3d61-49f4-ad66-4774c9298a20",
+          "nationality": "BR"
+        },
+        {
+          "role": "mid",
+          "name": "Tutsz",
+          "id": "3e09712a-69ee-4fec-9936-41d9b6a9c755",
+          "nationality": "BR"
+        },
+        {
+          "role": "adc",
+          "name": "Ayu",
+          "id": "400907a2-6022-44c1-bdbe-ecef6adc12ce",
+          "nationality": "BR"
+        },
+        {
+          "role": "sup",
+          "name": "JoJo",
+          "id": "27ed9455-e6c0-4929-8f55-e5004a0167f8",
+          "nationality": "BR"
+        }
+      ],
+      "available": true
+    },
+    "red": {
+      "team": {
+        "id": "fur",
+        "name": "FURIA",
+        "acronym": "FUR",
+        "slug": "fur",
+        "image_url": "http://static.lolesports.com/teams/FURIA---black.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Guigo",
+          "id": "d6921d36-ea76-4b9d-864d-186c5ed8857c",
+          "nationality": "BR"
+        },
+        {
+          "role": "jun",
+          "name": "Tatu",
+          "id": "07aec0f1-3d61-49f4-ad66-4774c9298a20",
+          "nationality": "BR"
+        },
+        {
+          "role": "mid",
+          "name": "Tutsz",
+          "id": "3e09712a-69ee-4fec-9936-41d9b6a9c755",
+          "nationality": "BR"
+        },
+        {
+          "role": "adc",
+          "name": "Ayu",
+          "id": "400907a2-6022-44c1-bdbe-ecef6adc12ce",
+          "nationality": "BR"
+        },
+        {
+          "role": "sup",
+          "name": "JoJo",
+          "id": "27ed9455-e6c0-4929-8f55-e5004a0167f8",
+          "nationality": "BR"
+        }
+      ],
+      "available": true
+    }
+  },
+  "recent_form": {
+    "blue": {
+      "available": true,
+      "games_played": 10,
+      "wins": 8,
+      "win_rate": 0.8,
+      "matches": [
+        {
+          "date": "2026-06-06",
+          "league": "cblol-brazil",
+          "opponent": "los",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 3,
+          "gold": 58300,
+          "dragons": 4,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-06",
+          "league": "cblol-brazil",
+          "opponent": "los",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 6,
+          "opponent_kills": 16,
+          "gold": 68000,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-06",
+          "league": "cblol-brazil",
+          "opponent": "los",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 5,
+          "gold": 63200,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 8
+        },
+        {
+          "date": "2026-05-24",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 4,
+          "gold": 64300,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 7
+        },
+        {
+          "date": "2026-05-24",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 16,
+          "opponent_kills": 9,
+          "gold": 69900,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-24",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 14,
+          "opponent_kills": 7,
+          "gold": 79600,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-17",
+          "league": "cblol-brazil",
+          "opponent": "loud",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 68300,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-17",
+          "league": "cblol-brazil",
+          "opponent": "loud",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 14,
+          "opponent_kills": 9,
+          "gold": 63400,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-17",
+          "league": "cblol-brazil",
+          "opponent": "loud",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 9,
+          "gold": 64700,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-05-02",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 14,
+          "opponent_kills": 22,
+          "gold": 71705,
+          "dragons": 2,
+          "barons": 0,
+          "towers": 2
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "games_played": 10,
+      "wins": 8,
+      "win_rate": 0.8,
+      "matches": [
+        {
+          "date": "2026-06-06",
+          "league": "cblol-brazil",
+          "opponent": "los",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 3,
+          "gold": 58300,
+          "dragons": 4,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-06",
+          "league": "cblol-brazil",
+          "opponent": "los",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 6,
+          "opponent_kills": 16,
+          "gold": 68000,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-06",
+          "league": "cblol-brazil",
+          "opponent": "los",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 5,
+          "gold": 63200,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 8
+        },
+        {
+          "date": "2026-05-24",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 4,
+          "gold": 64300,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 7
+        },
+        {
+          "date": "2026-05-24",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 16,
+          "opponent_kills": 9,
+          "gold": 69900,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-24",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 14,
+          "opponent_kills": 7,
+          "gold": 79600,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-17",
+          "league": "cblol-brazil",
+          "opponent": "loud",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 68300,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-17",
+          "league": "cblol-brazil",
+          "opponent": "loud",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 14,
+          "opponent_kills": 9,
+          "gold": 63400,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-17",
+          "league": "cblol-brazil",
+          "opponent": "loud",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 9,
+          "gold": 64700,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-05-02",
+          "league": "cblol-brazil",
+          "opponent": "red",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 14,
+          "opponent_kills": 22,
+          "gold": 71705,
+          "dragons": 2,
+          "barons": 0,
+          "towers": 2
+        }
+      ]
+    }
+  },
+  "h2h": {
+    "available": true,
+    "team_a_id": "fur",
+    "team_b_id": "fur",
+    "meetings": 0,
+    "team_a_wins": 0,
+    "team_b_wins": 0,
+    "recent": []
+  },
+  "team_objectives": {
+    "blue": {
+      "available": true,
+      "games_analyzed": 44,
+      "game_record": {
+        "wins": 36,
+        "losses": 8,
+        "win_rate": 0.8182
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 3.07,
+          "opponent_avg_per_game": 1.66,
+          "control_rate": 0.649
+        },
+        "barons": {
+          "avg_per_game": 1.23,
+          "opponent_avg_per_game": 0.41,
+          "control_rate": 0.75
+        },
+        "towers": {
+          "avg_per_game": 8.23,
+          "opponent_avg_per_game": 3.77,
+          "control_rate": 0.6856
+        },
+        "kills": {
+          "avg_per_game": 17.52,
+          "opponent_avg_per_game": 9.66,
+          "control_rate": 0.6446
+        },
+        "gold": {
+          "avg_per_game": 67918.93,
+          "opponent_avg_per_game": 61066.5,
+          "control_rate": 0.5266
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.5,
+        "first_tower_rate": 0.7273,
+        "first_dragon_rate": 0.6818,
+        "first_baron_rate": 0.7727
+      }
+    },
+    "red": {
+      "available": true,
+      "games_analyzed": 44,
+      "game_record": {
+        "wins": 36,
+        "losses": 8,
+        "win_rate": 0.8182
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 3.07,
+          "opponent_avg_per_game": 1.66,
+          "control_rate": 0.649
+        },
+        "barons": {
+          "avg_per_game": 1.23,
+          "opponent_avg_per_game": 0.41,
+          "control_rate": 0.75
+        },
+        "towers": {
+          "avg_per_game": 8.23,
+          "opponent_avg_per_game": 3.77,
+          "control_rate": 0.6856
+        },
+        "kills": {
+          "avg_per_game": 17.52,
+          "opponent_avg_per_game": 9.66,
+          "control_rate": 0.6446
+        },
+        "gold": {
+          "avg_per_game": 67918.93,
+          "opponent_avg_per_game": 61066.5,
+          "control_rate": 0.5266
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.5,
+        "first_tower_rate": 0.7273,
+        "first_dragon_rate": 0.6818,
+        "first_baron_rate": 0.7727
+      }
+    }
+  },
+  "team_series_history": {
+    "blue": {
+      "available": true,
+      "series_count": 49,
+      "games_with_duration": 103,
+      "avg_game_duration_min": 33.1,
+      "avg_series_length": 2.4,
+      "sweep_rate": 0.429,
+      "swept_rate": 0.224,
+      "recent_series": [
+        {
+          "date": "2026-07-03",
+          "league": "2026",
+          "opponent_slug": "lyon",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 3,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-06",
+          "league": "Split 2 2026",
+          "opponent_slug": "los",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 28.0,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 40.2,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 30.2,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "league": "Split 2 2026",
+          "opponent_slug": "red",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 31.2,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 34.7,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 40.0,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-17",
+          "league": "Split 2 2026",
+          "opponent_slug": "loud",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 32.4,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 32.1,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 34.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-02",
+          "league": "Split 2 2026",
+          "opponent_slug": "red",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 40.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.0,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 41.3,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-26",
+          "league": "Split 2 2026",
+          "opponent_slug": "loud",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 42.6,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.1,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 27.2,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "league": "Split 2 2026",
+          "opponent_slug": "fluxo",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 2,
+          "series_length": 2,
+          "games": []
+        },
+        {
+          "date": "2026-04-13",
+          "league": "Split 2 2026",
+          "opponent_slug": "pain-gaming",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": []
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "series_count": 49,
+      "games_with_duration": 103,
+      "avg_game_duration_min": 33.1,
+      "avg_series_length": 2.4,
+      "sweep_rate": 0.429,
+      "swept_rate": 0.224,
+      "recent_series": [
+        {
+          "date": "2026-07-03",
+          "league": "2026",
+          "opponent_slug": "lyon",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 3,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-06",
+          "league": "Split 2 2026",
+          "opponent_slug": "los",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 28.0,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 40.2,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 30.2,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "league": "Split 2 2026",
+          "opponent_slug": "red",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 31.2,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 34.7,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 40.0,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-17",
+          "league": "Split 2 2026",
+          "opponent_slug": "loud",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 32.4,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 32.1,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 34.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-02",
+          "league": "Split 2 2026",
+          "opponent_slug": "red",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 40.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.0,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 41.3,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-26",
+          "league": "Split 2 2026",
+          "opponent_slug": "loud",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 42.6,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.1,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 27.2,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "league": "Split 2 2026",
+          "opponent_slug": "fluxo",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 2,
+          "series_length": 2,
+          "games": []
+        },
+        {
+          "date": "2026-04-13",
+          "league": "Split 2 2026",
+          "opponent_slug": "pain-gaming",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": []
+        }
+      ]
+    }
+  },
+  "team_standings": {
+    "available": false,
+    "reason": "no standings rows (new season?)",
+    "hint": "Use the web_search tool to fetch this yourself."
+  },
+  "player_form": {
+    "blue": [
+      {
+        "available": true,
+        "player": "Guigo",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Tatu",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Tutsz",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Ayu",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "JoJo",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      }
+    ],
+    "red": [
+      {
+        "available": true,
+        "player": "Guigo",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Tatu",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Tutsz",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Ayu",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "JoJo",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      }
+    ]
+  },
+  "player_champion_pool": {
+    "blue": [
+      {
+        "available": false,
+        "player": "Guigo",
+        "role": "top",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Tatu",
+        "role": "jun",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Tutsz",
+        "role": "mid",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Ayu",
+        "role": "adc",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "JoJo",
+        "role": "sup",
+        "games_analyzed": null,
+        "champion_pool": []
+      }
+    ],
+    "red": [
+      {
+        "available": false,
+        "player": "Guigo",
+        "role": "top",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Tatu",
+        "role": "jun",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Tutsz",
+        "role": "mid",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Ayu",
+        "role": "adc",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "JoJo",
+        "role": "sup",
+        "games_analyzed": null,
+        "champion_pool": []
+      }
+    ]
+  },
+  "hero_pools": {
+    "blue": {
+      "available": false,
+      "reason": "empty champion pools",
+      "hint": "Use the web_search tool to fetch this yourself."
+    },
+    "red": {
+      "available": false,
+      "reason": "empty champion pools",
+      "hint": "Use the web_search tool to fetch this yourself."
+    }
+  },
+  "meta_reference": {
+    "available": false,
+    "reason": "no patch version in match data",
+    "hint": "Use the web_search tool to fetch this yourself."
+  }
+}

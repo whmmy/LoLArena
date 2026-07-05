@@ -1,0 +1,292 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "match",
+  "target_id": "msi_bilibili_gaming_vs_lyon_2026-07-05",
+  "submitted_at": "2026-07-05T13:19:51.751629+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "BLG作为LPL一号种子、新科先锋赛冠军，整体实力与大赛经验远超LCS冠军LYON；虽然BLG昨日鏖战五局击败T1存在体力隐患，但Knight与Bin的个人能力、BP深度及国际赛经验仍足以让BLG在Bo5中占据明显优势，预计BLG以3-1取胜晋级胜者组决赛。",
+      "fundamentals": "BLG近期状态极为出色：LPL第二赛段败者组一穿五夺冠，决赛3-0横扫TES，Knight五度斩获FMVP；MSI淘汰赛首轮3-2力克宿敌T1，终结LPL对T1的Bo5七连败，Xun的千珏、Knight的辛德拉表现亮眼。LYON在LCS同样统治级表现，春季赛决赛3-0横扫TL夺冠，MSI首轮3-0零封FUR，Dhokla上单韦鲁斯四杀、纳尔完美开团，Inspired猴子抢龙展现野区统治力。但两队所处赛区强度差距明显——LPL整体竞技水平远高于LCS，BLG面对的是T1、TES、WE等世界级对手，而LYON在LCS的对手质量相对有限。BLG国际赛Bo5胜场已达18场，经验碾压。",
+      "matchups": "上路：Bin vs Dhokla——Bin连续五年征战MSI，LPL历史MSI参赛次数最多，对线压制力与团战切入均为顶级；Dhokla虽在LCS表现出色（杰斯、韦鲁斯、纳尔均有亮眼发挥），但面对Bin的国际赛强度将是巨大考验，BLG上路占优。打野：Xun vs Inspired——Xun在MSI对T1保持4胜0负，千珏、盲僧等招牌英雄发挥稳定，决胜局抢龙能力突出；Inspired是LCS野王，皇子、猴子表现不俗，但面对Xun的大赛经验与BLG的中野联动，LYON野区将承受巨大压力。中路：Knight vs Saint——Knight被外媒评为本届MSI最强选手（T0级），辛德拉、蛇女、阿卡丽、乌鸦等英雄池极深，对线与团战均为世界顶级；Saint在LCS表现稳定（辛德拉、瑞兹），但与Knight存在明显档次差距，这是BLG最大优势点。下路：Viper vs Berserker——Viper经验丰富，与ON的配合默契，艾希、韦鲁斯、维克兹等英雄选择灵活；Berserker是韩援ADC，实力不俗，但Viper的大赛经验与BLG下路的BP创新（如维克兹counter赛娜）让BLG下路略占上风。辅助：ON vs Isles——ON的萨勒芬妮、卡蜜尔、巴德等英雄在T1系列赛中发挥关键作用，支援意识与开团能力均为顶级；Isles的妮蔻表现不错，但整体实力与ON有差距。总体而言，BLG五个位置均占优势，中野差距最为明显。",
+      "meta_style": "当前MSI版本强调下路对线期的重要性、中野联动与资源团战的执行力。BLG在BP层面展现了极强的创新能力与针对性——对阵T1时选出乌鸦counter近战阵容、维克兹counter赛娜、千珏counter巨魔，均取得奇效。Knight的英雄池覆盖辛德拉、蛇女、阿卡丽、乌鸦、瑞兹等版本强势中单，Bin的赛恩、奎桑提、武器大师、牧魂人等均为版本热门。LYON的BP相对常规，Dhokla的杰斯、纳尔、韦鲁斯符合版本，Saint的辛德拉也是主流选择，但整体战术储备与BLG存在差距。BLG更契合当前版本的中野主导+下路对线+BP博弈节奏。",
+      "h2h_psych": "BLG与LYON此前无正式交手记录，但BLG的国际赛经验远超对手——Bin与Knight自2021年以来参与了LPL对LCK的全部11场Bo5胜利，大赛心理素质极强。BLG刚刚时隔777天再次战胜T1，士气正盛，心魔已破。LYON作为LCS冠军首次以一号种子身份参加MSI淘汰赛，面对BLG这样的世界级对手可能存在心理压力。体力方面，BLG昨日鏖战五局击败T1，LYON则3-0轻松过关，LYON在体力上占优，这是BLG需要警惕的隐患。但BLG的Bin赛前表态'打T1没什么需要注意的，大概率会赢'，展现出极强的自信与心理优势。综合来看，BLG在心理层面与大赛经验上占据绝对优势。"
+    },
+    "win_probs": {
+      "blue": 0.75,
+      "red": 0.25
+    },
+    "predicted_winner": "blue",
+    "series_score": "3-1",
+    "series_length": 4,
+    "favored_side": "blue_strong",
+    "key_players": [
+      {
+        "player": "Knight",
+        "team": "blue",
+        "role": "mid",
+        "reason": "被外媒评为本届MSI最强选手（T0级），辛德拉、蛇女、阿卡丽等英雄池极深，对T1系列赛中辛德拉晕两人抢龙奠定胜局，是BLG的绝对核心与胜负手。"
+      },
+      {
+        "player": "Bin",
+        "team": "blue",
+        "role": "top",
+        "reason": "连续五年征战MSI，LPL历史MSI参赛次数最多，对线压制力与团战切入均为世界级，大赛心理素质极强，是BLG上路的基本盘保障。"
+      },
+      {
+        "player": "Xun",
+        "team": "blue",
+        "role": "jun",
+        "reason": "MSI对T1保持4胜0负，千珏、盲僧等招牌英雄发挥稳定，决胜局抢龙能力突出，中野联动是BLG前期节奏的核心引擎。"
+      },
+      {
+        "player": "Inspired",
+        "team": "red",
+        "role": "jun",
+        "reason": "LCS野王，皇子、猴子表现不俗，MSI首轮猴子抢龙展现野区统治力，是LYON最有可能制造变数的选手，若能在野区对抗中不落下风，LYON有机会偷下一局。"
+      },
+      {
+        "player": "Dhokla",
+        "team": "red",
+        "role": "top",
+        "reason": "MSI首轮上单韦鲁斯四杀、纳尔完美开团，状态火热，但面对Bin的国际赛强度将是巨大考验，其表现直接决定LYON能否在上路打开局面。"
+      }
+    ],
+    "swing_factors": [
+      "BLG体力隐患：昨日鏖战五局击败T1，今日背靠背作战，LYON则以3-0轻松过关，体力优势明显，可能影响BLG中后期的操作精度与决策质量。",
+      "BP博弈深度：BLG对阵T1时展现了极强的BP创新能力（乌鸦、维克兹、千珏等奇招），若LYON无法在BP层面跟上BLG的节奏，可能在阵容选择上就被压制。",
+      "Knight的中路统治力：Knight与Saint存在明显档次差距，若Knight在对线期建立优势并辐射边路，LYON将很难找到翻盘空间。",
+      "LYON的体力优势与心态：LYON以逸待劳，且作为underdog没有心理包袱，若能抓住BLG体力下降的窗口期打出前期优势，有机会偷下一局。",
+      "国际赛经验差距：BLG国际赛Bo5胜场达18场，Bin与Knight参与了LPL对LCK的全部11场胜利；LYON首次以一号种子身份参加MSI淘汰赛，大赛经验不足可能在关键局成为隐患。"
+    ],
+    "meta_style_signals": [
+      "当前版本强调下路对线期重要性，BLG的Viper+ON组合在BP创新（维克兹counter赛娜）与对线执行力上均优于LYON的Berserker+Isles。",
+      "中野联动是版本核心节奏，Knight+Xun的组合在对T1系列赛中展现了世界级的中野协同能力，Saint+Inspired的联动强度存在差距。",
+      "BP博弈与英雄池深度在Bo5全局BP赛制下至关重要，BLG展现了乌鸦、维克兹、千珏等非常规pick的战术储备，LYON的BP相对常规。",
+      "上路战士/坦克摇摆（赛恩、奎桑提、纳尔、杰斯）是版本主流，Bin的英雄池覆盖度与对线压制力让BLG在上路BP中占据主动。"
+    ],
+    "sources": [
+      {
+        "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+        "accessed_at": "2026-07-05T13:20:00Z"
+      },
+      {
+        "query": "LYON esports League of Legends MSI 2026 roster",
+        "accessed_at": "2026-07-05T13:20:00Z"
+      },
+      {
+        "query": "BLG vs T1 MSI 2026 result July 4",
+        "accessed_at": "2026-07-05T13:21:00Z"
+      },
+      {
+        "query": "LYON vs FUR MSI 2026 result July 4",
+        "accessed_at": "2026-07-05T13:21:00Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta champions tier list",
+        "accessed_at": "2026-07-05T13:21:00Z"
+      },
+      {
+        "query": "BLG vs LYON MSI 2026 prediction preview July 5",
+        "accessed_at": "2026-07-05T13:22:00Z"
+      },
+      {
+        "query": "LYON Dhokla Inspired Berserker MSI 2026 performance",
+        "accessed_at": "2026-07-05T13:22:00Z"
+      },
+      {
+        "query": "BLG Bin Knight Viper MSI 2026 stats performance",
+        "accessed_at": "2026-07-05T13:22:00Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"BLG作为LPL一号种子、新科先锋赛冠军，整体实力与大赛经验远超LCS冠军LYON；虽然BLG昨日鏖战五局击败T1存在体力隐患，但Knight与Bin的个人能力、BP深度及国际赛经验仍足以让BLG在Bo5中占据明显优势，预计BLG以3-1取胜晋级胜者组决赛。\",\n    \"fundamentals\": \"BLG近期状态极为出色：LPL第二赛段败者组一穿五夺冠，决赛3-0横扫TES，Knight五度斩获FMVP；MSI淘汰赛首轮3-2力克宿敌T1，终结LPL对T1的Bo5七连败，Xun的千珏、Knight的辛德拉表现亮眼。LYON在LCS同样统治级表现，春季赛决赛3-0横扫TL夺冠，MSI首轮3-0零封FUR，Dhokla上单韦鲁斯四杀、纳尔完美开团，Inspired猴子抢龙展现野区统治力。但两队所处赛区强度差距明显——LPL整体竞技水平远高于LCS，BLG面对的是T1、TES、WE等世界级对手，而LYON在LCS的对手质量相对有限。BLG国际赛Bo5胜场已达18场，经验碾压。\",\n    \"matchups\": \"上路：Bin vs Dhokla——Bin连续五年征战MSI，LPL历史MSI参赛次数最多，对线压制力与团战切入均为顶级；Dhokla虽在LCS表现出色（杰斯、韦鲁斯、纳尔均有亮眼发挥），但面对Bin的国际赛强度将是巨大考验，BLG上路占优。打野：Xun vs Inspired——Xun在MSI对T1保持4胜0负，千珏、盲僧等招牌英雄发挥稳定，决胜局抢龙能力突出；Inspired是LCS野王，皇子、猴子表现不俗，但面对Xun的大赛经验与BLG的中野联动，LYON野区将承受巨大压力。中路：Knight vs Saint——Knight被外媒评为本届MSI最强选手（T0级），辛德拉、蛇女、阿卡丽、乌鸦等英雄池极深，对线与团战均为世界顶级；Saint在LCS表现稳定（辛德拉、瑞兹），但与Knight存在明显档次差距，这是BLG最大优势点。下路：Viper vs Berserker——Viper经验丰富，与ON的配合默契，艾希、韦鲁斯、维克兹等英雄选择灵活；Berserker是韩援ADC，实力不俗，但Viper的大赛经验与BLG下路的BP创新（如维克兹counter赛娜）让BLG下路略占上风。辅助：ON vs Isles——ON的萨勒芬妮、卡蜜尔、巴德等英雄在T1系列赛中发挥关键作用，支援意识与开团能力均为顶级；Isles的妮蔻表现不错，但整体实力与ON有差距。总体而言，BLG五个位置均占优势，中野差距最为明显。\",\n    \"meta_style\": \"当前MSI版本强调下路对线期的重要性、中野联动与资源团战的执行力。BLG在BP层面展现了极强的创新能力与针对性——对阵T1时选出乌鸦counter近战阵容、维克兹counter赛娜、千珏counter巨魔，均取得奇效。Knight的英雄池覆盖辛德拉、蛇女、阿卡丽、乌鸦、瑞兹等版本强势中单，Bin的赛恩、奎桑提、武器大师、牧魂人等均为版本热门。LYON的BP相对常规，Dhokla的杰斯、纳尔、韦鲁斯符合版本，Saint的辛德拉也是主流选择，但整体战术储备与BLG存在差距。BLG更契合当前版本的中野主导+下路对线+BP博弈节奏。\",\n    \"h2h_psych\": \"BLG与LYON此前无正式交手记录，但BLG的国际赛经验远超对手——Bin与Knight自2021年以来参与了LPL对LCK的全部11场Bo5胜利，大赛心理素质极强。BLG刚刚时隔777天再次战胜T1，士气正盛，心魔已破。LYON作为LCS冠军首次以一号种子身份参加MSI淘汰赛，面对BLG这样的世界级对手可能存在心理压力。体力方面，BLG昨日鏖战五局击败T1，LYON则3-0轻松过关，LYON在体力上占优，这是BLG需要警惕的隐患。但BLG的Bin赛前表态'打T1没什么需要注意的，大概率会赢'，展现出极强的自信与心理优势。综合来看，BLG在心理层面与大赛经验上占据绝对优势。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.75,\n    \"red\": 0.25\n  },\n  \"predicted_winner\": \"blue\",\n  \"series_score\": \"3-1\",\n  \"series_length\": 4,\n  \"favored_side\": \"blue_strong\",\n  \"key_players\": [\n    { \"player\": \"Knight\", \"team\": \"blue\", \"role\": \"mid\", \"reason\": \"被外媒评为本届MSI最强选手（T0级），辛德拉、蛇女、阿卡丽等英雄池极深，对T1系列赛中辛德拉晕两人抢龙奠定胜局，是BLG的绝对核心与胜负手。\" },\n    { \"player\": \"Bin\", \"team\": \"blue\", \"role\": \"top\", \"reason\": \"连续五年征战MSI，LPL历史MSI参赛次数最多，对线压制力与团战切入均为世界级，大赛心理素质极强，是BLG上路的基本盘保障。\" },\n    { \"player\": \"Xun\", \"team\": \"blue\", \"role\": \"jun\", \"reason\": \"MSI对T1保持4胜0负，千珏、盲僧等招牌英雄发挥稳定，决胜局抢龙能力突出，中野联动是BLG前期节奏的核心引擎。\" },\n    { \"player\": \"Inspired\", \"team\": \"red\", \"role\": \"jun\", \"reason\": \"LCS野王，皇子、猴子表现不俗，MSI首轮猴子抢龙展现野区统治力，是LYON最有可能制造变数的选手，若能在野区对抗中不落下风，LYON有机会偷下一局。\" },\n    { \"player\": \"Dhokla\", \"team\": \"red\", \"role\": \"top\", \"reason\": \"MSI首轮上单韦鲁斯四杀、纳尔完美开团，状态火热，但面对Bin的国际赛强度将是巨大考验，其表现直接决定LYON能否在上路打开局面。\" }\n  ],\n  \"swing_factors\": [\n    \"BLG体力隐患：昨日鏖战五局击败T1，今日背靠背作战，LYON则以3-0轻松过关，体力优势明显，可能影响BLG中后期的操作精度与决策质量。\",\n    \"BP博弈深度：BLG对阵T1时展现了极强的BP创新能力（乌鸦、维克兹、千珏等奇招），若LYON无法在BP层面跟上BLG的节奏，可能在阵容选择上就被压制。\",\n    \"Knight的中路统治力：Knight与Saint存在明显档次差距，若Knight在对线期建立优势并辐射边路，LYON将很难找到翻盘空间。\",\n    \"LYON的体力优势与心态：LYON以逸待劳，且作为underdog没有心理包袱，若能抓住BLG体力下降的窗口期打出前期优势，有机会偷下一局。\",\n    \"国际赛经验差距：BLG国际赛Bo5胜场达18场，Bin与Knight参与了LPL对LCK的全部11场胜利；LYON首次以一号种子身份参加MSI淘汰赛，大赛经验不足可能在关键局成为隐患。\"\n  ],\n  \"meta_style_signals\": [\n    \"当前版本强调下路对线期重要性，BLG的Viper+ON组合在BP创新（维克兹counter赛娜）与对线执行力上均优于LYON的Berserker+Isles。\",\n    \"中野联动是版本核心节奏，Knight+Xun的组合在对T1系列赛中展现了世界级的中野协同能力，Saint+Inspired的联动强度存在差距。\",\n    \"BP博弈与英雄池深度在Bo5全局BP赛制下至关重要，BLG展现了乌鸦、维克兹、千珏等非常规pick的战术储备，LYON的BP相对常规。\",\n    \"上路战士/坦克摇摆（赛恩、奎桑提、纳尔、杰斯）是版本主流，Bin的英雄池覆盖度与对线压制力让BLG在上路BP中占据主动。\"\n  ],\n  \"sources\": [\n    { \"query\": \"BILIBILI GAMING BLG MSI 2026 roster results\", \"accessed_at\": \"2026-07-05T13:20:00Z\" },\n    { \"query\": \"LYON esports League of Legends MSI 2026 roster\", \"accessed_at\": \"2026-07-05T13:20:00Z\" },\n    { \"query\": \"BLG vs T1 MSI 2026 result July 4\", \"accessed_at\": \"2026-07-05T13:21:00Z\" },\n    { \"query\": \"LYON vs FUR MSI 2026 result July 4\", \"accessed_at\": \"2026-07-05T13:21:00Z\" },\n    { \"query\": \"LoL patch 2026 MSI meta champions tier list\", \"accessed_at\": \"2026-07-05T13:21:00Z\" },\n    { \"query\": \"BLG vs LYON MSI 2026 prediction preview July 5\", \"accessed_at\": \"2026-07-05T13:22:00Z\" },\n    { \"query\": \"LYON Dhokla Inspired Berserker MSI 2026 performance\", \"accessed_at\": \"2026-07-05T13:22:00Z\" },\n    { \"query\": \"BLG Bin Knight Viper MSI 2026 stats performance\", \"accessed_at\": \"2026-07-05T13:22:00Z\" }\n  ]\n}",
+  "thinking_text": "Let me analyze this match carefully. The data shows \"BILIBILI GAMING vs LYON\" at MSI 2026, Knockouts stage, Bo5 format.\n\nHowever, I notice something very strange in the data:\n1. Both teams have identical rosters (Castle, Inspired, Saint, Berserker, Isles)\n2. Both teams have identical recent form (same 10 matches)\n3. Both teams have identical team objectives\n4. Both teams have identical series history\n5. The blue team has id \"lyon\" but name \"BILIBILI GAMING\"\n6. The h2h shows team_a_id and team_b_id both as \"lyon\"\n\nThis appears to be a data error where the system has duplicated one team's data for both sides. The roster listed (Castle, Inspired, Saint, Berserker, Isles) actually looks like it could be a mix - let me think about this:\n- Castle - Korean top laner\n- Inspired - Polish jungler (played in LCS)\n- Saint - Korean mid laner\n- Berserker - ADC\n- Isles - Australian support\n\nWait, this roster actually looks like it could be the LYON (formerly Team Liquid or some LCS team?) roster. Let me search for more information.\n\nActually, looking at the recent matches, they show games against \"team-liquid\", \"cloud9\", \"flyquest\", \"sentinels\" - these are LCS teams. And the league shows \"lcs\" for many matches. So this data seems to be for an LCS team.\n\nBut BLG (Bilibili Gaming) is an LPL team from China. They wouldn't be playing in LCS.\n\nLet me search for the actual information about this MSI 2026 match between BLG and LYON.\n\nI need to search for:\n1. BLG MSI 2026 roster and recent form\n2. LYON MSI 2026 roster and recent form\n\n\n3. How these teams have performed against each other historically at MSI\n4. The current meta and patch conditions during the tournament\nLet me analyze what I've found so far:\n\n1. **BLG (Bilibili Gaming)**: LPL #1 seed for MSI 2026. They won LPL Split 2 with a 3-0 sweep over TES. They also beat WE 3-2 in the losers bracket. Their roster includes: Bin (top), Xun (jungle), Knight (mid), Viper (ADC), ON (support). They are the MSI favorites from LPL.\n\n2. **LYON**: LCS #1 seed. They swept C9 3-0 and then swept TL 3-0 to win the LCS championship. Their roster: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support).\n\nNow, the context_pack data seems corrupted - it shows the same roster for both teams (Castle, Inspired, Saint, Berserker, Isles) and identical stats. The actual BLG roster is Bin, Xun, Knight, Viper, ON. The actual LYON roster is Dhokla, Inspired, Saint, Berserker, Isles.\n\nThe match is BLG vs LYON in the MSI 2026 Knockouts. Based on the schedule, BLG played T1 on July 4, and LYON played FUR on July 4. The match on July 5 seems to be between winners/losers of those matches.\n\nWait, looking at the schedule more carefully:\n- July 4: LYON vs FUR (11:00), BLG vs T1 (16:00)\n- July 5: TSW vs TES (11:00), HLE vs G2 (16:00)\n\nSo the match on July 5 at 08:00 UTC between BLG and LYON... this seems like it could be a winners bracket match or something. Let me search for more specific information about this match.\n\nLet me search for more details about BLG vs T1 result and LYON vs FUR result, and the current patch meta.\nLet me analyze the data I've gathered:\n\n1. **BLG (Bilibili Gaming)** - LPL #1 seed, MSI 2026\n   - Roster: Bin (top), Xun (jungle), Knight (mid), Viper (ADC), ON (support)\n   - Won LPL Split 2 with a 3-0 sweep of TES in the final\n   - Came through losers bracket with a 1-5 run (beat WE 3-2 in losers final)\n   - Beat T1 3-2 in MSI knockout round 1 (July 4)\n   - Knight won FMVP, Bin has been to MSI 5 consecutive years\n   - Previous MSI champion (Pioneer/First Stand champion)\n\n2. **LYON** - LCS #1 seed\n   - Roster: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support)\n   - Won LCS Spring with 3-0 sweep of TL in final\n   - Beat FUR 3-0 in MSI knockout round 1 (July 4)\n   - North American team, considered weaker than LPL/LCK teams\n\n3. **The match**: BLG vs LYON, July 5, 2026, MSI Knockouts (Bo5)\n   - BLG just beat T1 3-2 in an exhausting 5-game series\n   - LYON swept FUR 3-0 easily\n\n4. **Key context**:\n   - The context_pack data is very corrupted/mixed up - both teams show the same roster, same stats, etc. This is clearly a data error.\n   - The actual rosters are:\n     - BLG: Bin, Xun, Knight, Viper, ON\n     - LYON: Dhokla, Inspired, Saint, Berserker, Isles\n   - BLG is from LPL (China), LYON is from LCS (North America)\n   - LPL is historically much stronger than LCS\n\n5. **Meta/Version**: The search results mention patch 16.12 for LoL. The MSI is being played on this patch.\n\n6. **Recent form**:\n   - BLG: Won LPL Split 2 (beat TES 3-0 in final), beat T1 3-2 in MSI R1\n   - LYON: Won LCS Spring (beat TL 3-0 in final), beat FUR 3-0 in MSI R1\n\n7. **H2H**: No direct history between BLG and LYON (first meeting)\n\n8. **Sweep rate analysis**:\n   - The context_pack data is corrupted (both teams show identical stats), but from real data:\n   - BLG has been dominant in LPL, sweeping TES 3-0 in the final\n   - LYON swept C9 3-0 and TL 3-0 in LCS playoffs\n   - However, BLG just played a grueling 5-game series against T1\n\n9. **Key factors**:\n   - BLG is clearly the stronger team (LPL #1 vs LCS #1)\n   - BLG has more international experience (Bin 5x MSI, Knight multiple FMVPs)\n   - BLG just played an exhausting 5-game series vs T1 (fatigue factor)\n   - LYON had an easy 3-0 vs FUR (rested)\n   - Cross-regional matchup: LPL historically dominates LCS\n   - BLG's BP was leaked during the T1 match (potential disadvantage)\n\nLet me search for more specific information about the matchup and meta.\nLet me analyze the data I've gathered:\n\n**Key findings:**\n\n1. **BLG (Bilibili Gaming)** - LPL #1 seed, MSI 2026\n   - Roster: Bin (top), Xun (jungle), Knight (mid), Viper (ADC), ON (support)\n   - Won LPL Split 2 with a 3-0 sweep of TES in finals after a \"1-through-5\" losers bracket run\n   - Beat T1 3-2 in MSI knockout round on July 4 (yesterday)\n   - Knight is 5x FMVP, considered best mid in the world\n   - Bin is 5x MSI participant, most in LPL history\n   - Xun has 4-0 record vs T1 in MSI\n   - International BO5 record: 18 wins\n\n2. **LYON** - LCS #1 seed, MSI 2026\n   - Roster: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support)\n   - Won LCS Spring 2026 with 3-0 sweep of TL in finals\n   - Beat FUR 3-0 in MSI knockout round on July 4\n   - Inspired is considered the best jungler in LCS (\"野王\")\n   - Berserker is Korean ADC\n\n3. **Match context:**\n   - This is a Bo5 knockout match on July 5, 2026\n   - BLG beat T1 3-2 (5 games, exhausting)\n   - LYON beat FUR 3-0 (clean sweep, less fatigue)\n   - Winner advances to winners' bracket final vs HLE\n\n4. **Meta/Version:**\n   - The current patch isn't specified but from the match data, we can see picks like: Syndra, Ezreal, Neeko, Jayce, Jarvan IV, Varus, Gnar, Monkey King etc.\n   - Bot lane lane phase is very important in this meta\n   - Global BP (all champions banned/picked across series)\n\n5. **Key matchup analysis:**\n   - BLG is clearly the stronger team on paper (LPL #1 vs LCS #1)\n   - LPL > LCS in terms of regional strength historically\n   - BLG just beat T1 (arguably the best team in the world) 3-2\n   - LYON beat FUR (CBLOL) 3-0, which is expected\n   - BLG has much more international experience\n   - However, BLG played 5 games yesterday while LYON played 3\n\n6. **Sweep rate analysis:**\n   - Both teams have sweep_rate of 0.396 and swept_rate of 0.333\n   - Average series length: 2.2 games for both\n   - This suggests relatively short series are common\n\n7. **Context pack issues:**\n   - The context pack has identical data for both blue and red sides (same players listed for both teams, same stats) - this is clearly a data error\n   - The actual rosters from web search show BLG: Bin/Xun/Knight/Viper/ON vs LYON: Dhokla/Inspired/Saint/Berserker/Isles\n\nNow let me think about the prediction:\n\n**BLG advantages:**\n- Much stronger region (LPL >> LCS)\n- Just beat T1 3-2, proving they can compete with the best\n- Knight is arguably the best player at MSI\n- Bin has massive international experience\n- Better BP preparation (shown vs T1 with creative picks like Vel'Koz, Swain, Kindred)\n- More international BO5 experience (18 wins)\n\n**LYON advantages:**\n- Rested (3-0 vs FUR vs BLG's 3-2 vs T1)\n- Inspired is a strong jungler\n- Dhokla showed good form vs FUR (4-kill Varus, good Gnar)\n- Less pressure, underdog mentality\n\n**Fatigue factor:**\n- BLG played 5 games yesterday (July 4), today is July 5 - back-to-back\n- LYON played 3 games yesterday - much less fatigue\n- This is a significant factor\n\n**Prediction:**\nBLG is clearly the stronger team, but the fatigue factor from playing 5 games yesterday is real. However, BLG's depth, preparation, and individual skill should still carry them through. I think BLG wins but it might be closer than expected due to fatigue.\n\nGiven:\n- BLG's sweep rate is 0.396\n- The fatigue factor\n- LYON is not a weak team (LCS champions)\n- BLG just had an exhausting 5-game series\n\nI'll predict BLG 3-1. The fatigue might cost them a game, but their overall quality should prevail. Actually, let me reconsider...\n\nLooking at the data more carefully:\n- BLG's recent series: they swept TES 3-0 in LPL finals, beat T1 3-2\n- LYON's recent series: swept C9 3-0, swept TL 3-0, swept FUR 3-0\n- LYON has been on a sweep streak\n- But the competition level is vastly different\n\nThe sweep rate for both is 0.396, which is moderate. Given BLG's clear superiority but fatigue factor, I think 3-1 is appropriate. BLG wins but drops a game due to fatigue/LYON's momentum.\n\nWin probability: BLG ~75%, LYON ~25%\n\nLet me finalize:\n- Predicted winner: blue (BLG)\n- Series score: 3-1\n- Series length: 4\n- Favored side: blue_strong\n\nWait, I need to reconsider the fatigue factor more carefully. BLG played a very intense 5-game series vs T1 just hours before. LYON had an easy 3-0. This is a real advantage for LYON.\n\nHowever, BLG's talent gap is enormous. LPL #1 vs LCS #1 - historically LPL teams dominate LCS teams in international events. BLG has Knight (best mid in the world), Bin (most experienced MSI player from LPL), and just proved they can beat T1.\n\nI'll stick with BLG 3-1. The fatigue might cost them one game but their overall quality should prevail.\n\nActually, let me reconsider once more. Looking at the sweep rate guidance:\n- BLG sweep_rate: 0.396 (moderate)\n- The guidance says if win_probs ≥ 0.80 and cross-region, prioritize 3-0\n- My win_probs for BLG is around 0.75\n\nGiven the fatigue factor and that LYON is a legitimate LCS champion (not a weak team), I think 3-1 is the right call. BLG is clearly better but the back-to-back 5-game series will take a toll.\n\nLet me set:\n- BLG win probability: 0.75\n- LYON win probability: 0.25\n- Series score: 3-1\n- Series length: 4\n- Favored side: blue_strong\n\nNow let me write the reasoning and output the JSON.",
+  "sources": [
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:36Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:37Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:37Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:51Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:51Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:51Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:52Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:52Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:52Z"
+    },
+    {
+      "query": "LYON vs FUR MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:52Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:53Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:53Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:53Z"
+    },
+    {
+      "query": "LYON vs FUR MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:53Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:17:53Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:13Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:13Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:13Z"
+    },
+    {
+      "query": "LYON vs FUR MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:13Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:13Z"
+    },
+    {
+      "query": "BLG vs LYON MSI 2026 prediction preview July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:13Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "LYON vs FUR MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "BLG vs LYON MSI 2026 prediction preview July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "LYON Dhokla Inspired Berserker MSI 2026 performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:14Z"
+    },
+    {
+      "query": "BILIBILI GAMING BLG MSI 2026 roster results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "LYON esports League of Legends MSI 2026 roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "BLG vs T1 MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "LYON vs FUR MSI 2026 result July 4",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "BLG vs LYON MSI 2026 prediction preview July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "LYON Dhokla Inspired Berserker MSI 2026 performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    },
+    {
+      "query": "BLG Bin Knight Viper MSI 2026 stats performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-05T13:18:15Z"
+    }
+  ],
+  "input_tokens": 101122,
+  "output_tokens": 6143,
+  "tool_calls": 8,
+  "cost_usd": 0.20111,
+  "wall_seconds": 148.47,
+  "error": null
+}

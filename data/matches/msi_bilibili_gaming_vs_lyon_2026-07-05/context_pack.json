@@ -1,0 +1,1247 @@
+{
+  "collected_at": "2026-07-05T13:16:53Z",
+  "fixture_header": {
+    "match_id": 115570934355614551,
+    "name": "BILIBILI GAMING vs LYON",
+    "league": "MSI",
+    "league_id": "lol-msi",
+    "serie": null,
+    "tournament": "2026",
+    "tier": null,
+    "region": null,
+    "stage_hint": "BILIBILI GAMING vs LYON",
+    "match_type": null,
+    "number_of_games": 5,
+    "begin_at_utc": "2026-07-05T08:00:00.000Z",
+    "patch_version": null,
+    "status": "not_started",
+    "blue": {
+      "id": "lyon",
+      "name": "BILIBILI GAMING",
+      "acronym": "BLG",
+      "slug": "lyon",
+      "image_url": "http://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png",
+      "location": null
+    },
+    "red": {
+      "id": "lyon",
+      "name": "LYON",
+      "acronym": "LYON",
+      "slug": "lyon",
+      "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+      "location": null
+    },
+    "block_name": "Knockouts"
+  },
+  "rosters": {
+    "blue": {
+      "team": {
+        "id": "lyon",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "lyon",
+        "image_url": "http://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Castle",
+          "id": "b34a7036-3505-402e-a27b-e78aa74bfcc0",
+          "nationality": "KR"
+        },
+        {
+          "role": "jun",
+          "name": "Inspired",
+          "id": "3d3bc4f8-ca33-45eb-a6c1-bfe4bf7c9b2b",
+          "nationality": "PL"
+        },
+        {
+          "role": "mid",
+          "name": "Saint",
+          "id": "7770e270-cf3a-4483-945f-54e5d52a0bb6",
+          "nationality": "KR"
+        },
+        {
+          "role": "adc",
+          "name": "Berserker",
+          "id": "4b3cf79f-2acf-4b06-a024-4ae3e5fd51b4",
+          "nationality": null
+        },
+        {
+          "role": "sup",
+          "name": "Isles",
+          "id": "b79cdfaf-4339-4afb-8deb-43d54c75cb8b",
+          "nationality": "AU"
+        }
+      ],
+      "available": true
+    },
+    "red": {
+      "team": {
+        "id": "lyon",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon",
+        "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Castle",
+          "id": "b34a7036-3505-402e-a27b-e78aa74bfcc0",
+          "nationality": "KR"
+        },
+        {
+          "role": "jun",
+          "name": "Inspired",
+          "id": "3d3bc4f8-ca33-45eb-a6c1-bfe4bf7c9b2b",
+          "nationality": "PL"
+        },
+        {
+          "role": "mid",
+          "name": "Saint",
+          "id": "7770e270-cf3a-4483-945f-54e5d52a0bb6",
+          "nationality": "KR"
+        },
+        {
+          "role": "adc",
+          "name": "Berserker",
+          "id": "4b3cf79f-2acf-4b06-a024-4ae3e5fd51b4",
+          "nationality": null
+        },
+        {
+          "role": "sup",
+          "name": "Isles",
+          "id": "b79cdfaf-4339-4afb-8deb-43d54c75cb8b",
+          "nationality": "AU"
+        }
+      ],
+      "available": true
+    }
+  },
+  "recent_form": {
+    "blue": {
+      "available": true,
+      "games_played": 10,
+      "wins": 7,
+      "win_rate": 0.7,
+      "matches": [
+        {
+          "date": "2026-07-04",
+          "league": "north_regional_league",
+          "opponent": "3v",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 15,
+          "opponent_kills": 33,
+          "gold": 64400,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 3
+        },
+        {
+          "date": "2026-07-04",
+          "league": "north_regional_league",
+          "opponent": "3v",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 25,
+          "opponent_kills": 43,
+          "gold": 69800,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 18,
+          "opponent_kills": 9,
+          "gold": 86500,
+          "dragons": 5,
+          "barons": 2,
+          "towers": 10
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 7,
+          "gold": 74400,
+          "dragons": 3,
+          "barons": 0,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 3,
+          "gold": 73400,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 19,
+          "opponent_kills": 16,
+          "gold": 83600,
+          "dragons": 5,
+          "barons": 1,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 74500,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 9,
+          "gold": 63900,
+          "dragons": 0,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-24",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 2,
+          "opponent_kills": 11,
+          "gold": 55800,
+          "dragons": 2,
+          "barons": 0,
+          "towers": 1
+        },
+        {
+          "date": "2026-05-24",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 78200,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 10
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "games_played": 10,
+      "wins": 7,
+      "win_rate": 0.7,
+      "matches": [
+        {
+          "date": "2026-07-04",
+          "league": "north_regional_league",
+          "opponent": "3v",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 15,
+          "opponent_kills": 33,
+          "gold": 64400,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 3
+        },
+        {
+          "date": "2026-07-04",
+          "league": "north_regional_league",
+          "opponent": "3v",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 25,
+          "opponent_kills": 43,
+          "gold": 69800,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 18,
+          "opponent_kills": 9,
+          "gold": 86500,
+          "dragons": 5,
+          "barons": 2,
+          "towers": 10
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 7,
+          "gold": 74400,
+          "dragons": 3,
+          "barons": 0,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 3,
+          "gold": 73400,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 19,
+          "opponent_kills": 16,
+          "gold": 83600,
+          "dragons": 5,
+          "barons": 1,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 74500,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 9,
+          "gold": 63900,
+          "dragons": 0,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-24",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 2,
+          "opponent_kills": 11,
+          "gold": 55800,
+          "dragons": 2,
+          "barons": 0,
+          "towers": 1
+        },
+        {
+          "date": "2026-05-24",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 78200,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 10
+        }
+      ]
+    }
+  },
+  "h2h": {
+    "available": true,
+    "team_a_id": "lyon",
+    "team_b_id": "lyon",
+    "meetings": 0,
+    "team_a_wins": 0,
+    "team_b_wins": 0,
+    "recent": []
+  },
+  "team_objectives": {
+    "blue": {
+      "available": true,
+      "games_analyzed": 49,
+      "game_record": {
+        "wins": 32,
+        "losses": 17,
+        "win_rate": 0.6531
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 2.84,
+          "opponent_avg_per_game": 2.02,
+          "control_rate": 0.584
+        },
+        "barons": {
+          "avg_per_game": 0.71,
+          "opponent_avg_per_game": 0.47,
+          "control_rate": 0.6034
+        },
+        "towers": {
+          "avg_per_game": 7.59,
+          "opponent_avg_per_game": 4.22,
+          "control_rate": 0.6425
+        },
+        "kills": {
+          "avg_per_game": 19.24,
+          "opponent_avg_per_game": 13.37,
+          "control_rate": 0.5901
+        },
+        "gold": {
+          "avg_per_game": 65669.33,
+          "opponent_avg_per_game": 60884.61,
+          "control_rate": 0.5189
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.4898,
+        "first_tower_rate": 0.4898,
+        "first_dragon_rate": 0.6122,
+        "first_baron_rate": 0.5952
+      }
+    },
+    "red": {
+      "available": true,
+      "games_analyzed": 49,
+      "game_record": {
+        "wins": 32,
+        "losses": 17,
+        "win_rate": 0.6531
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 2.84,
+          "opponent_avg_per_game": 2.02,
+          "control_rate": 0.584
+        },
+        "barons": {
+          "avg_per_game": 0.71,
+          "opponent_avg_per_game": 0.47,
+          "control_rate": 0.6034
+        },
+        "towers": {
+          "avg_per_game": 7.59,
+          "opponent_avg_per_game": 4.22,
+          "control_rate": 0.6425
+        },
+        "kills": {
+          "avg_per_game": 19.24,
+          "opponent_avg_per_game": 13.37,
+          "control_rate": 0.5901
+        },
+        "gold": {
+          "avg_per_game": 65669.33,
+          "opponent_avg_per_game": 60884.61,
+          "control_rate": 0.5189
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.4898,
+        "first_tower_rate": 0.4898,
+        "first_dragon_rate": 0.6122,
+        "first_baron_rate": 0.5952
+      }
+    }
+  },
+  "team_series_history": {
+    "blue": {
+      "available": true,
+      "series_count": 48,
+      "games_with_duration": 85,
+      "avg_game_duration_min": 33.6,
+      "avg_series_length": 2.2,
+      "sweep_rate": 0.396,
+      "swept_rate": 0.333,
+      "recent_series": [
+        {
+          "date": "2026-07-04",
+          "league": "Split 2 2025",
+          "opponent_slug": "3v",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 2,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 35.1,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 33.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-07-03",
+          "league": "2026",
+          "opponent_slug": "fur",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "tlaw",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 41.8,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.4,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 35.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "c9",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 43.0,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 35.4,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 29.9,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "team-liquid",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 2,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 34.0,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.2,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 31.0,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 29.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-17",
+          "league": "Split 3 2026",
+          "opponent_slug": "flyquest",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 2,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 38.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 29.3,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 27.7,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-10",
+          "league": "Split 3 2026",
+          "opponent_slug": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 34.6,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.5,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 40.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "league": "Split 3 2026",
+          "opponent_slug": "sentinels",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 36.8,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 43.6,
+              "won": false
+            }
+          ]
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "series_count": 48,
+      "games_with_duration": 85,
+      "avg_game_duration_min": 33.6,
+      "avg_series_length": 2.2,
+      "sweep_rate": 0.396,
+      "swept_rate": 0.333,
+      "recent_series": [
+        {
+          "date": "2026-07-04",
+          "league": "Split 2 2025",
+          "opponent_slug": "3v",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 2,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 35.1,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 33.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-07-03",
+          "league": "2026",
+          "opponent_slug": "fur",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "tlaw",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 41.8,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.4,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 35.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "c9",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 43.0,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 35.4,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 29.9,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "team-liquid",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 2,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 34.0,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.2,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 31.0,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 29.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-17",
+          "league": "Split 3 2026",
+          "opponent_slug": "flyquest",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 2,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 38.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 29.3,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 27.7,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-10",
+          "league": "Split 3 2026",
+          "opponent_slug": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 34.6,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.5,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 40.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "league": "Split 3 2026",
+          "opponent_slug": "sentinels",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 36.8,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 43.6,
+              "won": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "team_standings": {
+    "available": false,
+    "reason": "no standings rows (new season?)",
+    "hint": "Use the web_search tool to fetch this yourself."
+  },
+  "player_form": {
+    "blue": [
+      {
+        "available": true,
+        "player": "Castle",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Inspired",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Saint",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Berserker",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Isles",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      }
+    ],
+    "red": [
+      {
+        "available": true,
+        "player": "Castle",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Inspired",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Saint",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Berserker",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Isles",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      }
+    ]
+  },
+  "player_champion_pool": {
+    "blue": [
+      {
+        "available": false,
+        "player": "Castle",
+        "role": "top",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Inspired",
+        "role": "jun",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Saint",
+        "role": "mid",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Berserker",
+        "role": "adc",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Isles",
+        "role": "sup",
+        "games_analyzed": null,
+        "champion_pool": []
+      }
+    ],
+    "red": [
+      {
+        "available": false,
+        "player": "Castle",
+        "role": "top",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Inspired",
+        "role": "jun",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Saint",
+        "role": "mid",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Berserker",
+        "role": "adc",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Isles",
+        "role": "sup",
+        "games_analyzed": null,
+        "champion_pool": []
+      }
+    ]
+  },
+  "hero_pools": {
+    "blue": {
+      "available": false,
+      "reason": "empty champion pools",
+      "hint": "Use the web_search tool to fetch this yourself."
+    },
+    "red": {
+      "available": false,
+      "reason": "empty champion pools",
+      "hint": "Use the web_search tool to fetch this yourself."
+    }
+  },
+  "meta_reference": {
+    "available": false,
+    "reason": "no patch version in match data",
+    "hint": "Use the web_search tool to fetch this yourself."
+  }
+}
