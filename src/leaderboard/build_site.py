@@ -250,8 +250,12 @@ def _game_history() -> list[dict]:
                 # string id — see note above (avoid JS Number precision loss)
                 "match_id": str(match_id) if match_id is not None else None,
                 "position": bp.get("position") or int(gdir.name[1:]),
-                "blue": blue_name,
-                "red": red_name,
+                # If the user flipped blue/red for this game in the manual BP
+                # editor, swap the display names so cards/badges label the
+                # correct team. Picks are already stored on the chosen sides,
+                # so they are NOT swapped here.
+                "blue": red_name if bp.get("sides_swapped") else blue_name,
+                "red": blue_name if bp.get("sides_swapped") else red_name,
                 "blue_picks": (bp.get("picks", {}).get("blue")),
                 "red_picks": (bp.get("picks", {}).get("red")),
                 "bp_complete": bp.get("bp_complete"),
