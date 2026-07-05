@@ -359,20 +359,59 @@ class CitoClient:
                       f"Add cito_league_id to configs/leagues.yaml.")
         return mapping
 
+    def _trusted_today_index(self) -> dict[str, dict]:
+        """Build a {matchId -> event} index from /lol/schedule/today.
+
+        The per-league /lol/leagues/{id}/schedule endpoint occasionally returns
+        CORRUPT bracket-stage data (e.g. team1.slug == team2.slug == 'lyon' for
+        a match that's actually T1 vs FURIA, or both teams filled with the same
+        placeholder). The global /lol/schedule/today endpoint has been observed
+        to carry the CORRECT team assignments for the same matchId, so we use it
+        as a cross-validation / repair source.
+
+        We deliberately do NOT use /lol/schedule/upcoming here: empirically it
+        ignores leagueId filtering and returns only a tiny slice of matches
+        (e.g. just 4 LRN games), so it cannot serve as a primary source.
+        """
+        try:
+            raw = self.get("/lol/schedule/today",
+                           ttl_seconds=cfg.env_int("LOLA_CITO_TODAY_TTL", 900))
+        except CitoError:
+            return {}
+        events = raw.get("events") if isinstance(raw, dict) else raw
+        if not isinstance(events, list):
+            return {}
+        out: dict[str, dict] = {}
+        for e in events:
+            mid = e.get("matchId")
+            if mid and mid not in out:
+                out[mid] = e
+        return out
+
     def upcoming_matches(self, league_ids: list[str], *, horizon_days: int = 14) -> list[dict]:
         """Upcoming matches for tracked leagues within horizon_days, normalised.
 
-        Uses the per-league schedule endpoint (/lol/leagues/{id}/schedule) which
-        is the reliable source — the global /lol/schedule/upcoming endpoint has
-        been observed returning empty even when per-league schedules have
-        upcoming matches. One cached request per league.
+        Primary source is the per-league schedule endpoint
+        (/lol/leagues/{id}/schedule) — it covers the full horizon window and
+        every tracked league. /lol/schedule/today is fetched once and used as a
+        repair source: per-league schedule has been observed returning CORRUPT
+        bracket-stage events (team1.slug == team2.slug, or a real team placed in
+        both slots). When we detect such corruption we substitute the today
+        endpoint's version of the same matchId (which carries correct teams).
         """
         from datetime import datetime, timedelta, timezone
 
+        trusted = self._trusted_today_index()
         now = datetime.now(timezone.utc)
         end = now + timedelta(days=horizon_days)
+        grace_h = cfg.env_int("LOLA_SCAN_PAST_GRACE_H", 12)
+        past = now - timedelta(hours=grace_h)
         uniq: list[dict] = []
         seen: set[int] = set()
+        tracked_lid_set = set(league_ids)
+        # matchIds we've already handled (whether kept or filtered) so the
+        # trusted-source sweep below doesn't double-process them.
+        visited: set[str] = set()
         for lid in league_ids:
             raw = self.get(f"/lol/leagues/{lid}/schedule",
                            ttl_seconds=cfg.env_int("LOLA_CITO_SCHEDULE_TTL", 3600))
@@ -382,9 +421,23 @@ class CitoClient:
             if not isinstance(events, list):
                 continue
             for item in events:
+                visited.add(item.get("matchId"))
                 # only future / in-progress matches
                 if item.get("state") not in ("unstarted", "inProgress"):
                     continue
+                # Repair corrupt bracket data. The per-league schedule endpoint
+                # has been observed filling BOTH team slots with the same team
+                # (e.g. names ['LYON','LYON'] for a match that is actually
+                # BILIBILI GAMING vs LYON), or otherwise diverging from the
+                # truth. /lol/schedule/today carries the correct teams for the
+                # same matchId, so whenever we have a trusted entry for this
+                # matchId we prefer it unconditionally — it is the more reliable
+                # source for team assignments. (Coverage of /today is limited to
+                # the current day, so per-league remains the primary source for
+                # the rest of the horizon window.)
+                mid = item.get("matchId")
+                if mid and mid in trusted:
+                    item = trusted[mid]
                 # skip bracket slots whose opponents aren't decided yet (TBD)
                 teams = item.get("teams") or []
                 names = [(t or {}).get("name", "") for t in teams] or [
@@ -403,7 +456,14 @@ class CitoClient:
                         # upcoming matches must start within the horizon window.
                         # In-progress matches started in the past but are still
                         # live — keep them so they can be predicted/graded.
-                        if state == "unstarted" and not (now <= dt <= end):
+                        # Cito's `state` field lags reality — a match that
+                        # started hours ago may still be reported as `unstarted`.
+                        # Without a backward grace window such matches fall
+                        # through the cracks (not future enough for the
+                        # unstarted branch, not marked inProgress either), so
+                        # we extend the lower bound by LOLA_SCAN_PAST_GRACE_H
+                        # (default 12h) to absorb the lag.
+                        if state == "unstarted" and not (past <= dt <= end):
                             continue
                         if state == "inProgress" and dt > end:
                             continue
@@ -413,6 +473,42 @@ class CitoClient:
                     continue
                 seen.add(mid)
                 uniq.append(m)
+        # Sweep trusted (/lol/schedule/today) for matches that belong to a
+        # tracked league but are MISSING from its per-league schedule (observed
+        # for ongoing bracket-stage matches that the per-league endpoint has
+        # already rotated out). These are otherwise-correct events we'd lose
+        # just because /today has wider same-day coverage.
+        for mid, item in trusted.items():
+            if mid in visited:
+                continue
+            if (item.get("leagueId") or "") not in tracked_lid_set:
+                continue
+            if item.get("state") not in ("unstarted", "inProgress"):
+                continue
+            teams = item.get("teams") or []
+            names = [(t or {}).get("name", "") for t in teams] or [
+                (item.get("team1") or {}).get("name", ""),
+                (item.get("team2") or {}).get("name", "")]
+            if any(not n or str(n).strip().upper() == "TBD" for n in names):
+                continue
+            start = item.get("startTime")
+            state = item.get("state")
+            if start:
+                try:
+                    dt = datetime.fromisoformat(start.replace("Z", "+00:00"))
+                except ValueError:
+                    dt = None
+                if dt:
+                    if state == "unstarted" and not (past <= dt <= end):
+                        continue
+                    if state == "inProgress" and dt > end:
+                        continue
+            m = _norm_match_from_schedule(item)
+            nmid = m.get("id")
+            if nmid is None or nmid in seen:
+                continue
+            seen.add(nmid)
+            uniq.append(m)
         uniq.sort(key=lambda m: m.get("begin_at") or "")
         return uniq
 

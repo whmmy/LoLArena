@@ -1,6 +1,6 @@
 {
   "id": 115570934355614563,
-  "name": "FURIA vs FURIA",
+  "name": "T1 vs FURIA",
   "match_type": null,
   "status": "not_started",
   "number_of_games": 5,
@@ -15,19 +15,19 @@
     {
       "opponent": {
         "id": "fur",
-        "name": "FURIA",
-        "acronym": "FUR",
+        "name": "T1",
+        "acronym": "T1",
         "slug": "fur",
-        "image_url": "http://static.lolesports.com/teams/FURIA---black.png"
+        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
       }
     },
     {
       "opponent": {
-        "id": "furia",
+        "id": "fur",
         "name": "FURIA",
         "acronym": "FUR",
-        "slug": "furia",
-        "image_url": "https://static.lolesports.com/teams/FURIA---black.png"
+        "slug": "fur",
+        "image_url": "http://static.lolesports.com/teams/FURIA---black.png"
       }
     }
   ],
@@ -37,19 +37,19 @@
       "score": 0
     },
     {
-      "team_id": "furia",
+      "team_id": "fur",
       "score": 0
     }
   ],
   "league": {
     "id": "lol-msi",
     "name": "MSI",
-    "slug": null
+    "slug": "msi"
   },
   "serie": {},
   "tournament": {
-    "id": null,
-    "name": null
+    "id": "lol-tournament-115570934354631452",
+    "name": "2026"
   },
   "games": [],
   "videogame_version": {},

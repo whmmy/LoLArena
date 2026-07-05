@@ -1,6 +1,6 @@
 {
   "id": 115570934355614551,
-  "name": "LYON vs LYON",
+  "name": "BILIBILI GAMING vs LYON",
   "match_type": null,
   "status": "not_started",
   "number_of_games": 5,
@@ -15,19 +15,19 @@
     {
       "opponent": {
         "id": "lyon",
-        "name": "LYON",
-        "acronym": "LYON",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
         "slug": "lyon",
-        "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
+        "image_url": "http://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
       }
     },
     {
       "opponent": {
-        "id": "lyon-gaming",
+        "id": "lyon",
         "name": "LYON",
         "acronym": "LYON",
-        "slug": "lyon-gaming",
-        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
+        "slug": "lyon",
+        "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
       }
     }
   ],
@@ -37,19 +37,19 @@
       "score": 0
     },
     {
-      "team_id": "lyon-gaming",
+      "team_id": "lyon",
       "score": 0
     }
   ],
   "league": {
     "id": "lol-msi",
     "name": "MSI",
-    "slug": null
+    "slug": "msi"
   },
   "serie": {},
   "tournament": {
-    "id": null,
-    "name": null
+    "id": "lol-tournament-115570934354631452",
+    "name": "2026"
   },
   "games": [],
   "videogame_version": {},
