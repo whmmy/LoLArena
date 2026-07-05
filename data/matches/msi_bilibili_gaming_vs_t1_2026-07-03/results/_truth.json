@@ -1,0 +1,56 @@
+{
+  "status": "finished",
+  "winner_side": "blue",
+  "blue_score": 3,
+  "red_score": 2,
+  "series_length": 5,
+  "series_score": "3-2",
+  "blue_players": [
+    {
+      "name": "Bin",
+      "role": "top"
+    },
+    {
+      "name": "Xun",
+      "role": "jun"
+    },
+    {
+      "name": "Knight",
+      "role": "mid"
+    },
+    {
+      "name": "Viper",
+      "role": "adc"
+    },
+    {
+      "name": "ON",
+      "role": "sup"
+    }
+  ],
+  "red_players": [
+    {
+      "name": "Haetae",
+      "role": "top"
+    },
+    {
+      "name": "Painter",
+      "role": "jun"
+    },
+    {
+      "name": "Faker",
+      "role": "mid"
+    },
+    {
+      "name": "Jinbeom",
+      "role": "adc"
+    },
+    {
+      "name": "Cloud",
+      "role": "sup"
+    }
+  ],
+  "baseline_probs": {
+    "blue": 0.4835,
+    "red": 0.5165
+  }
+}

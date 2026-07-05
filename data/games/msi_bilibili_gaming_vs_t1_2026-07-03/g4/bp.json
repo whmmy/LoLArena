@@ -10,31 +10,31 @@
     "blue": [
       {
         "role": "top",
-        "player": null,
+        "player": "BLG Bin",
         "champion": "Gwen",
         "spells": []
       },
       {
         "role": "jun",
-        "player": null,
+        "player": "BLG Xun",
         "champion": "Skarner",
         "spells": []
       },
       {
         "role": "mid",
-        "player": null,
+        "player": "BLG Knight",
         "champion": "Aurora",
         "spells": []
       },
       {
         "role": "adc",
-        "player": null,
+        "player": "BLG Viper",
         "champion": "Caitlyn",
         "spells": []
       },
       {
         "role": "sup",
-        "player": null,
+        "player": "BLG ON",
         "champion": "Elise",
         "spells": []
       }
@@ -42,36 +42,41 @@
     "red": [
       {
         "role": "top",
-        "player": null,
+        "player": "T1 Doran",
         "champion": "K'Sante",
         "spells": []
       },
       {
         "role": "jun",
-        "player": null,
+        "player": "T1 Oner",
         "champion": "Jarvan IV",
         "spells": []
       },
       {
         "role": "mid",
-        "player": null,
+        "player": "T1 Faker",
         "champion": "Ahri",
         "spells": []
       },
       {
         "role": "adc",
-        "player": null,
+        "player": "T1 Peyz",
         "champion": "Mel",
         "spells": []
       },
       {
         "role": "sup",
-        "player": null,
+        "player": "T1 Keria",
         "champion": "Pyke",
         "spells": []
       }
     ]
   },
-  "fetched_at": null,
-  "manual": true
+  "fetched_at": "2026-07-04T10:46:59Z",
+  "winner_side": "red",
+  "kills": {
+    "blue": 10,
+    "red": 23
+  },
+  "total_kills": 33
 }

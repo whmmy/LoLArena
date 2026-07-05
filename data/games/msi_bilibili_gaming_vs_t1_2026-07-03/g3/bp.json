@@ -10,31 +10,31 @@
     "blue": [
       {
         "role": "top",
-        "player": null,
+        "player": "T1 Doran",
         "champion": "Zaahen",
         "spells": []
       },
       {
         "role": "jun",
-        "player": null,
+        "player": "T1 Oner",
         "champion": "Wukong",
         "spells": []
       },
       {
         "role": "mid",
-        "player": null,
+        "player": "T1 Faker",
         "champion": "Annie",
         "spells": []
       },
       {
         "role": "adc",
-        "player": null,
+        "player": "T1 Peyz",
         "champion": "Senna",
         "spells": []
       },
       {
         "role": "sup",
-        "player": null,
+        "player": "T1 Keria",
         "champion": "Leona",
         "spells": []
       }
@@ -42,36 +42,41 @@
     "red": [
       {
         "role": "top",
-        "player": null,
+        "player": "BLG Bin",
         "champion": "Jax",
         "spells": []
       },
       {
         "role": "jun",
-        "player": null,
+        "player": "BLG Xun",
         "champion": "Qiyana",
         "spells": []
       },
       {
         "role": "mid",
-        "player": null,
+        "player": "BLG Knight",
         "champion": "Ryze",
         "spells": []
       },
       {
         "role": "adc",
-        "player": null,
+        "player": "BLG Viper",
         "champion": "Vel'Koz",
         "spells": []
       },
       {
         "role": "sup",
-        "player": null,
+        "player": "BLG ON",
         "champion": "Alistar",
         "spells": []
       }
     ]
   },
-  "fetched_at": "2026-07-04T08:01:24Z",
-  "manual": true
+  "fetched_at": "2026-07-04T10:46:58Z",
+  "winner_side": "red",
+  "kills": {
+    "blue": 3,
+    "red": 13
+  },
+  "total_kills": 16
 }

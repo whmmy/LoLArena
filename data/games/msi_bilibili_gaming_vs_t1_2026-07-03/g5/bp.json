@@ -1,8 +1,8 @@
 {
   "match_id": 115570934355614527,
-  "game_id": null,
+  "game_id": "lol-game-115570934355614532",
   "position": 5,
-  "status": null,
+  "status": "finished",
   "length_sec": null,
   "winner_id": null,
   "bp_complete": true,
@@ -10,68 +10,73 @@
     "blue": [
       {
         "role": "top",
-        "player": null,
-        "champion": "Gwen",
+        "player": "T1 Doran",
+        "champion": "Gnar",
         "spells": []
       },
       {
         "role": "jun",
-        "player": null,
-        "champion": "Skarner",
+        "player": "T1 Oner",
+        "champion": "Trundle",
         "spells": []
       },
       {
         "role": "mid",
-        "player": null,
-        "champion": "Aurora",
+        "player": "T1 Faker",
+        "champion": "Taliyah",
         "spells": []
       },
       {
         "role": "adc",
-        "player": null,
-        "champion": "Caitlyn",
+        "player": "T1 Peyz",
+        "champion": "Yunara",
         "spells": []
       },
       {
         "role": "sup",
-        "player": null,
-        "champion": "Elise",
+        "player": "T1 Keria",
+        "champion": "Lulu",
         "spells": []
       }
     ],
     "red": [
       {
         "role": "top",
-        "player": null,
-        "champion": "K'Sante",
+        "player": "BLG Bin",
+        "champion": "Rumble",
         "spells": []
       },
       {
         "role": "jun",
-        "player": null,
-        "champion": "Jarvan IV",
+        "player": "BLG Xun",
+        "champion": "Kindred",
         "spells": []
       },
       {
         "role": "mid",
-        "player": null,
-        "champion": "Ahri",
+        "player": "BLG Knight",
+        "champion": "Syndra",
         "spells": []
       },
       {
         "role": "adc",
-        "player": null,
-        "champion": "Mel",
+        "player": "BLG Viper",
+        "champion": "Ashe",
         "spells": []
       },
       {
         "role": "sup",
-        "player": null,
-        "champion": "Pyke",
+        "player": "BLG ON",
+        "champion": "Seraphine",
         "spells": []
       }
     ]
   },
-  "fetched_at": null,
-  "manual": true
+  "fetched_at": "2026-07-04T10:47:03Z",
+  "winner_side": "red",
+  "kills": {
+    "blue": 8,
+    "red": 9
+  },
+  "total_kills": 17
 }

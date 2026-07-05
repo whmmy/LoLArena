@@ -1,0 +1,66 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "game",
+  "target_id": "msi_bilibili_gaming_vs_t1_2026-07-03/g5",
+  "submitted_at": "2026-07-04T10:16:37.019241+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "Game 5 决胜局，双方战成 2-2 平。BLG 摆出了一个极度罕见的全员错位阵容：Knight 玩 ADC Ashe、Viper 玩中单 Syndra、ON 玩打野 Kindred、Xun 玩辅助 Seraphine；T1 则是相对标准的 Gnar/Trundle/Taliyah/Yunara/Lulu 阵容。综合角色错位的风险性、T1 阵容的清晰胜势条件（Lulu+Yunara 双人组后期接管、Taliyah 游走、Trundle 控龙），我给出 T1 微弱优势倾向（55% vs 45%）。",
+      "draft_analysis": "BLG 阵容表面看是团战 CC 链体系：Ashe 普攻减速+大招先手、Rumble 大招分割战场、Kindred 大招收割/保命、Seraphine 群体治疗+大招控制、Syndra 单体爆发。但致命问题是全员错位——Bin 拿兰博（其兰博胜率仅 40%）、ON 作为职业辅助去打野 Kindred 完全脱离英雄池、Viper 是 ADC 选手被迫玩中单 Syndra、Knight 作为中单选手被迫玩 ADC Ashe、Xun 作为打野选手被迫玩辅助 Seraphine。几乎没有一个人是舒服位置，团队默契和位置基本功会大打折扣。T1 阵容虽然 Yunara 和 Gnar/Trundle 也不是 T1 选手的高频招牌，但选手都在自己本职位置：Haetae 上单 Gnar（虽不在数据池但坦克团战是基本功）、Painter 打野 Trundle（蓝领控图）、Faker 中单 Taliyah（控制+游走）、Jinbeom ADC Yunara（保牌打法）、Cloud 辅助 Lulu（Lulu 在他的池子里，5 选 5 胜）。T1 阵容清晰：前期 Taliyah 游走 + Trundle 控小龙；中期 Yunara 出装成型；后期 Lulu+Yunara 双人组接管团战。BLG 阵容则依赖一两个完美团战大招收割，容错率极低。",
+      "tempo_wincon": "节奏与胜势条件：BLG 必须在前 25 分钟打出至少 2 次完美团（Ashe 箭+Rumble 大+Seraphine 大齐中），拖到后期他们错位阵容执行会崩塌。T1 则是标准的中期发力—后期接管线：Taliyah 6 级游下、Trundle 拿小龙建立经济差；20 分钟后 Yunara 三件套成型接管。预期时长略高于两队场均（32.7-32.8 分钟），锚定后上调至约 33.5 分钟——理由是 BLG 阵容容错低会拖到中后期团战决胜，T1 阵容又是后期发力的标准曲线。击杀锚点：BLG 场均 17.1、T1 场均 18.89，本局因 BLG 阵容执行失误会被压低，T1 围绕 Yunara 抱团反而会稳定控杀，预测 BLG 约 14 杀、T1 约 19 杀，总计 33 杀，略低于两队场均合计的 36（因为决胜局更谨慎）。"
+    },
+    "win_prob": {
+      "blue": 0.45,
+      "red": 0.55
+    },
+    "predicted_winner": "red",
+    "expected_duration_min": 33.5,
+    "kills": {
+      "blue": 14,
+      "red": 19
+    },
+    "total_kills": 33,
+    "key_drafted_champions": [
+      {
+        "champion": "Taliyah",
+        "team": "red",
+        "role": "mid",
+        "impact": "Faker 的游走控制法师，6 级后能频繁边线游走压制 BLG 错位阵容的线上弱点，是 T1 前期节奏发动机"
+      },
+      {
+        "champion": "Yunara",
+        "team": "red",
+        "role": "adc",
+        "impact": "Jinbeom 的后期核心 ADC，搭配 Lulu 形成稳定双排接管组合，是 T1 中后期团战的稳定输出锚点"
+      },
+      {
+        "champion": "Lulu",
+        "team": "red",
+        "role": "sup",
+        "impact": "Cloud 池子里唯一确定胜率 100% 的招牌，与 Yunara 组成经典 hyper-carry 体系，大招保牌让 BLG 难以强杀"
+      },
+      {
+        "champion": "Ashe",
+        "team": "blue",
+        "role": "adc",
+        "impact": "Knight 错位打 ADC，全队团战 CC 链的先手核心（普攻减速+大招远距开团），发挥好坏直接决定 BLG 团战胜负"
+      },
+      {
+        "champion": "Rumble",
+        "team": "blue",
+        "role": "top",
+        "impact": "Bin 的团战大招等温线分割战场武器，是 BLG 在错位阵容下为数不多的稳定团战拼图，但 Bin 自身兰博胜率仅 40% 是隐患"
+      }
+    ],
+    "sources": []
+  },
+  "raw_text": "<think>The user wants me to re-output the JSON object only, no extra text. Let me make sure the JSON is valid and complete.</think>\n\n{\n  \"reasoning\": {\n    \"overall\": \"Game 5 决胜局，双方战成 2-2 平。BLG 摆出了一个极度罕见的全员错位阵容：Knight 玩 ADC Ashe、Viper 玩中单 Syndra、ON 玩打野 Kindred、Xun 玩辅助 Seraphine；T1 则是相对标准的 Gnar/Trundle/Taliyah/Yunara/Lulu 阵容。综合角色错位的风险性、T1 阵容的清晰胜势条件（Lulu+Yunara 双人组后期接管、Taliyah 游走、Trundle 控龙），我给出 T1 微弱优势倾向（55% vs 45%）。\",\n    \"draft_analysis\": \"BLG 阵容表面看是团战 CC 链体系：Ashe 普攻减速+大招先手、Rumble 大招分割战场、Kindred 大招收割/保命、Seraphine 群体治疗+大招控制、Syndra 单体爆发。但致命问题是全员错位——Bin 拿兰博（其兰博胜率仅 40%）、ON 作为职业辅助去打野 Kindred 完全脱离英雄池、Viper 是 ADC 选手被迫玩中单 Syndra、Knight 作为中单选手被迫玩 ADC Ashe、Xun 作为打野选手被迫玩辅助 Seraphine。几乎没有一个人是舒服位置，团队默契和位置基本功会大打折扣。T1 阵容虽然 Yunara 和 Gnar/Trundle 也不是 T1 选手的高频招牌，但选手都在自己本职位置：Haetae 上单 Gnar（虽不在数据池但坦克团战是基本功）、Painter 打野 Trundle（蓝领控图）、Faker 中单 Taliyah（控制+游走）、Jinbeom ADC Yunara（保牌打法）、Cloud 辅助 Lulu（Lulu 在他的池子里，5 选 5 胜）。T1 阵容清晰：前期 Taliyah 游走 + Trundle 控小龙；中期 Yunara 出装成型；后期 Lulu+Yunara 双人组接管团战。BLG 阵容则依赖一两个完美团战大招收割，容错率极低。\",\n    \"tempo_wincon\": \"节奏与胜势条件：BLG 必须在前 25 分钟打出至少 2 次完美团（Ashe 箭+Rumble 大+Seraphine 大齐中），拖到后期他们错位阵容执行会崩塌。T1 则是标准的中期发力—后期接管线：Taliyah 6 级游下、Trundle 拿小龙建立经济差；20 分钟后 Yunara 三件套成型接管。预期时长略高于两队场均（32.7-32.8 分钟），锚定后上调至约 33.5 分钟——理由是 BLG 阵容容错低会拖到中后期团战决胜，T1 阵容又是后期发力的标准曲线。击杀锚点：BLG 场均 17.1、T1 场均 18.89，本局因 BLG 阵容执行失误会被压低，T1 围绕 Yunara 抱团反而会稳定控杀，预测 BLG 约 14 杀、T1 约 19 杀，总计 33 杀，略低于两队场均合计的 36（因为决胜局更谨慎）。\"\n  },\n  \"win_prob\": { \"blue\": 0.45, \"red\": 0.55 },\n  \"predicted_winner\": \"red\",\n  \"expected_duration_min\": 33.5,\n  \"kills\": { \"blue\": 14, \"red\": 19 },\n  \"total_kills\": 33,\n  \"key_drafted_champions\": [\n    { \"champion\": \"Taliyah\", \"team\": \"red\", \"role\": \"mid\", \"impact\": \"Faker 的游走控制法师，6 级后能频繁边线游走压制 BLG 错位阵容的线上弱点，是 T1 前期节奏发动机\" },\n    { \"champion\": \"Yunara\", \"team\": \"red\", \"role\": \"adc\", \"impact\": \"Jinbeom 的后期核心 ADC，搭配 Lulu 形成稳定双排接管组合，是 T1 中后期团战的稳定输出锚点\" },\n    { \"champion\": \"Lulu\", \"team\": \"red\", \"role\": \"sup\", \"impact\": \"Cloud 池子里唯一确定胜率 100% 的招牌，与 Yunara 组成经典 hyper-carry 体系，大招保牌让 BLG 难以强杀\" },\n    { \"champion\": \"Ashe\", \"team\": \"blue\", \"role\": \"adc\", \"impact\": \"Knight 错位打 ADC，全队团战 CC 链的先手核心（普攻减速+大招远距开团），发挥好坏直接决定 BLG 团战胜负\" },\n    { \"champion\": \"Rumble\", \"team\": \"blue\", \"role\": \"top\", \"impact\": \"Bin 的团战大招等温线分割战场武器，是 BLG 在错位阵容下为数不多的稳定团战拼图，但 Bin 自身兰博胜率仅 40% 是隐患\" }\n  ],\n  \"sources\": []\n}",
+  "thinking_text": null,
+  "sources": [],
+  "input_tokens": 43208,
+  "output_tokens": 6889,
+  "tool_calls": 0,
+  "cost_usd": 0.0,
+  "wall_seconds": 73.86,
+  "error": null
+}
