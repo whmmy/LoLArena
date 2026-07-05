@@ -7,9 +7,9 @@
   "begin_at": "2026-07-04T08:00:00.000Z",
   "scheduled_at": "2026-07-04T08:00:00.000Z",
   "end_at": null,
-  "winner_id": "g2",
+  "winner_id": "g2-esports",
   "winner": {
-    "id": "g2",
+    "id": "g2-esports",
     "type": "Team"
   },
   "draw": false,
@@ -17,30 +17,30 @@
   "opponents": [
     {
       "opponent": {
-        "id": "g2",
+        "id": "g2-esports",
         "name": "G2 Esports",
         "acronym": "G2",
-        "slug": "g2",
+        "slug": "g2-esports",
         "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png"
       }
     },
     {
       "opponent": {
-        "id": "tes",
+        "id": "top-esports",
         "name": "TOP ESPORTS",
         "acronym": "TES",
-        "slug": "tes",
+        "slug": "top-esports",
         "image_url": "https://static.lolesports.com/teams/1592592064571_TopEsportsTES-01-FullonDark.png"
       }
     }
   ],
   "results": [
     {
-      "team_id": "g2",
+      "team_id": "g2-esports",
       "score": 3
     },
     {
-      "team_id": "tes",
+      "team_id": "top-esports",
       "score": 2
     }
   ],

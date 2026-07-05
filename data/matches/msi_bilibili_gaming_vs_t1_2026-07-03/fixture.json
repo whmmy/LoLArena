@@ -7,8 +7,11 @@
   "begin_at": "2026-07-03T03:00:00.000Z",
   "scheduled_at": "2026-07-03T03:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "blg",
+  "winner": {
+    "id": "blg",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
@@ -240,5 +243,5 @@
   "videogame_version": {},
   "block_name": "Knockouts",
   "round": null,
-  "vod_url": "https://www.youtube.com/watch?v=vR7BCkBPPPo"
+  "vod_url": "https://www.twitch.tv/videos/2811731360"
 }

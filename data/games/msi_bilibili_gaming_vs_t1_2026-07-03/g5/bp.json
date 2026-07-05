@@ -72,7 +72,9 @@
       }
     ]
   },
-  "fetched_at": "2026-07-04T10:47:03Z",
+  "fetched_at": "2026-07-05T00:32:34Z",
+  "manual": true,
+  "sides_swapped": true,
   "winner_side": "red",
   "kills": {
     "blue": 8,

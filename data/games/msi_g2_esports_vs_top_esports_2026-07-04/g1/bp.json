@@ -72,11 +72,5 @@
       }
     ]
   },
-  "fetched_at": "2026-07-03T14:41:11Z",
-  "winner_side": "blue",
-  "kills": {
-    "blue": 11,
-    "red": 6
-  },
-  "total_kills": 17
+  "fetched_at": "2026-07-05T00:30:30Z"
 }
