@@ -1,43 +1,46 @@
 {
   "id": 115570934355614551,
-  "name": "BILIBILI GAMING vs LYON",
+  "name": "LYON vs LYON",
   "match_type": null,
-  "status": "not_started",
+  "status": "finished",
   "number_of_games": 5,
   "begin_at": "2026-07-05T08:00:00.000Z",
   "scheduled_at": "2026-07-05T08:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "lyon",
+  "winner": {
+    "id": "lyon",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
     {
       "opponent": {
         "id": "lyon",
-        "name": "BILIBILI GAMING",
-        "acronym": "BLG",
+        "name": "LYON",
+        "acronym": "LYON",
         "slug": "lyon",
-        "image_url": "http://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
       }
     },
     {
       "opponent": {
-        "id": "lyon",
+        "id": "lyon-gaming",
         "name": "LYON",
         "acronym": "LYON",
-        "slug": "lyon",
-        "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png"
       }
     }
   ],
   "results": [
     {
       "team_id": "lyon",
-      "score": 0
+      "score": 3
     },
     {
-      "team_id": "lyon",
+      "team_id": "lyon-gaming",
       "score": 0
     }
   ],
@@ -48,12 +51,123 @@
   },
   "serie": {},
   "tournament": {
-    "id": "lol-tournament-115570934354631452",
-    "name": "2026"
+    "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614552",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614551,
+      "blue_team": {
+        "id": "lyon",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 12,
+        "towers": 5
+      },
+      "red_team": {
+        "id": "lyon-gaming",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 11,
+        "towers": 2
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614553",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614551,
+      "blue_team": {
+        "id": "lyon",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 31,
+        "towers": 6
+      },
+      "red_team": {
+        "id": "lyon-gaming",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 18,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614554",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614551,
+      "blue_team": {
+        "id": "lyon",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 15,
+        "towers": 7
+      },
+      "red_team": {
+        "id": "lyon-gaming",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 13,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.twitch.tv/videos/2813225663"
 }

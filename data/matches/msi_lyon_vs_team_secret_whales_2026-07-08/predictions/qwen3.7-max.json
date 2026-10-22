@@ -1,0 +1,341 @@
+{
+  "model_id": "qwen3.7-max",
+  "scope": "match",
+  "target_id": "msi_lyon_vs_team_secret_whales_2026-07-08",
+  "submitted_at": "2026-07-08T02:19:25.934720+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "LYON作为LCS一号种子整体实力更强，虽然被BLG零封但对手是本届MSI最强战队之一；TSW虽击败TES但TES状态极差且内部问题严重，LYON在败者组生死战中应凭借更成熟的运营和团战执行力以3-1取胜。",
+      "fundamentals": "LYON近期状态出色：LCS春季赛3-0横扫C9和TL夺冠，MSI正赛3-0零封FUR，仅在面对BLG时0-3失利（BLG是本届MSI夺冠热门）。队伍运营成熟，团战韧性强，多次完成逆风翻盘。TSW方面，被HLE 0-3横扫后在败者组3-1击败TES，但TES自身状态极差（JackeyLove赛后承认训练赛几乎没赢过），TSW的胜利含金量有限。TSW整体胜率65.45%高于LYON的54.55%，但LYON面对的对手质量更高。LYON的sweep_rate达0.426，显示出强势碾压能力。",
+      "matchups": "上路：Dhokla是LYON的明显弱点，对阵BLG时多次被单杀和针对，TSW的Hiro02若能获得打野支援可能打开突破口。打野：Inspired是LYON的核心发动机，即使面对BLG也组织了多次精彩反扑，经验丰富；TSW的Hizto打法激进，前期节奏好但中后期决策可能不如Inspired稳定。中路：Dire状态火热，瑞兹10-0-11统治TES，是TSW的核心carry点；Saint需要限制Dire的游走和团战影响力。下路：Berserker和Isles组合稳定，团战输出可靠；TSW的Eddie和Bie在对阵TES时表现不错但面对更强对手可能吃力。整体而言，LYON的团战执行力和后期决策更成熟，但TSW的中野联动和奇招BP（如瑟提、蒙多）可能制造麻烦。",
+      "meta_style": "当前版本强调中后期团战和资源争夺，瑞兹、辛德拉等控制型中单优先级高，打野以皇子、李青、猴子等能开团能抢龙的英雄为主。LYON擅长后期翻盘和关键资源团（Saint辛德拉抢远古龙、Isles妮蔻大招团灭），契合版本节奏。TSW则倾向于前中期滚雪球和奇招BP，但面对运营成熟的队伍时终结能力不足（被HLE零封暴露问题）。LYON的版本适应度更高，团战容错率更强。",
+      "h2h_psych": "两队无历史交手记录。LYON作为LCS冠军有更强的国际赛经验和心理承受能力，刚经历与BLG的高强度对抗后状态保持良好。TSW虽然击败TES士气高涨，但TES是本届MSI状态最差的队伍之一，这场胜利的参考价值有限。TSW作为越南全华班，在大赛舞台上的临场调整能力仍有待验证（被HLE零封时毫无还手之力）。败者组生死战压力巨大，LYON的大赛经验将是关键优势。"
+    },
+    "win_probs": {
+      "blue": 0.62,
+      "red": 0.38
+    },
+    "predicted_winner": "blue",
+    "series_score": "3-1",
+    "series_length": 4,
+    "favored_side": "blue_slight",
+    "key_players": [
+      {
+        "player": "Inspired",
+        "team": "blue",
+        "role": "jun",
+        "reason": "LYON的核心发动机，即使面对BLG也能组织有效反扑，经验丰富，抢龙和团战决策能力强"
+      },
+      {
+        "player": "Dire",
+        "team": "red",
+        "role": "mid",
+        "reason": "TSW的carry核心，瑞兹10-0-11统治TES，游走和团战影响力巨大，是TSW能否取胜的关键"
+      },
+      {
+        "player": "Dhokla",
+        "team": "blue",
+        "role": "top",
+        "reason": "LYON的明显弱点，对阵BLG时多次被单杀和针对，若被TSW打开突破口可能导致LYON崩盘"
+      },
+      {
+        "player": "Hizto",
+        "team": "red",
+        "role": "jun",
+        "reason": "TSW前期节奏的发动机，盲僧住下路帮助打开局势，激进打法可能给LYON制造麻烦"
+      },
+      {
+        "player": "Saint",
+        "team": "blue",
+        "role": "mid",
+        "reason": "LYON的中单核心，辛德拉抢龙和团战输出关键，需要限制Dire的发挥"
+      }
+    ],
+    "swing_factors": [
+      "Dhokla上路对线稳定性——若被TSW打野针对可能导致LYON前期崩盘",
+      "TSW的奇招BP策略（如瑟提、蒙多等非主流英雄）能否打乱LYON的战术部署",
+      "Dire瑞兹的优先级——若被LYON禁用或抢走，TSW的中路carry能力将大幅下降",
+      "LYON的后期团战执行力——多次逆风翻盘证明其团战容错率高",
+      "败者组生死战的心理压力——TSW大赛经验相对不足，关键局可能失误"
+    ],
+    "meta_style_signals": [
+      "瑞兹、辛德拉等控制型中单优先级极高，Dire的瑞兹是TSW核心武器",
+      "打野以能开团能抢龙的英雄为主（皇子、李青、猴子），Inspired和Hizto的对决是关键",
+      "后期团战和资源争夺决定胜负，LYON的翻盘能力契合版本节奏",
+      "奇招BP（瑟提上单、蒙多等）在BO5中可能成为破局点，TSW曾借此击败TES"
+    ],
+    "sources": [
+      {
+        "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "LYON LCS 2026 roster MSI performance",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "Team Secret Whales MSI 2026 Vietnam results",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "MSI 2026 knockout bracket results July",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "LoL patch 2026 MSI meta champions tier list",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "TSW vs TES MSI 2026 result Vietnam team",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "LYON BLG MSI 2026 Dhokla Inspired performance",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      },
+      {
+        "query": "MSI 2026 July 8 schedule TSW LYON losers bracket",
+        "accessed_at": "2026-07-08T02:16:26Z"
+      }
+    ]
+  },
+  "raw_text": "{\n  \"reasoning\": {\n    \"overall\": \"LYON作为LCS一号种子整体实力更强，虽然被BLG零封但对手是本届MSI最强战队之一；TSW虽击败TES但TES状态极差且内部问题严重，LYON在败者组生死战中应凭借更成熟的运营和团战执行力以3-1取胜。\",\n    \"fundamentals\": \"LYON近期状态出色：LCS春季赛3-0横扫C9和TL夺冠，MSI正赛3-0零封FUR，仅在面对BLG时0-3失利（BLG是本届MSI夺冠热门）。队伍运营成熟，团战韧性强，多次完成逆风翻盘。TSW方面，被HLE 0-3横扫后在败者组3-1击败TES，但TES自身状态极差（JackeyLove赛后承认训练赛几乎没赢过），TSW的胜利含金量有限。TSW整体胜率65.45%高于LYON的54.55%，但LYON面对的对手质量更高。LYON的sweep_rate达0.426，显示出强势碾压能力。\",\n    \"matchups\": \"上路：Dhokla是LYON的明显弱点，对阵BLG时多次被单杀和针对，TSW的Hiro02若能获得打野支援可能打开突破口。打野：Inspired是LYON的核心发动机，即使面对BLG也组织了多次精彩反扑，经验丰富；TSW的Hizto打法激进，前期节奏好但中后期决策可能不如Inspired稳定。中路：Dire状态火热，瑞兹10-0-11统治TES，是TSW的核心carry点；Saint需要限制Dire的游走和团战影响力。下路：Berserker和Isles组合稳定，团战输出可靠；TSW的Eddie和Bie在对阵TES时表现不错但面对更强对手可能吃力。整体而言，LYON的团战执行力和后期决策更成熟，但TSW的中野联动和奇招BP（如瑟提、蒙多）可能制造麻烦。\",\n    \"meta_style\": \"当前版本强调中后期团战和资源争夺，瑞兹、辛德拉等控制型中单优先级高，打野以皇子、李青、猴子等能开团能抢龙的英雄为主。LYON擅长后期翻盘和关键资源团（Saint辛德拉抢远古龙、Isles妮蔻大招团灭），契合版本节奏。TSW则倾向于前中期滚雪球和奇招BP，但面对运营成熟的队伍时终结能力不足（被HLE零封暴露问题）。LYON的版本适应度更高，团战容错率更强。\",\n    \"h2h_psych\": \"两队无历史交手记录。LYON作为LCS冠军有更强的国际赛经验和心理承受能力，刚经历与BLG的高强度对抗后状态保持良好。TSW虽然击败TES士气高涨，但TES是本届MSI状态最差的队伍之一，这场胜利的参考价值有限。TSW作为越南全华班，在大赛舞台上的临场调整能力仍有待验证（被HLE零封时毫无还手之力）。败者组生死战压力巨大，LYON的大赛经验将是关键优势。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.62,\n    \"red\": 0.38\n  },\n  \"predicted_winner\": \"blue\",\n  \"series_score\": \"3-1\",\n  \"series_length\": 4,\n  \"favored_side\": \"blue_slight\",\n  \"key_players\": [\n    { \"player\": \"Inspired\", \"team\": \"blue\", \"role\": \"jun\", \"reason\": \"LYON的核心发动机，即使面对BLG也能组织有效反扑，经验丰富，抢龙和团战决策能力强\" },\n    { \"player\": \"Dire\", \"team\": \"red\", \"role\": \"mid\", \"reason\": \"TSW的carry核心，瑞兹10-0-11统治TES，游走和团战影响力巨大，是TSW能否取胜的关键\" },\n    { \"player\": \"Dhokla\", \"team\": \"blue\", \"role\": \"top\", \"reason\": \"LYON的明显弱点，对阵BLG时多次被单杀和针对，若被TSW打开突破口可能导致LYON崩盘\" },\n    { \"player\": \"Hizto\", \"team\": \"red\", \"role\": \"jun\", \"reason\": \"TSW前期节奏的发动机，盲僧住下路帮助打开局势，激进打法可能给LYON制造麻烦\" },\n    { \"player\": \"Saint\", \"team\": \"blue\", \"role\": \"mid\", \"reason\": \"LYON的中单核心，辛德拉抢龙和团战输出关键，需要限制Dire的发挥\" }\n  ],\n  \"swing_factors\": [\n    \"Dhokla上路对线稳定性——若被TSW打野针对可能导致LYON前期崩盘\",\n    \"TSW的奇招BP策略（如瑟提、蒙多等非主流英雄）能否打乱LYON的战术部署\",\n    \"Dire瑞兹的优先级——若被LYON禁用或抢走，TSW的中路carry能力将大幅下降\",\n    \"LYON的后期团战执行力——多次逆风翻盘证明其团战容错率高\",\n    \"败者组生死战的心理压力——TSW大赛经验相对不足，关键局可能失误\"\n  ],\n  \"meta_style_signals\": [\n    \"瑞兹、辛德拉等控制型中单优先级极高，Dire的瑞兹是TSW核心武器\",\n    \"打野以能开团能抢龙的英雄为主（皇子、李青、猴子），Inspired和Hizto的对决是关键\",\n    \"后期团战和资源争夺决定胜负，LYON的翻盘能力契合版本节奏\",\n    \"奇招BP（瑟提上单、蒙多等）在BO5中可能成为破局点，TSW曾借此击败TES\"\n  ],\n  \"sources\": [\n    { \"query\": \"LYON vs Team Secret Whales MSI 2026 prediction\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"LYON LCS 2026 roster MSI performance\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"Team Secret Whales MSI 2026 Vietnam results\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"Team Secret Whales LoL Vietnam 2026 MSI roster\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"MSI 2026 knockout bracket results July\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"LoL patch 2026 MSI meta champions tier list\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"TSW vs TES MSI 2026 result Vietnam team\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"LYON BLG MSI 2026 Dhokla Inspired performance\", \"accessed_at\": \"2026-07-08T02:16:26Z\" },\n    { \"query\": \"MSI 2026 July 8 schedule TSW LYON losers bracket\", \"accessed_at\": \"2026-07-08T02:16:26Z\" }\n  ]\n}",
+  "thinking_text": "Let me analyze this match carefully. It's LYON vs Team Secret Whales in MSI 2026 Knockouts, a Bo5 match scheduled for 2026-07-08T08:00:00Z.\n\nFrom the context pack:\n- LYON (blue): LCS team with players Winder (top), Kase (jun), Sweeho (mid, VE nationality), NANINI (adc), Starhide (sup)\n- Team Secret Whales (red): Vietnamese team (all VN nationality) with Hiro02 (top), Hizto (jun), Dire (mid), Eddie (adc), Bie (sup)\n\nRecent form:\n- LYON: 7W-3L in last 10, beat Team Liquid 3-0 and Cloud9 3-0 in LCS, but lost to 3v 0-2 and sdm-tigres 1-1 in North Regional League\n- TSW: 7W-3L in last 10, beat Deep Cross Gaming 3-1 in LCP Kickoff, lost to HLE 0-3 recently\n\nTeam objectives (55 games analyzed):\n- LYON: 30-25 (54.55% WR), dragon control 47.27%, baron 55.41%, towers 55.88%\n- TSW: 36-19 (65.45% WR), dragon control 57.21%, baron 69.23%, towers 62.67%\n\nTSW has significantly better objective control across the board.\n\nSeries history:\n- LYON: sweep_rate 0.426, swept_rate 0.213, avg_series_length 2.6\n- TSW: sweep_rate 0.354, swept_rate 0.271, avg_series_length 2.6\n\nNo H2H history between these teams.\n\nLet me search for more information about these teams.\nLet me analyze the search results carefully:\n\n1. **LYON** is the LCS (North America) champion - they won the 2026 LCS Spring Split by sweeping TL 3-0 in the finals (June 15). Their roster is: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support).\n\n2. **LYON at MSI 2026**:\n   - Swept FURIA 3-0 (July 4) in the knockouts\n   - Got swept 0-3 by BLG (July 6) in the winners bracket\n   - So they're coming off a 0-3 loss to BLG\n\n3. **Team Secret Whales (TSW)** - I need more info about them. The context_pack shows they're from Vietnam (all players have VN nationality). Let me search more.\n\nWait - the context_pack shows LYON's roster as: Winder (top), Kase (jun), Sweeho (mid), NANINI (adc), Starhide (sup). But the search results show LYON's actual roster as: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support).\n\nThis is confusing. The context_pack roster might be outdated or for a different team. Let me search more about Team Secret Whales and the actual LYON roster for this match.\n\nActually, looking more carefully at the context_pack, the LYON roster listed (Winder, Kase, Sweeho, NANINI, Starhide) doesn't match the actual LYON LCS roster (Dhokla, Inspired, Saint, Berserker, Isles). This could be because:\n1. The context_pack data is wrong/outdated\n2. There might be a different LYON team\n\nBut the search results clearly show LYON is the LCS champion with Dhokla, Inspired, Saint, Berserker, Isles. Let me search for more info about Team Secret Whales.\n\nAlso, the match is on July 8, 2026, and it's in the \"Knockouts\" stage of MSI 2026. LYON just lost 0-3 to BLG on July 6, so they're likely in the losers bracket now.\n\nLet me search for more about TSW and the current meta.\nLet me analyze the search results carefully to build a comprehensive prediction.\n\nKey findings:\n\n1. **LYON (Blue side)**:\n- LCS champions, won 3-0 against TL in the LCS Spring finals (June 15, 2026)\n- Roster: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support)\n- Wait, the context_pack shows different roster: Winder (top), Kase (jun), Sweeho (mid), NANINI (adc), Starhide (sup)\n- This is confusing. The search results mention Dhokla, Inspired, Saint, Berserker, Isles as LYON's roster. But the context_pack shows different names.\n- Actually, looking more carefully, the context_pack roster might be outdated or there could be a roster change. The search results consistently mention Dhokla, Inspired, Saint, Berserker, Isles.\n- LYON beat FUR 3-0 in MSI knockouts (July 4)\n- LYON lost to BLG 0-3 in MSI knockouts (July 6)\n- Now they're in the losers' bracket, facing TSW on July 8\n\n2. **Team Secret Whales (TSW, Red side)**:\n- LCP (Vietnam) champions\n- Roster: Hiro02 (top), Hizto (jungle), Dire (mid), Eddie (ADC), Bie (support) - all Vietnamese\n- TSW beat TES 3-1 in the losers' bracket (July 5) - this is a HUGE upset\n- TSW lost to HLE 0-3 in the winners' bracket first round (July 3)\n- TSW beat TES 3-1, with TES being an LPL team\n\n3. **Match context**:\n- This is a losers' bracket match at MSI 2026 knockouts\n- July 8, 2026, 11:00 (from the bilibili schedule)\n- Bo5 format\n- LYON just got swept 0-3 by BLG\n- TSW just beat TES 3-1\n\n4. **Meta/Version**:\n- Patch 16.11/16.12 era\n- Global BP (全局BP) is in effect\n- The meta seems to favor strong team fighting and objective control\n\n5. **Key observations**:\n- LYON was swept by BLG, showing they struggle against top-tier Asian teams\n- TSW beat TES 3-1, showing they can compete with LPL teams\n- However, TES was reportedly in very poor form (\"训练状态很差很差\")\n- LYON's Dhokla was repeatedly targeted and killed in the BLG series\n- TSW has momentum from beating TES\n\nLet me search for more specific information about this match and the current form.\nLet me analyze the data I've gathered:\n\n**Key findings:**\n\n1. **LYON (Blue side)**:\n   - LCS Spring 2026 Champion - swept TL 3-0 in finals, swept C9 3-0 in semis\n   - Roster: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support)\n   - MSI results: 3-0 FUR (winners round 1), then 0-3 lost to BLG (winners round 2)\n   - Now in losers bracket, facing TSW on July 8\n   - Community ranking: B tier (#7)\n   - Dhokla was singled out as weak point vs BLG - got solo killed multiple times\n   - Inspired was praised for creating counter-attacks even vs BLG\n   - sweep_rate: 0.426, swept_rate: 0.213\n\n2. **TSW (Red side)**:\n   - LCP (Vietnam/Pacific) #1 seed\n   - All-Vietnamese roster: Hiro02, Hizto, Dire, Eddie, Bie\n   - MSI results: 0-3 lost to HLE (winners round 1), then 3-1 beat TES (losers round 1)\n   - Community ranking: C tier (#9)\n   - Dire's Ryze was dominant vs TES (10-0-11 in game 1)\n   - Showed creative picks (Sett, Mundo) that caused TES problems\n   - sweep_rate: 0.354, swept_rate: 0.271\n\n3. **Context**:\n   - This is a losers bracket match - loser is eliminated\n   - LYON just got swept 0-3 by BLG, but BLG is arguably the best team in the tournament\n   - TSW beat TES 3-1, which was a massive upset (LPL #2 seed)\n   - TSW had previously been swept 0-3 by HLE\n\n4. **Meta/Version**:\n   - Patch 16.11/16.12 era\n   - Key champions mentioned: Ryze, Syndra, Azir, Jarvan IV, Lee Sin, Nidalee, Ezreal, Bomberman (Ziggs?), Nautilus, Camille, Seraphine, Gnar, Jayce, Narnar, Varus (top), Mel (ADC?)\n   - Global BP (all champions available?) - mentioned \"全局BP\" (full champion pool BP)\n   - Creative picks like Sett, Mundo appeared\n\n5. **Matchup analysis**:\n   - LYON has better fundamentals as LCS champions\n   - TSW has momentum from beating TES\n   - LYON's Dhokla is a weakness (got targeted by BLG)\n   - TSW's Dire is in great form on Ryze\n   - LYON's Inspired is strong and experienced\n   - TSW's Hizto (jungle) was aggressive vs TES\n\n6. **Sweep rates**:\n   - LYON: sweep_rate 0.426, swept_rate 0.213, avg_series_length 2.6\n   - TSW: sweep_rate 0.354, swept_rate 0.271, avg_series_length 2.6\n   - Both teams have relatively short series on average\n\n7. **Key considerations**:\n   - LYON is LCS #1 seed, generally considered stronger than LCP/Vietnam\n   - But TSW just beat TES (LPL #2) 3-1, showing they can compete at high level\n   - LYON got swept by BLG but BLG is top-tier\n   - This is losers bracket - high pressure\n   - LYON has international experience from recent MSI run\n   - TSW is all-Vietnamese, potentially less experienced on big stage but riding high after beating TES\n\nLet me think about the prediction:\n- LYON is fundamentally the stronger team (LCS champion, swept C9 and TL)\n- TSW has momentum but their win was against a struggling TES\n- LYON's loss to BLG was against arguably the best team at MSI\n- Community rankings put LYON at B (#7) and TSW at C (#9)\n- LYON's sweep_rate (0.426) is higher than TSW's (0.354)\n- Both avg_series_length are 2.6, suggesting shorter series\n\nI think LYON is slightly favored. They're the better team on paper, and their loss to BLG doesn't reflect their true strength. TSW beat a TES team that was internally struggling (JackeyLove admitted their practice was terrible).\n\nHowever, TSW has momentum and confidence. This could be closer than expected.\n\nI'll predict LYON wins 3-1. The sweep rate for LYON is decent (0.426) but TSW showed they can fight (they beat TES 3-1, not 3-0). TSW's swept_rate is 0.271 which is not negligible.\n\nActually, let me reconsider. LYON's sweep_rate is 0.426 which is quite high. TSW got swept by HLE 0-3. TSW's swept_rate is 0.271. But TSW showed they can compete by beating TES 3-1.\n\nGiven:\n- LYON is stronger on paper\n- TSW has momentum\n- Both teams have avg_series_length of 2.6\n- LYON sweep_rate 0.426 vs TSW swept_rate 0.271\n\nI think 3-1 for LYON is reasonable. LYON wins with probability around 0.62-0.65.\n\nWait, let me reconsider the roster discrepancy. The context_pack shows LYON's roster as: Winder (top), Kase (jun), Sweeho (mid), NANINI (adc), Starhide (sup). But the search results show LYON's actual MSI roster as: Dhokla (top), Inspired (jungle), Saint (mid), Berserker (ADC), Isles (support).\n\nThis is a significant discrepancy. The context_pack might have outdated or incorrect roster data. The actual LYON roster at MSI 2026 is Dhokla, Inspired, Saint, Berserker, Isles based on multiple search results.\n\nSimilarly, TSW's roster in context_pack: Hiro02, Hizto, Dire, Eddie, Bie - this matches the search results mentioning Hizto, Dire, and Bie.\n\nI should use the actual roster from search results for my analysis since the context_pack seems to have incorrect LYON data.\n\nLet me finalize my prediction:\n- LYON wins 3-1\n- Win probability: LYON 0.62, TSW 0.38\n- Key players: Inspired (LYON jungle), Dire (TSW mid), Dhokla (LYON top - weakness), Hizto (TSW jungle)\n- Favored side: blue_slight\n\nActually, looking more carefully at the data:\n- LYON recent form: 7W-3L in last 10 games (70% win rate)\n- TSW recent form: 7W-3L in last 10 games (70% win rate)\n- Both have identical win rates\n\nBut the quality of opponents matters:\n- LYON beat TL 3-0, C9 3-0, FUR 3-0, lost to BLG 0-3\n- TSW lost to HLE 0-3, beat TES 3-1\n\nLYON's wins are more impressive (TL and C9 are LCS teams, FUR is CBLOL champion). TSW's win over TES is impressive but TES was struggling.\n\nI'll go with LYON 3-1, probability 0.62/0.38.\n\nFor the series score, given:\n- LYON sweep_rate 0.426 (high)\n- TSW swept_rate 0.271 (moderate)\n- But TSW showed fight vs TES (took a game off them)\n- LYON got swept by BLG but BLG is elite\n\nI think 3-1 is the most likely outcome. LYON is better but TSW can take a game.\n\nLet me also consider: the context_pack roster for LYON (Winder, Kase, Sweeho, NANINI, Starhide) doesn't match the actual MSI roster. This might be a different LYON team or the data is wrong. I'll use the search results which consistently show Dhokla, Inspired, Saint, Berserker, Isles.\n\nWait - looking at the context_pack more carefully, it says \"LYON\" with players like Winder, Kase, Sweeho, NANINI, Starhide. But the search results show LYON's MSI roster as Dhokla, Inspired, Saint, Berserker, Isles. \n\nThe context_pack might be showing a different regional roster (perhaps LYON's North Regional League roster, as some of the recent_form games show \"north_regional_league\"). The MSI roster is different.\n\nFor my analysis, I should note this discrepancy and use the actual MSI roster from search results.\n\nLet me finalize:\n\n**Prediction: LYON wins 3-1**\n- Win probs: LYON 0.62, TSW 0.38\n- Favored side: blue_slight\n- Series length: 4\n\nKey players:\n1. Inspired (LYON, jungle) - veteran, creates opportunities\n2. Dire (TSW, mid) - dominant on Ryze, in great form\n3. Dhokla (LYON, top) - weakness that can be targeted\n4. Hizto (TSW, jungle) - aggressive, key to TSW's early game\n5. Berserker (LYON, ADC) - consistent damage output\n\nSwing factors:\n1. Dhokla's vulnerability to ganks and solo kills\n2. TSW's creative pick strategy (Sett, Mundo, etc.)\n3. LYON's superior late-game team fighting\n4. Early jungle pathing - Inspired vs Hizto\n5. Mid lane priority - Saint vs Dire\n\nMeta signals:\n1. Ryze is a priority pick/ban (Dire's signature)\n2. Tank junglers and engage supports dominate\n3. Late-game scaling ADCs preferred\n4. Top lane split-pushers (Jayce, Gnar, Narnar) are common",
+  "sources": [
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:32Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:32Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:32Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:33Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:33Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:33Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "MSI 2026 knockout bracket results July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:49Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:51Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:51Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:51Z"
+    },
+    {
+      "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:51Z"
+    },
+    {
+      "query": "MSI 2026 knockout bracket results July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:51Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:51Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "MSI 2026 knockout bracket results July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 result Vietnam team",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:07Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "MSI 2026 knockout bracket results July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 result Vietnam team",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "LYON BLG MSI 2026 Dhokla Inspired performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:08Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "LYON LCS 2026 roster MSI performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "Team Secret Whales MSI 2026 Vietnam results",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "Team Secret Whales LoL Vietnam 2026 MSI roster",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "MSI 2026 knockout bracket results July",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "LoL patch 2026 MSI meta champions tier list",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 result Vietnam team",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "LYON BLG MSI 2026 Dhokla Inspired performance",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    },
+    {
+      "query": "MSI 2026 July 8 schedule TSW LYON losers bracket",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:09Z"
+    }
+  ],
+  "input_tokens": 92198,
+  "output_tokens": 6199,
+  "tool_calls": 9,
+  "cost_usd": 0.18719,
+  "wall_seconds": 127.74,
+  "error": null
+}

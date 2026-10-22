@@ -1,0 +1,2193 @@
+{
+  "collected_at": "2026-07-07T09:19:05Z",
+  "fixture_header": {
+    "match_id": 115570934355614581,
+    "name": "T1 vs G2 Esports",
+    "league": "MSI",
+    "league_id": "lol-msi",
+    "serie": null,
+    "tournament": null,
+    "tier": null,
+    "region": null,
+    "stage_hint": "T1 vs G2 Esports",
+    "match_type": null,
+    "number_of_games": 5,
+    "begin_at_utc": "2026-07-08T03:00:00.000Z",
+    "patch_version": null,
+    "status": "not_started",
+    "blue": {
+      "id": "t1",
+      "name": "T1",
+      "acronym": "T1",
+      "slug": "t1",
+      "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+      "location": null
+    },
+    "red": {
+      "id": "g2-esports",
+      "name": "G2 Esports",
+      "acronym": "G2",
+      "slug": "g2-esports",
+      "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+      "location": null
+    },
+    "block_name": "Knockouts"
+  },
+  "rosters": {
+    "blue": {
+      "team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Haetae",
+          "id": "eac82fbf-b63f-48f5-bac4-7970993b81eb",
+          "nationality": "KR"
+        },
+        {
+          "role": "jun",
+          "name": "Painter",
+          "id": "fa8b69ea-b2d9-4e4e-b46a-bd89dc69d3fd",
+          "nationality": "KR"
+        },
+        {
+          "role": "mid",
+          "name": "Faker",
+          "id": "c76dc4df-1a6f-4c83-b7ba-44cf213e0291",
+          "nationality": "KR"
+        },
+        {
+          "role": "adc",
+          "name": "Jinbeom",
+          "id": "5516bdd9-f5d6-4e3c-9e2b-31b1d1d71cc1",
+          "nationality": null
+        },
+        {
+          "role": "sup",
+          "name": "Cloud",
+          "id": "e232b0e4-fe0d-4536-b3fb-2793715cac79",
+          "nationality": "CN"
+        }
+      ],
+      "available": true
+    },
+    "red": {
+      "team": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "BrokenBlade",
+          "id": "04ed8f00-a70c-48ed-a778-0846fd7eaf93",
+          "nationality": "DE"
+        },
+        {
+          "role": "jun",
+          "name": "SkewMond",
+          "id": "de506135-2533-4405-97ec-ea3ad91d08a3",
+          "nationality": "FR"
+        },
+        {
+          "role": "mid",
+          "name": "Caps",
+          "id": "64d264c9-b48a-4f24-8a23-5b60a83ea0e5",
+          "nationality": "DK"
+        },
+        {
+          "role": "adc",
+          "name": "Hans Sama",
+          "id": "4e4ebd45-dd1d-4288-9829-5e4d4689bccd",
+          "nationality": "FR"
+        },
+        {
+          "role": "sup",
+          "name": "Labrov",
+          "id": "8bb6e126-1170-431c-b17c-898dcbb97284",
+          "nationality": "GR"
+        }
+      ],
+      "available": true
+    }
+  },
+  "recent_form": {
+    "blue": {
+      "available": true,
+      "games_played": 10,
+      "wins": 5,
+      "win_rate": 0.5,
+      "matches": [
+        {
+          "date": "2026-06-14",
+          "league": "lck",
+          "opponent": "gen",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 10,
+          "opponent_kills": 30,
+          "gold": 56400,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 1
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lck",
+          "opponent": "gen",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 19,
+          "opponent_kills": 12,
+          "gold": 79900,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 9
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lck",
+          "opponent": "gen",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 14,
+          "gold": 86000,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lck",
+          "opponent": "gen",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 12,
+          "opponent_kills": 18,
+          "gold": 60700,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 3
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lck",
+          "opponent": "gen",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 19,
+          "opponent_kills": 10,
+          "gold": 61600,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-06-12",
+          "league": "lck",
+          "opponent": "hle",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 16,
+          "opponent_kills": 20,
+          "gold": 73000,
+          "dragons": 4,
+          "barons": 0,
+          "towers": 5
+        },
+        {
+          "date": "2026-06-12",
+          "league": "lck",
+          "opponent": "hle",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 16,
+          "opponent_kills": 11,
+          "gold": 74500,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 10
+        },
+        {
+          "date": "2026-06-12",
+          "league": "lck",
+          "opponent": "hle",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 7,
+          "opponent_kills": 20,
+          "gold": 55100,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-06-12",
+          "league": "lck",
+          "opponent": "hle",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 11,
+          "opponent_kills": 19,
+          "gold": 60100,
+          "dragons": 3,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-05-30",
+          "league": "lck",
+          "opponent": "bfx",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 25,
+          "opponent_kills": 21,
+          "gold": 77700,
+          "dragons": 3,
+          "barons": 0,
+          "towers": 8
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "games_played": 10,
+      "wins": 6,
+      "win_rate": 0.6,
+      "matches": [
+        {
+          "date": "2026-06-07",
+          "league": "lec",
+          "opponent": "karmine-corp",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 7,
+          "opponent_kills": 12,
+          "gold": 56700,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 3
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lec",
+          "opponent": "karmine-corp",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 14,
+          "opponent_kills": 3,
+          "gold": 49700,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lec",
+          "opponent": "karmine-corp",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 6,
+          "opponent_kills": 19,
+          "gold": 61900,
+          "dragons": 1,
+          "barons": 1,
+          "towers": 2
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lec",
+          "opponent": "karmine-corp",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 29,
+          "opponent_kills": 13,
+          "gold": 66600,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 9
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lec",
+          "opponent": "karmine-corp",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 6,
+          "gold": 53700,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-25",
+          "league": "lec",
+          "opponent": "mad-lions",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 9,
+          "opponent_kills": 18,
+          "gold": 55600,
+          "dragons": 3,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-05-25",
+          "league": "lec",
+          "opponent": "mad-lions",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 16,
+          "opponent_kills": 19,
+          "gold": 64900,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 5
+        },
+        {
+          "date": "2026-05-25",
+          "league": "lec",
+          "opponent": "mad-lions",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 5,
+          "gold": 54700,
+          "dragons": 4,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-25",
+          "league": "lec",
+          "opponent": "mad-lions",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 26,
+          "opponent_kills": 12,
+          "gold": 70900,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-25",
+          "league": "lec",
+          "opponent": "mad-lions",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 15,
+          "opponent_kills": 16,
+          "gold": 72900,
+          "dragons": 3,
+          "barons": 1,
+          "towers": 7
+        }
+      ]
+    }
+  },
+  "h2h": {
+    "available": true,
+    "team_a_id": "t1",
+    "team_b_id": "g2-esports",
+    "meetings": 0,
+    "team_a_wins": 0,
+    "team_b_wins": 0,
+    "recent": []
+  },
+  "team_objectives": {
+    "blue": {
+      "available": true,
+      "games_analyzed": 54,
+      "game_record": {
+        "wins": 40,
+        "losses": 14,
+        "win_rate": 0.7407
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 2.57,
+          "opponent_avg_per_game": 2.19,
+          "control_rate": 0.5409
+        },
+        "barons": {
+          "avg_per_game": 0.83,
+          "opponent_avg_per_game": 0.59,
+          "control_rate": 0.5844
+        },
+        "towers": {
+          "avg_per_game": 7.3,
+          "opponent_avg_per_game": 4.46,
+          "control_rate": 0.6205
+        },
+        "kills": {
+          "avg_per_game": 18.89,
+          "opponent_avg_per_game": 14.43,
+          "control_rate": 0.567
+        },
+        "gold": {
+          "avg_per_game": 67700.46,
+          "opponent_avg_per_game": 62728.63,
+          "control_rate": 0.5191
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.5185,
+        "first_tower_rate": 0.537,
+        "first_dragon_rate": 0.4444,
+        "first_baron_rate": 0.6154
+      }
+    },
+    "red": {
+      "available": true,
+      "games_analyzed": 46,
+      "game_record": {
+        "wins": 28,
+        "losses": 18,
+        "win_rate": 0.6087
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 2.39,
+          "opponent_avg_per_game": 1.96,
+          "control_rate": 0.55
+        },
+        "barons": {
+          "avg_per_game": 0.89,
+          "opponent_avg_per_game": 0.43,
+          "control_rate": 0.6721
+        },
+        "towers": {
+          "avg_per_game": 6.91,
+          "opponent_avg_per_game": 4.65,
+          "control_rate": 0.5977
+        },
+        "kills": {
+          "avg_per_game": 15.3,
+          "opponent_avg_per_game": 11.65,
+          "control_rate": 0.5677
+        },
+        "gold": {
+          "avg_per_game": 60784.17,
+          "opponent_avg_per_game": 57737.76,
+          "control_rate": 0.5129
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.5435,
+        "first_tower_rate": 0.6087,
+        "first_dragon_rate": 0.4348,
+        "first_baron_rate": 0.6977
+      }
+    }
+  },
+  "team_series_history": {
+    "blue": {
+      "available": true,
+      "series_count": 49,
+      "games_with_duration": 115,
+      "avg_game_duration_min": 32.7,
+      "avg_series_length": 2.9,
+      "sweep_rate": 0.469,
+      "swept_rate": 0.102,
+      "recent_series": [
+        {
+          "date": "2026-07-03",
+          "league": "2026",
+          "opponent_slug": "blg",
+          "side": "red",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 3,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 4,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 5,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-07-01",
+          "league": "2026",
+          "opponent_slug": "tlaw",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-29",
+          "league": "2026",
+          "opponent_slug": "kc",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-28",
+          "league": "2026",
+          "opponent_slug": "tlaw",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "league": "Summer 2024",
+          "opponent_slug": "gen",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 2,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 31.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 39.2,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 44.9,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 32.7,
+              "won": false
+            },
+            {
+              "game_number": 5,
+              "duration_min": 28.4,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "league": "Summer 2024",
+          "opponent_slug": "hle",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 3,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 37.9,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 34.5,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 31.8,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 32.3,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-30",
+          "league": "Summer 2024",
+          "opponent_slug": "bfx",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 37.9,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 29.8,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-28",
+          "league": "Summer 2024",
+          "opponent_slug": "kt",
+          "side": "red",
+          "result": "win",
+          "team_score": 1,
+          "opponent_score": 0,
+          "series_length": 1,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 28.8,
+              "won": true
+            }
+          ]
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "series_count": 49,
+      "games_with_duration": 93,
+      "avg_game_duration_min": 32.0,
+      "avg_series_length": 2.5,
+      "sweep_rate": 0.449,
+      "swept_rate": 0.245,
+      "recent_series": [
+        {
+          "date": "2026-07-04",
+          "league": "2026",
+          "opponent_slug": "top-esports",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 2,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 4,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 5,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "league": "Winter 2026",
+          "opponent_slug": "karmine-corp",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 2,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 32.4,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 22.8,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 35.5,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 29.8,
+              "won": true
+            },
+            {
+              "game_number": 5,
+              "duration_min": 26.3,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-25",
+          "league": "Winter 2026",
+          "opponent_slug": "g2-esports",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 3,
+          "series_length": 5,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 31.6,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 32.7,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 25.0,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 32.3,
+              "won": false
+            },
+            {
+              "game_number": 5,
+              "duration_min": 38.0,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-23",
+          "league": "Winter 2026",
+          "opponent_slug": "kc",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 3,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 44.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 27.5,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 30.8,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 26.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-10",
+          "league": "Winter 2026",
+          "opponent_slug": "mad-lions",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 2,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 29.6,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 32.9,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 42.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-09",
+          "league": "Winter 2026",
+          "opponent_slug": "giantx-lec",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 29.8,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 32.5,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-08",
+          "league": "Winter 2026",
+          "opponent_slug": "karmine-corp",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 28.5,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 30.6,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "league": "Winter 2026",
+          "opponent_slug": "natus-vincere",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 29.6,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 35.3,
+              "won": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "team_standings": {
+    "available": false,
+    "reason": "no standings rows (new season?)",
+    "hint": "Use the web_search tool to fetch this yourself."
+  },
+  "player_form": {
+    "blue": [
+      {
+        "available": true,
+        "player": "Haetae",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 33,
+        "win_rate": 0.6667,
+        "avg_kda": 3.25,
+        "avg_kills": 3.06,
+        "avg_deaths": 2.67,
+        "avg_assists": 5.61,
+        "avg_cs_per_min": 8.57,
+        "avg_gold_per_min": 404.88,
+        "avg_damage_per_min": 748.06,
+        "kill_participation": 0.4434,
+        "consistency_score": 61.75,
+        "kda_variance": 14.63
+      },
+      {
+        "available": true,
+        "player": "Painter",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 29,
+        "win_rate": 0.7241,
+        "avg_kda": 3.25,
+        "avg_kills": 5.14,
+        "avg_deaths": 4.21,
+        "avg_assists": 8.52,
+        "avg_cs_per_min": 3.77,
+        "avg_gold_per_min": 419.2,
+        "avg_damage_per_min": 574.7,
+        "kill_participation": 0.6402,
+        "consistency_score": 60.61,
+        "kda_variance": 15.51
+      },
+      {
+        "available": true,
+        "player": "Faker",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 59,
+        "win_rate": 0.678,
+        "avg_kda": 3.23,
+        "avg_kills": 3.8,
+        "avg_deaths": 3.25,
+        "avg_assists": 6.71,
+        "avg_cs_per_min": 8.76,
+        "avg_gold_per_min": 416.38,
+        "avg_damage_per_min": 676.35,
+        "kill_participation": 0.564,
+        "consistency_score": 56.35,
+        "kda_variance": 19.05
+      },
+      {
+        "available": true,
+        "player": "Jinbeom",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 4,
+        "win_rate": 0.5,
+        "avg_kda": 2.92,
+        "avg_kills": 3.5,
+        "avg_deaths": 3,
+        "avg_assists": 5.25,
+        "avg_cs_per_min": 9.85,
+        "avg_gold_per_min": 470.93,
+        "avg_damage_per_min": 606.11,
+        "kill_participation": 0,
+        "consistency_score": 55.84,
+        "kda_variance": 19.5
+      },
+      {
+        "available": true,
+        "player": "Cloud",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 20,
+        "win_rate": 0.65,
+        "avg_kda": 4.97,
+        "avg_kills": 0.9,
+        "avg_deaths": 2.9,
+        "avg_assists": 13.5,
+        "avg_cs_per_min": 1.2,
+        "avg_gold_per_min": 286.07,
+        "avg_damage_per_min": 262.43,
+        "kill_participation": 0.7106,
+        "consistency_score": 65.3,
+        "kda_variance": 12.04
+      }
+    ],
+    "red": [
+      {
+        "available": true,
+        "player": "BrokenBlade",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 42,
+        "win_rate": 0.5714,
+        "avg_kda": 4.14,
+        "avg_kills": 2,
+        "avg_deaths": 1.93,
+        "avg_assists": 5.98,
+        "avg_cs_per_min": 7.87,
+        "avg_gold_per_min": 367.14,
+        "avg_damage_per_min": 620.69,
+        "kill_participation": 0.495,
+        "consistency_score": 63.67,
+        "kda_variance": 13.2
+      },
+      {
+        "available": true,
+        "player": "SkewMond",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 46,
+        "win_rate": 0.5652,
+        "avg_kda": 5.8,
+        "avg_kills": 4.22,
+        "avg_deaths": 1.96,
+        "avg_assists": 7.13,
+        "avg_cs_per_min": 6.85,
+        "avg_gold_per_min": 389.53,
+        "avg_damage_per_min": 525.59,
+        "kill_participation": 0.6986,
+        "consistency_score": 40.46,
+        "kda_variance": 35.45
+      },
+      {
+        "available": true,
+        "player": "Caps",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 46,
+        "win_rate": 0.5652,
+        "avg_kda": 5.39,
+        "avg_kills": 4.35,
+        "avg_deaths": 2.04,
+        "avg_assists": 6.67,
+        "avg_cs_per_min": 8.46,
+        "avg_gold_per_min": 404.87,
+        "avg_damage_per_min": 746.36,
+        "kill_participation": 0.6781,
+        "consistency_score": 40.45,
+        "kda_variance": 35.46
+      },
+      {
+        "available": true,
+        "player": "Hans Sama",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 61,
+        "win_rate": 0.5902,
+        "avg_kda": 5.12,
+        "avg_kills": 3.46,
+        "avg_deaths": 1.46,
+        "avg_assists": 4.02,
+        "avg_cs_per_min": 7.15,
+        "avg_gold_per_min": 362.98,
+        "avg_damage_per_min": 799.48,
+        "kill_participation": 0.6525,
+        "consistency_score": 49,
+        "kda_variance": 26.01
+      },
+      {
+        "available": true,
+        "player": "Labrov",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 46,
+        "win_rate": 0.5652,
+        "avg_kda": 3.98,
+        "avg_kills": 0.91,
+        "avg_deaths": 3,
+        "avg_assists": 11.02,
+        "avg_cs_per_min": 0.92,
+        "avg_gold_per_min": 259.75,
+        "avg_damage_per_min": 257.99,
+        "kill_participation": 0.7345,
+        "consistency_score": 58,
+        "kda_variance": 17.64
+      }
+    ]
+  },
+  "player_champion_pool": {
+    "blue": [
+      {
+        "available": true,
+        "player": "Haetae",
+        "role": "top",
+        "games_analyzed": 33,
+        "champion_pool": [
+          {
+            "champion": "Sion",
+            "picks": 8,
+            "wins": 6,
+            "losses": 2,
+            "win_rate": 0.75,
+            "pick_rate": 0.2424
+          },
+          {
+            "champion": "Ambessa",
+            "picks": 7,
+            "wins": 4,
+            "losses": 3,
+            "win_rate": 0.5714,
+            "pick_rate": 0.2121
+          },
+          {
+            "champion": "Renekton",
+            "picks": 6,
+            "wins": 5,
+            "losses": 1,
+            "win_rate": 0.8333,
+            "pick_rate": 0.1818
+          },
+          {
+            "champion": "Rumble",
+            "picks": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": 0.3333,
+            "pick_rate": 0.0909
+          },
+          {
+            "champion": "Jayce",
+            "picks": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": 0.5,
+            "pick_rate": 0.0606
+          },
+          {
+            "champion": "Gnar",
+            "picks": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.0303
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Painter",
+        "role": "jun",
+        "games_analyzed": 29,
+        "champion_pool": [
+          {
+            "champion": "Vi",
+            "picks": 7,
+            "wins": 5,
+            "losses": 2,
+            "win_rate": 0.7143,
+            "pick_rate": 0.2414
+          },
+          {
+            "champion": "Xin Zhao",
+            "picks": 4,
+            "wins": 4,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.1379
+          },
+          {
+            "champion": "Pantheon",
+            "picks": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 0.75,
+            "pick_rate": 0.1379
+          },
+          {
+            "champion": "Qiyana",
+            "picks": 4,
+            "wins": 2,
+            "losses": 2,
+            "win_rate": 0.5,
+            "pick_rate": 0.1379
+          },
+          {
+            "champion": "Nocturne",
+            "picks": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.1034
+          },
+          {
+            "champion": "Jarvan IV",
+            "picks": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": 0.3333,
+            "pick_rate": 0.1034
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Faker",
+        "role": "mid",
+        "games_analyzed": 41,
+        "champion_pool": [
+          {
+            "champion": "Anivia",
+            "picks": 9,
+            "wins": 7,
+            "losses": 2,
+            "win_rate": 0.7778,
+            "pick_rate": 0.2195
+          },
+          {
+            "champion": "Twisted Fate",
+            "picks": 7,
+            "wins": 4,
+            "losses": 3,
+            "win_rate": 0.5714,
+            "pick_rate": 0.1707
+          },
+          {
+            "champion": "Azir",
+            "picks": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 0.75,
+            "pick_rate": 0.0976
+          },
+          {
+            "champion": "Akali",
+            "picks": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.0732
+          },
+          {
+            "champion": "Orianna",
+            "picks": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.0732
+          },
+          {
+            "champion": "Cassiopeia",
+            "picks": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": 0.6667,
+            "pick_rate": 0.0732
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Jinbeom",
+        "role": "adc",
+        "games_analyzed": 4,
+        "champion_pool": [
+          {
+            "champion": "Jhin",
+            "picks": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": 0.5,
+            "pick_rate": 0.5
+          },
+          {
+            "champion": "Caitlyn",
+            "picks": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.25
+          },
+          {
+            "champion": "Ashe",
+            "picks": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0,
+            "pick_rate": 0.25
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Cloud",
+        "role": "sup",
+        "games_analyzed": 20,
+        "champion_pool": [
+          {
+            "champion": "Bard",
+            "picks": 5,
+            "wins": 2,
+            "losses": 3,
+            "win_rate": 0.4,
+            "pick_rate": 0.25
+          },
+          {
+            "champion": "Alistar",
+            "picks": 4,
+            "wins": 4,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.2
+          },
+          {
+            "champion": "Poppy",
+            "picks": 4,
+            "wins": 2,
+            "losses": 2,
+            "win_rate": 0.5,
+            "pick_rate": 0.2
+          },
+          {
+            "champion": "Karma",
+            "picks": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.05
+          },
+          {
+            "champion": "Leona",
+            "picks": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.05
+          },
+          {
+            "champion": "Lulu",
+            "picks": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.05
+          }
+        ]
+      }
+    ],
+    "red": [
+      {
+        "available": true,
+        "player": "BrokenBlade",
+        "role": "top",
+        "games_analyzed": 36,
+        "champion_pool": [
+          {
+            "champion": "K'Sante",
+            "picks": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 0.8,
+            "pick_rate": 0.1389
+          },
+          {
+            "champion": "Kled",
+            "picks": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 0.75,
+            "pick_rate": 0.1111
+          },
+          {
+            "champion": "Ornn",
+            "picks": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": 0.25,
+            "pick_rate": 0.1111
+          },
+          {
+            "champion": "Rumble",
+            "picks": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.0833
+          },
+          {
+            "champion": "Gnar",
+            "picks": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": 0.3333,
+            "pick_rate": 0.0833
+          },
+          {
+            "champion": "Gwen",
+            "picks": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.0556
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "SkewMond",
+        "role": "jun",
+        "games_analyzed": 40,
+        "champion_pool": [
+          {
+            "champion": "Pantheon",
+            "picks": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": 0.3333,
+            "pick_rate": 0.15
+          },
+          {
+            "champion": "Xin Zhao",
+            "picks": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": 0.6,
+            "pick_rate": 0.125
+          },
+          {
+            "champion": "Skarner",
+            "picks": 5,
+            "wins": 2,
+            "losses": 3,
+            "win_rate": 0.4,
+            "pick_rate": 0.125
+          },
+          {
+            "champion": "Trundle",
+            "picks": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.075
+          },
+          {
+            "champion": "Vi",
+            "picks": 3,
+            "wins": 3,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.075
+          },
+          {
+            "champion": "Aatrox",
+            "picks": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": 0.6667,
+            "pick_rate": 0.075
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Caps",
+        "role": "mid",
+        "games_analyzed": 40,
+        "champion_pool": [
+          {
+            "champion": "Orianna",
+            "picks": 5,
+            "wins": 5,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.125
+          },
+          {
+            "champion": "Ahri",
+            "picks": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 0.8,
+            "pick_rate": 0.125
+          },
+          {
+            "champion": "Ryze",
+            "picks": 5,
+            "wins": 2,
+            "losses": 3,
+            "win_rate": 0.4,
+            "pick_rate": 0.125
+          },
+          {
+            "champion": "Taliyah",
+            "picks": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 0.75,
+            "pick_rate": 0.1
+          },
+          {
+            "champion": "Anivia",
+            "picks": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": 0.6667,
+            "pick_rate": 0.075
+          },
+          {
+            "champion": "Annie",
+            "picks": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": 0.6667,
+            "pick_rate": 0.075
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Hans Sama",
+        "role": "adc",
+        "games_analyzed": 49,
+        "champion_pool": [
+          {
+            "champion": "Yunara",
+            "picks": 8,
+            "wins": 4,
+            "losses": 4,
+            "win_rate": 0.5,
+            "pick_rate": 0.1633
+          },
+          {
+            "champion": "Ezreal",
+            "picks": 8,
+            "wins": 2,
+            "losses": 6,
+            "win_rate": 0.25,
+            "pick_rate": 0.1633
+          },
+          {
+            "champion": "Sivir",
+            "picks": 6,
+            "wins": 5,
+            "losses": 1,
+            "win_rate": 0.8333,
+            "pick_rate": 0.1224
+          },
+          {
+            "champion": "Caitlyn",
+            "picks": 6,
+            "wins": 4,
+            "losses": 2,
+            "win_rate": 0.6667,
+            "pick_rate": 0.1224
+          },
+          {
+            "champion": "Kai'Sa",
+            "picks": 5,
+            "wins": 5,
+            "losses": 0,
+            "win_rate": 1,
+            "pick_rate": 0.102
+          },
+          {
+            "champion": "Ashe",
+            "picks": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 0.8,
+            "pick_rate": 0.102
+          }
+        ]
+      },
+      {
+        "available": true,
+        "player": "Labrov",
+        "role": "sup",
+        "games_analyzed": 40,
+        "champion_pool": [
+          {
+            "champion": "Bard",
+            "picks": 8,
+            "wins": 5,
+            "losses": 3,
+            "win_rate": 0.625,
+            "pick_rate": 0.2
+          },
+          {
+            "champion": "Lulu",
+            "picks": 8,
+            "wins": 5,
+            "losses": 3,
+            "win_rate": 0.625,
+            "pick_rate": 0.2
+          },
+          {
+            "champion": "Neeko",
+            "picks": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 0.8,
+            "pick_rate": 0.125
+          },
+          {
+            "champion": "Nami",
+            "picks": 3,
+            "wins": 2,
+            "losses": 1,
+            "win_rate": 0.6667,
+            "pick_rate": 0.075
+          },
+          {
+            "champion": "Alistar",
+            "picks": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": 0.5,
+            "pick_rate": 0.05
+          },
+          {
+            "champion": "Nautilus",
+            "picks": 2,
+            "wins": 1,
+            "losses": 1,
+            "win_rate": 0.5,
+            "pick_rate": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "hero_pools": {
+    "blue": {
+      "available": true,
+      "champions": [
+        {
+          "champion": "Anivia",
+          "picks": 9,
+          "used_by": [
+            {
+              "player": "Faker",
+              "role": "mid",
+              "win_rate": 0.7778
+            }
+          ]
+        },
+        {
+          "champion": "Sion",
+          "picks": 8,
+          "used_by": [
+            {
+              "player": "Haetae",
+              "role": "top",
+              "win_rate": 0.75
+            }
+          ]
+        },
+        {
+          "champion": "Ambessa",
+          "picks": 7,
+          "used_by": [
+            {
+              "player": "Haetae",
+              "role": "top",
+              "win_rate": 0.5714
+            }
+          ]
+        },
+        {
+          "champion": "Vi",
+          "picks": 7,
+          "used_by": [
+            {
+              "player": "Painter",
+              "role": "jun",
+              "win_rate": 0.7143
+            }
+          ]
+        },
+        {
+          "champion": "Twisted Fate",
+          "picks": 7,
+          "used_by": [
+            {
+              "player": "Faker",
+              "role": "mid",
+              "win_rate": 0.5714
+            }
+          ]
+        },
+        {
+          "champion": "Renekton",
+          "picks": 6,
+          "used_by": [
+            {
+              "player": "Haetae",
+              "role": "top",
+              "win_rate": 0.8333
+            }
+          ]
+        },
+        {
+          "champion": "Bard",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Cloud",
+              "role": "sup",
+              "win_rate": 0.4
+            }
+          ]
+        },
+        {
+          "champion": "Xin Zhao",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Painter",
+              "role": "jun",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Pantheon",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Painter",
+              "role": "jun",
+              "win_rate": 0.75
+            }
+          ]
+        },
+        {
+          "champion": "Qiyana",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Painter",
+              "role": "jun",
+              "win_rate": 0.5
+            }
+          ]
+        },
+        {
+          "champion": "Azir",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Faker",
+              "role": "mid",
+              "win_rate": 0.75
+            }
+          ]
+        },
+        {
+          "champion": "Alistar",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Cloud",
+              "role": "sup",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Poppy",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Cloud",
+              "role": "sup",
+              "win_rate": 0.5
+            }
+          ]
+        },
+        {
+          "champion": "Rumble",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "Haetae",
+              "role": "top",
+              "win_rate": 0.3333
+            }
+          ]
+        },
+        {
+          "champion": "Nocturne",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "Painter",
+              "role": "jun",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Jarvan IV",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "Painter",
+              "role": "jun",
+              "win_rate": 0.3333
+            }
+          ]
+        },
+        {
+          "champion": "Akali",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "Faker",
+              "role": "mid",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Orianna",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "Faker",
+              "role": "mid",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Cassiopeia",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "Faker",
+              "role": "mid",
+              "win_rate": 0.6667
+            }
+          ]
+        },
+        {
+          "champion": "Jayce",
+          "picks": 2,
+          "used_by": [
+            {
+              "player": "Haetae",
+              "role": "top",
+              "win_rate": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "champions": [
+        {
+          "champion": "Yunara",
+          "picks": 8,
+          "used_by": [
+            {
+              "player": "Hans Sama",
+              "role": "adc",
+              "win_rate": 0.5
+            }
+          ]
+        },
+        {
+          "champion": "Ezreal",
+          "picks": 8,
+          "used_by": [
+            {
+              "player": "Hans Sama",
+              "role": "adc",
+              "win_rate": 0.25
+            }
+          ]
+        },
+        {
+          "champion": "Bard",
+          "picks": 8,
+          "used_by": [
+            {
+              "player": "Labrov",
+              "role": "sup",
+              "win_rate": 0.625
+            }
+          ]
+        },
+        {
+          "champion": "Lulu",
+          "picks": 8,
+          "used_by": [
+            {
+              "player": "Labrov",
+              "role": "sup",
+              "win_rate": 0.625
+            }
+          ]
+        },
+        {
+          "champion": "Pantheon",
+          "picks": 6,
+          "used_by": [
+            {
+              "player": "SkewMond",
+              "role": "jun",
+              "win_rate": 0.3333
+            }
+          ]
+        },
+        {
+          "champion": "Sivir",
+          "picks": 6,
+          "used_by": [
+            {
+              "player": "Hans Sama",
+              "role": "adc",
+              "win_rate": 0.8333
+            }
+          ]
+        },
+        {
+          "champion": "Caitlyn",
+          "picks": 6,
+          "used_by": [
+            {
+              "player": "Hans Sama",
+              "role": "adc",
+              "win_rate": 0.6667
+            }
+          ]
+        },
+        {
+          "champion": "K'Sante",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "BrokenBlade",
+              "role": "top",
+              "win_rate": 0.8
+            }
+          ]
+        },
+        {
+          "champion": "Xin Zhao",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "SkewMond",
+              "role": "jun",
+              "win_rate": 0.6
+            }
+          ]
+        },
+        {
+          "champion": "Skarner",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "SkewMond",
+              "role": "jun",
+              "win_rate": 0.4
+            }
+          ]
+        },
+        {
+          "champion": "Orianna",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Caps",
+              "role": "mid",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Ahri",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Caps",
+              "role": "mid",
+              "win_rate": 0.8
+            }
+          ]
+        },
+        {
+          "champion": "Ryze",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Caps",
+              "role": "mid",
+              "win_rate": 0.4
+            }
+          ]
+        },
+        {
+          "champion": "Kai'Sa",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Hans Sama",
+              "role": "adc",
+              "win_rate": 1
+            }
+          ]
+        },
+        {
+          "champion": "Ashe",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Hans Sama",
+              "role": "adc",
+              "win_rate": 0.8
+            }
+          ]
+        },
+        {
+          "champion": "Neeko",
+          "picks": 5,
+          "used_by": [
+            {
+              "player": "Labrov",
+              "role": "sup",
+              "win_rate": 0.8
+            }
+          ]
+        },
+        {
+          "champion": "Kled",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "BrokenBlade",
+              "role": "top",
+              "win_rate": 0.75
+            }
+          ]
+        },
+        {
+          "champion": "Ornn",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "BrokenBlade",
+              "role": "top",
+              "win_rate": 0.25
+            }
+          ]
+        },
+        {
+          "champion": "Taliyah",
+          "picks": 4,
+          "used_by": [
+            {
+              "player": "Caps",
+              "role": "mid",
+              "win_rate": 0.75
+            }
+          ]
+        },
+        {
+          "champion": "Rumble",
+          "picks": 3,
+          "used_by": [
+            {
+              "player": "BrokenBlade",
+              "role": "top",
+              "win_rate": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meta_reference": {
+    "available": false,
+    "reason": "no patch version in match data",
+    "hint": "Use the web_search tool to fetch this yourself."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614563,
+  "game_id": "lol-game-115570934355614566",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "T1 Doran",
+        "champion": "Varus",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "T1 Oner",
+        "champion": "Vi",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "T1 Faker",
+        "champion": "Taliyah",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "T1 Peyz",
+        "champion": "Kalista",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "T1 Keria",
+        "champion": "Renata Glasc",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "FUR Guigo",
+        "champion": "Gnar",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "FUR Tatu",
+        "champion": "Nasus",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "FUR Tutsz",
+        "champion": "Aurora",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "FUR Ayu",
+        "champion": "Senna",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "FUR JoJo",
+        "champion": "Seraphine",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-07T09:16:27Z",
+  "winner_side": "red",
+  "kills": {
+    "blue": 16,
+    "red": 23
+  },
+  "total_kills": 39
+}

@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614551,
+  "game_id": "lol-game-115570934355614552",
+  "position": 1,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "BLG Bin",
+        "champion": "Jayce",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "BLG Xun",
+        "champion": "Jarvan IV",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "BLG Knight",
+        "champion": "Ryze",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "BLG Viper",
+        "champion": "Mel",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "BLG ON",
+        "champion": "Camille",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "LYON Dhokla",
+        "champion": "K'Sante",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "LYON Inspired",
+        "champion": "Lee Sin",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "LYON Saint",
+        "champion": "Taliyah",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "LYON Berserker",
+        "champion": "Tristana",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "LYON Isles",
+        "champion": "Shen",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-07T09:16:38Z",
+  "winner_side": "blue",
+  "kills": {
+    "blue": 12,
+    "red": 11
+  },
+  "total_kills": 23
+}

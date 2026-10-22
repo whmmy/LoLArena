@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614563,
+  "game_id": "lol-game-115570934355614565",
+  "position": 2,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "T1 Doran",
+        "champion": "Rumble",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "T1 Oner",
+        "champion": "Jarvan IV",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "T1 Faker",
+        "champion": "Annie",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "T1 Peyz",
+        "champion": "Caitlyn",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "T1 Keria",
+        "champion": "Lux",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "FUR Guigo",
+        "champion": "Ornn",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "FUR Tatu",
+        "champion": "Aatrox",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "FUR Tutsz",
+        "champion": "Ahri",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "FUR Ayu",
+        "champion": "Ezreal",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "FUR JoJo",
+        "champion": "Bard",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-07T09:16:25Z",
+  "winner_side": "blue",
+  "kills": {
+    "blue": 11,
+    "red": 7
+  },
+  "total_kills": 18
+}

@@ -1,0 +1,210 @@
+{
+  "id": 115570934355614581,
+  "name": "T1 vs G2 Esports",
+  "match_type": null,
+  "status": "finished",
+  "number_of_games": 5,
+  "begin_at": "2026-07-08T03:00:00.000Z",
+  "scheduled_at": "2026-07-08T03:00:00.000Z",
+  "end_at": null,
+  "winner_id": "g2-esports",
+  "winner": {
+    "id": "g2-esports",
+    "type": "Team"
+  },
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "t1",
+      "score": 1
+    },
+    {
+      "team_id": "g2-esports",
+      "score": 3
+    }
+  ],
+  "league": {
+    "id": "lol-msi",
+    "name": "MSI",
+    "slug": "msi"
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-msi_2026"
+  },
+  "games": [
+    {
+      "id": "lol-game-115570934355614582",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614581,
+      "blue_team": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 23,
+        "towers": 7
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 20,
+        "towers": 6
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614583",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614581,
+      "blue_team": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 17,
+        "towers": 6
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 8,
+        "towers": 5
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614584",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614581,
+      "blue_team": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 18,
+        "towers": 4
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 21,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614585",
+      "position": 4,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614581,
+      "blue_team": {
+        "id": "g2-esports",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2-esports",
+        "image_url": "https://static.lolesports.com/teams/G2-FullonDark.png",
+        "kills": 27,
+        "towers": 10
+      },
+      "red_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 33,
+        "towers": 4
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
+  "videogame_version": {},
+  "block_name": "Knockouts",
+  "round": null,
+  "vod_url": "https://www.youtube.com/watch?v=YiOY4IrJ0LI"
+}

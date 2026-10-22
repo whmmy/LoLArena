@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614551,
+  "game_id": "lol-game-115570934355614553",
+  "position": 2,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "BLG Bin",
+        "champion": "Gnar",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "BLG Xun",
+        "champion": "Naafiri",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "BLG Knight",
+        "champion": "Orianna",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "BLG Viper",
+        "champion": "Ashe",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "BLG ON",
+        "champion": "Seraphine",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "LYON Dhokla",
+        "champion": "Ambessa",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "LYON Inspired",
+        "champion": "Skarner",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "LYON Saint",
+        "champion": "Viktor",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "LYON Berserker",
+        "champion": "Ziggs",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "LYON Isles",
+        "champion": "Pyke",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-07T09:16:42Z",
+  "winner_side": "blue",
+  "kills": {
+    "blue": 31,
+    "red": 18
+  },
+  "total_kills": 49
+}

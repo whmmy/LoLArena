@@ -1,0 +1,59 @@
+{
+  "id": 115548147900619045,
+  "name": "Gen.G Esports vs kt Rolster",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 3,
+  "begin_at": "2026-08-19T08:00:00.000Z",
+  "scheduled_at": "2026-08-19T08:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": null,
+        "name": "Gen.G Esports",
+        "acronym": "GEN",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1773829250929_GENGLOGO_GOLD.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": null,
+        "name": "kt Rolster",
+        "acronym": "KT",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/kt_darkbackground.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": null,
+      "score": 0
+    },
+    {
+      "team_id": null,
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-lck",
+    "name": "LCK",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": null,
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Week 13",
+  "round": null,
+  "vod_url": null
+}

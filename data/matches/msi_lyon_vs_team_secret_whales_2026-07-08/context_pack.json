@@ -1,0 +1,1241 @@
+{
+  "collected_at": "2026-07-08T02:16:26Z",
+  "fixture_header": {
+    "match_id": 115570934355614587,
+    "name": "LYON vs Team Secret Whales",
+    "league": "MSI",
+    "league_id": "lol-msi",
+    "serie": null,
+    "tournament": "2026",
+    "tier": null,
+    "region": null,
+    "stage_hint": "LYON vs Team Secret Whales",
+    "match_type": null,
+    "number_of_games": 5,
+    "begin_at_utc": "2026-07-08T08:00:00.000Z",
+    "patch_version": null,
+    "status": "not_started",
+    "blue": {
+      "id": "lyon",
+      "name": "LYON",
+      "acronym": "LYON",
+      "slug": "lyon",
+      "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+      "location": null
+    },
+    "red": {
+      "id": "team-secret-whales",
+      "name": "Team Secret Whales",
+      "acronym": "TSW",
+      "slug": "team-secret-whales",
+      "image_url": "http://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+      "location": null
+    },
+    "block_name": "Knockouts"
+  },
+  "rosters": {
+    "blue": {
+      "team": {
+        "id": "lyon",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon",
+        "image_url": "http://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Winder",
+          "id": "197b06d3-a66a-46e6-8a83-c9d2835f3d77",
+          "nationality": null
+        },
+        {
+          "role": "jun",
+          "name": "Kase",
+          "id": "e06526d5-9e5a-465f-aba3-3e628e8a4700",
+          "nationality": null
+        },
+        {
+          "role": "mid",
+          "name": "Sweeho",
+          "id": "f82eadfc-37fc-4d2c-a47b-24fa2c9b37f7",
+          "nationality": "VE"
+        },
+        {
+          "role": "adc",
+          "name": "NANINI",
+          "id": "937efdad-aac3-4d75-9f16-a2d1e099c024",
+          "nationality": null
+        },
+        {
+          "role": "sup",
+          "name": "Starhide",
+          "id": "fdd5a8d7-6f2d-4bb0-8cfe-315b14d3d32c",
+          "nationality": null
+        }
+      ],
+      "available": true
+    },
+    "red": {
+      "team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "http://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "location": null
+      },
+      "players": [
+        {
+          "role": "top",
+          "name": "Hiro02",
+          "id": "de8f4e32-3021-4918-ae83-62c0f6070986",
+          "nationality": "VN"
+        },
+        {
+          "role": "jun",
+          "name": "Hizto",
+          "id": "f5f6c70d-32b9-4347-8515-74ccd710d39d",
+          "nationality": "VN"
+        },
+        {
+          "role": "mid",
+          "name": "Dire",
+          "id": "975b23d9-ecb8-4348-a691-6199f0b56ee3",
+          "nationality": "VN"
+        },
+        {
+          "role": "adc",
+          "name": "Eddie",
+          "id": "5e2c9c31-01c3-4a97-bba0-d7f5d9919098",
+          "nationality": "VN"
+        },
+        {
+          "role": "sup",
+          "name": "Bie",
+          "id": "95ac7d66-5aac-4f43-bce0-3c894b4745a6",
+          "nationality": "VN"
+        }
+      ],
+      "available": true
+    }
+  },
+  "recent_form": {
+    "blue": {
+      "available": true,
+      "games_played": 10,
+      "wins": 7,
+      "win_rate": 0.7,
+      "matches": [
+        {
+          "date": "2026-07-05",
+          "league": "north_regional_league",
+          "opponent": "sdm-tigres",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 18,
+          "opponent_kills": 16,
+          "gold": 77800,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 9
+        },
+        {
+          "date": "2026-07-05",
+          "league": "north_regional_league",
+          "opponent": "sdm-tigres",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 12,
+          "opponent_kills": 27,
+          "gold": 56300,
+          "dragons": 0,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-07-04",
+          "league": "north_regional_league",
+          "opponent": "3v",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 15,
+          "opponent_kills": 33,
+          "gold": 64400,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 3
+        },
+        {
+          "date": "2026-07-04",
+          "league": "north_regional_league",
+          "opponent": "3v",
+          "side": "red",
+          "result": "loss",
+          "won": false,
+          "kills": 25,
+          "opponent_kills": 43,
+          "gold": 69800,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 18,
+          "opponent_kills": 9,
+          "gold": 86500,
+          "dragons": 5,
+          "barons": 2,
+          "towers": 10
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 7,
+          "gold": 74400,
+          "dragons": 3,
+          "barons": 0,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-14",
+          "league": "lcs",
+          "opponent": "team-liquid",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 17,
+          "opponent_kills": 3,
+          "gold": 73400,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 19,
+          "opponent_kills": 16,
+          "gold": 83600,
+          "dragons": 5,
+          "barons": 1,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 20,
+          "opponent_kills": 6,
+          "gold": 74500,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 11
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcs",
+          "opponent": "cloud9",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 21,
+          "opponent_kills": 9,
+          "gold": 63900,
+          "dragons": 0,
+          "barons": 1,
+          "towers": 9
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "games_played": 10,
+      "wins": 7,
+      "win_rate": 0.7,
+      "matches": [
+        {
+          "date": "2026-06-07",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 24,
+          "opponent_kills": 15,
+          "gold": 72400,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 8
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 7,
+          "opponent_kills": 24,
+          "gold": 43600,
+          "dragons": 0,
+          "barons": 0,
+          "towers": 0
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 36,
+          "opponent_kills": 7,
+          "gold": 67900,
+          "dragons": 4,
+          "barons": 2,
+          "towers": 10
+        },
+        {
+          "date": "2026-06-07",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 28,
+          "opponent_kills": 15,
+          "gold": 62100,
+          "dragons": 2,
+          "barons": 1,
+          "towers": 9
+        },
+        {
+          "date": "2026-05-31",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 22,
+          "opponent_kills": 10,
+          "gold": 60200,
+          "dragons": 4,
+          "barons": 1,
+          "towers": 8
+        },
+        {
+          "date": "2026-05-31",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 15,
+          "opponent_kills": 26,
+          "gold": 62400,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 2
+        },
+        {
+          "date": "2026-05-31",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "blue",
+          "result": "loss",
+          "won": false,
+          "kills": 14,
+          "opponent_kills": 17,
+          "gold": 55500,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 3
+        },
+        {
+          "date": "2026-05-31",
+          "league": "lcp",
+          "opponent": "deep-cross-gaming",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 26,
+          "opponent_kills": 6,
+          "gold": 58900,
+          "dragons": 4,
+          "barons": 1,
+          "towers": 11
+        },
+        {
+          "date": "2026-05-29",
+          "league": "lcp",
+          "opponent": "saigon-buffalo-esports",
+          "side": "red",
+          "result": "win",
+          "won": true,
+          "kills": 10,
+          "opponent_kills": 5,
+          "gold": 68100,
+          "dragons": 3,
+          "barons": 2,
+          "towers": 8
+        },
+        {
+          "date": "2026-05-29",
+          "league": "lcp",
+          "opponent": "saigon-buffalo-esports",
+          "side": "blue",
+          "result": "win",
+          "won": true,
+          "kills": 16,
+          "opponent_kills": 18,
+          "gold": 75400,
+          "dragons": 1,
+          "barons": 0,
+          "towers": 7
+        }
+      ]
+    }
+  },
+  "h2h": {
+    "available": true,
+    "team_a_id": "lyon",
+    "team_b_id": "team-secret-whales",
+    "meetings": 0,
+    "team_a_wins": 0,
+    "team_b_wins": 0,
+    "recent": []
+  },
+  "team_objectives": {
+    "blue": {
+      "available": true,
+      "games_analyzed": 55,
+      "game_record": {
+        "wins": 30,
+        "losses": 25,
+        "win_rate": 0.5455
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 2.36,
+          "opponent_avg_per_game": 2.64,
+          "control_rate": 0.4727
+        },
+        "barons": {
+          "avg_per_game": 0.75,
+          "opponent_avg_per_game": 0.6,
+          "control_rate": 0.5541
+        },
+        "towers": {
+          "avg_per_game": 6.65,
+          "opponent_avg_per_game": 5.25,
+          "control_rate": 0.5588
+        },
+        "kills": {
+          "avg_per_game": 15.6,
+          "opponent_avg_per_game": 14.09,
+          "control_rate": 0.5254
+        },
+        "gold": {
+          "avg_per_game": 67639.58,
+          "opponent_avg_per_game": 65243.95,
+          "control_rate": 0.509
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.5818,
+        "first_tower_rate": 0.4,
+        "first_dragon_rate": 0.5091,
+        "first_baron_rate": 0.5472
+      }
+    },
+    "red": {
+      "available": true,
+      "games_analyzed": 55,
+      "game_record": {
+        "wins": 36,
+        "losses": 19,
+        "win_rate": 0.6545
+      },
+      "objective_control": {
+        "dragons": {
+          "avg_per_game": 2.38,
+          "opponent_avg_per_game": 1.78,
+          "control_rate": 0.5721
+        },
+        "barons": {
+          "avg_per_game": 0.82,
+          "opponent_avg_per_game": 0.36,
+          "control_rate": 0.6923
+        },
+        "towers": {
+          "avg_per_game": 6.65,
+          "opponent_avg_per_game": 3.96,
+          "control_rate": 0.6267
+        },
+        "kills": {
+          "avg_per_game": 16.93,
+          "opponent_avg_per_game": 11.93,
+          "control_rate": 0.5866
+        },
+        "gold": {
+          "avg_per_game": 59883.13,
+          "opponent_avg_per_game": 55236.53,
+          "control_rate": 0.5202
+        }
+      },
+      "first_objectives": {
+        "first_blood_rate": 0.5091,
+        "first_tower_rate": 0.6182,
+        "first_dragon_rate": 0.5273,
+        "first_baron_rate": 0.6667
+      }
+    }
+  },
+  "team_series_history": {
+    "blue": {
+      "available": true,
+      "series_count": 47,
+      "games_with_duration": 87,
+      "avg_game_duration_min": 33.7,
+      "avg_series_length": 2.6,
+      "sweep_rate": 0.426,
+      "swept_rate": 0.213,
+      "recent_series": [
+        {
+          "date": "2026-07-05",
+          "league": "Split 2 2025",
+          "opponent_slug": "sdm",
+          "side": "red",
+          "result": "loss",
+          "team_score": 1,
+          "opponent_score": 1,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 41.3,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 32.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-07-05",
+          "league": "2026",
+          "opponent_slug": "lyon-gaming",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-07-04",
+          "league": "Split 2 2025",
+          "opponent_slug": "3v",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 2,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 35.1,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 33.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-07-03",
+          "league": "2026",
+          "opponent_slug": "fur",
+          "side": "blue",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "tlaw",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 41.8,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.4,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 35.1,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "c9",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 0,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 43.0,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 35.4,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 29.9,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "league": "NA LCS Summer 2018",
+          "opponent_slug": "team-liquid",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 2,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 34.0,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.2,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 31.0,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 29.9,
+              "won": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "league": "Split 2 2025",
+          "opponent_slug": "sdm-tigres",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 3,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        }
+      ]
+    },
+    "red": {
+      "available": true,
+      "series_count": 48,
+      "games_with_duration": 102,
+      "avg_game_duration_min": 32.2,
+      "avg_series_length": 2.6,
+      "sweep_rate": 0.354,
+      "swept_rate": 0.271,
+      "recent_series": [
+        {
+          "date": "2026-07-04",
+          "league": "2026",
+          "opponent_slug": "hle",
+          "side": "red",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 3,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 2,
+              "duration_min": null,
+              "won": null
+            },
+            {
+              "game_number": 3,
+              "duration_min": null,
+              "won": null
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "league": "Kickoff 2026",
+          "opponent_slug": "dcg",
+          "side": "red",
+          "result": "win",
+          "team_score": 3,
+          "opponent_score": 1,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 34.9,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 26.5,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 30.3,
+              "won": true
+            },
+            {
+              "game_number": 4,
+              "duration_min": 31.4,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-31",
+          "league": "Kickoff 2026",
+          "opponent_slug": "deep-cross-gaming",
+          "side": "red",
+          "result": "loss",
+          "team_score": 2,
+          "opponent_score": 2,
+          "series_length": 4,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 27.1,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 33.7,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 30.6,
+              "won": false
+            },
+            {
+              "game_number": 4,
+              "duration_min": 25.6,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-29",
+          "league": "Kickoff 2026",
+          "opponent_slug": "mvk",
+          "side": "blue",
+          "result": "loss",
+          "team_score": 0,
+          "opponent_score": 3,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 33.1,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.1,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 33.0,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-17",
+          "league": "Kickoff 2026",
+          "opponent_slug": "detonation-focusme",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 32.2,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 37.6,
+              "won": false
+            },
+            {
+              "game_number": 3,
+              "duration_min": 22.6,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-09",
+          "league": "Kickoff 2026",
+          "opponent_slug": "saigon-buffalo-esports",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 36.5,
+              "won": true
+            },
+            {
+              "game_number": 2,
+              "duration_min": 23.2,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "league": "Kickoff 2026",
+          "opponent_slug": "ctbc-flying-oyster",
+          "side": "red",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 1,
+          "series_length": 3,
+          "games": [
+            {
+              "game_number": 1,
+              "duration_min": 35.2,
+              "won": false
+            },
+            {
+              "game_number": 2,
+              "duration_min": 38.3,
+              "won": true
+            },
+            {
+              "game_number": 3,
+              "duration_min": 31.2,
+              "won": true
+            }
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "league": "Kickoff 2026",
+          "opponent_slug": "ground-zero",
+          "side": "blue",
+          "result": "win",
+          "team_score": 2,
+          "opponent_score": 0,
+          "series_length": 2,
+          "games": []
+        }
+      ]
+    }
+  },
+  "team_standings": {
+    "available": false,
+    "reason": "no standings rows (new season?)",
+    "hint": "Use the web_search tool to fetch this yourself."
+  },
+  "player_form": {
+    "blue": [
+      {
+        "available": true,
+        "player": "Winder",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Kase",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Sweeho",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "NANINI",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Starhide",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      }
+    ],
+    "red": [
+      {
+        "available": true,
+        "player": "Hiro02",
+        "role": "top",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Hizto",
+        "role": "jun",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Dire",
+        "role": "mid",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Eddie",
+        "role": "adc",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      },
+      {
+        "available": true,
+        "player": "Bie",
+        "role": "sup",
+        "window": 20,
+        "games_analyzed": 0,
+        "win_rate": 0,
+        "avg_kda": 0,
+        "avg_kills": 0,
+        "avg_deaths": 0,
+        "avg_assists": 0,
+        "avg_cs_per_min": 0,
+        "avg_gold_per_min": 0,
+        "avg_damage_per_min": 0,
+        "kill_participation": 0,
+        "consistency_score": 100,
+        "kda_variance": 0
+      }
+    ]
+  },
+  "player_champion_pool": {
+    "blue": [
+      {
+        "available": false,
+        "player": "Winder",
+        "role": "top",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Kase",
+        "role": "jun",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Sweeho",
+        "role": "mid",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "NANINI",
+        "role": "adc",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Starhide",
+        "role": "sup",
+        "games_analyzed": null,
+        "champion_pool": []
+      }
+    ],
+    "red": [
+      {
+        "available": false,
+        "player": "Hiro02",
+        "role": "top",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Hizto",
+        "role": "jun",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Dire",
+        "role": "mid",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Eddie",
+        "role": "adc",
+        "games_analyzed": null,
+        "champion_pool": []
+      },
+      {
+        "available": false,
+        "player": "Bie",
+        "role": "sup",
+        "games_analyzed": null,
+        "champion_pool": []
+      }
+    ]
+  },
+  "hero_pools": {
+    "blue": {
+      "available": false,
+      "reason": "empty champion pools",
+      "hint": "Use the web_search tool to fetch this yourself."
+    },
+    "red": {
+      "available": false,
+      "reason": "empty champion pools",
+      "hint": "Use the web_search tool to fetch this yourself."
+    }
+  },
+  "meta_reference": {
+    "available": false,
+    "reason": "no patch version in match data",
+    "hint": "Use the web_search tool to fetch this yourself."
+  }
+}

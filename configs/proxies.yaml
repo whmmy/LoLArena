@@ -14,13 +14,13 @@
 
 pandascore:
   enabled: true
-  url: "http://127.0.0.1:10818"        # e.g. "http://127.0.0.1:7890" or "socks5://127.0.0.1:1080"
+  url: "http://127.0.0.1:7890"        # e.g. "http://127.0.0.1:7890" or "socks5://127.0.0.1:1080"
 
 # Cito API (primary LoL data source). Reuse the same proxy as PandaScore by
 # default; flip enabled: false to connect directly.
 cito:
   enabled: true
-  url: "http://127.0.0.1:10818"
+  url: "http://127.0.0.1:7890"
 
 # Reserved for future use (LLM clients, web_search, etc.) — not wired yet.
 # web_search:

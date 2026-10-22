@@ -1,0 +1,173 @@
+{
+  "id": 115570934355614587,
+  "name": "Lyon Academy vs Team Secret Whales",
+  "match_type": null,
+  "status": "finished",
+  "number_of_games": 5,
+  "begin_at": "2026-07-08T08:00:00.000Z",
+  "scheduled_at": "2026-07-08T08:00:00.000Z",
+  "end_at": null,
+  "winner_id": "lyon",
+  "winner": {
+    "id": "lyon",
+    "type": "Team"
+  },
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "lyon",
+        "name": "Lyon Academy",
+        "acronym": "LYON",
+        "slug": "lyon",
+        "image_url": "https://static.lolesports.com/teams/1771401158736_FULL_COLOR_FOR_DARK_BG-1.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "lyon",
+      "score": 3
+    },
+    {
+      "team_id": "team-secret-whales",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-msi",
+    "name": "MSI",
+    "slug": "msi"
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-msi_2026"
+  },
+  "games": [
+    {
+      "id": "lol-game-115570934355614588",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614587,
+      "blue_team": {
+        "id": "lyon-gaming",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 11,
+        "towers": 6
+      },
+      "red_team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "kills": 9,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614589",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614587,
+      "blue_team": {
+        "id": "lyon-gaming",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 16,
+        "towers": 5
+      },
+      "red_team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "kills": 8,
+        "towers": 1
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614590",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614587,
+      "blue_team": {
+        "id": "lyon-gaming",
+        "name": "LYON",
+        "acronym": "LYON",
+        "slug": "lyon-gaming",
+        "image_url": "https://static.lolesports.com/teams/1743717443673_isotypelyon-03.png",
+        "kills": 14,
+        "towers": 8
+      },
+      "red_team": {
+        "id": "team-secret-whales",
+        "name": "Team Secret Whales",
+        "acronym": "TSW",
+        "slug": "team-secret-whales",
+        "image_url": "https://static.lolesports.com/teams/1774598000328_White_EyeText_600p.png",
+        "kills": 9,
+        "towers": 2
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
+  "videogame_version": {},
+  "block_name": "Knockouts",
+  "round": null,
+  "vod_url": "https://www.twitch.tv/videos/2814739973"
+}

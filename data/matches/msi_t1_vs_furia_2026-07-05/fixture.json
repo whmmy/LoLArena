@@ -1,43 +1,46 @@
 {
   "id": 115570934355614563,
-  "name": "T1 vs FURIA",
+  "name": "FURIA vs FURIA",
   "match_type": null,
-  "status": "not_started",
+  "status": "finished",
   "number_of_games": 5,
   "begin_at": "2026-07-05T03:00:00.000Z",
   "scheduled_at": "2026-07-05T03:00:00.000Z",
   "end_at": null,
-  "winner_id": null,
-  "winner": null,
+  "winner_id": "fur",
+  "winner": {
+    "id": "fur",
+    "type": "Team"
+  },
   "draw": false,
   "forfeit": false,
   "opponents": [
     {
       "opponent": {
         "id": "fur",
-        "name": "T1",
-        "acronym": "T1",
+        "name": "FURIA",
+        "acronym": "FUR",
         "slug": "fur",
-        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+        "image_url": "https://static.lolesports.com/teams/FURIA---black.png"
       }
     },
     {
       "opponent": {
-        "id": "fur",
+        "id": "furia",
         "name": "FURIA",
         "acronym": "FUR",
-        "slug": "fur",
-        "image_url": "http://static.lolesports.com/teams/FURIA---black.png"
+        "slug": "furia",
+        "image_url": "https://static.lolesports.com/teams/FURIA---black.png"
       }
     }
   ],
   "results": [
     {
       "team_id": "fur",
-      "score": 0
+      "score": 3
     },
     {
-      "team_id": "fur",
+      "team_id": "furia",
       "score": 0
     }
   ],
@@ -48,12 +51,123 @@
   },
   "serie": {},
   "tournament": {
-    "id": "lol-tournament-115570934354631452",
-    "name": "2026"
+    "id": "lol-msi_2026"
   },
-  "games": [],
+  "games": [
+    {
+      "id": "lol-game-115570934355614564",
+      "position": 1,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614563,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 14,
+        "towers": 8
+      },
+      "red_team": {
+        "id": "furia",
+        "name": "FURIA",
+        "acronym": "FUR",
+        "slug": "furia",
+        "image_url": "https://static.lolesports.com/teams/FURIA---black.png",
+        "kills": 8,
+        "towers": 1
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614565",
+      "position": 2,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614563,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 11,
+        "towers": 6
+      },
+      "red_team": {
+        "id": "furia",
+        "name": "FURIA",
+        "acronym": "FUR",
+        "slug": "furia",
+        "image_url": "https://static.lolesports.com/teams/FURIA---black.png",
+        "kills": 7,
+        "towers": 0
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    },
+    {
+      "id": "lol-game-115570934355614566",
+      "position": 3,
+      "status": "finished",
+      "length": null,
+      "winner": {
+        "id": null
+      },
+      "winning_side": "",
+      "match_id": 115570934355614563,
+      "blue_team": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "https://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png",
+        "kills": 16,
+        "towers": 4
+      },
+      "red_team": {
+        "id": "furia",
+        "name": "FURIA",
+        "acronym": "FUR",
+        "slug": "furia",
+        "image_url": "https://static.lolesports.com/teams/FURIA---black.png",
+        "kills": 23,
+        "towers": 3
+      },
+      "patch": "16.13.790.6961",
+      "first_objectives": {
+        "firstBlood": null,
+        "firstTower": null,
+        "firstDragon": null,
+        "firstBaron": null,
+        "firstHerald": null
+      }
+    }
+  ],
   "videogame_version": {},
   "block_name": "Knockouts",
   "round": null,
-  "vod_url": null
+  "vod_url": "https://www.twitch.tv/videos/2813225663"
 }

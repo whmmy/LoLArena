@@ -1,0 +1,82 @@
+{
+  "match_id": 115570934355614551,
+  "game_id": "lol-game-115570934355614554",
+  "position": 3,
+  "status": "finished",
+  "length_sec": null,
+  "winner_id": null,
+  "bp_complete": true,
+  "picks": {
+    "blue": [
+      {
+        "role": "top",
+        "player": "BLG Bin",
+        "champion": "Renekton",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "BLG Xun",
+        "champion": "Vi",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "BLG Knight",
+        "champion": "Ahri",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "BLG Viper",
+        "champion": "Ezreal",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "BLG ON",
+        "champion": "Bard",
+        "spells": []
+      }
+    ],
+    "red": [
+      {
+        "role": "top",
+        "player": "LYON Dhokla",
+        "champion": "Zaahen",
+        "spells": []
+      },
+      {
+        "role": "jun",
+        "player": "LYON Inspired",
+        "champion": "Nocturne",
+        "spells": []
+      },
+      {
+        "role": "mid",
+        "player": "LYON Saint",
+        "champion": "Cassiopeia",
+        "spells": []
+      },
+      {
+        "role": "adc",
+        "player": "LYON Berserker",
+        "champion": "Sivir",
+        "spells": []
+      },
+      {
+        "role": "sup",
+        "player": "LYON Isles",
+        "champion": "Nautilus",
+        "spells": []
+      }
+    ]
+  },
+  "fetched_at": "2026-07-07T09:16:45Z",
+  "winner_side": "blue",
+  "kills": {
+    "blue": 15,
+    "red": 13
+  },
+  "total_kills": 28
+}

@@ -1,0 +1,30 @@
+{
+  "tasks": {
+    "series_winner_prob": {
+      "score": 69.75,
+      "metric": "brier_binary"
+    },
+    "series_score": {
+      "score": 30.0,
+      "metric": "scoreline_similarity"
+    },
+    "series_length_mae": {
+      "score": 33.33,
+      "metric": "mae"
+    },
+    "skill_vs_baseline": {
+      "score": 48.79,
+      "metric": "skill_score"
+    },
+    "key_players": {
+      "score": 50.0,
+      "metric": "key_players_recall"
+    }
+  },
+  "layers": {
+    "T1_result": 50.38,
+    "T2_skill": 48.79,
+    "T3_lineup": 50.0
+  },
+  "composite": 49.84
+}

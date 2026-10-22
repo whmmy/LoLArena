@@ -1,0 +1,59 @@
+{
+  "id": 115548147900750233,
+  "name": "BNK FEARX vs DN SOOPers",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 3,
+  "begin_at": "2026-08-15T10:00:00.000Z",
+  "scheduled_at": "2026-08-15T10:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": null,
+        "name": "BNK FEARX",
+        "acronym": "BFX",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1734691810721_BFXfullcolorfordarkbg.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": null,
+        "name": "DN SOOPers",
+        "acronym": "DNS",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1767340467921_DN_SOOPerslogo_profile.webp"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": null,
+      "score": 0
+    },
+    {
+      "team_id": null,
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-lck",
+    "name": "LCK",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": null,
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Week 12",
+  "round": null,
+  "vod_url": null
+}

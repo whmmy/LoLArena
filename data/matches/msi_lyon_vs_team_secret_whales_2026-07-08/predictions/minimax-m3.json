@@ -1,0 +1,284 @@
+{
+  "model_id": "minimax-m3",
+  "scope": "match",
+  "target_id": "msi_lyon_vs_team_secret_whales_2026-07-08",
+  "submitted_at": "2026-07-08T02:21:06.358688+00:00",
+  "prediction": {
+    "reasoning": {
+      "overall": "TSW（红方）作为LCP一号种子，在败者组刚刚3-1爆冷击败LPL二号种子TES，士气与信心处于高点；而LYON刚被BLG 0-3横扫、连大龙团处理都出现明显脱节。综合TSW在55场样本下远超LYON的客观资源控制率（65.45% vs 54.55%），加上双方均处于败者组生死战、LYON近期北联被3v 0-2与SDM 1-1的连续低迷，本场更看好TSW拿下这场败者组对决，但LYON的高横扫率让系列赛不会太轻松。",
+      "fundamentals": "LYON近10场7胜3负（70%），但最近4场出现明显滑坡：被SDM Tigres 1-1逼平，被3v 0-2横扫，在MSI刚被BLG 0-3零封，团队失误率与团战执行都明显下滑。TSW近10场同样是7胜3负，但最近两场MSI 0-3 HLE后立即反弹3-1击败TES，展现出强大的调整能力和大场抗压能力。客观资源层面TSW全面占优：55场样本下胜率65.45% vs 54.55%，一塔率61.82% vs 40%，一龙率52.73% vs 50.91%，一男爵率66.67% vs 54.72%，场均推塔6.65 vs 6.65但对手推塔数仅3.96 vs 5.25，意味着TSW的运营压制力远超LYON。LYON的唯一亮点是一血率58.18%略高于TSW的50.91%，前期对线偶有亮点但中后期持续被打回。",
+      "matchups": "上路LYON.Winder对TSW.Hiro02，Hiro02刚在MSI对TES上单zuian打出对位单杀状态火热，Winder近期被针对后多次崩线，TSW小优。打野Kase对Hizto，Hizto在MSI对TES时节奏凶猛能稳定入侵控龙，而Kase近期被BLG Xun节奏压制，TSW小优。中路Sweeho（委内瑞拉外援）对Dire，Sweeho个人能力在线但团队支援参与度偏低，Dire在MSI对TES展现了清晰的中野联动与找机会能力，TSW小优。下路NANINI+Starhide对Eddie+Bie，Eddie+Bie刚在MSI对TES下路建立过优势JackeyLove对线期都被压制，LYON下路组合则在北联对3v时连续崩盘，TSW下路组合小到中优。综合各对位TSW至少三路占优只有中路勉强五五开，整体对位优势明显，更可能在团战端靠更好的拉扯与视野拿下关键团。",
+      "meta_style": "MSI 2026继续采用全局BP+Bo5双败赛制，对英雄池深度和阵容储备要求极高。TSW在对TES的Bo5中展现出极高的战术多样性（包括奇招瑟提、蒙多等多套体系），BP主动权牢牢在自己手中；LYON在Bo5中则显得准备不足，对BLG三局几乎被同一套体系压制。TSW的资源控制风格（前期控龙、控先锋、滚经济、中后期大龙终结）与MSI主流节奏契合度更高，而LYON更依赖线上个人能力打出前期优势，但一旦前期没打出就会被对手的稳健运营拖垮。",
+      "h2h_psych": "双方此前无任何交手记录（h2h 0-0），首次交锋谁都没有心理包袱。但败者组生死战属性极强——失利即淘汰回家，双方都会拿出全部底牌。TSW刚刚创造越南赛区的历史（首次在国际Bo5击败LPL队伍），心态处于历史巅峰敢打敢拼；LYON则刚经历0-3的惨痛失利，需要快速调整心态避免连续崩盘。赛程上LYON连续两天前刚打完Bo5（5号对SDM、4号对3v、3号对FUR），体力与精神消耗都更大；TSW相对休息更充分。临场调整能力上TSW刚刚在0-3 HLE后立刻3-1 TES，展现出极强的反弹能力，这一点也是看好他们的关键。"
+    },
+    "win_probs": {
+      "blue": 0.45,
+      "red": 0.55
+    },
+    "predicted_winner": "red",
+    "series_score": "3-2",
+    "series_length": 5,
+    "favored_side": "red_slight",
+    "key_players": [
+      {
+        "player": "Hizto",
+        "team": "red",
+        "role": "jun",
+        "reason": "TSW节奏发动机，刚在MSI对TES比赛中主导前期入侵与控龙，是TSW体系运转的轴心"
+      },
+      {
+        "player": "Dire",
+        "team": "red",
+        "role": "mid",
+        "reason": "MSI对TES展现了清晰的中野联动与找机会能力，是TSW中期团战的关键输出点"
+      },
+      {
+        "player": "Eddie",
+        "team": "red",
+        "role": "adc",
+        "reason": "MSI对TES下路建立过明显对线优势，是TSW稳定输出与后期carry的核心"
+      },
+      {
+        "player": "Sweeho",
+        "team": "blue",
+        "role": "mid",
+        "reason": "LYON中单，委内瑞拉外援，个人能力是LYON少有的亮点，需要他承担更多carry责任"
+      },
+      {
+        "player": "Winder",
+        "team": "blue",
+        "role": "top",
+        "reason": "LYON上路，近期表现不稳定，需要在Bo5中打出对线优势才能解放LYON的整体节奏"
+      }
+    ],
+    "swing_factors": [
+      "TSW一塔率(61.82%)和先锋/大龙控制率显著高于LYON，能否在前期稳住线上后快速转线滚资源是系列赛关键",
+      "LYON一血率(58.18%)较高，如果能在对线期频繁拿到首杀有可能把比赛拖入LYON擅长的快速终结节奏",
+      "全局BP下双方英雄池深度，TSW刚展示过多套体系（瑟提、蒙多等奇招），BP主动权倾向TSW",
+      "LYON刚刚0-3惨败后的心态恢复情况，能否摆脱BLG阴影决定其能否在Bo5中保持稳定",
+      "TSW越南选手的沟通效率与赛程体力，休息更充分的一方在Bo5中后段更有优势"
+    ],
+    "meta_style_signals": [
+      "MSI 2026启用全局BP+Bo5双败赛制，对英雄池深度要求极高",
+      "当前版本TSW更契合：控龙、控先锋、滚经济、中后期大龙终结",
+      "LYON更依赖线上个人能力和一血滚雪球，但版本运营节奏更利于TSW",
+      "TSW在MSI展现了更高的阵容多样性（瑟提、蒙多等奇招），BP储备更厚"
+    ],
+    "sources": [
+      {
+        "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+        "accessed_at": "2026-07-08T03:00:00Z"
+      },
+      {
+        "query": "Team Secret Whales TSW LCP 2026 roster HLE loss",
+        "accessed_at": "2026-07-08T03:00:00Z"
+      },
+      {
+        "query": "MSI 2026 losers bracket LYON TSW lower round",
+        "accessed_at": "2026-07-08T03:00:00Z"
+      },
+      {
+        "query": "TSW vs TES MSI 2026 knockout result July 5",
+        "accessed_at": "2026-07-08T03:00:00Z"
+      },
+      {
+        "query": "LoL patch 14.14 meta tier list 2026 MSI strong champions",
+        "accessed_at": "2026-07-08T03:00:00Z"
+      },
+      {
+        "query": "LCP 2026 split 2 finals TSW championship Vietnam",
+        "accessed_at": "2026-07-08T03:00:00Z"
+      }
+    ]
+  },
+  "raw_text": "<think>The user wants me to re-output the complete JSON object only, no extra text. Let me make sure the JSON is valid and properly formatted.</think>\n\n{\n  \"reasoning\": {\n    \"overall\": \"TSW（红方）作为LCP一号种子，在败者组刚刚3-1爆冷击败LPL二号种子TES，士气与信心处于高点；而LYON刚被BLG 0-3横扫、连大龙团处理都出现明显脱节。综合TSW在55场样本下远超LYON的客观资源控制率（65.45% vs 54.55%），加上双方均处于败者组生死战、LYON近期北联被3v 0-2与SDM 1-1的连续低迷，本场更看好TSW拿下这场败者组对决，但LYON的高横扫率让系列赛不会太轻松。\",\n    \"fundamentals\": \"LYON近10场7胜3负（70%），但最近4场出现明显滑坡：被SDM Tigres 1-1逼平，被3v 0-2横扫，在MSI刚被BLG 0-3零封，团队失误率与团战执行都明显下滑。TSW近10场同样是7胜3负，但最近两场MSI 0-3 HLE后立即反弹3-1击败TES，展现出强大的调整能力和大场抗压能力。客观资源层面TSW全面占优：55场样本下胜率65.45% vs 54.55%，一塔率61.82% vs 40%，一龙率52.73% vs 50.91%，一男爵率66.67% vs 54.72%，场均推塔6.65 vs 6.65但对手推塔数仅3.96 vs 5.25，意味着TSW的运营压制力远超LYON。LYON的唯一亮点是一血率58.18%略高于TSW的50.91%，前期对线偶有亮点但中后期持续被打回。\",\n    \"matchups\": \"上路LYON.Winder对TSW.Hiro02，Hiro02刚在MSI对TES上单zuian打出对位单杀状态火热，Winder近期被针对后多次崩线，TSW小优。打野Kase对Hizto，Hizto在MSI对TES时节奏凶猛能稳定入侵控龙，而Kase近期被BLG Xun节奏压制，TSW小优。中路Sweeho（委内瑞拉外援）对Dire，Sweeho个人能力在线但团队支援参与度偏低，Dire在MSI对TES展现了清晰的中野联动与找机会能力，TSW小优。下路NANINI+Starhide对Eddie+Bie，Eddie+Bie刚在MSI对TES下路建立过优势JackeyLove对线期都被压制，LYON下路组合则在北联对3v时连续崩盘，TSW下路组合小到中优。综合各对位TSW至少三路占优只有中路勉强五五开，整体对位优势明显，更可能在团战端靠更好的拉扯与视野拿下关键团。\",\n    \"meta_style\": \"MSI 2026继续采用全局BP+Bo5双败赛制，对英雄池深度和阵容储备要求极高。TSW在对TES的Bo5中展现出极高的战术多样性（包括奇招瑟提、蒙多等多套体系），BP主动权牢牢在自己手中；LYON在Bo5中则显得准备不足，对BLG三局几乎被同一套体系压制。TSW的资源控制风格（前期控龙、控先锋、滚经济、中后期大龙终结）与MSI主流节奏契合度更高，而LYON更依赖线上个人能力打出前期优势，但一旦前期没打出就会被对手的稳健运营拖垮。\",\n    \"h2h_psych\": \"双方此前无任何交手记录（h2h 0-0），首次交锋谁都没有心理包袱。但败者组生死战属性极强——失利即淘汰回家，双方都会拿出全部底牌。TSW刚刚创造越南赛区的历史（首次在国际Bo5击败LPL队伍），心态处于历史巅峰敢打敢拼；LYON则刚经历0-3的惨痛失利，需要快速调整心态避免连续崩盘。赛程上LYON连续两天前刚打完Bo5（5号对SDM、4号对3v、3号对FUR），体力与精神消耗都更大；TSW相对休息更充分。临场调整能力上TSW刚刚在0-3 HLE后立刻3-1 TES，展现出极强的反弹能力，这一点也是看好他们的关键。\"\n  },\n  \"win_probs\": {\n    \"blue\": 0.45,\n    \"red\": 0.55\n  },\n  \"predicted_winner\": \"red\",\n  \"series_score\": \"3-2\",\n  \"series_length\": 5,\n  \"favored_side\": \"red_slight\",\n  \"key_players\": [\n    { \"player\": \"Hizto\", \"team\": \"red\", \"role\": \"jun\", \"reason\": \"TSW节奏发动机，刚在MSI对TES比赛中主导前期入侵与控龙，是TSW体系运转的轴心\" },\n    { \"player\": \"Dire\", \"team\": \"red\", \"role\": \"mid\", \"reason\": \"MSI对TES展现了清晰的中野联动与找机会能力，是TSW中期团战的关键输出点\" },\n    { \"player\": \"Eddie\", \"team\": \"red\", \"role\": \"adc\", \"reason\": \"MSI对TES下路建立过明显对线优势，是TSW稳定输出与后期carry的核心\" },\n    { \"player\": \"Sweeho\", \"team\": \"blue\", \"role\": \"mid\", \"reason\": \"LYON中单，委内瑞拉外援，个人能力是LYON少有的亮点，需要他承担更多carry责任\" },\n    { \"player\": \"Winder\", \"team\": \"blue\", \"role\": \"top\", \"reason\": \"LYON上路，近期表现不稳定，需要在Bo5中打出对线优势才能解放LYON的整体节奏\" }\n  ],\n  \"swing_factors\": [\n    \"TSW一塔率(61.82%)和先锋/大龙控制率显著高于LYON，能否在前期稳住线上后快速转线滚资源是系列赛关键\",\n    \"LYON一血率(58.18%)较高，如果能在对线期频繁拿到首杀有可能把比赛拖入LYON擅长的快速终结节奏\",\n    \"全局BP下双方英雄池深度，TSW刚展示过多套体系（瑟提、蒙多等奇招），BP主动权倾向TSW\",\n    \"LYON刚刚0-3惨败后的心态恢复情况，能否摆脱BLG阴影决定其能否在Bo5中保持稳定\",\n    \"TSW越南选手的沟通效率与赛程体力，休息更充分的一方在Bo5中后段更有优势\"\n  ],\n  \"meta_style_signals\": [\n    \"MSI 2026启用全局BP+Bo5双败赛制，对英雄池深度要求极高\",\n    \"当前版本TSW更契合：控龙、控先锋、滚经济、中后期大龙终结\",\n    \"LYON更依赖线上个人能力和一血滚雪球，但版本运营节奏更利于TSW\",\n    \"TSW在MSI展现了更高的阵容多样性（瑟提、蒙多等奇招），BP储备更厚\"\n  ],\n  \"sources\": [\n    { \"query\": \"LYON vs Team Secret Whales MSI 2026 knockout prediction\", \"accessed_at\": \"2026-07-08T03:00:00Z\" },\n    { \"query\": \"Team Secret Whales TSW LCP 2026 roster HLE loss\", \"accessed_at\": \"2026-07-08T03:00:00Z\" },\n    { \"query\": \"MSI 2026 losers bracket LYON TSW lower round\", \"accessed_at\": \"2026-07-08T03:00:00Z\" },\n    { \"query\": \"TSW vs TES MSI 2026 knockout result July 5\", \"accessed_at\": \"2026-07-08T03:00:00Z\" },\n    { \"query\": \"LoL patch 14.14 meta tier list 2026 MSI strong champions\", \"accessed_at\": \"2026-07-08T03:00:00Z\" },\n    { \"query\": \"LCP 2026 split 2 finals TSW championship Vietnam\", \"accessed_at\": \"2026-07-08T03:00:00Z\" }\n  ]\n}",
+  "thinking_text": null,
+  "sources": [
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:27Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:29Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:29Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:50Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:50Z"
+    },
+    {
+      "query": "MSI 2026 losers bracket LYON TSW lower round",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:50Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:52Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:52Z"
+    },
+    {
+      "query": "MSI 2026 losers bracket LYON TSW lower round",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:52Z"
+    },
+    {
+      "query": "\"Team Secret Whales\" TSW LCP Vietnam 2026 roster Dire Eddie",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:17:52Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:22Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:22Z"
+    },
+    {
+      "query": "MSI 2026 losers bracket LYON TSW lower round",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:22Z"
+    },
+    {
+      "query": "\"Team Secret Whales\" TSW LCP Vietnam 2026 roster Dire Eddie",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:22Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 knockout result July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:22Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:23Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:23Z"
+    },
+    {
+      "query": "MSI 2026 losers bracket LYON TSW lower round",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:23Z"
+    },
+    {
+      "query": "\"Team Secret Whales\" TSW LCP Vietnam 2026 roster Dire Eddie",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:23Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 knockout result July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:23Z"
+    },
+    {
+      "query": "LoL patch 14.14 meta tier list 2026 MSI strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:23Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "MSI 2026 losers bracket LYON TSW lower round",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "\"Team Secret Whales\" TSW LCP Vietnam 2026 roster Dire Eddie",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 knockout result July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "LoL patch 14.14 meta tier list 2026 MSI strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "\"LYON\" \"Team Secret Whales\" MSI 2026 lower bracket preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:18:59Z"
+    },
+    {
+      "query": "LYON vs Team Secret Whales MSI 2026 knockout prediction",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "Team Secret Whales LCP 2026 roster HLE loss",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "MSI 2026 losers bracket LYON TSW lower round",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "\"Team Secret Whales\" TSW LCP Vietnam 2026 roster Dire Eddie",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "TSW vs TES MSI 2026 knockout result July 5",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "LoL patch 14.14 meta tier list 2026 MSI strong champions",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "\"LYON\" \"Team Secret Whales\" MSI 2026 lower bracket preview",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    },
+    {
+      "query": "LCP 2026 split 2 finals TSW championship Vietnam",
+      "engine": "search_pro",
+      "accessed_at": "2026-07-08T02:19:01Z"
+    }
+  ],
+  "input_tokens": 148571,
+  "output_tokens": 10201,
+  "tool_calls": 8,
+  "cost_usd": 0.0,
+  "wall_seconds": 228.16,
+  "error": null
+}

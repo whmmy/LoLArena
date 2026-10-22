@@ -1,0 +1,59 @@
+{
+  "id": 115548147900619021,
+  "name": "Gen.G Esports vs Hanwha Life Esports",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 3,
+  "begin_at": "2026-08-13T10:00:00.000Z",
+  "scheduled_at": "2026-08-13T10:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": null,
+        "name": "Gen.G Esports",
+        "acronym": "GEN",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1773829250929_GENGLOGO_GOLD.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": null,
+        "name": "Hanwha Life Esports",
+        "acronym": "HLE",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1631819564399_hle-2021-worlds.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": null,
+      "score": 0
+    },
+    {
+      "team_id": null,
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-lck",
+    "name": "LCK",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": null,
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Week 12",
+  "round": null,
+  "vod_url": null
+}

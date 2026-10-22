@@ -1,0 +1,59 @@
+{
+  "id": 115548147900553465,
+  "name": "Dplus KIA vs T1",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 3,
+  "begin_at": "2026-08-06T10:00:00.000Z",
+  "scheduled_at": "2026-08-06T10:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": null,
+        "name": "Dplus KIA",
+        "acronym": "DK",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": null,
+        "name": "T1",
+        "acronym": "T1",
+        "slug": null,
+        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": null,
+      "score": 0
+    },
+    {
+      "team_id": null,
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-lck",
+    "name": "LCK",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": null,
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Week 11",
+  "round": null,
+  "vod_url": null
+}
