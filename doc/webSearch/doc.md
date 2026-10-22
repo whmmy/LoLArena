@@ -1,3 +1,8 @@
+> **Legacy backend in LoLArena.** The shared `web_search` tool defaults to
+> DeepSeek's Search API now (see `doc/deepseekSearch/README.md`). This Zhipu
+> `/paas/v4/web_search` spec is kept for the switchable fallback
+> (`LOLA_WEBSEARCH_PROVIDER=zhipu`).
+>
 > ## Documentation Index
 > Fetch the complete documentation index at: https://docs.bigmodel.cn/llms.txt
 > Use this file to discover all available pages before exploring further.

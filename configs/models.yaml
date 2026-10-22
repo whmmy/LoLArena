@@ -2,7 +2,8 @@
 #
 # ONE prediction per model per match/game. Every model:
 #   - receives the SAME context_pack (PandaScore)
-#   - has the SAME `web_search` tool mounted (Zhipu backend) — see adapters/websearch.py
+#   - has the SAME `web_search` tool mounted (one global backend: DeepSeek
+#     Search API by default, Zhipu legacy) — see adapters/websearch.py
 #   - decides itself what to search, then reasons and emits strict JSON
 #
 # Categories are informational only now (no S1/S2 split). They hint at the

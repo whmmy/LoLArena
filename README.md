@@ -17,8 +17,10 @@ post-match accuracy.
   **Cito API** — rosters, recent form + objective control, league standings,
   player form & champion pools, head-to-head, and per-game BP / kills.
 - All models are mounted with the **same `web_search` tool** (backend:
-  **Zhipu web_search API**, `search_pro` engine with intent recognition).
-  Each model decides what to search and how many rounds.
+  **DeepSeek Search API** by default — its in-house engine, ~1s per query,
+  with `site:` / `after:` / `lang:` operators. The old Zhipu `search_pro`
+  engine is kept as a switchable legacy backend). Each model decides what to
+  search and how many rounds.
 - Tool capability is identical across models — the only differentiator is
   analytical judgment.
 - Each model produces one prediction per match, persisted and graded
@@ -75,7 +77,7 @@ lolArena/
 │   ├─ server/     main.py (FastAPI)
 │   └─ leaderboard/build_site.py
 ├─ data/           matches/<slug>/ (predictions/, betting_advice/)  ·  games/<slug>/g<pos>/  ·  _cito_cache/
-├─ doc/            citoapi-lol/ (primary API reference) · pandaScoreApi/ (fallback) · webSearch/ (Zhipu tool docs)
+├─ doc/            citoapi-lol/ (primary API reference) · pandaScoreApi/ (fallback) · deepseekSearch/ · webSearch/ (legacy Zhipu docs)
 └─ docs/site/      index.html + data.json (single-page leaderboard)
 ```
 
@@ -87,7 +89,7 @@ pip install -r requirements.txt
 
 # 2. Configure keys
 cp .env.example .env
-#   Required: CITO_API_KEY (or CITO_API_KEYS multi-key pool), ZHIPU_WEBSEARCH_API_KEY
+#   Required: CITO_API_KEY (or CITO_API_KEYS multi-key pool), DEEPSEEK_API_KEY
 #   Per-model: <PROVIDER>_API_KEY (enable/disable entries in configs/models.yaml)
 
 # 3. Start the service (FastAPI + scheduler together)
@@ -211,7 +213,9 @@ model (interleaved thinking) and ships with a longer `timeout_seconds: 600`.
 | `CITO_API_KEY`           | LoL data, primary source (single key; backward compatible)       | —                               |
 | `CITO_API_KEYS`          | LoL data, primary source (comma-separated multi-key pool; auto-rotates, switches on rate-limit/quota) | — |
 | `PANDASCORE_API_KEY`     | LoL data, fallback (not called by default)                       | —                               |
-| `ZHIPU_WEBSEARCH_API_KEY`| Unified search backend (required to predict)                     | —                               |
+| `DEEPSEEK_WEBSEARCH_API_KEY` | Unified search backend (falls back to `DEEPSEEK_API_KEY`) | — |
+| `LOLA_WEBSEARCH_PROVIDER` | Search engine for ALL models: `deepseek` \| `zhipu` | `deepseek` |
+| `ZHIPU_WEBSEARCH_API_KEY` | Legacy Zhipu search backend (only if provider=`zhipu`) | — |
 | `<PROVIDER>_API_KEY`     | Per-model key (enable entries in `models.yaml`)                  | —                               |
 | `LOLA_PREDICT_LEAD_H`    | Hours before kickoff to run series prediction                    | `3`                             |
 | `LOLA_RESULT_GRACE_H`    | Result-fetch grace window after scheduled end                    | `2`                             |
@@ -232,8 +236,13 @@ model (interleaved thinking) and ships with a longer `timeout_seconds: 600`.
   quota is tight and let models supplement via `web_search`.
 - The PandaScore client (`src/adapters/pandascore.py`) is kept as a fallback
   and is not called by default.
-- **Search**: Zhipu `web_search` API (`search_pro` engine, with intent
-  recognition). Every model uses the same backend.
+- **Search**: DeepSeek Search API (`POST /v1/tools/search`, DeepSeek's
+  in-house engine, ~$0.75/1000 successful requests, QPS 100). Every model uses
+  the same backend; `LOLA_WEBSEARCH_PROVIDER=zhipu` switches all of them back
+  to the legacy Zhipu `search_pro` engine for A/B comparison. The adapter
+  ignores ambient `HTTP(S)_PROXY`; set `configs/proxies.yaml > websearch` (or
+  `LOLA_WEBSEARCH_PROXY_URL`) if searches need a proxy. See
+  [`doc/deepseekSearch/README.md`](doc/deepseekSearch/README.md).
 
 ## Adding a new model
 
@@ -265,7 +274,9 @@ Three key differences in this project:
 - The required `reasoning.*` subfield names are enforced by **both** the
   schema (`schemas/*.schema.json` `minLength`) and the grader
   (`graders/grade_match.py` `reasoning_completeness`). Keep them in sync.
-- No formal test suite yet — verify with ad-hoc `python -c "..."` snippets
+- Offline unit tests: `python -m unittest discover -s tests -v` (web_search
+  backends with a mock transport + the agent loop's tool wiring). No formal
+  end-to-end suite yet — also verify with ad-hoc `python -c "..."` snippets
   against `validate` and `graders`, plus `python -m src --help` and
   `python -m src build-site` (the site builder works on empty data).
 
@@ -304,7 +315,7 @@ bash deploy/install.sh
 ### 4. 填 API key 并启动
 
 ```bash
-vi .env                       # 填 CITO_API_KEY + ZHIPU_WEBSEARCH_API_KEY + 至少一个模型 key
+vi .env                       # 填 CITO_API_KEY + DEEPSEEK_API_KEY（搜索复用）+ 至少一个模型 key
 sudo systemctl restart lolarena
 ```
 

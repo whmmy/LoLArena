@@ -1,1 +1,1 @@
-"""Data adapters: PandaScore LoL API + Zhipu web_search tool."""
+"""Data adapters: Cito/PandaScore LoL API + unified web_search tool (DeepSeek)."""

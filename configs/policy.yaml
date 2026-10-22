@@ -1,8 +1,8 @@
 # LoLArena — global prediction policy
 #
 # One unified flow per match/game:
-#   system collects PandaScore context  ->  inject context_pack
-#   -> mount the SAME web_search tool (Zhipu backend) on every model
+#   system collects Cito context  ->  inject context_pack
+#   -> mount the SAME web_search tool (one global backend) on every model
 #   -> each model decides what to search itself  ->  pure reasoning  ->  JSON
 
 # What the system collects into context_pack.json (shared by every model).
@@ -27,12 +27,21 @@ context_pack:
 # The unified web_search tool mounted on every model (see adapters/websearch.py).
 web_search:
   enabled: true
+  # Which engine backs the shared tool. ONE choice for all models — never
+  # per-model, or the fairness invariant breaks.
+  #   deepseek = DeepSeek Search API (default, needs DEEPSEEK_API_KEY)
+  #   zhipu    = legacy Zhipu web_search (needs ZHIPU_WEBSEARCH_API_KEY)
+  # LOLA_WEBSEARCH_PROVIDER overrides this.
+  provider: deepseek
   # Hard cap on tool calls per single prediction. Protects against runaway loops.
   max_calls_per_prediction: 12
   # Soft guidance surfaced in the prompt (model is free to search more or less).
   suggested_min_queries: 4
   default_count: 8
-  default_recency: oneMonth   # oneDay | oneWeek | oneMonth | oneYear | noLimit
+  # Default time window. noLimit = best recall; narrower windows only keep pages
+  # with a known publish date (DeepSeek: after:YYYY-MM-DD), which loses forums
+  # and wikis, so keep noLimit unless you need breaking news.
+  default_recency: noLimit   # oneDay | oneWeek | oneMonth | oneYear | noLimit
 
 # Output / validation
 policy:

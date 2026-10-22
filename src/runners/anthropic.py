@@ -1,8 +1,9 @@
 """Anthropic Claude runner.
 
-Uses our UNIFIED web_search tool (Zhipu backend), NOT Anthropic's built-in
-server-side web_search — so every model has identical tool capability. We hand
-Claude a normal `tool_use` tool and execute it ourselves in the agent loop.
+Uses our UNIFIED web_search tool (DeepSeek Search backend by default; Zhipu
+legacy), NOT Anthropic's built-in server-side web_search — so every model has
+identical tool capability. We hand Claude a normal `tool_use` tool and execute
+it ourselves in the agent loop.
 
 Anthropic message shape differs from OpenAI, so we override the message
 normalization hooks (_seed_messages, _append_assistant, _tool_results_message,

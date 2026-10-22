@@ -1,8 +1,9 @@
 """Google Gemini runner (native genai SDK).
 
-Uses our UNIFIED web_search tool (Zhipu backend) via Gemini function-calling,
-NOT Gemini's built-in google_search — so every model has identical tool
-capability. We drive the function-calling loop manually in the agent loop.
+Uses our UNIFIED web_search tool (DeepSeek Search backend by default; Zhipu
+legacy) via Gemini function-calling, NOT Gemini's built-in google_search — so
+every model has identical tool capability. We drive the function-calling loop
+manually in the agent loop.
 
 Gemini's message shape is its own (contents list with parts, role 'user'/'model',
 functionCall/functionResponse parts). We keep our internal message list in the

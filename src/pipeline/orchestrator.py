@@ -179,7 +179,12 @@ def cmd_predict_game(match_id: int, position: int, *, model_ids: list[str] | Non
     # champions' strength ONCE and inject the same digest into every model —
     # covering training-cutoff blind spots (new champs, current tier) without
     # the multi-round search loop.
-    meta_snapshot = collect_mod.collect_version_meta(bp)
+    meta_snapshot = collect_mod.collect_version_meta(
+        bp,
+        # The series pack usually already knows the patch; passing it replaces a
+        # generic "current patch?" lookup with a targeted "<patch> meta" query.
+        patch_version=((game_context.get("fixture_header") or {}).get("patch_version")),
+    )
     if meta_snapshot.get("digest"):
         print(f"[predict-game] meta snapshot: patch={meta_snapshot.get('patch')} "
               f"champs={len(meta_snapshot.get('drafted_champions', []))} "
@@ -300,6 +305,7 @@ def _run_all(models: list[dict], system: str, user: str, *, scope: str,
                 print(line, flush=True)
 
     def _job(m):
+        search_tool = None
         try:
             search_tool = _make_search_tool() if search_enabled else None
             runner = build_runner(m, search_tool)
@@ -317,6 +323,11 @@ def _run_all(models: list[dict], system: str, user: str, *, scope: str,
                 json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8"
             )
             return record
+        finally:
+            # Release the keep-alive HTTP pool once this model is done; without
+            # this every parallel run would leave sockets open until GC.
+            if search_tool is not None:
+                search_tool.close()
         record = {
             "model_id": res.model_id, "scope": res.scope, "target_id": res.target_id,
             "submitted_at": res.submitted_at, "prediction": res.prediction,

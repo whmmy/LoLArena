@@ -9,7 +9,7 @@
 > **所有模型拿相同的「数据合集」+ 相同的「web_search 工具」，各自决定怎么搜索。**
 
 - 系统统一从 **Cito API** 取数 → 聚合成同一份 `context_pack` 注入给每个模型（含队伍阵容、近期战绩、目标控制率、联赛排名、选手状态与英雄池、单局 BP 等）
-- 每个模型都挂上 **同一个 `web_search` 工具**（后端统一为 **智谱 web_search API**）—— 模型自己决定查什么、查几次
+- 每个模型都挂上 **同一个 `web_search` 工具**（后端默认统一为 **DeepSeek 自研搜索 API**，单次约 1s，支持 `site:` / `after:` / `lang:` 等检索语法；旧的 **智谱 web_search** 作为可切换的备用后端保留）—— 模型自己决定查什么、查几次
 - 模型间工具能力完全相同，差异纯粹来自「分析判断力」
 - 每个模型每场只产一份预测，独立落盘，独立打分
 
@@ -39,7 +39,7 @@ lolArena/
 │   ├─ server/     main.py(FastAPI)
 │   └─ leaderboard/build_site.py
 ├─ data/           matches/<slug>/  ·  games/<slug>/g<pos>/  ·  _cito_cache/
-├─ doc/            citoapi-lol/(主数据源接口参考) · pandaScoreApi/(回退) · webSearch/(智谱工具文档)
+├─ doc/            citoapi-lol/(主数据源接口参考) · pandaScoreApi/(回退) · deepseekSearch/(搜索接口) · webSearch/(旧智谱工具文档)
 └─ docs/site/      index.html + data.json (排行榜单页应用)
 ```
 
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 # 2. 配置密钥
 cp .env.example .env
-#   必填：CITO_API_KEY（或 CITO_API_KEYS 多 key 池）、ZHIPU_WEBSEARCH_API_KEY
+#   必填：CITO_API_KEY（或 CITO_API_KEYS 多 key 池）、DEEPSEEK_API_KEY（搜索复用此 key）
 #   按需：各模型 *_API_KEY（在 configs/models.yaml 里启用/注释）
 
 # 3. 启动服务（FastAPI + 调度器一起跑）
@@ -148,7 +148,9 @@ python -m src scheduler                       # 仅启动调度器（不开 Web�
 | `CITO_API_KEY`           | LoL 数据主源（单 key，向后兼容）                      | —                               |
 | `CITO_API_KEYS`          | LoL 数据主源（多 key 池，逗号分隔，自动轮换/限流切换）| —                               |
 | `PANDASCORE_API_KEY`     | LoL 数据回退备用（默认不调用）                        | —                               |
-| `ZHIPU_WEBSEARCH_API_KEY`| 统一搜索后端（预测必填）                              | —                               |
+| `DEEPSEEK_WEBSEARCH_API_KEY` | 统一搜索后端（未设时回退到 `DEEPSEEK_API_KEY`） | — |
+| `LOLA_WEBSEARCH_PROVIDER` | 所有模型共用的搜索引擎：`deepseek` \| `zhipu` | `deepseek` |
+| `ZHIPU_WEBSEARCH_API_KEY` | 旧智谱搜索后端（仅当 provider=`zhipu` 时需要） | — |
 | `<PROVIDER>_API_KEY`     | 各模型密钥（在 `models.yaml` 启用对应条目）           | —                               |
 | `LOLA_PREDICT_LEAD_H`    | 开赛前多少小时跑系列赛预测                            | `3`                             |
 | `LOLA_RESULT_GRACE_H`    | 赛后拉取结果的宽限窗口（小时）                        | `2`                             |
@@ -160,7 +162,7 @@ python -m src scheduler                       # 仅启动调度器（不开 Web�
 - LoL 数据：**Cito API**（主源）。免费层覆盖赛程、队伍阵容、近期战绩、目标控制率、联赛排名、选手近期状态与英雄池、单局 BP（picks）与击杀数据。免费层配额为 **500 req/月/key**——配置 `CITO_API_KEYS`（逗号分隔多 key）可形成 key 池，配额翻倍且遇限流/超额自动切换。
 - context_pack 各数据块可在 `configs/policy.yaml` 的 `context_pack` 下开关；选手级数据（`player_form` / `player_champion_pool`）较占配额（约 2 req/选手），配额紧张时可关闭，由模型的 `web_search` 自行补足。
 - PandaScore client（`src/adapters/pandascore.py`）保留作回退备用，默认不调用。
-- 搜索：**智谱 web_search API**（`search_pro` 引擎，带意图识别）。
+- 搜索：**DeepSeek 自研搜索 API**（`POST /v1/tools/search`，约 $0.75/1000 次成功请求，QPS 100）。所有模型共用同一后端；设 `LOLA_WEBSEARCH_PROVIDER=zhipu` 可整体切回旧的智谱 `search_pro` 做对比。适配器默认忽略系统 `HTTP(S)_PROXY`，需要代理时改 `configs/proxies.yaml` 的 `websearch` 块（或设 `LOLA_WEBSEARCH_PROXY_URL`）。接口细节见 [`doc/deepseekSearch/README.md`](doc/deepseekSearch/README.md)。
 
 ## 添加新模型
 
@@ -180,4 +182,4 @@ python -m src scheduler                       # 仅启动调度器（不开 Web�
 
 - `prompts/*.md` 每次预测都重读，无需重启。
 - 必填的 `reasoning.*` 子字段名由 **schema**（`schemas/*.schema.json` 的 `minLength`）和 **grader**（`graders/grade_match.py` 的 `reasoning_completeness`）双重约束，改动时要保持同步。
-- 暂无正式测试套件 —— 验证手段：`python -c "..."` 跑 `validate` 和 `graders`、`python -m src --help` 看 CLI 连通、`python -m src build-site` 验证站点构建（空数据也能跑通）。
+- 离线单测：`python -m unittest discover -s tests -v`（用 mock transport 覆盖两个搜索后端 + agent loop 的工具接线）。暂无端到端测试套件 —— 仍建议用 `python -c "..."` 跑 `validate` / `graders`、`python -m src --help` 看 CLI 连通、`python -m src build-site` 验证站点构建（空数据也能跑通）。

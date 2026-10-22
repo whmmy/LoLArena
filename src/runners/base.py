@@ -1,6 +1,7 @@
 """Base runner with a unified agent loop + web_search tool.
 
-Every model mounts the SAME web_search tool (Zhipu backend). The agent loop:
+Every model mounts the SAME web_search tool (DeepSeek Search backend by
+default, Zhipu legacy — one global choice, see adapters/websearch.py). The loop:
   model -> emits JSON OR a web_search tool_call
        -> if tool_call: runner executes web_search, feeds results back
        -> repeat until model emits final JSON (no more tool calls)
@@ -260,10 +261,13 @@ class BaseRunner(abc.ABC):
                            call_no=totals["calls"] + 1, query=query)
                 results = self.search.invoke_raw(c.get("args"))
                 totals["calls"] += 1
-                sources.extend(sources_from_tool(self.search))
                 self._emit(progress, "tool_end", round=round_no,
                            call_no=totals["calls"], query=query,
                            result_count=len(results))
+                # Rebuild (do not extend) from the tool log: extending used to
+                # re-append every earlier query on each call, so sources[] grew
+                # quadratically (78 entries instead of 12 after a full budget).
+                sources[:] = sources_from_tool(self.search)
                 tool_results.append({
                     "id": call_id,
                     "text": format_results_for_model(results, query),

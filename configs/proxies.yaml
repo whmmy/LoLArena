@@ -22,7 +22,10 @@ cito:
   enabled: true
   url: "http://127.0.0.1:7890"
 
-# Reserved for future use (LLM clients, web_search, etc.) — not wired yet.
-# web_search:
-#   enabled: false
-#   url: ""
+# Shared web_search backend (DeepSeek Search API by default). Disabled: the
+# API is reachable directly, and the adapter ignores ambient HTTP(S)_PROXY on
+# purpose (predictable routing). Enable + fill url to route searches anyway.
+# Env override: LOLA_WEBSEARCH_PROXY_URL / LOLA_WEBSEARCH_PROXY_ENABLED
+websearch:
+  enabled: false
+  url: ""

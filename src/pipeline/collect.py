@@ -734,7 +734,6 @@ def collect_version_meta(bp: dict, *, patch_version: str | None = None) -> dict:
             if c and c not in champs:
                 champs.append(c)
 
-    tool = WebSearchTool()
     queries: list[str] = []
     blocks: list[str] = []
     resolved_patch = patch_version
@@ -752,12 +751,26 @@ def collect_version_meta(bp: dict, *, patch_version: str | None = None) -> dict:
         focus = champs[:6]
         queries.append(f"LoL 2026 patch meta {', '.join(focus)} strength win rate")
 
-    for q in queries:
-        try:
-            results = tool(q, count=6, recency="oneMonth")
-            blocks.append(format_results_for_model(results, q))
-        except Exception:  # noqa: BLE001
-            blocks.append(f"[web_search '{q}']: lookup failed; rely on model knowledge.")
+    try:
+        tool = WebSearchTool()
+    except Exception as e:  # noqa: BLE001
+        # No search key / bad provider -> degrade to a no-digest snapshot instead
+        # of failing the whole single-game prediction.
+        print(f"[meta] web_search unavailable ({e}); skipping meta snapshot.")
+        return {"patch": resolved_patch, "drafted_champions": champs,
+                "queries": queries, "digest": ""}
+
+    try:
+        for q in queries:
+            try:
+                # noLimit: patch notes / tier-list pages often have no publish
+                # date, and an engine-side date filter would drop them.
+                results = tool(q, count=6, recency="noLimit")
+                blocks.append(format_results_for_model(results, q))
+            except Exception:  # noqa: BLE001
+                blocks.append(f"[web_search '{q}']: lookup failed; rely on model knowledge.")
+    finally:
+        tool.close()
 
     # try to extract a patch number from the first block's text
     if not resolved_patch and blocks:

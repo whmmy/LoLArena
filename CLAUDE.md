@@ -7,16 +7,20 @@ game** (manual, after BP). Models are ranked by post-match accuracy.
 
 ## The fairness invariant (DO NOT break it)
 **Every model gets the SAME context_pack AND the SAME `web_search` tool.**
-The tool backend is always Zhipu (see `src/adapters/websearch.py`). Never wire
-a model to its native search tool (Gemini `google_search`, Anthropic's built-in
-`web_search_20250305`, OpenAI's hosted browsing) — that would make tool
-capability differ between models and ruin the comparison. Differences between
-models must come ONLY from what they choose to search and how they reason.
+The tool backend is ONE global choice (see `src/adapters/websearch.py`):
+**DeepSeek Search API by default**, with the old **Zhipu** engine kept as a
+switchable legacy backend (`LOLA_WEBSEARCH_PROVIDER=deepseek|zhipu`, or
+`web_search.provider` in `configs/policy.yaml`). Never make it per-model.
+Never wire a model to its native search tool (Gemini `google_search`,
+Anthropic's built-in `web_search_20250305`, OpenAI's hosted browsing) — that
+would make tool capability differ between models and ruin the comparison.
+Differences between models must come ONLY from what they choose to search and
+how they reason.
 
 ## Layout cheat-sheet
 - `src/adapters/cito.py` — LoL data source (PRIMARY) + multi-key pool + disk cache. Normalises Cito responses into PandaScore-shaped match objects so the pipeline barely changed.
 - `src/adapters/pandascore.py` — legacy LoL client, kept as fallback (not called by default)
-- `src/adapters/websearch.py` — the ONE search tool + provider-specific schemas
+- `src/adapters/websearch.py` — the ONE search tool; normalises DeepSeek Search / Zhipu to one compact result shape + provider-specific tool schemas
 - `src/pipeline/collect.py` — builds context_pack.json (rosters/form/objectives/standings/player_form/champion_pool/h2h/meta)
 - `src/pipeline/prompt_build.py` — renders system + user prompts
 - `src/pipeline/validate.py` — JSON Schema + semantic checks (probs sum, winner agrees, etc.)
@@ -60,7 +64,10 @@ Single-game `duration_mae` returns None (skipped + renormalized) when
 `truth.length_min` is 0/missing, so missing Cito data doesn't pollute scores.
 
 ## Running tests
-No formal test suite yet — verify via:
+Offline unit tests (no network / API keys): `python -m unittest discover -s tests -v`
+— covers the web_search backends (mock transport), recency/date-operator mapping,
+memoization, soft-fail on 429/network errors, and the agent loop's tool wiring.
+Beyond that, verify via:
 - `python -c "..."` snippets against `validate` and `graders` (see commits)
 - `python -m src --help` (CLI wiring)
 - `python -m src build-site` (site builder on empty data)
@@ -68,8 +75,10 @@ No formal test suite yet — verify via:
 
 ## Env required to actually predict
 `CITO_API_KEY` (or `CITO_API_KEYS` comma-separated for a key pool) +
-`ZHIPU_WEBSEARCH_API_KEY` + at least one model key.
-Without keys, `cmd_predict` fails fast with a clear message (by design).
+`DEEPSEEK_API_KEY` (search reuses it; `DEEPSEEK_WEBSEARCH_API_KEY` overrides)
++ at least one model key. With `LOLA_WEBSEARCH_PROVIDER=zhipu`, use
+`ZHIPU_WEBSEARCH_API_KEY` instead. Without keys, `cmd_predict` fails fast with
+a clear message (by design).
 
 ## Data source notes (Cito)
 - `team_id` is the Cito **slug** (e.g. `t1`/`gen`); `match_id` is the Riot
