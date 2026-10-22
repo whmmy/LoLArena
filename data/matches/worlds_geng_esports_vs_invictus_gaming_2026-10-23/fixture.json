@@ -1,0 +1,59 @@
+{
+  "id": 115660540726095005,
+  "name": "Gen.G Esports vs Invictus Gaming",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 1,
+  "begin_at": "2026-10-23T17:00:00.000Z",
+  "scheduled_at": "2026-10-23T17:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "gen",
+        "name": "Gen.G Esports",
+        "acronym": "GEN",
+        "slug": "gen",
+        "image_url": "http://static.lolesports.com/teams/1773829250929_GENGLOGO_GOLD.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "ig",
+        "name": "Invictus Gaming",
+        "acronym": "IG",
+        "slug": "ig",
+        "image_url": "http://static.lolesports.com/teams/1634762917340_300px-Invictus_Gaming_logo.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "gen",
+      "score": 0
+    },
+    {
+      "team_id": "ig",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-worlds",
+    "name": "Worlds",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-worlds_2026",
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Swiss",
+  "round": null,
+  "vod_url": null
+}

@@ -1,0 +1,59 @@
+{
+  "id": 115660540726095015,
+  "name": "MIBR.LOS vs T1",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 1,
+  "begin_at": "2026-10-23T23:00:00.000Z",
+  "scheduled_at": "2026-10-23T23:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "los",
+        "name": "MIBR.LOS",
+        "acronym": "ML",
+        "slug": "los",
+        "image_url": "http://static.lolesports.com/teams/1783069635946_600px-MIBR_LOS_allmode.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "t1",
+        "name": "T1",
+        "acronym": "T1",
+        "slug": "t1",
+        "image_url": "http://static.lolesports.com/teams/1726801573959_539px-T1_2019_full_allmode.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "los",
+      "score": 0
+    },
+    {
+      "team_id": "t1",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-worlds",
+    "name": "Worlds",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-worlds_2026",
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Swiss",
+  "round": null,
+  "vod_url": null
+}

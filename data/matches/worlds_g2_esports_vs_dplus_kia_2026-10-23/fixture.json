@@ -1,0 +1,59 @@
+{
+  "id": 115660540726095011,
+  "name": "G2 Esports vs Dplus KIA",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 1,
+  "begin_at": "2026-10-23T21:00:00.000Z",
+  "scheduled_at": "2026-10-23T21:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "g2",
+        "name": "G2 Esports",
+        "acronym": "G2",
+        "slug": "g2",
+        "image_url": "http://static.lolesports.com/teams/G2-FullonDark.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "dk",
+        "name": "Dplus KIA",
+        "acronym": "DK",
+        "slug": "dk",
+        "image_url": "http://static.lolesports.com/teams/1673260049703_DPlusKIALOGO11.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "g2",
+      "score": 0
+    },
+    {
+      "team_id": "dk",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-worlds",
+    "name": "Worlds",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-worlds_2026",
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Swiss",
+  "round": null,
+  "vod_url": null
+}
