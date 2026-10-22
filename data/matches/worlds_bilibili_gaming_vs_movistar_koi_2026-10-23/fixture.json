@@ -1,0 +1,59 @@
+{
+  "id": 115660540726095019,
+  "name": "BILIBILI GAMING vs Movistar KOI",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 1,
+  "begin_at": "2026-10-23T19:00:00.000Z",
+  "scheduled_at": "2026-10-23T19:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "blg",
+        "name": "BILIBILI GAMING",
+        "acronym": "BLG",
+        "slug": "blg",
+        "image_url": "http://static.lolesports.com/teams/1682322954525_Bilibili_Gaming_logo_20211.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "mkoi",
+        "name": "Movistar KOI",
+        "acronym": "MKOI",
+        "slug": "mkoi",
+        "image_url": "http://static.lolesports.com/teams/1734012609283_MKOI_FullColor_Blue.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "blg",
+      "score": 0
+    },
+    {
+      "team_id": "mkoi",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-worlds",
+    "name": "Worlds",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-worlds_2026",
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Swiss",
+  "round": null,
+  "vod_url": null
+}

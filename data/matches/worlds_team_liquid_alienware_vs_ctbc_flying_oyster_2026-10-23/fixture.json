@@ -1,0 +1,59 @@
+{
+  "id": 115660540726095007,
+  "name": "Team Liquid Alienware vs CTBC Flying Oyster",
+  "match_type": null,
+  "status": "not_started",
+  "number_of_games": 1,
+  "begin_at": "2026-10-23T22:00:00.000Z",
+  "scheduled_at": "2026-10-23T22:00:00.000Z",
+  "end_at": null,
+  "winner_id": null,
+  "winner": null,
+  "draw": false,
+  "forfeit": false,
+  "opponents": [
+    {
+      "opponent": {
+        "id": "tl",
+        "name": "Team Liquid Alienware",
+        "acronym": "TLAW",
+        "slug": "tl",
+        "image_url": "http://static.lolesports.com/teams/1769357207762_TLAlienware_Minimal_Bug-White.png"
+      }
+    },
+    {
+      "opponent": {
+        "id": "cfo",
+        "name": "CTBC Flying Oyster",
+        "acronym": "CFO",
+        "slug": "cfo",
+        "image_url": "http://static.lolesports.com/teams/1656307849320_CFO_Logo.png"
+      }
+    }
+  ],
+  "results": [
+    {
+      "team_id": "tl",
+      "score": 0
+    },
+    {
+      "team_id": "cfo",
+      "score": 0
+    }
+  ],
+  "league": {
+    "id": "lol-worlds",
+    "name": "Worlds",
+    "slug": null
+  },
+  "serie": {},
+  "tournament": {
+    "id": "lol-worlds_2026",
+    "name": null
+  },
+  "games": [],
+  "videogame_version": {},
+  "block_name": "Swiss",
+  "round": null,
+  "vod_url": null
+}
